@@ -1,0 +1,933 @@
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> <http://www.w3.org/2000/01/rdf-schema#label> "ha valore"@it <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Parametrizes values from a datatype. For example, a Parameter MinimumAgeForDriving hasParameterDataValue 18 on datatype xsd:int, in the Italian traffic code. In this example, MinimumAgeForDriving isDefinedIn the Norm ItalianTrafficCodeAgeDriving.\nMore complex parametrization requires workarounds. E.g. AgeRangeForDrugUsage could parametrize data value: 14 to 50 on the datatype: xsd:int. Since complex datatypes are not allowed in OWL1.0, a solution to this can only work by creating two 'sub-parameters': MinimumAgeForDrugUsage (that hasParameterDataValue 14) and MaximumAgeForDrugUsage (that hasParameterDataValue 50), which are components of (cf. hasComponent) the main Parameter AgeRangeForDrugUsage.\nOrdering on subparameters can be created by using or specializing the object property 'precedes'." <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> <http://www.w3.org/2000/01/rdf-schema#label> "has parameter data value"@en <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasParameterDataValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontotext.com/proton/protontop#locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#locatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between an object (also some happenings via their participants) and location where the object is."@en <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#locatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "Located in"@en <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#locatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontotext.com/proton/protontop#Location> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#locatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontotext.com/proton/protontop#Entity> <http://www.ontotext.com/proton/protontop> .
+<http://www.openarchives.org/ore/terms/similarTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject of this relationship MUST be an Aggregation.  This Aggregation should be considered an expression within the ORE context of the object of the relationship, as it is broadly equivalent to the resource. For example, the Aggregation may consist of the resources which, together, make up a journal article which has a DOI assigned to it. The Aggregation is not the article to which the DOI was assigned, but is a representation of it in some manner." <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/similarTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.openarchives.org/ore/terms/> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/similarTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.openarchives.org/ore/terms/Aggregation> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/similarTo> <http://www.w3.org/2000/01/rdf-schema#label> "Similar To" <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/similarTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/proxyFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.openarchives.org/ore/terms/> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/proxyFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.openarchives.org/ore/terms/AggregatedResource> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/proxyFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.openarchives.org/ore/terms/Proxy> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/proxyFor> <http://www.w3.org/2000/01/rdf-schema#label> "Proxy For" <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/proxyFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/proxyFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Proxy objects are used to represent a Resource as it is aggregated in a particular Aggregation. The ore:proxyFor relationship is used to link the proxy to the Aggregated Resource it is a proxy for. The subject of the relationship is a Proxy object, and the object of the relationship is the Aggregated Resource." <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Is Described By" <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.openarchives.org/ore/terms/> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.openarchives.org/ore/terms/Aggregation> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/isDescribedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.openarchives.org/ore/terms/describes> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.openarchives.org/ore/terms/ResourceMap> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/isDescribedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The inverse relationship of ore:describes, in this case the object of the relationship is the Resource Map and the subject is the Aggregation which it describes." <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/proxyIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.openarchives.org/ore/terms/Proxy> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/proxyIn> <http://www.w3.org/2000/01/rdf-schema#label> "Proxy In" <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/proxyIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Proxy objects must link to the Aggregation in which the resource being proxied is aggregated. The ore:proxyIn relationship is used for this purpose. The subject of the relationship is a Proxy object, and the object of the relationship is the Aggregation." <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/proxyIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/proxyIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.openarchives.org/ore/terms/Aggregation> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/proxyIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.openarchives.org/ore/terms/> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/lineage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.openarchives.org/ore/terms/Proxy> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/lineage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/lineage> <http://www.w3.org/2000/01/rdf-schema#comment> "ore:lineage is a relationship between two Proxy objects, both of which MUST have the same Resource for which they are proxies. The meaning is that the Resource for which the subject of the relationship is a Proxy was discovered in the Aggregation in which the object Proxy's resource is aggregated." <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/lineage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.openarchives.org/ore/terms/Proxy> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/lineage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.openarchives.org/ore/terms/> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/lineage> <http://www.w3.org/2000/01/rdf-schema#label> "Lineage" <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/describes> <http://www.w3.org/2000/01/rdf-schema#label> "Describes" <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/describes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/describes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.openarchives.org/ore/terms/> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/describes> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.openarchives.org/ore/terms/isDescribedBy> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/describes> <http://www.w3.org/2000/01/rdf-schema#comment> "This relationship asserts that the subject (a Resource Map) describes the object (an Aggregation)." <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/describes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.openarchives.org/ore/terms/ResourceMap> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/describes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.openarchives.org/ore/terms/Aggregation> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/aggregates> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.openarchives.org/ore/terms/AggregatedResource> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/aggregates> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.openarchives.org/ore/terms/Aggregation> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/aggregates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/aggregates> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/hasPart> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/aggregates> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.openarchives.org/ore/terms/isAggregatedBy> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/aggregates> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregates" <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/aggregates> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.openarchives.org/ore/terms/> <http://www.openarchives.org/ore/terms/> .
+<http://www.openarchives.org/ore/terms/aggregates> <http://www.w3.org/2000/01/rdf-schema#comment> "Aggregations, by definition, aggregate resources. The ore:aggregates relationship expresses that the object resource is a member of the set of Aggregated Resources of the subject (the Aggregation). This relationship between the Aggregation and its Aggregated Resources is thus more specific than a simple part/whole relationship, as expressed by dcterms:hasPart for example." <http://www.openarchives.org/ore/terms/> .
+<http://www.opengis.net/ont/geosparql#ehEquals> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehEquals> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehEquals> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehEquals> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehEquals> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehEquals> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehEquals> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehEquals> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehEquals> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehEquals> <http://www.w3.org/2000/01/rdf-schema#label> "equals"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehEquals> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehEquals> <http://www.w3.org/2004/02/skos/core#prefLabel> "equals"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehEquals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tppi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tppi> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tppi> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tppi> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tppi> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tppi> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tppi> <http://www.w3.org/2004/02/skos/core#prefLabel> "tangential proper part inverse"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tppi> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: TTTFTTFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tppi> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: TTTFTTFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tppi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tppi> <http://www.w3.org/2000/01/rdf-schema#label> "tangential proper part inverse"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tppi> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: TTTFTTFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tppi> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject is spatially within the \n      object SpatialObject. DE-9IM: T*F**F***\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject is spatially within the \n      object SpatialObject. DE-9IM: T*F**F***\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject is spatially within the \n      object SpatialObject. DE-9IM: T*F**F***\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#label> "within"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2004/02/skos/core#prefLabel> "within"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfWithin> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehDisjoint> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FF*FF****\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehDisjoint> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FF*FF****\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehDisjoint> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FF*FF****\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehDisjoint> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehDisjoint> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehDisjoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehDisjoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehDisjoint> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehDisjoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehDisjoint> <http://www.w3.org/2004/02/skos/core#prefLabel> "disjoint"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehDisjoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehDisjoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehDisjoint> <http://www.w3.org/2000/01/rdf-schema#label> "disjoint"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfIntersects> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject is not spatially disjoint \n      from the object SpatialObject.\n      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** \n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfIntersects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfIntersects> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject is not spatially disjoint \n      from the object SpatialObject.\n      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** \n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfIntersects> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfIntersects> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject is not spatially disjoint \n      from the object SpatialObject.\n      DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T**** \n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfIntersects> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfIntersects> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfIntersects> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfIntersects> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfIntersects> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfIntersects> <http://www.w3.org/2004/02/skos/core#prefLabel> "intersects"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfIntersects> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfIntersects> <http://www.w3.org/2000/01/rdf-schema#label> "intersects"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntpp> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntpp> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFFTFFTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntpp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntpp> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFFTFFTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntpp> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFFTFFTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntpp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntpp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntpp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntpp> <http://www.w3.org/2000/01/rdf-schema#label> "non-tangential proper part"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntpp> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntpp> <http://www.w3.org/2004/02/skos/core#prefLabel> "non-tangential proper part"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntpp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntpp> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfTouches> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfTouches> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfTouches> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfTouches> <http://www.w3.org/2004/02/skos/core#prefLabel> "touches"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfTouches> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfTouches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfTouches> <http://www.w3.org/2000/01/rdf-schema#label> "touches"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfTouches> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially touches the \n      object SpatialObject.\n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfTouches> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfTouches> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfTouches> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfTouches> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially touches the \n      object SpatialObject.\n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfTouches> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially touches the \n      object SpatialObject.\n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehInside> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFF*FFT**\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehInside> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehInside> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFF*FFT**\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehInside> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject is spatially inside \n      the object SpatialObject. DE-9IM: TFF*FFT**\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehInside> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehInside> <http://www.w3.org/2004/02/skos/core#prefLabel> "inside"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehInside> <http://www.w3.org/2000/01/rdf-schema#label> "inside"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehInside> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehInside> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehInside> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehInside> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehInside> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehInside> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehContains> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*TFF*FF*\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehContains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehContains> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*TFF*FF*\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehContains> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*TFF*FF*\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehContains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehContains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehContains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehContains> <http://www.w3.org/2004/02/skos/core#prefLabel> "contains"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehContains> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehContains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehContains> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehContains> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehContains> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfDisjoint> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject is spatially disjoint \n      from the object SpatialObject. DE-9IM: FF*FF****\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfDisjoint> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject is spatially disjoint \n      from the object SpatialObject. DE-9IM: FF*FF****\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfDisjoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfDisjoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfDisjoint> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfDisjoint> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject is spatially disjoint \n      from the object SpatialObject. DE-9IM: FF*FF****\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfDisjoint> <http://www.w3.org/2004/02/skos/core#prefLabel> "disjoint"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfDisjoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfDisjoint> <http://www.w3.org/2000/01/rdf-schema#label> "disjoint"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfDisjoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfDisjoint> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfDisjoint> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfDisjoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfCrosses> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfCrosses> <http://www.w3.org/2000/01/rdf-schema#label> "crosses"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfCrosses> <http://www.w3.org/2004/02/skos/core#prefLabel> "crosses"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfCrosses> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfCrosses> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially crosses the \n      object SpatialObject. DE-9IM: T*T******\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfCrosses> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially crosses the \n      object SpatialObject. DE-9IM: T*T******\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfCrosses> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfCrosses> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially crosses the \n      object SpatialObject. DE-9IM: T*T******\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfCrosses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfCrosses> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfCrosses> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfCrosses> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfCrosses> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8dc> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8dc> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8dc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8dc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8dc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8dc> <http://www.w3.org/2004/02/skos/core#prefLabel> "disconnected"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8dc> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8dc> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FFTFFTTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8dc> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FFTFFTTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8dc> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject is spatially disjoint\n      from the object SpatialObject. DE-9IM: FFTFFTTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8dc> <http://www.w3.org/2000/01/rdf-schema#label> "disconnected"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8dc> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8dc> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2004/02/skos/core#prefLabel> "contains"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: T*****FF*\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfContains> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8eq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8eq> <http://www.w3.org/2004/02/skos/core#prefLabel> "equals"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8eq> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8eq> <http://www.w3.org/2000/01/rdf-schema#label> "equals"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8eq> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8eq> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8eq> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8eq> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8eq> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8eq> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8eq> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8eq> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8eq> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehMeet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehMeet> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehMeet> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehMeet> <http://www.w3.org/2004/02/skos/core#prefLabel> "meet"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehMeet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehMeet> <http://www.w3.org/2000/01/rdf-schema#label> "meet"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehMeet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehMeet> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehMeet> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehMeet> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. \n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehMeet> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. \n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehMeet> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehMeet> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. \n      DE-9IM: FT******* ^ F**T***** ^ F***T****\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfOverlaps> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T** \n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfOverlaps> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfOverlaps> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfOverlaps> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T** \n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfOverlaps> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T** \n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfOverlaps> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfOverlaps> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfOverlaps> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfOverlaps> <http://www.w3.org/2000/01/rdf-schema#label> "overlaps"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfOverlaps> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfOverlaps> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfOverlaps> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfOverlaps> <http://www.w3.org/2004/02/skos/core#prefLabel> "overlaps"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntppi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntppi> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntppi> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntppi> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntppi> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntppi> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntppi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntppi> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: TTTFFTFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntppi> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: TTTFFTFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntppi> <http://www.w3.org/2000/01/rdf-schema#label> "non-tangential proper part inverse"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntppi> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially contains the \n      object SpatialObject. DE-9IM: TTTFFTFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntppi> <http://www.w3.org/2004/02/skos/core#prefLabel> "non-tangential proper part inverse"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ntppi> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfEquals> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfEquals> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfEquals> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfEquals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfEquals> <http://www.w3.org/2004/02/skos/core#prefLabel> "equals"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfEquals> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfEquals> <http://www.w3.org/2000/01/rdf-schema#label> "equals"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfEquals> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfEquals> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfEquals> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfEquals> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfEquals> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially equals the \n      object SpatialObject. DE-9IM: TFFFTFFFT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#sfEquals> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCovers> <http://www.w3.org/2000/01/rdf-schema#label> "covers"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCovers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCovers> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: T*TFT*FF*\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCovers> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: T*TFT*FF*\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCovers> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCovers> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially covers the \n      object SpatialObject. DE-9IM: T*TFT*FF*\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCovers> <http://www.w3.org/2004/02/skos/core#prefLabel> "covers"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCovers> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCovers> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCovers> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCovers> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCovers> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCovers> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8po> <http://www.w3.org/2004/02/skos/core#prefLabel> "partially overlapping"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8po> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: TTTTTTTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8po> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8po> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8po> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: TTTTTTTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8po> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8po> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: TTTTTTTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8po> <http://www.w3.org/2000/01/rdf-schema#label> "partially overlapping"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8po> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8po> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8po> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8po> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8po> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tpp> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFFTTFTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tpp> <http://www.w3.org/2000/01/rdf-schema#label> "tangential proper part"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tpp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tpp> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFFTTFTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tpp> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tpp> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tpp> <http://www.w3.org/2004/02/skos/core#prefLabel> "tangential proper part"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tpp> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFFTTFTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tpp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tpp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tpp> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tpp> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8tpp> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ec> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ec> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ec> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ec> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ec> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. DE-9IM: FFTFTTTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ec> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. DE-9IM: FFTFTTTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ec> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially meets the \n      object SpatialObject. DE-9IM: FFTFTTTTT\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ec> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ec> <http://www.w3.org/2004/02/skos/core#prefLabel> "externally connected"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ec> <http://www.w3.org/2000/01/rdf-schema#label> "externally connected"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ec> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#rcc8ec> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCoveredBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCoveredBy> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFF*TFT**\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCoveredBy> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCoveredBy> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFF*TFT**\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCoveredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject is spatially covered \n      by the object SpatialObject. DE-9IM: TFF*TFT**\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCoveredBy> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCoveredBy> <http://www.w3.org/2000/01/rdf-schema#label> "coveredBy"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCoveredBy> <http://www.w3.org/2004/02/skos/core#prefLabel> "coveredBy"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCoveredBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCoveredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCoveredBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCoveredBy> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehCoveredBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehOverlap> <http://purl.org/dc/elements/1.1/contributor> "Matthew Perry" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehOverlap> <http://www.w3.org/2000/01/rdf-schema#label> "overlap"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehOverlap> <http://purl.org/dc/elements/1.1/date> "2011-06-16"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehOverlap> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehOverlap> <http://www.w3.org/2004/02/skos/core#prefLabel> "overlap"@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehOverlap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/spec/geosparql/1.0> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehOverlap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehOverlap> <http://purl.org/dc/elements/1.1/creator> "OGC GeoSPARQL 1.0 Standard Working Group" <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehOverlap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehOverlap> <http://www.w3.org/2004/02/skos/core#definition> "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T**\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehOverlap> <http://purl.org/dc/elements/1.1/description> "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T**\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehOverlap> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      Exists if the subject SpatialObject spatially overlaps the \n      object SpatialObject. DE-9IM: T*T***T**\n    "@en <http://www.opengis.net/ont/geosparql> .
+<http://www.opengis.net/ont/geosparql#ehOverlap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql> <http://www.opengis.net/ont/geosparql> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#mimeType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#mimeType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#mimeType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#mimeType> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1" <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#mimeType> <http://www.w3.org/2000/01/rdf-schema#label> "mimeType" <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#mimeType> <http://www.w3.org/2000/01/rdf-schema#comment> "The mime type of the resource, if available. Example: \"text/plain\". See http://www.iana.org/assignments/media-types/. This property applies to data objects that can be described with one mime type. In cases where the object as a whole has one mime type, while it's parts have other mime types, or there is no mime type that can be applied to the object as a whole, but some parts of the content have mime types - use more specific properties." <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#url> <http://www.w3.org/2000/01/rdf-schema#label> "url" <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#DefiningProperty> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#url> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1" <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#url> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#url> <http://www.w3.org/2000/01/rdf-schema#comment> "URL of a DataObject. It points to the location of the object. A typial usage is FileDataObject. In cases where creating a simple file:// or http:// URL for a file is difficult (e.g. for files inside compressed archives) the applications are encouraged to use conventions defined by Apache Commons VFS Project at http://jakarta.apache.org/  commons/ vfs/ filesystems.html." <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#url> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#url> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#note> <http://www.w3.org/2000/01/rdf-schema#comment> "A note about the object represented by this Contact. An equivalent for the 'NOTE' property defined in RFC 2426 Sec. 3.6.2" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#note> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#description> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#note> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#note> <http://www.w3.org/2000/01/rdf-schema#label> "note" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#note> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameGiven> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameGiven> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameGiven> <http://www.w3.org/2000/01/rdf-schema#label> "nameGiven" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameGiven> <http://www.w3.org/2000/01/rdf-schema#comment> "The given name for the object represented by this Contact. See documentation for 'nameFamily' property for details." <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameGiven> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonName> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameGiven> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#org> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of an organization or a unit within an organization the object represented by a Contact is associated with. An equivalent of the 'ORG' property defined in RFC 2426 Sec. 3.5.5" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#org> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#OrganizationContact> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#org> <http://www.w3.org/2000/01/rdf-schema#label> "org" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#org> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#org> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Affiliation> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#org> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameHonorificPrefix> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonName> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameHonorificPrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameHonorificPrefix> <http://www.w3.org/2000/01/rdf-schema#label> "nameHonorificPrefix" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameHonorificPrefix> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameHonorificPrefix> <http://www.w3.org/2000/01/rdf-schema#comment> "A prefix for the name of the object represented by this Contact. See documentation for the 'nameFamily' property for details." <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#birthDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#birthDate> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#birthDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Birth date of the object represented by this Contact. An equivalent of the 'BDAY' property as defined in RFC 2426 Sec. 3.1.5." <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#birthDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#birthDate> <http://www.w3.org/2000/01/rdf-schema#label> "birthDate" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#birthDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#birthDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#BirthDate> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameHonorificSuffix> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PersonName> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameHonorificSuffix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameHonorificSuffix> <http://www.w3.org/2000/01/rdf-schema#comment> "A suffix for the name of the Object represented by the given object. See documentation for the 'nameFamily' for details." <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameHonorificSuffix> <http://www.w3.org/2000/01/rdf-schema#label> "nameHonorificSuffix" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nameHonorificSuffix> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nickname> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nickname> <http://www.w3.org/2000/01/rdf-schema#label> "nickname" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nickname> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Name> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nickname> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#nickname> <http://www.w3.org/2000/01/rdf-schema#comment> "A nickname of the Object represented by this Contact. This is an equivalent of the 'NICKNAME' property as defined in RFC 2426 Sec. 3.1.3." <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#fullname> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#title> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#fullname> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#fullname> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#fullname> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#fullname> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Name> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#fullname> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the formatted text corresponding to the name of the object the Contact represents. An equivalent of the FN property as defined in RFC 2426 Sec. 3.1.1." <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#fullname> <http://www.w3.org/2000/01/rdf-schema#label> "fullname" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasEmailAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "An address for electronic mail communication with the object specified by this contact. An equivalent of the 'EMAIL' property as defined in RFC 2426 Sec. 3.3.1." <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasEmailAddress> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasContactMedium> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasEmailAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasEmailAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasEmailAddress> <http://www.w3.org/2000/01/rdf-schema#label> "hasEmailAddress" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasEmailAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#EmailAddress> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasPhoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#PhoneNumber> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#label> "hasPhoneNumber" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasContactMedium> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#hasPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "A number for telephony communication with the object represented by this Contact. An equivalent of the 'TEL' property defined in RFC 2426 Sec. 3.3.1" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#title> <http://www.w3.org/2000/01/rdf-schema#comment> "The official title  the object represented by this contact in an organization. E.g. 'CEO', 'Director, Research and Development', 'Junior Software Developer/Analyst' etc. An equivalent of the 'TITLE' property defined in RFC 2426 Sec. 3.5.1" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#title> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Affiliation> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#title> <http://www.w3.org/2000/01/rdf-schema#label> "title" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nao#hasTopic> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a relationship between two resources, where the object is a topic of the subject" <http://www.semanticdesktop.org/ontologies/2007/08/15/nao> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nao#hasTopic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nao#hasTopic> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#inverseProperty> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#isTopicOf> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nao#hasTopic> <http://www.w3.org/2000/01/rdf-schema#label> "has topic" <http://www.semanticdesktop.org/ontologies/2007/08/15/nao> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nao#hasTopic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nao#hasTopic> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#isRelated> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nao#isTopicOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nao#isTopicOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#isRelated> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nao#isTopicOf> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#inverseProperty> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#hasTopic> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nao#isTopicOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nao#isTopicOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a relationship between two resources, where the subject is a topic of the object" <http://www.semanticdesktop.org/ontologies/2007/08/15/nao> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nao#isTopicOf> <http://www.w3.org/2000/01/rdf-schema#label> "is topic of" <http://www.semanticdesktop.org/ontologies/2007/08/15/nao> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#subGraphOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/03/trix/rdfg-1#subGraphOf> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#subGraphOf> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#inverseProperty> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#superGraphOf> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#subGraphOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#Graph> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#subGraphOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a containment relationship between two graphs, meaning that the subject graph is included in the object graph" <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#subGraphOf> <http://www.w3.org/2000/01/rdf-schema#label> "subGraphOf" <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#subGraphOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#subGraphOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#Graph> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#imports> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#Data> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#imports> <http://www.w3.org/2000/01/rdf-schema#label> "imports" <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#imports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#imports> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#superGraphOf> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#imports> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#Data> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl> .
+<http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#imports> <http://www.w3.org/2000/01/rdf-schema#comment> "Models a subsumption relationship between two graphs, stating that the object graph is imported and included in the subject graph" <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/object+the.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectaX2Bthe .
+_:BobjectaX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectaX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/objecta+the.nt> .
+_:BobjectaX2Bthe <https://w3id.org/tree#value> "objecta" .
+_:BobjectaX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectaX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/objecta+the.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjecteX2Bthe .
+_:BobjecteX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjecteX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/objecte+the.nt> .
+_:BobjecteX2Bthe <https://w3id.org/tree#value> "objecte" .
+_:BobjecteX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjecteX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/objecte+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectiX2Bthe .
+_:BobjectiX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectiX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/objecti+the.nt> .
+_:BobjectiX2Bthe <https://w3id.org/tree#value> "objecti" .
+_:BobjectiX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectiX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/objecti+the.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectlX2Bthe .
+_:BobjectlX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectlX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/objectl+the.nt> .
+_:BobjectlX2Bthe <https://w3id.org/tree#value> "objectl" .
+_:BobjectlX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectlX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/objectl+the.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectpX2Bthe .
+_:BobjectpX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectpX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/objectp+the.nt> .
+_:BobjectpX2Bthe <https://w3id.org/tree#value> "objectp" .
+_:BobjectpX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectpX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/objectp+the.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectsX2Bthe .
+_:BobjectsX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectsX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/objects+the.nt> .
+_:BobjectsX2Bthe <https://w3id.org/tree#value> "objects" .
+_:BobjectsX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectsX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/objects+the.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjecttX2Bthe .
+_:BobjecttX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjecttX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/objectt+the.nt> .
+_:BobjecttX2Bthe <https://w3id.org/tree#value> "objectt" .
+_:BobjecttX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjecttX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/objectt+the.nt> <https://w3id.org/tree#remainingItems> "43"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2Bthen .
+_:BobjectX2Bthen <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2Bthen <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+then.nt> .
+_:BobjectX2Bthen <https://w3id.org/tree#value> "object" .
+_:BobjectX2Bthen <https://w3id.org/tree#value> "then" .
+_:BobjectX2Bthen <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+then.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2Bther .
+_:BobjectX2Bther <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2Bther <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+ther.nt> .
+_:BobjectX2Bther <https://w3id.org/tree#value> "object" .
+_:BobjectX2Bther <https://w3id.org/tree#value> "ther" .
+_:BobjectX2Bther <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+ther.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2Bthey .
+_:BobjectX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+they.nt> .
+_:BobjectX2Bthey <https://w3id.org/tree#value> "object" .
+_:BobjectX2Bthey <https://w3id.org/tree#value> "they" .
+_:BobjectX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BaX2BobjectX2Bthe .
+_:BaX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+object+the.nt> .
+_:BaX2BobjectX2Bthe <https://w3id.org/tree#value> "a" .
+_:BaX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BaX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BaX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+object+the.nt> <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BbX2BobjectX2Bthe .
+_:BbX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+object+the.nt> .
+_:BbX2BobjectX2Bthe <https://w3id.org/tree#value> "b" .
+_:BbX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BbX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BbX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+object+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BcX2BobjectX2Bthe .
+_:BcX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+object+the.nt> .
+_:BcX2BobjectX2Bthe <https://w3id.org/tree#value> "c" .
+_:BcX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BcX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BcX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+object+the.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BdX2BobjectX2Bthe .
+_:BdX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+object+the.nt> .
+_:BdX2BobjectX2Bthe <https://w3id.org/tree#value> "d" .
+_:BdX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BdX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BdX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+object+the.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BeX2BobjectX2Bthe .
+_:BeX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+object+the.nt> .
+_:BeX2BobjectX2Bthe <https://w3id.org/tree#value> "e" .
+_:BeX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BeX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BeX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+object+the.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BfX2BobjectX2Bthe .
+_:BfX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+object+the.nt> .
+_:BfX2BobjectX2Bthe <https://w3id.org/tree#value> "f" .
+_:BfX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BfX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BfX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+object+the.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BgX2BobjectX2Bthe .
+_:BgX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BgX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/g+object+the.nt> .
+_:BgX2BobjectX2Bthe <https://w3id.org/tree#value> "g" .
+_:BgX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BgX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BgX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/g+object+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BhX2BobjectX2Bthe .
+_:BhX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+object+the.nt> .
+_:BhX2BobjectX2Bthe <https://w3id.org/tree#value> "h" .
+_:BhX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BhX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BhX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+object+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BiX2BobjectX2Bthe .
+_:BiX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+object+the.nt> .
+_:BiX2BobjectX2Bthe <https://w3id.org/tree#value> "i" .
+_:BiX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BiX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BiX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+object+the.nt> <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BlX2BobjectX2Bthe .
+_:BlX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+object+the.nt> .
+_:BlX2BobjectX2Bthe <https://w3id.org/tree#value> "l" .
+_:BlX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BlX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BlX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+object+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BmX2BobjectX2Bthe .
+_:BmX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+object+the.nt> .
+_:BmX2BobjectX2Bthe <https://w3id.org/tree#value> "m" .
+_:BmX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BmX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+object+the.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BnX2BobjectX2Bthe .
+_:BnX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/n+object+the.nt> .
+_:BnX2BobjectX2Bthe <https://w3id.org/tree#value> "n" .
+_:BnX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BnX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BnX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/n+object+the.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BoX2BobjectX2Bthe .
+_:BoX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+object+the.nt> .
+_:BoX2BobjectX2Bthe <https://w3id.org/tree#value> "o" .
+_:BoX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BoX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BoX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+object+the.nt> <https://w3id.org/tree#remainingItems> "55"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2BpX2Bthe .
+_:BobjectX2BpX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2BpX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+p+the.nt> .
+_:BobjectX2BpX2Bthe <https://w3id.org/tree#value> "object" .
+_:BobjectX2BpX2Bthe <https://w3id.org/tree#value> "p" .
+_:BobjectX2BpX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectX2BpX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+p+the.nt> <https://w3id.org/tree#remainingItems> "26"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2BrX2Bthe .
+_:BobjectX2BrX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2BrX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+r+the.nt> .
+_:BobjectX2BrX2Bthe <https://w3id.org/tree#value> "object" .
+_:BobjectX2BrX2Bthe <https://w3id.org/tree#value> "r" .
+_:BobjectX2BrX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectX2BrX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+r+the.nt> <https://w3id.org/tree#remainingItems> "17"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2BsX2Bthe .
+_:BobjectX2BsX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2BsX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+s+the.nt> .
+_:BobjectX2BsX2Bthe <https://w3id.org/tree#value> "object" .
+_:BobjectX2BsX2Bthe <https://w3id.org/tree#value> "s" .
+_:BobjectX2BsX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectX2BsX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+s+the.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2BtX2Bthe .
+_:BobjectX2BtX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2BtX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+t+the.nt> .
+_:BobjectX2BtX2Bthe <https://w3id.org/tree#value> "object" .
+_:BobjectX2BtX2Bthe <https://w3id.org/tree#value> "t" .
+_:BobjectX2BtX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectX2BtX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+t+the.nt> <https://w3id.org/tree#remainingItems> "28"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2BtheX2Bu .
+_:BobjectX2BtheX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2BtheX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+the+u.nt> .
+_:BobjectX2BtheX2Bu <https://w3id.org/tree#value> "object" .
+_:BobjectX2BtheX2Bu <https://w3id.org/tree#value> "the" .
+_:BobjectX2BtheX2Bu <https://w3id.org/tree#value> "u" .
+_:BobjectX2BtheX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+the+u.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2BtheX2Bw .
+_:BobjectX2BtheX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2BtheX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+the+w.nt> .
+_:BobjectX2BtheX2Bw <https://w3id.org/tree#value> "object" .
+_:BobjectX2BtheX2Bw <https://w3id.org/tree#value> "the" .
+_:BobjectX2BtheX2Bw <https://w3id.org/tree#value> "w" .
+_:BobjectX2BtheX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+the+w.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/object+the.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectaX2Bthe .
+_:BobjectaX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectaX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/objecta+the.nt> .
+_:BobjectaX2Bthe <https://w3id.org/tree#value> "objecta" .
+_:BobjectaX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectaX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/objecta+the.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjecteX2Bthe .
+_:BobjecteX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjecteX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/objecte+the.nt> .
+_:BobjecteX2Bthe <https://w3id.org/tree#value> "objecte" .
+_:BobjecteX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjecteX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/objecte+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectiX2Bthe .
+_:BobjectiX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectiX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/objecti+the.nt> .
+_:BobjectiX2Bthe <https://w3id.org/tree#value> "objecti" .
+_:BobjectiX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectiX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/objecti+the.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectlX2Bthe .
+_:BobjectlX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectlX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/objectl+the.nt> .
+_:BobjectlX2Bthe <https://w3id.org/tree#value> "objectl" .
+_:BobjectlX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectlX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/objectl+the.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectpX2Bthe .
+_:BobjectpX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectpX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/objectp+the.nt> .
+_:BobjectpX2Bthe <https://w3id.org/tree#value> "objectp" .
+_:BobjectpX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectpX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/objectp+the.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectsX2Bthe .
+_:BobjectsX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectsX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/objects+the.nt> .
+_:BobjectsX2Bthe <https://w3id.org/tree#value> "objects" .
+_:BobjectsX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectsX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/objects+the.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjecttX2Bthe .
+_:BobjecttX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjecttX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/objectt+the.nt> .
+_:BobjecttX2Bthe <https://w3id.org/tree#value> "objectt" .
+_:BobjecttX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjecttX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/objectt+the.nt> <https://w3id.org/tree#remainingItems> "43"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2Bthen .
+_:BobjectX2Bthen <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2Bthen <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+then.nt> .
+_:BobjectX2Bthen <https://w3id.org/tree#value> "object" .
+_:BobjectX2Bthen <https://w3id.org/tree#value> "then" .
+_:BobjectX2Bthen <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+then.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2Bther .
+_:BobjectX2Bther <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2Bther <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+ther.nt> .
+_:BobjectX2Bther <https://w3id.org/tree#value> "object" .
+_:BobjectX2Bther <https://w3id.org/tree#value> "ther" .
+_:BobjectX2Bther <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+ther.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2Bthey .
+_:BobjectX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+they.nt> .
+_:BobjectX2Bthey <https://w3id.org/tree#value> "object" .
+_:BobjectX2Bthey <https://w3id.org/tree#value> "they" .
+_:BobjectX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BaX2BobjectX2Bthe .
+_:BaX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+object+the.nt> .
+_:BaX2BobjectX2Bthe <https://w3id.org/tree#value> "a" .
+_:BaX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BaX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BaX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+object+the.nt> <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BbX2BobjectX2Bthe .
+_:BbX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+object+the.nt> .
+_:BbX2BobjectX2Bthe <https://w3id.org/tree#value> "b" .
+_:BbX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BbX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BbX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+object+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BcX2BobjectX2Bthe .
+_:BcX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+object+the.nt> .
+_:BcX2BobjectX2Bthe <https://w3id.org/tree#value> "c" .
+_:BcX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BcX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BcX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+object+the.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BdX2BobjectX2Bthe .
+_:BdX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+object+the.nt> .
+_:BdX2BobjectX2Bthe <https://w3id.org/tree#value> "d" .
+_:BdX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BdX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BdX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+object+the.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BeX2BobjectX2Bthe .
+_:BeX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+object+the.nt> .
+_:BeX2BobjectX2Bthe <https://w3id.org/tree#value> "e" .
+_:BeX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BeX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BeX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+object+the.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BfX2BobjectX2Bthe .
+_:BfX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+object+the.nt> .
+_:BfX2BobjectX2Bthe <https://w3id.org/tree#value> "f" .
+_:BfX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BfX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BfX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+object+the.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BgX2BobjectX2Bthe .
+_:BgX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BgX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/g+object+the.nt> .
+_:BgX2BobjectX2Bthe <https://w3id.org/tree#value> "g" .
+_:BgX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BgX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BgX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/g+object+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BhX2BobjectX2Bthe .
+_:BhX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+object+the.nt> .
+_:BhX2BobjectX2Bthe <https://w3id.org/tree#value> "h" .
+_:BhX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BhX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BhX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+object+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BiX2BobjectX2Bthe .
+_:BiX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+object+the.nt> .
+_:BiX2BobjectX2Bthe <https://w3id.org/tree#value> "i" .
+_:BiX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BiX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BiX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+object+the.nt> <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BlX2BobjectX2Bthe .
+_:BlX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+object+the.nt> .
+_:BlX2BobjectX2Bthe <https://w3id.org/tree#value> "l" .
+_:BlX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BlX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BlX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+object+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BmX2BobjectX2Bthe .
+_:BmX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+object+the.nt> .
+_:BmX2BobjectX2Bthe <https://w3id.org/tree#value> "m" .
+_:BmX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BmX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+object+the.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BnX2BobjectX2Bthe .
+_:BnX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/n+object+the.nt> .
+_:BnX2BobjectX2Bthe <https://w3id.org/tree#value> "n" .
+_:BnX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BnX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BnX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/n+object+the.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BoX2BobjectX2Bthe .
+_:BoX2BobjectX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2BobjectX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+object+the.nt> .
+_:BoX2BobjectX2Bthe <https://w3id.org/tree#value> "o" .
+_:BoX2BobjectX2Bthe <https://w3id.org/tree#value> "object" .
+_:BoX2BobjectX2Bthe <https://w3id.org/tree#value> "the" .
+_:BoX2BobjectX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+object+the.nt> <https://w3id.org/tree#remainingItems> "55"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2BpX2Bthe .
+_:BobjectX2BpX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2BpX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+p+the.nt> .
+_:BobjectX2BpX2Bthe <https://w3id.org/tree#value> "object" .
+_:BobjectX2BpX2Bthe <https://w3id.org/tree#value> "p" .
+_:BobjectX2BpX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectX2BpX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+p+the.nt> <https://w3id.org/tree#remainingItems> "26"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2BrX2Bthe .
+_:BobjectX2BrX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2BrX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+r+the.nt> .
+_:BobjectX2BrX2Bthe <https://w3id.org/tree#value> "object" .
+_:BobjectX2BrX2Bthe <https://w3id.org/tree#value> "r" .
+_:BobjectX2BrX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectX2BrX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+r+the.nt> <https://w3id.org/tree#remainingItems> "17"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2BsX2Bthe .
+_:BobjectX2BsX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2BsX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+s+the.nt> .
+_:BobjectX2BsX2Bthe <https://w3id.org/tree#value> "object" .
+_:BobjectX2BsX2Bthe <https://w3id.org/tree#value> "s" .
+_:BobjectX2BsX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectX2BsX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+s+the.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2BtX2Bthe .
+_:BobjectX2BtX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2BtX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+t+the.nt> .
+_:BobjectX2BtX2Bthe <https://w3id.org/tree#value> "object" .
+_:BobjectX2BtX2Bthe <https://w3id.org/tree#value> "t" .
+_:BobjectX2BtX2Bthe <https://w3id.org/tree#value> "the" .
+_:BobjectX2BtX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+t+the.nt> <https://w3id.org/tree#remainingItems> "28"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2BtheX2Bu .
+_:BobjectX2BtheX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2BtheX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+the+u.nt> .
+_:BobjectX2BtheX2Bu <https://w3id.org/tree#value> "object" .
+_:BobjectX2BtheX2Bu <https://w3id.org/tree#value> "the" .
+_:BobjectX2BtheX2Bu <https://w3id.org/tree#value> "u" .
+_:BobjectX2BtheX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+the+u.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/object+the.nt> <https://w3id.org/tree#relation> _:BobjectX2BtheX2Bw .
+_:BobjectX2BtheX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BobjectX2BtheX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/object+the+w.nt> .
+_:BobjectX2BtheX2Bw <https://w3id.org/tree#value> "object" .
+_:BobjectX2BtheX2Bw <https://w3id.org/tree#value> "the" .
+_:BobjectX2BtheX2Bw <https://w3id.org/tree#value> "w" .
+_:BobjectX2BtheX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/object+the+w.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .

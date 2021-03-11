@@ -1,0 +1,766 @@
+<http://eprints.org/ontology/EPrint> <http://www.w3.org/2000/01/rdf-schema#comment> "A single record in an EPrints Repository. Generally this will be described as BIBO and Dublin Core, and may have a number of associated ep:Documents. Resolving a URI of class ep:EPrint will direct to the HTML summary page for the record, in an HTML browser, or to an RDF (XML or N3) document in an RDF client. The RDF document will contain all available RDF information about the record including all attached ep:Document records and their metadata and links from the document to the files via ep:hasFile. Not all files may be available without authentication. If the files themselves contain semantic information of interest these will need to be resolved separately. References to people, organisations, publications and locations may be given URIs of the form /id/<typeofthing>/ext-<somevalue> -- in this case the URI will be resolvable as RDF+XML or N3 and may yield additional records in the repository referencing the same thing, although this is usually based on the hashing of metadata strings and may not be complete or perfect. The ext- indicates that this concept is not something the repository actually stores information about, it is just referenced by one or more records. For example, the RDF for an EPrint about a paper given at a conference may reference that conference with a URI of the form /id/event/ext-a43de4454. That URI will be resolvable but the repository does not contain full information about that event, just information derived from EPrint record metadata. It is hoped that the community may develop systems to link such URIs to the more definitive URI for an event, person, location etc."@en <http://eprints.org/ontology/> .
+<http://eprints.org/ontology/EPrint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://eprints.org/ontology/> .
+<http://eprints.org/ontology/EPrint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://eprints.org/ontology/> .
+<http://eprints.org/ontology/EPrint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://eprints.org/ontology/> <http://eprints.org/ontology/> .
+<http://eprints.org/ontology/EPrint> <http://www.w3.org/2000/01/rdf-schema#label> "EPrint Record"@en <http://eprints.org/ontology/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3052> <http://www.w3.org/2004/02/skos/core#definition> "Relates an item to any signatures, numbering, annotations, etc. that have been applied uniquely to the item by the artist, fabricator, owner, etc., and other marks and inscriptions."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3052> <http://metadataregistry.org/uri/profile/RegAp/name> "hasMarksOrInscriptions"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3052> <http://www.w3.org/2000/01/rdf-schema#label> "tiene marcas o inscripciones"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3052> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3052> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1004> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3052> <http://www.w3.org/2000/01/rdf-schema#label> "has marks or inscriptions"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3052> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3052> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3052> <http://www.w3.org/2000/01/rdf-schema#comment> "Source documentation has \"marks/inscriptions\"; slash character replaced with \"or\" to improve clarity."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3055> <http://www.w3.org/2000/01/rdf-schema#comment> "Source documentation has \"publication/distribution\"; slash character replaced with \"or\" to improve clarity."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3055> <http://www.w3.org/2000/01/rdf-schema#label> "has date of publication or distribution"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3055> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3055> <http://metadataregistry.org/uri/profile/RegAp/name> "hasDateOfPublicationOrDistribution"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3055> <http://www.w3.org/2004/02/skos/core#scopeNote> "The date (normally a year) may be a single date of publication or release, or a range of dates (e.g., in the case of a serial publication). In the absence of a date designated as the date of publication or release, a copyright date or a date of printing or manufacture may serve as a substitute."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3055> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to the date of public release of the manifestation."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3055> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3055> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1003> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3055> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3055> <http://www.w3.org/2000/01/rdf-schema#label> "tiene fecha de publicaciÃ³n o distribuciÃ³n"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3058> <http://www.w3.org/2000/01/rdf-schema#comment> "Source documentation has \"edition/issue\"; slash character replaced with \"or\" to improve clarity."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3058> <http://www.w3.org/2000/01/rdf-schema#label> "has edition or issue designation"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3058> <http://metadataregistry.org/uri/profile/RegAp/name> "hasEditionOrIssueDesignation"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3058> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3058> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a word or phrase appearing in the manifestation that normally indicates a difference in either content or form between the manifestation and a related manifestation previously issued by the same publisher/distributor, or simultaneously issued by either the same publisher/distributor or another publisher/distributor."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3058> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3058> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3058> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1003> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3058> <http://www.w3.org/2004/02/skos/core#scopeNote> "The edition/issue designation pertains to all copies of a manifestation produced from substantially the same master and issued by the same publisher/distributor or group of publishers/distributors."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3058> <http://www.w3.org/2000/01/rdf-schema#label> "tiene designaciÃ³n de ediciÃ³n o emisiÃ³n"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3053> <http://www.w3.org/2000/01/rdf-schema#comment> "Source documentation has \"acquisition/access\"; slash character replaced with \"or\" to improve clarity."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3053> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3053> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1003> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3053> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3053> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3053> <http://www.w3.org/2004/02/skos/core#scopeNote> "The source for acquisition/access authorization will normally also include an address for the publisher, distributor, etc. A manifestation may be associated with one or more sources."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3053> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to the name of a publisher, distributor, etc. indicated in the manifestation as the source from which the manifestation may be acquired or through whom access may be authorized."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3053> <http://www.w3.org/2000/01/rdf-schema#label> "tiene fuente de adquisiciÃ³n o autorizaciÃ³n para el acceso"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3053> <http://www.w3.org/2000/01/rdf-schema#label> "has source for acquisition or access authorization"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3053> <http://metadataregistry.org/uri/profile/RegAp/name> "hasSourceForAcquisitionOrAccessAuthorization"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3056> <http://www.w3.org/2000/01/rdf-schema#label> "tiene editor o distribuidor"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3056> <http://www.w3.org/2000/01/rdf-schema#label> "has publisher or distributor"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3056> <http://www.w3.org/2000/01/rdf-schema#comment> "Source documentation has \"publisher/distributor\"; slash character replaced with \"or\" to improve clarity."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3056> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3056> <http://www.w3.org/2004/02/skos/core#scopeNote> "A manifestation may be associated with one or more publishers or distributors."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3056> <http://metadataregistry.org/uri/profile/RegAp/name> "hasPublisherOrDistributor"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3056> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3056> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1003> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3056> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3056> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to the individual, group, or organization named in the manifestation as being responsible for the publication, distribution, issuing, or release of the manifestation."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3054> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3054> <http://www.w3.org/2000/01/rdf-schema#label> "has fabricator or manufacturer"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3054> <http://metadataregistry.org/uri/profile/RegAp/name> "hasFabricatorOrManufacturer"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3054> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to the individual, group, or organization named in the manifestation as being responsible for the fabrication or manufacture of the manifestation."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3054> <http://www.w3.org/2000/01/rdf-schema#comment> "Source documentation has \"fabricator/manufacturer\"; slash character replaced with \"or\" to improve clarity."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3054> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3054> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1003> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3054> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3054> <http://www.w3.org/2004/02/skos/core#scopeNote> "A manifestation may be associated with one or more fabricators or manufacturers."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3054> <http://www.w3.org/2000/01/rdf-schema#label> "tiene fabricante o productor"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3057> <http://www.w3.org/2004/02/skos/core#scopeNote> "The place of publication may comprise the name of the state, province, territory, and/or country as well as the local place name. A manifestation may be associated with one or more places of publication or distribution."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3057> <http://www.w3.org/2000/01/rdf-schema#comment> "Source documentation has \"publication/distribution\"; slash character replaced with \"or\" to improve clarity."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3057> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to the city, town, or other locality associated in the manifestation with the name of the publisher or distributor."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3057> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3057> <http://www.w3.org/2000/01/rdf-schema#label> "has place of publication or distribution"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3057> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1003> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3057> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3057> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3057> <http://www.w3.org/2000/01/rdf-schema#label> "tiene lugar de publicaciÃ³n o distribuciÃ³n"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3057> <http://metadataregistry.org/uri/profile/RegAp/name> "hasPlaceOfPublicationOrDistribution"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://purl.oclc.org/NET/mvco.owl#Download> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#Download> <http://www.w3.org/2000/01/rdf-schema#comment> "The Action of transferring a file or program from a central computer to a smaller computer or to a computer at a remote location"@en <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#Download> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#Download> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/mvco.owl#PublicCommunication> <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.org/cerif/frapo/isFundedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is funded by"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/isFundedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/isFundedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/cerif/frapo/isSupportedBy> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/isFundedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property linking something to the funding that funds it (i.e. that finances or pays for it), or to the funding agency providing that funding.  This flexibility is given because of alternative usages of the English word 'funds'.  [See also frapo:isAwardedBy and frapo:hasFundingAgency and frapo:isSupportedBy.]"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/collaboratesWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/collaboratesWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/collaboratesWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/collaboratesWith> <http://www.w3.org/2000/01/rdf-schema#label> "collaborates with"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/collaboratesWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/collaboratesWith> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property linking agents, for example different organizations, or people typically from different groups or organizations, that work together on a common task, project or endeavour, or towards a common goal."@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/Payment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/Payment> <http://www.w3.org/2000/01/rdf-schema#label> "payment"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/Payment> <http://www.w3.org/2000/01/rdf-schema#comment> "A financial payment made, for example in exchange for something purchased such as property, goods or services, or to refund expenses incurred."@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/Payment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/cerif/frapo/FinancialEntity> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/hasCityOrTown> <http://www.w3.org/2000/01/rdf-schema#comment> "A data property specifying a city or town, for example as the location of an event."@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/hasCityOrTown> <http://www.w3.org/2000/01/rdf-schema#label> "has city or town"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/hasCityOrTown> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/supplies> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property relating a supplier to a supplied entity, or to an agent to whom the entity is supplied."@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/supplies> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/supplies> <http://www.w3.org/2000/01/rdf-schema#label> "supplies"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/supplies> <http://purl.org/dc/elements/1.1/description> "Domain constraints on this object property have been relaxed to permit it to be used in unforeseen ways."@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/supplies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/cerif/frapo/> .
+<http://purl.org/goodrelations/v1#eligibleTransactionVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleTransactionVolume> <http://www.w3.org/2000/01/rdf-schema#domain> _:B8fb899e1d32e8338b22c0409e8e47b2f <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleTransactionVolume> <http://www.w3.org/2000/01/rdf-schema#label> "eligible transaction volume (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleTransactionVolume> <http://www.w3.org/2000/01/rdf-schema#comment> "This property can be used to indicate the transaction volume, in a monetary unit, for which the gr:Offering or gr:PriceSpecification is valid. This is mostly used to specify a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases above a certain amount.\n\nThe object is a gr:PriceSpecification that uses the properties gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue to indicate the lower and upper boundaries and gr:hasCurrency to indicate the currency using the ISO 4217 standard (3 characters)."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleTransactionVolume> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleTransactionVolume> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Maintain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Maintain> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Maintain> <http://www.w3.org/2000/01/rdf-schema#label> "Maintain (business function)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Maintain> <http://www.w3.org/2000/01/rdf-schema#comment> "This gr:BusinessFunction indicates that the gr:BusinessEntity offers (or seeks) typical maintenance tasks for the specified gr:ProductOrService. Maintenance tasks are actions that undo or compensate for wear or other deterioriation caused by regular usage, in order to restore the originally intended function of the product, or to prevent outage or malfunction."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "This specifies the business function of the gr:Offering, i.e. whether the gr:BusinessEntity is offering to sell, to lease, or to repair the particular type of product. In the case of bundles, it is also possible to attach individual business functions to each gr:TypeAndQuantityNode. The business function of the main gr:Offering determines the business function for all included objects or services, unless a business function attached to a gr:TypeAndQuantityNode overrides it.\n\t\nNote: While it is possible that an entity is offering multiple types of business functions for the same set of objects (e.g. rental and sales), this should usually not be stated by attaching multiple business functions to the same gr:Offering, since the gr:UnitPriceSpecification for the varying business functions will typically be very different."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has business function (1..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#domain> _:B40462f78bf0e86cb61ec3902c16712c7 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/imbi/ru-meta.owl> <http://www.w3.org/2002/07/owl#versionInfo> "0.1"^^<http://www.w3.org/2001/XMLSchema#float> <http://purl.org/imbi/ru-meta.owl> .
+<http://purl.org/imbi/ru-meta.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/imbi/ru-meta.owl> .
+<http://purl.org/imbi/ru-meta.owl> <http://www.w3.org/2000/01/rdf-schema#label> "RU_metadata_ontology" <http://purl.org/imbi/ru-meta.owl> .
+<http://purl.org/imbi/ru-meta.owl> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the dirst draft for a recommendation for metadata on Representational Units (RU) which appear in ontologies. It is so far harmonized for implementation through owl annotation properties.\nComments to: OBI discussion list, metadata wiki or to  schober at ebi.ac.uk" <http://purl.org/imbi/ru-meta.owl> .
+<http://purl.org/linguistics/gold/Toneme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Toneme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/FormUnit> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Toneme> <http://www.w3.org/2000/01/rdf-schema#comment> "A stress or tonal element which in a tone language distinguishes two otherwise identical words or forms. [Hartmann and Stork 1972: 238; Pei and Gaynor 1980: 218]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Toneme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Toneme> <http://www.w3.org/2000/01/rdf-schema#label> "Toneme"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LaryngealProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The laryngeal setting refers to differences in the timing of laryngeal activity in relation to oral articulation. Most languages have phonemic contrasts between classes of stops which differ in the mode of action of the larynx, or in the timing of laryngeal activity. [Ladefoged and Maddieson 1996: 47]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LaryngealProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LaryngealProperty> <http://www.w3.org/2000/01/rdf-schema#label> "LaryngealProperty"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LaryngealProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LaryngealProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/ArticulatoryProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SignedLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SignedLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "SignLanguage or SignSystem is referring to the system of manual communication used by certain groups as an alternative to oral communication. [Crystal 1997: 350]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SignedLanguage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SignedLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "SignedLanguage"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SignedLanguage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/HumanLanguageVariety> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AllativeCase> <http://www.w3.org/2000/01/rdf-schema#comment> "AllativeCase expresses motion to or toward the referent of the noun it marks [Pei and Gaynor 1954: 6, 9, 216; Lyons 1968: 299; Crystal 1985: 1213]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AllativeCase> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AllativeCase> <http://www.w3.org/2000/01/rdf-schema#label> "AllativeCase"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AllativeCase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/CaseProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AllativeCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AbsolutiveAntipassiveVoice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AbsolutiveAntipassiveVoice> <http://www.w3.org/2000/01/rdf-schema#comment> "A term used by some Mayanists to refer to an antipassive in which the patient or logical object is supressed or overtly absent. [Klaiman 1991: 232] Dayley states that the absolutive antipassive is used when the patient is unknown or irrelevant, or when the speaker does not wish to mention the patient, or to describe a transitive activity typically performed by some agent. The absolutive antipassive requires a non-specific implied patient, and no specific patient is ever semantically recoverable from the speech context. Only the absolutive antipassive has (as the name implies) absolutive function such that a transitive activity may be discussed without mention of the patient. [Dayley 1985: 345-350] This type of antipassive with an obligatorily unidentified object is also found in Mam, another Mayan language. [Cooreman 1994: 52-53]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AbsolutiveAntipassiveVoice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AbsolutiveAntipassiveVoice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/VoiceProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AbsolutiveAntipassiveVoice> <http://www.w3.org/2000/01/rdf-schema#label> "AbsolutiveAntipassiveVoice"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/UnattestedVariety> <http://www.w3.org/2000/01/rdf-schema#label> "UnattestedVariety"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/UnattestedVariety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/HumanLanguageVariety> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/UnattestedVariety> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/UnattestedVariety> <http://www.w3.org/2000/01/rdf-schema#comment> "UnattestedVariety is the class of language varieties that are posited to exist or to have existed. Examples include reconstructed languages, such as Proto-Indo-European."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/UnattestedVariety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linked-data/api/vocab#orderBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/api/vocab#> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#orderBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/api/vocab#Selector> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#orderBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#orderBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#orderBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A space separated sequence of OrderConditions suitable for using in a SPARQL ORDER BY clause. This is used to order the sequence of items that the selector selects."@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#orderBy> <http://www.w3.org/2000/01/rdf-schema#label> "Order By"@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/net/wf-motifs#StatelessInvocaton> <http://www.w3.org/2000/01/rdf-schema#comment> "Intra-workflow motif that requires a step in the workflow for performing a service call or tool invocation. All the steps of a workflow are by default stateless (synchronous) invocations unless they are explicitly declared to be stateful. "@en <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#StatelessInvocaton> <http://www.w3.org/2000/01/rdf-schema#label> "Stateless (synchronous) invocation"@en <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#StatelessInvocaton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#StatelessInvocaton> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wf-motifs#IntraWorkflowMotif> <http://purl.org/net/wf-motifs> .
+<http://purl.org/ontology/af/confidence> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/af/> .
+<http://purl.org/ontology/af/confidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/ontology/af/> .
+<http://purl.org/ontology/af/confidence> <http://www.w3.org/2000/01/rdf-schema#label> "confidence" <http://purl.org/ontology/af/> .
+<http://purl.org/ontology/af/confidence> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\tA really generic property, allowing to associate a confidence to a document or to a particular\n\t\tresource (such as an automatically detected segment)\n\t\t" <http://purl.org/ontology/af/> .
+<http://purl.org/ontology/af/confidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/ontology/af/> .
+<http://purl.org/ontology/af/confidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/ontology/af/> .
+<http://purl.org/ontology/ao/core#included_association> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/ao/core#> <http://purl.org/ontology/ao/core#> .
+<http://purl.org/ontology/ao/core#included_association> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/similarity/Association> <http://purl.org/ontology/ao/core#> .
+<http://purl.org/ontology/ao/core#included_association> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/ao/core#> .
+<http://purl.org/ontology/ao/core#included_association> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"@en <http://purl.org/ontology/ao/core#> .
+<http://purl.org/ontology/ao/core#included_association> <http://www.w3.org/2000/01/rdf-schema#comment> "This property could be used to compose association statements or to reuse them, e.g. to make them likeable \nin a specific context."@en <http://purl.org/ontology/ao/core#> .
+<http://purl.org/ontology/ao/core#included_association> <http://www.w3.org/2002/07/owl#inverseOf> _:Bf4ea3c343b0ead6e98b700f16de627a0 <http://purl.org/ontology/ao/core#> .
+<http://purl.org/ontology/ao/core#included_association> <http://www.w3.org/2000/01/rdf-schema#label> "has included association"@en <http://purl.org/ontology/ao/core#> .
+<http://purl.org/ontology/ao/core#included_association> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/similarity/Association> <http://purl.org/ontology/ao/core#> .
+<http://purl.org/ontology/cco/core#skill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#skill> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/cco/core#competence> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#skill> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#skill> <http://www.w3.org/2000/01/rdf-schema#label> "has skill"@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#skill> <http://www.w3.org/2000/01/rdf-schema#comment> "The ability or skill to (be able to) do something, e.g. to walk, to play the piano or to work in a team."@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#skill> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/cco/core#> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#skill> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/wo/Adaptation> <http://www.w3.org/2000/01/rdf-schema#comment> "An adaptation is any feature of an animal or plant which makes it better suited for a particular habitat or to do a particular task. For instance, being streamlined is an adaptation to swimming fast and being able to survive on very little water is an adaptation to life in the desert."@en-gb <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Adaptation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/Adaptation> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Adaptation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Adaptation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/wo/> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Adaptation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.bbc.co.uk/nature/adaptations> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Adaptation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Adaptation> <http://www.w3.org/2000/01/rdf-schema#label> "Adaptation"@en-gb <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Collection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Collection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/dcmitype/Collection> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Collection> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of resources, including documents, multimedia files, programme clips and their associated taxa, which aims to showcase a particular aspect of natural history film-making, or illustrate aspects of the natural world. A collection provides an alternate way to organize content over and above the basic taxonomic hierarchy." <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Collection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/wo/> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Collection> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Collection> <http://www.w3.org/2000/01/rdf-schema#label> "Collection" <http://purl.org/ontology/wo/> .
+<http://purl.org/pav/hasVersion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#generalizationOf> <http://purl.org/pav/> .
+<http://purl.org/pav/hasVersion> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/hasCurrentVersion> <http://purl.org/pav/> .
+<http://purl.org/pav/hasVersion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/hasVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/hasVersion> <http://www.w3.org/2000/01/rdf-schema#label> "Has version"@en <http://purl.org/pav/> .
+<http://purl.org/pav/hasVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "This resource has a more specific, versioned resource.\n\nThis property is intended for relating a non-versioned or abstract resource to several versioned resources, e.g. snapshots. For instance, if there are two snapshots of the News page, made on 23rd and 24th of December, then:\n\n    <http://news.example.com/> pav:hasVersion <http://news.example.com/2013-12-23/> ;\n        pav:hasVersion <http://news.example.com/2013-12-24/> .\n\nIf one of the versions has somewhat the equivalent content to this resource (e.g. can be used as a permalink for this resource), then it should instead be indicated with the subproperty pav:hasCurrentVersion:\n\n    <http://news.example.com/> pav:hasCurrentVersion <http://news.example.com/2013-12-25/> .\n\nTo order the versions, use pav:previousVersion:\n\n    <http://news.example.com/2013-12-25/> pav:previousVersion <http://news.example.com/2013-12-24/> .\n    <http://news.example.com/2013-12-24/> pav:previousVersion <http://news.example.com/2013-12-23/> .\n\nNote that it might be confusing to also indicate pav:previousVersion from a resource that has pav:hasVersion relations, as such a resource is intended to be a long-living \"unversioned\" resource. The PAV ontology does however not formally restrict this, to cater for more complex scenarios with multiple abstraction levels.\n\npav:hasVersion is a subproperty of dcterms:hasVersion to more strongly define this hierarchical pattern. It is therefore also a subproperty of pav:generalizationOf (inverse of prov:specializationOf).\n\nTo indicate the existence of other, non-hierarchical kind of editions and adaptations of this resource that are not versioned snapshots (e.g. Powerpoint slides has a video recording version), use instead dcterms:hasVersion or prov:alternateOf."@en <http://purl.org/pav/> .
+<http://purl.org/pav/hasVersion> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/previousVersion> <http://purl.org/pav/> .
+<http://purl.org/pav/hasVersion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/hasVersion> <http://purl.org/pav/> .
+<http://purl.org/saws/ontology#refersTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://erlangen-crm.org/current/E33_Linguistic_Object> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#refersTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/saws/ontology#isRelatedTo> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#refersTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://erlangen-crm.org/current/P67_refers_to> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#refersTo> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows you to say that the text of a LinguisticObject makes a reference to (or mentions) some other text or object, either within the text (e.g. as allusion) or external to the text (for external things, please give a URI for that object)"@en <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#refersTo> <http://www.w3.org/2000/01/rdf-schema#label> "refers to"@en <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#refersTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#refersTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://erlangen-crm.org/current/E1_CRM_Entity> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#EditorSection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/saws/ontology#Section> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#EditorSection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#EditorSection> <http://www.w3.org/2000/01/rdf-schema#comment> "Any division within a linguistic object created by an editor, e.g. to make the navigation of the text clearer or to mark a region of interest"@en <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#EditorSection> <http://www.w3.org/2000/01/rdf-schema#label> "editor section"@en <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#EditorSection> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/saws/ontology#ScribeSection> <http://purl.org/saws/ontology> .
+<http://purl.org/spar/cito/likes> <http://www.w3.org/2000/01/rdf-schema#label> "likes"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/likes> <http://www.w3.org/2000/01/rdf-schema#comment> "A property that permits you to express appreciation of or interest in something that is the object of the RDF triple, or to express that it is worth thinking about even if you do not agree with its content, enabling social media 'likes' statements to be encoded in RDF.  Use of this property does NOT imply the existence of a formal citation of the entity that is 'liked'."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/likes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/2000/01/rdf-schema#label> "citation"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/2002/07/owl#equivalentClass> _:B04968240c6a322af912cf2d61c8fb4c0 <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation is a conceptual directional link from a citing entity to a cited entity, created by a human performative act of making a citation, typically instantiated by the inclusion of a bibliographic reference (biro:BibliographicReference) in the reference list of the citing entity, or by the inclusion within the citing entity of a link, in the form of an HTTP Uniform Resource Locator (URL), to a resource on the World Wide Web.\n\nThe time span of a citation, i.e. the interval between the publication year of the citing entity and the publication year of the cited entity, can be recorded using the data property cito:hasCitationTimeSpan.\n\nThe nature or type of a citation can be characterized by using CiTO object properties, e.g. http://purl.org/spar/cito/citesAsDataSource (definition: “The citing entity cites the cited entity as a source of data”).  \n\nThis CiTO class cito:Citation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties. \n\nFor example, the following RDF statement\n\n     :paperA cito:extends :paperB .\n\ncan be alternatively described as follows\n\n     :thisCitation a cito:Citation ; \n          cito:hasCitingEntity :paperA ;\n          cito:hasCitationCharacterization cito:extends ;\n          cito:hasCitedEntity :paperB .\n\nThis usage involved OWL2 punning, whereby a CiTO object property, such as the aforementioned cito:extends, is used as the object of the OWL assertion.\n\n     :thisCitation cito:hasCitationCharacterization cito:extends .\n\nUsing such OWL2 punning (described at http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), the CiTO object property is considered as a proper named individual of the class owl:Thing. \n\nSuch reification of citation acts can be very useful, since it permits one to combine these CiTO properties with other vocabularies, or to handle situations in which none of the citation characterizations available in CiTO are applicable.  \n\nSuch situations can be resolved by the creation of a user-defined citation characterization, for example by using the Open Annotation Data Model, as explained at http://semanticpublishing.wordpress.com/2013/07/03/extending-cito-for-open-annotations/."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/deo/Dedication> <http://www.w3.org/2000/01/rdf-schema#label> "dedication"@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Dedication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/DiscourseElement> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Dedication> <http://www.w3.org/2000/01/rdf-schema#comment> "Text in which the author names the person or people for whom he/she has written the document, or to whose memory it is dedicated."@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Dedication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Acknowledgements> <http://www.w3.org/2000/01/rdf-schema#label> "acknowledgements"@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Acknowledgements> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/orb/1.0/Acknowledgements> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Acknowledgements> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/DiscourseElement> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Acknowledgements> <http://www.w3.org/2000/01/rdf-schema#comment> "Usually part of the preface, or a separate section in its own right, often as part of the back matter, it acknowledges those, including funding agencies, who contributed to the undertaking of a research project described in a publication, or to the creation of the work in some way. In scientific articles, the acknowledgements are usually placed as a separated section immediately following the Discussion or Conclusions."@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Acknowledgements> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Prologue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/DiscourseElement> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Prologue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Prologue> <http://www.w3.org/2000/01/rdf-schema#comment> "A piece of writing at the beginning of a work of literature or drama, usually used to set the scene or to introduce the work."@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Prologue> <http://www.w3.org/2000/01/rdf-schema#label> "prologue"@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Reference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/DiscourseElement> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Reference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Reference> <http://www.w3.org/2000/01/rdf-schema#comment> "A reference to a specific part of the document, or to another publication."@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Reference> <http://www.w3.org/2000/01/rdf-schema#label> "reference"@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/doco/Footnote> <http://www.w3.org/2000/01/rdf-schema#comment> "A structure within a sentence that permits the author to make a comment or to cite another publication in support of the text, or both. A footnote is normally flagged by a superscript number immediately following that portion of the text to which it relates. For convenience of reading, the text of the footnote is usually printed at the bottom of the page or at the end of a text."@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Footnote> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B04fdbe5e10fd70d2d10d3e7018403941 <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Footnote> <http://www.w3.org/2000/01/rdf-schema#label> "footnote"@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Footnote> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/DiscourseElement> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Footnote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/ListOfReferences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/ListOfReferences> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0f569bfd2165fd510ea3ec9d7ee33365 <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/ListOfReferences> <http://www.w3.org/2000/01/rdf-schema#label> "list of references"@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/ListOfReferences> <http://www.w3.org/2000/01/rdf-schema#comment> "A list of items each representing a reference to a specific part of the same document, or to another publication."@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/fabio/LaboratoryNotebook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/LaboratoryNotebook> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Notebook> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/LaboratoryNotebook> <http://www.w3.org/2000/01/rdf-schema#label> "laboratory notebook"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/LaboratoryNotebook> <http://www.w3.org/2000/01/rdf-schema#comment> "A notebook used by an individual research scientist as the primary record of his or her research activities. A researcher may use a laboratory notebook to document hypotheses, to describe experiments and to record data in various formats, to provide details of data analysis and interpretation, or to record the validation or invalidation of the original hypotheses. The laboratory notebook serves as an organizational tool and a memory aid.  It may also have a role in recording and protecting any intellectual property created during the research, and may be used in evidence when establishing priority of discoveries, for example in patent applications.  Electronic versions of laboratory notebooks are increasingly being employed by researchers, particularly in chemistry and the pharmaceutical industry."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Reply> <http://www.w3.org/2000/01/rdf-schema#comment> "A work that is a reply, either to a letter or other direct communication, or to feedback or comments about a piece of submitted writing.  The latter is typically written by the author of a journal article submitted for publication, or by an applicant making a grant application, in response to reviews of the work from peer reviewers prior to publication (for the journal article) or prior to funding decision (for the grant application).  Alternatively, it can be written in response to post-publication peer-review of a published journal article, or comments about it."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Reply> <http://www.w3.org/2000/01/rdf-schema#label> "reply"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Reply> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Work> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Reply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Opinion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Work> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Opinion> <http://www.w3.org/2000/01/rdf-schema#comment> "An expression of a personal or professional opinion on an issue or topic."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Opinion> <http://www.w3.org/2000/01/rdf-schema#label> "opinion"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Opinion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/WhitePaper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/WhitePaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/ReportDocument> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/WhitePaper> <http://www.w3.org/2000/01/rdf-schema#comment> "An authoritative report or guide designed to educate readers and help people make decisions, or to explain technical problems and how to solve them. White papers are typically published by governments to propose new legislation for discussion, and by commercial companies to inform readers about products or services, as aids to marketing."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/WhitePaper> <http://www.w3.org/2000/01/rdf-schema#label> "white paper"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/InUsePaper> <http://www.w3.org/2000/01/rdf-schema#comment> "A scholarly work that describes applied and validated solutions such as software tools, systems or architectures that benefit from the use of the technology of a particular scholarly domain. Usually, papers of this kind should also provide convincing evidence that there is use of the proposed application or tool by the target user group, preferably outside the institution that conducted its development.\n\nE.g. see http://iswc2018.semanticweb.org/call-for-in-use-track-papers/."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/InUsePaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/ScholarlyWork> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/InUsePaper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/InUsePaper> <http://www.w3.org/2000/01/rdf-schema#label> "in-use paper"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/pro/relatesToOrganization> <http://www.w3.org/2000/01/rdf-schema#comment> "A property relating a time-indexed situation to an organization that represents the context for that situation (e.g. relating the role of member to the institution of which that person is a member)."@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/relatesToOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Organization> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/relatesToOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "relates to organization"@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/relatesToOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/relatesToOrganization> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/pro/relatesToEntity> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/copy-editor> <http://www.w3.org/2000/01/rdf-schema#comment> "The role of an editor who undertakes alterations to the text of a document submitted for publication to improve the formatting, style and accuracy of text, or to bring the text into the house style of the publisher (e.g. Americanization of British spelling), without intentionally altering the substance or meaning of the text."@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/copy-editor> <http://www.w3.org/2000/01/rdf-schema#label> "copy editor"@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/copy-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pro/PublishingRole> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/copy-editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/pro> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/or+to.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BordX2Bto .
+_:BordX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BordX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ord+to.nt> .
+_:BordX2Bto <https://w3id.org/tree#value> "ord" .
+_:BordX2Bto <https://w3id.org/tree#value> "to" .
+_:BordX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ord+to.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorgX2Bto .
+_:BorgX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorgX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/org+to.nt> .
+_:BorgX2Bto <https://w3id.org/tree#value> "org" .
+_:BorgX2Bto <https://w3id.org/tree#value> "to" .
+_:BorgX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/org+to.nt> <https://w3id.org/tree#remainingItems> "16"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BoriX2Bto .
+_:BoriX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoriX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ori+to.nt> .
+_:BoriX2Bto <https://w3id.org/tree#value> "ori" .
+_:BoriX2Bto <https://w3id.org/tree#value> "to" .
+_:BoriX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ori+to.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BoroX2Bto .
+_:BoroX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoroX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/oro+to.nt> .
+_:BoroX2Bto <https://w3id.org/tree#value> "oro" .
+_:BoroX2Bto <https://w3id.org/tree#value> "to" .
+_:BoroX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/oro+to.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2Btod .
+_:BorX2Btod <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2Btod <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+tod.nt> .
+_:BorX2Btod <https://w3id.org/tree#value> "or" .
+_:BorX2Btod <https://w3id.org/tree#value> "tod" .
+_:BorX2Btod <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+tod.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2Btog .
+_:BorX2Btog <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2Btog <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+tog.nt> .
+_:BorX2Btog <https://w3id.org/tree#value> "or" .
+_:BorX2Btog <https://w3id.org/tree#value> "tog" .
+_:BorX2Btog <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+tog.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2Btok .
+_:BorX2Btok <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2Btok <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+tok.nt> .
+_:BorX2Btok <https://w3id.org/tree#value> "or" .
+_:BorX2Btok <https://w3id.org/tree#value> "tok" .
+_:BorX2Btok <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+tok.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2Btoo .
+_:BorX2Btoo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2Btoo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+too.nt> .
+_:BorX2Btoo <https://w3id.org/tree#value> "or" .
+_:BorX2Btoo <https://w3id.org/tree#value> "too" .
+_:BorX2Btoo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+too.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2Btop .
+_:BorX2Btop <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2Btop <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+top.nt> .
+_:BorX2Btop <https://w3id.org/tree#value> "or" .
+_:BorX2Btop <https://w3id.org/tree#value> "top" .
+_:BorX2Btop <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+top.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2Btot .
+_:BorX2Btot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2Btot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+tot.nt> .
+_:BorX2Btot <https://w3id.org/tree#value> "or" .
+_:BorX2Btot <https://w3id.org/tree#value> "tot" .
+_:BorX2Btot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+tot.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2Btow .
+_:BorX2Btow <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2Btow <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+tow.nt> .
+_:BorX2Btow <https://w3id.org/tree#value> "or" .
+_:BorX2Btow <https://w3id.org/tree#value> "tow" .
+_:BorX2Btow <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+tow.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BaX2BorX2Bto .
+_:BaX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+or+to.nt> .
+_:BaX2BorX2Bto <https://w3id.org/tree#value> "a" .
+_:BaX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BaX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BaX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+or+to.nt> <https://w3id.org/tree#remainingItems> "22"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BbX2BorX2Bto .
+_:BbX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+or+to.nt> .
+_:BbX2BorX2Bto <https://w3id.org/tree#value> "b" .
+_:BbX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BbX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BbX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+or+to.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BcX2BorX2Bto .
+_:BcX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+or+to.nt> .
+_:BcX2BorX2Bto <https://w3id.org/tree#value> "c" .
+_:BcX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BcX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BcX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+or+to.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BdX2BorX2Bto .
+_:BdX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+or+to.nt> .
+_:BdX2BorX2Bto <https://w3id.org/tree#value> "d" .
+_:BdX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BdX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BdX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+or+to.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BeX2BorX2Bto .
+_:BeX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+or+to.nt> .
+_:BeX2BorX2Bto <https://w3id.org/tree#value> "e" .
+_:BeX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BeX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BeX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+or+to.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BfX2BorX2Bto .
+_:BfX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+or+to.nt> .
+_:BfX2BorX2Bto <https://w3id.org/tree#value> "f" .
+_:BfX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BfX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BfX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+or+to.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BgX2BorX2Bto .
+_:BgX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BgX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/g+or+to.nt> .
+_:BgX2BorX2Bto <https://w3id.org/tree#value> "g" .
+_:BgX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BgX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BgX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/g+or+to.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BhX2BorX2Bto .
+_:BhX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+or+to.nt> .
+_:BhX2BorX2Bto <https://w3id.org/tree#value> "h" .
+_:BhX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BhX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BhX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+or+to.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BiX2BorX2Bto .
+_:BiX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+or+to.nt> .
+_:BiX2BorX2Bto <https://w3id.org/tree#value> "i" .
+_:BiX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BiX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BiX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+or+to.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BlX2BorX2Bto .
+_:BlX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+or+to.nt> .
+_:BlX2BorX2Bto <https://w3id.org/tree#value> "l" .
+_:BlX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BlX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BlX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+or+to.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BmX2BorX2Bto .
+_:BmX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+or+to.nt> .
+_:BmX2BorX2Bto <https://w3id.org/tree#value> "m" .
+_:BmX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BmX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BmX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+or+to.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BoX2BorX2Bto .
+_:BoX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+or+to.nt> .
+_:BoX2BorX2Bto <https://w3id.org/tree#value> "o" .
+_:BoX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BoX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BoX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+or+to.nt> <https://w3id.org/tree#remainingItems> "15"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BpX2Bto .
+_:BorX2BpX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BpX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+p+to.nt> .
+_:BorX2BpX2Bto <https://w3id.org/tree#value> "or" .
+_:BorX2BpX2Bto <https://w3id.org/tree#value> "p" .
+_:BorX2BpX2Bto <https://w3id.org/tree#value> "to" .
+_:BorX2BpX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+p+to.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BrX2Bto .
+_:BorX2BrX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BrX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+r+to.nt> .
+_:BorX2BrX2Bto <https://w3id.org/tree#value> "or" .
+_:BorX2BrX2Bto <https://w3id.org/tree#value> "r" .
+_:BorX2BrX2Bto <https://w3id.org/tree#value> "to" .
+_:BorX2BrX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+r+to.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BsX2Bto .
+_:BorX2BsX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BsX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+s+to.nt> .
+_:BorX2BsX2Bto <https://w3id.org/tree#value> "or" .
+_:BorX2BsX2Bto <https://w3id.org/tree#value> "s" .
+_:BorX2BsX2Bto <https://w3id.org/tree#value> "to" .
+_:BorX2BsX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+s+to.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BtX2Bto .
+_:BorX2BtX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BtX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+t+to.nt> .
+_:BorX2BtX2Bto <https://w3id.org/tree#value> "or" .
+_:BorX2BtX2Bto <https://w3id.org/tree#value> "t" .
+_:BorX2BtX2Bto <https://w3id.org/tree#value> "to" .
+_:BorX2BtX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+t+to.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BtoX2Bu .
+_:BorX2BtoX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BtoX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+to+u.nt> .
+_:BorX2BtoX2Bu <https://w3id.org/tree#value> "or" .
+_:BorX2BtoX2Bu <https://w3id.org/tree#value> "to" .
+_:BorX2BtoX2Bu <https://w3id.org/tree#value> "u" .
+_:BorX2BtoX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+to+u.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BtoX2Bv .
+_:BorX2BtoX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BtoX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+to+v.nt> .
+_:BorX2BtoX2Bv <https://w3id.org/tree#value> "or" .
+_:BorX2BtoX2Bv <https://w3id.org/tree#value> "to" .
+_:BorX2BtoX2Bv <https://w3id.org/tree#value> "v" .
+_:BorX2BtoX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+to+v.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BtoX2Bw .
+_:BorX2BtoX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BtoX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+to+w.nt> .
+_:BorX2BtoX2Bw <https://w3id.org/tree#value> "or" .
+_:BorX2BtoX2Bw <https://w3id.org/tree#value> "to" .
+_:BorX2BtoX2Bw <https://w3id.org/tree#value> "w" .
+_:BorX2BtoX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+to+w.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BtoX2Bx .
+_:BorX2BtoX2Bx <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BtoX2Bx <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+to+x.nt> .
+_:BorX2BtoX2Bx <https://w3id.org/tree#value> "or" .
+_:BorX2BtoX2Bx <https://w3id.org/tree#value> "to" .
+_:BorX2BtoX2Bx <https://w3id.org/tree#value> "x" .
+_:BorX2BtoX2Bx <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+to+x.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/or+to.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BordX2Bto .
+_:BordX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BordX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ord+to.nt> .
+_:BordX2Bto <https://w3id.org/tree#value> "ord" .
+_:BordX2Bto <https://w3id.org/tree#value> "to" .
+_:BordX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ord+to.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorgX2Bto .
+_:BorgX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorgX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/org+to.nt> .
+_:BorgX2Bto <https://w3id.org/tree#value> "org" .
+_:BorgX2Bto <https://w3id.org/tree#value> "to" .
+_:BorgX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/org+to.nt> <https://w3id.org/tree#remainingItems> "16"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BoriX2Bto .
+_:BoriX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoriX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ori+to.nt> .
+_:BoriX2Bto <https://w3id.org/tree#value> "ori" .
+_:BoriX2Bto <https://w3id.org/tree#value> "to" .
+_:BoriX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ori+to.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BoroX2Bto .
+_:BoroX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoroX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/oro+to.nt> .
+_:BoroX2Bto <https://w3id.org/tree#value> "oro" .
+_:BoroX2Bto <https://w3id.org/tree#value> "to" .
+_:BoroX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/oro+to.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2Btod .
+_:BorX2Btod <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2Btod <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+tod.nt> .
+_:BorX2Btod <https://w3id.org/tree#value> "or" .
+_:BorX2Btod <https://w3id.org/tree#value> "tod" .
+_:BorX2Btod <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+tod.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2Btog .
+_:BorX2Btog <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2Btog <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+tog.nt> .
+_:BorX2Btog <https://w3id.org/tree#value> "or" .
+_:BorX2Btog <https://w3id.org/tree#value> "tog" .
+_:BorX2Btog <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+tog.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2Btok .
+_:BorX2Btok <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2Btok <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+tok.nt> .
+_:BorX2Btok <https://w3id.org/tree#value> "or" .
+_:BorX2Btok <https://w3id.org/tree#value> "tok" .
+_:BorX2Btok <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+tok.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2Btoo .
+_:BorX2Btoo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2Btoo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+too.nt> .
+_:BorX2Btoo <https://w3id.org/tree#value> "or" .
+_:BorX2Btoo <https://w3id.org/tree#value> "too" .
+_:BorX2Btoo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+too.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2Btop .
+_:BorX2Btop <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2Btop <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+top.nt> .
+_:BorX2Btop <https://w3id.org/tree#value> "or" .
+_:BorX2Btop <https://w3id.org/tree#value> "top" .
+_:BorX2Btop <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+top.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2Btot .
+_:BorX2Btot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2Btot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+tot.nt> .
+_:BorX2Btot <https://w3id.org/tree#value> "or" .
+_:BorX2Btot <https://w3id.org/tree#value> "tot" .
+_:BorX2Btot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+tot.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2Btow .
+_:BorX2Btow <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2Btow <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+tow.nt> .
+_:BorX2Btow <https://w3id.org/tree#value> "or" .
+_:BorX2Btow <https://w3id.org/tree#value> "tow" .
+_:BorX2Btow <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+tow.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BaX2BorX2Bto .
+_:BaX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+or+to.nt> .
+_:BaX2BorX2Bto <https://w3id.org/tree#value> "a" .
+_:BaX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BaX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BaX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+or+to.nt> <https://w3id.org/tree#remainingItems> "22"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BbX2BorX2Bto .
+_:BbX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+or+to.nt> .
+_:BbX2BorX2Bto <https://w3id.org/tree#value> "b" .
+_:BbX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BbX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BbX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+or+to.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BcX2BorX2Bto .
+_:BcX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+or+to.nt> .
+_:BcX2BorX2Bto <https://w3id.org/tree#value> "c" .
+_:BcX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BcX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BcX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+or+to.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BdX2BorX2Bto .
+_:BdX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+or+to.nt> .
+_:BdX2BorX2Bto <https://w3id.org/tree#value> "d" .
+_:BdX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BdX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BdX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+or+to.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BeX2BorX2Bto .
+_:BeX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+or+to.nt> .
+_:BeX2BorX2Bto <https://w3id.org/tree#value> "e" .
+_:BeX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BeX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BeX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+or+to.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BfX2BorX2Bto .
+_:BfX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+or+to.nt> .
+_:BfX2BorX2Bto <https://w3id.org/tree#value> "f" .
+_:BfX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BfX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BfX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+or+to.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BgX2BorX2Bto .
+_:BgX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BgX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/g+or+to.nt> .
+_:BgX2BorX2Bto <https://w3id.org/tree#value> "g" .
+_:BgX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BgX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BgX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/g+or+to.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BhX2BorX2Bto .
+_:BhX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+or+to.nt> .
+_:BhX2BorX2Bto <https://w3id.org/tree#value> "h" .
+_:BhX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BhX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BhX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+or+to.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BiX2BorX2Bto .
+_:BiX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+or+to.nt> .
+_:BiX2BorX2Bto <https://w3id.org/tree#value> "i" .
+_:BiX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BiX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BiX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+or+to.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BlX2BorX2Bto .
+_:BlX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+or+to.nt> .
+_:BlX2BorX2Bto <https://w3id.org/tree#value> "l" .
+_:BlX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BlX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BlX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+or+to.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BmX2BorX2Bto .
+_:BmX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+or+to.nt> .
+_:BmX2BorX2Bto <https://w3id.org/tree#value> "m" .
+_:BmX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BmX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BmX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+or+to.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BoX2BorX2Bto .
+_:BoX2BorX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2BorX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+or+to.nt> .
+_:BoX2BorX2Bto <https://w3id.org/tree#value> "o" .
+_:BoX2BorX2Bto <https://w3id.org/tree#value> "or" .
+_:BoX2BorX2Bto <https://w3id.org/tree#value> "to" .
+_:BoX2BorX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+or+to.nt> <https://w3id.org/tree#remainingItems> "15"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BpX2Bto .
+_:BorX2BpX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BpX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+p+to.nt> .
+_:BorX2BpX2Bto <https://w3id.org/tree#value> "or" .
+_:BorX2BpX2Bto <https://w3id.org/tree#value> "p" .
+_:BorX2BpX2Bto <https://w3id.org/tree#value> "to" .
+_:BorX2BpX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+p+to.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BrX2Bto .
+_:BorX2BrX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BrX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+r+to.nt> .
+_:BorX2BrX2Bto <https://w3id.org/tree#value> "or" .
+_:BorX2BrX2Bto <https://w3id.org/tree#value> "r" .
+_:BorX2BrX2Bto <https://w3id.org/tree#value> "to" .
+_:BorX2BrX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+r+to.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BsX2Bto .
+_:BorX2BsX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BsX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+s+to.nt> .
+_:BorX2BsX2Bto <https://w3id.org/tree#value> "or" .
+_:BorX2BsX2Bto <https://w3id.org/tree#value> "s" .
+_:BorX2BsX2Bto <https://w3id.org/tree#value> "to" .
+_:BorX2BsX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+s+to.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BtX2Bto .
+_:BorX2BtX2Bto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BtX2Bto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+t+to.nt> .
+_:BorX2BtX2Bto <https://w3id.org/tree#value> "or" .
+_:BorX2BtX2Bto <https://w3id.org/tree#value> "t" .
+_:BorX2BtX2Bto <https://w3id.org/tree#value> "to" .
+_:BorX2BtX2Bto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+t+to.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BtoX2Bu .
+_:BorX2BtoX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BtoX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+to+u.nt> .
+_:BorX2BtoX2Bu <https://w3id.org/tree#value> "or" .
+_:BorX2BtoX2Bu <https://w3id.org/tree#value> "to" .
+_:BorX2BtoX2Bu <https://w3id.org/tree#value> "u" .
+_:BorX2BtoX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+to+u.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BtoX2Bv .
+_:BorX2BtoX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BtoX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+to+v.nt> .
+_:BorX2BtoX2Bv <https://w3id.org/tree#value> "or" .
+_:BorX2BtoX2Bv <https://w3id.org/tree#value> "to" .
+_:BorX2BtoX2Bv <https://w3id.org/tree#value> "v" .
+_:BorX2BtoX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+to+v.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BtoX2Bw .
+_:BorX2BtoX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BtoX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+to+w.nt> .
+_:BorX2BtoX2Bw <https://w3id.org/tree#value> "or" .
+_:BorX2BtoX2Bw <https://w3id.org/tree#value> "to" .
+_:BorX2BtoX2Bw <https://w3id.org/tree#value> "w" .
+_:BorX2BtoX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+to+w.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/or+to.nt> <https://w3id.org/tree#relation> _:BorX2BtoX2Bx .
+_:BorX2BtoX2Bx <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorX2BtoX2Bx <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/or+to+x.nt> .
+_:BorX2BtoX2Bx <https://w3id.org/tree#value> "or" .
+_:BorX2BtoX2Bx <https://w3id.org/tree#value> "to" .
+_:BorX2BtoX2Bx <https://w3id.org/tree#value> "x" .
+_:BorX2BtoX2Bx <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/or+to+x.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .

@@ -1,0 +1,443 @@
+<http://data.semanticweb.org/ns/swc/ontology#MeetingRoomPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t\n\t\t\t<p>\n\t\t\t\tA particular room at the <a href=\"#ConferenceVenuePlace\">conference venue</a> (or elsewhere). E.g., the room where a particular <a href=\"#SessionEvent\">SessionEvent</a> takes place. \n\t\t\t</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#MeetingRoomPlace> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Place> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#MeetingRoomPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#MeetingRoomPlace> <http://www.w3.org/2000/01/rdf-schema#label> "Meeting Room Place" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#MeetingRoomPlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#MeetingRoomPlace> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Role> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Role> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>\n\t\t\t\tRole is the super-class of all the different roles performed at a conference or workshop. Examples are the various conference chairs, the delegates, presenters, PC members, etc. The intended use of this class is that an instance of Role will be related to the event at which it is performed, and to the person which performs it.\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t\tSince the set of roles is slightly different for each event, and since it would therefore be impossible to provide sub-classes for all needs and circumstances, the SWC ontology only contains a very basic set of Role classes. Rather than diversifying the set of Role classes to cater for all needs, users should instead instantiate the small set of different Role classes and cover the roles at a specific event in this way. E.g., instead of sub-classing the Chair role with MainChair, WorkshopChair, TutorialChair, etc., the different kinds of chairs should simply be instances of the generic Chair class and be labelled appropriately.\n\t\t\t</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Role> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Role> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/wordnet/1.6/Role-1> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://www.w3.org/2000/01/rdf-schema#label> "held by" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.semanticweb.org/ns/swc/ontology#Role> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>\n\t\t\t\tPart of the <a href=\"#Role\">role</a> modelling machinery of SWC. This property relates a role at an event (e.g. a conference chair) to the person who actually holds the role.\n\t\t\t</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://www.w3.org/2000/01/rdf-schema#label> "holds role" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://www.w3.org/2002/07/owl#inverseOf> <http://data.semanticweb.org/ns/swc/ontology#heldBy> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.semanticweb.org/ns/swc/ontology#Role> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>\n\t\t\t\tPart of the <a href=\"#Role\">role</a> modelling machinery of SWC. This property relates a person to the role (e.g. a conference chair) it holds at an event.\n\t\t\t</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#holdsRole> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#03_roles> <http://www.w3.org/2000/01/rdf-schema#label> "Roles" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#03_roles> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>\n\t\t\t\tOne of the basic design choices in SWC is to use role modelling for describing the different functions at a conference, such as chairs, reviewers, etc. For any particular role at a given conference, the <code>swc:Role</code> class or a sub-class will be instantiated. This role instance stands in relation to a person (who plays the role) and an event. The figure below gives an example showing how to model the role of the metadata chair (or \"dog food tsar\") at ISWC+ASWC2007, which was held by Knud Möller (together with Tom Heath, not shown in the figure).\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t\tNote that the metadata chair role is not modelled with its own dedicated class (although it could have been). Instead, an instance of the generic <a href=\"#Chair\">Chair</a> class is used and labelled accordingly.\n\t\t\t</p>\n\t\t\t<div align=\"center\">\n\t\t\t\t<a href=\"documentation/20090510-Roles_new.pdf\"><img src=\"documentation/20090510-Roles_new.png\" /></a>\n\t\t\t</div>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://dbpedia.org/ontology/addressInRoad> <http://www.w3.org/2000/01/rdf-schema#comment> "Ένα κτήριο, οργανισμός ή κάτι άλλο που βρίσκεται στον δρόμο."@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/addressInRoad> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:addressInRoad> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/addressInRoad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/addressInRoad> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Road> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/addressInRoad> <http://www.w3.org/2000/01/rdf-schema#label> "address in road"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/addressInRoad> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isLocationOf> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/addressInRoad> <http://www.w3.org/2000/01/rdf-schema#label> "Адреса на путу"@sr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/addressInRoad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/addressInRoad> <http://www.w3.org/2000/01/rdf-schema#comment> "A building, organisation or other thing that is located in the road."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/addressInRoad> <http://www.w3.org/2000/01/rdf-schema#label> "διεύθυνση στον δρόμο"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/addressInRoad> <http://www.w3.org/2000/01/rdf-schema#label> "Adresse in Straße"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketFunction> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:rocketFunction> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketFunction> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketFunction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Rocket> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketFunction> <http://www.w3.org/2000/01/rdf-schema#label> "rocket function"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "purpose of the rocket"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "The general direction of the route (eg. North-South)."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeDirection> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "Himmelsrichtung des Verkehrsweges (z.B. North-South)."@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeDirection> <http://www.w3.org/2000/01/rdf-schema#label> "route direction"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeDirection> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:routeDirection> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeDirection> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/RouteOfTransportation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Himmelsrichtung des Verkehrsweges"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartDirection> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/RouteOfTransportation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "Himmelsrichtung des Anfangs des Verkehrsweges."@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Himmelsrichtung des Wegstarts"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartDirection> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartDirection> <http://www.w3.org/2000/01/rdf-schema#label> "road start direction"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "End of the route. For U.S. roads, this should be either \"South\" or \"West\" per the standards set by the U.S. Roads project."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartDirection> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:routeStartDirection> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/RouteOfTransportation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "End of the route. This is where the route ends and, for U.S. roads, is either at the northern terminus or eastern terminus."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEnd> <http://www.w3.org/2000/01/rdf-schema#label> "route end"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEnd> <http://www.w3.org/2000/01/rdf-schema#label> "Wegende"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/RouteOfTransportation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEnd> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:routeEnd> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEnd> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasCommonBoundary> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "Ende des Verkehrswegs."@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeTypeAbbreviation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeTypeAbbreviation> <http://www.w3.org/2000/01/rdf-schema#comment> "The route type abbreviation (eg.: I for Interstate, M for Motorway or NJ for New Jersey Route)."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeTypeAbbreviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeTypeAbbreviation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeTypeAbbreviation> <http://www.w3.org/2000/01/rdf-schema#label> "route type abbreviation"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeTypeAbbreviation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/RouteOfTransportation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeTypeAbbreviation> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:routeTypeAbbreviation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeNumber> <http://www.w3.org/2000/01/rdf-schema#label> "route number"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeNumber> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:routeNumber> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of the route."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Routennummer"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/RouteOfTransportation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndDirection> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/RouteOfTransportation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "Himmelsrichtung des Endes des Verkehrsweges. Der Gegensatz zur OntologyProperty:routeStartDirection."@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndDirection> <http://www.w3.org/2000/01/rdf-schema#label> "Himmelsrichtung des Wegendes"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndDirection> <http://www.w3.org/2000/01/rdf-schema#label> "road end direction"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndDirection> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "End of the route. The opposite of OntologyProperty:routeStartDirection."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndDirection> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:routeEndDirection> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStart> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:routeStart> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStart> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/RouteOfTransportation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStart> <http://www.w3.org/2000/01/rdf-schema#label> "Weganfang"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStart> <http://www.w3.org/2000/01/rdf-schema#comment> "Anfang des Verkehrswegs."@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStart> <http://www.w3.org/2000/01/rdf-schema#label> "point de départ"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStart> <http://www.w3.org/2000/01/rdf-schema#comment> "point de départ d'une route."@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/RouteOfTransportation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStart> <http://www.w3.org/2000/01/rdf-schema#comment> "Start of the route. This is where the route begins and, for U.S. roads, is either at the southern terminus or western terminus."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStart> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasCommonBoundary> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStart> <http://www.w3.org/2000/01/rdf-schema#label> "route start"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/RouteOfTransportation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Ort des Weganfangs"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartLocation> <http://www.w3.org/2000/01/rdf-schema#label> "route start location"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Der Startort des Verkehrswegs."@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The start location of the route."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasCommonBoundary> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Place> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeStartLocation> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:routeStartLocation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Place> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndLocation> <http://www.w3.org/2000/01/rdf-schema#label> "Ort des Wegendes"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The end location of the route."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "End-Ort des Verkehrswegs."@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndLocation> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:routeEndLocation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/RouteOfTransportation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndLocation> <http://www.w3.org/2000/01/rdf-schema#label> "route end location"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasCommonBoundary> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/routeEndLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Object> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry object" <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Object> <http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#isAbstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Object> <http://www.w3.org/2000/01/rdf-schema#comment> "GM_Object (Figure 6) is the root class of the geometric object taxonomy and supports interfaces common to all geographically referenced geometric objects. GM_Object instances are sets of direct positions in a particular coordinate reference system. A GM_Object can be regarded as an infinite set of points that satisfies the set operation interfaces for a set of direct positions, TransfiniteSet<DirectPosition>. Since an infinite collection class cannot be implemented directly, a Boolean test for inclusion shall be provided by the GM_Object interface. This international standard concentrates on vector geometry classes, but future work may use GM_Object as a root class without modification.\nNOTE As a type, GM_Object does not have a well-defined default state or value representation as a data type. Instantiated subclasses of GM_Object will." <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Object> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Object> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb9534e9b80bf268d6ed5c10dc7b54301 <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Object> <http://www.w3.org/2004/02/skos/core#notation> "GM_Object"^^<http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#ISOClassName> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Object> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.opengis.net/ont/gml#AbstractGeometry> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#ObservationContext> <http://www.w3.org/2000/01/rdf-schema#label> "Observation context"@en <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#ObservationContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Context linking two or more observations" <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#ObservationContext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#ObservationContext> <http://www.w3.org/2004/02/skos/core#notation> "ObservationContext"^^<http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#ISOClassName> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#ObservationContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#ObservationContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#ObservationContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Some observations depend on other observations to provide context which is important, sometimes essential, in understanding the result. These dependencies are stronger than mere spatio-temporal coincidences, requiring explicit representation. If present, the association class class ObservationContext (Figure 2) shall link a OM_Observation to another OM_Observation, with the role name relatedObservation for the target. It shall support one attribute.\r\n\r\nEXAMPLES\tSome examples include the conditions associated with experimental replicates (e.g., experimental plots and treatments used), biotic factors (e.g., ecological community), interactions among features (e.g., predator-prey), or other temporary relationships occurring at the time of observation that are are not inherent to the observed features themselves (i.e., they change over time), or the related observation may provide input to a process that generates a new result.\r\nThis association complements the Intention association which describes relationships between a sampling feature and domain features." <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#ObservationContext> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bdd11cc00dbda3f9645dcc9e0323605f0 <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#ObservationContext> <http://www.w3.org/2002/07/owl#equivalentClass> _:B68c11d7f4906c3e516245aed3d001ce4 <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://linkedscience.org/teach/ns#room> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://linkedscience.org/teach/ns#room> <http://linkedscience.org/teach/ns#> .
+<http://linkedscience.org/teach/ns#room> <http://www.w3.org/2000/01/rdf-schema#label> "room"@en <http://linkedscience.org/teach/ns#> .
+<http://linkedscience.org/teach/ns#room> <http://dbpedia.org/ontology/related> <http://dbpedia.org/resource/Room> <http://linkedscience.org/teach/ns#> .
+<http://linkedscience.org/teach/ns#room> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#thing> <http://linkedscience.org/teach/ns#> .
+<http://linkedscience.org/teach/ns#room> <http://www.w3.org/2000/01/rdf-schema#comment> "room is an abstract property to express the room where the course/seminar takes place."@en <http://linkedscience.org/teach/ns#> .
+<http://linkedscience.org/teach/ns#room> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://linkedscience.org/teach/ns#> .
+<http://ogp.me/ns#title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> <http://ogp.me/ns> .
+<http://ogp.me/ns#title> <http://www.w3.org/2000/01/rdf-schema#label> "title"@en-us <http://ogp.me/ns> .
+<http://ogp.me/ns#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://ogp.me/ns> .
+<http://ogp.me/ns#title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ogp.me/ns#> <http://ogp.me/ns> .
+<http://ogp.me/ns#title> <http://www.w3.org/2000/01/rdf-schema#comment> "The title of the object as it should appear within the graph, e.g.,  \"The Rock\"."@en-us <http://ogp.me/ns> .
+<http://ogp.me/ns#title> <http://www.w3.org/2000/01/rdf-schema#range> <http://ogp.me/ns/class#string> <http://ogp.me/ns> .
+<http://ontology.it/itsmo/v1#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.it/itsmo/v1#RunnableResource> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Process> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ontology.it/itsmo/v1> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process" <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6a69ba91f35f5dd309249afa951845af <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured set of activities designed to accomplish a specific objective. \nA process takes one or more defined inputs and turns them into defined outputs. It may include any of the roles, responsibilities, tools and management controls required to reliably deliver the outputs. A process may define policies, standards, guidelines, activities and work instructions if they are needed."@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Process> <http://purl.org/dc/terms/conformsTo> <http://www.itil-officialsite.com/InternationalActivities/ITILGlossaries_2.aspx#English_2011_Glossary> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Identity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Identity> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique name that is used to identify a user, person or role. The identity is used to grant rights to that user, person or role. Example identities might be the username SmithJ or the role ‘change manager’."@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Identity> <http://www.w3.org/2000/01/rdf-schema#label> "Identity" <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Identity> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.it/itsmo/v1#Hardware> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Identity> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.it/itsmo/v1#Building> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Identity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.it/itsmo/v1#ConfigurationItem> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Identity> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.it/itsmo/v1#RunnableResource> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Identity> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.it/itsmo/v1#Document> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Identity> <http://purl.org/dc/terms/conformsTo> <http://www.itil-officialsite.com/InternationalActivities/ITILGlossaries_2.aspx#English_2011_Glossary> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Identity> <http://www.w3.org/2002/07/owl#disjointWith> <http://ontology.it/itsmo/v1#SoftwarePackage> <http://ontology.it/itsmo/v1> .
+<http://open.vocab.org/terms/AfricanRedSlip> <http://open.vocab.org/terms/markdownDescription> "Identifies the ware of any African Red-Slip vessel."@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AfricanRedSlip> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AfricanRedSlip> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/docs/> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AfricanRedSlip> <http://www.w3.org/2000/01/rdf-schema#label> "African Red Slip"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AfricanRedSlip> <http://www.w3.org/2004/02/skos/core#note> <http://open.vocab.org/changes/a1c05e65219d9b345a2782d2977dd102> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AfricanRedSlip> <http://www.w3.org/2002/07/owl#equivalentClass> <http://dbpedia.org/resource/African_Red_Slip> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AfricanRedSlip> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AfricanRedSlip> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://open.vocab.org/terms/Ware> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AfricanRedSlip> <http://www.w3.org/2000/01/rdf-schema#comment> "The ceramic ware produced during the Roman period in the region of what is now the modern country of Tunisia."@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AfricanRedSlip> <http://schemas.talis.com/2005/dir/schema#etag> "9bb5567d-9f87-47cd-8f0d-2ed0f9fbd24f" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AfricanRedSlip> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/csvRow> <http://www.w3.org/2000/01/rdf-schema#label> "csv row"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/csvRow> <http://schemas.talis.com/2005/dir/schema#etag> "1cdb728e-f479-45ce-a18f-0fd34373bce8" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/csvRow> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/csvRow> <http://open.vocab.org/terms/markdownDescription> "Add this property to any instance you make from a row when converting csv to rdf.\n\nsee also http://open.vocab.org/terms/csvCol"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/csvRow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/csvRow> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/csvRow> <http://purl.org/net/vocab/2004/03/label#plural> "csv rows"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/csvRow> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/terms/csvRow.html> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/csvRow> <http://www.w3.org/2000/01/rdf-schema#comment> "The row number of a csv from which this instance was created. This is different from the r-th entry within the table, which may be less than the csv row if the csv has title information and a header above the data."@en <http://open.vocab.org/terms> .
+<http://openprovenance.org/model/opmo#role> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://openprovenance.org/model/opmo> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#role> <http://www.w3.org/2000/01/rdf-schema#domain> _:B2894421c3313d974bf0407d7573996e7 <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#role> <http://www.w3.org/2000/01/rdf-schema#comment> "The role of an edge." <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#role> <http://www.w3.org/2000/01/rdf-schema#label> "role" <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#role> <http://www.w3.org/2000/01/rdf-schema#range> <http://openprovenance.org/model/opmo#Role> <http://openprovenance.org/model/opmo> .
+<http://owlrep.eu01.aws.af.cm/fridge#observationPropertyRoomTemperature> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://owlrep.eu01.aws.af.cm/fridge> .
+<http://owlrep.eu01.aws.af.cm/fridge#observationPropertyRoomTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://owlrep.eu01.aws.af.cm/fridge> .
+<http://owlrep.eu01.aws.af.cm/fridge#observationPropertyRoomTemperature> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://owlrep.eu01.aws.af.cm/fridge#observationProperty> <http://owlrep.eu01.aws.af.cm/fridge> .
+<http://owlrep.eu01.aws.af.cm/fridge#observationPropertyRoomTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "The average temperature of the room where the refrigerator stands observed in a time period." <http://owlrep.eu01.aws.af.cm/fridge> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word> <http://www.w3.org/2000/01/rdf-schema#label> "Word"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    The Word class represents strings that are tokens or words. A string is a Word, if it is a word. We don't nitpic about whether it is a a pronoun, a name, a punctuation mark or an apostrophe or whether it is separated by white space from another Word or something else. The string 'He enters the room.' for example has 5 words. Words are assigned by a tokenizer NIF Implementation. Single word phrases might be tagged as nif:Word and nif:Phrase. \n    \n    Example 1: \"The White House\" are three Words separated by whitespace\n        \n    Comment 1: We adopted the definition style from foaf:Person, see here: http://xmlns.com/foaf/spec/#term_Person We are well aware that the world out there is much more complicated, but we are ignorant about it, for the following reasons:\n    Comment 2:  \n    \n    1. NIF has a client-server and the client has the ability to dictate the tokenization to the server (i.e. the NIF Implementation) by sending properly tokenized NIF annotated with nif:Word. All NIF Implementations are supposed to honor and respect the current assignment of the Word class. Thus the client should decide which NIF Implementation should create the tokenization. Therefore this class is not descriptive, but prescriptive.\n    2. The client may choose to send an existing tokenization to a NIF Implementation, with the capability to change (for better or for worse) the tokenization. \n    \n    \n   \n    The class has not been named 'Token' as the NLP definition of 'token' is descriptive (and not well-defined), while the assignment of what is a Word and what not is prescriptive, e.g. \"can't\" could be described as one, two or three tokens or defined as being one, two or three words. For further reading, we refer the reader to: By all these lovely tokens... Merging conflicting tokenizations by Christian Chiarcos, Julia Ritz, and Manfred Stede. Language Resources and Evaluation 46(1):53-74 (2012) or the short form: http://www.aclweb.org/anthology/W09-3005\n    There the task at hand is to merge two tokenization T_1 and T_2 which is normally not the case in the NIF world as tokenization is prescribed, i.e. given as a baseline (Note that this ideal state might not be achieved by all implementations.)\n    \n    Changelog:\n    * 0.1.1 fixed spelling\n    * 0.2.1 added a proper definition.\n    * 0.2.3 added examples and clarifications\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.2" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#Scale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#Scale> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B420fd6db6b732ff5d50ccfaf2878d1c7 <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#Scale> <http://www.w3.org/2000/01/rdf-schema#label> "Scale" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#Scale> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'Scale' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#Scale> <http://www.w3.org/2000/01/rdf-schema#comment> "A Scale represents the [VIM] concept of a \"measurement scale\" that is defined as an \"ordered set of quantity values of\nquantities of a given kind of quantity used in ranking, according to magnitude, quantities of that kind.\" A Scale specifies one\nor more fixed values that have a specific significance in the definition of the associating QuantityKind.\nFor example the \"thermodynamic temperature\" kind of quantity is defined by specifying the values of 0 and 273.16 kelvin as\nthe temperatures of absolute zero and the triple point of water respectively.\nA Scale does not always need to specify a unit. For example the \"Rockwell C Hardness Scale\" or the \"Beaufort Wind Force\nScale\" are ordinal scales that do not have a particular associated unit. Similarly, subjective scales for a \"priority\" or \"risk\" kind\nof quantity with e.g. value definitions 0 for \"low\", 1 for \"medium\" and 3 for \"high\" do not have a particular associated unit." <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#Scale> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B888faa01e416f8c8edd33edc9ac4b9ac <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#Scale> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.omgsysml.org/qudv#Scale" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#Scale> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/qu" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.org/biotop/biotop.owl#EnzymeRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/biotop/biotop.owl> .
+<http://purl.org/biotop/biotop.owl#EnzymeRole> <http://www.w3.org/2000/01/rdf-schema#label> "enzyme role" <http://purl.org/biotop/biotop.owl> .
+<http://purl.org/biotop/biotop.owl#EnzymeRole> <http://www.w3.org/2000/01/rdf-schema#comment> "The role a peptide plays in accelerating a biochemical reaction" <http://purl.org/biotop/biotop.owl> .
+<http://purl.org/biotop/biotop.owl#EnzymeRole> <http://www.w3.org/2002/07/owl#equivalentClass> _:B7070bfc64a52397a72409a8ec6e3e6e9 <http://purl.org/biotop/biotop.owl> .
+<http://purl.org/cerif/frapo/hasJobTitle> <http://www.w3.org/2000/01/rdf-schema#label> "has job title"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/hasJobTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "A data property permitting specification of the job title held by a person, such as might appear next to the name in a directory or on a conference name badge.  For example, the person's specific Job Title might be 'Linacre Professor of Zoology' or 'Regius Professor of Moral Philosophy'. \n\nThis job title properly refers to the **role** held by that person (e.g. 'Head of Department'), which can be separately defined using SCoRO, the Scholarly Contributions and Roles Ontology (http://purl.org/spar/scoro/). [see scoro:withJobTitle].\n\n"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/hasJobTitle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/cerif/frapo/hasPersonalInformation> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/hasJobTitle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/hasJobTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/cerif/frapo/> .
+<http://purl.org/healthcarevocab/v1#Tag.0004.1200> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#OffsetOfTheFirstDirectoryRecordOfTheRootDirectoryEntity> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0004.1200> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0004.1200> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0004.1200> <http://www.w3.org/2000/01/rdf-schema#label> "Offset of the First Directory Record of the Root Directory Entity" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0004.1200> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#long> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0004.1202> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0004.1202> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0004.1202> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#OffsetOfTheLastDirectoryRecordOfTheRootDirectoryEntity> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0004.1202> <http://www.w3.org/2000/01/rdf-schema#label> "Offset of the Last Directory Record of the Root Directory Entity" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0004.1202> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#long> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OffsetOfTheLastDirectoryRecordOfTheRootDirectoryEntity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#long> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OffsetOfTheLastDirectoryRecordOfTheRootDirectoryEntity> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0004.1202> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OffsetOfTheLastDirectoryRecordOfTheRootDirectoryEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OffsetOfTheLastDirectoryRecordOfTheRootDirectoryEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Offset of the Last Directory Record of the Root Directory Entity" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OffsetOfTheLastDirectoryRecordOfTheRootDirectoryEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OffsetOfTheFirstDirectoryRecordOfTheRootDirectoryEntity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#long> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OffsetOfTheFirstDirectoryRecordOfTheRootDirectoryEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OffsetOfTheFirstDirectoryRecordOfTheRootDirectoryEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OffsetOfTheFirstDirectoryRecordOfTheRootDirectoryEntity> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0004.1200> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OffsetOfTheFirstDirectoryRecordOfTheRootDirectoryEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Offset of the First Directory Record of the Root Directory Entity" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/iso25964/skos-thes#SimpleNonPreferredTerm> <http://purl.org/dc/terms/modified> "2013-12-09"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes#SimpleNonPreferredTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Simple Non Preferred Term"@en <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes#SimpleNonPreferredTerm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2008/05/skos-xl#Label> <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes#SimpleNonPreferredTerm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iso25964/skos-thes> <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes#SimpleNonPreferredTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "ISO SimpleNonPreferredTerm\n\nInstances of iso:SimpleNonPreferredTerm are the object of either of skos xl:altLabel or skos xl:hiddenLabel statements.\n\n\nIdentifying cases of Equivalence:\n\nIn SKOS/-XL, Equivalence may be derived between the skos/skos xl:prefLabel statements on one hand and the skos/skos xl:altLabel or the skos/skos xl:hiddenLabel statements on the other hand where:\n- the subject of all these statements is the same instance of skos:Concept,\n- the language of all the bound labels is the same,\n- the prefLabel has the role USE, and\n- the altLabel and hiddenLabel have the role UF."@en <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes#SimpleNonPreferredTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes#SimpleNonPreferredTerm> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "released" <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/linguistics/gold/DativeCase> <http://www.w3.org/2000/01/rdf-schema#comment> "DativeCase marks 1) Indirect objects (for languages in which they are held to exist) or 2) nouns having the role of recipient (as of things given), beneficiary of an action, or possessor of an item [Crystal 1980: 102]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DativeCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DativeCase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/CaseProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DativeCase> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DativeCase> <http://www.w3.org/2000/01/rdf-schema#label> "DativeCase"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Root> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Root> <http://www.w3.org/2000/01/rdf-schema#label> "Root"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Root> <http://www.w3.org/2000/01/rdf-schema#comment> "The base form of a word which cannot be further analyzed without total loss of identity. Roots may be free or bound morphemes and can be classified as simple (i.e. compositionally unanalyzable in terms of morphemes) or complex/compound (i.e. certain combinations of simple root forms), though for the latter, the term 'stem' is often used.  From a semantic point of view, the root generally carried the main component of meaning in a word. [Crystal 1997: 336]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Root> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Morpheme> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Root> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LateralProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LateralProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Obstruction of the airstream at a point along the center of the oral tract, with complete closure between one or both sides of the tongue and the roof of the mouth. [Ladefoged 2000: 11]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LateralProperty> <http://www.w3.org/2000/01/rdf-schema#label> "LateralProperty"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LateralProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LateralProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/BuccalProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DerivationalMorpheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/BoundMorpheme> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DerivationalMorpheme> <http://www.w3.org/2000/01/rdf-schema#label> "DerivationalMorpheme"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DerivationalMorpheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DerivationalMorpheme> <http://www.w3.org/2000/01/rdf-schema#comment> "DerivationalUnit is the class of functional units whose members function to derive a new lexical unit from an existing one, by systematically changing the meaning and possibly altering the part of speech feature of the root or stem it attaches to [Hartmann and Stork 1972: 62; Crystal 1985: 89; Bybee 1985: 81-82, 99]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DerivationalMorpheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/InflectionalMorpheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/InflectionalMorpheme> <http://www.w3.org/2000/01/rdf-schema#label> "InflectionalMorpheme"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/InflectionalMorpheme> <http://www.w3.org/2000/01/rdf-schema#comment> "InflectionalUnit is the class of functional units whose members designate such grammatical categories as tense, aspect, mood etc. The various forms of an InflectionalUnit plus the stem forms a grammatical paradigm and express a grammatical contrast that is obligatory for its stem's part of speech in some given grammatical context. An inflectional unit does not alter the part of speech feature of the root or stem it attaches to. It is typically located farther from its Root than a derivational unit and  produces a predictable, nonidiosyncratic change of meaning [Crystal 1980: 184; Hartmann and Stork 1972: 112; Bybee 1985: 2, 99]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/InflectionalMorpheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/BoundMorpheme> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/InflectionalMorpheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Affix> <http://www.w3.org/2000/01/rdf-schema#comment> "An affix is a morpheme with an abstract meaning which can only be used when added to a root morpheme.  These are classified in four different ways, depending on their position with reference to the root: suffix, prefix, circumfix and infix. [Haspelmath 2002: 265; Crystal 1980: 17]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Affix> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Morpheme> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Affix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Affix> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Affix> <http://www.w3.org/2000/01/rdf-schema#label> "Affix"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/infixedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/infixedIn> <http://www.w3.org/2000/01/rdf-schema#label> "infixedIn"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/infixedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/infixedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "infixedIn is the relation between a Lexical- or SublexicalUnit and a Root. The Root is realized as discontinuous, surrounding the inserted Lexical- or SublexicalUnit [Hartmann and Stork 1972, 111]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/infixedIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linguistics/gold/morphologicalRelation> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Low> <http://www.w3.org/2000/01/rdf-schema#comment> "Articulated with the highest point of the tongue more or less maximally distant from the roof of the mouth. In the SPE feature system, a distinctive feature defined as 'articulated with the body of the tongue below the neutral position.' [Trask 1996: 212]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Low> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Low> <http://www.w3.org/2000/01/rdf-schema#label> "Low"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Low> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/HeightProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Low> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Tap> <http://www.w3.org/2000/01/rdf-schema#label> "Tap"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Tap> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Tap> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/TrillProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Tap> <http://www.w3.org/2000/01/rdf-schema#comment> "A Tap 'is a sound in which a brief contact between the articulators is made by moving the active articulator directly towards the roof of the mouth.' A tap is 'usually coronal. ... Taps are most typically made by a direct movement of the tongue tip to a contact location in the dental or alveolar region.' [Ladefoged 1996: 231]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Tap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RadicalProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of place  properties used to classifiy articulatory gestures made with the root of the tongue. [Ladefoged 1997: 603]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RadicalProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/PlaceProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RadicalProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RadicalProperty> <http://www.w3.org/2000/01/rdf-schema#label> "RadicalProperty"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RadicalProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CategoryChanger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CategoryChanger> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CategoryChanger> <http://www.w3.org/2000/01/rdf-schema#label> "CategoryChanger"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CategoryChanger> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/DerivationalMorpheme> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CategoryChanger> <http://www.w3.org/2000/01/rdf-schema#comment> "CategoryChanger is a cover class for all derivational units that change the syntactic category of the root to which they are attached."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PlusATR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PlusATR> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PlusATR> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/RadicalProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PlusATR> <http://www.w3.org/2000/01/rdf-schema#comment> "PlusATR (Advanced Tongue Root) characterizes sounds made with the root of the tongue drawn forward and the larynx lowered so that the part of the vocal tract in the pharynx is considerably enlarged. [Ladefoged 2000: 211]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PlusATR> <http://www.w3.org/2000/01/rdf-schema#label> "PlusATR"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Thing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Thing> <http://www.w3.org/2000/01/rdf-schema#comment> "In Web Ontology Language, Thing is the superclass of all classes. The most basic concepts in a domain should correspond to classes that are the roots of various taxonomic trees. Every individual in the OWL world is a member of the class owl:Thing. Thus each user-defined class is implicitly a subclass of owl:Thing. Domain specific root classes are defined by simply declaring a named class. [Smith, Welty and McGuinness 2004]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Thing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Thing> <http://www.w3.org/2000/01/rdf-schema#label> "Thing"@eng <http://purl.org/linguistics/gold> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/ro+the.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BroaX2Bthe .
+_:BroaX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BroaX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/roa+the.nt> .
+_:BroaX2Bthe <https://w3id.org/tree#value> "roa" .
+_:BroaX2Bthe <https://w3id.org/tree#value> "the" .
+_:BroaX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/roa+the.nt> <https://w3id.org/tree#remainingItems> "76"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BrobX2Bthe .
+_:BrobX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrobX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/rob+the.nt> .
+_:BrobX2Bthe <https://w3id.org/tree#value> "rob" .
+_:BrobX2Bthe <https://w3id.org/tree#value> "the" .
+_:BrobX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/rob+the.nt> <https://w3id.org/tree#remainingItems> "55"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BrocX2Bthe .
+_:BrocX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrocX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/roc+the.nt> .
+_:BrocX2Bthe <https://w3id.org/tree#value> "roc" .
+_:BrocX2Bthe <https://w3id.org/tree#value> "the" .
+_:BrocX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/roc+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BrofX2Bthe .
+_:BrofX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrofX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/rof+the.nt> .
+_:BrofX2Bthe <https://w3id.org/tree#value> "rof" .
+_:BrofX2Bthe <https://w3id.org/tree#value> "the" .
+_:BrofX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/rof+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BrolX2Bthe .
+_:BrolX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrolX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/rol+the.nt> .
+_:BrolX2Bthe <https://w3id.org/tree#value> "rol" .
+_:BrolX2Bthe <https://w3id.org/tree#value> "the" .
+_:BrolX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/rol+the.nt> <https://w3id.org/tree#remainingItems> "266"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BromX2Bthe .
+_:BromX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BromX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/rom+the.nt> .
+_:BromX2Bthe <https://w3id.org/tree#value> "rom" .
+_:BromX2Bthe <https://w3id.org/tree#value> "the" .
+_:BromX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/rom+the.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BronX2Bthe .
+_:BronX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BronX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ron+the.nt> .
+_:BronX2Bthe <https://w3id.org/tree#value> "ron" .
+_:BronX2Bthe <https://w3id.org/tree#value> "the" .
+_:BronX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ron+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BrooX2Bthe .
+_:BrooX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrooX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/roo+the.nt> .
+_:BrooX2Bthe <https://w3id.org/tree#value> "roo" .
+_:BrooX2Bthe <https://w3id.org/tree#value> "the" .
+_:BrooX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/roo+the.nt> <https://w3id.org/tree#remainingItems> "34"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BrorX2Bthe .
+_:BrorX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrorX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ror+the.nt> .
+_:BrorX2Bthe <https://w3id.org/tree#value> "ror" .
+_:BrorX2Bthe <https://w3id.org/tree#value> "the" .
+_:BrorX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ror+the.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BrosX2Bthe .
+_:BrosX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrosX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ros+the.nt> .
+_:BrosX2Bthe <https://w3id.org/tree#value> "ros" .
+_:BrosX2Bthe <https://w3id.org/tree#value> "the" .
+_:BrosX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ros+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BrotX2Bthe .
+_:BrotX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrotX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/rot+the.nt> .
+_:BrotX2Bthe <https://w3id.org/tree#value> "rot" .
+_:BrotX2Bthe <https://w3id.org/tree#value> "the" .
+_:BrotX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/rot+the.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BrouX2Bthe .
+_:BrouX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrouX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/rou+the.nt> .
+_:BrouX2Bthe <https://w3id.org/tree#value> "rou" .
+_:BrouX2Bthe <https://w3id.org/tree#value> "the" .
+_:BrouX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/rou+the.nt> <https://w3id.org/tree#remainingItems> "14"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BrowX2Bthe .
+_:BrowX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrowX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/row+the.nt> .
+_:BrowX2Bthe <https://w3id.org/tree#value> "row" .
+_:BrowX2Bthe <https://w3id.org/tree#value> "the" .
+_:BrowX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/row+the.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BroyX2Bthe .
+_:BroyX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BroyX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/roy+the.nt> .
+_:BroyX2Bthe <https://w3id.org/tree#value> "roy" .
+_:BroyX2Bthe <https://w3id.org/tree#value> "the" .
+_:BroyX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/roy+the.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BiX2BroX2Bthe .
+_:BiX2BroX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2BroX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+ro+the.nt> .
+_:BiX2BroX2Bthe <https://w3id.org/tree#value> "i" .
+_:BiX2BroX2Bthe <https://w3id.org/tree#value> "ro" .
+_:BiX2BroX2Bthe <https://w3id.org/tree#value> "the" .
+_:BiX2BroX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+ro+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/ro+the.nt> <https://w3id.org/tree#relation> _:BoX2BroX2Bthe .
+_:BoX2BroX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2BroX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+ro+the.nt> .
+_:BoX2BroX2Bthe <https://w3id.org/tree#value> "o" .
+_:BoX2BroX2Bthe <https://w3id.org/tree#value> "ro" .
+_:BoX2BroX2Bthe <https://w3id.org/tree#value> "the" .
+_:BoX2BroX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+ro+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

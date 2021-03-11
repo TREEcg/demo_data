@@ -1,0 +1,570 @@
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdAt> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/creator> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent primary responsible for making the digital artifact or resource representation.\n\nThis property is distinct from forming the content, which is indicated with pav:contributedBy or its subproperties; pav:authoredBy, which identifies who authored the knowledge expressed by this resource; and pav:curatedBy, which identifies who curated the knowledge into its current form.\n\npav:createdBy is more specific than its superproperty dct:creator - which might or might not be interpreted to cover this creator.\n\nFor instance, the author wrote 'this species has bigger wings than normal' in his log book. The curator, going through the log book and identifying important knowledge, formalizes this as 'locus perculus has wingspan > 0.5m'. The creator enters this knowledge as a digital resource in the knowledge system, thus creating the digital artifact (say as JSON, RDF, XML or HTML).\n\nA different example is a news article. pav:authoredBy indicates the journalist who wrote the article. pav:contributedBy can indicate the artist who added an illustration. pav:curatedBy can indicate the editor who made the article conform to the news paper's style. pav:createdBy can indicate who put the article on the web site.\n\nThe software tool used by the creator to make the digital resource (say Protege, Wordpress or OpenOffice) can be indicated with pav:createdWith.\n\nThe date the digital resource was created can be indicated with pav:createdOn.\n\nThe location the agent was at when creating the digital resource can be made using pav:createdAt."@en <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/curatedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdOn> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/authoredBy> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/createdBy> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#label> "Created by"@en <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedOn> <http://www.w3.org/2000/01/rdf-schema#label> "Retrieved on"@en <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/retrievedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/retrievedFrom> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The date the source for this resource was retrieved.\n\nThe source that was retrieved should be indicated with pav:retrievedFrom. The agent that performed the retrieval may be specified with pav:retrievedBy.\n\nThis property is normally used in a functional way, although PAV does not formally restrict this.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/createdAt> <http://www.w3.org/2000/01/rdf-schema#label> "Created at"@en <http://purl.org/pav/> .
+<http://purl.org/pav/createdAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The geo-location of the agents when creating the resource (pav:createdBy). For instance  a photographer takes a picture of the Eiffel Tower while standing in front of it."@en <http://purl.org/pav/> .
+<http://purl.org/pav/createdAt> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdBy> <http://purl.org/pav/> .
+<http://purl.org/pav/createdAt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/createdAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/importedOn> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The date this resource was imported from a source (pav:importedFrom).\n\nNote that pav:importedOn may overlap with pav:createdOn, but in cases where they differ, the import time indicates the time of the retrieval and transcription of the original source, while the creation time indicates when the final resource was made, for instance after user approval.\n\nThis property is normally used in a functional way, indicating the first import date, although PAV does not formally restrict this. If the resource is later reimported, this should instead be indicated with pav:lastRefreshedOn.\n\nThe source of the import should be given with pav:importedFrom. The agent that performed the import should be given with pav:importedBy.\n\nSee pav:importedFrom for a discussion about import vs. retrieval.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/importedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#label> "Imported on"@en <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/importedFrom> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedFrom> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/retrievedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedFrom> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/retrievedOn> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "The URI where a resource has been retrieved from.\n\nThe retrieving agent is usually a software entity, which has done the retrieval from the original source without performing any transcription.\n\nRetrieval indicates that this resource has the same representation as the original resource. If the resource has been somewhat transformed, use pav:importedFrom instead.\n\nThe time of the retrieval should be indicated using pav:retrievedOn. The agent may be indicated with pav:retrievedBy."@en <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "Retrieved from"@en <http://purl.org/pav/> .
+<http://purl.org/pav/curatedOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/pav/contributedOn> <http://purl.org/pav/> .
+<http://purl.org/pav/curatedOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/curatedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/curatedOn> <http://www.w3.org/2000/01/rdf-schema#label> "Curated on"@en <http://purl.org/pav/> .
+<http://purl.org/pav/curatedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The date this resource was curated.\n\npav:curatedBy gives the agent(s) that performed the curation.\n\nThis property is normally used in a functional way, indicating the last curation date, although PAV does not formally restrict this.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/curatedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/curatedBy> <http://purl.org/pav/> .
+<http://purl.org/saws/ontology#Editor> <http://www.w3.org/2000/01/rdf-schema#comment> "A modern scholar editing material to produce an edition, in the age of printing and beyond"@en <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#Editor> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/saws/ontology#Scribe> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#Editor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#Editor> <http://www.w3.org/2000/01/rdf-schema#label> "editor"@en <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#Editor> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/saws/ontology#Transmitter> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#Editor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://erlangen-crm.org/current/E21_Person> <http://purl.org/saws/ontology> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pro/RoleInTime> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.essepuntato.it/2012/04/tvc/hasValue> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A property relating an agent to a role that the agent holds.  This is done via the indirection: foaf:Agent pro:holdsRoleInTime [ a pro:RoleInTime ; pro:withRole pro:Role ] .  The ontology permits one to specify the time period over which a role is held, and the other contextual entities to which that agent's role relates."@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#label> "holds role in time"@en <http://purl.org/spar/pro> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Metallicity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Metallicity> <http://www.w3.org/2000/01/rdf-schema#label> "metallicity"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Metallicity> <http://www.w3.org/2000/01/rdf-schema#comment> "The log of the ratio between the ratios of the observed Fe and H quantities in a star and the same ratio in the Sun. This is a very important quantity that is often used in astronomy as an indicator of the age of a star."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Metallicity> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/one> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Metallicity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontology-of-units-of-measure.org/resource/om-2/QuantityOfDimensionOne> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://rdaregistry.info/Elements/u/P60368> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/u/P60549> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60368> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60368> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60368> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50032> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60368> <http://www.w3.org/2000/01/rdf-schema#label> "has name of the agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60368> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/nameOfTheAgent.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60368> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60368> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50061> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60368> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50111> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60368> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a word, character, or group of words and/or characters by which an agent is known."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60368> <http://metadataregistry.org/uri/profile/RegAp/name> "nameOfTheAgent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60368> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/u/P60119> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60363> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60363> <http://metadataregistry.org/uri/profile/RegAp/name> "titleOfTheAgent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60363> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60363> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60363> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/titleOfTheAgent.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60363> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50110> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60363> <http://www.w3.org/2000/01/rdf-schema#label> "has title of the agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60363> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a word or phrase indicative of royalty, nobility, or ecclesiastical rank or office, a term of address for an agent of religious vocation, or another term indicative of rank, honour, or office."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60325> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/u/P60107> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60325> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50031> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60325> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60325> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/u/P60064> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60325> <http://metadataregistry.org/uri/profile/RegAp/name> "placeAssociatedWithTheAgent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60325> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60325> <http://www.w3.org/2000/01/rdf-schema#label> "has place associated with the agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60325> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60325> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50057> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60325> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a significant location associated with an agent, or a place where an agent resides or has resided or has some connection."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60325> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50260> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60325> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/placeAssociatedWithTheAgent.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60119> <http://www.w3.org/2000/01/rdf-schema#label> "has variant name for the agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60119> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50025> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60119> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/u/P60368> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60119> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60119> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50054> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60119> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60119> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60119> <http://metadataregistry.org/uri/profile/RegAp/name> "variantNameForTheAgent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60119> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/variantNameForTheAgent.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60119> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a name or form of name by which an agent is known that differs from the name or form of name chosen as the preferred name."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60119> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50103> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60362> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/prominentMemberOfTheFamily.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60362> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50060> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60362> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a well-known individual who is a member of an agent."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60362> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60362> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60362> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60362> <http://www.w3.org/2000/01/rdf-schema#label> "has prominent member of the agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60362> <http://metadataregistry.org/uri/profile/RegAp/name> "prominentMemberOfTheFamily"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60053> <http://metadataregistry.org/uri/profile/RegAp/name> "identifierForTheAgent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60053> <http://www.w3.org/2000/01/rdf-schema#label> "has identifier for the agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60053> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60053> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60053> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50006> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60053> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60053> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50052> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60053> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a character string uniquely associated with an agent, or with a surrogate for an agent (e.g., an authority record)."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60053> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50094> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60053> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/identifierForTheAgent.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60098> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50102> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60098> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a language an agent uses in its communications, when writing for publication, broadcasting, etc."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60098> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50235> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60098> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50023> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60098> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60098> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60098> <http://www.w3.org/2000/01/rdf-schema#label> "has language of the agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60098> <http://metadataregistry.org/uri/profile/RegAp/name> "languageOfTheAgent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60098> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60098> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/languageOfTheAgent.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/u/P60525> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50107> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/u/P60526> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50058> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/u/P60524> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/u/P60598> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/u/P60599> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/u/P60076> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/dateAssociatedWithTheAgent.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://www.w3.org/2000/01/rdf-schema#label> "has date associated with the agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://metadataregistry.org/uri/profile/RegAp/name> "dateAssociatedWithTheAgent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a significant date associated with an agent (e.g., date of birth, date of death), or the date or range of dates on which a conference, etc., was held, or a date with which an agent is otherwise associated (e.g., date of founding)."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60324> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50040> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60370> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60370> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60370> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50033> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60370> <http://metadataregistry.org/uri/profile/RegAp/name> "otherDesignationAssociatedWithTheAgent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60370> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/otherDesignationAssociatedWithTheAgent.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60370> <http://www.w3.org/2000/01/rdf-schema#label> "has other designation associated with the agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60370> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50108> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60370> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50239> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60370> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a word, phrase, or abbreviation indicating incorporation or legal status of an agent, or any term serving to differentiate the body from other corporate bodies, persons, etc., or a term other than a title that is associated with an agent’s name."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60370> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60063> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60063> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60063> <http://metadataregistry.org/uri/profile/RegAp/name> "countryAssociatedWithTheAgent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60063> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a country with which an agent is identified."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60063> <http://www.w3.org/2000/01/rdf-schema#label> "has country associated with the agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60063> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60063> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/countryAssociatedWithThePerson.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60063> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50097> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60076> <http://metadataregistry.org/uri/profile/RegAp/name> "periodOfActivityOfTheAgent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60076> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50236> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60076> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/periodOfActivityOfTheAgent.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60076> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60076> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50098> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60076> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60076> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60076> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a date or range of dates indicative of the period in which an agent was active in his or her primary field of endeavour."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60076> <http://www.w3.org/2000/01/rdf-schema#label> "has period of activity of the agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60076> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/u/P60324> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60089> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/fieldOfActivity.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60089> <http://www.w3.org/2000/01/rdf-schema#label> "has field of activity of the agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60089> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50022> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60089> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60089> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60089> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60089> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a field of endeavour, area of expertise, competence, responsibility, jurisdiction etc., in which an agent is engaged or was engaged."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60089> <http://metadataregistry.org/uri/profile/RegAp/name> "fieldOfActivity"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60089> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50100> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60549> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/u/P60368> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60549> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50041> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60549> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60549> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50117> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60549> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50065> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60549> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60549> <http://www.w3.org/2000/01/rdf-schema#label> "has preferred name for the agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60549> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60549> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to the name or form of name chosen to identify the agent. it is also the basis for the authorized access point representing that body."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60549> <http://metadataregistry.org/uri/profile/RegAp/name> "preferredNameForTheAgent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60549> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/preferredNameForTheAgent.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60512> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to the address of an agent's place of residence, business, or employer, headquarters or offices, or an e-mail or internet address."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60512> <http://metadataregistry.org/uri/profile/RegAp/name> "addressOfTheAgent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60512> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50036> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60512> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60512> <http://www.w3.org/2000/01/rdf-schema#label> "has address of the agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60512> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/addressOfTheAgent.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60512> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60512> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60512> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50114> <http://rdaregistry.info/Elements/u> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://reference.data.gov.uk/def/central-government/holdsPost> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the agent who holds the post."@en <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/org#hasMember> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://reference.data.gov.uk/def/central-government> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://reference.data.gov.uk/def/central-government/Post> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/2000/01/rdf-schema#label> "Postholder"@en <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://reference.data.gov.uk/def/central-government> .
+<http://semweb.mmlab.be/ns/odapps#revised> <http://www.w3.org/2000/01/rdf-schema#comment> "The Agent which revised / extended the idea about the App Concept."@en <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#revised> <http://www.w3.org/2000/01/rdf-schema#label> "revised"@en <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#revised> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#revised> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#revised> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semweb.mmlab.be/ns/odapps> <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#revised> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#revised> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semweb.mmlab.be/ns/odapps#AppConcept> <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#conceived> <http://www.w3.org/2000/01/rdf-schema#label> "conceived by" <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#conceived> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#conceived> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#conceived> <http://www.w3.org/2000/01/rdf-schema#comment> "The Agent which conceived the idea about the App Concept" <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#instigator> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#instigator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semweb.mmlab.be/ns/odapps> <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#instigator> <http://www.w3.org/2000/01/rdf-schema#label> "instigator"@en <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#instigator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://semweb.mmlab.be/ns/odapps#AppConcept> <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#instigator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#instigator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://semweb.mmlab.be/ns/odapps> .
+<http://semweb.mmlab.be/ns/odapps#instigator> <http://www.w3.org/2000/01/rdf-schema#comment> "The Agent which conceived the idea about the App Concept (the instigator/initiator)."@en <http://semweb.mmlab.be/ns/odapps> .
+<http://xmlns.com/foaf/0.1/Document> <http://purl.org/dc/elements/1.1/type> "http://www.w3.org/2000/01/rdf-schema#Class" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Document> <http://purl.org/dc/elements/1.1/description> "Similar to the Agent concept, we have again decided to include a concept from the popular FOAF ontology. The FOAF Vocabulary Specification currently defines Document in a very loose way: \"The <link>foaf:Document</link> class represents those things which are, broadly conceived, 'documents'. ... We do not (currently) distinguish between physical and electronic documents, or between copies of a work and the abstraction those copies embody.\"\nThe intended use of this concept within the SWPortal ontology is to subsume everything that contains some sort of information and has been produced by some <link>foaf:Agent</link> An instance of Document can either refer to an electronic or physical thing, as long as it is adressable by means of a URI. Examples are a book written, or a picture taken by a person, but also a log file generated by a machine."@EN <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Document> <http://www.w3.org/2000/01/rdf-schema#comment> "Similar to the Agent concept, we have again decided to include a concept from the popular FOAF ontology. The FOAF Vocabulary Specification currently defines Document in a very loose way: \"The <link>foaf:Document</link> class represents those things which are, broadly conceived, 'documents'. ... We do not (currently) distinguish between physical and electronic documents, or between copies of a work and the abstraction those copies embody.\"\nThe intended use of this concept within the SWPortal ontology is to subsume everything that contains some sort of information and has been produced by some <link>foaf:Agent</link> An instance of Document can either refer to an electronic or physical thing, as long as it is adressable by means of a URI. Examples are a book written, or a picture taken by a person, but also a log file generated by a machine." <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Document> <http://www.w3.org/2000/01/rdf-schema#label> "Document"@en <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Document> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Document> <http://purl.org/dc/elements/1.1/publisher> "Libby Miller" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Document> <http://purl.org/dc/elements/1.1/creator> "Dan Brickley" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Document> <http://purl.org/dc/elements/1.1/contributor> "http://rdfweb.org/mailman/listinfo/rdfweb-dev" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Document> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://sw-portal.deri.org/ontologies/swportal#Publication> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Document> <http://purl.org/dc/elements/1.1/creator> "Libby Miller" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Document> <http://purl.org/dc/elements/1.1/title> "Document"@EN <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Document> <http://purl.org/dc/elements/1.1/publisher> "Dan Brickley" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Document> <http://purl.org/dc/elements/1.1/contributor> "http://www.w3.org/RDF/Interest/" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Document> <http://purl.org/dc/elements/1.1/coverage> "world" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Agent> <http://purl.org/dc/elements/1.1/creator> "Libby Miller" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Agent> <http://purl.org/dc/elements/1.1/publisher> "Dan Brickley" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Agent> <http://purl.org/dc/elements/1.1/contributor> "http://www.w3.org/RDF/Interest/" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "\"An agent (e.g. person, group, software or physical artifact).\"  NOTE: We adopted this concept partially from the FOAF ontology. However, in our ontology the agent concept does not comprise the subclasses software and physical artifact. We decided to introduce this main concept in order to make the range of e.g. the attribute authors of a publication more general." <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Agent> <http://purl.org/dc/elements/1.1/description> "\"An agent (e.g. person, group, software or physical artifact).\"  NOTE: We adopted this concept partially from the FOAF ontology. However, in our ontology the agent concept does not comprise the subclasses software and physical artifact. We decided to introduce this main concept in order to make the range of e.g. the attribute authors of a publication more general."@EN <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Agent> <http://purl.org/dc/elements/1.1/coverage> "world" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Agent> <http://purl.org/dc/elements/1.1/publisher> "Libby Miller" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Agent> <http://purl.org/dc/elements/1.1/creator> "Dan Brickley" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Agent> <http://purl.org/dc/elements/1.1/contributor> "http://rdfweb.org/mailman/listinfo/rdfweb-dev" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Agent> <http://purl.org/dc/elements/1.1/title> "Agent"@EN <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent"@en <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Agent> <http://purl.org/dc/elements/1.1/type> "http://www.w3.org/2000/01/rdf-schema#Class" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/Agent> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasLecturer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://sw-portal.deri.org/ontologies/swportal#Lecture> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasLecturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasLecturer> <http://www.w3.org/2000/01/rdf-schema#label> "Lecturer"@en <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasLecturer> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasLecturer> <http://purl.org/dc/elements/1.1/publisher> "DERI International" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasLecturer> <http://purl.org/dc/elements/1.1/coverage> "world" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasLecturer> <http://purl.org/dc/elements/1.1/rights> "http://www.deri.org/privacy.html" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasLecturer> <http://purl.org/dc/elements/1.1/creator> "DERI International" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasLecturer> <http://purl.org/dc/elements/1.1/type> "http://www.w3.org/2002/07/owl#ObjectProperty" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasLecturer> <http://www.w3.org/2000/01/rdf-schema#comment> "The agent who is giving the lecture." <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasLecturer> <http://purl.org/dc/elements/1.1/date> "2004-10-20" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasLecturer> <http://purl.org/dc/elements/1.1/description> "The agent who is giving the lecture."@EN <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasLecturer> <http://purl.org/dc/elements/1.1/title> "Lecturer"@EN <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasLecturer> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://vocab.deri.ie/tao#appliesToAgent> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://vocab.deri.ie/tao> .
+<http://vocab.deri.ie/tao#appliesToAgent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.deri.ie/tao#TrustAssertion> <http://vocab.deri.ie/tao> .
+<http://vocab.deri.ie/tao#appliesToAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Identifies the agent (i.e. the requester) whom the user’s subjective trust value is about." <http://vocab.deri.ie/tao> .
+<http://vocab.deri.ie/tao#appliesToAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://vocab.deri.ie/tao> .
+<http://vocab.getty.edu/ontology#Biography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.getty.edu/ontology> .
+<http://vocab.getty.edu/ontology#Biography> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.getty.edu/ontology> <http://vocab.getty.edu/ontology> .
+<http://vocab.getty.edu/ontology#Biography> <http://www.w3.org/2000/01/rdf-schema#comment> "Biography of a ULAN agent (schema:Person|Organization). Depending on the agent, has these fields:\n- schema:description: one-line-biography\n- gvp:estStart\n- schema:birthPlace | foundationLocation, pointing to TGN\n- gvp:estEnd\n- schema:deathPlace | dissolutionLocation, pointing to TGN\n- schema:gender, pointing to AAT (male, female, other)\n- dct:contributor\nThe fields of the preferred biogrpahy are also available in the agent." <http://vocab.getty.edu/ontology> .
+<http://vocab.org/transit/terms/agency> <http://www.w3.org/2000/01/rdf-schema#label> "Agency"@en <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/agency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/transit/terms/> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/agency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/transit/terms/Route> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/agency> <http://purl.org/dc/terms/issued> "2011-03-28"^^<http://www.w3.org/2001/XMLSchema#date> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/agency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/agency> <http://www.w3.org/2000/01/rdf-schema#comment> "The agency that operates this public transportation route."@en <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/agency> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.org/transit/terms/Agency> <http://vocab.org/transit/terms/> .
+<http://www.aktors.org/ontology/portal#has-main-agent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.aktors.org/ontology/portal#Generic-Agent> <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#has-main-agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#has-main-agent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aktors.org/ontology/portal#Event> <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#has-main-agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.aktors.org/ontology/portal> <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#has-main-agent> <http://www.w3.org/2000/01/rdf-schema#comment> "The agents causing the event to happen, if they are known." <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#recipient-agents> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.aktors.org/ontology/portal#Generalized-Transfer> <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#recipient-agents> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.aktors.org/ontology/portal> <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#recipient-agents> <http://www.w3.org/2000/01/rdf-schema#comment> "The agents which receive the thing-acted-on" <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#recipient-agents> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.aktors.org/ontology/portal#Generic-Agent> <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#recipient-agents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#recipient-agents> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.aktors.org/ontology/portal#has-other-agents-involved> <http://www.aktors.org/ontology/portal> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isOwnedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Owner"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isOwnedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Agent> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isOwnedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Service> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isOwnedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isOwnedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isOwnedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "To identify the Agent (Contact/person or\n            Organisation) who owns a Service operating a PublicationChannel."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasMetadataAttributor> <http://www.w3.org/2000/01/rdf-schema#comment> "To identify the Agent (Contact/person or\n            Organisation) who has created the metadata."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasMetadataAttributor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Subject> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasMetadataAttributor> <http://www.w3.org/2000/01/rdf-schema#label> "Metadata attributor"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasMetadataAttributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentAge> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentAge> <http://www.w3.org/2000/01/rdf-schema#label> "Age"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentAge> <http://www.w3.org/2000/01/rdf-schema#comment> "The age of a Contact/Person" <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentAge> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Contact> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasContact> <http://www.w3.org/2000/01/rdf-schema#label> "Contact"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasContact> <http://www.w3.org/2000/01/rdf-schema#comment> "To provide information on a Contact for an\n            Organisation or a physical person (e.g. the agent of an actor)."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasContact> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Agent> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasAnnotationSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Annotation> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasAnnotationSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasAnnotationSource> <http://www.w3.org/2000/01/rdf-schema#comment> "To identify the Agent, Contact/person or\n            Organisation who has provided the Annotation."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasAnnotationSource> <http://www.w3.org/2000/01/rdf-schema#label> "Annotation Source"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "The agent who tags an ontology entity with a vagueness/non-vagueness description."@en <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.w3.org/ns/prov#Agent> <http://purl.org/dc/elements/1.1/description> "Note that in the PROV Ontology the intended meaning of prov:Agent is broader than what described herein in the entity comment."@en <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.w3.org/ns/prov#Agent> <http://www.w3.org/2000/01/rdf-schema#label> "agent"@en <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/dc/elements/1.1/description> "Note that in the PROV Ontology the intended meaning of prov:wasAttributedTo is broader than what described herein in the entity comment."@en <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/2000/01/rdf-schema#label> "was attributed to"@en <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/prov#> <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.w3.org/ns/prov#wasAttributedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "It links the annotation of an ontological entity with information about its vagueness to the agent who made the annotation itself."@en <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.ics.forth.gr/isl/VoIDWarehouse/VoID_Extension_Schema.owl#carriedOutBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.ics.forth.gr/isl/VoIDWarehouse/VoID_Extension_Schema.owl> .
+<http://www.ics.forth.gr/isl/VoIDWarehouse/VoID_Extension_Schema.owl#carriedOutBy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "Stable" <http://www.ics.forth.gr/isl/VoIDWarehouse/VoID_Extension_Schema.owl> .
+<http://www.ics.forth.gr/isl/VoIDWarehouse/VoID_Extension_Schema.owl#carriedOutBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A measurement is carried out by an agent using a specific metric according to one (or more) configurations over one (or more) datasets (atomic or composite) and produces a value (i.e. literal).\nTherefore, this property links an instance of measurement class with an instance of the Agent class." <http://www.ics.forth.gr/isl/VoIDWarehouse/VoID_Extension_Schema.owl> .
+<http://www.ics.forth.gr/isl/VoIDWarehouse/VoID_Extension_Schema.owl#carriedOutBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ics.forth.gr/isl/VoIDWarehouse/VoID_Extension_Schema.owl#Measurement> <http://www.ics.forth.gr/isl/VoIDWarehouse/VoID_Extension_Schema.owl> .
+<http://www.ics.forth.gr/isl/VoIDWarehouse/VoID_Extension_Schema.owl#carriedOutBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/Agent> <http://www.ics.forth.gr/isl/VoIDWarehouse/VoID_Extension_Schema.owl> .
+<http://www.ics.forth.gr/isl/VoIDWarehouse/VoID_Extension_Schema.owl#carriedOutBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.ics.forth.gr/isl/VoIDWarehouse/VoID_Extension_Schema.owl" <http://www.ics.forth.gr/isl/VoIDWarehouse/VoID_Extension_Schema.owl> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#middleVoice> <http://www.w3.org/2000/01/rdf-schema#label> "медиальный залог"@ru <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#middleVoice> <http://purl.org/dc/elements/1.1/#creator> "Francopoulo, Gil" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#middleVoice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#middleVoice> <http://www.w3.org/2000/01/rdf-schema#label> "middle voice" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#middleVoice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#middleVoice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.lexinfo.net/ontology/2.0/lexinfo#Voice> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#middleVoice> <http://www.w3.org/2002/07/owl#versionInfo> "1:0" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#middleVoice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#middleVoice> <http://www.w3.org/2000/01/rdf-schema#label> "средний залог"@ru <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#middleVoice> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1983> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#middleVoice> <http://www.w3.org/2000/01/rdf-schema#comment> "Value for middle voice that expresses that the subject is both the agent and object, or that the subject is separate from the agent or that the receiver is the agent him/herself." <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://observedchange.com/moac/ns#involvedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "involvedIn indicates the agency that is involved with humanitarian activities/response in a disaster."@en <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#involvedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://observedchange.com/moac/ns> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#involvedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://observedchange.com/moac/ns#ShelterActivity> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#involvedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://observedchange.com/moac/ns#ShelterAgency> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#involvedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://observedchange.com/moac/ns#ShelterResponse> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#involvedIn> <http://www.w3.org/2000/01/rdf-schema#label> "involvedIn"@en <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#involvedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DataProperty> <http://www.observedchange.com/moac/ns#> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#CollectiveAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Agente collettivo"@it <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#CollectiveAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Collective agent"@en <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#CollectiveAgent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#CollectiveAgent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#SocialAgent> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#CollectiveAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "A SocialAgent that is actedBy agents that are (and act as) members of a Collective. A collective agent can have roles that are also roles of those agents.\nFor example, in sociology, a 'group action' is the situation in which a number of people (that result to be members of a collective) in a given area behave in a coordinated way in order to achieve a (often common) goal. The Agent in such a Situation is not single, but a CollectiveAgent (a Group). This can be generalized to the notion of social movement, which assumes a large Community or even the entire Society as agents.\nThe difference between a CollectiveAgent and an Organization is that a Description that introduces a CollectiveAgent is also one that unifies the corresponding Collective. In practice, this difference makes collective agents 'less stable' than organizations, because they have a dedicated, publicly recognizable Description that is conceived to introduce them." <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#CollectiveAgent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Baaa4512a540f19d436fa4c8d180e6994 <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#CollectiveAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#CollectiveAgent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B74ff7e342dba0464804abc6f3a16c84a <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontotext.com/proton/protontop#hasCreator> <http://www.w3.org/2000/01/rdf-schema#label> "has Creator"@en <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasCreator> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontotext.com/proton/protontop#hasContributor> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasCreator> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent primarily responsible for making the content of a resource. Examples of Creator include a person, an organization, or a service. Typically, the name of the Creator should be used to indicate the agent. (DC2003ISO, Creator)"@en <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasCreator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a happenning and the agent involved in it. Fequently, the participants play some roles in the happening, then the appriate roles have to be introduced."@en <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontotext.com/proton/protontop#hasParticipatingEntity> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontotext.com/proton/protontop#Happening> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasParticipant> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.ontotext.com/proton/protontop#involvedIn> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontotext.com/proton/protontop#Agent> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#label> "Participant in a Happening"@en <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasMember> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontotext.com/proton/protontop#Agent> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasMember> <http://www.w3.org/2000/01/rdf-schema#label> "has Member"@en <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasMember> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontotext.com/proton/protontop#Group> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#hasMember> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a particular organization to the agents that are its members. This predicate indicates `generic' membership, although there may be specialized kinds of membership in the same organization. Typically, membership eligibility is determined by the organization and accepted with the agent's voluntary affiliation. In many cases Persons that take Positions within Organization are considered members of the organization, although this is no way formally encoded here."@en <http://www.ontotext.com/proton/protontop> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/age+the.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BagenX2Bthe .
+_:BagenX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BagenX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/agen+the.nt> .
+_:BagenX2Bthe <https://w3id.org/tree#value> "agen" .
+_:BagenX2Bthe <https://w3id.org/tree#value> "the" .
+_:BagenX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/agen+the.nt> <https://w3id.org/tree#remainingItems> "102"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BgX2Bthe .
+_:BageX2BgX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BgX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+g+the.nt> .
+_:BageX2BgX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BgX2Bthe <https://w3id.org/tree#value> "g" .
+_:BageX2BgX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BgX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+g+the.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BiX2Bthe .
+_:BageX2BiX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BiX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+i+the.nt> .
+_:BageX2BiX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BiX2Bthe <https://w3id.org/tree#value> "i" .
+_:BageX2BiX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BiX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+i+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BoX2Bthe .
+_:BageX2BoX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BoX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+o+the.nt> .
+_:BageX2BoX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BoX2Bthe <https://w3id.org/tree#value> "o" .
+_:BageX2BoX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BoX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+o+the.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BrX2Bthe .
+_:BageX2BrX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BrX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+r+the.nt> .
+_:BageX2BrX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BrX2Bthe <https://w3id.org/tree#value> "r" .
+_:BageX2BrX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BrX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+r+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/age+the.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BagenX2Bthe .
+_:BagenX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BagenX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/agen+the.nt> .
+_:BagenX2Bthe <https://w3id.org/tree#value> "agen" .
+_:BagenX2Bthe <https://w3id.org/tree#value> "the" .
+_:BagenX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/agen+the.nt> <https://w3id.org/tree#remainingItems> "102"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BgX2Bthe .
+_:BageX2BgX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BgX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+g+the.nt> .
+_:BageX2BgX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BgX2Bthe <https://w3id.org/tree#value> "g" .
+_:BageX2BgX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BgX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+g+the.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BiX2Bthe .
+_:BageX2BiX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BiX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+i+the.nt> .
+_:BageX2BiX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BiX2Bthe <https://w3id.org/tree#value> "i" .
+_:BageX2BiX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BiX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+i+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BoX2Bthe .
+_:BageX2BoX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BoX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+o+the.nt> .
+_:BageX2BoX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BoX2Bthe <https://w3id.org/tree#value> "o" .
+_:BageX2BoX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BoX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+o+the.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BrX2Bthe .
+_:BageX2BrX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BrX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+r+the.nt> .
+_:BageX2BrX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BrX2Bthe <https://w3id.org/tree#value> "r" .
+_:BageX2BrX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BrX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+r+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/age+the.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BagenX2Bthe .
+_:BagenX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BagenX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/agen+the.nt> .
+_:BagenX2Bthe <https://w3id.org/tree#value> "agen" .
+_:BagenX2Bthe <https://w3id.org/tree#value> "the" .
+_:BagenX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/agen+the.nt> <https://w3id.org/tree#remainingItems> "102"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BgX2Bthe .
+_:BageX2BgX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BgX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+g+the.nt> .
+_:BageX2BgX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BgX2Bthe <https://w3id.org/tree#value> "g" .
+_:BageX2BgX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BgX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+g+the.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BiX2Bthe .
+_:BageX2BiX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BiX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+i+the.nt> .
+_:BageX2BiX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BiX2Bthe <https://w3id.org/tree#value> "i" .
+_:BageX2BiX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BiX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+i+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BoX2Bthe .
+_:BageX2BoX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BoX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+o+the.nt> .
+_:BageX2BoX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BoX2Bthe <https://w3id.org/tree#value> "o" .
+_:BageX2BoX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BoX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+o+the.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BrX2Bthe .
+_:BageX2BrX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BrX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+r+the.nt> .
+_:BageX2BrX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BrX2Bthe <https://w3id.org/tree#value> "r" .
+_:BageX2BrX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BrX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+r+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/age+the.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BagenX2Bthe .
+_:BagenX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BagenX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/agen+the.nt> .
+_:BagenX2Bthe <https://w3id.org/tree#value> "agen" .
+_:BagenX2Bthe <https://w3id.org/tree#value> "the" .
+_:BagenX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/agen+the.nt> <https://w3id.org/tree#remainingItems> "102"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BgX2Bthe .
+_:BageX2BgX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BgX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+g+the.nt> .
+_:BageX2BgX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BgX2Bthe <https://w3id.org/tree#value> "g" .
+_:BageX2BgX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BgX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+g+the.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BiX2Bthe .
+_:BageX2BiX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BiX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+i+the.nt> .
+_:BageX2BiX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BiX2Bthe <https://w3id.org/tree#value> "i" .
+_:BageX2BiX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BiX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+i+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BoX2Bthe .
+_:BageX2BoX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BoX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+o+the.nt> .
+_:BageX2BoX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BoX2Bthe <https://w3id.org/tree#value> "o" .
+_:BageX2BoX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BoX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+o+the.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/age+the.nt> <https://w3id.org/tree#relation> _:BageX2BrX2Bthe .
+_:BageX2BrX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BageX2BrX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/age+r+the.nt> .
+_:BageX2BrX2Bthe <https://w3id.org/tree#value> "age" .
+_:BageX2BrX2Bthe <https://w3id.org/tree#value> "r" .
+_:BageX2BrX2Bthe <https://w3id.org/tree#value> "the" .
+_:BageX2BrX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/age+r+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .

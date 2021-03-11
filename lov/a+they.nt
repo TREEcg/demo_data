@@ -1,0 +1,654 @@
+<http://purl.org/archival/vocab/arch#referencedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> <http://purl.org/archival/vocab/arch> .
+<http://purl.org/archival/vocab/arch#referencedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/archival/vocab/arch#Collection> <http://purl.org/archival/vocab/arch> .
+<http://purl.org/archival/vocab/arch#referencedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/archival/vocab/arch#Family> <http://purl.org/archival/vocab/arch> .
+<http://purl.org/archival/vocab/arch#referencedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/archival/vocab/arch> .
+<http://purl.org/archival/vocab/arch#referencedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> <http://purl.org/archival/vocab/arch> .
+<http://purl.org/archival/vocab/arch#referencedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a foaf:Person, foaf:Organization, or arch:Family to a arch:Collection that they are referenced in." <http://purl.org/archival/vocab/arch> .
+<http://purl.org/biotop/biotop.owl#DEPRECATED> <http://www.w3.org/2000/01/rdf-schema#comment> "Place for currently non maintained classes. It should be assured that they are not being referred to by application ontologies that import BioTop" <http://purl.org/biotop/biotop.owl> .
+<http://purl.org/biotop/biotop.owl#DEPRECATED> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/biotop/biotop.owl> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/configurationontology#definingChoice> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/configurationontology#Specification> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/configurationontology#Configuration> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#comment> "A SubProperty of co:definingChoice listing the specifications selected by the user: \nIf two or more of the cold:chosenSpec of a Configuration correspond to the same cold:ConfigurationVariable, by convention they are to be interpreted as ORed (even XORed, by the way, as such specifications are alternative). \nSo:\nex:AConf coold:chosenSpec ex:SimpleRadio, ex:RadioMP3.\nmeans that the car has either a ex:SimpleRadio, or a ex:RadioMP3, not both. "@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#label> "chosen specification"@en <http://purl.org/configurationontology> .
+<http://purl.org/goodrelations/v1#eligibleDuration> <http://www.w3.org/2000/01/rdf-schema#label> "eligible duration (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleDuration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleDuration> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bec2afc38e94d0aa8e579944614a54f56 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "The minimal and maximal duration for which the given gr:Offering or gr:License is valid. This is mostly used for offers regarding accommodation, the rental of objects, or software licenses. The duration is specified by attaching an instance of gr:QuantitativeValue. The lower and upper boundaries are specified using the properties gr:hasMinValue and gr:hasMaxValue to that instance. If they are the same, use the gr:hasValue property. The unit of measurement is specified using the property gr:hasUnitOfMeasurement with a string holding a UN/CEFACT code suitable for durations, e.g. MON (months), DAY (days), HUR (hours), or MIN (minutes).\n\nThe difference to the gr:validFrom and gr:validThrough properties is that those specify the absiolute interval during which the gr:Offering or gr:License is valid, while gr:eligibleDuration specifies the acceptable duration of the contract or usage."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Reseller> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Reseller> <http://www.w3.org/2000/01/rdf-schema#comment> "The gr:BusinessEntityType representing such agents that are purchasing the scope of products included in the gr:Offering for resale on the market. Resellers are also businesses, i.e., they are officially registered with the public administration and strive for profits by their activities."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Reseller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Reseller> <http://www.w3.org/2000/01/rdf-schema#label> "Reseller (business entity type)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#label> "has MPN (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#domain> _:B6e0778f1bbcc279fa827e93d2e116f7a <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/productID> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#comment> "The Manufacturer Part Number or MPN is a unique identifier for a product, service, or bundle from the perspective of a particular manufacturer. MPNs can be assigned to products or product datasheets, or bundles. Accordingly, the domain of this property is the union of gr:ProductOrService (the common superclass of goods and datasheets), and gr:Offering.\n\nImportant: Be careful when assuming two products or services instances or offering instances to be identical based on the MPN. Since MPNs are unique only for the same gr:BusinessEntity, this holds only when the two MPN values refer to the same gr:BusinessEntity. Such can be done by taking into account the provenance of the data. \n\nUsually, the properties gr:hasEAN_UCC-13 and gr:hasGTIN-14 are much more reliable identifiers, because they are globally unique.\n\nSee also http://en.wikipedia.org/wiki/Part_number"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has Stock Keeping Unit (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "The Stock Keeping Unit, or SKU is a unique identifier for a product, service, or bundle from the perspective of a particular supplier, i.e. SKUs are mostly assigned and serialized at the merchant level. \nExamples of SKUs are the ordering or parts numbers used by a particular Web shop or catalog.\n\nConsequently, the domain of gr:hasStockKeepingUnit is the union of the classes gr:Offering and gr:ProductOrService. \nIf attached to a gr:Offering, the SKU will usually reflect a merchant-specific identifier, i.e. one valid only for that particular retailer or shop. \nIf attached to a gr:ProductOrServiceModel, the SKU can reflect either the identifier used by the merchant or the part number used by the official manufacturer of that part. For the latter, gr:hasMPN is a better choice.\n\nImportant: Be careful when assuming two products or services instances or offering instances to be identical based on the SKU. Since SKUs are unique only for the same gr:BusinessEntity, this can be assumed only when you are sure that the two SKU values refer to the same business entity. Such can be done by taking into account the provenance of the data. As long as instances of gr:Offering are concerned, you can also check that the offerings are being offered by the same gr:Business Entity.\n\nUsually, the properties gr:hasEAN_UCC-13 and gr:hasGTIN-14 are much more reliable identifiers, because they are globally unique.\n\nSee also http://en.wikipedia.org/wiki/Stock_Keeping_Unit."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#domain> _:B81924e8aa2011604c6349ad36091f109 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/productID> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Brand> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Location> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Offering> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyScope> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A quantitative value is a numerical interval that represents the range of a certain gr:quantitativeProductOrServiceProperty in terms of the lower and upper bounds for a particular gr:ProductOrService. It is to be interpreted in combination with the respective unit of measurement. Most quantitative values are intervals even if they are in practice often treated as a single point value.\n\t\nExample: a weight between 10 and 25 kilogramms, a length between 10 and 15 milimeters.\n\nCompatibility with schema.org: This class is equivalent to http://schema.org/Quantity."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntity> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#TypeAndQuantityNode> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyPromise> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValue> <http://www.w3.org/2000/01/rdf-schema#label> "Quantitative value"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasISICv4> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasISICv4> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasISICv4> <http://www.w3.org/2000/01/rdf-schema#label> "has ISIC v4 (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasISICv4> <http://www.w3.org/2000/01/rdf-schema#domain> _:B395871cce2b58685b184fa04a36f7b10 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasISICv4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasISICv4> <http://www.w3.org/2000/01/rdf-schema#comment> "The International Standard of Industrial Classification of All Economic Activities (ISIC), Revision 4 code for a particular gr:BusinessEntity or gr:Location. See http://unstats.un.org/unsd/cr/registry/isic-4.asp for more information.\n\nNote: While ISIC codes are sometimes misused for classifying products or services, they are designed and suited only for classifying business establishments."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNAICS> <http://www.w3.org/2000/01/rdf-schema#comment> "The North American Industry Classification System (NAICS) code for a particular gr:BusinessEntity.\nSee http://www.census.gov/eos/www/naics/ for more details.\n\nNote: While NAICS codes are sometimes misused for classifying products or services, they are designed and suited only for classifying business establishments."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNAICS> <http://www.w3.org/2000/01/rdf-schema#label> "has NAICS (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNAICS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNAICS> <http://www.w3.org/2000/01/rdf-schema#domain> _:B53c4f5cc541772c15d6de19e928b2d67 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNAICS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNAICS> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#label> "serial number (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba5b4ce436c1b1986edfe1868ec450a03 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The serial number or any alphanumeric identifier of a particular product. Note that serial number are unique only for the same brand or the same model, so you cannot infer from two occurrences of the same serial number that the objects to which they are attached are identical.\n\nThis property can also be attached to a gr:Offering in cases where the included products are not modeled in more detail."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Business> <http://www.w3.org/2000/01/rdf-schema#label> "Business (business entity type)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Business> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Business> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Business> <http://www.w3.org/2000/01/rdf-schema#comment> "The gr:BusinessEntityType representing such agents that are themselves offering commercial services or products on the market. Usually, businesses are characterized by the fact that they are officially registered with the public administration and strive for profits by their activities."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/innovation/ns#isDeveloping> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/innovation/ns#Innovator> <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#isDeveloping> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an innovator to a current innovation that they are developing."@en <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#isDeveloping> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/innovation/ns#Innovation> <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#isDeveloping> <http://www.w3.org/2000/01/rdf-schema#label> "isDeveloping"@en <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#isDeveloping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/innovation/ns> .
+<http://purl.org/linguistics/gold/NounPhrase> <http://www.w3.org/2000/01/rdf-schema#comment> "Also called nominal groups, nouns phrases are the constructions into which nouns most commonly enter and of which they are the head word.  The structure of a noun phrase consists minimally of the noun (or noun substitute, such as a pronoun); the constructions preceding and following the noun are often described under the headings of premodification and postmodification respectively. [Crystal 2008: 320]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NounPhrase> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NounPhrase> <http://www.w3.org/2000/01/rdf-schema#label> "NounPhrase"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NounPhrase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NounPhrase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Phrase> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DativeCase> <http://www.w3.org/2000/01/rdf-schema#comment> "DativeCase marks 1) Indirect objects (for languages in which they are held to exist) or 2) nouns having the role of recipient (as of things given), beneficiary of an action, or possessor of an item [Crystal 1980: 102]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DativeCase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DativeCase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/CaseProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DativeCase> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DativeCase> <http://www.w3.org/2000/01/rdf-schema#label> "DativeCase"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/TenseProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/2000/01/rdf-schema#label> "PresentTense"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/2000/01/rdf-schema#comment> "A value of Tense Property assigned to the designated element in the clause when the meaning selected for the clause is that intended to locate the event spoken about as simultaneous with the deictic centre of the utterance. Most commonly, this tense meaning is referred to as 'present', because in absolute tense systems the deictic centre is the moment of speech. However, in relative tense systems, where the deictic centre can be moved to any point on the time line, it is more appropriate to refer to this temporal relation as 'simultaneous'.\nIt is important to note --- for all tense values, but in particular for the Present Tense --- that the 'times' which are used to locate the event, the deictic centre, and the reference point, may or may not be 'points' on the time line. Conventionally, these concepts are considered neutral with regard to whether they are points or intervals of time longer than a point. In a formal model of tense meanings they could, for example, be represented as sets (of points): in order to capture temporal distinctions, the notion of an event being 'simultaneous with the moment of speech', may be understood as (the set of) event time (points) and (the set of) speech time (points) having a non-empty intersection. Hence, this semantic model of the Present Tense value may include the interpretation of the present as 'universal' or 'generic'.\nThe simultaneous temporal relation may obtain either in 'simple' or 'perfect' contexts. Modelling of this distinction originates from [Reichenbach 1947], who suggested using a third point in time, 'reference point', to capture all possible tense distinctions. In all 'simple' temporal relations, the reference point coincides with the location of the event spoken about. 'Perfect' tense meanings are created when the reference point is separated and moved away from the event time, thus altering the viewing of the temporal location of the event even though the event's actual location with respect to the deictic centre remains the same.\nA common instance of a simultaneous temporal relationship obtaining in a 'perfect' context occurs when the reference point is moved away from the event time and located instead before the moment of speech. The event time is still simultaneous with the moment of speech, but it is viewed against a stretch of time which began at the reference point and continues up to the moment of speech --- e.g. the English I have lived here [for ten years] --- hence the interpretation that the event which began in the past extends up to the moment of speech. In some languages (e.g. English) this tense meaning is labelled as (one of the uses of the) Present Perfect, in others (e.g. Polish) this meaning may be collapsed with the 'simple' simultaneous meaning and labelled simply as Present.\nTypically, for a tense value to be labelled as Present Tense, the tense meaning has to minimally express the simultaneous temporal relationship, although it may additionally express other temporal, aspectual, or modal meanings. [Kibort 2008c: 4-5]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ContextOfUseTaxon> <http://www.w3.org/2000/01/rdf-schema#comment> "ContextOfUseTaxon is the class of taxons whose instances  classify language varieties according to how they are primarily used."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ContextOfUseTaxon> <http://www.w3.org/2000/01/rdf-schema#label> "ContextOfUseTaxon"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ContextOfUseTaxon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ContextOfUseTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/LinguisticTaxon> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ContextOfUseTaxon> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Vowel> <http://www.w3.org/2000/01/rdf-schema#comment> "One of the two general categories used for the classification of speech sounds, the other being consonant. Phonetically, they are sounds articulated without a complete closure in the mouth that would produce a stop or a degree of narrowing that would create audible friction; the air escapes evenly over the center of the tongue. For oral vowels, air escapes solely through the mouth. If some air is simultaneously released through the nose, the vowel is nasal. The quality of the vowel sound is affected by the shape of the oral resonance chamber, chiefly influenced by the position of the lips and the position of the tongue. [Crystal 1985: 330; Hartmann and Stork 1972: 253]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Vowel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Vowel> <http://www.w3.org/2000/01/rdf-schema#label> "Vowel"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Vowel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Segment> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Vowel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/GeneralNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "In some languages for which number is less dominant, the meaning of the noun can be expressed without reference to number. Nouns with this marking are designated as outside of the number system, as they are noncommittal as to the number of the noun that they mark. [Corbett 2000: 9-10]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/GeneralNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/GeneralNumber> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/NumberProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/GeneralNumber> <http://www.w3.org/2000/01/rdf-schema#label> "GeneralNumber"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/GeneralNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticWord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/SyntacticUnit> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticWord> <http://www.w3.org/2000/01/rdf-schema#label> "SyntacticWord"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticWord> <http://www.w3.org/2000/01/rdf-schema#comment> "SyntacticWord is the class of syntactic units occupying the lowest position in a syntactic construction.  They are the largest units resistant to insertion of new constituents within their boundaries; or they are the smallest constituents that can be moved within a sentence without making the sentence ungrammatical. [SIL International 2004]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticWord> <http://www.w3.org/2000/01/rdf-schema#comment> "It can be moved about in the sentence, or at least its position relative to other constituents can be altered by inserting new material.  It cannot be interrupted or its parts reordered. [Cruse 2000: 87-88]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticWord> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ArabicNumeralGender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/GenderProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ArabicNumeralGender> <http://www.w3.org/2000/01/rdf-schema#comment> "A labeling convention for gender categories. Arabic numerals are often used for languages for which there is a descriptive tradition involving use of the term 'noun class' instead of 'gender', in particular in languages of the Caucasus or Bantu languages; If the 'noun classes' are involved in agreement systems, they are gender systems. Arabic numerals may also be used in instances where another label is possible. For instance, in one language the gender to which nouns with human denotation are assigned might be called 'human', whereas in another language nouns with a similar denotation may be assigned to a gender with an arbitrary Arabic numerical label such as '1'. [Kibort and Corbett 2008a]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ArabicNumeralGender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ArabicNumeralGender> <http://www.w3.org/2000/01/rdf-schema#label> "ArabicNumeralGender"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ArabicNumeralGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Abstract> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSign> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSign> <http://www.w3.org/2000/01/rdf-schema#comment> "A linguistic sign is an abstract structure whose instances participate in a linguistic system, or language. By definition, a linguistic sign must have a form component (whose elements are phonological units), a grammatical component (whose elements are grammatical units), and a meaning component (whose elements are semantic units). The formal structure of a linguistic sign is determined by the grammar of a language. The information value of a linguistic sign, its meaning, is not fixed, but determined by the conventions of the language. The relation of form to meaning is largely arbitrary within a semiotic system. Signs are classified primarily according to what kinds of formal relations they participate in, and, secondly, according to their complexity (whether they are atomic or composed of other signs). Signs range from morphological and syntactic constructions to whole discourse segments [de Saussure 1983; Hervey 1979; Pollard and Sag 1994]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSign> <http://www.w3.org/2000/01/rdf-schema#label> "LinguisticSign"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NumeralClassifier> <http://www.w3.org/2000/01/rdf-schema#label> "NumeralClassifier"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NumeralClassifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NumeralClassifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Numeral classifiers are a grammatical device that reflects how speakers categorize objects that they count or quantify [Yamamoto 2005: 1].  They are a set of classifiers used in certain languages, e.g., Japanese, to indicate the class to which the noun modified by the numeral belongs [Pei and Gaynor 1980: 23]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NumeralClassifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NumeralClassifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Classifier> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NumeralClassifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Numeral classifiers are free or bound morphemes that occur in the context of quantification, appearing contiguous to numerals in numeral noun phrases and expressions of quantity. [Aikhenvald 2003: 98; Aikhenvald in Senft 2000: 93]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CategoryChanger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CategoryChanger> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CategoryChanger> <http://www.w3.org/2000/01/rdf-schema#label> "CategoryChanger"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CategoryChanger> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/DerivationalMorpheme> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CategoryChanger> <http://www.w3.org/2000/01/rdf-schema#comment> "CategoryChanger is a cover class for all derivational units that change the syntactic category of the root to which they are attached."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DualNumber> <http://www.w3.org/2000/01/rdf-schema#label> "DualNumber"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DualNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DualNumber> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/NumberProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DualNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The dual quantifies the denotation of the nominal element by specifying that there are exactly 'two' (as in Upper Sorbian, see [Corbett 2000: 20] for examples and discussion. Additionally, but not necessarily, this value may be assigned on the basis of the formal properties of the nominal element (as in dualia tantum, e.g. mangautek 'scissors' in the Yukon dialect of Central Alaskan Yupik; [Jacobson 1984: 226]). The use of the dual varies across languages which have this value. In some languages, dual may be used to refer to any two entities, but in others it must refer to a natural pair such as eyes, and still in others it must refer to two items unless they are a natural pair [Corbett 2000]. [Kibort and Corbett 2008b]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DualNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SupraLaryngealProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SupraLaryngealProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/ArticulatoryProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SupraLaryngealProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The supralaryngeal node dominates the activity of all of the articulators except stiffening and slacking of the vocal folds. For consonants it can be viewed as the default node which comes into play when the supranasal node below it is deactivated. In the case of sounds produced by an articulator dominated by this node, the only possible segments are those which are traditionally classified as [-consonantal]. It is not necessary to specify manner features for sounds dominated by the supralaryngeal node, because they are redundantly determined. [Keyser and Stevens 1994: 216]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SupraLaryngealProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SupraLaryngealProperty> <http://www.w3.org/2000/01/rdf-schema#label> "SupraLaryngealProperty"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/TransitiveProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Those grammatical features which are used systematically to express certain relationships between the participants in a communicative situation and the actions, states, or circumstances in which they are involved [Hartmann"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/TransitiveProperty> <http://www.w3.org/2000/01/rdf-schema#label> "TransitiveProperty"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/TransitiveProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/TransitiveProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RomanNumeralGender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/GenderProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RomanNumeralGender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RomanNumeralGender> <http://www.w3.org/2000/01/rdf-schema#label> "RomanNumeralGender"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RomanNumeralGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RomanNumeralGender> <http://www.w3.org/2000/01/rdf-schema#comment> "A convention for labeling gender values. Roman numerals are often used for languages for which there is a descriptive tradition involving use of the term 'noun class' instead of 'gender', in particular in languages of the Caucasus or Bantu languages, and are particularly useful where the number of genders is large.If the 'noun classes' are involved in agreement systems, they are gender systems. Roman numerals may also be used in instances where another label is possible. In one language the gender to which nouns with male rational denotation are assigned might be called 'masculine', whereas in another language nouns with a similar denotation may be assigned to a gender with an arbitrary Roman numerical label such as 'I'. [Kibort and Corbett 2008a]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Converb> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Verbal> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Converb> <http://www.w3.org/2000/01/rdf-schema#label> "Converb"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Converb> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Converb> <http://www.w3.org/2000/01/rdf-schema#comment> "A nonfinite verb form, i.e., lacking specifications for tense, mood, and agreement with their arguments, whose main function is to mark adverbial subordination. Converbal constructions are generally not arguments but modifiers, and they generally modify verbs, clauses or sentences, but not nouns or noun phrases. They are embedded or incorporated into the superordinate clause, and contrast with coordinate constructions. Converbal constructions can often be paraphrased by means of coordinate constructions in languages that allow coordination of clauses, such as in the gloss for the Korean example below. [Haspelmath 1995: 3-8]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Converb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeminineGender> <http://www.w3.org/2000/01/rdf-schema#label> "FeminineGender"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeminineGender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/GenderProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeminineGender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeminineGender> <http://www.w3.org/2000/01/rdf-schema#comment> "A gender property established on the basis of agreement, to which nouns may be assigned if 1) they inherently denote females. Additionally, but not necessarily, nouns may be assigned this value if: 2) their formal properties (morphological or phonological) lead them to be assigned to the same agreement pattern as other nouns within the language that have female denotation. 3) they are arbitrarily assigned to the same agreement pattern as other nouns in the language that have female denotation. [Corbett 1991]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeminineGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/net/wf-motifs#StatelessInvocaton> <http://www.w3.org/2000/01/rdf-schema#comment> "Intra-workflow motif that requires a step in the workflow for performing a service call or tool invocation. All the steps of a workflow are by default stateless (synchronous) invocations unless they are explicitly declared to be stateful. "@en <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#StatelessInvocaton> <http://www.w3.org/2000/01/rdf-schema#label> "Stateless (synchronous) invocation"@en <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#StatelessInvocaton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#StatelessInvocaton> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wf-motifs#IntraWorkflowMotif> <http://purl.org/net/wf-motifs> .
+<http://purl.org/ontology/po/Outlet> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/po/> .
+<http://purl.org/ontology/po/Outlet> <http://www.w3.org/2000/01/rdf-schema#label> "Outlet" <http://purl.org/ontology/po/> .
+<http://purl.org/ontology/po/Outlet> <http://www.w3.org/2000/01/rdf-schema#comment> "\n        Outlet of a particular service, e.g. Radio 4 LW and FM for Radio 4.\n        Outlets are services which do not have variations.\n        The criterion for an outlet is its timeline.\n        For example, Radio 4 LW broadcasts on Analogue Long Wave, but also on Digital Satellite.\n        It corresponds to just one outlet, as they are simulcasts.\n        The two physical channels for broadcasts correspond to po:Channel.\n    " <http://purl.org/ontology/po/> .
+<http://purl.org/ontology/po/Outlet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/po/Service> <http://purl.org/ontology/po/> .
+<http://purl.org/ontology/po/Outlet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/po/> <http://purl.org/ontology/po/> .
+<http://purl.org/ontology/po/Outlet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/po/> .
+<http://purl.org/ontology/similarity/Association> <http://www.w3.org/2000/01/rdf-schema#label> "Association" <http://purl.org/ontology/similarity/> .
+<http://purl.org/ontology/similarity/Association> <http://www.w3.org/2002/07/owl#equivalentClass> _:B3470983413cc7539c7af3d400fdcbe2b <http://purl.org/ontology/similarity/> .
+<http://purl.org/ontology/similarity/Association> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/similarity/> .
+<http://purl.org/ontology/similarity/Association> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://purl.org/ontology/similarity/> .
+<http://purl.org/ontology/similarity/Association> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/similarity/> .
+<http://purl.org/ontology/similarity/Association> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/similarity/> <http://purl.org/ontology/similarity/> .
+<http://purl.org/ontology/similarity/Association> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://purl.org/ontology/similarity/> .
+<http://purl.org/ontology/similarity/Association> <http://www.w3.org/2002/07/owl#equivalentClass> _:Be314e3226e804a52bb7a73f465dbf429 <http://purl.org/ontology/similarity/> .
+<http://purl.org/ontology/similarity/Association> <http://www.w3.org/2000/01/rdf-schema#comment> "An abstract class to define some association between things.  Entities share an association if they are somehow inter-connected.  Generally a <b>directed association</b> should have at lease one <code>sim:subject</code> property and one <code>sim:object</code> property <b>or</b> an <b>undirected association</b> should have at least two <code>sim:element</code> properties, however this is not a requirement and intentionally left out of the model."@en <http://purl.org/ontology/similarity/> .
+<http://purl.org/ontology/wo/TerrestrialHabitat> <http://www.w3.org/2000/01/rdf-schema#comment> "Terrestrial habitats include forests, grasslands, deserts and rainforests. They are typically defined by factors such as plant structure (trees and grasses), leaf types (eg broadleaf and needleleaf), plant spacing (forest, woodland, savanna) and climate." <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/TerrestrialHabitat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/TerrestrialHabitat> <http://www.w3.org/2000/01/rdf-schema#label> "Terrestrial Habitat"@en-gb <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/TerrestrialHabitat> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/wo/Habitat> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/TerrestrialHabitat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/wo/> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/TerrestrialHabitat> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Genus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Genus> <http://www.w3.org/2000/01/rdf-schema#comment> "A genus is a scientific way of showing that species are very closed related to each other. In fact the first word of the species' scientific name is its genus. So for lions (Panthera leo), Panthera is the genus and tells us that they are closely related to tigers (Panthera tigris), because they share the name"@en-gb <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Genus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/wo/TaxonRank> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Genus> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.bbc.co.uk/nature/genus> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Genus> <http://www.w3.org/2000/01/rdf-schema#label> "Genus"@en-gb <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Genus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/wo/> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Genus> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Genus> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/Genus> <http://purl.org/ontology/wo/> .
+<http://www.w3.org/ns/person#birthName> <http://www.w3.org/2000/01/rdf-schema#label> "birth name"@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/person#birthName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/person#birthName> <http://purl.org/dc/terms/identifier> "person:birthName" <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/person#birthName> <http://www.w3.org/2000/01/rdf-schema#comment> "All data associated with an individual are subject to change. Names can change for \n    a variety of reasons, either formally or informally, and new information may come to light that means that \n    a correction or clarification can be made to an existing record. Birth names tend to be persistent \n    however and for this reason they are recorded by some public sector information systems. There is \n    no granularity for birth name - the full name should be recorded in a single field."@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/person#birthName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/person#> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/pav/authoredBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/authoredOn> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdBy> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/pav/contributedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredBy> <http://www.w3.org/2000/01/rdf-schema#label> "Authored by"@en <http://purl.org/pav/> .
+<http://purl.org/pav/authoredBy> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/authoredBy> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent that originated or gave existence to the work that is expressed by the digital resource.\n\nThe author of the content of a resource may be different from the creator of the resource representation (although they are often the same). See pav:createdBy for a discussion.\n\npav:authoredBy is more specific than its superproperty dct:creator - which might or might not be interpreted to also cover the creation of the representation of the artifact.\n\nThe author is usually not a software agent (which would be indicated with pav:createdWith, pav:createdBy or pav:importedBy), unless the software actually authored the content itself; for instance an artificial intelligence algorithm which authored a piece of music or a machine learning algorithm that authored a classification of a tumor sample.\n\nThe date of authoring can be expressed using pav:authoredOn - note however in the case of multiple authors that there is no relationship in PAV identifying which agent contributed when or what. If capturing such lineage is desired, it should be additionally expressed using PROV relationships like prov:qualifiedAttribution or prov:wasGeneratedBy."@en <http://purl.org/pav/> .
+<http://purl.org/pav/authoredBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/creator> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdOn> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/authoredBy> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdBy> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/pav/contributedOn> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The date this resource was authored.\n\npav:authoredBy gives the authoring agent.\n\nNote that pav:authoredOn is different from pav:createdOn, although they are often the same. See pav:createdBy for a discussion.\n\nThis property is normally used in a functional way, indicating the last time of authoring, although PAV does not formally restrict this.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/2000/01/rdf-schema#label> "Authored on"@en <http://purl.org/pav/> .
+<http://purl.org/spar/biro/BibliographicCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc142f719af4489c18d6ca02e455e5cb7 <http://purl.org/spar/biro> .
+<http://purl.org/spar/biro/BibliographicCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of bibliographic records, each of which references a publication (or a work in preparation for publication). Examples of bibliographic collections include a collection of the bibliographic records of all the publications that a single individual has authored, or a collection of those bibliographic records to be included in a research paper, where they are expressed as a reference list."@en <http://purl.org/spar/biro> .
+<http://purl.org/spar/biro/BibliographicCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> <http://purl.org/spar/biro> .
+<http://purl.org/spar/biro/BibliographicCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7c820382e540bea99be3412bc153c519 <http://purl.org/spar/biro> .
+<http://purl.org/spar/biro/BibliographicCollection> <http://www.w3.org/2000/01/rdf-schema#label> "bibliographic collection"@en <http://purl.org/spar/biro> .
+<http://purl.org/spar/biro/BibliographicCollection> <http://purl.org/dc/elements/1.1/description> "A bibliographic collection is composed only of items containing bibliographic records.  Moreover, it cannot be part of other bibliographic collections, and it is realized only by bibliographic lists."@en <http://purl.org/spar/biro> .
+<http://purl.org/spar/biro/BibliographicCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/biro> .
+<http://purl.org/spar/biro/BibliographicCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8c232e261c62e40cabc0d2ae5d3ca933 <http://purl.org/spar/biro> .
+<http://purl.org/spar/biro/BibliographicCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/co/Set> <http://purl.org/spar/biro> .
+<http://purl.org/spar/fabio/Comment> <http://www.w3.org/2000/01/rdf-schema#label> "comment"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Comment> <http://www.w3.org/2000/01/rdf-schema#comment> "A verbal or written remark concerning some entity.  In written form, a comment is often appended to that entity and termed an annotation.  Within computer programs or ontologies, comments are added to enhance human understanding, and are usually prefaced by a special syntactic symbol that ensures they are ignored during execution of the program."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Comment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Work> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B90272baa80402c84a5f951f1b42cdc44 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Work> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Work> <http://purl.org/dc/elements/1.1/description> "A fabio:Work can only have part or be part of another fabio:Work. Moreover, it can be realized only by fabio:Expression(s)."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Work> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of FRBR work, restricted to works that are published or potentially publishable, and that contain or are referred to by bibliographic references, or entities used to define bibliographic references. FaBiO works, and their expressions and manifestations, are primarily textual publications such as books, magazines, newspapers and journals, and items of their content.  However, they also include datasets, computer algorithms, experimental protocols, formal specifications and vocabularies, legal records, governmental papers, technical and commercial reports and similar publications, and also bibliographies, reference lists, library catalogues and similar collections. For this reason, fabio:Work is not an equivalent class to frbr:ScholarlyWork.  An example of a fabio:Work is your latest research paper."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Work> <http://www.w3.org/2000/01/rdf-schema#label> "work"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Work> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba69fe1324db66b17b44b737692408ad5 <http://purl.org/spar/fabio> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/language> "en" <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/format> "rdf/xml" <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/contributor> "Marco Ocana" <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/publisher> "Massachusetts General Hospital" <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/contributor> "David Shotton" <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/contributor> "June Kinoshita" <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/date> "October 12, 2010" <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/contributor> "Paolo Ciccarese" <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://www.w3.org/2000/01/rdf-schema#comment> "These relationships don't have range and domains defined as they are meant to be reused in different contexts" <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://www.w3.org/2000/01/rdf-schema#label> "Discourse relationships vocabulary v. 3.0" <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/title> "Discourse relationships vocabulary"@en <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/contributor> "Tim Clark" <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://www.w3.org/2002/07/owl#versionInfo> "3.0" <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/creator> <http://www.hcklab.org/foaf.rdf#me> <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/contributor> "Elizabeth Wu" <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/swan/2.0/discourse-relationships/> <http://purl.org/dc/terms/contributor> "Gwen Wong" <http://purl.org/swan/2.0/discourse-relationships/> .
+<http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km)\nTypical unit code(s): LTR for liters, GLL of US Gallons, GLI for UK / Imperial Gallons\n\t\t\nNote 1: There are unfortunately no standard unit codes for \"liters per 100 km\". Simply use \"LTR\" for liters, \"GLL\" of US Gallons, or \"GLI\" for UK / Imperial Gallons, and indicate the distance in the rdfs:label of the gr:QuantitativeValueFloat or use vso:referenceDistance to model the reference distance (e.g. 100 km). \nNote 2: There are two ways of indicating the fuel consumption, vso:fuelConsumption (e.g. 8 liters per 100 km) and vso:fuelEconomy (e.g. 30 miles per gallon). They are reciprocal.\nNote 3: Often, the absolute value is useful only when related to driving speed (\"at 80 km/h\") or usage pattern (\"city traffic\"). You can use gr:valueReference to link the value for the fuel consumption to another value."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/Fuel_economy_in_automobiles> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "fuelConsumption (0..*)"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bbcd9524938d5653b4117aca0e1fa681a <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValueFloat> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vso/ns> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelEconomy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vso/ns#MotorizedRoadVehicle> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelEconomy> <http://www.w3.org/2000/01/rdf-schema#label> "fuelEconomy (0..*)"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelEconomy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vso/ns> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelEconomy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValueFloat> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelEconomy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelEconomy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelEconomy> <http://www.w3.org/2000/01/rdf-schema#comment> "The distance traveled per unit of fuel used; most commonly miles per gallon (mpg) or kilometers per liter (km/L)\nTypical unit code(s): KMT for kilometers, SMI for statute miles\n\t\nNote 1: There are unfortunately no standard unit codes for miles per gallon or kilometers per liter. \nSimply use \"SMI\" for statute miles (common miles in the US and UK) or \"KMT\" for kilometers, and indicate \nthe fuel amount of reference in the rdfs:label of the gr:QuantitativeValueFloat, or use vso:referenceFuelQuantity with vso:1LTR (1 liter), vso:1GLL (1 US Gallon), or vso:1GLI (1 British Gallon). \nNote 2: In the absence of a vso:referenceFuelQuantity one may assume that the quantity of reference is 1 gallon for distances given in miles and 1 liter for distances given in kilometers. However, note that the original unit may be obscured by unit conversion services, so this heuristic is far from perfect.\nNote 3: There are two ways of indicating the fuel consumption, vso:fuelConsumption (e.g. 8 liters per 100 km) and vso:fuelEconomy (e.g. 30 miles per gallon). They are reciprocal.\nNote 4: Often, the absolute value is useful only when related to driving speed (\"at 80 km/h\") or usage pattern (\"city traffic\"). You can use gr:valueReference to link the value for the fuel economy to another value."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelEconomy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/Fuel_economy_in_automobiles> <http://purl.org/vso/ns> .
+<http://purl.org/wai#participates> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Group> <http://purl.org/wai#> .
+<http://purl.org/wai#participates> <http://www.w3.org/2000/01/rdf-schema#label> "participates"@en <http://purl.org/wai#> .
+<http://purl.org/wai#participates> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/wai#Profile> <http://purl.org/wai#> .
+<http://purl.org/wai#participates> <http://www.w3.org/2000/01/rdf-schema#comment> "This property encodes the participation relation between profiles and the communities they are member of."@en <http://purl.org/wai#> .
+<http://purl.org/wai#participates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/wai#> .
+<http://rdfs.co/bevon/Dunkel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Dunkel> <http://purl.org/dc/terms/modified> "2014-03-01+09:00"^^<http://www.w3.org/2001/XMLSchema#date> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Dunkel> <http://www.w3.org/2004/02/skos/core#altLabel> "Dunkles"@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Dunkel> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://en.wikipedia.org/wiki/Dunkel> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Dunkel> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    Dunkel is the German word meaning dark, and dunkel beers typically range in\n    color from amber to dark reddish brown. They are characterized by their\n    smooth malty flavor.\n    "@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Dunkel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.co/bevon/Lager> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Dunkel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Dunkel> <http://www.w3.org/2004/02/skos/core#prefLabel> "둔켈"@ko <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Dunkel> <http://www.w3.org/2004/02/skos/core#prefLabel> "Dunkel"@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Dunkel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.co/bevon/> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Dunkel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.productontology.org/id/Dunkel> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Dunkel> <http://www.w3.org/2004/02/skos/core#definition> "\n    Dunkel, or Dunkles, is a word used for several types of dark German lager.\n    "@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Dunkel> <http://purl.org/dc/terms/issued> "2013-07-04+09:00"^^<http://www.w3.org/2001/XMLSchema#date> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Liqueur> <http://www.w3.org/2004/02/skos/core#altLabel> "Cordials"@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Liqueur> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.co/bevon/DistilledBeverage> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Liqueur> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Liqueur> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    Liqueurs are typically quite sweet; they are usually not aged for long\n    after the ingredients are mixed, but may have resting periods during their\n    production to allow flavors to marry.\n    "@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Liqueur> <http://www.w3.org/2004/02/skos/core#definition> "\n    A liqueur is an alcoholic beverage made from a distilled spirit that has\n    been flavored with fruit, cream, herbs, spices, flowers or nuts and bottled\n    with added sugar or other sweetener (such as high-fructose corn syrup).\n    "@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Liqueur> <http://www.w3.org/2004/02/skos/core#prefLabel> "Liqueur"@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Liqueur> <http://purl.org/dc/terms/issued> "2013-07-04+09:00"^^<http://www.w3.org/2001/XMLSchema#date> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Liqueur> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.co/bevon/> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Liqueur> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/Liqueur> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Liqueur> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.productontology.org/id/Liqueur> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Liqueur> <http://purl.org/dc/terms/modified> "2014-03-01+09:00"^^<http://www.w3.org/2001/XMLSchema#date> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Liqueur> <http://www.w3.org/2004/02/skos/core#prefLabel> "리큐어"@ko <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Liqueur> <http://www.w3.org/2004/02/skos/core#altLabel> "Schnapps"@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/Liqueur> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rdfs.co/bevon/> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#TransformationRight> <http://www.w3.org/2000/01/rdf-schema#comment> "It regulates actions that generate new works from previously existing ones. The results of this kind of actions are considered new works, and not mere reproductions, because they contribute something new, i.e. they are original as detailed in the Originality section. This right is concretised into the Adaptation Right and the Translation Right. The former creates a new work of a different type than the original one, e.g. a film from a novel. The latter generates a work of the same type but in a different language."@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#TransformationRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B02d7a4c227dfd74ce55dfd86175e1862 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#TransformationRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#TransformationRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#EconomicRights> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#TransformationRight> <http://www.w3.org/2000/01/rdf-schema#label> "Transformation Right"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#PublicPerformanceRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#PublicPerformanceRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#EconomicRights> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#PublicPerformanceRight> <http://www.w3.org/2000/01/rdf-schema#label> "Public Performance Right"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#PublicPerformanceRight> <http://www.w3.org/2000/01/rdf-schema#comment> "It regulates Performances of works when they are made in public, i.e. before an audience."@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#UsersRights> <http://www.w3.org/2000/01/rdf-schema#label> "Users Rights"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#UsersRights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#UsersRights> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#Copyright> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#UsersRights> <http://www.w3.org/2000/01/rdf-schema#comment> "End-users have some special permissions that grant them the possibility to perform some actions otherwise forbidden by copyright, although this does not mean that the user must pay a compensation if they are exercises, e.g. levies on digital recording equipment and media. These exceptions to copyright should be considered as end-user privileges and not rights. However, some of them are referred to as rights, e.g. the right to quote. Moreover, they are modelled as rights in this conceptualisation in order to build a more homogeneous model."@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+they.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BacX2Bthey .
+_:BacX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BacX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ac+they.nt> .
+_:BacX2Bthey <https://w3id.org/tree#value> "ac" .
+_:BacX2Bthey <https://w3id.org/tree#value> "they" .
+_:BacX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ac+they.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BadX2Bthey .
+_:BadX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BadX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ad+they.nt> .
+_:BadX2Bthey <https://w3id.org/tree#value> "ad" .
+_:BadX2Bthey <https://w3id.org/tree#value> "they" .
+_:BadX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ad+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BalX2Bthey .
+_:BalX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BalX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/al+they.nt> .
+_:BalX2Bthey <https://w3id.org/tree#value> "al" .
+_:BalX2Bthey <https://w3id.org/tree#value> "they" .
+_:BalX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/al+they.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BapX2Bthey .
+_:BapX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BapX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ap+they.nt> .
+_:BapX2Bthey <https://w3id.org/tree#value> "ap" .
+_:BapX2Bthey <https://w3id.org/tree#value> "they" .
+_:BapX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ap+they.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BarX2Bthey .
+_:BarX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BarX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ar+they.nt> .
+_:BarX2Bthey <https://w3id.org/tree#value> "ar" .
+_:BarX2Bthey <https://w3id.org/tree#value> "they" .
+_:BarX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ar+they.nt> <https://w3id.org/tree#remainingItems> "121"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BasX2Bthey .
+_:BasX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BasX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/as+they.nt> .
+_:BasX2Bthey <https://w3id.org/tree#value> "as" .
+_:BasX2Bthey <https://w3id.org/tree#value> "they" .
+_:BasX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/as+they.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BaX2BeX2Bthey .
+_:BaX2BeX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BeX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+e+they.nt> .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "a" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "e" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "they" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+e+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BaX2BhX2Bthey .
+_:BaX2BhX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BhX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+h+they.nt> .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "a" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "h" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "they" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+h+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+they.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BacX2Bthey .
+_:BacX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BacX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ac+they.nt> .
+_:BacX2Bthey <https://w3id.org/tree#value> "ac" .
+_:BacX2Bthey <https://w3id.org/tree#value> "they" .
+_:BacX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ac+they.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BadX2Bthey .
+_:BadX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BadX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ad+they.nt> .
+_:BadX2Bthey <https://w3id.org/tree#value> "ad" .
+_:BadX2Bthey <https://w3id.org/tree#value> "they" .
+_:BadX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ad+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BalX2Bthey .
+_:BalX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BalX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/al+they.nt> .
+_:BalX2Bthey <https://w3id.org/tree#value> "al" .
+_:BalX2Bthey <https://w3id.org/tree#value> "they" .
+_:BalX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/al+they.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BapX2Bthey .
+_:BapX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BapX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ap+they.nt> .
+_:BapX2Bthey <https://w3id.org/tree#value> "ap" .
+_:BapX2Bthey <https://w3id.org/tree#value> "they" .
+_:BapX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ap+they.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BarX2Bthey .
+_:BarX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BarX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ar+they.nt> .
+_:BarX2Bthey <https://w3id.org/tree#value> "ar" .
+_:BarX2Bthey <https://w3id.org/tree#value> "they" .
+_:BarX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ar+they.nt> <https://w3id.org/tree#remainingItems> "121"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BasX2Bthey .
+_:BasX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BasX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/as+they.nt> .
+_:BasX2Bthey <https://w3id.org/tree#value> "as" .
+_:BasX2Bthey <https://w3id.org/tree#value> "they" .
+_:BasX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/as+they.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BaX2BeX2Bthey .
+_:BaX2BeX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BeX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+e+they.nt> .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "a" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "e" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "they" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+e+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BaX2BhX2Bthey .
+_:BaX2BhX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BhX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+h+they.nt> .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "a" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "h" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "they" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+h+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+they.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BacX2Bthey .
+_:BacX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BacX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ac+they.nt> .
+_:BacX2Bthey <https://w3id.org/tree#value> "ac" .
+_:BacX2Bthey <https://w3id.org/tree#value> "they" .
+_:BacX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ac+they.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BadX2Bthey .
+_:BadX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BadX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ad+they.nt> .
+_:BadX2Bthey <https://w3id.org/tree#value> "ad" .
+_:BadX2Bthey <https://w3id.org/tree#value> "they" .
+_:BadX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ad+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BalX2Bthey .
+_:BalX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BalX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/al+they.nt> .
+_:BalX2Bthey <https://w3id.org/tree#value> "al" .
+_:BalX2Bthey <https://w3id.org/tree#value> "they" .
+_:BalX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/al+they.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BapX2Bthey .
+_:BapX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BapX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ap+they.nt> .
+_:BapX2Bthey <https://w3id.org/tree#value> "ap" .
+_:BapX2Bthey <https://w3id.org/tree#value> "they" .
+_:BapX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ap+they.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BarX2Bthey .
+_:BarX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BarX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ar+they.nt> .
+_:BarX2Bthey <https://w3id.org/tree#value> "ar" .
+_:BarX2Bthey <https://w3id.org/tree#value> "they" .
+_:BarX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ar+they.nt> <https://w3id.org/tree#remainingItems> "121"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BasX2Bthey .
+_:BasX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BasX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/as+they.nt> .
+_:BasX2Bthey <https://w3id.org/tree#value> "as" .
+_:BasX2Bthey <https://w3id.org/tree#value> "they" .
+_:BasX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/as+they.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BaX2BeX2Bthey .
+_:BaX2BeX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BeX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+e+they.nt> .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "a" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "e" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "they" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+e+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BaX2BhX2Bthey .
+_:BaX2BhX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BhX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+h+they.nt> .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "a" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "h" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "they" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+h+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+they.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BacX2Bthey .
+_:BacX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BacX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ac+they.nt> .
+_:BacX2Bthey <https://w3id.org/tree#value> "ac" .
+_:BacX2Bthey <https://w3id.org/tree#value> "they" .
+_:BacX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ac+they.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BadX2Bthey .
+_:BadX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BadX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ad+they.nt> .
+_:BadX2Bthey <https://w3id.org/tree#value> "ad" .
+_:BadX2Bthey <https://w3id.org/tree#value> "they" .
+_:BadX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ad+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BalX2Bthey .
+_:BalX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BalX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/al+they.nt> .
+_:BalX2Bthey <https://w3id.org/tree#value> "al" .
+_:BalX2Bthey <https://w3id.org/tree#value> "they" .
+_:BalX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/al+they.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BapX2Bthey .
+_:BapX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BapX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ap+they.nt> .
+_:BapX2Bthey <https://w3id.org/tree#value> "ap" .
+_:BapX2Bthey <https://w3id.org/tree#value> "they" .
+_:BapX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ap+they.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BarX2Bthey .
+_:BarX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BarX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ar+they.nt> .
+_:BarX2Bthey <https://w3id.org/tree#value> "ar" .
+_:BarX2Bthey <https://w3id.org/tree#value> "they" .
+_:BarX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ar+they.nt> <https://w3id.org/tree#remainingItems> "121"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BasX2Bthey .
+_:BasX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BasX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/as+they.nt> .
+_:BasX2Bthey <https://w3id.org/tree#value> "as" .
+_:BasX2Bthey <https://w3id.org/tree#value> "they" .
+_:BasX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/as+they.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BaX2BeX2Bthey .
+_:BaX2BeX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BeX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+e+they.nt> .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "a" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "e" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "they" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+e+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BaX2BhX2Bthey .
+_:BaX2BhX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BhX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+h+they.nt> .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "a" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "h" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "they" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+h+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+they.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BacX2Bthey .
+_:BacX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BacX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ac+they.nt> .
+_:BacX2Bthey <https://w3id.org/tree#value> "ac" .
+_:BacX2Bthey <https://w3id.org/tree#value> "they" .
+_:BacX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ac+they.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BadX2Bthey .
+_:BadX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BadX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ad+they.nt> .
+_:BadX2Bthey <https://w3id.org/tree#value> "ad" .
+_:BadX2Bthey <https://w3id.org/tree#value> "they" .
+_:BadX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ad+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BalX2Bthey .
+_:BalX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BalX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/al+they.nt> .
+_:BalX2Bthey <https://w3id.org/tree#value> "al" .
+_:BalX2Bthey <https://w3id.org/tree#value> "they" .
+_:BalX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/al+they.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BapX2Bthey .
+_:BapX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BapX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ap+they.nt> .
+_:BapX2Bthey <https://w3id.org/tree#value> "ap" .
+_:BapX2Bthey <https://w3id.org/tree#value> "they" .
+_:BapX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ap+they.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BarX2Bthey .
+_:BarX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BarX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ar+they.nt> .
+_:BarX2Bthey <https://w3id.org/tree#value> "ar" .
+_:BarX2Bthey <https://w3id.org/tree#value> "they" .
+_:BarX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ar+they.nt> <https://w3id.org/tree#remainingItems> "121"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BasX2Bthey .
+_:BasX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BasX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/as+they.nt> .
+_:BasX2Bthey <https://w3id.org/tree#value> "as" .
+_:BasX2Bthey <https://w3id.org/tree#value> "they" .
+_:BasX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/as+they.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BaX2BeX2Bthey .
+_:BaX2BeX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BeX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+e+they.nt> .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "a" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "e" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#value> "they" .
+_:BaX2BeX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+e+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+they.nt> <https://w3id.org/tree#relation> _:BaX2BhX2Bthey .
+_:BaX2BhX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BhX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+h+they.nt> .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "a" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "h" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#value> "they" .
+_:BaX2BhX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+h+they.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

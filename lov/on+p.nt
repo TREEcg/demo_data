@@ -1,0 +1,605 @@
+<http://dbpedia.org/ontology/noteOnPlaceOfBurial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/noteOnPlaceOfBurial> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/MilitaryPerson> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/noteOnPlaceOfBurial> <http://www.w3.org/2000/01/rdf-schema#label> "note on place of burial"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/noteOnPlaceOfBurial> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:noteOnPlaceOfBurial> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/noteOnPlaceOfBurial> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/noteOnPlaceOfBurial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://ontology.it/itsmo/v1#hasInformed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#hasInformed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.it/itsmo/v1#Process> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#hasInformed> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.it/itsmo/v1#Identity> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#hasInformed> <http://www.w3.org/2000/01/rdf-schema#comment> "Those who are kept up-to-date on progress, often only on completion of the task or deliverable; and with whom there is just one-way communication. [source Wikypedia Raci matrix]"@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#hasInformed> <http://www.w3.org/2000/01/rdf-schema#label> "hasInformed" <http://ontology.it/itsmo/v1> .
+<http://open-services.net/ns/core#readOnly> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open-services.net/ns/core#> <http://open-services.net/ns/core#> .
+<http://open-services.net/ns/core#readOnly> <http://www.w3.org/2000/01/rdf-schema#label> "readOnly" <http://open-services.net/ns/core#> .
+<http://open-services.net/ns/core#readOnly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open-services.net/ns/core#> .
+<http://open-services.net/ns/core#readOnly> <http://www.w3.org/2000/01/rdf-schema#comment> "true if the property is read-only. If omitted, or set to false, then the property is writable. Providers SHOULD declare a property read-only when changes to the value of that property will not be accepted after the resource has been created, e.g. on PUT/PATCH requests. Consumers should note that the converse does not apply: Providers MAY reject a change to the value of a writable property." <http://open-services.net/ns/core#> .
+<http://open-services.net/ns/core#readOnly> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://open-services.net/bin/view/Main/OslcCoreSpecification> <http://open-services.net/ns/core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#wasConvertedFrom> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#wasConvertedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#wasConvertedFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#wasConvertedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#wasConvertedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "This property should be used, when mapping one nif:String or nif:Context to another and is often confused with nif:sourceUrl. \n    While nif:sourceUrl is built on PROV-O and is used to link the nif:Context to the document URL for provenance information, nif:convertedFrom is more precise and pinpoints exact locations where a certain NIF String \"wasConvertedFrom\".\n    nif:wasConvertedFrom is therefore used to provide *exact* provenance during a conversion process, e.g. when removing tags from XHTML and then linking XPath URIs to NIF index based URIs (e.g.  RFC 5147 with char=x,y). An example of the usage of this property can be found here: http://www.w3.org/TR/its20/#conversion-to-nif\n    \n    Example \n    # \"Dublin\"\n<http://example.com/myitsservice?informat=html&intype=url&input=http://example.com/doc.html&char=11,17> \n nif:wasConvertedFrom\n <http://example.com/myitsservice?informat=html&intype=url&input=http://example.com/doc.html&xpath=/html/body[1]/h2[1]/span[1]/text()[1]>.\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#wasConvertedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "was converted from"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#wasConvertedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://purl.org/dsnotify/vocab/eventset/hasReason> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to a resource that further specifies the reason for the respective ResourceChangeEvent. For example one could attach a textual description or link to another event here. This property is under-specified in this version on purpose."@en-US <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasReason> <http://www.w3.org/2000/01/rdf-schema#label> "has reason"@en-US <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasReason> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasAffectedTriples> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to a resource that further specifies the actual triples that were added/removed in consequence of the respective ResourceChangeEvent. For example one could attach a Talis changeset here. This property is under-specified in this version on purpose."@en-US <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasAffectedTriples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasAffectedTriples> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasAffectedTriples> <http://www.w3.org/2000/01/rdf-schema#label> "has affected triples"@en-US <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/goodrelations/v1#PublicHolidays> <http://www.w3.org/2000/01/rdf-schema#label> "Public holidays (day of week)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PublicHolidays> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PublicHolidays> <http://www.w3.org/2000/01/rdf-schema#comment> "A placeholder for all official public holidays at the gr:Location. This allows specifying the opening hours on public holidays. If a given day is a public holiday, this specification supersedes the opening hours for the respective day of the week."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PublicHolidays> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PublicHolidays> <http://purl.org/goodrelations/v1#displayPosition> "8"^^<http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/goodrelations/v1> .
+<http://purl.org/healthcarevocab/v1#CommentsOnPatientPerformanceOfVisualField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#CommentsOnPatientPerformanceOfVisualField> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#CommentsOnPatientPerformanceOfVisualField> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0024.0044> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#CommentsOnPatientPerformanceOfVisualField> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#CommentsOnPatientPerformanceOfVisualField> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.Measurements> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#CommentsOnPatientPerformanceOfVisualField> <http://www.w3.org/2000/01/rdf-schema#label> "Comments on Patient's Performance of Visual Field" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1404> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1404> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1404> <http://www.w3.org/2000/01/rdf-schema#label> "Exposures on Plate" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1404> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.Image> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1404> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#long> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1404> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#ExposuresOnPlate> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#RefractiveParametersUsedOnPatientSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Refractive Parameters Used on Patient Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#RefractiveParametersUsedOnPatientSequence> <http://www.w3.org/2000/01/rdf-schema#domain> _:B87f5d21ab3508543b5e4550ddfe530d5 <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#RefractiveParametersUsedOnPatientSequence> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#RefractiveParametersUsedOnPatientSequence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#RefractiveParametersUsedOnPatientSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#RefractiveParametersUsedOnPatientSequence> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0024.0112> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.RefractiveParametersUsedOnPatientSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.RefractiveParametersUsedOnPatientSequence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.RefractiveParametersUsedOnPatientSequence> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0024.0112> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.RefractiveParametersUsedOnPatientSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Refractive Parameters Used on Patient Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0024.0112> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0024.0112> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0024.0112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0024.0112> <http://www.w3.org/2000/01/rdf-schema#label> "Refractive Parameters Used on Patient Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0024.0112> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#RefractiveParametersUsedOnPatientSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0024.0112> <http://www.w3.org/2000/01/rdf-schema#domain> _:B2fe7ea5426e9879bf436d3aa8cc61710 <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.3001> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#ConfidentialityConstraintOnPatientDataDescription> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.3001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.3001> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.3001> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.3001> <http://www.w3.org/2000/01/rdf-schema#label> "Confidentiality Constraint on Patient Data Description" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ConfidentialityConstraintOnPatientDataDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ConfidentialityConstraintOnPatientDataDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ConfidentialityConstraintOnPatientDataDescription> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0040.3001> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ConfidentialityConstraintOnPatientDataDescription> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ConfidentialityConstraintOnPatientDataDescription> <http://www.w3.org/2000/01/rdf-schema#label> "Confidentiality Constraint on Patient Data Description" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0024.0044> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0024.0044> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0024.0044> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0024.0044> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.Measurements> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0024.0044> <http://www.w3.org/2000/01/rdf-schema#label> "Comments on Patient's Performance of Visual Field" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0024.0044> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#CommentsOnPatientPerformanceOfVisualField> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0024.0112> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0024.0112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0024.0112> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Refractive Parameters Used on Patient Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0024.0112> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.RefractiveParametersUsedOnPatientSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ExposuresOnPlate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#long> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ExposuresOnPlate> <http://www.w3.org/2000/01/rdf-schema#label> "Exposures on Plate" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ExposuresOnPlate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.Image> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ExposuresOnPlate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ExposuresOnPlate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ExposuresOnPlate> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0018.1404> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/linguistics/gold/LanguageFamily> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LanguageFamily> <http://www.w3.org/2000/01/rdf-schema#label> "LanguageFamily"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LanguageFamily> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/GeneticTaxon> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LanguageFamily> <http://www.w3.org/2000/01/rdf-schema#comment> "Group of languages that are genetically related, i.e can be traced to a common proto-language. The ordering of languages into a common language family is usually based on phonological, morphological, and lexical correspondences that stem from the proto-language. ... it refers to the largest spectrum of languages for which a genetic relationship can be demonstrated. [Bussmann 1996: 262]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LanguageFamily> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PoliticalTaxon> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PoliticalTaxon> <http://www.w3.org/2000/01/rdf-schema#comment> "PoliticalTaxon is the class of taxons whose instances are groupings based on political entities such as states or countries or larger politically defined entities, e.g., CameroonianLanguage."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PoliticalTaxon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/LinguisticTaxon> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PoliticalTaxon> <http://www.w3.org/2000/01/rdf-schema#label> "PoliticalTaxon"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PoliticalTaxon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#comment> "A Glyph is a symbol used in a writing system to represent some kind of linguistic unit, such as a single sound, a  phoneme or an entire word. Glyphs are concatenated in a writing system to form orthographic parts and orthographic words. Consider the printed word 'apple'. This word contains two instances of the 'p' glyph, which is a subclass of Glyph. Instances of a Glyph share a similar shape and can be called 'shapemes'. The class Glyph is not the same as Grapheme. A Grapheme is a contrastive unit within a particular writing system. The notion of a glyph is relevant across writing systems. For instance, consider the symbol 'р' used in a printed instance of a Russian word 'русский'. Now consider the symbol 'p' used in the printed instance of an English word 'pickle'. Both symbols are instances of the same Glyph. They share the same general shape, but do not have the same phonemic value."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/OrthographicPart> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#comment> "A shape that is the visual representation of a character. It is a graphic object stored within a font. Glyphs are objects that are recognizably related to particular characters and which are dependent on particular design. Glyphs may or may not correspond to characters in a one-to-one manner. For example, a single character may correspond to multiple glyphs that have complementary distributions based upon context (e.g. final and non-final sigma in Greek), or several characters may correspond to a single glyph known as a ligature. [Lyons, et al. 2001]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#label> "Glyph"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/lobid/lv#fulltextOnline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#fulltextOnline> <http://www.w3.org/2000/01/rdf-schema#label> "Fulltext online"@en <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#fulltextOnline> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/lobid/lv> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#fulltextOnline> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Document> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#fulltextOnline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dc/terms/BibliographicResource> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#fulltextOnline> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a bibliographic resource to an online resource (full text in HTML, PDFs or landing pages in OA repositories, on publishers' websites etc.) that represents the full text of the bibliographic resource or contains a link to a full text of the resource. "@en <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#fulltextOnline> <http://www.w3.org/2000/01/rdf-schema#label> "Online-Volltext"@de <http://purl.org/lobid/lv> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/mo/Release> <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/2000/01/rdf-schema#comment> "The Global Release Identifier (GRid) is a system for uniquely identifying Releases of music over electronic networks (that is, online stores where you can buy music as digital files). As that it can be seen as the equivalent of the BarCode (or more correctly the GTIN) as found on physical releases of music. Like the ISRC (a code for identifying single recordings as found on releases) it was developed by the IFPI but it does not appear to be a standard of the ISO." <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/mo/> <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/2000/01/rdf-schema#label> "GRid" <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/mo/uuid> <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://purl.org/ontology/mo/level> "1" <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/MusicalExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "\nThe intellectual or artistic realization of a work in the form of alpha-numeric, musical, or choreographic notation, sound, etc., or any combination of such forms.    \n\n\nFor example:\n\nWork #1 Franz Schubert's Trout quintet\n\n    * Expression #1 the composer's score\n    * Expression #2 sound issued from the performance by the Amadeus Quartet and Hephzibah Menuhin on piano\n    * Expression #3 sound issued from the performance by the Cleveland Quartet and Yo-Yo Ma on the cello\n    * . . . . \n\nThe Music Ontology defines the following sub-concepts of a MusicalExpression, which should be used instead of MusicalExpression itself: Score (the\nresult of an arrangement), Sound (produced during a performance), Signal. However, it is possible to stick to FRBR and bypass the worflow\nmechanism this ontology defines by using the core FRBR properties on such objects. But it is often better to use events to interconnect such \nexpressions (allowing to go deeply into the production process - `this performer was playing this particular instrument at that\nparticular time').\n    \n    " <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/MusicalExpression> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/MusicalExpression> <http://purl.org/ontology/mo/level> "1" <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/MusicalExpression> <http://www.w3.org/2000/01/rdf-schema#label> "musical expression" <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/MusicalExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/MusicalExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/mo/> <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/MusicalExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Expression> <http://purl.org/ontology/mo/> .
+<http://purl.org/spar/doco/Line> <http://www.w3.org/2000/01/rdf-schema#comment> "A line in poetry is a unit of language into which a poem is divided which operates on principles which are distinct from and not necessarily coincident with grammatical structures, such as the sentence or clauses in sentences.\n\nA distinct numbered group of lines in verse is normally called a stanza."@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Line> <http://www.w3.org/2000/01/rdf-schema#label> "line"@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Line> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.essepuntato.it/2008/12/pattern#Block> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Line> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/DiscourseElement> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Line> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/doco> .
+<http://purl.org/spar/fabio/Book> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Book> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Book> <http://www.w3.org/2000/01/rdf-schema#comment> "A non-serial document that is complete in one volume or a designated finite number of volumes.  A book published by a publisher is usually  identified by an International Standard Book Number (ISBN), and may be manifested as a physical printed publication on paper bound in a hard or soft cover, or in electronic format as an 'e-book'."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Book> <http://www.w3.org/2000/01/rdf-schema#label> "book"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Manuscript> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Manuscript> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual work prepared 'by hand', such as a typescript or word-processed pre-publication draft of a research paper or a report, or a work not otherwise reproduced in multiple copies.  [Note: fabio:Manuscript is not intended to describe a handwritten historical document on paper or parchment, for which the FRBR distinctions between work, expression, manifestation and item (individual copy) becomes blurred.]."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Manuscript> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Manuscript> <http://www.w3.org/2000/01/rdf-schema#label> "manuscript"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PrintObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PrintObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/AnalogManifestation> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PrintObject> <http://www.w3.org/2000/01/rdf-schema#label> "print object"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PrintObject> <http://www.w3.org/2000/01/rdf-schema#comment> "An analog manifestation in physical printed form, typically on paper."@en <http://purl.org/spar/fabio> .
+<http://purl.org/theatre#ProductionCompany> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Organization> <http://purl.org/theatre#> .
+<http://purl.org/theatre#ProductionCompany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/theatre#> .
+<http://purl.org/theatre#ProductionCompany> <http://www.w3.org/2000/01/rdf-schema#label> "ProductionCompany" <http://purl.org/theatre#> .
+<http://purl.org/theatre#ProductionCompany> <http://www.w3.org/2000/01/rdf-schema#comment> "An Organisation which puts on Productions." <http://purl.org/theatre#> .
+<http://rdaregistry.info/Elements/m/P30054> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A note providing details on place of production, producer, or date of production, or information on changes in the place of production, producer, or producer"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60127> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a note providing details on place of production, producer, or date of production, or information on changes in the place of production, producer, or producer’s name."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/m/P30137> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://www.w3.org/2000/01/rdf-schema#label> "has note on production statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/noteOnProductionStatement.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://metadataregistry.org/uri/profile/RegAp/name> "noteOnProductionStatement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "note on production statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.17.6" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30055> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30055> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30055> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30055> <http://www.w3.org/2000/01/rdf-schema#label> "has note on publication statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30055> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a note providing details on place of publication, publisher, or date of publication, information on changes in the place of publication, publisher, or publisher’s name, or on suspension of publication."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30055> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.17.7" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30055> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A note providing details on place of publication, publisher, or date of publication, information on changes in the place of publication, publisher, or publisher"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30055> <http://metadataregistry.org/uri/profile/RegAp/name> "noteOnPublicationStatement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30055> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60128> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30055> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "note on publication statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30055> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30055> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/m/P30137> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30055> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/noteOnPublicationStatement.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/u/P60128> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/u/P60470> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60128> <http://metadataregistry.org/uri/profile/RegAp/name> "noteOnPublicationStatement"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60128> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/m/P30055> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60128> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a note providing details on place of publication, publisher, or date of publication, information on changes in the place of publication, publisher, or publisher’s name, or on suspension of publication."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60128> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60128> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60128> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/noteOnPublicationStatement.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60128> <http://www.w3.org/2000/01/rdf-schema#label> "has note on publication statement"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60128> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60127> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/u/P60470> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60127> <http://www.w3.org/2000/01/rdf-schema#label> "has note on production statement"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60127> <http://metadataregistry.org/uri/profile/RegAp/name> "noteOnProductionStatement"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60127> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60127> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/m/P30054> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60127> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60127> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60127> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a note providing details on place of production, producer, or date of production, or information on changes in the place of production, producer, or producer’s name."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60127> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/noteOnProductionStatement.en> <http://rdaregistry.info/Elements/u> .
+<http://rdfunit.aksw.org/ns/core#sparqlGenerator> <http://www.w3.org/2000/01/rdf-schema#comment> "A SPARQL query used to instantiate test cases based on patterns"@en <http://rdfunit.aksw.org/ns/core#> .
+<http://rdfunit.aksw.org/ns/core#sparqlGenerator> <http://www.w3.org/2000/01/rdf-schema#label> "sparqlGenerator"@en <http://rdfunit.aksw.org/ns/core#> .
+<http://rdfunit.aksw.org/ns/core#sparqlGenerator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfunit.aksw.org/ns/core#TestGenerator> <http://rdfunit.aksw.org/ns/core#> .
+<http://rdfunit.aksw.org/ns/core#sparqlGenerator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdfunit.aksw.org/ns/core#> .
+<http://rdfunit.aksw.org/ns/core#sparqlGenerator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://rdfunit.aksw.org/ns/core#> .
+<http://rdvocab.info/Elements/noteOnProductionStatementManifestation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/Elements/noteManifestation> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatementManifestation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/Elements/noteOnProductionStatement> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatementManifestation> <http://www.w3.org/2004/02/skos/core#definition> "A note providing details on place of production, producer, or date of production, or information on changes in the place of production,\nproducer, or producer’s name."@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatementManifestation> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatementManifestation> <http://metadataregistry.org/uri/profile/RegAp/name> "noteOnProductionStatementManifestation"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatementManifestation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdvocab.info/uri/schema/FRBRentitiesRDA/Manifestation> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatementManifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatementManifestation> <http://www.w3.org/2000/01/rdf-schema#label> "Note on production statement (Manifestation)"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatementManifestation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/Elements> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatementManifestation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdvocab.info/uri/schema/FRBRentitiesRDA/Manifestation> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatementManifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatementManifestation> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatementManifestation> <http://www.w3.org/2004/02/skos/core#definition> "A note providing details on place of publication, publisher, or date of publication, information on changes in the place of publication,\npublisher, or publisher’s name, or on suspension of publication."@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatementManifestation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/Elements> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatementManifestation> <http://metadataregistry.org/uri/profile/RegAp/name> "noteOnPublicationStatementManifestation"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatementManifestation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/Elements/noteOnPublicationStatement> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatementManifestation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/Elements/noteManifestation> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatementManifestation> <http://www.w3.org/2000/01/rdf-schema#label> "Note on publication statement (Manifestation)"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatement> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdvocab.info/Elements/noteOnProductionStatementManifestation> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/Elements> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatement> <http://www.w3.org/2004/02/skos/core#definition> "A note providing details on place of production, producer, or date of production, or information on changes in the place of production,\nproducer, or producer’s name."@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatement> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatement> <http://www.w3.org/2000/01/rdf-schema#label> "Note on production statement"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatement> <http://metadataregistry.org/uri/profile/RegAp/name> "noteOnProductionStatement"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnProductionStatement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/Elements/note> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatement> <http://www.w3.org/2000/01/rdf-schema#label> "Note on publication statement"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatement> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/Elements/note> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatement> <http://metadataregistry.org/uri/profile/RegAp/name> "noteOnPublicationStatement"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatement> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdvocab.info/Elements/noteOnPublicationStatementManifestation> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatement> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatement> <http://www.w3.org/2004/02/skos/core#definition> "A note providing details on place of publication, publisher, or date of publication, information on changes in the place of publication,\npublisher, or publisher’s name, or on suspension of publication."@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/noteOnPublicationStatement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/Elements> <http://rdvocab.info/Elements> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Record> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc4f9d51544e9e11680190cb8f973dc88 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Record> <http://www.w3.org/2000/01/rdf-schema#comment> "RULE:\n(∀r:Record)\n((∃!p:Performance)(∃!f:Fixation)\n(theme(r,p)∧result(r,f))\n→\nisFixationOf(f,p))"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Record> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#FixationRight> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Record> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bdb2f4b059cae4ee6afef6efe0adfe219 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Record> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B733ee6bf8583d8db7ee6679a204d8cf1 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Record> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B19064a5e68e2474632a574066ffb6822 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Record> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Record> <http://www.w3.org/2000/01/rdf-schema#label> "Record"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Record> <http://www.w3.org/2000/01/rdf-schema#comment> "Generically, a work is considered fixed when it is stored on some medium in which it can be perceived, reproduced, or otherwise communicated. For example, a song is considered fixed when it is written down on paper. The paper is the medium on which the song can be perceived, reproduced and communicated. \nIt is not necessary that the medium be such that a human can perceive the work, as long as the work can be perceived by a machine. Thus, the song is also fixed the moment the author records it onto a cassette tape. Similarly, a computer program is fixed when stored on a computer hard drive.\nFrom the legal point of view, the fixations that are governed are those that store performances of works. The more important kinds of fixations are sound recordings and motion pictures. \nThe theme of a Record is a Performance but it is not necessarily a public performance. For instance, it can be a studio performance, which is governed by copyright because this fixation is intended for commercial exploitation."@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#origin> <http://www.w3.org/2000/01/rdf-schema#comment> "A passive determinant source.\nExample: The chapter begins on [page 20]."@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#origin> <http://www.w3.org/2000/01/rdf-schema#label> "origin"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#origin> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bba127171d9502d8855582646080ccb7d <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#origin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/2000/01/rdf-schema#comment> "このプロジェクトのダウンロードできるウェブページ"@ja <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/2000/01/rdf-schema#label> "Seite zum Herunterladen"@de <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/2000/01/rdf-schema#label> "página de descarga"@es <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/2000/01/rdf-schema#label> "ダウンロードページ"@ja <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://usefulinc.com/ns/doap#> <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/2000/01/rdf-schema#comment> "Webová stránka, na které lze stáhnout projektový software."@cs <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/2000/01/rdf-schema#domain> <http://usefulinc.com/ns/doap#Project> <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/2000/01/rdf-schema#comment> "Web-Seite von der die Projekt-Software heruntergeladen werden kann."@de <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/2000/01/rdf-schema#label> "stránka pro stažení"@cs <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/2000/01/rdf-schema#comment> "Página web de la cuál se puede bajar el software."@es <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/2000/01/rdf-schema#label> "page de téléchargement"@fr <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/2000/01/rdf-schema#label> "download page"@en <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/2000/01/rdf-schema#comment> "Web page from which the project software can be downloaded."@en <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#download-page> <http://www.w3.org/2000/01/rdf-schema#comment> "Page web à partir de laquelle on peut télécharger le programme."@fr <http://usefulinc.com/ns/doap#> .
+<http://vocab.data.gov/def/fea#Partition> <http://www.w3.org/2000/01/rdf-schema#comment> "Each reference model has an extensional  property based on partitioning. This reveals implicit semantics in each reference model.\n" <http://vocab.data.gov/def/fea> .
+<http://vocab.data.gov/def/fea#Partition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.data.gov/def/fea> <http://vocab.data.gov/def/fea> .
+<http://vocab.data.gov/def/fea#Partition> <http://www.w3.org/2000/01/rdf-schema#label> "Partition" <http://vocab.data.gov/def/fea> .
+<http://vocab.data.gov/def/fea#Partition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.data.gov/def/fea> .
+<http://vocab.data.gov/def/fea#Partition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.data.gov/def/fea> .
+<http://vocab.data.gov/def/fea#Partition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.data.gov/def/fea#FEA_ArchitectureConcept> <http://vocab.data.gov/def/fea> .
+<http://vocab.getty.edu/ontology#PhysPlaceConcept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.getty.edu/ontology> <http://vocab.getty.edu/ontology> .
+<http://vocab.getty.edu/ontology#PhysPlaceConcept> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical feature, defined by its physical characteristics on planet Earth, including mountains, rivers, and oceans. Used in TGN only" <http://vocab.getty.edu/ontology> .
+<http://vocab.getty.edu/ontology#PhysPlaceConcept> <http://www.w3.org/2004/02/skos/core#example> "Amazon River (TGN)" <http://vocab.getty.edu/ontology> .
+<http://vocab.getty.edu/ontology#PhysPlaceConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> <http://vocab.getty.edu/ontology> .
+<http://vocab.getty.edu/ontology#PhysPlaceConcept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.getty.edu/ontology#Subject> <http://vocab.getty.edu/ontology> .
+<http://vocab.getty.edu/ontology#PhysPlaceConcept> <http://purl.org/dc/terms/description> "Physical feature, defined by its physical characteristics on planet Earth, including mountains, rivers, and oceans. Used in TGN only.\nExample: Amazon River (TGN)" <http://vocab.getty.edu/ontology> .
+<http://vocab.getty.edu/ontology#PhysPlaceConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.getty.edu/ontology> .
+<http://vocab.getty.edu/ontology#PhysPlaceConcept> <http://www.w3.org/2000/01/rdf-schema#label> "PhysPlaceConcept" <http://vocab.getty.edu/ontology> .
+<http://www.bbc.co.uk/ontologies/bbc/Platform> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the different types of platforms through which a web document can be accessed. This is needed to derive the correct web document for consumption from the appropriate platform. If there's no specification on platform suitability then the document is considered to be suitable for both."@en-gb <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/Platform> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/bbc> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/Platform> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/Platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Platform"@en-gb <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#CoverageRestrictions> <http://www.w3.org/2000/01/rdf-schema#label> "Coverage restrictions"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#CoverageRestrictions> <http://www.w3.org/2000/01/rdf-schema#comment> "To provide information on possible restrictions\n            regarding the temporal and spatial coverage for publication."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#CoverageRestrictions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#CoverageRestrictions> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Rights> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#LaserPrinter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#Printer> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#LaserPrinter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#LaserPrinter> <http://www.w3.org/2000/01/rdf-schema#label> "Laserdrucker"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#LaserPrinter> <http://www.w3.org/2000/01/rdf-schema#label> "Laser printer"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#LaserPrinter> <http://www.w3.org/2000/01/rdf-schema#comment> "A laser printer is a common type of computer printer that rapidly produces high quality text and graphics on plain paper.\n\n(This description is partly based on or reuses content from the Wikipedia article \"Laser printer\" (http://en.wikipedia.org/wiki/Laser_printer) and is licensed under the GNU Free Documentation License (http://www.gnu.org/copyleft/fdl.html).)"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#LaserPrinter> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "Printer"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#LaserPrinter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#has35mmCameraLensEquivalentRange> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#has35mmCameraLensEquivalentRange> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines an optical lens or assembly of lenses used in conjunction with a camera body and mechanism to make images of objects either on photographic film or on other media capable of storing an image chemically or electronically."@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#has35mmCameraLensEquivalentRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#has35mmCameraLensEquivalentRange> <http://www.w3.org/2000/01/rdf-schema#label> "35mm Kameraobjektiv"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#has35mmCameraLensEquivalentRange> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#has35mmCameraLensEquivalentRange> <http://www.w3.org/2000/01/rdf-schema#label> "35mm camera lens equivalent range"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#has35mmCameraLensEquivalentRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#has35mmCameraLensEquivalentRange> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "Camcorder"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#WAV> <http://www.w3.org/2000/01/rdf-schema#label> "WAV"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#WAV> <http://www.w3.org/2000/01/rdf-schema#label> "WAV"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#WAV> <http://www.w3.org/2000/01/rdf-schema#comment> "WAV (or WAVE), short for Waveform audio format, is a Microsoft and IBM audio file format standard for storing an audio bitstream on PCs.\n\n(This description is partly based on or reuses content from the Wikipedia article \"WAV\" (http://en.wikipedia.org/wiki/WAV) and is licensed under the GNU Free Documentation License (http://www.gnu.org/copyleft/fdl.html).)"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#WAV> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#DataFormatAudio> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#WAV> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "MP3Player, DigitalCamera, Camcorder"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PhotoPrinter> <http://www.w3.org/2000/01/rdf-schema#label> "Photo printer"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PhotoPrinter> <http://www.w3.org/2000/01/rdf-schema#comment> "A photo printer is a printer that is specifically designed to print high quality digital photos on photo paper.\n\n(This description is partly based on or reuses content from the Wikipedia article \"Photo printer\" (http://en.wikipedia.org/wiki/Photo_printer) and is licensed under the GNU Free Documentation License (http://www.gnu.org/copyleft/fdl.html).)"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PhotoPrinter> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "Printer"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PhotoPrinter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PhotoPrinter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PhotoPrinter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#Printer> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PhotoPrinter> <http://www.w3.org/2000/01/rdf-schema#label> "Fotodrucker"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#Printer> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "Printer"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#Printer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#Printer> <http://www.w3.org/2000/01/rdf-schema#label> "Drucker"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#Printer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#ProductOrService> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#Printer> <http://www.w3.org/2000/01/rdf-schema#comment> "A peripheral which produces a hard copy (permanent human-readable text and/or graphics) of documents stored in electronic form, usually on physical print media such as paper or transparencies.\n\n(This description is partly based on or reuses content from the Wikipedia article \"Printer\" (http://en.wikipedia.org/wiki/Computer_printer) and is licensed under the GNU Free Documentation License (http://www.gnu.org/copyleft/fdl.html).)"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#Printer> <http://www.w3.org/2000/01/rdf-schema#label> "Printer"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#Printer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasNumberOfPrintCartridges> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasNumberOfPrintCartridges> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValueInteger> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasNumberOfPrintCartridges> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of replaceable components of a printer that contains the ink that is spread on paper during printing."@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasNumberOfPrintCartridges> <http://www.w3.org/2000/01/rdf-schema#label> "number of print cartridges"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasNumberOfPrintCartridges> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasNumberOfPrintCartridges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasNumberOfPrintCartridges> <http://www.w3.org/2000/01/rdf-schema#label> "Anzahl von Druckerkassetten"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasNumberOfPrintCartridges> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "Printer"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/on+p.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BoneX2Bp .
+_:BoneX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoneX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/one+p.nt> .
+_:BoneX2Bp <https://w3id.org/tree#value> "one" .
+_:BoneX2Bp <https://w3id.org/tree#value> "p" .
+_:BoneX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/one+p.nt> <https://w3id.org/tree#remainingItems> "90"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BontX2Bp .
+_:BontX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BontX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ont+p.nt> .
+_:BontX2Bp <https://w3id.org/tree#value> "ont" .
+_:BontX2Bp <https://w3id.org/tree#value> "p" .
+_:BontX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ont+p.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpa .
+_:BonX2Bpa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpa <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pa.nt> .
+_:BonX2Bpa <https://w3id.org/tree#value> "on" .
+_:BonX2Bpa <https://w3id.org/tree#value> "pa" .
+_:BonX2Bpa <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pa.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpe .
+_:BonX2Bpe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pe.nt> .
+_:BonX2Bpe <https://w3id.org/tree#value> "on" .
+_:BonX2Bpe <https://w3id.org/tree#value> "pe" .
+_:BonX2Bpe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pe.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bph .
+_:BonX2Bph <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bph <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+ph.nt> .
+_:BonX2Bph <https://w3id.org/tree#value> "on" .
+_:BonX2Bph <https://w3id.org/tree#value> "ph" .
+_:BonX2Bph <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+ph.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpi .
+_:BonX2Bpi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pi.nt> .
+_:BonX2Bpi <https://w3id.org/tree#value> "on" .
+_:BonX2Bpi <https://w3id.org/tree#value> "pi" .
+_:BonX2Bpi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pi.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpl .
+_:BonX2Bpl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pl.nt> .
+_:BonX2Bpl <https://w3id.org/tree#value> "on" .
+_:BonX2Bpl <https://w3id.org/tree#value> "pl" .
+_:BonX2Bpl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pl.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpo .
+_:BonX2Bpo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+po.nt> .
+_:BonX2Bpo <https://w3id.org/tree#value> "on" .
+_:BonX2Bpo <https://w3id.org/tree#value> "po" .
+_:BonX2Bpo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+po.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpr .
+_:BonX2Bpr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pr.nt> .
+_:BonX2Bpr <https://w3id.org/tree#value> "on" .
+_:BonX2Bpr <https://w3id.org/tree#value> "pr" .
+_:BonX2Bpr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pr.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bps .
+_:BonX2Bps <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bps <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+ps.nt> .
+_:BonX2Bps <https://w3id.org/tree#value> "on" .
+_:BonX2Bps <https://w3id.org/tree#value> "ps" .
+_:BonX2Bps <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+ps.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpu .
+_:BonX2Bpu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pu.nt> .
+_:BonX2Bpu <https://w3id.org/tree#value> "on" .
+_:BonX2Bpu <https://w3id.org/tree#value> "pu" .
+_:BonX2Bpu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pu.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BaX2BonX2Bp .
+_:BaX2BonX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BonX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+on+p.nt> .
+_:BaX2BonX2Bp <https://w3id.org/tree#value> "a" .
+_:BaX2BonX2Bp <https://w3id.org/tree#value> "on" .
+_:BaX2BonX2Bp <https://w3id.org/tree#value> "p" .
+_:BaX2BonX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+on+p.nt> <https://w3id.org/tree#remainingItems> "63"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/on+p.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BoneX2Bp .
+_:BoneX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoneX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/one+p.nt> .
+_:BoneX2Bp <https://w3id.org/tree#value> "one" .
+_:BoneX2Bp <https://w3id.org/tree#value> "p" .
+_:BoneX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/one+p.nt> <https://w3id.org/tree#remainingItems> "90"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BontX2Bp .
+_:BontX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BontX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ont+p.nt> .
+_:BontX2Bp <https://w3id.org/tree#value> "ont" .
+_:BontX2Bp <https://w3id.org/tree#value> "p" .
+_:BontX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ont+p.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpa .
+_:BonX2Bpa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpa <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pa.nt> .
+_:BonX2Bpa <https://w3id.org/tree#value> "on" .
+_:BonX2Bpa <https://w3id.org/tree#value> "pa" .
+_:BonX2Bpa <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pa.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpe .
+_:BonX2Bpe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pe.nt> .
+_:BonX2Bpe <https://w3id.org/tree#value> "on" .
+_:BonX2Bpe <https://w3id.org/tree#value> "pe" .
+_:BonX2Bpe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pe.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bph .
+_:BonX2Bph <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bph <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+ph.nt> .
+_:BonX2Bph <https://w3id.org/tree#value> "on" .
+_:BonX2Bph <https://w3id.org/tree#value> "ph" .
+_:BonX2Bph <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+ph.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpi .
+_:BonX2Bpi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pi.nt> .
+_:BonX2Bpi <https://w3id.org/tree#value> "on" .
+_:BonX2Bpi <https://w3id.org/tree#value> "pi" .
+_:BonX2Bpi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pi.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpl .
+_:BonX2Bpl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pl.nt> .
+_:BonX2Bpl <https://w3id.org/tree#value> "on" .
+_:BonX2Bpl <https://w3id.org/tree#value> "pl" .
+_:BonX2Bpl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pl.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpo .
+_:BonX2Bpo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+po.nt> .
+_:BonX2Bpo <https://w3id.org/tree#value> "on" .
+_:BonX2Bpo <https://w3id.org/tree#value> "po" .
+_:BonX2Bpo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+po.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpr .
+_:BonX2Bpr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pr.nt> .
+_:BonX2Bpr <https://w3id.org/tree#value> "on" .
+_:BonX2Bpr <https://w3id.org/tree#value> "pr" .
+_:BonX2Bpr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pr.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bps .
+_:BonX2Bps <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bps <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+ps.nt> .
+_:BonX2Bps <https://w3id.org/tree#value> "on" .
+_:BonX2Bps <https://w3id.org/tree#value> "ps" .
+_:BonX2Bps <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+ps.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpu .
+_:BonX2Bpu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pu.nt> .
+_:BonX2Bpu <https://w3id.org/tree#value> "on" .
+_:BonX2Bpu <https://w3id.org/tree#value> "pu" .
+_:BonX2Bpu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pu.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BaX2BonX2Bp .
+_:BaX2BonX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BonX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+on+p.nt> .
+_:BaX2BonX2Bp <https://w3id.org/tree#value> "a" .
+_:BaX2BonX2Bp <https://w3id.org/tree#value> "on" .
+_:BaX2BonX2Bp <https://w3id.org/tree#value> "p" .
+_:BaX2BonX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+on+p.nt> <https://w3id.org/tree#remainingItems> "63"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/on+p.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BoneX2Bp .
+_:BoneX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoneX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/one+p.nt> .
+_:BoneX2Bp <https://w3id.org/tree#value> "one" .
+_:BoneX2Bp <https://w3id.org/tree#value> "p" .
+_:BoneX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/one+p.nt> <https://w3id.org/tree#remainingItems> "90"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BontX2Bp .
+_:BontX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BontX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ont+p.nt> .
+_:BontX2Bp <https://w3id.org/tree#value> "ont" .
+_:BontX2Bp <https://w3id.org/tree#value> "p" .
+_:BontX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ont+p.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpa .
+_:BonX2Bpa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpa <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pa.nt> .
+_:BonX2Bpa <https://w3id.org/tree#value> "on" .
+_:BonX2Bpa <https://w3id.org/tree#value> "pa" .
+_:BonX2Bpa <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pa.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpe .
+_:BonX2Bpe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pe.nt> .
+_:BonX2Bpe <https://w3id.org/tree#value> "on" .
+_:BonX2Bpe <https://w3id.org/tree#value> "pe" .
+_:BonX2Bpe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pe.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bph .
+_:BonX2Bph <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bph <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+ph.nt> .
+_:BonX2Bph <https://w3id.org/tree#value> "on" .
+_:BonX2Bph <https://w3id.org/tree#value> "ph" .
+_:BonX2Bph <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+ph.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpi .
+_:BonX2Bpi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pi.nt> .
+_:BonX2Bpi <https://w3id.org/tree#value> "on" .
+_:BonX2Bpi <https://w3id.org/tree#value> "pi" .
+_:BonX2Bpi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pi.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpl .
+_:BonX2Bpl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pl.nt> .
+_:BonX2Bpl <https://w3id.org/tree#value> "on" .
+_:BonX2Bpl <https://w3id.org/tree#value> "pl" .
+_:BonX2Bpl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pl.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpo .
+_:BonX2Bpo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+po.nt> .
+_:BonX2Bpo <https://w3id.org/tree#value> "on" .
+_:BonX2Bpo <https://w3id.org/tree#value> "po" .
+_:BonX2Bpo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+po.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpr .
+_:BonX2Bpr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pr.nt> .
+_:BonX2Bpr <https://w3id.org/tree#value> "on" .
+_:BonX2Bpr <https://w3id.org/tree#value> "pr" .
+_:BonX2Bpr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pr.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bps .
+_:BonX2Bps <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bps <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+ps.nt> .
+_:BonX2Bps <https://w3id.org/tree#value> "on" .
+_:BonX2Bps <https://w3id.org/tree#value> "ps" .
+_:BonX2Bps <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+ps.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BonX2Bpu .
+_:BonX2Bpu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bpu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+pu.nt> .
+_:BonX2Bpu <https://w3id.org/tree#value> "on" .
+_:BonX2Bpu <https://w3id.org/tree#value> "pu" .
+_:BonX2Bpu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+pu.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+p.nt> <https://w3id.org/tree#relation> _:BaX2BonX2Bp .
+_:BaX2BonX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BonX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+on+p.nt> .
+_:BaX2BonX2Bp <https://w3id.org/tree#value> "a" .
+_:BaX2BonX2Bp <https://w3id.org/tree#value> "on" .
+_:BaX2BonX2Bp <https://w3id.org/tree#value> "p" .
+_:BaX2BonX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+on+p.nt> <https://w3id.org/tree#remainingItems> "63"^^<http://www.w3.org/2001/XMLSchema#int> .

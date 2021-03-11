@@ -1,0 +1,76 @@
+<http://schema.org/EventRescheduled> <http://www.w3.org/2000/01/rdf-schema#label> "EventRescheduled" <http://schema.org/> .
+<http://schema.org/EventRescheduled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/EventStatusType> <http://schema.org/> .
+<http://schema.org/EventRescheduled> <http://www.w3.org/2000/01/rdf-schema#comment> "The event has been rescheduled. The event's previousStartDate should be set to the old date and the startDate should be set to the event's new date. (If the event has been rescheduled multiple times, the previousStartDate property may be repeated)." <http://schema.org/> .
+<http://schema.org/subReservation> <http://www.w3.org/2000/01/rdf-schema#comment> "The individual reservations included in the package. Typically a repeated property." <http://schema.org/> .
+<http://schema.org/subReservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/subReservation> <http://www.w3.org/2000/01/rdf-schema#label> "subReservation" <http://schema.org/> .
+<http://schema.org/subReservation> <http://schema.org/rangeIncludes> <http://schema.org/Reservation> <http://schema.org/> .
+<http://schema.org/subReservation> <http://schema.org/domainIncludes> <http://schema.org/ReservationPackage> <http://schema.org/> .
+<https://w3id.org/timebank#endsRepeatingOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#endsRepeatingOn> <http://www.w3.org/2000/01/rdf-schema#label> "ends repeating on" <https://w3id.org/timebank> .
+<https://w3id.org/timebank#endsRepeatingOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a time-interval is repeating until this time and date." <https://w3id.org/timebank> .
+<https://w3id.org/timebank#endsRepeatingOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/time#ProperInterval> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#endsRepeatingOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#endsRepeatingOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/timebank> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#endsRepeatingOn> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/timebank#isRepeatingEndpointOf> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#isRepetitionDayOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#isRepetitionDayOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#ProperInterval> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#isRepetitionDayOf> <http://www.w3.org/2000/01/rdf-schema#label> "is repetition date of" <https://w3id.org/timebank> .
+<https://w3id.org/timebank#isRepetitionDayOf> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/timebank#repeatsOn> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#isRepetitionDayOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/time#DayOfWeek> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#isRepetitionDayOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a time interval repeats on the specified weekdays." <https://w3id.org/timebank> .
+<https://w3id.org/timebank#isRepetitionDayOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/timebank> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#repeatsOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#DayOfWeek> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#repeatsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#repeatsOn> <http://www.w3.org/2000/01/rdf-schema#label> "repeats on" <https://w3id.org/timebank> .
+<https://w3id.org/timebank#repeatsOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/timebank> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#repeatsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a time interval repeats on the specified weekdays." <https://w3id.org/timebank> .
+<https://w3id.org/timebank#repeatsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/time#ProperInterval> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#isRepeatingEndpointOf> <http://www.w3.org/2000/01/rdf-schema#label> "is repeating endpoint of" <https://w3id.org/timebank> .
+<https://w3id.org/timebank#isRepeatingEndpointOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/timebank> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#isRepeatingEndpointOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a specific time and date marks the end of a repetition of a time-interval." <https://w3id.org/timebank> .
+<https://w3id.org/timebank#isRepeatingEndpointOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#ProperInterval> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#isRepeatingEndpointOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#isRepeatingEndpointOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/time#Instant> <https://w3id.org/timebank> .
+<https://w3id.org/ifc/IFC4_ADD1#REPEATER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/ifc/IFC4_ADD1#IfcCommunicationsApplianceTypeEnum> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#REPEATER> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#REPEATER> <http://www.w3.org/2000/01/rdf-schema#label> "REPEATER" <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#repeatT_IfcSurfaceTexture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#repeatT_IfcSurfaceTexture> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ifc/IFC4_ADD1#IfcSurfaceTexture> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#repeatT_IfcSurfaceTexture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#repeatT_IfcSurfaceTexture> <http://www.w3.org/2000/01/rdf-schema#label> "RepeatT" <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#repeatT_IfcSurfaceTexture> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ifc/IFC4_ADD1#IfcBoolean> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#repeatS_IfcSurfaceTexture> <http://www.w3.org/2000/01/rdf-schema#label> "RepeatS" <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#repeatS_IfcSurfaceTexture> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ifc/IFC4_ADD1#IfcBoolean> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#repeatS_IfcSurfaceTexture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#repeatS_IfcSurfaceTexture> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ifc/IFC4_ADD1#IfcSurfaceTexture> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#repeatS_IfcSurfaceTexture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://www.w3.org/2019/wot/td#isIdempotent> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the action is idempotent (=true) or not. Informs whether the action can be called repeatedly with the same result, if present, based on the same input."@en <https://www.w3.org/2019/wot/td> .
+<https://www.w3.org/2019/wot/td#isIdempotent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://www.w3.org/2019/wot/td#> <https://www.w3.org/2019/wot/td> .
+<https://www.w3.org/2019/wot/td#isIdempotent> <http://schema.org/domainIncludes> <https://www.w3.org/2019/wot/td#ActionAffordance> <https://www.w3.org/2019/wot/td> .
+<https://www.w3.org/2019/wot/td#isIdempotent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://www.w3.org/2019/wot/td> .
+<https://www.w3.org/2019/wot/td#isIdempotent> <http://schema.org/rangeIncludes> <http://schema.org/Boolean> <https://www.w3.org/2019/wot/td> .
+<https://www.w3.org/2019/wot/td#isIdempotent> <http://www.w3.org/2000/01/rdf-schema#label> "isIdempotent" <https://www.w3.org/2019/wot/td> .
+<https://w3id.org/nno/ontology#RepeatVector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/nno/ontology> .
+<https://w3id.org/nno/ontology#RepeatVector> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/nno/ontology#CoreLayer> <https://w3id.org/nno/ontology> .
+<https://w3id.org/nno/ontology#RepeatVector> <http://www.w3.org/2000/01/rdf-schema#label> "Repeat Vector Layer" <https://w3id.org/nno/ontology> .
+<https://w3id.org/nno/ontology#RepeatVector> <http://www.w3.org/2000/01/rdf-schema#comment> "Repeats the input n times." <https://w3id.org/nno/ontology> .
+<https://w3id.org/dot#Inspection> <http://www.w3.org/2000/01/rdf-schema#comment> "Careful examination or scrutiny in which an existing construction or a part of it is inspected and detected damages are recorded.\r\nShould be repeated at regular time intervals."@en <https://w3id.org/dot#> .
+<https://w3id.org/dot#Inspection> <http://www.w3.org/2000/01/rdf-schema#label> "Inspection"@en <https://w3id.org/dot#> .
+<https://w3id.org/dot#Inspection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/dot#> .
+<https://w3id.org/dot#Inspection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/dot#> <https://w3id.org/dot#> .
+<https://w3id.org/idsa/code/CONTINUOUS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cld/freq/> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/code/CONTINUOUS> <http://purl.org/dc/dcam/memberOf> <http://purl.org/cld/terms/Frequency> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/code/CONTINUOUS> <http://www.w3.org/2000/01/rdf-schema#label> "Continuous"@en <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/code/CONTINUOUS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/code/CONTINUOUS> <http://www.w3.org/2004/02/skos/core#prefLabel> "Continuous"@en <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/code/CONTINUOUS> <http://www.w3.org/2000/01/rdf-schema#comment> "The event repeats without interruption."@en <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/code/CONTINUOUS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/idsa/core/Frequency> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/code/CONTINUOUS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/code/CONTINUOUS> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.loc.gov/marc/holdings/hd853855.html> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/code/CONTINUOUS> <http://www.w3.org/2004/02/skos/core#inScheme> <http://purl.org/cld/terms/Frequency> <https://w3id.org/idsa/core> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Frequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Frequency> <http://www.w3.org/2000/01/rdf-schema#comment> "Frequency is the number of occurrences of a repeating event per unit time."@en <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Frequency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/vocab/m3-lite#> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Frequency> <http://www.w3.org/2000/01/rdf-schema#label> "Frequency"@en <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Frequency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .

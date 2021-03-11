@@ -1,0 +1,506 @@
+<http://purl.org/goodrelations/v1#hasMakeAndModel> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#ProductOrServiceModel> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMakeAndModel> <http://www.w3.org/2000/01/rdf-schema#label> "has make and model (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMakeAndModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMakeAndModel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMakeAndModel> <http://www.w3.org/2000/01/rdf-schema#domain> _:B4a2383c1f7532c764749a478c8f1d416 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMakeAndModel> <http://www.w3.org/2000/01/rdf-schema#comment> "This states that an actual product instance (gr:Individual) or a placeholder instance for multiple, unidentified such instances (gr:SomeItems) is one occurence of a particular gr:ProductOrServiceModel.\n\nExample: myFordT hasMakeAndModel FordT."@en <http://purl.org/goodrelations/v1> .
+<http://www.w3.org/2004/02/skos/core#note> <http://www.w3.org/2000/01/rdf-schema#comment> "ISO refersTo is not mapped.\n\nWork is ongoing in the RDF group to type the content explicitly as HTML or XML in RDF1.1 (http://dvcs.w3.org/hg/rdf/raw-file/default/rdf-concepts/index.html#section-html). This would allow embedding relevant hyperlinks in notes.\n\nMay be an embedded and tagged link in the note value (e.g., as done for EuroVoc).\n\n\nIn ISO 25964, some types of Note are associated with concepts, others with terms. In SKOS, all documentation notes are associated with concepts.\n\nIn basic SKOS, notes are represented using simple annotation properties, which type captures the note type. However the SKOS annotation properties can also be used with structured representation of notes as fully-fledged resources. See http://www.w3.org/TR/skos-primer/#secdocumentation and http://www.w3.org/TR/skos-primer/#secadvanceddocumentation for examples of both approaches.\n\nWithin a thesaurus the application of notes to concept and term is more restrictive than in SKOS.\n\nA note may have some structure or formatting. In general, this can be modelled using rdf:value (to represent lexicalValue)\n\nThe language should be held in rdf:value. If this is an XMLLiteral, the language shall also be made available using dc:language (or dct:language).\n\nNote: Work is ongoing in the RDF group to type the content explicitly as HTML or XML In RDF1.1 (http://dvcs.w3.org/hg/rdf/raw-file/default/rdf-concepts/index.html#section-html). This would allow embedding relevant hyperlinks in notes.\n\nAdditional attributes can be added to the note structure:\n- dct:created\n- dct:modified"@en <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://purl.org/dc/terms/contributor> _:B864196c54eeac9672421ec458b1148f5 <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://purl.org/dc/elements/1.1/date> "2015-03-17"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://purl.org/vocommons/voaf#toDoList> "Todo: \nNot modelled but requiring further extension:\n\n- CustomTermAttribute : \n  Best practice would be to define custom RDF data-type properties taking plain literal values. The property name depends on the customAttributeType.\n\n- CustomConceptAttribute :\n  Best practice would be to define custom RDF data-type properties taking plain literal values. The property name depends on the customAttributeType.\n\n- refersTo (reference from within a note to a concept or label/term:\n   May be an embedded and tagged link in the note value (e.g., as done for EuroVoc http://eurovoc.europa.eu/).\n\n- CustomNote :\n  Depending noteType a new custom property should be defined as a sub-property of skos:note (consider applicability of: skos:changeNote and skos:example)\n \n - BTG/NTG - BTP/NTP - BTI/NTI :\n   Currently these are only defined as direct (one-step) sub-properties of skos:broader / skos:narrower.\n\nSome constraints currently expressed only in natural language (in rdfs:comment) may be formally expressed as OWL(2) axioms.\n\nWe have postponed the implementation of the iso-thes properties mentioned in the VersionHistory section of the mapping documentation." <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://purl.org/dc/terms/modified> "2015-03-17"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.niso.org/schemas/iso25964/correspondencesSKOS/> <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2008/05/skos-xl> <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://purl.org/dc/terms/creator> _:B16df6e25095a20ebbb4e1242eb220f30 <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://purl.org/dc/terms/created> "2013-10-04"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://purl.org/dc/terms/contributor> _:B1e93be399d92ba8d18ed2c904151594b <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://purl.org/dc/terms/contributor> _:B907071ed552058e9e2b31085606eff0e <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://purl.org/dc/terms/contributor> _:B6b2ce46d968dcddac62b1a99d6f6fc22 <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://purl.org/dc/terms/contributor> _:Bca61c989251bd1f932b67af6bd8195bd <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://purl.org/dc/terms/creator> _:B7c5cd16e329d7237a43449b1524d085e <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://www.w3.org/2000/01/rdf-schema#comment> "These notes apply to the published mapping between the ISO 25964 data model and the SKOS schema (http://www.niso.org/schemas/iso25964/correspondencesSKOS/).\nRemarks can be exchanged using: 25964info@list.niso.org \nSubscription info and archive is on: http://www.niso.org/lists/25964info/ \nGeneral information about ISO 25964: http://www.niso.org/schemas/iso25964/\n\nThe annotation http://www.w3.org/2003/06/sw-vocab-status/ns#term_status indicates \"proposed\" properties that are not part of the mapping documentation."@en <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/iso25964/skos-thes> <http://purl.org/dc/terms/contributor> _:B16412a13b294bfb99e171d20dcf2b5bc <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/linguistics/gold/SecondLanguageOnlyVariety> <http://www.w3.org/2000/01/rdf-schema#label> "SecondLanguageOnlyVariety"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SecondLanguageOnlyVariety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SecondLanguageOnlyVariety> <http://www.w3.org/2000/01/rdf-schema#comment> "SecondLanguageOnlyVariant is a language variant that has no mother tongue speakers.  It is only spoken as a a second language. One example would be the case of Callawalla (caw), which is only learned in adolescence.  [Grimes 1992: 16]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SecondLanguageOnlyVariety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/HumanLanguageVariety> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SecondLanguageOnlyVariety> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/BoundMorpheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/BoundMorpheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A bound morpheme (or bound form) is one which cannot occur on its own as a separate word, e.g. various affixes de-, -tion, -ize. [Crystal 2003: 56]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/BoundMorpheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Morpheme> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/BoundMorpheme> <http://www.w3.org/2000/01/rdf-schema#label> "BoundMorpheme"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/BoundMorpheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SemanticAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/FeatureAssignmentSystem> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SemanticAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "For natural language understanding, the process of fine-grain semantic role assignment is one of the prominent steps, which provides semantic relations between constituents. The sense and sense relations between constituents provide the core meaning of a sentence. Abstract semantic roles include thematic roles, such as agent, theme, and instrument, and secondary roles such as location, time, and manner. [Chen and You 2004: 1]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SemanticAssignmentSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SemanticAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#label> "SemanticAssignmentSystem"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SemanticAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Adjectival> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Adjectival> <http://www.w3.org/2000/01/rdf-schema#label> "Adjectival"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Adjectival> <http://www.w3.org/2000/01/rdf-schema#comment> "An adjectival, or 'adjective', is a part of speech whose members modify nouns. An adjectival specifies the attributes of a noun referent. Note: this is one case among many. Adjectivals are a class of modifiers. An adjectival may be inflected as comparitive or superlative [Crystal 1997: 8; Payne 1997: 63]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Adjectival> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Adjectival> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Predicator> <http://purl.org/linguistics/gold> .
+<http://purl.org/muto/core#PrivateTagging> <http://www.w3.org/2000/01/rdf-schema#comment> "A private tagging is a tagging that is only visible to its creator (unless the creator has not granted access to others via muto:grantAccess). Every tagging that is not an instance of muto:PrivateTagging is public by default."@en <http://purl.org/muto/core> .
+<http://purl.org/muto/core#PrivateTagging> <http://www.w3.org/2000/01/rdf-schema#label> "Private Tagging"@en <http://purl.org/muto/core> .
+<http://purl.org/muto/core#PrivateTagging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/muto/core> .
+<http://purl.org/muto/core#PrivateTagging> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/muto/core#Tagging> <http://purl.org/muto/core> .
+<http://purl.org/muto/core#PrivateTagging> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/muto/core#> <http://purl.org/muto/core> .
+<http://purl.org/net/opmv/ns#withRespectOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/net/opmv/ns> <http://purl.org/net/opmv/ns#> .
+<http://purl.org/net/opmv/ns#withRespectOf> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    withRespectOf is an object property to associate a time instant at which an artifact was used or generated with the process that used or generated that artifact. At a very fine-grained distinction, the time when an artifact was used or generated might not be exactly the same as the starting or ending time of the process in which the artifact was involved. The related properties <a xmlns=\"http://www.w3.org/1999/xhtml\" href=\"#wasUsedAt\" xml:lang=\"en\">opmv:wasUsedAt</a> and <a xmlns=\"http://www.w3.org/1999/xhtml\" href=\"#wasGeneratedAt\" xml:lang=\"en\">opmv:wasGeneratedAt</a> can be used as shortcuts to express time-related information about an artifact. The property  <a xmlns=\"http://www.w3.org/1999/xhtml\" href=\"#wasUsedAt\" xml:lang=\"en\">opmv:wasUsedAt</a> is only used when users want to express precisely in which process an artifact was used or generated. It can be omitted in most cases."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> <http://purl.org/net/opmv/ns#> .
+<http://purl.org/net/opmv/ns#withRespectOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> <http://purl.org/net/opmv/ns#> .
+<http://purl.org/net/opmv/ns#withRespectOf> <http://www.w3.org/2000/01/rdf-schema#label> "withRespectOf"@en <http://purl.org/net/opmv/ns#> .
+<http://purl.org/net/opmv/ns#withRespectOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/opmv/ns#Artifact> <http://purl.org/net/opmv/ns#> .
+<http://purl.org/net/opmv/ns#withRespectOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/net/opmv/ns#> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/mo/Release> <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/2000/01/rdf-schema#comment> "The Global Release Identifier (GRid) is a system for uniquely identifying Releases of music over electronic networks (that is, online stores where you can buy music as digital files). As that it can be seen as the equivalent of the BarCode (or more correctly the GTIN) as found on physical releases of music. Like the ISRC (a code for identifying single recordings as found on releases) it was developed by the IFPI but it does not appear to be a standard of the ISO." <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/mo/> <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/2000/01/rdf-schema#label> "GRid" <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/mo/uuid> <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/grid> <http://purl.org/ontology/mo/level> "1" <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/Instrument> <http://purl.org/ontology/mo/level> "2" <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/Instrument> <http://www.w3.org/2000/01/rdf-schema#label> "Instrument" <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/Instrument> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/Instrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/Instrument> <http://www.w3.org/2000/01/rdf-schema#comment> "\n        Any of various devices or contrivances that can be used to produce musical tones or sound.\n        \n        Any taxonomy can be used to subsume this concept. The default one is one extracted by Ivan Herman\n        from the Musicbrainz instrument taxonomy, conforming to SKOS. This concept holds a seeAlso link \n        towards this taxonomy.\n    " <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/Instrument> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/ontology/mo/mit#> <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/Instrument> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/mo/> <http://purl.org/ontology/mo/> .
+<http://www.w3.org/ns/locn#postName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/locn#Address> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#postName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#postName> <http://www.w3.org/2000/01/rdf-schema#label> "post name"@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#postName> <http://purl.org/dc/terms/identifier> "locn:postName" <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#postName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/locn#> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#postName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#postName> <http://www.w3.org/2000/01/rdf-schema#comment> "The key postal division of the address, usually the city. (INSPIRE's definition is \"One or more names created and maintained for postal purposes to identify a subdivision of addresses and postal delivery points.\") The domain of locn:postName is locn:Address."@en <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/saws/ontology#isSourceFor> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual material (manuscripts, collections etc) is one of the source documents on which an edition is based. One <relation> per each textual material)"@en <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isSourceFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isSourceFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/saws/ontology#Edition> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isSourceFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://erlangen-crm.org/current/E33_Linguistic_Object> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isSourceFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/saws/ontology#isRelatedTo> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isSourceFor> <http://www.w3.org/2000/01/rdf-schema#label> "is source for"@en <http://purl.org/saws/ontology> .
+<http://purl.org/spar/pso/embargoed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pso/PublicationStatus> <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/embargoed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/embargoed> <http://www.w3.org/2000/01/rdf-schema#label> "embargoed"@en <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/embargoed> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of a work that is subjected to an embargo, which means that the work cannot be published, or in the case of a press release that it cannot be reported on, until a particular date known as the embargo date.  For open-access journal articles, an embargoed article is one in which availability of the open-access version of the article is delayed by the publisher for a substantial embargo period, typically of six or twelve months, after subscription-access availability of the published work.  \n\n"@en <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/closed-access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pso/PublicationStatus> <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/closed-access> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of a work (typically a private or secret paper or a confidential dataset) that is typically held unpublished in a 'dark' archive whose existence is unknown by the wider world, and that is only available to the owner or copyright holder of the asset."@en <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/closed-access> <http://www.w3.org/2000/01/rdf-schema#label> "closed access"@en <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/closed-access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/pso> .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/extended#AutonomousExpression> <http://purl.org/vocab/frbr/extended> .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> <http://purl.org/vocab/frbr/extended> .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/vocab/frbr/extended> .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Expression> <http://purl.org/vocab/frbr/extended> .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bd1e93f0a5b97597d3d462fcca6f36c9c <http://purl.org/vocab/frbr/extended> .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "A referential expression is one which has little meaning when not studied in conjunction with the expression it refers to."@en <http://purl.org/vocab/frbr/extended> .
+<http://purl.org/vocab/frbr/extended#ReferentialExpression> <http://www.w3.org/2000/01/rdf-schema#label> "referential expression"@en <http://purl.org/vocab/frbr/extended> .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/frbr/extended#> <http://purl.org/vocab/frbr/extended> .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/vocab/frbr/extended> .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/2002/07/owl#equivalentClass> _:B2fd3ce3e16b7c99888d1af33f5c43c31 <http://purl.org/vocab/frbr/extended> .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/vocab/frbr/extended#AutonomousWork> <http://purl.org/vocab/frbr/extended> .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> <http://purl.org/vocab/frbr/extended> .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/2000/01/rdf-schema#comment> "A referential work is one which has little meaning when not studied in conjunction with the work it refers to."@en <http://purl.org/vocab/frbr/extended> .
+<http://purl.org/vocab/frbr/extended#ReferentialWork> <http://www.w3.org/2000/01/rdf-schema#label> "referential work"@en <http://purl.org/vocab/frbr/extended> .
+<http://purl.org/vso/ns#Right> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vso/ns#SteeringPositionValue> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#Right> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vso/ns> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#Right> <http://www.w3.org/2000/01/rdf-schema#label> "Right Hand Drive (vso:SteeringPositionValue)"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#Right> <http://www.w3.org/2000/01/rdf-schema#comment> "The steering position is on the right side of the vehicle (viewed from the main direction of driving). For cars this means that you drive on the left side of the road."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#Left> <http://www.w3.org/2000/01/rdf-schema#label> "Left Hand Drive (vso:SteeringPositionValue)"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#Left> <http://www.w3.org/2000/01/rdf-schema#comment> "The steering position is on the left side of the vehicle (viewed from the main direction of driving). For cars this means that you drive on the right side of the road."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#Left> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vso/ns#SteeringPositionValue> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#Left> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vso/ns> <http://purl.org/vso/ns> .
+<http://rdaregistry.info/Elements/a/P50072> <http://metadataregistry.org/uri/profile/RegAp/name> "onScreenPresenterOf"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50072> <http://www.w3.org/2004/02/skos/core#scopeNote> "An on-screen presenter may appear in nonfiction moving image materials or in introductions to fiction moving image materials."@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50072> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60018> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50072> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10002> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50072> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/a/onScreenPresenterOf.en> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50072> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdaregistry.info/Elements/c/C10006> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50072> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50072> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdaregistry.info/Elements/e/P20013> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50072> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/a/P50147> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50072> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50072> <http://www.w3.org/2000/01/rdf-schema#label> "is on-screen presenter of"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50072> <http://www.w3.org/2004/02/skos/core#definition> "Relates a performer contributing to an expression of a work by appearing on screen to provide contextual or background information to the expression."@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50072> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/a/> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50261> <http://metadataregistry.org/uri/profile/RegAp/name> "onscreenParticipantOf"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50261> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/a/P50161> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50261> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60825> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50261> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/a/onScreenParticipantOf.en> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50261> <http://www.w3.org/2000/01/rdf-schema#label> "is on-screen participant of"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50261> <http://www.w3.org/2004/02/skos/core#definition> "Relates a person, family, or corporate body contributing to an expression of a nonfiction moving image work by taking an active role as a participant to the expression."@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50261> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdaregistry.info/Elements/e/P20279> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50261> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10002> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50261> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdaregistry.info/Elements/c/C10006> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50261> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50261> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50261> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/a/> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/i/P40035> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60257> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40035> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdaregistry.info/Elements/i/P40035> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40035> <http://www.w3.org/2000/01/rdf-schema#label> "is on disc with (item)"@en <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40035> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40035> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdaregistry.info/Elements/c/C10003> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40035> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/i/> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40035> <http://www.w3.org/2004/02/skos/core#definition> "Relates an item to an item that is contained on the same disc with the item being described."@en <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40035> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40035> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/i/P40029> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40035> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/i/onDiscWithItem.en> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40035> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10003> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40035> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "on disc with (item)"@en <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40035> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "An item that is contained on the same disc with the item being described."@en <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40035> <http://metadataregistry.org/uri/profile/RegAp/name> "onDiscWithItem"@en <http://rdaregistry.info/Elements/i> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/GalacticCylindricalPolarAngleCoordinate> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/degree> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/GalacticCylindricalPolarAngleCoordinate> <http://www.w3.org/2000/01/rdf-schema#label> "galactic cylindrical polar angle coordinate"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/GalacticCylindricalPolarAngleCoordinate> <http://www.w3.org/2000/01/rdf-schema#comment> "The angle from the Galactic centre between the perpendicular projection of the Sun on the Galactic plane and the projection of the object. This is one of the three Galactic Cylindrical Polar Coordinates."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/GalacticCylindricalPolarAngleCoordinate> <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "φ" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/GalacticCylindricalPolarAngleCoordinate> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/radian> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/GalacticCylindricalPolarAngleCoordinate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontology-of-units-of-measure.org/resource/om-2/Angle> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/GalacticCylindricalPolarAngleCoordinate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://rdaregistry.info/Elements/m/P30036> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30036> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdaregistry.info/Elements/m/P30036> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30036> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A manifestation that is issued on the same disc with the manifestation being described."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30036> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a manifestation that is issued on the same disc with the manifestation being described."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30036> <http://www.w3.org/2000/01/rdf-schema#label> "is on disc with (manifestation)"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30036> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/m/P30035> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30036> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "on disc with (manifestation)"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30036> <http://metadataregistry.org/uri/profile/RegAp/name> "onDiscWithManifestation"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30036> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60257> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30036> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/onDiscWithManifestation.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30036> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30036> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30036> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/u/P60825> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdaregistry.info/Elements/u/P60824> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60825> <http://www.w3.org/2004/02/skos/core#definition> "Relates an agent contributing to a nonfiction moving image resource by taking an active role as a participant to the resource."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60825> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60825> <http://metadataregistry.org/uri/profile/RegAp/name> "onScreenParticipantOf"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60825> <http://www.w3.org/2000/01/rdf-schema#label> "is on-screen participant of"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60825> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/onScreenParticipantOf.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60825> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/u/P60626> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60825> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50261> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60825> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60825> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60018> <http://metadataregistry.org/uri/profile/RegAp/name> "onScreenPresenterOf"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60018> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50072> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60018> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdaregistry.info/Elements/u/P60143> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60018> <http://www.w3.org/2004/02/skos/core#definition> "Relates a performer contributing to a resource by appearing on screen to provide contextual or background information. an on-screen presenter may appear in nonfiction moving image materials or in introductions to fiction moving image materials to the resource."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60018> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/u/P60615> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60018> <http://www.w3.org/2000/01/rdf-schema#label> "is on-screen presenter of"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60018> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60018> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/onScreenPresenterOf.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60257> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/m/P30036> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60257> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/i/P40035> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60257> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/onDiscWith.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60257> <http://metadataregistry.org/uri/profile/RegAp/name> "onDiscWith"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60257> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60257> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdaregistry.info/Elements/u/P60257> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60257> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60257> <http://www.w3.org/2000/01/rdf-schema#label> "is on disc with"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60257> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/u/P60256> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60257> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60257> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a resource that is issued on the same disc with the resource being described."@en <http://rdaregistry.info/Elements/u> .
+<http://rdfs.co/bevon/PaleAle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.co/bevon/Ale> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/PaleAle> <http://www.w3.org/2004/02/skos/core#prefLabel> "페일 에일"@ko <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/PaleAle> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    It is one of the world's major beer styles.\n    "@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/PaleAle> <http://purl.org/dc/terms/modified> "2014-03-01+09:00"^^<http://www.w3.org/2001/XMLSchema#date> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/PaleAle> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/PaleAle> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/Pale_ale> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/PaleAle> <http://purl.org/dc/terms/issued> "2013-07-04+09:00"^^<http://www.w3.org/2001/XMLSchema#date> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/PaleAle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.productontology.org/id/Pale_ale> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/PaleAle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/PaleAle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.co/bevon/> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/PaleAle> <http://www.w3.org/2004/02/skos/core#prefLabel> "Pale Ale"@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/PaleAle> <http://www.w3.org/2004/02/skos/core#definition> "\n    Pale ale is a beer made by warm fermentation using predominantly pale malt.\n    "@en <http://rdfs.co/bevon/> .
+<http://reference.data.gov.uk/def/organogram/salaryCostOfReports> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://reference.data.gov.uk/def/organogram/> <http://reference.data.gov.uk/def/organogram> .
+<http://reference.data.gov.uk/def/organogram/salaryCostOfReports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> <http://reference.data.gov.uk/def/organogram> .
+<http://reference.data.gov.uk/def/organogram/salaryCostOfReports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://reference.data.gov.uk/def/organogram> .
+<http://reference.data.gov.uk/def/organogram/salaryCostOfReports> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/cube#Observation> <http://reference.data.gov.uk/def/organogram> .
+<http://reference.data.gov.uk/def/organogram/salaryCostOfReports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://reference.data.gov.uk/def/organogram> .
+<http://reference.data.gov.uk/def/organogram/salaryCostOfReports> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://reference.data.gov.uk/def/organogram> .
+<http://reference.data.gov.uk/def/organogram/salaryCostOfReports> <http://www.w3.org/2000/01/rdf-schema#label> "Salary Cost of Reports"@en <http://reference.data.gov.uk/def/organogram> .
+<http://reference.data.gov.uk/def/organogram/salaryCostOfReports> <http://www.w3.org/2000/01/rdf-schema#comment> "The total salary cost of each Deputy Director/SCS Pay Band 1 and 1A member and the non-SCS staff that report to this post. Salary costs are base pay (excluding bonuses and allowances) as at the date of the observation. To ensure that individual salaries cannot be identified from this information (for Deputy Director/SCS Pay Band 1 and 1A level and non-SCS grades), where the team is less than five people, the cost is rounded to the nearest £100,000. Where the team is one person only, the salary cost may be rounded to the nearest £100,000 or merged with the costs of another team."@en <http://reference.data.gov.uk/def/organogram> .
+<http://spinrdf.org/spin#private> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#private> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be set to true to indicate that a SPIN function or template is only meant to be used as a helper of other modules, but not directly. Among others, this allows user interfaces to filter out private modules. Furthermore, it tells potential users of this module that they should avoid using this module, as it may not be stable." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#private> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#systemProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#private> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spinrdf.org/spin#Module> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#private> <http://www.w3.org/2000/01/rdf-schema#label> "private" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#private> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://spinrdf.org/spin> .
+<http://xmlns.com/foaf/0.1/theme> <http://www.w3.org/2000/01/rdf-schema#label> "Theme"@en <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://purl.org/dc/elements/1.1/coverage> "world" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://purl.org/dc/elements/1.1/creator> "Libby Miller" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://purl.org/dc/elements/1.1/publisher> "Dan Brickley" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Group> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://purl.org/dc/elements/1.1/contributor> "http://www.w3.org/RDF/Interest/" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://purl.org/dc/elements/1.1/type> "http://www.w3.org/2002/07/owl#ObjectProperty" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://purl.org/dc/elements/1.1/contributor> "http://rdfweb.org/mailman/listinfo/rdfweb-dev" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://purl.org/dc/elements/1.1/publisher> "Libby Miller" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://purl.org/dc/elements/1.1/creator> "Dan Brickley" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://www.w3.org/2000/01/rdf-schema#comment> "\"A theme. The foaf:theme property is rarely used and under-specified. The intention was to use it to characterise interest / themes associated with projects and groups. Further work is need to meet these goals.\" NOTE: This property is only listed for comparison with goal." <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://purl.org/dc/elements/1.1/description> "\"A theme. The foaf:theme property is rarely used and under-specified. The intention was to use it to characterise interest / themes associated with projects and groups. Further work is need to meet these goals.\" NOTE: This property is only listed for comparison with goal."@EN <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://xmlns.com/foaf/0.1/theme> <http://purl.org/dc/elements/1.1/title> "Theme"@EN <http://sw-portal.deri.org/ontologies/swportal> .
+<http://www.bbc.co.uk/ontologies/sport/Round> <http://www.w3.org/2000/01/rdf-schema#comment> "A round is one or more competitions that is part of a Multi-Round Competition. Examples include the first round of Wimbledon and the final round of the FA Cup."@en-gb <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/Round> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/Round> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.bbc.co.uk/ontologies/sport/Competition> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/Round> <http://www.w3.org/2000/01/rdf-schema#label> "Round"@en-gb <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/Round> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/sport> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#SequenceRegionVocabulary> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#InteractionVocabulary> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#EntityReferenceTypeVocabulary> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.biopax.org/release/biopax-level3.owl#ControlledVocabulary> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#SequenceModificationVocabulary> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#ExperimentalFormVocabulary> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#EvidenceCodeVocabulary> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#RelationshipTypeVocabulary> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#CellVocabulary> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#CellularLocationVocabulary> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#TissueVocabulary> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#PhenotypeVocabulary> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition: The phenotype measured in the experiment e.g. growth rate or viability of a cell. This is only the type, not the value e.g. for a synthetic lethal interaction, the phenotype is viability, specified by ID: PATO:0000169, \"viability\", not the value (specified by ID: PATO:0000718, \"lethal (sensu genetics)\". A single term in a phenotype controlled vocabulary can be referenced using the xref, or the PhenoXML describing the PATO EQ model phenotype description can be stored as a string in PATO-DATA." <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#MolecularInteraction> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#GeneticInteraction> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#MolecularInteraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bdc63f544d8c69b6c32f89c8a6c70f6a7 <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#MolecularInteraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.biopax.org/release/biopax-level3.owl#Interaction> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#MolecularInteraction> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition: An interaction in which participants bind physically to each other, directly or indirectly through intermediary molecules.\n\nRationale: There is a large body of interaction data, mostly produced by high throughput systems, that does not satisfy the level of detail required to model them with ComplexAssembly class. Specifically, what is lacking is the stoichiometric information and completeness (closed-world) of participants required to model them as chemical processes. Nevertheless interaction data is extremely useful and can be captured in BioPAX using this class. \n \nUsage: This class should be used by default for representing molecular interactions such as those defined by PSI-MI level 2.5. The participants in a molecular interaction should be listed in the PARTICIPANT slot. Note that this is one of the few cases in which the PARTICPANT slot should be directly populated with instances (see comments on the PARTICPANTS property in the interaction class description). If all participants are known with exact stoichiometry, ComplexAssembly class should be used instead.\n\nExample: Two proteins observed to interact in a yeast-two-hybrid experiment where there is not enough experimental evidence to suggest that the proteins are forming a complex by themselves without any indirect involvement of other proteins. This is the case for most large-scale yeast two-hybrid screens." <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#MolecularInteraction> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#Control> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#MolecularInteraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#catalysisDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#catalysisDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "This property represents the direction of this catalysis under all\nphysiological conditions if there is one.\n\nNote that chemically a catalyst will increase the rate of the reaction\nin both directions. In biology, however, there are cases where the\nenzyme is expressed only when the controlled bidirectional conversion is\non one side of the chemical equilibrium. For example E.Coli's lac operon ensures that lacZ gene is only synthesized when there is enough lactose in the medium.  If that is the case and the controller, under biological conditions, is always catalyzing the conversion in one direction then this fact can be\ncaptured using this property. If the enzyme is active for both\ndirections, or the conversion is not bidirectional, this property should\nbe left empty." <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#catalysisDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#catalysisDirection> <http://www.w3.org/2000/01/rdf-schema#range> _:Ba2463f1dabd8ba780da4ffc5aba0f2a8 <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#catalysisDirection> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.biopax.org/release/biopax-level3.owl#Catalysis> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#UtilityClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition: This is a placeholder for classes, used for annotating the \"Entity\" and its subclasses. Mostly, these are not  an \"Entity\" themselves. Examples include references to external databases, controlled vocabularies, evidence and provenance.\n\nRationale: Utility classes are created when simple slots are insufficient to describe an aspect of an entity or to increase compatibility of this ontology with other standards.  \n\nUsage: The utilityClass class is actually a metaclass and is only present to organize the other helper classes under one class hierarchy; instances of utilityClass should never be created." <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#UtilityClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.cidoc-crm.org/cidoc-crm/P115_finishes> <http://www.w3.org/2000/01/rdf-schema#label> "заканчивает"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P115_finishes> <http://www.w3.org/2000/01/rdf-schema#label> "περατώνει"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P115_finishes> <http://www.w3.org/2000/01/rdf-schema#label> "beendet"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P115_finishes> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows the ending point for a E2 Temporal Entity to be situated by reference to the ending point of another temporal entity of longer duration.  \nThis property is only necessary if the time span is unknown (otherwise the relationship can be calculated). This property is the same as the \"finishes / finished-by\" relationships of Allen’s temporal logic (Allen, 1983, pp. 832-843).\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P115_finishes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P115_finishes> <http://www.w3.org/2000/01/rdf-schema#label> "termine"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P115_finishes> <http://www.w3.org/2000/01/rdf-schema#label> "finishes"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P115_finishes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P115_finishes> <http://www.w3.org/2000/01/rdf-schema#label> "finaliza"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P115_finishes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P118_overlaps_in_time_with> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P118_overlaps_in_time_with> <http://www.w3.org/2000/01/rdf-schema#label> "sobrepõe temporalmente"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P118_overlaps_in_time_with> <http://www.w3.org/2000/01/rdf-schema#label> "перекрывает во времени"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P118_overlaps_in_time_with> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P118_overlaps_in_time_with> <http://www.w3.org/2000/01/rdf-schema#label> "προηγείται μερικώς επικαλύπτοντας"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P118_overlaps_in_time_with> <http://www.w3.org/2000/01/rdf-schema#label> "overlaps in time with"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P118_overlaps_in_time_with> <http://www.w3.org/2000/01/rdf-schema#comment> "This property identifies an overlap between the instances of E52 Time-Span of two instances of E2 Temporal Entity. \nIt implies a temporal order between the two entities: if A overlaps in time B, then A must start before B, and B must end after A. This property is only necessary if the relevant time spans are unknown (otherwise the relationship can be calculated).\nThis property is the same as the \"overlaps / overlapped-by\" relationships of Allen’s temporal logic (Allen, 1983, pp. 832-843).\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P118_overlaps_in_time_with> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P118_overlaps_in_time_with> <http://www.w3.org/2000/01/rdf-schema#label> "est partiellement recouverte dans le temps par"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P118_overlaps_in_time_with> <http://www.w3.org/2000/01/rdf-schema#label> "überlappt zeitlich mit"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P119_meets_in_time_with> <http://www.w3.org/2000/01/rdf-schema#label> "trifft zeitlich auf"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P119_meets_in_time_with> <http://www.w3.org/2000/01/rdf-schema#label> "προηγείται"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P119_meets_in_time_with> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P119_meets_in_time_with> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P119_meets_in_time_with> <http://www.w3.org/2000/01/rdf-schema#label> "meets in time with"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P119_meets_in_time_with> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that one E2 Temporal Entity immediately follows another. \nIt implies a particular order between the two entities: if A meets in time with B, then A must precede B. This property is only necessary if the relevant time spans are unknown (otherwise the relationship can be calculated). \nThis property is the same as the \"meets / met-by\" relationships of Allen’s temporal logic (Allen, 1983, pp. 832-843).\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P119_meets_in_time_with> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P119_meets_in_time_with> <http://www.w3.org/2000/01/rdf-schema#label> "следует во времени за"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P119_meets_in_time_with> <http://www.w3.org/2000/01/rdf-schema#label> "est temporellement contiguë avec"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P119_meets_in_time_with> <http://www.w3.org/2000/01/rdf-schema#label> "é temporalmente contíguo com"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during> <http://www.w3.org/2000/01/rdf-schema#label> "a lieu pendant"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during> <http://www.w3.org/2000/01/rdf-schema#label> "fällt in"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during> <http://www.w3.org/2000/01/rdf-schema#label> "εμφανίζεται κατά τη διάρκεια"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during> <http://www.w3.org/2000/01/rdf-schema#label> "ocorre durante"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during> <http://www.w3.org/2000/01/rdf-schema#label> "occurs during"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during> <http://www.w3.org/2000/01/rdf-schema#label> "появляется во течение"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P117_occurs_during> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows the entire E52 Time-Span of an E2 Temporal Entity to be situated within the Time-Span of another temporal entity that starts before and ends after the included temporal entity.   \nThis property is only necessary if the time span is unknown (otherwise the relationship can be calculated). This property is the same as the \"during / includes\" relationships of Allen’s temporal logic (Allen, 1983, pp. 832-843).\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P120_occurs_before> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P120_occurs_before> <http://www.w3.org/2000/01/rdf-schema#label> "появляется до"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P120_occurs_before> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P120_occurs_before> <http://www.w3.org/2000/01/rdf-schema#label> "εμφανίζεται πριν"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P120_occurs_before> <http://www.w3.org/2000/01/rdf-schema#label> "a lieu avant"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P120_occurs_before> <http://www.w3.org/2000/01/rdf-schema#label> "ocorre antes"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P120_occurs_before> <http://www.w3.org/2000/01/rdf-schema#label> "occurs before"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P120_occurs_before> <http://www.w3.org/2000/01/rdf-schema#label> "kommt vor"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P120_occurs_before> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P120_occurs_before> <http://www.w3.org/2000/01/rdf-schema#comment> "This property identifies the relative chronological sequence of two temporal entities. \nIt implies that a temporal gap exists between the end of A and the start of B. This property is only necessary if the relevant time spans are unknown (otherwise the relationship can be calculated).\nThis property is the same as the \"before / after\" relationships of Allen’s temporal logic (Allen, 1983, pp. 832-843).\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P116_starts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P116_starts> <http://www.w3.org/2000/01/rdf-schema#label> "inicia"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P116_starts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P116_starts> <http://www.w3.org/2000/01/rdf-schema#label> "commence"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P116_starts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P116_starts> <http://www.w3.org/2000/01/rdf-schema#label> "starts"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P116_starts> <http://www.w3.org/2000/01/rdf-schema#label> "начинает"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P116_starts> <http://www.w3.org/2000/01/rdf-schema#label> "αρχίζει"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P116_starts> <http://www.w3.org/2000/01/rdf-schema#label> "beginnt"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P116_starts> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows the starting point for a E2 Temporal Entity to be situated by reference to the starting point of another temporal entity of longer duration.  \nThis property is only necessary if the time span is unknown (otherwise the relationship can be calculated). This property is the same as the \"starts / started-by\" relationships of Allen’s temporal logic (Allen, 1983, pp. 832-843).\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P114_is_equal_in_time_to> <http://www.w3.org/2000/01/rdf-schema#label> "é temporalmente igual a"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P114_is_equal_in_time_to> <http://www.w3.org/2000/01/rdf-schema#label> "συμπίπτει χρονικά με"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P114_is_equal_in_time_to> <http://www.w3.org/2000/01/rdf-schema#label> "равен по времени"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P114_is_equal_in_time_to> <http://www.w3.org/2000/01/rdf-schema#comment> "This symmetric property allows the instances of E2 Temporal Entity with the same E52 Time-Span to be equated. \nThis property is only necessary if the time span is unknown (otherwise the equivalence can be calculated).\nThis property is the same as the \"equal\" relationship of Allen’s temporal logic (Allen, 1983, pp. 832-843).\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P114_is_equal_in_time_to> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P114_is_equal_in_time_to> <http://www.w3.org/2000/01/rdf-schema#label> "zeitgleich zu"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P114_is_equal_in_time_to> <http://www.w3.org/2000/01/rdf-schema#label> "is equal in time to"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P114_is_equal_in_time_to> <http://www.w3.org/2000/01/rdf-schema#label> "est temporellement égale à"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P114_is_equal_in_time_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P114_is_equal_in_time_to> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PAL-I> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#SignalFormat> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PAL-I> <http://www.w3.org/2000/01/rdf-schema#label> "PAL-L"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PAL-I> <http://www.w3.org/2000/01/rdf-schema#comment> "PAL, short for Phase Alternating Line, is a colour-encoding system used in broadcast television systems in large parts of the world. This is only used in Ireland, the UK, Hongkong and Macau.\n\n(This description is partly based on or reuses content from the Wikipedia article \"PAL\" (http://en.wikipedia.org/wiki/PAL) and is licensed under the GNU Free Documentation License (http://www.gnu.org/copyleft/fdl.html).)"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PAL-I> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "TV"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PAL-I> <http://www.w3.org/2000/01/rdf-schema#label> "PAL-I"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.kanzaki.com/ns/whois#born> <http://www.w3.org/2000/01/rdf-schema#comment> "誕生日を記述する。sinceのサブプロパティ（人生の最初のステージの始まり）"@ja <http://www.kanzaki.com/ns/whois> .
+<http://www.kanzaki.com/ns/whois#born> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.kanzaki.com/ns/whois> <http://www.kanzaki.com/ns/whois> .
+<http://www.kanzaki.com/ns/whois#born> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.kanzaki.com/ns/whois> .
+<http://www.kanzaki.com/ns/whois#born> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.kanzaki.com/ns/whois#since> <http://www.kanzaki.com/ns/whois> .
+<http://www.kanzaki.com/ns/whois#born> <http://www.w3.org/2000/01/rdf-schema#label> "Born" <http://www.kanzaki.com/ns/whois> .
+<http://www.kanzaki.com/ns/whois#born> <http://www.w3.org/2000/01/rdf-schema#comment> "One's birthday. This can be used in place of 'whois:since' where the 'whois:Stage' is one's first stage." <http://www.kanzaki.com/ns/whois> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#indirectObject> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1310> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#indirectObject> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#object> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#indirectObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#indirectObject> <http://www.w3.org/2000/01/rdf-schema#comment> "An indirect object is a grammatical relation that is one means of expressing the semantic role of goal and other similar roles. It is proposed for languages in which the role is distinct from the direct object and the oblique object on the basis of multiple independent syntactic or morphological criteria, such as the following: - Having a particular case marking, commonly dative - Governing an agreement affix on the verb, such as person or number - Being distinct from oblique relations in that it may be relativized" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#indirectObject> <http://www.w3.org/2000/01/rdf-schema#label> "indirect object" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#indirectObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#indirectObject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lexinfo.net/ontology/2.0/lexinfo#IndirectObject> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "Cette propriété est indépendante du niveau de langue parlée, lue ou écrite"@fr <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "langue maternelle"@fr <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "native language"@en <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta propiedad es independiente de el nivel de fluidez o de las habilidades de lectura o escritura"@es <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "lengua materna"@es <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "moedertaal"@nl <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://purl.org/dc/terms/replaces> <https://w3id.org/vocab/lingvoj#hasNativeLanguage> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "Deze eigenschap is onafhankelijk van het niveau van spreken, lezen of schrijven"@nl <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is independent of the level of fluency, reading or writing ability"@en <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "Esta propriedade é independente do nível de fluência, de leitura ou de escrita"@pt <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "母国語"@ja <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "idioma mãe"@pt <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/vocab/lingvoj#Lingvo> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#nativeLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "このプロパティーは、流暢さ、読解力、記述能力のレベルに依存しない"@ja <https://w3id.org/vocab/lingvoj> .
+<http://www.loc.gov/mads/rdf/v1#Continent> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes a resource whose\n      label is one of seven large landmasses on Earth. These are: Asia, Africa, Europe, North\n      America, South America, Australia, and Antarctica." <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#Continent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.loc.gov/mads/rdf/v1#Geographic> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#Continent> <http://www.w3.org/2000/01/rdf-schema#label> "Continent Type"@en <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#Continent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic, relative spatial location, holding between any entities. E.g. 'the cat is on the mat', 'Omar is in Samarcanda', 'the wound is close to the femural artery'.\nFor 'absolute' locations, see SpaceRegion" <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has location"@en <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "ha localizzazione"@it <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/is+on.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+on.nt> <https://w3id.org/tree#relation> _:BiscX2Bon .
+_:BiscX2Bon <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiscX2Bon <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/isc+on.nt> .
+_:BiscX2Bon <https://w3id.org/tree#value> "isc" .
+_:BiscX2Bon <https://w3id.org/tree#value> "on" .
+_:BiscX2Bon <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/isc+on.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+on.nt> <https://w3id.org/tree#relation> _:BisiX2Bon .
+_:BisiX2Bon <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisiX2Bon <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/isi+on.nt> .
+_:BisiX2Bon <https://w3id.org/tree#value> "isi" .
+_:BisiX2Bon <https://w3id.org/tree#value> "on" .
+_:BisiX2Bon <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/isi+on.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+on.nt> <https://w3id.org/tree#relation> _:BisoX2Bon .
+_:BisoX2Bon <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisoX2Bon <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/iso+on.nt> .
+_:BisoX2Bon <https://w3id.org/tree#value> "iso" .
+_:BisoX2Bon <https://w3id.org/tree#value> "on" .
+_:BisoX2Bon <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/iso+on.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+on.nt> <https://w3id.org/tree#relation> _:BissX2Bon .
+_:BissX2Bon <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BissX2Bon <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/iss+on.nt> .
+_:BissX2Bon <https://w3id.org/tree#value> "iss" .
+_:BissX2Bon <https://w3id.org/tree#value> "on" .
+_:BissX2Bon <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/iss+on.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+on.nt> <https://w3id.org/tree#relation> _:BisX2Bone .
+_:BisX2Bone <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2Bone <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+one.nt> .
+_:BisX2Bone <https://w3id.org/tree#value> "is" .
+_:BisX2Bone <https://w3id.org/tree#value> "one" .
+_:BisX2Bone <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+one.nt> <https://w3id.org/tree#remainingItems> "53"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+on.nt> <https://w3id.org/tree#relation> _:BisX2Bong .
+_:BisX2Bong <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2Bong <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+ong.nt> .
+_:BisX2Bong <https://w3id.org/tree#value> "is" .
+_:BisX2Bong <https://w3id.org/tree#value> "ong" .
+_:BisX2Bong <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+ong.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+on.nt> <https://w3id.org/tree#relation> _:BisX2Bonl .
+_:BisX2Bonl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2Bonl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+onl.nt> .
+_:BisX2Bonl <https://w3id.org/tree#value> "is" .
+_:BisX2Bonl <https://w3id.org/tree#value> "onl" .
+_:BisX2Bonl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+onl.nt> <https://w3id.org/tree#remainingItems> "33"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+on.nt> <https://w3id.org/tree#relation> _:BisX2Bont .
+_:BisX2Bont <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2Bont <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+ont.nt> .
+_:BisX2Bont <https://w3id.org/tree#value> "is" .
+_:BisX2Bont <https://w3id.org/tree#value> "ont" .
+_:BisX2Bont <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+ont.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+on.nt> <https://w3id.org/tree#relation> _:BaX2BisX2Bon .
+_:BaX2BisX2Bon <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BisX2Bon <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+is+on.nt> .
+_:BaX2BisX2Bon <https://w3id.org/tree#value> "a" .
+_:BaX2BisX2Bon <https://w3id.org/tree#value> "is" .
+_:BaX2BisX2Bon <https://w3id.org/tree#value> "on" .
+_:BaX2BisX2Bon <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+is+on.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+on.nt> <https://w3id.org/tree#relation> _:BisX2BoX2Bon .
+_:BisX2BoX2Bon <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BoX2Bon <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+o+on.nt> .
+_:BisX2BoX2Bon <https://w3id.org/tree#value> "is" .
+_:BisX2BoX2Bon <https://w3id.org/tree#value> "o" .
+_:BisX2BoX2Bon <https://w3id.org/tree#value> "on" .
+_:BisX2BoX2Bon <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+o+on.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+on.nt> <https://w3id.org/tree#relation> _:BisX2BonX2Bp .
+_:BisX2BonX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BonX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+on+p.nt> .
+_:BisX2BonX2Bp <https://w3id.org/tree#value> "is" .
+_:BisX2BonX2Bp <https://w3id.org/tree#value> "on" .
+_:BisX2BonX2Bp <https://w3id.org/tree#value> "p" .
+_:BisX2BonX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+on+p.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+on.nt> <https://w3id.org/tree#relation> _:BisX2BonX2Bs .
+_:BisX2BonX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BonX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+on+s.nt> .
+_:BisX2BonX2Bs <https://w3id.org/tree#value> "is" .
+_:BisX2BonX2Bs <https://w3id.org/tree#value> "on" .
+_:BisX2BonX2Bs <https://w3id.org/tree#value> "s" .
+_:BisX2BonX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+on+s.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+on.nt> <https://w3id.org/tree#relation> _:BisX2BonX2Bt .
+_:BisX2BonX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BonX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+on+t.nt> .
+_:BisX2BonX2Bt <https://w3id.org/tree#value> "is" .
+_:BisX2BonX2Bt <https://w3id.org/tree#value> "on" .
+_:BisX2BonX2Bt <https://w3id.org/tree#value> "t" .
+_:BisX2BonX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+on+t.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+on.nt> <https://w3id.org/tree#relation> _:BisX2BonX2By .
+_:BisX2BonX2By <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BonX2By <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+on+y.nt> .
+_:BisX2BonX2By <https://w3id.org/tree#value> "is" .
+_:BisX2BonX2By <https://w3id.org/tree#value> "on" .
+_:BisX2BonX2By <https://w3id.org/tree#value> "y" .
+_:BisX2BonX2By <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+on+y.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

@@ -1,0 +1,114 @@
+<http://vocab.org/transit/terms/price> <http://www.w3.org/2000/01/rdf-schema#label> "Price"@en <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/price> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/transit/terms/Fare> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/price> <http://www.w3.org/2000/01/rdf-schema#comment> "The price of the fare."@en <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/price> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/transit/terms/> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/price> <http://purl.org/dc/terms/issued> "2011-03-28"^^<http://www.w3.org/2001/XMLSchema#date> <http://vocab.org/transit/terms/> .
+<http://purl.org/net/dbm/ontology#priceWithVAT> <http://www.w3.org/2000/01/rdf-schema#comment> "This property represents the price of the drug in Macedonian Denars (MKD), with VAT calculated." <http://purl.org/net/dbm/ontology#> .
+<http://purl.org/net/dbm/ontology#priceWithVAT> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://purl.org/net/dbm/ontology#> .
+<http://purl.org/net/dbm/ontology#priceWithVAT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/net/dbm/ontology#> .
+<http://purl.org/net/dbm/ontology#priceWithVAT> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/dbm/ontology#Drug> <http://purl.org/net/dbm/ontology#> .
+<http://purl.org/net/dbm/ontology#priceWithoutVAT> <http://www.w3.org/2000/01/rdf-schema#comment> "This property represents the price of the drug in Macedonian Denars (MKD), with no VAT calculated." <http://purl.org/net/dbm/ontology#> .
+<http://purl.org/net/dbm/ontology#priceWithoutVAT> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://purl.org/net/dbm/ontology#> .
+<http://purl.org/net/dbm/ontology#priceWithoutVAT> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/dbm/ontology#Drug> <http://purl.org/net/dbm/ontology#> .
+<http://purl.org/net/dbm/ontology#priceWithoutVAT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/net/dbm/ontology#> .
+<http://dati.beniculturali.it/cis/PriceSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Prezzo"@it <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/PriceSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://dati.beniculturali.it/cis/> <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/PriceSpecification> <http://purl.org/dc/elements/1.1/description> "Un prezzo fornisce informazioni sul costo di un offerta necessaria per entrare in un luogo della cultura o accedere a un evento.\n\nE' associata a una valuta (e.g., euro) e al valore della valuta (quantità, e.g., 5).\n\nIl seguente esempio in turle mostra la specifica del prezzo per l'offerta base per entrare alla Biblioteca Nazionale Centrale di Roma\n\n<pre>\n\npriceSpecification:Under18\n      a       cis:PriceSpecification ;\n      rdfs:label \"price specification under 18 \"@en , \"costo per i ragazzi sotto i 18 anni \"@it ;\n      cis:hasCurrency cis:Euro ;\n      cis:hasCurrencyValue\n              \"5\"^^xsd:float .\n\n\noffer:Biblioteca_Nazionale_Centrale_base_offer\n      a       cis:Offer ;\n      rdfs:label \"offerta base \"@it , \"base offer \"@en ;\n      cis:hasEligibleUser userType:Under18 ;\n      cis:hasPriceSpecification\n              priceSpecification:Under18 ;\n      cis:hasValidity validity:Biblioteca_nazionale_centrale_validity ;\n      cis:includes ticket:Biblioteca_nazionale_centrale_ticket_1 .\n\n\n</pre>"@it <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/PriceSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B44a69c0c2ea914e7c846dae5b778b07f <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/PriceSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "It represents the price specification of the ticket"@en <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/PriceSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Price Specification"@en <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/PriceSpecification> <http://purl.org/dc/elements/1.1/description> "A price specification provides the information about the cost of an offer for entering a Cultural Institute or Site.\n\nIt is associated to a currency (e.g., Euro) and a currency value (i.e., a quantity, e.g., 5).\n\nThe following turtle provides an example about the price specification of the base offer for entering the Biblioteca Nazionale Centrale di Roma.\n\n<pre>\n\npriceSpecification:Under18\n      a       cis:PriceSpecification ;\n      rdfs:label \"price specification under 18 \"@en , \"costo under 18 \"@it ;\n      cis:hasCurrency cis:Euro ;\n      cis:hasCurrencyValue\n              \"5\"^^xsd:float .\n\n\noffer:Biblioteca_Nazionale_Centrale_base_offer\n      a       cis:Offer ;\n      rdfs:label \"offerta base \"@it , \"base offer \"@en ;\n      cis:hasEligibleUser userType:Under18 ;\n      cis:hasPriceSpecification\n              priceSpecification:Under18 ;\n      cis:hasValidity validity:Biblioteca_nazionale_centrale_validity ;\n      cis:includes ticket:Biblioteca_nazionale_centrale_ticket_1 .\n\n\n</pre>"@en <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/PriceSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Rappresenta la specifica del prezzo del biglietto."@it <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/PriceSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/PriceSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf6f186d72a67dbebf16d4bdbc61939c9 <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/PriceSpecification> <http://www.w3.org/2002/07/owl#versionInfo> "stable"@en <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/PriceSpecification> <http://www.w3.org/2002/07/owl#versionInfo> "stabile"@it <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/PriceSpecification> <http://purl.org/dc/elements/1.1/description> <http://dati.beniculturali.it/cis/img/priceSpecification.png> <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrencyValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#label> "has currency value"@en <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://dati.beniculturali.it/cis/> <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.beniculturali.it/cis/PriceSpecification> <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrencyValue> <http://www.w3.org/2002/07/owl#versionInfo> "stabile"@it <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrencyValue> <http://www.w3.org/2002/07/owl#versionInfo> "stable" <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Property used to represent the price of the ticket."@en <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#label> "ha prezzo"@it <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Proprietà utilizzata per indicare il prezzo del biglietto."@it <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrency> <http://www.w3.org/2002/07/owl#versionInfo> "versione non definitiva"@it <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrency> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.beniculturali.it/cis/Currency> <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrency> <http://www.w3.org/2002/07/owl#versionInfo> "unstable"@en <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrency> <http://www.w3.org/2000/01/rdf-schema#comment> "Questa proprietà collega la specifica del prezzo del ticket per un evento o istituto e luogo della cultura con la classe currency"@it <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrency> <http://www.w3.org/2000/01/rdf-schema#label> "has currency"@en <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrency> <http://www.w3.org/2000/01/rdf-schema#label> "ha valuta"@it <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrency> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to connected the Price specification to Currency"@en <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.beniculturali.it/cis/PriceSpecification> <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<http://dati.beniculturali.it/cis/hasCurrency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://dati.beniculturali.it/cis/> <http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> .
+<https://w3id.org/cocoon/v1.0#forCoresMoreThan> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> <https://w3id.org/cocoon/v1.0> .
+<https://w3id.org/cocoon/v1.0#forCoresMoreThan> <http://www.w3.org/2000/01/rdf-schema#comment> "Google Cloud OS price for VM with different number of cores are different.\nThis is used to describe the price for machines with more than specified\nnumber of cores."@en <https://w3id.org/cocoon/v1.0> .
+<https://w3id.org/cocoon/v1.0#forCoresMoreThan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/cocoon/v1.0> .
+<https://saref.etsi.org/core/hasPrice> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/core/Price> <https://saref.etsi.org/core/> .
+<https://saref.etsi.org/core/hasPrice> <http://www.w3.org/2000/01/rdf-schema#label> "has price"@en <https://saref.etsi.org/core/> .
+<https://saref.etsi.org/core/hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://saref.etsi.org/core/> .
+<https://saref.etsi.org/core/hasPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship indentifying the price associated to an entity"@en <https://saref.etsi.org/core/> .
+<http://schema.org/referenceQuantity> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> <http://schema.org/> .
+<http://schema.org/referenceQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/referenceQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a replacement for unitOfMeasurement for the advanced cases where the price does not relate to a standard unit." <http://schema.org/> .
+<http://schema.org/referenceQuantity> <http://schema.org/rangeIncludes> <http://schema.org/QuantitativeValue> <http://schema.org/> .
+<http://schema.org/referenceQuantity> <http://schema.org/domainIncludes> <http://schema.org/UnitPriceSpecification> <http://schema.org/> .
+<http://schema.org/referenceQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "referenceQuantity" <http://schema.org/> .
+<http://schema.org/referenceQuantity> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsProperties> <http://schema.org/> .
+<http://schema.org/MonetaryAmount> <http://www.w3.org/2000/01/rdf-schema#comment> "A monetary value or range. This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc. It is recommended to use <a class=\"localLink\" href=\"http://schema.org/PriceSpecification\">PriceSpecification</a> Types to describe the price of an Offer, Invoice, etc." <http://schema.org/> .
+<http://schema.org/MonetaryAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/MonetaryAmount> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/StructuredValue> <http://schema.org/> .
+<http://schema.org/MonetaryAmount> <http://www.w3.org/2000/01/rdf-schema#label> "MonetaryAmount" <http://schema.org/> .
+<http://schema.org/MonetaryAmount> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#FIBO> <http://schema.org/> .
+<http://schema.org/priceValidUntil> <http://schema.org/domainIncludes> <http://schema.org/Offer> <http://schema.org/> .
+<http://schema.org/priceValidUntil> <http://www.w3.org/2000/01/rdf-schema#label> "priceValidUntil" <http://schema.org/> .
+<http://schema.org/priceValidUntil> <http://schema.org/rangeIncludes> <http://schema.org/Date> <http://schema.org/> .
+<http://schema.org/priceValidUntil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/priceValidUntil> <http://www.w3.org/2000/01/rdf-schema#comment> "The date after which the price is no longer available." <http://schema.org/> .
+<http://schema.org/maxPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/maxPrice> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> <http://schema.org/> .
+<http://schema.org/maxPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The highest price if the price is a range." <http://schema.org/> .
+<http://schema.org/maxPrice> <http://schema.org/domainIncludes> <http://schema.org/PriceSpecification> <http://schema.org/> .
+<http://schema.org/maxPrice> <http://schema.org/rangeIncludes> <http://schema.org/Number> <http://schema.org/> .
+<http://schema.org/maxPrice> <http://www.w3.org/2000/01/rdf-schema#label> "maxPrice" <http://schema.org/> .
+<http://schema.org/priceCurrency> <http://schema.org/rangeIncludes> <http://schema.org/Text> <http://schema.org/> .
+<http://schema.org/priceCurrency> <http://schema.org/domainIncludes> <http://schema.org/Ticket> <http://schema.org/> .
+<http://schema.org/priceCurrency> <http://schema.org/domainIncludes> <http://schema.org/PriceSpecification> <http://schema.org/> .
+<http://schema.org/priceCurrency> <http://schema.org/domainIncludes> <http://schema.org/Offer> <http://schema.org/> .
+<http://schema.org/priceCurrency> <http://www.w3.org/2000/01/rdf-schema#label> "priceCurrency" <http://schema.org/> .
+<http://schema.org/priceCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/priceCurrency> <http://schema.org/domainIncludes> <http://schema.org/TradeAction> <http://schema.org/> .
+<http://schema.org/priceCurrency> <http://schema.org/domainIncludes> <http://schema.org/Reservation> <http://schema.org/> .
+<http://schema.org/priceCurrency> <http://www.w3.org/2000/01/rdf-schema#comment> "The currency of the price, or a price component when attached to <a class=\"localLink\" href=\"http://schema.org/PriceSpecification\">PriceSpecification</a> and its subtypes.<br/><br/>\n\nUse standard formats: <a href=\"http://en.wikipedia.org/wiki/ISO_4217\">ISO 4217 currency format</a> e.g. \"USD\"; <a href=\"https://en.wikipedia.org/wiki/List_of_cryptocurrencies\">Ticker symbol</a> for cryptocurrencies e.g. \"BTC\"; well known names for <a href=\"https://en.wikipedia.org/wiki/Local_exchange_trading_system\">Local Exchange Tradings Systems</a> (LETS) and other currency types e.g. \"Ithaca HOUR\"." <http://schema.org/> .
+<http://schema.org/priceRange> <http://www.w3.org/2000/01/rdf-schema#comment> "The price range of the business, for example <code>$$$</code>." <http://schema.org/> .
+<http://schema.org/priceRange> <http://www.w3.org/2000/01/rdf-schema#label> "priceRange" <http://schema.org/> .
+<http://schema.org/priceRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/priceRange> <http://schema.org/rangeIncludes> <http://schema.org/Text> <http://schema.org/> .
+<http://schema.org/priceRange> <http://schema.org/domainIncludes> <http://schema.org/LocalBusiness> <http://schema.org/> .
+<http://schema.org/UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "UnitPriceSpecification" <http://schema.org/> .
+<http://schema.org/UnitPriceSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/UnitPriceSpecification> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass> <http://schema.org/> .
+<http://schema.org/UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/PriceSpecification> <http://schema.org/> .
+<http://schema.org/UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "The price asked for a given offer by the respective organization or person." <http://schema.org/> .
+<http://schema.org/minPrice> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> <http://schema.org/> .
+<http://schema.org/minPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The lowest price if the price is a range." <http://schema.org/> .
+<http://schema.org/minPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/minPrice> <http://schema.org/rangeIncludes> <http://schema.org/Number> <http://schema.org/> .
+<http://schema.org/minPrice> <http://schema.org/domainIncludes> <http://schema.org/PriceSpecification> <http://schema.org/> .
+<http://schema.org/minPrice> <http://www.w3.org/2000/01/rdf-schema#label> "minPrice" <http://schema.org/> .
+<http://schema.org/DeliveryChargeSpecification> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass> <http://schema.org/> .
+<http://schema.org/DeliveryChargeSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "The price for the delivery of an offer using a particular delivery method." <http://schema.org/> .
+<http://schema.org/DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/PriceSpecification> <http://schema.org/> .
+<http://schema.org/DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "DeliveryChargeSpecification" <http://schema.org/> .
+<http://schema.org/valueAddedTaxIncluded> <http://www.w3.org/2000/01/rdf-schema#label> "valueAddedTaxIncluded" <http://schema.org/> .
+<http://schema.org/valueAddedTaxIncluded> <http://schema.org/rangeIncludes> <http://schema.org/Boolean> <http://schema.org/> .
+<http://schema.org/valueAddedTaxIncluded> <http://schema.org/domainIncludes> <http://schema.org/PriceSpecification> <http://schema.org/> .
+<http://schema.org/valueAddedTaxIncluded> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies whether the applicable value-added tax (VAT) is included in the price specification or not." <http://schema.org/> .
+<http://schema.org/valueAddedTaxIncluded> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/valueAddedTaxIncluded> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> <http://schema.org/> .

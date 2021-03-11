@@ -1,0 +1,601 @@
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://www.w3.org/2000/01/rdf-schema#comment> "Recent changes to this namespace:\n$Log: wgs84_pos.rdf,v $\nRevision 1.22  2009/04/20 15:00:30  timbl\nRemove the time bits which have been deal with elsewhere eg in iCal.\n\nRevision 1.21  2009/04/20 12:52:47  timbl\ntry again\n\nRevision 1.20  2009/04/20 12:42:11  timbl\nAdd Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\n\nRevision 1.19  2009/04/20 12:36:31  timbl\nAdd Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\n\nRevision 1.18  2006/02/01 22:01:04  danbri\nClarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid\n\nRevision 1.17  2004/02/06 17:38:12  danbri\nFixed a bad commit screwup\n\nRevision 1.15  2003/04/19 11:24:08  danbri\nFixed the typo even more.\n\nRevision 1.14  2003/04/19 11:16:56  danbri\nfixed a typo\n\nRevision 1.13  2003/02/19 22:27:27  connolly\nrelaxed domain constraints on lat/long/alt from Point to SpatialThing\n\nRevision 1.12  2003/01/12 01:41:41  danbri\nTrying local copy of XSLT doc.\n\nRevision 1.11  2003/01/12 01:20:18  danbri\nadded a link to morten's xslt rdfs viewer.\n\nRevision 1.10  2003/01/11 18:56:49  danbri\nRemoved datatype range from lat and long properties, since they would\nhave required each occurance of the property to mention the datatype.\n\nRevision 1.9  2003/01/11 11:41:31  danbri\nAnother typo; repaired rdfs:Property to rdf:Property x4\n\nRevision 1.8  2003/01/11 11:05:02  danbri\nAdded an rdfs:range for each lat/long/alt property,\nhttp://www.w3.org/2001/XMLSchema#float\n\nRevision 1.7  2003/01/10 20:25:16  danbri\nLonger rdfs:comment for Point, trying to be Earth-centric and neutral about\ncoordinate system(s) at the same time. Feedback welcomed.\n\nRevision 1.6  2003/01/10 20:18:30  danbri\nAdded CVS log comments into the RDF/XML as an rdfs:comment property of the\nvocabulary. Note that this is not common practice (but seems both harmless\nand potentially useful).\n\n\nrevision 1.5\ndate: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5\nUpdated schema:\nAdded a dc:date, added url for more info. Changed the rdfs:label of the\nnamespace from gp to geo. Added a class Point, set as the rdfs:domain of\neach property. Added XML comment on the lat_long property suggesting that\nwe might not need it (based on #rdfig commentary from implementors).\n\nrevision 1.4\ndate: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5\nFixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in\n#rdfig for catching this error.\n\nrevision 1.3\ndate: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3\nfixed buglet in vocab, added more wgs links\n\nrevision 1.2\ndate: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4\nRemoved alt from the as-a-flat-string property, and switched from\nspace separated to comma separated.\n\nrevision 1.1\ndate: 2003/01/10 10:53:23;  author: danbri;  state: Exp;\nbasic geo vocab" <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/date> "$Date: 2009/04/20 15:00:30 $" <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/description> "A vocabulary for representing latitude, longitude and \n altitude information in the WGS84 geodetic reference datum. \n Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details." <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://www.w3.org/2000/01/rdf-schema#label> "geo" <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/title> "WGS84 Geo Positioning: an RDF vocabulary" <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://purl.org/goodrelations/v1#owns> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#owns> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that a particular person or business owns a particular product. It can be used to expose the products in one's posession in order to empower recommender systems to suggest matching offers.\n\nNote that the product must be an instance of the class gr:Individual.\n\nThis property can also be safely applied to foaf:Agent instances."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#owns> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bd84511bb7272a37672ed8ab7265fb97a <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#owns> <http://www.w3.org/2000/01/rdf-schema#label> "owns (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#owns> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#Individual> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#owns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/linguistics/gold/NominalClassifier> <http://www.w3.org/2000/01/rdf-schema#label> "NominalClassifier"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NominalClassifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NominalClassifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Classifier> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NominalClassifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A classifier used within a system of noun classes where the morphosyntactic loci are adjectives and, rarely, numerals, as modifiers. Nominal classifiers have all the properties of noun class system classifiers with differences regarding the size of the system (bigger); semantics (animacy/sex/shape/size), transparency of semantic basis (may be opaque), variability of assignment (possible), use in multiple classifier systems (possible), and interrelations with other categories (only with number). [Aikhenvald 2003: 68]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NominalClassifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/TenseProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/2000/01/rdf-schema#label> "PresentTense"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/2000/01/rdf-schema#comment> "A value of Tense Property assigned to the designated element in the clause when the meaning selected for the clause is that intended to locate the event spoken about as simultaneous with the deictic centre of the utterance. Most commonly, this tense meaning is referred to as 'present', because in absolute tense systems the deictic centre is the moment of speech. However, in relative tense systems, where the deictic centre can be moved to any point on the time line, it is more appropriate to refer to this temporal relation as 'simultaneous'.\nIt is important to note --- for all tense values, but in particular for the Present Tense --- that the 'times' which are used to locate the event, the deictic centre, and the reference point, may or may not be 'points' on the time line. Conventionally, these concepts are considered neutral with regard to whether they are points or intervals of time longer than a point. In a formal model of tense meanings they could, for example, be represented as sets (of points): in order to capture temporal distinctions, the notion of an event being 'simultaneous with the moment of speech', may be understood as (the set of) event time (points) and (the set of) speech time (points) having a non-empty intersection. Hence, this semantic model of the Present Tense value may include the interpretation of the present as 'universal' or 'generic'.\nThe simultaneous temporal relation may obtain either in 'simple' or 'perfect' contexts. Modelling of this distinction originates from [Reichenbach 1947], who suggested using a third point in time, 'reference point', to capture all possible tense distinctions. In all 'simple' temporal relations, the reference point coincides with the location of the event spoken about. 'Perfect' tense meanings are created when the reference point is separated and moved away from the event time, thus altering the viewing of the temporal location of the event even though the event's actual location with respect to the deictic centre remains the same.\nA common instance of a simultaneous temporal relationship obtaining in a 'perfect' context occurs when the reference point is moved away from the event time and located instead before the moment of speech. The event time is still simultaneous with the moment of speech, but it is viewed against a stretch of time which began at the reference point and continues up to the moment of speech --- e.g. the English I have lived here [for ten years] --- hence the interpretation that the event which began in the past extends up to the moment of speech. In some languages (e.g. English) this tense meaning is labelled as (one of the uses of the) Present Perfect, in others (e.g. Polish) this meaning may be collapsed with the 'simple' simultaneous meaning and labelled simply as Present.\nTypically, for a tense value to be labelled as Present Tense, the tense meaning has to minimally express the simultaneous temporal relationship, although it may additionally express other temporal, aspectual, or modal meanings. [Kibort 2008c: 4-5]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SimplePastTense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/TenseProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SimplePastTense> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SimplePastTense> <http://www.w3.org/2000/01/rdf-schema#label> "SimplePastTense"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SimplePastTense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SimplePastTense> <http://www.w3.org/2000/01/rdf-schema#comment> "Past tense assigns a value to the designated element in the clause when the meaning selected for the clause is that intended to locate the event spoken about as anterior to the deictic centre of the utterance. Most commonly, this tense meaning is referred to as 'past', because in absolute tense systems the deictic centre is the moment of speech. However, in relative tense systems, where the deictic centre can be moved to any point on the time line, it is more appropriate to refer to this temporal relation as 'anterior'.\n\nThe anterior temporal relation may obtain either in 'simple' or 'perfect' contexts. Modeling of this distinction originates from [Reichenbach  1947: 288], who suggested using a third point in time, 'reference point', to capture all possible tense distinctions. In all 'simple' temporal relations, the reference point coincides with the location of the event spoken about . [Kibort 2008c: 4]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Character> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Character> <http://www.w3.org/2000/01/rdf-schema#label> "Character"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Character> <http://www.w3.org/2000/01/rdf-schema#comment> "A symbol used in writing, distinguished from others by its meaning, not its specific shape; similar to grapheme. It relates to the domain of orthographies and writing. Specific to the implementation of computers and other information systems. [Lyons, et al. 2001]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Character> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Character> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Abstract> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/VegetableGender> <http://www.w3.org/2000/01/rdf-schema#comment> "Vegetable gender refers to inanimates and exists in some four-way gender systems, e.g., masculine, feminine, neuter, and vegetable as in Bininj Gun-wok [Evans 2003: 202]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/VegetableGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/VegetableGender> <http://www.w3.org/2000/01/rdf-schema#label> "VegetableGender"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/VegetableGender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/VegetableGender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/GenderProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ArabicNumeralGender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/GenderProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ArabicNumeralGender> <http://www.w3.org/2000/01/rdf-schema#comment> "A labeling convention for gender categories. Arabic numerals are often used for languages for which there is a descriptive tradition involving use of the term 'noun class' instead of 'gender', in particular in languages of the Caucasus or Bantu languages; If the 'noun classes' are involved in agreement systems, they are gender systems. Arabic numerals may also be used in instances where another label is possible. For instance, in one language the gender to which nouns with human denotation are assigned might be called 'human', whereas in another language nouns with a similar denotation may be assigned to a gender with an arbitrary Arabic numerical label such as '1'. [Kibort and Corbett 2008a]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ArabicNumeralGender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ArabicNumeralGender> <http://www.w3.org/2000/01/rdf-schema#label> "ArabicNumeralGender"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ArabicNumeralGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentPerfectTense> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentPerfectTense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/TenseProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentPerfectTense> <http://www.w3.org/2000/01/rdf-schema#label> "PresentPerfectTense"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentPerfectTense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentPerfectTense> <http://www.w3.org/2000/01/rdf-schema#comment> "A value of Tense Feature assigned to the designated element in the clause when the meaning selected for the clause is that intended to locate the event spoken about as simultaneous with the deictic centre of the utterance. Most commonly, this tense meaning is referred to as 'present', because in absolute tense systems the deictic centre is the moment of speech. However, in relative tense systems, where the deictic centre can be moved to any point on the time line, it is more appropriate to refer to this temporal relation as 'simultaneous'.\nThe simultaneous temporal relation may obtain either in 'simple' or 'perfect' contexts. Modelling of this distinction originates from [Reichenbach 1947], who suggested using a third point in time, 'reference point', to capture all possible tense distinctions. In all 'simple' temporal relations, the reference point coincides with the location of the event spoken about. 'Perfect' tense meanings are created when the reference point is separated and moved away from the event time, thus altering the viewing of the temporal location of the event even though the event's actual location with respect to the deictic centre remains the same.\nA common instance of a simultaneous temporal relationship obtaining in a 'perfect' context occurs when the reference point is moved away from the event time and located instead before the moment of speech. The event time is still simultaneous with the moment of speech, but it is viewed against a stretch of time which began at the reference point and continues up to the moment of speech --- e.g. the English I have lived here [for ten years] --- hence the interpretation that the event which began in the past extends up to the moment of speech. In some languages (e.g. English) this tense meaning is labelled as (one of the uses of the) Present Perfect, in others (e.g. Polish) this meaning may be collapsed with the 'simple' simultaneous meaning and labelled simply as Present. [Kibort 2008c: 4-5]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/OrthographicSentence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/OrthographicPhrase> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/OrthographicSentence> <http://www.w3.org/2000/01/rdf-schema#label> "OrthographicSentence"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/OrthographicSentence> <http://www.w3.org/2000/01/rdf-schema#comment> "An OrthographicSentence is a special type of orthographic phrase, usually representing a clause. In Western writing systems, an orthographic sentence is set off by white space on the left edge and some kind of puncuation, such as a period or question mark, on the right."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/OrthographicSentence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/OrthographicSentence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/LinguisticDataStructure> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#label> "FeatureAssignmentSystem"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "(The term 'assignment') was first used with respect to feature values by Corbett (1991) in his discussion of mechanisms for allotting nouns to different genders. Native speakers have the ability to ‘work out’ the gender of a noun, and models of this ability have been called ‘gender assignment systems’. So far, the concept of ‘assignment of a feature value’ has not been used outside gender. For some features, there may not be as much to say as for gender. However, using the concept of ‘assignment’ with respect to the values of all features is useful to be able to compare the features. Therefore, for this typology I have adopted the following definition: an assignment system is a set of rules that realise the value of a feature on an element. Note, however, that under this definition, a gender value is ‘assigned’ both to nouns, and to targets of agreement in gender with the noun. [Kibort 2008d: 8]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureAssignmentSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/VoiceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/VoiceProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "VoiceProperty is the class of properties that concern the grammatical encoding of the relationship between the verb and the nominals in a subject-predicate configuration. It selects a grammatically prominent syntactic constituent--subject--from the underlying semantic functions. In accusative language, the basic strategy is to select an agent as a subject [Shibatani 1988: 3]. It can be said that all voice systems mark the affectedness/nonaffectedness of sentential subjects [Klaiman 1988: 30]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/VoiceProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/MorphosyntacticProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/VoiceProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/VoiceProperty> <http://www.w3.org/2000/01/rdf-schema#label> "VoiceProperty"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#comment> "A Glyph is a symbol used in a writing system to represent some kind of linguistic unit, such as a single sound, a  phoneme or an entire word. Glyphs are concatenated in a writing system to form orthographic parts and orthographic words. Consider the printed word 'apple'. This word contains two instances of the 'p' glyph, which is a subclass of Glyph. Instances of a Glyph share a similar shape and can be called 'shapemes'. The class Glyph is not the same as Grapheme. A Grapheme is a contrastive unit within a particular writing system. The notion of a glyph is relevant across writing systems. For instance, consider the symbol 'р' used in a printed instance of a Russian word 'русский'. Now consider the symbol 'p' used in the printed instance of an English word 'pickle'. Both symbols are instances of the same Glyph. They share the same general shape, but do not have the same phonemic value."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/OrthographicPart> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#comment> "A shape that is the visual representation of a character. It is a graphic object stored within a font. Glyphs are objects that are recognizably related to particular characters and which are dependent on particular design. Glyphs may or may not correspond to characters in a one-to-one manner. For example, a single character may correspond to multiple glyphs that have complementary distributions based upon context (e.g. final and non-final sigma in Greek), or several characters may correspond to a single glyph known as a ligature. [Lyons, et al. 2001]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#label> "Glyph"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SimpleFutureTense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/TenseProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SimpleFutureTense> <http://www.w3.org/2000/01/rdf-schema#comment> "Future tense assigns a value to the designated element in the clause when the meaning selected for the clause is that intended to locate the event spoken about as posterior to the deictic centre of the utterance. Most commonly, this tense meaning is referred to as 'future', because in absolute tense systems the deictic centre is the moment of speech. However, in relative tense systems, where the deictic centre can be moved to any point on the time line, it is more appropriate to refer to this temporal relation as 'posterior'.\n\nThe posterior temporal relation may obtain either in 'simple' or 'perfect' contexts. Modeling of this distinction originates from [Reichenbach 1947: 288], who suggested using a third point in time, 'reference point', to capture all possible tense distinctions. In all 'simple' temporal relations, the reference point coincides with the location of the event spoken about. [Kibort 2008c: 5]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SimpleFutureTense> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SimpleFutureTense> <http://www.w3.org/2000/01/rdf-schema#label> "SimpleFutureTense"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SimpleFutureTense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RomanNumeralGender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/GenderProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RomanNumeralGender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RomanNumeralGender> <http://www.w3.org/2000/01/rdf-schema#label> "RomanNumeralGender"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RomanNumeralGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/RomanNumeralGender> <http://www.w3.org/2000/01/rdf-schema#comment> "A convention for labeling gender values. Roman numerals are often used for languages for which there is a descriptive tradition involving use of the term 'noun class' instead of 'gender', in particular in languages of the Caucasus or Bantu languages, and are particularly useful where the number of genders is large.If the 'noun classes' are involved in agreement systems, they are gender systems. Roman numerals may also be used in instances where another label is possible. In one language the gender to which nouns with male rational denotation are assigned might be called 'masculine', whereas in another language nouns with a similar denotation may be assigned to a gender with an arbitrary Roman numerical label such as 'I'. [Kibort and Corbett 2008a]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FutureTense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FutureTense> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FutureTense> <http://www.w3.org/2000/01/rdf-schema#label> "FutureTense"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FutureTense> <http://www.w3.org/2000/01/rdf-schema#comment> "A value of Tense Property assigned to the designated element in the clause when the meaning selected for the clause is that intended to locate the event spoken about as posterior to the deictic centre of the utterance. Most commonly, this tense meaning is referred to as 'future', because in absolute tense systems the deictic centre is the moment of speech. However, in relative tense systems, where the deictic centre can be moved to any point on the time line, it is more appropriate to refer to this temporal relation as 'posterior'. The posterior temporal relation may obtain either in 'simple' or 'perfect' contexts. Modelling of this distinction originates from [Reichenbach 1947], who suggested using a third point in time, 'reference point', to capture all possible tense distinctions. In all 'simple' temporal relations, the reference point coincides with the location of the event spoken about. 'Perfect' tense meanings are created when the reference point is separated and moved away from the event time, thus altering the viewing of the temporal location of the event even though the event's actual location with respect to the deictic centre remains the same. Posterior temporal relationships obtaining in a 'perfect' context occur when the reference point is moved away from the event time. There are various logical possibilities for locating the reference point with respect to the other two points, though none of them seem to be typically grammaticalised as separate tenses. Typically, for a tense value to be labelled as Future Tense, the tense meaning has to minimally express the posterior temporal relationship, although it may additionally express other temporal, aspectual, or modal meanings. [Kibort 2008c: 5]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FutureTense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/TenseProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/MasculineGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/MasculineGender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/GenderProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/MasculineGender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/MasculineGender> <http://www.w3.org/2000/01/rdf-schema#label> "MasculineGender"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/MasculineGender> <http://www.w3.org/2000/01/rdf-schema#comment> "A gender property established on the basis of agreement, to which nouns may be assigned based on semantic or formal criteria.  In semantic gender systems, nouns belonging to the masculine gender typically denote male humans as well as nouns meeting certain physical criteria.  Some gender systems differentiate masculine nouns from all other nouns (e.g. masculine/other or male human/other), while others differentiate masculine, feminine and neuter nouns or several different gender classes. [Corbett 1991: 30]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Abstract> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A term used to describe a language as a whole, with each of its component parts functioning according to an overall convention of usage to enable the members of a speech community to interchange information. Most linguists agree on a 'system of systems', i.e. the arrangement of units on hierarchically ordered and inter-related levels. [Hartmann and Stork 1972: 231]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSystem> <http://www.w3.org/2000/01/rdf-schema#label> "LinguisticSystem"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NeuterGender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NeuterGender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/GenderProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NeuterGender> <http://www.w3.org/2000/01/rdf-schema#label> "NeuterGender"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NeuterGender> <http://www.w3.org/2000/01/rdf-schema#comment> "A gender property established on the basis of agreement, to which nouns may be assigned, either by a semantic rule, if they belong to the semantic residue of the assignment system, or by a formal rule, if assignment depends on inflectional class membership. Typically, this means that the neuter gender may cover some inanimates and possibly some portion of lower order animates. Note: Although in familiar Indo-European languages the term neuter gender may be part of a system with three or less values, it can be used for systems containing more than three gender values (e.g. Bininj Gunwok). [Kibort and Corbett 2008a]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NeuterGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FormalAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "One more distinction can be made within both types of inherently assigned feature values: that between formal and semantic assignment. This distinction was proposed by Corbett (1991) to account for the criteria according to which nouns can be allotted to genders. Corbett demonstrates that gender assignment systems in languages can be semantic or semantic-and-formal – that is, the set of rules that determine the assignment of inherent gender values to nouns refer to the meaning of words, or a combination of the meaning of words and the form of words. [Kibort 2008d: 12]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FormalAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/FeatureAssignmentSystem> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FormalAssignmentSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FormalAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FormalAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#label> "FormalAssignmentSystem"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/lobid/lv#nwbibsubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Verlinkt eine Ressource aus der Nordrhein-Westfälischen Bibliographie (NWBib) mit einer Systemstelle aus der NWBib-Sachsystematik."@de <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibsubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a resource in the Northrhine-Westphalian Bibliography (NWBib) to a concept in NWBib's subject classification."@en <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibsubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibsubject> <http://www.w3.org/2000/01/rdf-schema#label> "NWBib-Sachschlagwort"@de <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibsubject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/lobid/lv> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibsubject> <http://www.w3.org/2000/01/rdf-schema#label> "NWBib subject heading"@en <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibsubject> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/subject> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibsubject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibsubject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dc/terms/BibliographicResource> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibspatial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/subject> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibspatial> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibspatial> <http://www.w3.org/2000/01/rdf-schema#label> "NWBib spatial subject heading"@en <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibspatial> <http://www.w3.org/2000/01/rdf-schema#label> "NWBib-Ortsschlagwort"@de <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibspatial> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dc/terms/BibliographicResource> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibspatial> <http://www.w3.org/2000/01/rdf-schema#comment> "Verlinkt eine Ressource aus der Nordrhein-Westfälischen Bibliographie mit einer Systemstelle aus der NWBib-Ortssystematik."@de <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibspatial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/lobid/lv> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibspatial> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a resource in the Northrhine-Westphalian Bibliography (NWBib) to a concept in NWBib's spatial classification."@en <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#nwbibspatial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/lobid/lv> .
+<http://purl.org/net/lio> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/net/lio> .
+<http://purl.org/net/lio> <http://purl.org/vocab/vann/preferredNamespacePrefix> "lio"@en <http://purl.org/net/lio> .
+<http://purl.org/net/lio> <http://purl.org/dc/terms/description> "A Lightweight Ontology for Describing Images"@en <http://purl.org/net/lio> .
+<http://purl.org/net/lio> <http://www.w3.org/2000/01/rdf-schema#label> "LIO"@en <http://purl.org/net/lio> .
+<http://purl.org/net/lio> <http://www.w3.org/2000/01/rdf-schema#comment> "A Lightweight Ontology for Describing Images (LIO)"@en <http://purl.org/net/lio> .
+<http://purl.org/net/lio> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/net/lio#"@en <http://purl.org/net/lio> .
+<http://purl.org/net/lio> <http://purl.org/dc/terms/title> "Lightweight Image Ontology (LIO)"@en <http://purl.org/net/lio> .
+<http://purl.org/net/lio> <http://www.w3.org/2000/01/rdf-schema#comment> "Authored by Margaret Warren and Pat Hayes for Metadata Authoring Systems, LLC, Metadata Authoring Technologies, LLC and ImageSnippets(tm) 2010"@en <http://purl.org/net/lio> .
+<http://purl.org/ontology/places#Watershed> <http://www.w3.org/2000/01/rdf-schema#comment> "A ridge of land seperating two adjacent water systems." <http://purl.org/ontology/places> .
+<http://purl.org/ontology/places#Watershed> <http://www.w3.org/2000/01/rdf-schema#label> "流域"@zh <http://purl.org/ontology/places> .
+<http://purl.org/ontology/places#Watershed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/places> .
+<http://purl.org/ontology/places#Watershed> <http://www.w3.org/2000/01/rdf-schema#label> "Cuencas"@es <http://purl.org/ontology/places> .
+<http://purl.org/ontology/places#Watershed> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/places> .
+<http://purl.org/ontology/places#Watershed> <http://www.w3.org/2000/01/rdf-schema#label> "Watershed" <http://purl.org/ontology/places> .
+<http://purl.org/ontology/places#Watershed> <http://www.w3.org/2000/01/rdf-schema#label> "Watershed"@en <http://purl.org/ontology/places> .
+<http://purl.org/ontology/places#Watershed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/places#> <http://purl.org/ontology/places> .
+<http://purl.org/ontology/places#Watershed> <http://www.w3.org/2000/01/rdf-schema#label> "Des bassins versants"@fr-fr <http://purl.org/ontology/places> .
+<http://purl.org/ontology/places#Watershed> <http://www.w3.org/2000/01/rdf-schema#label> "Wasserscheide"@de <http://purl.org/ontology/places> .
+<http://www.w3.org/ns/person#birthName> <http://www.w3.org/2000/01/rdf-schema#label> "birth name"@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/person#birthName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/person#birthName> <http://purl.org/dc/terms/identifier> "person:birthName" <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/person#birthName> <http://www.w3.org/2000/01/rdf-schema#comment> "All data associated with an individual are subject to change. Names can change for \n    a variety of reasons, either formally or informally, and new information may come to light that means that \n    a correction or clarification can be made to an existing record. Birth names tend to be persistent \n    however and for this reason they are recorded by some public sector information systems. There is \n    no granularity for birth name - the full name should be recorded in a single field."@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/person#birthName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/person#> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#postCode> <http://www.w3.org/2000/01/rdf-schema#label> "post code"@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#postCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/locn#> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#postCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The post code (a.k.a postal code, zip code etc.). Post codes are common elements in many countries' postal address systems. The domain of locn:postCode is locn:Address."@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#postCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#postCode> <http://purl.org/dc/terms/identifier> "locn:postCode" <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#postCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#postCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/locn#Address> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A SKOS concept scheme can be viewed as an aggregation of one or more SKOS concepts. Semantic relationships (links) between those concepts may also be viewed as part of a concept scheme. This definition is, however, meant to be suggestive rather than restrictive, and there is some flexibility in the formal data model stated below.\n\nThe notion of a concept scheme is useful when dealing with data from an unknown source, and when dealing with data that describes two or more different knowledge organization systems. "@en <http://purl.org/spar/fabio> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#label> "concept scheme"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/InUsePaper> <http://www.w3.org/2000/01/rdf-schema#comment> "A scholarly work that describes applied and validated solutions such as software tools, systems or architectures that benefit from the use of the technology of a particular scholarly domain. Usually, papers of this kind should also provide convincing evidence that there is use of the proposed application or tool by the target user group, preferably outside the institution that conducted its development.\n\nE.g. see http://iswc2018.semanticweb.org/call-for-in-use-track-papers/."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/InUsePaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/ScholarlyWork> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/InUsePaper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/InUsePaper> <http://www.w3.org/2000/01/rdf-schema#label> "in-use paper"@en <http://purl.org/spar/fabio> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2004/02/skos/core#historyNote> _:B292a37c839df4c36c718d8411e3f564d <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/changeset/schema#ChangeSet> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      This property can be used to build a history of changes to a particular resource description. The first\n      ChangeSet in the history will have no precedingChangeSet property. Each subsequent ChangeSet added\n      to the history references the preceding one resulting in a singly-linked list of changes.  Care must be taken\n      not to introduce cycles in the history.\n    "@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2000/01/rdf-schema#label> "precedingChangeSet"@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://purl.org/dc/terms/issued> "2005-12-14" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bd8e2e6a3a442b4900cad62506cb80d07 <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/changeset/schema#ChangeSet> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      In systems that assume a closed world, the most recent ChangeSet for a particular resource description \n      can be discovered by looking for the ChangeSet that is not the value of a precedingChangeSet property. \n      Conversely, the earliest ChangeSet is the one that is not the subject of a precedingChangeSet property.\n    "@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#precedingChangeSet> <http://www.w3.org/2004/02/skos/core#definition> "the changeset that immediately precedes this one"@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vso/ns#ACRISSCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#ACRISSCode> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/ACRISS_Car_Classification_Code> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#ACRISSCode> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/ACRISS_Car_Classification_Code> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#ACRISSCode> <http://www.w3.org/2000/01/rdf-schema#label> "ACRISSCode (0..1)"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#ACRISSCode> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vso/ns#MotorizedRoadVehicle> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#ACRISSCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#ACRISSCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vso/ns> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#ACRISSCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The ACRISS Car Classification Code is a code used by many car rental companies, for classifying vehicles. ACRISS stands for Association of Car Rental Industry Systems and Standards."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#ACRISSCode> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/vso/ns> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/megasecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B23be90171c5f1276d70b22bcd3a0997d <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/nanosecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.w3.org/2000/01/rdf-schema#label> "时间"@zh <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/year-Sidereal> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/minute-Sidereal> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/day> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/hour-Sidereal> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/second-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/exasecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/petasecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/year-Tropical> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/picosecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/millisecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/day-Sidereal> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/hectosecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.w3.org/2000/01/rdf-schema#comment> "Time is a base quantity in the International System of Units and other systems of units. It is measured by numbers of repetitions of cyclical events."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/femtosecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/terasecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/attosecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc87a978a74be63f4dc2f00344c240e05 <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.w3.org/2000/01/rdf-schema#label> "time"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/minute-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gigayear> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/microsecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.w3.org/2000/01/rdf-schema#label> "tijd"@nl <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/centisecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/shake> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/hour> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gigasecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/decasecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/decisecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/second-Sidereal> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/year> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/kilosecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "t" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Entropy> <http://www.w3.org/2000/01/rdf-schema#label> "熵单位"@zh <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Entropy> <http://www.w3.org/2000/01/rdf-schema#label> "entropie"@nl <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Entropy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcaa6a73b9ba2e4e9c2ed09c4cedb8407 <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Entropy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Entropy> <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "S" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Entropy> <http://www.w3.org/2000/01/rdf-schema#comment> "Entropy is a measure of the unavailability of a system’s energy to do work."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Entropy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Entropy> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerKelvin> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Entropy> <http://www.w3.org/2000/01/rdf-schema#label> "entropy"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Entropy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd6e7326093d7e1beef650562e92abad4 <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/SystemOfUnits> <http://www.w3.org/2000/01/rdf-schema#label> "system of units"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/SystemOfUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/SystemOfUnits> <http://www.w3.org/2000/01/rdf-schema#comment> "In order to achieve a coherent, interdependent set of units of measure in the wide variety of units that exist, units are organised in systems of units. A system of units is based on a set of units chosen by convention to be the system’s base units, units that are considered to be mutually independent (i.e., can’t be expressed in terms of each other)."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/solarRadius> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/exametre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/point-Didot> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gigaparsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/megaparsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/nauticalMile-International> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gigametre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/terametre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/millimetre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/femtometre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/pica-ATA> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/point-TeX> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/decametre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/megametre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/inch-International> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/mile-USSurvey> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.w3.org/2000/01/rdf-schema#label> "length"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/foot-International> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.w3.org/2000/01/rdf-schema#label> "长度"@zh <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc011cee4e10afe153f5edb2e254f0c74 <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/mil-Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/chain> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/mile-Statute> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeSymbol> "L" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/lightYear> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/hectometre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/point-Postscript> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/picometre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/fathom-USSurvey> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/furlong-International> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/rod-US> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "l" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.w3.org/2000/01/rdf-schema#comment> "Length is the amount of space between two geographical points along a curve. It is a base quantity in the International System of Units and other systems of units. Length is speed times time. The metre, a base unit of length in the International System of Units, is defined in terms of speed of light during a certain time interval."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/nanometre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/pica-Postscript> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/micron> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/centimetre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/fermi> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/petametre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/attometre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/foot-USSurvey> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/micrometre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/parsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/point-ATA> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/astronomicalUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/angstrom> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/cicero> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/decimetre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/kiloparsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.w3.org/2000/01/rdf-schema#label> "lengte"@nl <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/kilometre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/yard-International> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/pica-TeX> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Length> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B979f08b7cae5aee0c8ad2f03171d7f9f <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MoralRights> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B89de9dde235c4f0f08cdd08a02d68fbc <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MoralRights> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc9ca02ef2a3d459eec623312cfe6f694 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MoralRights> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B70b456e893387aa2e0418a0d5cf80e90 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MoralRights> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#Copyright> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MoralRights> <http://www.w3.org/2000/01/rdf-schema#comment> "Moral rights are always held by the creator and cannot be commercially exploited. They are not present in all legal systems. However, WIPO treaties are promoting some of them in order to improve worldwide copyright law harmonisation."@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MoralRights> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7e4e57be5c569e4f9734ca7f4d0836ba <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MoralRights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MoralRights> <http://www.w3.org/2000/01/rdf-schema#label> "Moral Rights"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MoralRights> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb9523b830ca454f79078799d000fda5e <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MoralRights> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd32c33a823e15a5f9f1b89fddcd629bf <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://semanticscience.org/resource/SIO_000330> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000330> <http://purl.org/dc/terms/description> "A spherical coordinate system is a coordinate system for three-dimensional space where the position of a point is specified by three numbers: the radial distance of that point from a fixed origin, its polar angle measured from a fixed zenith direction, and the azimuth angle of its orthogonal projection on a reference plane that passes through the origin and is orthogonal to the zenith, measured from a fixed reference direction on that plane."@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000330> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000320> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000330> <http://purl.org/dc/elements/1.1/identifier> "SIO_000330" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000330> <http://www.w3.org/2000/01/rdf-schema#label> "spherical coordinate system"@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000330> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://semanticscience.org/ontology/sio.owl> .
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifikation"@de <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition: \tAn unambiguous reference to the resource within a given context.\nComment: \tRecommended best practice is to identify the resource by means of a string or number conforming to a formal identification system. Formal identification systems include but are not limited to the Uniform Resource Identifier (URI) (including the Uniform Resource Locator (URL)), the Digital Object Identifier (DOI) and the International Standard Book Number (ISBN)." <http://swrc.ontoware.org/ontology-07> .
+<http://usefulinc.com/ns/doap#Specification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#Specification> <http://www.w3.org/2000/01/rdf-schema#label> "明細書じ"@ja <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#Specification> <http://www.w3.org/2000/01/rdf-schema#comment> "A specification of a system's aspects, technical or otherwise."@en <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#Specification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://usefulinc.com/ns/doap#> <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#Specification> <http://www.w3.org/2000/01/rdf-schema#label> "Specification"@en <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#Specification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#Specification> <http://www.w3.org/2000/01/rdf-schema#comment> "あるシステムの詳しく書いた明細書。多分技術的なもの。"@ja <http://usefulinc.com/ns/doap#> .
+<http://www.w3.org/2004/02/skos/core> <http://www.w3.org/2000/01/rdf-schema#label> "SKOS (Simple Knowledge Organization System)" <http://vivoweb.org/ontology/core> .
+<http://vocab.deri.ie/cogs#Extraction> <http://www.w3.org/2000/01/rdf-schema#comment> "The first part of an ETL process which involves extracting the data from source systems. @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#Extraction> <http://www.w3.org/2000/01/rdf-schema#label> "Extraction" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#Extraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#Extraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.org/transit/terms/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "transit" <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/> <http://purl.org/dc/terms/identifier> "http://vocab.org/transit/terms/" <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/> <http://purl.org/dc/terms/date> "2011-03-28"^^<http://www.w3.org/2001/XMLSchema#date> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/> <http://purl.org/dc/terms/abstract> "This document describes a vocabulary for describing transit systems, routes, stops and schedules."@en <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/> <http://purl.org/dc/terms/title> "TRANSIT: A vocabulary for describing transit systems and routes"@en <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/> <http://purl.org/dc/terms/rights> "Copyright 2011 Ian Davis" <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://vocab.org/transit/terms/" <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/> <http://purl.org/dc/terms/description> "<div>\n    <p>The TRANSIT schema is based on the General Transit Feed Specification published by Google.</p>\n    <p><figure><img src=\"/transit/core-classes.png\"></img><br></br>Figure: Transit Vocabulary Core Classes (<a href=\"http://vocab.org/transit/core-classes.png\">PNG version</a>, <a href=\"http://vocab.org/transit/core-classes.svg\">SVG version</a>)</figure></p>\n    <p>Please see <a href=\"https://github.com/iand/vocab-transit\">https://github.com/iand/vocab-transit</a> for the master version of this vocabulary.</p>\n    </div>"^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/> <http://purl.org/dc/terms/creator> <http://iandavis.com/id/me> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/> <http://purl.org/dc/terms/issued> "2011-03-28"^^<http://www.w3.org/2001/XMLSchema#date> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://code.google.com/transit/spec/transit_feed_specification.html> <http://vocab.org/transit/terms/> .
+<http://www.bbc.co.uk/ontologies/cms/System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en-gb <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/System> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the class of systems that manage data in the Linked Data Platform."@en-gb <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/System> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/cms> <http://www.bbc.co.uk/ontologies/cms> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/systems.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsa .
+_:Bsystemsa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsa <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsa.nt> .
+_:Bsystemsa <https://w3id.org/tree#value> "systemsa" .
+_:Bsystemsa <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsa.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsc .
+_:Bsystemsc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsc <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsc.nt> .
+_:Bsystemsc <https://w3id.org/tree#value> "systemsc" .
+_:Bsystemsc <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsc.nt> <https://w3id.org/tree#remainingItems> "16"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsd .
+_:Bsystemsd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsd.nt> .
+_:Bsystemsd <https://w3id.org/tree#value> "systemsd" .
+_:Bsystemsd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsd.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemse .
+_:Bsystemse <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemse <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemse.nt> .
+_:Bsystemse <https://w3id.org/tree#value> "systemse" .
+_:Bsystemse <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemse.nt> <https://w3id.org/tree#remainingItems> "15"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsf .
+_:Bsystemsf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsf <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsf.nt> .
+_:Bsystemsf <https://w3id.org/tree#value> "systemsf" .
+_:Bsystemsf <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsf.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsg .
+_:Bsystemsg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsg.nt> .
+_:Bsystemsg <https://w3id.org/tree#value> "systemsg" .
+_:Bsystemsg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsg.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsh .
+_:Bsystemsh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsh.nt> .
+_:Bsystemsh <https://w3id.org/tree#value> "systemsh" .
+_:Bsystemsh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsh.nt> <https://w3id.org/tree#remainingItems> "14"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsi .
+_:Bsystemsi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsi.nt> .
+_:Bsystemsi <https://w3id.org/tree#value> "systemsi" .
+_:Bsystemsi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsi.nt> <https://w3id.org/tree#remainingItems> "20"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsj .
+_:Bsystemsj <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsj <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsj.nt> .
+_:Bsystemsj <https://w3id.org/tree#value> "systemsj" .
+_:Bsystemsj <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsj.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsk .
+_:Bsystemsk <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsk <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsk.nt> .
+_:Bsystemsk <https://w3id.org/tree#value> "systemsk" .
+_:Bsystemsk <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsk.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsl .
+_:Bsystemsl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsl.nt> .
+_:Bsystemsl <https://w3id.org/tree#value> "systemsl" .
+_:Bsystemsl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsl.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsm .
+_:Bsystemsm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsm.nt> .
+_:Bsystemsm <https://w3id.org/tree#value> "systemsm" .
+_:Bsystemsm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsm.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsn .
+_:Bsystemsn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsn <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsn.nt> .
+_:Bsystemsn <https://w3id.org/tree#value> "systemsn" .
+_:Bsystemsn <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsn.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemso .
+_:Bsystemso <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemso <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemso.nt> .
+_:Bsystemso <https://w3id.org/tree#value> "systemso" .
+_:Bsystemso <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemso.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsp .
+_:Bsystemsp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsp.nt> .
+_:Bsystemsp <https://w3id.org/tree#value> "systemsp" .
+_:Bsystemsp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsp.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsq .
+_:Bsystemsq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsq <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsq.nt> .
+_:Bsystemsq <https://w3id.org/tree#value> "systemsq" .
+_:Bsystemsq <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsq.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsr .
+_:Bsystemsr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsr.nt> .
+_:Bsystemsr <https://w3id.org/tree#value> "systemsr" .
+_:Bsystemsr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsr.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemss .
+_:Bsystemss <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemss <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemss.nt> .
+_:Bsystemss <https://w3id.org/tree#value> "systemss" .
+_:Bsystemss <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemss.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemst .
+_:Bsystemst <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemst <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemst.nt> .
+_:Bsystemst <https://w3id.org/tree#value> "systemst" .
+_:Bsystemst <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemst.nt> <https://w3id.org/tree#remainingItems> "15"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:Bsystemsu .
+_:Bsystemsu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemsu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemsu.nt> .
+_:Bsystemsu <https://w3id.org/tree#value> "systemsu" .
+_:Bsystemsu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemsu.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BaX2Bsystems .
+_:BaX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+systems.nt> .
+_:BaX2Bsystems <https://w3id.org/tree#value> "a" .
+_:BaX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BaX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+systems.nt> <https://w3id.org/tree#remainingItems> "47"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BbX2Bsystems .
+_:BbX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+systems.nt> .
+_:BbX2Bsystems <https://w3id.org/tree#value> "b" .
+_:BbX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BbX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+systems.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BcX2Bsystems .
+_:BcX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+systems.nt> .
+_:BcX2Bsystems <https://w3id.org/tree#value> "c" .
+_:BcX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BcX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+systems.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BdX2Bsystems .
+_:BdX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+systems.nt> .
+_:BdX2Bsystems <https://w3id.org/tree#value> "d" .
+_:BdX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BdX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+systems.nt> <https://w3id.org/tree#remainingItems> "16"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BeX2Bsystems .
+_:BeX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+systems.nt> .
+_:BeX2Bsystems <https://w3id.org/tree#value> "e" .
+_:BeX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BeX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+systems.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BfX2Bsystems .
+_:BfX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+systems.nt> .
+_:BfX2Bsystems <https://w3id.org/tree#value> "f" .
+_:BfX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BfX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+systems.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BhX2Bsystems .
+_:BhX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+systems.nt> .
+_:BhX2Bsystems <https://w3id.org/tree#value> "h" .
+_:BhX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BhX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+systems.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BiX2Bsystems .
+_:BiX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+systems.nt> .
+_:BiX2Bsystems <https://w3id.org/tree#value> "i" .
+_:BiX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BiX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+systems.nt> <https://w3id.org/tree#remainingItems> "28"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BkX2Bsystems .
+_:BkX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BkX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/k+systems.nt> .
+_:BkX2Bsystems <https://w3id.org/tree#value> "k" .
+_:BkX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BkX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/k+systems.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BlX2Bsystems .
+_:BlX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+systems.nt> .
+_:BlX2Bsystems <https://w3id.org/tree#value> "l" .
+_:BlX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BlX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+systems.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BmX2Bsystems .
+_:BmX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+systems.nt> .
+_:BmX2Bsystems <https://w3id.org/tree#value> "m" .
+_:BmX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BmX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+systems.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BnX2Bsystems .
+_:BnX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/n+systems.nt> .
+_:BnX2Bsystems <https://w3id.org/tree#value> "n" .
+_:BnX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BnX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/n+systems.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BoX2Bsystems .
+_:BoX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+systems.nt> .
+_:BoX2Bsystems <https://w3id.org/tree#value> "o" .
+_:BoX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BoX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+systems.nt> <https://w3id.org/tree#remainingItems> "14"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BpX2Bsystems .
+_:BpX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BpX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/p+systems.nt> .
+_:BpX2Bsystems <https://w3id.org/tree#value> "p" .
+_:BpX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BpX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/p+systems.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BrX2Bsystems .
+_:BrX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/r+systems.nt> .
+_:BrX2Bsystems <https://w3id.org/tree#value> "r" .
+_:BrX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BrX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/r+systems.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BsX2Bsystems .
+_:BsX2Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsX2Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/s+systems.nt> .
+_:BsX2Bsystems <https://w3id.org/tree#value> "s" .
+_:BsX2Bsystems <https://w3id.org/tree#value> "systems" .
+_:BsX2Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/s+systems.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BsystemsX2Bt .
+_:BsystemsX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsystemsX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systems+t.nt> .
+_:BsystemsX2Bt <https://w3id.org/tree#value> "systems" .
+_:BsystemsX2Bt <https://w3id.org/tree#value> "t" .
+_:BsystemsX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systems+t.nt> <https://w3id.org/tree#remainingItems> "32"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BsystemsX2Bu .
+_:BsystemsX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsystemsX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systems+u.nt> .
+_:BsystemsX2Bu <https://w3id.org/tree#value> "systems" .
+_:BsystemsX2Bu <https://w3id.org/tree#value> "u" .
+_:BsystemsX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systems+u.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BsystemsX2Bv .
+_:BsystemsX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsystemsX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systems+v.nt> .
+_:BsystemsX2Bv <https://w3id.org/tree#value> "systems" .
+_:BsystemsX2Bv <https://w3id.org/tree#value> "v" .
+_:BsystemsX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systems+v.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/systems.nt> <https://w3id.org/tree#relation> _:BsystemsX2Bw .
+_:BsystemsX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsystemsX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systems+w.nt> .
+_:BsystemsX2Bw <https://w3id.org/tree#value> "systems" .
+_:BsystemsX2Bw <https://w3id.org/tree#value> "w" .
+_:BsystemsX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systems+w.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .

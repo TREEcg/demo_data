@@ -1,0 +1,111 @@
+<https://w3id.org/fog#asShapefile-shp> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q27486884> <https://w3id.org/fog> .
+<https://w3id.org/fog#asShapefile-shp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asShapefile-shp> <http://purl.org/dc/terms/requires> "fog:asShapefile-shx" <https://w3id.org/fog> .
+<https://w3id.org/fog#asShapefile-shp> <http://dbpedia.org/property/extension> ".shp" <https://w3id.org/fog> .
+<https://w3id.org/fog#asShapefile-shp> <http://www.w3.org/2000/01/rdf-schema#label> "as Shapefile geometry (.shp)" <https://w3id.org/fog> .
+<https://w3id.org/fog#asShapefile-shp> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry file (.shp) following the open Shapefile format developed by ESRI. This file contains the geometry of the shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file)."@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asShapefile-shp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asShapefile-shp> <http://purl.org/dc/terms/requires> "fog:asShapefile-dbf" <https://w3id.org/fog> .
+<https://w3id.org/fog#asShapefile-shp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asShapefile-shp> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asShapefile> <https://w3id.org/fog> .
+<https://w3id.org/fog#ReferencedContent> <http://www.w3.org/2000/01/rdf-schema#label> "Referenced content"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#ReferencedContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/fog> .
+<https://w3id.org/fog#ReferencedContent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#ReferencedContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Referenced content of the following geometry descriptions: glTF and OBJ. It contains exactly one link to a texture, separate binary glTF geometry or a OBJ material that is referenced by the main file (resp. .gltf and .obj). The name of the referenced file, as stored in the main file, is connected via a rdfs:label node"@en <https://w3id.org/fog> .
+<https://w3id.org/omg#hasComplexGeometryDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/omg> .
+<https://w3id.org/omg#hasComplexGeometryDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has complex geometry description"@en <https://w3id.org/omg> .
+<https://w3id.org/omg#hasComplexGeometryDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an object, a geometry, or a geometry state and its RDF-based geometry description. If more than one geometry description should be added to an object, the relation omg:hasGeometry to a new individual of the type omg:Geometry should be used for each geometry description. This step is necessary to allow interconnections between the geometry descriptions regarding their derivation or complementation for easier upkeep of data integrity. The introduction of subproperties of this property for specific geometry descriptions (e.g. OntoBREP, GEOM, OntoSTEP) may ease querying for wanted geometry description formats."@en <https://w3id.org/omg> .
+<https://w3id.org/omg#hasComplexGeometryDescription> <http://schema.org/domainIncludes> <https://w3id.org/omg#GeometryState> <https://w3id.org/omg> .
+<https://w3id.org/omg#hasComplexGeometryDescription> <http://schema.org/domainIncludes> <https://w3id.org/omg#Geometry> <https://w3id.org/omg> .
+<https://w3id.org/omg#hasSimpleGeometryDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/omg> .
+<https://w3id.org/omg#hasSimpleGeometryDescription> <http://www.w3.org/2000/01/rdf-schema#label> "has simple geometry description"@en <https://w3id.org/omg> .
+<https://w3id.org/omg#hasSimpleGeometryDescription> <http://schema.org/domainIncludes> <https://w3id.org/omg#GeometryState> <https://w3id.org/omg> .
+<https://w3id.org/omg#hasSimpleGeometryDescription> <http://schema.org/domainIncludes> <https://w3id.org/omg#Geometry> <https://w3id.org/omg> .
+<https://w3id.org/omg#hasSimpleGeometryDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Datatype property to connect a simple (non RDF-based), text-based or file-based geometry description to an object, geometry or geometry state. In case the geometry description is text-based or in a binary file format, it can be directly added to this property, if it is a file-based geometry description, the URI linking to the file should be added to this property. Should multiple geometries be added to the object, the omg:Geometry class with its relation (omg:hasGeometry) or even geometry states (omg:GeometryState and omg:hasGeometryState) should be introduced for each geometry resp. geometry version."@en <https://w3id.org/omg> .
+<https://w3id.org/omg#containsPropertyState> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B1b0c63745e0b5fed883b4bfc4b2a642c <https://w3id.org/omg> .
+<https://w3id.org/omg#containsPropertyState> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/opm#PropertyState> <https://w3id.org/omg> .
+<https://w3id.org/omg#containsPropertyState> <http://www.w3.org/2000/01/rdf-schema#label> "contains property state"@en <https://w3id.org/omg> .
+<https://w3id.org/omg#containsPropertyState> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/omg#GeometryState> <https://w3id.org/omg> .
+<https://w3id.org/omg#containsPropertyState> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a geometry state and a relevant property state. Any property that belongs to the geometry state's related geometry objects (using the omg:containsGeometryObject relation) can be a host for relevant property states. \nThis relation can be inferred, as long as the connection to the geometry object (omg:containsGeometryObject), its properties (seas:hasProperty) and the considered property state (opm:hasPropertyState) are modelled correctly."@en <https://w3id.org/omg> .
+<https://w3id.org/omg#containsPropertyState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/omg> .
+<https://w3id.org/omg#hasGeometryContext> <http://schema.org/domainIncludes> <https://w3id.org/omg#GeometryState> <https://w3id.org/omg> .
+<https://w3id.org/omg#hasGeometryContext> <http://schema.org/domainIncludes> <https://w3id.org/omg#Geometry> <https://w3id.org/omg> .
+<https://w3id.org/omg#hasGeometryContext> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/omg#GeometryContext> <https://w3id.org/omg> .
+<https://w3id.org/omg#hasGeometryContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a geometry or geometry state and its geometric context. A singular geometry may have multiple contexts, just as one context can be used for different geometries (of different objects)"@en <https://w3id.org/omg> .
+<https://w3id.org/omg#hasGeometryContext> <http://www.w3.org/2000/01/rdf-schema#label> "has geometry context"@en <https://w3id.org/omg> .
+<https://w3id.org/omg#hasGeometryContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/omg> .
+<https://w3id.org/omg#complementsGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/omg> .
+<https://w3id.org/omg#complementsGeometry> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/omg#Geometry> <https://w3id.org/omg> .
+<https://w3id.org/omg#complementsGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "complements geometry"@en <https://w3id.org/omg> .
+<https://w3id.org/omg#complementsGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between one geometry and another that is composed by the first. E.g. a point cloud of a columns laser scan in a high geometric detail complementing a simplified CSG geometry of the same column. Both geometry descriptions are closely related, but not directly derived from each other. The complementing geometry description may also just depict a small part of the entire geometry (e.g. the column header)."@en <https://w3id.org/omg> .
+<https://w3id.org/omg#complementsGeometry> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/omg#Geometry> <https://w3id.org/omg> .
+<https://w3id.org/omg#containsGeometryObject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/omg#GeometryState> <https://w3id.org/omg> .
+<https://w3id.org/omg#containsGeometryObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/omg> .
+<https://w3id.org/omg#containsGeometryObject> <http://www.w3.org/2000/01/rdf-schema#label> "contains geometry object"@en <https://w3id.org/omg> .
+<https://w3id.org/omg#containsGeometryObject> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a geometry state and any object (node) of the related RDF-based geometry description that is relevant for this specific geometry state (not including deleted objects)."@en <https://w3id.org/omg> .
+<https://w3id.org/gom#hasSimplifiedGeometry> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/gom#RepresentedAccuracyAnalysis> <https://w3id.org/gom> .
+<https://w3id.org/gom#hasSimplifiedGeometry> <http://schema.org/rangeIncludes> <https://w3id.org/omg#Geometry> <https://w3id.org/gom> .
+<https://w3id.org/gom#hasSimplifiedGeometry> <http://schema.org/rangeIncludes> <https://w3id.org/omg#GeometryState> <https://w3id.org/gom> .
+<https://w3id.org/gom#hasSimplifiedGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/gom#> <https://w3id.org/gom> .
+<https://w3id.org/gom#hasSimplifiedGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "has simplified geometry"@en <https://w3id.org/gom> .
+<https://w3id.org/gom#hasSimplifiedGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "The simplified geometry of a gom:RepresentedAccuracyAnalysis that is compared with a survey geometry."@en <https://w3id.org/gom> .
+<https://w3id.org/gom#hasSimplifiedGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/gom> .
+<https://w3id.org/gom#hasSimplifiedGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/gom> .
+<http://geovocab.org/geometry> <http://purl.org/dc/terms/modified> "2012-02-05"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/vocommons/voaf#reusedByVocabularies> "1"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://www.w3.org/ns/dcat#keyword> "Geometry" <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/stuff/rev#hasReview> _:B1d8c8ff2ec7406da942ee58ae2d6c769 <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/stuff/rev#hasReview> _:B8315577150f178ea78aba80e819ca581 <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/dc/terms/contributor> <https://plus.google.com/106325500209542741874> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/stuff/rev#hasReview> _:B3db13995a4c089aa7aacfd6a720c4167 <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/dc/terms/contributor> <https://fr.linkedin.com/in/gatemezing> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://geovocab.org/geometry#" <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/dc/terms/contributor> <http://www.nottingham.ac.uk/engineering/people/suchith.anand> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/dc/terms/contributor> <https://plus.google.com/113914487834797888050> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/dc/terms/contributor> <https://plus.google.com/106987591110353988153> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/dc/terms/contributor> <https://plus.google.com/106674988924819667642> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/dc/terms/title> "NeoGeo Geometry Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/dc/terms/contributor> <https://plus.google.com/109696499688144241148> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ngeo" <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/ngeo/versions/2012-02-05.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/stuff/rev#hasReview> _:B74f248d2d465a38242417956c76954ac <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/vocommons/voaf#reusedByDatasets> "1"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/dc/terms/contributor> <http://ar.linkedin.com/in/salasjuan> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "12479"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/dc/terms/contributor> <https://plus.google.com/105761288608380061090> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/dc/terms/contributor> <https://plus.google.com/108746639517816289332> <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://xmlns.com/foaf/0.1/homepage> "http://geovocab.org/geometry.html" <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/dc/terms/description> "A vocabulary for specifying geographical regions in RDF"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/vocommons/voaf#usageInDataset> _:B7b129266f5587c19809e6e43b49e71f7 <https://lov.linkeddata.es/dataset/lov> .
+<http://geovocab.org/geometry> <http://purl.org/dc/terms/contributor> <https://plus.google.com/110452190744347866407> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/stuff/rev#hasReview> _:B36b225bc94f4b735b1be2be0c485877a <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/dc/terms/creator> <http://viaf.org/viaf/142310292> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/stuff/rev#hasReview> _:Bdcaadb80de2156ef1c9f8f4d49619b34 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/dc/terms/publisher> <http://viaf.org/viaf/142310292> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "osgeom" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/osgeom/versions/2012-10-08.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/vocommons/voaf#reusedByDatasets> "2"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.ordnancesurvey.co.uk/ontology/geometry/" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ordnancesurvey.co.uk/oswebsite/ontology/geometry.owl> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/vocommons/voaf#usageInDataset> _:B633f82bad830c9cbf2312074ec544c51 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/dc/terms/modified> "2012-10-08"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/stuff/rev#hasReview> _:B827d76a3cb71b0a6e706d5e20ea904f9 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/dc/terms/description> "A provisional small geometry vocabulary used by Ordnance Survey vocabularies and datasets. Likely to change when some standard way of representing geometries in RDF is agreed."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/vocommons/voaf#usageInDataset> _:Bbda291573160ee3f29e97ecd5a585e9c <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://www.w3.org/ns/dcat#keyword> "Geometry" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "15064"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/vocommons/voaf#reusedByVocabularies> "2"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/stuff/rev#hasReview> _:Ba025e7c9df388c041fa78c6560bfda98 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/> <http://purl.org/dc/terms/title> "Ordnance Survey Geometry Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/osgeom> <http://purl.org/dc/terms/issued> "2013-06-03"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/osgeom> <http://purl.org/dc/terms/modified> "2017-08-14"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/osgeom> <http://purl.org/dc/terms/title> "Ordnance Survey Geometry Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/osgeom> <http://xmlns.com/foaf/0.1/primaryTopic> <http://data.ordnancesurvey.co.uk/ontology/geometry/> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/osgeom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ngeo> <http://purl.org/dc/terms/title> "NeoGeo Geometry Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ngeo> <http://xmlns.com/foaf/0.1/primaryTopic> <http://geovocab.org/geometry> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ngeo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ngeo> <http://purl.org/dc/terms/issued> "2013-05-23"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ngeo> <http://purl.org/dc/terms/modified> "2016-06-21"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .

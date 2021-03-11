@@ -1,0 +1,534 @@
+<http://purl.org/spar/biro/BibliographicRecord> <http://www.w3.org/2000/01/rdf-schema#label> "bibliographic record"@en <http://purl.org/spar/biro> .
+<http://purl.org/spar/biro/BibliographicRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/biro> .
+<http://purl.org/spar/biro/BibliographicRecord> <http://purl.org/dc/elements/1.1/description> "A bibliographic record is realized only through bibliographic references."@en <http://purl.org/spar/biro> .
+<http://purl.org/spar/biro/BibliographicRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1458c40f6746231c61b6bdd1e5337ea0 <http://purl.org/spar/biro> .
+<http://purl.org/spar/biro/BibliographicRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/co/Set> <http://purl.org/spar/biro> .
+<http://purl.org/spar/biro/BibliographicRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> <http://purl.org/spar/biro> .
+<http://purl.org/spar/biro/BibliographicRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "A record that uniquely describes a particular textual or data publication (or a work in preparation for publication). Each bibliographic record is a set of entities describing aspects of the referenced work, including, for example, but not restricted to: authors, title, journal, publication year, DOI, ISSN, publisher and copyright information, or, in the case of a data publication: creators, title, version, archive, publication year, DOI or other identifier). The FRBR expression of a bibliographic record is a bibliographic reference, which usually contains only a sub-set of these entities, ordered in a particular way that corresponds to the house style of the publication in which it occurs."@en <http://purl.org/spar/biro> .
+<http://purl.org/spar/cito> <http://purl.org/dc/elements/1.1/contributor> "Paolo Ciccarese" <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito> <http://purl.org/dc/elements/1.1/title> "CiTO, the Citation Typing Ontology"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito> <http://www.w3.org/2002/07/owl#priorVersion> <http://purl.org/spar/cito/2018-02-12> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito> <http://purl.org/dc/elements/1.1/creator> "David Shotton" <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito> <http://purl.org/dc/elements/1.1/date> "2018-02-16" <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito> <http://purl.org/dc/elements/1.1/contributor> "Tim Clark" <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito> <http://purl.org/dc/elements/1.1/description> "CiTO, the Citation Typing Ontology, is an ontology written in OWL 2 DL to enable characterization of the nature or type of citations, both factually and rhetorically, and to permit these descriptions to be published on the Web.  \n\nThe citations characterized may be either direct and explicit (as in the reference list of a journal article), indirect (e.g. a citation to a more recent paper by the same research group on the same topic), or implicit (e.g. as in artistic quotations or parodies, or in cases of plagiarism).\n\nCiTO contains the object property cito:cites and its sub-properties, and its inverse property cito:isCitedBy, from the original Citation Typing Ontology, CiTO v1.6.  Upon the creation of version 2.0 of CiTO, a number of new sub-properties of cito:cites were added, and the inverse properties of all the sub-properties of cito:cites were created, all of which are sub-properties of cito:isCitedBy.  The ontology has also been integrated with the SWAN Discourse Relationships Ontology by making cito:cites a sub-property of http://purl.org/swan/2.0/discourse-relationships/refersTo.\n\nRestrictions of domain and range present in the previous version of CiTO were removed from the object properties when creating CiTO v 2.0, permitting its independent use in other contexts, in addition to conventional bibliographic citations.  \n\nSo that they can be used independently, other entities that were previously included in CiTO v1.6 have now been made components of other SPAR ontologies: FaBiO, the FRBR-aligned Bibliographic Ontology; C4O, the Citation Counting and Context Characterization Ontology; and PSO, the Publication Status Ontology. \n\nThe addition of two new properties:cito:usesConclusionsFrom and its inverse cito:providesConclusionsFor on 09Dec2011 led to a version number increment from v2.0 to v2.1.\n\nThe addition of two additional properties, cito:compiles and cito:isCompiledBy, previously in the deprecated CiTO4Data ontology, on 03 July 2012 led to a version increment from v2.1 to v2.2.\n\nSubsequent expansions include:\n\nin versions 2.3 and 2.4 the addition of the object properties cito:citesAsPotentialSolution, cito:citesAsRecommendedReading, cito:repliesTo, cito:retracts, cito:speculates on, and their inverse properties;\n\nin v2.5 the addition of cito:CitationAct, cito:hasCitationEvent, cito:hasCitedEntity and cito:hasCitingEntity;\n\nin v 2.6: \nrenaming cito:hasCitationEvent to become cito:hasCitationCharacterization;\nimproving definitions of cito:CitationAct, cito:hasCitationCharacterization, cito:hasCitedEntity and cito:hasCitingEntity;\nrevising the definition of cito:isCompiledBy to correct it and bring it into line with the DataCite Metadata Kernel v2.2 definition;\nchanging the definition of cito:sharesAuthorsWith from 'An object property indicating that the citing entity has at least one author in common with the cited entity.' to 'An object property between two entities indicating that they have at least one author in common.' so that it can be used when one entity does not actually cite the other;\nadding the object properties cito:hasRelatedEntity, cito:sharesFundingAgencyWith and cito:sharesAuthorInstitutionWith;\nand adding the text 'An object property indicating that . . .' at the beginning of the textual definition (rdfs:comment) for each CiTO object property.\n\nin v 2.6.1:\nRemoved text 'An object property indicating that . . .' added in v 2.6 at the beginning of the textual definition (rdfs:comment) for each CiTO object property, so that each definition is just a direct statement of the relationship.  \nRemoved the property cito:hasRelatedEntity (in favour of using dcterms:relation).\nRenamed cito:hasReply to become cito:hasReplyFrom.\nImproved the textual definitions of cito:derides and its inverse property.\n\nin v 2.6.2:\nImproved definitions of of cito:CitationAct, cito:hasCitationCharacterization, cito:hasCitedEntity and cito:hasCitingEntity.\n\nin v 2.6.3:\nAdded examples for each citation type (i.e., all the subproperties of cito:cites).\n\nin v 2.6.4:\nAdded alignment with schema:citation.\n\nin v 2.7.0:\nAdded new property cito:linksTo, and corrected some property URL.\n\nin v 2.7.1\nCorrected some typos in property comments.\n\nin v 2.7.2\nThe name of the class cito:CitationAct has been changed to cito:Citation, and its definition has been modified. The property cito:hasCitationTimeSpan has been added.\n\nin v 2.7.3\nAdded the class cito:SelfCitation, i.e. citation in which the citing and the cited entities have at least one author in common.\n\nin v 2.8\nRenamed the class cito:SelfCitation in cito:AuthorSelfCitation. Created a new class cito:SelfCitation with a more general definition (citation in which the citing and the cited entities have something significant in common with one another), which now includes five subclasses: cito:AuthorSelfCitation, cito:JournalSelfCitation, cito:FunderSelfCitation, cito:AffiliationSelfCitation, cito:AuthorNetworkSelfCitation. The latter class is also accompanied by the new data property cito:hasCoAuthorCitationLevel, which specifies the minimal distance that one of the authors of a citing entity has with regards to one of the authors of a cited entity according to their co-author network. Added the object properties cito:sharesPublicationVenueWith and its subproperty cito:sharesJournalWith. Added the data property cito:hasCitationCreationDate, and changed the domain of cito:hasCitationTimeSpan with xsd:duration.\n\nin v 2.8.1\nRenamed the property cito:hasCoAuthorCitationLevel in cito:hasCoAuthorshipCitationLevel." <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/spar/cito/2018-02-16> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito> <http://purl.org/dc/elements/1.1/creator> "Silvio Peroni" <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito> <http://www.w3.org/2000/01/rdf-schema#comment> "The Citation Typing Ontology (CiTO) is an ontology that enables characterization of the nature or type of citations, both factually and rhetorically.\n\n**URL:** http://purl.org/spar/cito\n\n**Creators**: [David Shotton](http://orcid.org/0000-0001-5506-523X), [Silvio Peroni](http://orcid.org/0000-0003-0530-4305)\n\n**Contributors:** [Paolo Ciccarese](https://orcid.org/0000-0002-5156-2703), [Tim Clark](https://orcid.org/0000-0003-4060-7360)\n\n**License:** [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/legalcode)\n\n**Website:** http://www.sparontologies.net/ontologies/cito\n\n**Cite as:** Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics, 17: 33-43. https://doi.org/10.1016/j.websem.2012.08.001. Open Access at: http://speroni.web.cs.unibo.it/publications/peroni-2012-fabio-cito-ontologies.pdf"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito> <http://purl.org/dc/elements/1.1/rights> "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito> <http://www.w3.org/2002/07/owl#versionInfo> "2.8.1" <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsMetadataDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity cites the cited entity as being the container of metadata describing the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsMetadataDocument> <http://purl.org/dc/elements/1.1/description> "Example: Basic bibliographic, entity and project metadata relating to this article, recorded in a structured machine-readable form, is available as an additional file [X] accompanying this paper."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsMetadataDocument> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsMetadataDocument> <http://www.w3.org/2000/01/rdf-schema#label> "cites as metadata document"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsMetadataDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsMetadataDocument> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/isCitedAsMetadataDocumentBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/deo/SupplementaryInformationDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/ExternalResourceDescription> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/SupplementaryInformationDescription> <http://www.w3.org/2000/01/rdf-schema#label> "supplementary information description"@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/SupplementaryInformationDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/SupplementaryInformationDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Information describing supplementary information relating to the document, including references or links to the relevant supplementary information."@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo> <http://purl.org/dc/elements/1.1/description> "DEO, The Discourse Elements Ontology, is an ontology written in OWL 2 DL that provides a structured vocabulary for rhetorical elements within documents (e.g. Introduction, Discussion, Acknowledgements, Reference List, Figures, Appendix), enabling these to be described in RDF.  It uses some of the rhetorical block elements from the SALT Rhetorical Ontology  and the Ontology of Rhetorical Blocks."@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo> <http://purl.org/dc/elements/1.1/title> "The Discourse Elements Ontology\n     (DEO)"@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo> <http://www.w3.org/2000/01/rdf-schema#comment> "The Discourse Elements Ontology is an ontology for describing the major rhetorical elements of a document such as a journal article.  It is a subsidiary ontology that is imported into the Document Components Ontology, itself part of SPAR, the Semantic Publishing and Referencing Ontologies.  Other SPAR ontologies are described at http://purl.org/spar/.\n"@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo> <http://purl.org/dc/elements/1.1/date> "2015-07-03" <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo> <http://purl.org/dc/elements/1.1/rights> "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo> <http://www.w3.org/2002/07/owl#versionInfo> "1.1"^^<http://www.w3.org/2001/XMLSchema#decimal> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo> <http://purl.org/dc/elements/1.1/creator> "Silvio Peroni" <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo> <http://purl.org/dc/elements/1.1/creator> "David Shotton" <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/ExternalResourceDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B656ea6e3af8eeaed6dbbb03dfbf05fbb <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/ExternalResourceDescription> <http://www.w3.org/2000/01/rdf-schema#label> "external resource description"@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/ExternalResourceDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Information describing an external resource and including a reference to that resource."@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/ExternalResourceDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Biography> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/DiscourseElement> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Biography> <http://www.w3.org/2000/01/rdf-schema#comment> "Information describing a person and his or her life history and contributions."@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Biography> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Biography> <http://www.w3.org/2000/01/rdf-schema#label> "biography"@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/DatasetDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/ExternalResourceDescription> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/DatasetDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Information describing a dataset held in an external database or repository and including a reference to it, such as a database ID or an accession number."@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/DatasetDescription> <http://www.w3.org/2000/01/rdf-schema#label> "dataset description"@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/DatasetDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/deo> .
+<http://purl.org/spar/doco/Preface> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Preface> <http://www.w3.org/2000/01/rdf-schema#comment> "A section describing how the document came into being, or how the idea for it was developed. The preface may contains acknowledgements. The preface to a later edition of the work often explains in what respect that edition differs from previous ones."@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Preface> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6910196dda95373aba8afabcd910cdc8 <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Preface> <http://www.w3.org/2000/01/rdf-schema#label> "preface"@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco> <http://purl.org/dc/elements/1.1/creator> "Silvio Peroni" <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco> <http://purl.org/dc/elements/1.1/date> "2015-07-03" <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco> <http://purl.org/dc/elements/1.1/rights> "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco> <http://purl.org/dc/elements/1.1/description> "DoCO, the Document Components Ontology, provides a structured vocabulary written in OWL 2 DL of document components, both structural (e.g. block, inline, paragraph, section, chapter) and rhetorical (e.g. introduction, discussion, acknowledgements, reference list, figure, appendix), enabling these components, and documents composed of them, to be described in RDF. It imports the Discourse Elements Ontology (http://purl.org/spar/deo) and the Document Structural Patterns Ontology (http://www.essepuntato.it/2008/12/pattern), and uses seven rhetorical block elements abstracted from the SALT Rhetorical Ontology and the Ontology of Rhetorical Blocks (ORB)."@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/spar/deo> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology is available at http://purl.org/spar/doco, and uses the namespace prefix doco."@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco> <http://purl.org/dc/elements/1.1/creator> "David Shotton" <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco> <http://purl.org/dc/elements/1.1/title> "DoCO, the Document Components Ontology"@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco> <http://purl.org/dc/elements/1.1/description> <https://svn.code.sf.net/p/sempublishing/code/DoCO/doco%20architecture.png> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco> <http://www.w3.org/2002/07/owl#imports> <http://www.essepuntato.it/2008/12/pattern> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco> <http://www.w3.org/2002/07/owl#versionInfo> "1.3"^^<http://www.w3.org/2001/XMLSchema#decimal> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco> <http://www.w3.org/2000/01/rdf-schema#comment> "DoCO, the Document Components Ontology, is an ontology for describing the component parts of a bibliographic document.  It forms part of SPAR, a suite of Semantic Publishing and Referencing Ontologies.    Other SPAR ontologies are described at http://purl.org/spar/."@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/fabio/MetadataDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B44cc852006c1d258c3de979a5651f294 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MetadataDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MetadataDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "A document that contains metadata information describing one or more characteristics of an entity."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MetadataDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MetadataDocument> <http://www.w3.org/2000/01/rdf-schema#label> "metadata document"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MinimalInformationStandard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Specification> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MinimalInformationStandard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MinimalInformationStandard> <http://www.w3.org/2000/01/rdf-schema#comment> "A metadata standard specifying items to be included when creating metadata describing a dataset of a particular type, or when creating a structured summary of the main findings of an article or report in a particular domain of interest, thereby ensuring adequate descriptive information is recorded for subsequent resource discovery and/or interpretation of the information described.  [See also fabio:ReportingStandard.]" <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MinimalInformationStandard> <http://www.w3.org/2000/01/rdf-schema#label> "minimal information standard"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectReport> <http://www.w3.org/2000/01/rdf-schema#comment> "A report describing the outcomes of specific project, typically listing 'deliverables' created or 'milestones' achieved during the project."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectReport> <http://www.w3.org/2000/01/rdf-schema#label> "deliverable report"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Report> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "concept"@en <http://purl.org/spar/fabio> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://purl.org/spar/fabio> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2000/01/rdf-schema#comment> "A SKOS concept can be viewed as an idea or notion; a unit of thought. However, what constitutes a unit of thought is subjective, and this definition is meant to be suggestive, rather than restrictive.\n\nThe notion of a SKOS concept is useful when describing the conceptual or intellectual structure of a knowledge organization system, and when referring to specific ideas or meanings established within a KOS.\n\nNote that, because SKOS is designed to be a vehicle for representing semi-formal KOS, such as thesauri and classification schemes, a certain amount of flexibility has been built in to the formal definition of this class."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/StructuredSummary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/SpecificationDocument> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/StructuredSummary> <http://www.w3.org/2000/01/rdf-schema#label> "structured summary"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/StructuredSummary> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured summary containing essential metadata describing a research investigation and/or the research outputs that have resulted from it, for example datasets and journal articles, structured according to some minimal information standard.  Such a structured summary can be embodied in both human-readable and machine-readable manifestations, e.g. HTML and RDF.  Such a structured summary differs from the Abstract of a journal article, in that the latter is written as a piece of continuous prose, but typically omits vital factual information about the investigation, such as when and where it was conducted, by whom, and on now many specimens or subjects."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/StructuredSummary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb80c2a080441b2860dded10a4f0f0d73 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/StructuredSummary> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Abstract> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/StructuredSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Metadata describing a project, for example the project name, the names of those who conducted the project, the name of the institution in which the project was conducted, and the project funding information."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "project metadata"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectMetadata> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Metadata> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectReportDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3779063bd3738ea10198974cd16f2da7 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectReportDocument> <http://www.w3.org/2000/01/rdf-schema#label> "deliverable"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectReportDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "A document containing a project report, intended to be delivered to a customer or funding agency describing the results achieved within a specific project. "@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectReportDocument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/ReportDocument> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectReportDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/EntityMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Metadata describing the work itself, including for example the name of the creator(s), the title of the work, and the date and place of its creation."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/EntityMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/EntityMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "entity metadata"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/EntityMetadata> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Metadata> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PosterPaper> <http://www.w3.org/2000/01/rdf-schema#comment> "A paper that typically accompanies a poster describing some preliminary  results of research, usually presented during a conference or a workshop."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PosterPaper> <http://www.w3.org/2000/01/rdf-schema#label> "poster paper"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PosterPaper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PosterPaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/WorkPackage> <http://www.w3.org/2000/01/rdf-schema#label> "work package"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/WorkPackage> <http://www.w3.org/2000/01/rdf-schema#comment> "A component of the case for support of a grant application, describing a particular aspect of the work to be undertaken."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/WorkPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/WorkPackage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Work> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/DemoPaper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/DemoPaper> <http://www.w3.org/2000/01/rdf-schema#comment> "A demonstration paper, typically describing a new product, service or system created as a result of research, usually presented during a conference or workshop."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/DemoPaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/DemoPaper> <http://www.w3.org/2000/01/rdf-schema#label> "demo paper"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Catalog> <http://www.w3.org/2000/01/rdf-schema#label> "catalog"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Catalog> <http://www.w3.org/2000/01/rdf-schema#comment> "A list of items describing the content of a resource, for example items in an exhibition, items offered for sale by a vendor, or entities contained within a library or collection.  Ideally, catalogs are created according to specific and uniform principles of construction and are under the control of an authority file."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Catalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Catalog> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Specification> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/CitationMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "citation metadata"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/CitationMetadata> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Metadata> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/CitationMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Metadata describing the citations made within a work to other works, and (optionally) some characteristics of the expressions of the cited works."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/CitationMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/BibliographicMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Standard bibliographic metadata describing an expression of a work.  To take the example of a journal article, bibliographic metadata typically include the authors' names, the date of publication, the title of the article, the journal name and volume number, the first and last page numbers, and the Digital Object Identifier (DOI)."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/BibliographicMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "bibliographic metadata"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/BibliographicMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/BibliographicMetadata> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Metadata> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Metadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Metadata> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Work> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Metadata> <http://www.w3.org/2000/01/rdf-schema#comment> "A separate work that provides information describing one or more characteristics of a resource or entity."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Metadata> <http://www.w3.org/2000/01/rdf-schema#label> "metadata"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/pro/> <http://purl.org/dc/elements/1.1/creator> "David Shotton" <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/> <http://purl.org/dc/elements/1.1/date> "2013-12-18" <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/> <http://purl.org/dc/elements/1.1/description> "PRO, the Publishing Roles Ontology, is an ontology written in OWL 2 DL for the characterization of the roles of agents (people, corporate bodies and computational agents) in the publication process.  It permits one to specify how an agent has a role relating to a contextual entity, and the period of time during which that role is held.\n\nIt is based on the Time-indexed Value in Context (TVC) ontology pattern (http://www.essepuntato.it/2012/04/tvc).\n\nIt is easy to extend the set of specified roles, simply by adding new individuals to the class pro:PublishingRole.\n\nThis ontology is imported into SCoRO, the Scholarly Contribution and Roles Ontology (http://purl.org/spar/scoro/), where it is used similarly to enable the description of a wider range of contributions and roles relating to other scholarly activities and entities, including academic administration, funded projects, research investigations, data and authorship, and to define their temporal extents and contexts, as for publishing roles in PRO."@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/> <http://purl.org/dc/elements/1.1/description> "Since roles have contexts and times that are important to take into account (for example, a person can be author of one paper and reviewer of another, while another person will be editor of a journal only for a defined period, not for ever), the PRO ontology permit these contexts to be specified, using an ontological design pattern called the time-indexed value in context (TVC) (http://www.essepuntato.it/2012/04/tvc/) which is imported into PRO. \n \nThis ontology design pattern permits one to construct the following RDF statements:\n       foaf:Agent pro:holdsRoleInTime [ a pro:RoleInTime pro:withRole pro:editor ] .\n\nThus the domain of pro:withRole is not foaf:Agent, but rather an anonymous member of the class pro:RoleInTime, which itself is the range of the property pro:holdsRoleInTime, for which the domain is foaf:Agent. \n\nThe range of pro:withRole is the class pro:Role, whose members permit specific roles to be specified.  \n   \nThis single step of indirection permits other contextual and temporal attributes (not shown here) to be specified for this member of the class pro:RoleInTime, putting that role into context.\n\nExemplar usage: \n\n foaf:Agent pro:holdsRoleInTime [ a pro:RoleInTime pro:withRole pro:editor ] ."@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology is available at http://purl.org/spar/pro, and uses the namespace prefix pro."@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/> <http://purl.org/dc/elements/1.1/description> <http://sempublishing.svn.sourceforge.net/svnroot/sempublishing/PRO/pro.png> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/> <http://www.w3.org/2000/01/rdf-schema#comment> "PRO, the Publishing Roles Ontology, is an ontology for describing roles in the publication process, or in other scholarly activities or situations, held by particular agent.  The role can be specified to exist over a defined period of time, and within a specific context, e.g. with respect to a particular document. \n\nPRO forms part of SPAR, a suite of Semantic Publishing and Referencing Ontologies.  Other SPAR ontologies are described at http://purl.org/spar/."@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/> <http://www.w3.org/2002/07/owl#versionInfo> "1.5.3" <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/> <http://purl.org/dc/elements/1.1/title> "PRO, the Publishing Roles Ontology"@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/> <http://purl.org/dc/elements/1.1/creator> "Silvio Peroni" <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/> <http://purl.org/dc/elements/1.1/rights> "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/swan/2.0/foaf-essential/> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/> <http://www.w3.org/2002/07/owl#imports> <http://www.essepuntato.it/2012/04/tvc> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/relatesToDocument> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Document> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/relatesToDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "A property relating a time-indexed situation describing a publishing role to a document that represents the context for that situation (e.g. relating the role of editor or peer-reviewer to the document being edited or peer-reviewed)."@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/relatesToDocument> <http://www.w3.org/2000/01/rdf-schema#label> "relates to document"@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/relatesToDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/relatesToDocument> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/pro/relatesToEntity> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pso> <http://purl.org/dc/elements/1.1/date> "2014-02-01" <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso> <http://purl.org/dc/elements/1.1/description> "PSO, the Publishing Status Ontology, is an ontology written in OWL 2 DL for characterizing the publication status of a document or other publication entity at each of the various stages in the publishing process (e.g.  draft, submitted, under review, rejected, accepted for publication, proof, published, Version of Record, catalogued, archived).\n\nBecause it is based on the Time-indexed Value in Context ontology pattern (http://www.essepuntato.it/2012/04/tvc), it is easy to extends the set of specified statuses, simply by adding new individual to the class pso:Status or its sub-class pso:PublicationStatus.\n"@en <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso> <http://www.w3.org/2002/07/owl#versionInfo> "1.7.1" <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso> <http://purl.org/dc/elements/1.1/creator> "David Shotton" <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso> <http://purl.org/dc/elements/1.1/description> <http://sempublishing.svn.sourceforge.net/svnroot/sempublishing/PSO/pso.png> <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso> <http://www.w3.org/2002/07/owl#imports> <http://www.essepuntato.it/2012/04/tvc> <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/participation.owl> <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/swan/2.0/foaf-essential/> <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso> <http://purl.org/dc/elements/1.1/title> "PSO, the Publishing Status Ontology"@en <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso> <http://purl.org/dc/elements/1.1/rights> "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."@en <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso> <http://purl.org/dc/elements/1.1/creator> "Silvio Peroni" <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso> <http://www.w3.org/2000/01/rdf-schema#comment> "PSO, the Publishing Status Ontology, is an ontology for describing the status held by a bibliographic document or other publication entity at each of the various stages in the publishing process.  It forms part of SPAR, a suite of Semantic Publishing and Referencing Ontologies.  Other SPAR ontologies are described at http://purl.org/spar/."@en <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/spar/pso> .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/date> "2015-06-18" <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/creator> "David Shotton" <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/timeinterval.owl> <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/title> "The Publishing Workflow Ontology (PWO)" <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time> <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#versionInfo> "2.2" <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi" <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2000/01/rdf-schema#comment> "The Publishing Workflow Ontology (PWO) is an ontology for describing the workflow associated with the publication of a document.  It forms part of SPAR, a suite of Semantic Publishing and Referencing Ontologies."@en <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/description> "The Publishing Workflow Ontology (PWO) is a simple ontology written in OWL 2 DL for the characterization of the main stages in the workflow associated with the publication of a document (e.g. being written, under review, XML capture, page design, publication to the Web)."@en <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/sequence.owl> <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.essepuntato.it/2009/10/error> <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/creator> "Silvio Peroni" <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl> <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/description> <https://svn.code.sf.net/p/sempublishing/code/PWO/pwo.png> <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/participation.owl> <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/controlflow.owl> <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/cp/owl/basicplan.owl> <http://purl.org/spar/pwo> .
+<http://purl.org/spar/pwo> <http://purl.org/dc/elements/1.1/rights> "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."@en <http://purl.org/spar/pwo> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/tio/ns#SeatingLayout> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/tio/ns#ScopeOfAccess> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Offering> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyScope> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryMethod> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3c45cf74595c35680a321ebcc5d1a89f <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/tio/ns#Stop> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#LocationOfSalesOrServiceProvisioning> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntity> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#N-Ary-Relations> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "An event, e.g. a concert, a show, etc. You can also safely use the following external classes for describing the respective event:\n\nhttp://linkedevents.org/ontology/Event (lode:Event)\nhttp://purl.org/NET/c4dm/event.owl#Event (event:Event)\nhttp://www.loa-cnr.it/ontologies/DUL.owl#Event (dul:Event)\n\nNote: You can attach the time and date of the event using tio:starts and tio:ends as simple datatype properties, even if lode:Event and event:Event recommend other, more sophisticated ways of modeling the temporal aspects of events."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentMethod> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#> <http://purl.org/dc/elements/1.1/creator> "Martin Hepp"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#> <http://www.w3.org/2000/01/rdf-schema#comment> "TIO: The TIckets Ontology\n    \nA vocabulary for describing tickets for events, transportation, or points of interest for e-commerce.\n\nVocabulary:    http://purl.org/tio/ns#\nNamespace:     http://purl.org/tio/ns#\n\nThe Tickets Ontology is designed to be used in combination with GoodRelations, a standard vocabulary for the commercial aspects of offers of tickets.\n\nSee http://purl.org/goodrelations/ for more information."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#> <http://purl.org/dc/elements/1.1/title> "TIO: The TIckets Ontology for Semantic Web-based E-Commerce"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#> <http://purl.org/dc/elements/1.1/contributor> "Some class and property definitions are inspired by or based on abstracts from Wikipedia, the free encyclopedia."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#> <http://purl.org/dc/elements/1.1/subject> "E-Commerce, E-Business, GoodRelations, Ontology, Tickets, Transportation, Events, Concerts, Museums"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#> <http://www.w3.org/2000/01/rdf-schema#label> "Tickets Ontology"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/goodrelations/v1> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/goodrelations/> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#> <http://www.w3.org/2002/07/owl#versionInfo> "V 1.0, Release 2010-11-17" <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#> <http://purl.org/dc/elements/1.1/rights> "The Tickets Ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. \nIn a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), \nas long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work)."@en <http://purl.org/tio/ns#> .
+<http://purl.org/uco/ns#> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#> <http://purl.org/dc/terms/creator> "Hepp Research GmbH and Makolab S.A."@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/goodrelations/v1> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#> <http://www.w3.org/2000/01/rdf-schema#comment> "UCO: The The Used Cars Ontology\n    \nA Web vocabulary for describing aspects of used cars for e-commerce.\n\nVocabulary:    http://purl.org/uco/ns#\nNamespace:     http://purl.org/uco/ns#\n\nThe vocabulary is designed to be used in combination with \n(1) GoodRelations, a standard vocabulary for the commercial aspects of offers for sale, rental, repair, or disposal; and\n(2) the Vehicle Sales Ontology, a standard vocabulary for cars and other vehicles.\n\t\nSee http://purl.org/goodrelations/ and http://purl.org/vso/ns for more information."@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#> <http://www.w3.org/2000/01/rdf-schema#label> "Used Cars Ontology"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#> <http://www.w3.org/2002/07/owl#versionInfo> "V 1.0:A, Release 2012-12-31" <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#> <http://purl.org/dc/terms/subject> "E-Commerce, E-Business, GoodRelations, Ontology, Automotive, Cars, Vehicles, Used Cars"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/vso/ns> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#> <http://purl.org/dc/terms/title> "UCO: The Used Cars Ontology for Semantic Web-based E-Commerce"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#> <http://purl.org/dc/terms/rights> "The Used Cars Ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. \nIn a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), \nas long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work)."@en <http://purl.org/uco/ns#> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/vocab/changeset/schema#> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      The vocabulary introduces the notion of a ChangeSet which encapsulates the delta between two versions of a \n      resource description. In this context a resource description is the set of triples that in some way comprise a \n      description of a resource. The delta is represented by two sets of triples: additions and removals. A ChangeSet can be used to \n      modify a resource description by first removing all triples from the description that are in the removals set and\n      adding the triples in the additions set.\n    "@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2004/02/skos/core#changeNote> _:B2ee539cce6a456213639306563f30433 <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/example> <http://vocab.org/changeset/changesets-example2-20060321.html> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cs" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/example> <http://vocab.org/changeset/changesets-example3-20060321.html> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2004/02/skos/core#historyNote> _:B921dd4997dce45c4038c24107de63f6c <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/rights> "Copyright © 2005 Talis Information Ltd." <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/date> "2006-03-21" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/issued> "2005-12-14" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/title> "Changeset"@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      This vocabulary defines a set of terms for describing changes to resource descriptions.\n    "@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2004/02/skos/core#changeNote> _:B5feb42781afd93df9e95b4940162e4b7 <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocab/changeset/schema#" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/identifier> "http://purl.org/vocab/changeset/schema-20060321" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/creator> <http://iandavis.com/id/me> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/replaces> <http://purl.org/vocab/changeset/schema-20051214> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/example> <http://vocab.org/changeset/changesets-example-20060321.html> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2004/02/skos/core#historyNote> _:B6ca26f68ecd9fa1884ed114551b11fb7 <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/creator> "Sam Tunnicliffe" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/vocab/changeset/schema> .
+<http://vocab.org/participation/schema> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/participation/schema-20080925.rdf> <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://purl.org/dc/elements/1.1/title> "Participation Schema"@en <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://www.w3.org/2000/01/rdf-schema#comment> "The participation ontology is a simple model for describing the roles that people play within groups. It is intended that specific domains will create subclasses of roles within their own areas of expertise. The first of these is AIISO Roles (http://purl.org/vocab/aiiso-roles/schema)"@en <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://purl.org/dc/elements/1.1/creator> "Chris Wallace" <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://purl.org/vocab/vann/example> <http://vocab.org/participation/example-participation.html> <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://purl.org/dc/elements/1.1/creator> "Knud Moeller" <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://purl.org/dc/elements/1.1/rights> "Copyright © 2008 Rob Styles, Chris Wallace, Knud Moeller" <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://purl.org/dc/terms/issued> "2008-09-25" <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://web.resource.org/cc/license> <http://creativecommons.org/licenses/by/2.0/uk/> <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://purl.org/vocab/vann/preferredNamespacePrefix> "participation" <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://purl.org/dc/elements/1.1/identifier> "http://purl.org/vocab/participation/schema-20080925" <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://purl.org/dc/terms/hasFormat> <http://purl.org/vocab/participation/schema-20080925.html> <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://web.resource.org/cc/Work> <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://purl.org/dc/elements/1.1/date> "2008-09-25" <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocab/participation/schema#" <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/vocab/participation/schema#> <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bc8c393a94c17ec8564169e660f3b1999 <http://purl.org/vocab/participation/schema> .
+<http://vocab.org/participation/schema> <http://purl.org/dc/elements/1.1/creator> "Rob Styles" <http://purl.org/vocab/participation/schema> .
+<http://purl.org/vso/ns> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle Sales Ontology"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://purl.org/dc/elements/1.1/contributor> "Many class and property definitions are inspired by or based on abstracts from Wikipedia, the free encyclopedia."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://purl.org/dc/elements/1.1/creator> "Martin Hepp"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://purl.org/dc/elements/1.1/title> "VSO: The Vehicle Sales Ontology for Semantic Web-based E-Commerce"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://www.w3.org/2000/01/rdf-schema#comment> "VSO: The Vehicle Sales Ontology\n    \nA Web vocabulary for describings cars, boats, bikes, and other vehicles for e-commerce.\n\nVocabulary:    http://purl.org/vso/ns\nNamespace:     http://purl.org/vso/ns#\n\nThe Vehicle Sales Ontology is designed to be used in combination with GoodRelations, a standard vocabulary for the commercial aspects of offers for sale or rental. \n\nSee http://purl.org/goodrelations/ for more information."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/goodrelations/v1> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://purl.org/dc/elements/1.1/rights> "The Vehicle Sales Ontology ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. \nIn a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), \nas long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work)."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/goodrelations/> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://www.w3.org/2002/07/owl#versionInfo> "V 1.0, Release 2010-10-02" <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://purl.org/dc/elements/1.1/subject> "E-Commerce, E-Business, GoodRelations, Ontology, Cars, Automobiles, Boats, Bikes"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> <http://purl.org/vso/ns> .
+<http://purl.org/vvo/ns#> <http://www.w3.org/2000/01/rdf-schema#comment> "VVO: The Volkswagen Vehicles Ontology\n    \nA vocabulary for describing Volkswagen-specific features of automobiles and their components\n\nVocabulary:    http://purl.org/vvo/ns\nNamespace:     http://purl.org/vvo/ns#\n\n\nThe vocabulary is designed to be used in combination with \n(1) GoodRelations, a standard vocabulary for the commercial aspects of offers for sale, rental, repair, or disposal;\n(2) the Vehicle Sales Ontology, a standard vocabulary for cars and other vehicles; and\n(3) the Car Options Ontology, a standard vocabulary for buildability / configuration information for cars. \n\nSee http://purl.org/goodrelations/ for more information."@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/vso/ns> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://purl.org/dc/elements/1.1/subject> "Volkswagen, E-Commerce, E-Business, GoodRelations, Ontology, Cars, Automobiles"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://www.w3.org/2002/07/owl#versionInfo> "V 1.0, Release 2010-10-12" <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/goodrelations/> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://purl.org/dc/elements/1.1/creator> "Martin Hepp"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://purl.org/dc/elements/1.1/title> "VVO: The Volkswagen Vehicles Ontology for Semantic Web-based E-Commerce"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://purl.org/dc/elements/1.1/rights> "The Volkswagen Vehicles Ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. \nIn a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), \nas long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work)."@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://www.w3.org/2000/01/rdf-schema#label> "Volkswagen Vehicles Ontology"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://purl.org/dc/elements/1.1/contributor> "Some class and property definitions are inspired by or based on abstracts from Wikipedia, the free encyclopedia."@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://purl.org/dc/elements/1.1/contributor> "Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK" <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/goodrelations/v1> <http://purl.org/vvo/ns#> .
+<http://rdfs.co/bevon/CocktailGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_5> <http://rdfs.co/bevon/Mocktail> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/CocktailGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    These classes and properties are for describing beverages categorized under\n    Mixed Drink.\n    "@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/CocktailGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Cocktail Terms"@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/CocktailGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://rdfs.co/bevon/BeerCocktail> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/CocktailGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://rdfs.co/bevon/Highball> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/CocktailGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://rdfs.co/bevon/Cocktail> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/CocktailGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/CocktailGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://rdfs.co/bevon/Shandy> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/RelationGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_5> <http://rdfs.co/bevon/non_alcoholic_version> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/RelationGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://rdfs.co/bevon/variantOf> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/RelationGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    These properties are used for describing relations between beverages.\n    "@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/RelationGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Relation Terms"@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/RelationGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://rdfs.co/bevon/related> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/RelationGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/RelationGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://rdfs.co/bevon/variant> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/RelationGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://rdfs.co/bevon/similar> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_15> <http://rdfs.co/bevon/Longneck> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_2> <http://rdfs.co/bevon/Ale> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_7> <http://rdfs.co/bevon/DryStout> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_16> <http://rdfs.co/bevon/BeerKeg> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_12> <http://rdfs.co/bevon/NonAlcoholicBeer> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_13> <http://rdfs.co/bevon/Brewery> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_1> <http://rdfs.co/bevon/Beer> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/2000/01/rdf-schema#label> "Beer Terms"@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_8> <http://rdfs.co/bevon/Lager> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_4> <http://rdfs.co/bevon/IrishRedAle> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_14> <http://rdfs.co/bevon/BeerBottle> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_3> <http://rdfs.co/bevon/PaleAle> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_18> <http://rdfs.co/bevon/srm> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_19> <http://rdfs.co/bevon/brewery> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_6> <http://rdfs.co/bevon/Stout> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_17> <http://rdfs.co/bevon/ibu> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_10> <http://rdfs.co/bevon/PaleLager> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    In addition to the BEVON core terms, there are a number of terms for use\n    when describing beverages categorized under Beer.\n    "@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_5> <http://rdfs.co/bevon/Porter> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_11> <http://rdfs.co/bevon/Pilsner> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Bag> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/BeerGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#_9> <http://rdfs.co/bevon/Dunkel> <http://rdfs.co/bevon/> .
+<http://rdfs.org/sioc/ns#subject> <http://www.w3.org/2002/07/owl#versionInfo> "This property is deprecated. Use dcterms:subject from the Dublin Core ontology for text keywords and sioc:topic if the subject can be represented by a URI instead." <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DeprecatedProperty> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#subject> <http://www.w3.org/2000/01/rdf-schema#comment> "Keyword(s) describing subject of the Post."@en <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#subject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#subject> <http://www.w3.org/2000/01/rdf-schema#label> "subject"@en <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#subject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/sioc/ns#> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#subject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/sioc/ns#Post> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#about> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/sioc/ns#Item> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#about> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/sioc/ns#> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#about> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that this Item is about a particular resource, e.g. a Post describing a book, hotel, etc."@en <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#about> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#about> <http://www.w3.org/2000/01/rdf-schema#label> "about"@en <http://rdfs.org/sioc/ns#> .
+<http://spinrdf.org/sp#subject> <http://www.w3.org/2000/01/rdf-schema#label> "subject" <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#subject> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource or Variable describing the subject of a triple." <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#subject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spinrdf.org/sp#Tuple> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#subject> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/sp#systemProperty> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#subject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#predicate> <http://www.w3.org/2000/01/rdf-schema#label> "predicate" <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#predicate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/sp#systemProperty> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#predicate> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource or Variable describing the predicate of a triple." <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#predicate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spinrdf.org/sp#Triple> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#predicate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#predicate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#object> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spinrdf.org/sp#Tuple> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#object> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/sp#systemProperty> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#object> <http://www.w3.org/2000/01/rdf-schema#comment> "An RDF Node or Variable describing the object of a triple." <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#object> <http://www.w3.org/2000/01/rdf-schema#label> "object" <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/sp> .
+<http://purl.org/dc/elements/1.1/type> <http://www.w3.org/2000/01/rdf-schema#label> "typ"@de <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/type> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition: \tThe nature or genre of the content of the resource.\nComment: \tType includes terms describing general categories, functions, genres, or aggregation levels for content. Recommended best practice is to select a value from a controlled vocabulary (for example, the DCMI Type Vocabulary [DCT1]). To describe the physical or digital manifestation of the resource, use the FORMAT element." <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/ontology/bibo/Standard> <http://purl.obolibrary.org/obo/IAO_0000115> "A specification giving a precise statement of a process or a service requirement, often sanctioned by a nation or industry" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Standard> <http://purl.obolibrary.org/obo/IAO_0000112> "Short Definition from OCLC Input Standards, EntW" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Standard> <http://www.w3.org/2000/01/rdf-schema#comment> "A document describing a standard"@en <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Standard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Standard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Standard> <http://www.w3.org/2000/01/rdf-schema#label> "Standard" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Standard> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Standard> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/ontology/bibo/"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Report> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/ontology/bibo/"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Report> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B50625a80b70eae92ee2dd24f67988448 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Report> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B346a240bd8995c79a05d33905755bac3 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Report> <http://purl.obolibrary.org/obo/IAO_0000112> "Medical Subject Heading (MeSH) definition of Technical Report: Work consisting of a formal report giving details of the investigation and results of a medical or other scientific problem. When issued by a government agency or comparable official body, its contents may be classified, unclassified, or declassified with regard to security clearance. This publication type may also cover a scientific paper or article that records the current state or current position of scientific research and development. If so labeled by the editor or publisher, this publication type may be properly used for journal articles." <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Report> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Report> <http://www.w3.org/2000/01/rdf-schema#comment> "A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc.."@en <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Report> <http://www.w3.org/2000/01/rdf-schema#label> "Report" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Report> <http://purl.obolibrary.org/obo/IAO_0000115> "A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc." <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Report> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Report> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Patent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Patent> <http://www.w3.org/2000/01/rdf-schema#comment> "A document describing the exclusive right granted by a government to an inventor to manufacture, use, or sell an invention for a certain number of years."@en <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Patent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Patent> <http://purl.obolibrary.org/obo/IAO_0000115> "(from BIBO) A document describing the exclusive right granted by a government to an inventor to manufacture, use, or sell an invention for a certain number of years" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Patent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B468aca276f78f3dab3304f2e1bb2ae8c <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Patent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/ontology/bibo/"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Patent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd7970178466c5957e903de8b510bc255 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Patent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B916ec6b8c4bf3ca6d91ab514938ce5df <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Patent> <http://purl.obolibrary.org/obo/IAO_0000112> "A patent is an exclusive right granted for an invention, which is a product or a process that provides, in general, a new way of doing something, or offers a new technical solution to a problem.  In order to be patentable, the invention must fulfill certain conditions. (http://www.wipo.int/patentscope/en/)" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Patent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfe903495d69a8a6e9f6626ce5f812b84 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Patent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Patent> <http://www.w3.org/2000/01/rdf-schema#label> "Patent" <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/ns/oa#describing> <http://www.w3.org/2000/01/rdf-schema#comment> "The motivation for when the user intends to describe the Target, as opposed to a comment about them." <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#describing> <http://www.w3.org/2000/01/rdf-schema#label> "describing" <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#describing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/oa#Motivation> <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#describing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/oa#> <http://www.w3.org/ns/oa#> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/describing.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BaX2Bdescribing .
+_:BaX2Bdescribing <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bdescribing <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+describing.nt> .
+_:BaX2Bdescribing <https://w3id.org/tree#value> "a" .
+_:BaX2Bdescribing <https://w3id.org/tree#value> "describing" .
+_:BaX2Bdescribing <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+describing.nt> <https://w3id.org/tree#remainingItems> "46"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BbX2Bdescribing .
+_:BbX2Bdescribing <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bdescribing <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+describing.nt> .
+_:BbX2Bdescribing <https://w3id.org/tree#value> "b" .
+_:BbX2Bdescribing <https://w3id.org/tree#value> "describing" .
+_:BbX2Bdescribing <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+describing.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BcX2Bdescribing .
+_:BcX2Bdescribing <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Bdescribing <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+describing.nt> .
+_:BcX2Bdescribing <https://w3id.org/tree#value> "c" .
+_:BcX2Bdescribing <https://w3id.org/tree#value> "describing" .
+_:BcX2Bdescribing <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+describing.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdX2Bdescribing .
+_:BdX2Bdescribing <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2Bdescribing <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+describing.nt> .
+_:BdX2Bdescribing <https://w3id.org/tree#value> "d" .
+_:BdX2Bdescribing <https://w3id.org/tree#value> "describing" .
+_:BdX2Bdescribing <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+describing.nt> <https://w3id.org/tree#remainingItems> "15"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdescribingX2Be .
+_:BdescribingX2Be <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdescribingX2Be <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/describing+e.nt> .
+_:BdescribingX2Be <https://w3id.org/tree#value> "describing" .
+_:BdescribingX2Be <https://w3id.org/tree#value> "e" .
+_:BdescribingX2Be <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/describing+e.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdescribingX2Bg .
+_:BdescribingX2Bg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdescribingX2Bg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/describing+g.nt> .
+_:BdescribingX2Bg <https://w3id.org/tree#value> "describing" .
+_:BdescribingX2Bg <https://w3id.org/tree#value> "g" .
+_:BdescribingX2Bg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/describing+g.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdescribingX2Bh .
+_:BdescribingX2Bh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdescribingX2Bh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/describing+h.nt> .
+_:BdescribingX2Bh <https://w3id.org/tree#value> "describing" .
+_:BdescribingX2Bh <https://w3id.org/tree#value> "h" .
+_:BdescribingX2Bh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/describing+h.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdescribingX2Bi .
+_:BdescribingX2Bi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdescribingX2Bi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/describing+i.nt> .
+_:BdescribingX2Bi <https://w3id.org/tree#value> "describing" .
+_:BdescribingX2Bi <https://w3id.org/tree#value> "i" .
+_:BdescribingX2Bi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/describing+i.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdescribingX2Bl .
+_:BdescribingX2Bl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdescribingX2Bl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/describing+l.nt> .
+_:BdescribingX2Bl <https://w3id.org/tree#value> "describing" .
+_:BdescribingX2Bl <https://w3id.org/tree#value> "l" .
+_:BdescribingX2Bl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/describing+l.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdescribingX2Bm .
+_:BdescribingX2Bm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdescribingX2Bm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/describing+m.nt> .
+_:BdescribingX2Bm <https://w3id.org/tree#value> "describing" .
+_:BdescribingX2Bm <https://w3id.org/tree#value> "m" .
+_:BdescribingX2Bm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/describing+m.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdescribingX2Bn .
+_:BdescribingX2Bn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdescribingX2Bn <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/describing+n.nt> .
+_:BdescribingX2Bn <https://w3id.org/tree#value> "describing" .
+_:BdescribingX2Bn <https://w3id.org/tree#value> "n" .
+_:BdescribingX2Bn <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/describing+n.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdescribingX2Bo .
+_:BdescribingX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdescribingX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/describing+o.nt> .
+_:BdescribingX2Bo <https://w3id.org/tree#value> "describing" .
+_:BdescribingX2Bo <https://w3id.org/tree#value> "o" .
+_:BdescribingX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/describing+o.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdescribingX2Bp .
+_:BdescribingX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdescribingX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/describing+p.nt> .
+_:BdescribingX2Bp <https://w3id.org/tree#value> "describing" .
+_:BdescribingX2Bp <https://w3id.org/tree#value> "p" .
+_:BdescribingX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/describing+p.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdescribingX2Br .
+_:BdescribingX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdescribingX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/describing+r.nt> .
+_:BdescribingX2Br <https://w3id.org/tree#value> "describing" .
+_:BdescribingX2Br <https://w3id.org/tree#value> "r" .
+_:BdescribingX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/describing+r.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdescribingX2Bs .
+_:BdescribingX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdescribingX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/describing+s.nt> .
+_:BdescribingX2Bs <https://w3id.org/tree#value> "describing" .
+_:BdescribingX2Bs <https://w3id.org/tree#value> "s" .
+_:BdescribingX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/describing+s.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdescribingX2Bt .
+_:BdescribingX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdescribingX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/describing+t.nt> .
+_:BdescribingX2Bt <https://w3id.org/tree#value> "describing" .
+_:BdescribingX2Bt <https://w3id.org/tree#value> "t" .
+_:BdescribingX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/describing+t.nt> <https://w3id.org/tree#remainingItems> "82"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdescribingX2Bu .
+_:BdescribingX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdescribingX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/describing+u.nt> .
+_:BdescribingX2Bu <https://w3id.org/tree#value> "describing" .
+_:BdescribingX2Bu <https://w3id.org/tree#value> "u" .
+_:BdescribingX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/describing+u.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/describing.nt> <https://w3id.org/tree#relation> _:BdescribingX2Bv .
+_:BdescribingX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdescribingX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/describing+v.nt> .
+_:BdescribingX2Bv <https://w3id.org/tree#value> "describing" .
+_:BdescribingX2Bv <https://w3id.org/tree#value> "v" .
+_:BdescribingX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/describing+v.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .

@@ -1,0 +1,630 @@
+<http://purl.org/spar/cito/supports> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/supports> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity provides intellectual or factual support for statements, ideas or conclusions presented in the cited entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/supports> <http://www.w3.org/2000/01/rdf-schema#label> "supports"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/supports> <http://purl.org/dc/elements/1.1/description> "Example: We support Galileo's statement [X], that Earth moves."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/supports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsEvidence> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/isCitedAsEvidenceBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsEvidence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsEvidence> <http://purl.org/dc/elements/1.1/description> "Example: We found an unquestionable demonstration of our hypothesis in [X]."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsEvidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsEvidence> <http://www.w3.org/2000/01/rdf-schema#label> "cites as evidence"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsEvidence> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity cites the cited entity as source of factual evidence for statements it contains."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/qualifies> <http://purl.org/dc/elements/1.1/description> "Example: Galileo's masterpiece 'Dialogo sopra i due massimi sistemi del mondo' [X] is formally a dialog and substantially a scientific pamphlet."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/qualifies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/qualifies> <http://www.w3.org/2000/01/rdf-schema#label> "qualifies"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/qualifies> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity qualifies or places conditions or restrictions upon statements, ideas or conclusions presented in the cited entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/qualifies> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/2000/01/rdf-schema#label> "citation"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/2002/07/owl#equivalentClass> _:B04968240c6a322af912cf2d61c8fb4c0 <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation is a conceptual directional link from a citing entity to a cited entity, created by a human performative act of making a citation, typically instantiated by the inclusion of a bibliographic reference (biro:BibliographicReference) in the reference list of the citing entity, or by the inclusion within the citing entity of a link, in the form of an HTTP Uniform Resource Locator (URL), to a resource on the World Wide Web.\n\nThe time span of a citation, i.e. the interval between the publication year of the citing entity and the publication year of the cited entity, can be recorded using the data property cito:hasCitationTimeSpan.\n\nThe nature or type of a citation can be characterized by using CiTO object properties, e.g. http://purl.org/spar/cito/citesAsDataSource (definition: “The citing entity cites the cited entity as a source of data”).  \n\nThis CiTO class cito:Citation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties. \n\nFor example, the following RDF statement\n\n     :paperA cito:extends :paperB .\n\ncan be alternatively described as follows\n\n     :thisCitation a cito:Citation ; \n          cito:hasCitingEntity :paperA ;\n          cito:hasCitationCharacterization cito:extends ;\n          cito:hasCitedEntity :paperB .\n\nThis usage involved OWL2 punning, whereby a CiTO object property, such as the aforementioned cito:extends, is used as the object of the OWL assertion.\n\n     :thisCitation cito:hasCitationCharacterization cito:extends .\n\nUsing such OWL2 punning (described at http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), the CiTO object property is considered as a proper named individual of the class owl:Thing. \n\nSuch reification of citation acts can be very useful, since it permits one to combine these CiTO properties with other vocabularies, or to handle situations in which none of the citation characterizations available in CiTO are applicable.  \n\nSuch situations can be resolved by the creation of a user-defined citation characterization, for example by using the Open Annotation Data Model, as explained at http://semanticpublishing.wordpress.com/2013/07/03/extending-cito-for-open-annotations/."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isDisputedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is disputed by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isDisputedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isDisputedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity presents statements, ideas or conclusions that are disputed by the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isDisputedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isReviewedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isReviewedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/reviews> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isReviewedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity presents statements, ideas or conclusions that are reviewed by the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isReviewedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isReviewedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is reviewed by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isQualifiedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/qualifies> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isQualifiedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity presents statements, ideas or conclusions that are qualified or have conditions placed upon them by the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isQualifiedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isQualifiedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is qualified by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isQualifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/repliesTo> <http://www.w3.org/2000/01/rdf-schema#label> "replies to"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/repliesTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity replies to statements, ideas or criticisms presented in the cited entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/repliesTo> <http://purl.org/dc/elements/1.1/description> "Example: We will not investigate the issues of the approach proposed in [X] here, but rather we introduce yet another alternative."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/repliesTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/repliesTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/deo/ProblemStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/ProblemStatement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/DiscourseElement> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/ProblemStatement> <http://purl.org/dc/elements/1.1/description> "A concise description of the issues that needed to be addressed by a work described in the document."@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/ProblemStatement> <http://www.w3.org/2000/01/rdf-schema#label> "problem statement"@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/doco/Sentence> <http://www.w3.org/2000/01/rdf-schema#label> "sentence"@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Sentence> <http://www.w3.org/2000/01/rdf-schema#comment> "An expression in natural language forming a single grammatical unit. A sentence minimally consists of a subject and an intransitive verb, or a subject, a transitive verb and an object, and may include additional dependent clauses. In written text, a sentence is always terminated by a full stop. A sentence can include words grouped meaningfully to express a statement, a question, an exclamation, a request or a command."@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Sentence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/DiscourseElement> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Sentence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.essepuntato.it/2008/12/pattern#Inline> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Sentence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/doco> .
+<http://purl.org/spar/fabio/Retraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Retraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Announcement> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Retraction> <http://www.w3.org/2000/01/rdf-schema#label> "retraction"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Retraction> <http://www.w3.org/2000/01/rdf-schema#comment> "A formal statement retracting a statement or publication\nA retraction is a public statement made about an earlier statement that withdraws, cancels, refutes, diametrically reverses the original statement or ceases and desists from publishing the original statement. "@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Announcement> <http://www.w3.org/2000/01/rdf-schema#label> "announcement"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Announcement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Work> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Announcement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Announcement> <http://www.w3.org/2000/01/rdf-schema#comment> "A formal statement about something."@en <http://purl.org/spar/fabio> .
+<http://purl.org/dc/terms/rights> <http://www.w3.org/2000/01/rdf-schema#comment> "Information about rights held in and over the resource.\n\nTypically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights."@en <http://purl.org/spar/fabio> .
+<http://purl.org/dc/terms/rights> <http://www.w3.org/2000/01/rdf-schema#label> "has rights"@en <http://purl.org/spar/fabio> .
+<http://purl.org/dc/terms/rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/fabio> .
+<http://purl.org/dc/terms/rights> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/scoro/spokesperson> <http://www.w3.org/2000/01/rdf-schema#label> "spokesperson"@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/spokesperson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/spokesperson> <http://www.w3.org/2000/01/rdf-schema#comment> "The role held by a person who makes statements on behalf of another individual, a group, a project or an institution"@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/spokesperson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> <http://purl.org/spar/scoro/> .
+<http://purl.org/tio/ns#from> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#from> <http://www.w3.org/2000/01/rdf-schema#label> "from (1..1)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#from> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/tio/ns#TransportationService> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#from> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#from> <http://www.w3.org/2000/01/rdf-schema#range> _:B1cb7d4a82dfdba1fcdf1a73ee4707bbc <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#from> <http://www.w3.org/2000/01/rdf-schema#comment> "This indicates the location of origin and time of departure.\n\nNote: When the object of the statement is a tio:Stop, one can indicate the exact date and time for a single connection.\nIf such a level of detail is not needed, you can directly link to a point of interest, e.g. an instance of tio:POI."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#via> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#via> <http://www.w3.org/2000/01/rdf-schema#label> "via (0..*)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#via> <http://www.w3.org/2000/01/rdf-schema#comment> "This indicates the location, time of arrival, and time of departure for an intermediate stop.\n\nNote: When the object of the statement is a tio:Stop, one can indicate the exact date and time for a single connection.\nIf such a level of detail is not needed, you can directly link to a point of interest, e.g. an instance of tio:POI."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#via> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/tio/ns#TransportationService> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#via> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#via> <http://www.w3.org/2000/01/rdf-schema#range> _:Bd6729a12191e6f8da35e18d0ad31a40d <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#to> <http://www.w3.org/2000/01/rdf-schema#range> _:B0de7316be5d21352236e165a23d6a566 <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#to> <http://www.w3.org/2000/01/rdf-schema#comment> "This indicates the destination and time of arrival.\n\nNote: When the object of the statement is a tio:Stop, one can indicate the exact date and time for a single connection.\nIf such a level of detail is not needed, you can directly link to a point of interest, e.g. an instance of tio:POI."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#to> <http://www.w3.org/2000/01/rdf-schema#label> "to (1..1)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#to> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#to> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/tio/ns#TransportationService> <http://purl.org/tio/ns#> .
+<http://purl.org/vocab/changeset/schema#statement> <http://purl.org/dc/terms/issued> "2006-03-21" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#statement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/changeset/schema#ChangeSet> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#statement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#statement> <http://www.w3.org/2000/01/rdf-schema#label> "statement"@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#statement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#statement> <http://www.w3.org/2004/02/skos/core#definition> "a triple included in this set of changes"@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocab/changeset/schema> .
+<http://purl.uniprot.org/core/falseNegative> <http://www.w3.org/2000/01/rdf-schema#comment> "True if a statement is true even though it was not predicted." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/falseNegative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/falseNegative> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/falseNegative> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/falseNegative> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.uniprot.org/core/Domain_Assignment_Statement> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/falseNegative> <http://www.w3.org/2000/01/rdf-schema#label> "false negative" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Attribution> <http://www.w3.org/2000/01/rdf-schema#comment> "Entity used to attach evidence or provenance to a rdf statement via reification."@en <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Attribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf381170dc51b494a469d13a5d8c5f1af <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#comment> "The relationship between a resource and a citation." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd849a84c562b6e747674a31c7b3dacd6 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Citation Statement" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Family_Membership_Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Family_Membership_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Family_Membership_Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Family Membership Statement" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Family_Membership_Statement> <http://www.w3.org/2000/01/rdf-schema#comment> "The relationship between a protein and a protein family." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Nucleotide_Mapping_Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Nucleotide_Mapping_Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Nucleotide Mapping Statement" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Nucleotide_Mapping_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Nucleotide_Mapping_Statement> <http://www.w3.org/2000/01/rdf-schema#comment> "The relationship between a protein and a nucleotide sequence." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Domain_Assignment_Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Domain Assignment Statement" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Domain_Assignment_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Domain_Assignment_Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Domain_Assignment_Statement> <http://www.w3.org/2000/01/rdf-schema#comment> "The relationship between a protein and a protein domain." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/status> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.uniprot.org/core/Status> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/status> <http://www.w3.org/2000/01/rdf-schema#comment> "The reliability of a statement." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Structure_Mapping_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Structure_Mapping_Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Structure_Mapping_Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Structure Mapping Statement" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Structure_Mapping_Statement> <http://www.w3.org/2000/01/rdf-schema#comment> "The relationship between a protein and a 3D structure." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Endpoint_Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Endpoint Statement" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Endpoint_Statement> <http://www.w3.org/2000/01/rdf-schema#comment> "Metadata for an endpoint of a range on a sequence." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Endpoint_Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Endpoint_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/certain> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0e4119e30b2c9a91b44b7ea71e6eccc9 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/certain> <http://www.w3.org/2000/01/rdf-schema#domain> _:Be5629b1e2c0b9dc86212ca27b12a46b8 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/certain> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/certain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/certain> <http://www.w3.org/2000/01/rdf-schema#comment> "False if there is any uncertainty about a statement." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/certain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.uniprot.org/core/> .
+<http://rdaregistry.info/Elements/m/P30121> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.5.4" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30121> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30121> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a statement relating to the identification of any persons, families, or corporate bodies responsible for the edition being described but not to all editions."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30121> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30121> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60343> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30121> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30121> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30121> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A statement relating to the identification of any persons, families, or corporate bodies responsible for the edition being described but not to all editions."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30121> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/statementOfResponsibilityRelatingToTheEdition.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30121> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "statement of responsibility relating to the edition"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30121> <http://www.w3.org/2000/01/rdf-schema#label> "has statement of responsibility relating to the edition"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30121> <http://metadataregistry.org/uri/profile/RegAp/name> "statementOfResponsibilityRelatingToTheEdition"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30108> <http://metadataregistry.org/uri/profile/RegAp/name> "distributionStatement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30108> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30108> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30108> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "distribution statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30108> <http://www.w3.org/2000/01/rdf-schema#label> "has distribution statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30108> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A statement identifying the place or places of distribution, distributor or distributors, and date or dates of distribution of a resource in a published form."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30108> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.9" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30108> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30108> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a statement identifying the place or places of distribution, distributor or distributors, and date or dates of distribution of a resource in a published form."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30108> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30108> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/distributionStatement.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30108> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60330> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30058> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/m/P30137> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30058> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A note providing information on complex series statements, incorrect numbering within series, or changes in series statements."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30058> <http://www.w3.org/2000/01/rdf-schema#label> "has note on series statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30058> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "note on series statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30058> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30058> <http://metadataregistry.org/uri/profile/RegAp/name> "noteOnSeriesStatement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30058> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/noteOnSeriesStatement.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30058> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a note providing information on complex series statements, incorrect numbering within series, or changes in series statements."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30058> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.17.11" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30058> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30058> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30058> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60131> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30058> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30116> <http://www.w3.org/2000/01/rdf-schema#label> "has parallel statement of responsibility relating to title proper"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30116> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30116> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.4.3" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30116> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30116> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30116> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a statement of responsibility relating to title proper in a language and/or script that differs from that recorded in the statement of responsibility relating to title proper element."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30116> <http://metadataregistry.org/uri/profile/RegAp/name> "parallelStatementOfResponsibilityRelatingToTitleProper"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30116> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30116> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/m/P30117> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30116> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A statement of responsibility relating to title proper in a language and/or script that differs from that recorded in the statement of responsibility relating to title proper element."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30116> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/parallelStatementOfResponsibilityRelatingToTitleProper.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30116> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "parallel statement of responsibility relating to title proper"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30116> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60338> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30053> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30053> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30053> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.17.9" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30053> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A note providing details on place of manufacture, manufacturer, or date of manufacture, or information on changes in the place of manufacture, manufacturer, or manufacturer"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30053> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30053> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60126> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30053> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a note providing details on place of manufacture, manufacturer, or date of manufacture, or information on changes in the place of manufacture, manufacturer, or manufacturer’s name."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30053> <http://www.w3.org/2000/01/rdf-schema#label> "has note on manufacture statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30053> <http://metadataregistry.org/uri/profile/RegAp/name> "noteOnManufactureStatement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30053> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30053> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/noteOnManufactureStatement.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30053> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "note on manufacture statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30053> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/m/P30137> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30111> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A statement identifying the place or places of publication, publisher or publishers, and date or dates of publication of a resource."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30111> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30111> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "publication statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30111> <http://www.w3.org/2004/02/skos/core#scopeNote> "Publication statements include statements relating to the publication, release, or issuing of a resource."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30111> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/publicationStatement.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30111> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60333> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30111> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30111> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30111> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a statement identifying the place or places of publication, publisher or publishers, and date or dates of publication of a resource."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30111> <http://www.w3.org/2000/01/rdf-schema#label> "has publication statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30111> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.8" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30111> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30111> <http://metadataregistry.org/uri/profile/RegAp/name> "publicationStatement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30119> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "statement of responsibility relating to series"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30119> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A statement relating to the identification of any persons, families, or corporate bodies responsible for a series."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30119> <http://metadataregistry.org/uri/profile/RegAp/name> "statementOfResponsibilityRelatingToSeries"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30119> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30119> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a statement relating to the identification of any persons, families, or corporate bodies responsible for a series."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30119> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30119> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/statementOfResponsibilityRelatingToSeries.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30119> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.12.6" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30119> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30119> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30119> <http://www.w3.org/2000/01/rdf-schema#label> "has statement of responsibility relating to series"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30119> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60341> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30106> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.12" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30106> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30106> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/seriesStatement.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30106> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30106> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30106> <http://www.w3.org/2004/02/skos/core#scopeNote> "A series statement may also include information identifying one or more subseries to which the resource being described belongs. Series statements sometimes include statements of responsibility relating to a series or subseries."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30106> <http://www.w3.org/2000/01/rdf-schema#label> "has series statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30106> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a statement identifying a series to which a resource belongs and the numbering of the resource within the series."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30106> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30106> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A statement identifying a series to which a resource belongs and the numbering of the resource within the series."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30106> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60328> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30106> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "series statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30106> <http://metadataregistry.org/uri/profile/RegAp/name> "seriesStatement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30114> <http://metadataregistry.org/uri/profile/RegAp/name> "parallelStatementOfResponsibilityRelatingToSubseries"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30114> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/parallelStatementOfResponsibilityRelatingToSubseries.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30114> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30114> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.12.15" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30114> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30114> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a statement of responsibility relating to subseries in a language and/or script that differs from that recorded in the statement of responsibility relating to subseries element."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30114> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A statement of responsibility relating to subseries in a language and/or script that differs from that recorded in the statement of responsibility relating to subseries element."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30114> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30114> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30114> <http://www.w3.org/2000/01/rdf-schema#label> "has parallel statement of responsibility relating to subseries"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30114> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "parallel statement of responsibility relating to subseries"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30114> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60336> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30064> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.17.4" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30064> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30064> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A note providing information on the source of an edition statement, on edition statements relating to issues, parts, etc., on changes in edition statements, or other information relating to an edition statement."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30064> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "note on edition statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30064> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/noteOnEditionStatement.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30064> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/m/P30137> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30064> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30064> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30064> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a note providing information on the source of an edition statement, on edition statements relating to issues, parts, etc., on changes in edition statements, or other information relating to an edition statement."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30064> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30064> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60137> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30064> <http://metadataregistry.org/uri/profile/RegAp/name> "noteOnEditionStatement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30064> <http://www.w3.org/2000/01/rdf-schema#label> "has note on edition statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30109> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A statement identifying the place or places of manufacture, manufacturer or manufacturers, and date or dates of manufacture of a resource in a published form."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30109> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30109> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.1" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30109> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "manufacture statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30109> <http://www.w3.org/2004/02/skos/core#scopeNote> "Manufacture statements include statements relating to the printing, duplicating, casting, etc., of a resource in a published form."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30109> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30109> <http://www.w3.org/2000/01/rdf-schema#label> "has manufacture statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30109> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/manufactureStatement.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30109> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30109> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30109> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60331> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30109> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a statement identifying the place or places of manufacture, manufacturer or manufacturers, and date or dates of manufacture of a resource in a published form."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30109> <http://metadataregistry.org/uri/profile/RegAp/name> "manufactureStatement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.4" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://www.w3.org/2004/02/skos/core#scopeNote> "A statement of responsibility sometimes includes words or phrases that are neither names nor linking words."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://metadataregistry.org/uri/profile/RegAp/name> "statementOfResponsibility"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60339> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://www.w3.org/2000/01/rdf-schema#label> "has statement of responsibility"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a statement relating to the identification and/or function of any persons, families, or corporate bodies responsible for the creation of, or contributing to the realization of, the intellectual or artistic content of a resource."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/statementOfResponsibility.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A statement relating to the identification and/or function of any persons, families, or corporate bodies responsible for the creation of, or contributing to the realization of, the intellectual or artistic content of a resource."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "statement of responsibility"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/m/P30116> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30117> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/m/P30105> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A note providing details on place of production, producer, or date of production, or information on changes in the place of production, producer, or producer"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60127> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a note providing details on place of production, producer, or date of production, or information on changes in the place of production, producer, or producer’s name."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/m/P30137> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://www.w3.org/2000/01/rdf-schema#label> "has note on production statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/noteOnProductionStatement.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://metadataregistry.org/uri/profile/RegAp/name> "noteOnProductionStatement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "note on production statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30054> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.17.6" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30112> <http://www.w3.org/2000/01/rdf-schema#label> "has parallel statement of responsibility relating to a named revision of an edition"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30112> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/parallelStatementOfResponsibilityRelatingToANamedRevisionOfAnEdition.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30112> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60334> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30112> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.5.9" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30112> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A statement of responsibility relating to a named revision of an edition in a language and/or script that differs from that recorded in the statement of responsibility relating to a named revision of an edition element."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30112> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30112> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30112> <http://metadataregistry.org/uri/profile/RegAp/name> "parallelStatementOfResponsibilityRelatingToANamedRevisionOfAnEdition"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30112> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "parallel statement of responsibility relating to a named revision of an edition"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30112> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30112> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a statement of responsibility relating to a named revision of an edition in a language and/or script that differs from that recorded in the statement of responsibility relating to a named revision of an edition element."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30112> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30120> <http://metadataregistry.org/uri/profile/RegAp/name> "statementOfResponsibilityRelatingToSubseries"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30120> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30120> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60342> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30120> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.12.14" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30120> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30120> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30120> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "statement of responsibility relating to subseries"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30120> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A statement relating to the identification of any persons, families, or corporate bodies responsible for a subseries."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30120> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30120> <http://www.w3.org/2000/01/rdf-schema#label> "has statement of responsibility relating to subseries"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30120> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a statement relating to the identification of any persons, families, or corporate bodies responsible for a subseries."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30120> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/statementOfResponsibilityRelatingToSubseries.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30107> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a statement identifying the edition to which a resource belongs."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30107> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60329> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30107> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30107> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/editionStatement.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30107> <http://www.w3.org/2000/01/rdf-schema#label> "has edition statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30107> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30107> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A statement identifying the edition to which a resource belongs."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30107> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.5" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30107> <http://metadataregistry.org/uri/profile/RegAp/name> "editionStatement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30107> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30107> <http://www.w3.org/2004/02/skos/core#scopeNote> "An edition statement sometimes includes a designation of a named revision of an edition. An edition statement sometimes includes a statement or statements of responsibility relating to the edition and/or to a named revision of an edition."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30107> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "edition statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30107> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30057> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A note providing information on a person, family, or corporate body not named in a statement of responsibility to whom responsibility for the intellectual or artistic content of the resource has been attributed, on variant forms of names appearing in the resource, on changes in statements of responsibility, or on other details relating to a statement of responsibility."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30057> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/noteOnStatementOfResponsibility.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30057> <http://www.w3.org/2000/01/rdf-schema#label> "has note on statement of responsibility"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30057> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30057> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30057> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60130> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30057> <http://metadataregistry.org/uri/profile/RegAp/name> "noteOnStatementOfResponsibility"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30057> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30057> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/m/P30137> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30057> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30057> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a note providing information on a person, family, or corporate body not named in a statement of responsibility to whom responsibility for the intellectual or artistic content of the resource has been attributed, on variant forms of names appearing in the resource, on changes in statements of responsibility, or on other details relating to a statement of responsibility."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30057> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.17.3" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30057> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "note on statement of responsibility"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30115> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/parallelStatementOfResponsibilityRelatingToTheEdition.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30115> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30115> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A statement of responsibility relating to the edition in a language and/or script that differs from that recorded in the statement of responsibility relating to the edition element."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30115> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30115> <http://metadataregistry.org/uri/profile/RegAp/name> "parallelStatementOfResponsibilityRelatingToTheEdition"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30115> <http://www.w3.org/2000/01/rdf-schema#label> "has parallel statement of responsibility relating to the edition"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30115> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30115> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "parallel statement of responsibility relating to the edition"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30115> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a statement of responsibility relating to the edition in a language and/or script that differs from that recorded in the statement of responsibility relating to the edition element."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30115> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60337> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30115> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30115> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.5.5" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30052> <http://www.w3.org/2000/01/rdf-schema#label> "has note on distribution statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30052> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "note on distribution statement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30052> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30052> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/m/P30137> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30052> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A note providing details on place of distribution, distributor, or date of distribution, or information on changes in the place of distribution, distributor, or distributor"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30052> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/noteOnDistributionStatement.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30052> <http://metadataregistry.org/uri/profile/RegAp/name> "noteOnDistributionStatement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30052> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30052> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30052> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.17.8" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30052> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30052> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60125> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30052> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a note providing details on place of distribution, distributor, or date of distribution, or information on changes in the place of distribution, distributor, or distributor’s name."@en <http://rdaregistry.info/Elements/m> .
+<http://salt.semanticauthoring.org/ontologies/sro#Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://salt.semanticauthoring.org/ontologies/sro> .
+<http://salt.semanticauthoring.org/ontologies/sro#Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Statement" <http://salt.semanticauthoring.org/ontologies/sro> .
+<http://salt.semanticauthoring.org/ontologies/sro#Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://salt.semanticauthoring.org/ontologies/sro> .
+<http://semanticscience.org/resource/SIO_001183> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000256> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001183> <http://purl.org/dc/elements/1.1/identifier> "SIO_001183" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001183> <http://www.w3.org/2000/01/rdf-schema#label> "statement"@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001183> <http://purl.org/dc/terms/description> "A statement is a proposition that is either (a) a meaningful declarative sentence that is either true or false, or (b) that which a true or false declarative sentence asserts."@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001183> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001183> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> <http://semanticscience.org/ontology/sio.owl> .
+<http://www.ontotext.com/proton/protontop#Statement> <http://www.w3.org/2000/01/rdf-schema#comment> "A message that is stated or declared; a communication (oral or written), setting forth particulars or facts, etc; \"according to his statement he was in London on that day\". WordNet 1.7.1"@en <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protontop#Object> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Statement"@en <http://www.ontotext.com/proton/protontop> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of RDF statements." <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Statement" <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+<http://purl.org/xapi/ontology#Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> <http://purl.org/xapi/ontology#> .
+<http://purl.org/xapi/ontology#Statement> <http://www.w3.org/2000/01/rdf-schema#comment> "The class for xAPI Statements, mainly for use with Statements in vocabulary examples."@en <http://purl.org/xapi/ontology#> .
+<http://purl.org/xapi/ontology#Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/xapi/ontology#> .
+<http://purl.org/xapi/ontology#Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Statement"@en <http://purl.org/xapi/ontology#> .
+<http://ns.inria.fr/ludo/v1/xapi#hasStatement> <http://www.w3.org/2000/01/rdf-schema#range> <http://ns.inria.fr/ludo/v1/xapi#Object> <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#hasStatement> <http://www.w3.org/2000/01/rdf-schema#label> "Statement"@en <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#hasStatement> <http://www.w3.org/2000/01/rdf-schema#comment> "Another Statement, which should be considered as context for this Statement."@en <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#hasStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#hasStatement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ludo/v1/xapi#Context> <http://ns.inria.fr/ludo/v1/xapi> .
+<http://purl.org/voc/summa/statement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/voc/summa/Summary> <http://purl.org/voc/summa/> .
+<http://purl.org/voc/summa/statement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://purl.org/voc/summa/> .
+<http://purl.org/voc/summa/statement> <http://www.w3.org/2000/01/rdf-schema#label> "statement"@en <http://purl.org/voc/summa/> .
+<http://purl.org/voc/summa/statement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/voc/summa/> <http://purl.org/voc/summa/> .
+<http://purl.org/voc/summa/statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/voc/summa/> .
+<http://qudt.org/schema/qudt/Statement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/Statement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/2.1/schema/qudt> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Statement" <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://qudt.org/schema/qudt> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/statement.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:Bstatementa .
+_:Bstatementa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstatementa <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statementa.nt> .
+_:Bstatementa <https://w3id.org/tree#value> "statementa" .
+_:Bstatementa <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statementa.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:Bstatementc .
+_:Bstatementc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstatementc <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statementc.nt> .
+_:Bstatementc <https://w3id.org/tree#value> "statementc" .
+_:Bstatementc <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statementc.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:Bstatementd .
+_:Bstatementd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstatementd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statementd.nt> .
+_:Bstatementd <https://w3id.org/tree#value> "statementd" .
+_:Bstatementd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statementd.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:Bstatemente .
+_:Bstatemente <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstatemente <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statemente.nt> .
+_:Bstatemente <https://w3id.org/tree#value> "statemente" .
+_:Bstatemente <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statemente.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:Bstatementf .
+_:Bstatementf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstatementf <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statementf.nt> .
+_:Bstatementf <https://w3id.org/tree#value> "statementf" .
+_:Bstatementf <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statementf.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:Bstatementh .
+_:Bstatementh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstatementh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statementh.nt> .
+_:Bstatementh <https://w3id.org/tree#value> "statementh" .
+_:Bstatementh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statementh.nt> <https://w3id.org/tree#remainingItems> "30"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:Bstatementi .
+_:Bstatementi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstatementi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statementi.nt> .
+_:Bstatementi <https://w3id.org/tree#value> "statementi" .
+_:Bstatementi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statementi.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:Bstatementm .
+_:Bstatementm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstatementm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statementm.nt> .
+_:Bstatementm <https://w3id.org/tree#value> "statementm" .
+_:Bstatementm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statementm.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:Bstatementn .
+_:Bstatementn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstatementn <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statementn.nt> .
+_:Bstatementn <https://w3id.org/tree#value> "statementn" .
+_:Bstatementn <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statementn.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:Bstatementp .
+_:Bstatementp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstatementp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statementp.nt> .
+_:Bstatementp <https://w3id.org/tree#value> "statementp" .
+_:Bstatementp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statementp.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:Bstatementr .
+_:Bstatementr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstatementr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statementr.nt> .
+_:Bstatementr <https://w3id.org/tree#value> "statementr" .
+_:Bstatementr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statementr.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:Bstatements .
+_:Bstatements <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstatements <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statements.nt> .
+_:Bstatements <https://w3id.org/tree#value> "statements" .
+_:Bstatements <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statements.nt> <https://w3id.org/tree#remainingItems> "52"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:Bstatementt .
+_:Bstatementt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstatementt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statementt.nt> .
+_:Bstatementt <https://w3id.org/tree#value> "statementt" .
+_:Bstatementt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statementt.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:Bstatementu .
+_:Bstatementu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstatementu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statementu.nt> .
+_:Bstatementu <https://w3id.org/tree#value> "statementu" .
+_:Bstatementu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statementu.nt> <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BaX2Bstatement .
+_:BaX2Bstatement <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bstatement <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+statement.nt> .
+_:BaX2Bstatement <https://w3id.org/tree#value> "a" .
+_:BaX2Bstatement <https://w3id.org/tree#value> "statement" .
+_:BaX2Bstatement <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+statement.nt> <https://w3id.org/tree#remainingItems> "29"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BbX2Bstatement .
+_:BbX2Bstatement <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bstatement <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+statement.nt> .
+_:BbX2Bstatement <https://w3id.org/tree#value> "b" .
+_:BbX2Bstatement <https://w3id.org/tree#value> "statement" .
+_:BbX2Bstatement <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+statement.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BcX2Bstatement .
+_:BcX2Bstatement <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Bstatement <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+statement.nt> .
+_:BcX2Bstatement <https://w3id.org/tree#value> "c" .
+_:BcX2Bstatement <https://w3id.org/tree#value> "statement" .
+_:BcX2Bstatement <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+statement.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BdX2Bstatement .
+_:BdX2Bstatement <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2Bstatement <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+statement.nt> .
+_:BdX2Bstatement <https://w3id.org/tree#value> "d" .
+_:BdX2Bstatement <https://w3id.org/tree#value> "statement" .
+_:BdX2Bstatement <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+statement.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BeX2Bstatement .
+_:BeX2Bstatement <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2Bstatement <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+statement.nt> .
+_:BeX2Bstatement <https://w3id.org/tree#value> "e" .
+_:BeX2Bstatement <https://w3id.org/tree#value> "statement" .
+_:BeX2Bstatement <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+statement.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BfX2Bstatement .
+_:BfX2Bstatement <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2Bstatement <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+statement.nt> .
+_:BfX2Bstatement <https://w3id.org/tree#value> "f" .
+_:BfX2Bstatement <https://w3id.org/tree#value> "statement" .
+_:BfX2Bstatement <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+statement.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BhX2Bstatement .
+_:BhX2Bstatement <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2Bstatement <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+statement.nt> .
+_:BhX2Bstatement <https://w3id.org/tree#value> "h" .
+_:BhX2Bstatement <https://w3id.org/tree#value> "statement" .
+_:BhX2Bstatement <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+statement.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BiX2Bstatement .
+_:BiX2Bstatement <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2Bstatement <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+statement.nt> .
+_:BiX2Bstatement <https://w3id.org/tree#value> "i" .
+_:BiX2Bstatement <https://w3id.org/tree#value> "statement" .
+_:BiX2Bstatement <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+statement.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BmX2Bstatement .
+_:BmX2Bstatement <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2Bstatement <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+statement.nt> .
+_:BmX2Bstatement <https://w3id.org/tree#value> "m" .
+_:BmX2Bstatement <https://w3id.org/tree#value> "statement" .
+_:BmX2Bstatement <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+statement.nt> <https://w3id.org/tree#remainingItems> "16"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BnX2Bstatement .
+_:BnX2Bstatement <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnX2Bstatement <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/n+statement.nt> .
+_:BnX2Bstatement <https://w3id.org/tree#value> "n" .
+_:BnX2Bstatement <https://w3id.org/tree#value> "statement" .
+_:BnX2Bstatement <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/n+statement.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BoX2Bstatement .
+_:BoX2Bstatement <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2Bstatement <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+statement.nt> .
+_:BoX2Bstatement <https://w3id.org/tree#value> "o" .
+_:BoX2Bstatement <https://w3id.org/tree#value> "statement" .
+_:BoX2Bstatement <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+statement.nt> <https://w3id.org/tree#remainingItems> "112"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BrX2Bstatement .
+_:BrX2Bstatement <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrX2Bstatement <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/r+statement.nt> .
+_:BrX2Bstatement <https://w3id.org/tree#value> "r" .
+_:BrX2Bstatement <https://w3id.org/tree#value> "statement" .
+_:BrX2Bstatement <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/r+statement.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BsX2Bstatement .
+_:BsX2Bstatement <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsX2Bstatement <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/s+statement.nt> .
+_:BsX2Bstatement <https://w3id.org/tree#value> "s" .
+_:BsX2Bstatement <https://w3id.org/tree#value> "statement" .
+_:BsX2Bstatement <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/s+statement.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BstatementX2Bt .
+_:BstatementX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BstatementX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statement+t.nt> .
+_:BstatementX2Bt <https://w3id.org/tree#value> "statement" .
+_:BstatementX2Bt <https://w3id.org/tree#value> "t" .
+_:BstatementX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statement+t.nt> <https://w3id.org/tree#remainingItems> "20"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BstatementX2Bu .
+_:BstatementX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BstatementX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statement+u.nt> .
+_:BstatementX2Bu <https://w3id.org/tree#value> "statement" .
+_:BstatementX2Bu <https://w3id.org/tree#value> "u" .
+_:BstatementX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statement+u.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BstatementX2Bv .
+_:BstatementX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BstatementX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statement+v.nt> .
+_:BstatementX2Bv <https://w3id.org/tree#value> "statement" .
+_:BstatementX2Bv <https://w3id.org/tree#value> "v" .
+_:BstatementX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statement+v.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BstatementX2Bw .
+_:BstatementX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BstatementX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statement+w.nt> .
+_:BstatementX2Bw <https://w3id.org/tree#value> "statement" .
+_:BstatementX2Bw <https://w3id.org/tree#value> "w" .
+_:BstatementX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statement+w.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/statement.nt> <https://w3id.org/tree#relation> _:BstatementX2Bx .
+_:BstatementX2Bx <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BstatementX2Bx <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/statement+x.nt> .
+_:BstatementX2Bx <https://w3id.org/tree#value> "statement" .
+_:BstatementX2Bx <https://w3id.org/tree#value> "x" .
+_:BstatementX2Bx <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/statement+x.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .

@@ -1,0 +1,281 @@
+<http://www.w3.org/ns/r2rml#graphMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/r2rml#GraphMap> <http://www.w3.org/ns/r2rml#> .
+<http://www.w3.org/ns/r2rml#graphMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/ns/r2rml#> .
+<http://www.w3.org/ns/r2rml#graphMap> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bf3a37baa95c20afe56ab70a68b85732b <http://www.w3.org/ns/r2rml#> .
+<http://www.w3.org/ns/r2rml#graphMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a GraphMap. When used with a SubjectMap element, all the RDF triples generated from a logical row will be stored in the specified named graph. Otherwise, the RDF triple generated using the (predicate, object) pair will be stored in the specified named graph."@en <http://www.w3.org/ns/r2rml#> .
+<http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the TriplesMap element corresponding to the parent logical table of the foreign key constraint."@en <http://www.w3.org/ns/r2rml#> .
+<http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/r2rml#TriplesMap> <http://www.w3.org/ns/r2rml#> .
+<http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/r2rml#RefObjectMap> <http://www.w3.org/ns/r2rml#> .
+<http://www.w3.org/ns/r2rml#parentTriplesMap> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/ns/r2rml#> .
+<http://www.w3.org/ns/sparql-service-description#EmptyGraphs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/sparql-service-description#Feature> <http://www.w3.org/ns/sparql-service-description> .
+<http://www.w3.org/ns/sparql-service-description#EmptyGraphs> <http://www.w3.org/2000/01/rdf-schema#comment> "sd:EmptyGraphs, when used as the object of the sd:feature property, indicates that the underlying graph store supports empty graphs. A graph store that supports empty graphs MUST NOT remove graphs that are left empty after triples are removed from them." <http://www.w3.org/ns/sparql-service-description> .
+<http://www.w3.org/ns/sparql-service-description#EmptyGraphs> <http://www.w3.org/2000/01/rdf-schema#label> "Empty Graphs" <http://www.w3.org/ns/sparql-service-description> .
+<http://purl.org/hpi/patchr#Patch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/hpi/patchr#> <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#Patch> <http://www.w3.org/2000/01/rdf-schema#label> "Patch"@en <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#Patch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B467b2dcf17b90771b15fca9c1d47ed17 <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#Patch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7ff383b3c909c5330ed9ea8d4c776d27 <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#Patch> <http://www.w3.org/2000/01/rdf-schema#comment> "A patch is a request to add, change or delete certain triples (or subgraphs) within a dataset. A patch refers to an guo:UpdateInstruction. For convenient retrieval a patch should be described with provenance data, a patch type and a dataset it applies to."@en <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#Patch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#update> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to a guo:UpdateInstruction. There must be exactly one guo:UpdateInstruction per :Patch. The guo:UpdateInstruction either is a deletion, insertion, or replacement of triples for one particular subject resource."@en <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#update> <http://www.w3.org/2000/01/rdf-schema#range> <http://webr3.org/owl/guo#UpdateInstruction> <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#update> <http://www.w3.org/2000/01/rdf-schema#label> "update"@en <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#update> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/hpi/patchr#> <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#update> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#update> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/hpi/patchr#Patch> <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#update> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/hpi/patchr#> .
+<https://vocab.eccenca.com/revision/deltaInsert> <http://www.w3.org/2000/01/rdf-schema#label> "insert delta"@en <https://vocab.eccenca.com/revision/> .
+<https://vocab.eccenca.com/revision/deltaInsert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://vocab.eccenca.com/revision/> .
+<https://vocab.eccenca.com/revision/deltaInsert> <http://www.w3.org/2000/01/rdf-schema#comment> "The IRI of the named graph containing the inserted triples of a revision (compared to its previous revision)"@en <https://vocab.eccenca.com/revision/> .
+<https://vocab.eccenca.com/revision/deltaInsert> <http://www.w3.org/2000/01/rdf-schema#domain> <https://vocab.eccenca.com/revision/Revision> <https://vocab.eccenca.com/revision/> .
+<https://vocab.eccenca.com/revision/deltaInsert> <http://purl.org/dc/terms/modified> "2014-12-16"^^<http://www.w3.org/2001/XMLSchema#date> <https://vocab.eccenca.com/revision/> .
+<https://vocab.eccenca.com/revision/deltaInsert> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://vocab.eccenca.com/revision/> <https://vocab.eccenca.com/revision/> .
+<https://vocab.eccenca.com/revision/deltaInsert> <http://purl.org/dc/terms/issued> "2014-12-15"^^<http://www.w3.org/2001/XMLSchema#date> <https://vocab.eccenca.com/revision/> .
+<https://vocab.eccenca.com/revision/deltaDelete> <http://www.w3.org/2000/01/rdf-schema#domain> <https://vocab.eccenca.com/revision/Revision> <https://vocab.eccenca.com/revision/> .
+<https://vocab.eccenca.com/revision/deltaDelete> <http://www.w3.org/2000/01/rdf-schema#comment> "The IRI of the named graph containing the deleted triples of a revision (compared to its previous revision)"@en <https://vocab.eccenca.com/revision/> .
+<https://vocab.eccenca.com/revision/deltaDelete> <http://purl.org/dc/terms/modified> "2014-12-16"^^<http://www.w3.org/2001/XMLSchema#date> <https://vocab.eccenca.com/revision/> .
+<https://vocab.eccenca.com/revision/deltaDelete> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://vocab.eccenca.com/revision/> <https://vocab.eccenca.com/revision/> .
+<https://vocab.eccenca.com/revision/deltaDelete> <http://purl.org/dc/terms/issued> "2014-12-15"^^<http://www.w3.org/2001/XMLSchema#date> <https://vocab.eccenca.com/revision/> .
+<https://vocab.eccenca.com/revision/deltaDelete> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://vocab.eccenca.com/revision/> .
+<https://vocab.eccenca.com/revision/deltaDelete> <http://www.w3.org/2000/01/rdf-schema#label> "delete delta"@en <https://vocab.eccenca.com/revision/> .
+<http://linkeddata.center/kees/v1#IngestionFromSparqlService> <http://www.w3.org/2000/01/rdf-schema#label> "Ingestion From Sparql Service"@en <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#IngestionFromSparqlService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#IngestionFromSparqlService> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity to index  RDF triples extracted from a sparql service."@en <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#IngestionFromSparqlService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkeddata.center/kees/v1#ResourceIngestion> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#hasInferenceGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#hasInferenceGraph> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#hasInferenceGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#hasInferenceGraph> <http://www.w3.org/2000/01/rdf-schema#range> <http://linkeddata.center/kees/v1#InferredKnowledgeGraph> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#hasInferenceGraph> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linkeddata.center/kees/v1#KnowledgeBase> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#hasInferenceGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "The related resource is the graph where reasoners places all materialized triples."@en <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#hasInferenceGraph> <http://www.w3.org/2000/01/rdf-schema#label> "has inference graph"@en <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#tripleCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#tripleCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#tripleCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#tripleCount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linkeddata.center/kees/v1#Entity> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#tripleCount> <http://www.w3.org/2000/01/rdf-schema#comment> "triple count"@en <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#tripleCount> <http://www.w3.org/2000/01/rdf-schema#comment> "is the number of triples ingested by an accrual activity."@en <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#expectedTriples> <http://www.w3.org/2000/01/rdf-schema#label> "expected triples"@en <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#expectedTriples> <http://www.w3.org/2000/01/rdf-schema#comment> "the expected maximum number of triple to be indexed by an activity."@en <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#expectedTriples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#expectedTriples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#expectedTriples> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#expectedTriples> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linkeddata.center/kees/v1#IngestionPlan> <http://linkeddata.center/kees/v1> .
+<http://purl.org/iot/vocab/m3-lite#Coordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/vocab/m3-lite#> .
+<http://purl.org/iot/vocab/m3-lite#Coordinates> <http://www.w3.org/2000/01/rdf-schema#comment> "Triples for location in the (Latitude, Longitude, Altitude) format."@en <http://purl.org/iot/vocab/m3-lite#> .
+<http://purl.org/iot/vocab/m3-lite#Coordinates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/ssnx/qu/qu#Unit> <http://purl.org/iot/vocab/m3-lite#> .
+<http://purl.org/iot/vocab/m3-lite#Coordinates> <http://www.w3.org/2000/01/rdf-schema#label> "Coordinates"@en <http://purl.org/iot/vocab/m3-lite#> .
+<http://www.w3.org/ns/dqv#hasQualityAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#hasQualityAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "has quality annotation"@en <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#hasQualityAnnotation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:Bf03085b2595f26e714378162f0da273c <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#hasQualityAnnotation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dqv#QualityAnnotation> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#hasQualityAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to a quality annotation. Quality annotation can be applied to any kind of resource, e.g., a dataset, a linkset, a graph, a set of triples. However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution."@en <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#hasQualityMetadata> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dqv#QualityMetadata> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#hasQualityMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#hasQualityMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to a grouping of quality information such as certificates, policies, measurements and annotations as a named graph. Quality information represented in such a grouping can pertain to any kind of resource (e.g., a dataset, a linkset, a graph, a set of triples). However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution."@en <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#hasQualityMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "has quality metadata"@en <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "has quality measurement"@en <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dqv#QualityMeasurement> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the performed quality measurements. Quality measurements can be performed to any kind of resource (e.g., a dataset, a linkset, a graph, a set of triples). However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution."@en <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/dqv#computedOn> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#computedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/dqv#QualityMeasurement> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#computedOn> <http://www.w3.org/2000/01/rdf-schema#label> "computed on"@en <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#computedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#computedOn> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/eis/vocab/daq#computedOn> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#computedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Refers to the resource (e.g., a dataset, a linkset, a graph, a set of triples) on which the quality measurement is performed. In the DQV context, this property is generally expected to be used in statements in which objects are instances of dcat:Dataset or dcat:Distribution."@en <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#computedOn> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/dqv#hasQualityMeasurement> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#computedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#computedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/dqv> .
+<http://purl.org/iot/vocab/m3-lite#Coordinates> <http://www.w3.org/2000/01/rdf-schema#label> "Coordinates"@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#Coordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#Coordinates> <http://www.w3.org/2000/01/rdf-schema#comment> "Triples for location in the (Latitude, Longitude, Altitude) format."@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#Coordinates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/ssnx/qu/qu#Unit> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://w3id.org/rsp/vocals#RDFStream> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/rsp/vocals#> <http://w3id.org/rsp/vocals#> .
+<http://w3id.org/rsp/vocals#RDFStream> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://w3id.org/rsp/vocals#Stream> <http://w3id.org/rsp/vocals#> .
+<http://w3id.org/rsp/vocals#RDFStream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://w3id.org/rsp/vocals#> .
+<http://w3id.org/rsp/vocals#RDFStream> <http://www.w3.org/2000/01/rdf-schema#comment> "A stream composed of RDF data elements, i.e. RDF graphs and/or triples."@en <http://w3id.org/rsp/vocals#> .
+<http://w3id.org/rsp/vocals#RDFStream> <http://www.w3.org/2000/01/rdf-schema#label> "RDFStream"@en <http://w3id.org/rsp/vocals#> .
+<http://w3id.org/rsp/vocals#RDFStream> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/rsp/vocals#Stream> <http://w3id.org/rsp/vocals#> .
+<http://www.w3.org/ns/shacl#targetSubjectsOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#targetSubjectsOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#targetSubjectsOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/shacl#Shape> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#targetSubjectsOf> <http://www.w3.org/2000/01/rdf-schema#label> "target subjects of"@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#targetSubjectsOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a shape to a property, indicating that all subjects of triples that have the given property as their predicate must conform to the shape."@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#targetSubjectsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#targetObjectsOf> <http://www.w3.org/2000/01/rdf-schema#label> "target objects of"@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#targetObjectsOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#targetObjectsOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#targetObjectsOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a shape to a property, indicating that all all objects of triples that have the given property as their predicate must conform to the shape."@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#targetObjectsOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#targetObjectsOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/shacl#Shape> <http://www.w3.org/ns/shacl#> .
+<http://rdfs.org/ns/void#Dataset> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#Michael%20Hausenblas> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#Dataset> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#junzha> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#Dataset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.deri.ie/void> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#Dataset> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#keiale> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of RDF triples that are published, maintained or aggregated by a single provider." <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#Dataset> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#cygri> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "dataset" <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Linkset> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#Dataset> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdfs.org/ns/void#target> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#Michael%20Hausenblas> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://www.w3.org/2000/01/rdf-schema#comment> "The dataset describing the subjects of triples contained in the Linkset." <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#junzha> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://purl.org/dc/terms/created> "2010-01-26"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#cygri> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://www.w3.org/2000/01/rdf-schema#label> "Subjects Target" <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#subjectsTarget> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#keiale> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#documents> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.deri.ie/void> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#documents> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of documents, for datasets that are published as a set of individual documents, such as RDF/XML documents or RDFa-annotated web pages. Non-RDF documents, such as web pages in HTML or images, are usually not included in this count. This property is intended for datasets where the total number of triples or entities is hard to determine. void:triples or void:entities should be preferred where practical." <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#documents> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#junzha> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#documents> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#Michael%20Hausenblas> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#documents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#documents> <http://www.w3.org/2000/01/rdf-schema#label> "number of documents" <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#documents> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#documents> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#cygri> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#documents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#documents> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#keiale> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#documents> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#property> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#keiale> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#property> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#cygri> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#property> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#property> <http://www.w3.org/2000/01/rdf-schema#comment> "The rdf:Property that is the predicate of all triples in a property-based partition." <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#property> <http://www.w3.org/2000/01/rdf-schema#label> "property" <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#property> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#Michael%20Hausenblas> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#property> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#junzha> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#property> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.deri.ie/void> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctSubjects> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#junzha> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctSubjects> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#Michael%20Hausenblas> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctSubjects> <http://www.w3.org/2000/01/rdf-schema#label> "distinct subjects" <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctSubjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctSubjects> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.deri.ie/void> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctSubjects> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#keiale> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctSubjects> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctSubjects> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctSubjects> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of distinct subjects in a void:Dataset. In other words, the number of distinct resources that occur in the subject position of triples in the dataset." <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctSubjects> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#cygri> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctSubjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#propertyPartition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#propertyPartition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#propertyPartition> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#cygri> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#propertyPartition> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#keiale> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#propertyPartition> <http://www.w3.org/2000/01/rdf-schema#comment> "A subset of a void:Dataset that contains only the triples of a certain rdf:Property." <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#propertyPartition> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#Dataset> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#propertyPartition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.deri.ie/void> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#propertyPartition> <http://www.w3.org/2000/01/rdf-schema#label> "property partition" <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#propertyPartition> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#junzha> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#propertyPartition> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#Michael%20Hausenblas> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#propertyPartition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdfs.org/ns/void#subset> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#properties> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#properties> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#keiale> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#properties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#properties> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#cygri> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#properties> <http://www.w3.org/2000/01/rdf-schema#label> "number of properties" <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#properties> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#properties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#properties> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#junzha> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#properties> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#Michael%20Hausenblas> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#properties> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.deri.ie/void> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#properties> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of distinct properties in a void:Dataset. In other words, the number of distinct resources that occur in the predicate position of triples in the dataset." <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#objectsTarget> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#keiale> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#objectsTarget> <http://www.w3.org/2000/01/rdf-schema#label> "Objects Target" <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#objectsTarget> <http://www.w3.org/2000/01/rdf-schema#comment> "The dataset describing the objects of the triples contained in the Linkset." <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#objectsTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#objectsTarget> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#cygri> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#objectsTarget> <http://purl.org/dc/terms/created> "2010-01-26"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#objectsTarget> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdfs.org/ns/void#target> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#objectsTarget> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#junzha> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#objectsTarget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#objectsTarget> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#Michael%20Hausenblas> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#objectsTarget> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Linkset> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#objectsTarget> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#Dataset> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#classes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#classes> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of distinct classes in a void:Dataset. In other words, the number of distinct resources occuring as objects of rdf:type triples in the dataset." <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#classes> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#keiale> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#classes> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#cygri> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#classes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#classes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#classes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#classes> <http://www.w3.org/2000/01/rdf-schema#label> "classes" <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#classes> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#junzha> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#classes> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#Michael%20Hausenblas> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#classes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.deri.ie/void> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#triples> <http://www.w3.org/2000/01/rdf-schema#label> "number of triples" <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#triples> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#triples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#triples> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#cygri> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#triples> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#keiale> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#triples> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of triples contained in a void:Dataset." <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#triples> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#triples> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.deri.ie/void> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#triples> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#junzha> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#triples> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#Michael%20Hausenblas> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#triples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/query/voidext> .
+<http://purl.org/query/voidext#intersectionType> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/query/voidext#LinkSetIntersection> <http://purl.org/query/voidext> .
+<http://purl.org/query/voidext#intersectionType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/query/voidext#ComplexLinkSet> <http://purl.org/query/voidext> .
+<http://purl.org/query/voidext#intersectionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/query/voidext> .
+<http://purl.org/query/voidext#intersectionType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/query/voidext> .
+<http://purl.org/query/voidext#intersectionType> <http://www.w3.org/2000/01/rdf-schema#label> "intersection type"@en <http://purl.org/query/voidext> .
+<http://purl.org/query/voidext#intersectionType> <http://www.w3.org/2000/01/rdf-schema#comment> "This property assigns the intersection type of two RDF triples in different datasets (void:Dataset). In other words, if the intersection occurs at the subject xor the object node of a link predicate."@en <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctObjects> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#cygri> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctObjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctObjects> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctObjects> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of distinct objects in a void:Dataset. In other words, the number of distinct resources that occur in the object position of triples in the dataset. Literals are included in this count." <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctObjects> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctObjects> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#keiale> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctObjects> <http://www.w3.org/2000/01/rdf-schema#label> "distinct objects" <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctObjects> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.deri.ie/void> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctObjects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctObjects> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#junzha> <http://purl.org/query/voidext> .
+<http://rdfs.org/ns/void#distinctObjects> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/void#Michael%20Hausenblas> <http://purl.org/query/voidext> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Coordinates> <http://www.w3.org/2000/01/rdf-schema#comment> "Triples for location in the (Latitude, Longitude, Altitude) format."@en <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Coordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Coordinates> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/vocab/m3-lite#> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Coordinates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/qu/qu#Unit> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Coordinates> <http://www.w3.org/2000/01/rdf-schema#label> "Coordinates"@en <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<https://w3id.org/cdc#complementLink> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <https://w3id.org/cdc> .
+<https://w3id.org/cdc#complementLink> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/cdc> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#complementLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/cdc#DistributionRole> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#complementLink> <http://www.w3.org/2000/01/rdf-schema#comment> "A role of a qualified relation between a distribution of a dataset B that complements another dataset A, where the source distribution (subject of cdc:qualifiedDistributionRelation) complements the target dataset (object of dcterms:relation). The intermediate node between the distribution of dataset B and dataset A has a property cdc:hadDistributionRole pointing to cdc:complementLink. \n\nWhen the dataset B is the result of both additions and deletions on dataset A, dataset B should have a direct distribution with two subdistributions (cdc:hasSubDistribution): one containing triples to be deleted (cdc:DeletetionDistribution) from the source dataset and another containing triples that should be added (cdc:AdditionDistribution) to the source dataset. The qualified relation described above is established between the direct distribution of dataset B and dataset A ."@en <https://w3id.org/cdc> .
+<https://w3id.org/cdc#complementLink> <http://www.w3.org/2000/01/rdf-schema#label> "complement link"@en <https://w3id.org/cdc> .
+<https://w3id.org/cdc#DeletionDistribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#DeletionDistribution> <http://www.w3.org/2000/01/rdf-schema#label> "deletion distribution (complement)"@en <https://w3id.org/cdc> .
+<https://w3id.org/cdc#DeletionDistribution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/cdc> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#DeletionDistribution> <http://www.w3.org/2000/01/rdf-schema#comment> "A cdc:DeletionDistribution is used to classify a distribution of a dataset B that complements another dataset A (connected using the cdc:complements relation). The content of the deletion complement distribution of dataset B should be subtracted from the entire content of dataset A to form dataset B. When the dataset B is the result of both additions and deletions on dataset A, dataset B should have a direct distribution with two subdistributions (cdc:hasSubDistribution): one containing triples to be deleted (cdc:DeletetionDistribution) from the source dataset and another containing triples that should be added (cdc:AdditionDistribution) to the source dataset."@en <https://w3id.org/cdc> .
+<https://w3id.org/cdc#DeletionDistribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Distribution> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#onlyInSourceDS> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <https://w3id.org/cdc> .
+<https://w3id.org/cdc#onlyInSourceDS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/cdc> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#onlyInSourceDS> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cdc#ValidationReport> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#onlyInSourceDS> <http://www.w3.org/2000/01/rdf-schema#comment> "When the validation is done by comparing a descriptive RDF dataset A (source) containing the proposed design or executed construction to an RDF dataset B (target) containing the requirements, a diff is calculated between the two datasets. The triples that are only available in dataset A should be contained in a dataset that is connected using this property."@en <https://w3id.org/cdc> .
+<https://w3id.org/cdc#onlyInSourceDS> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Dataset> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#onlyInSourceDS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#onlyInSourceDS> <http://www.w3.org/2000/01/rdf-schema#label> "only in source dataset"@en <https://w3id.org/cdc> .
+<https://w3id.org/cdc#AdditionDistribution> <http://www.w3.org/2000/01/rdf-schema#label> "addition distribution (complement)"@en <https://w3id.org/cdc> .
+<https://w3id.org/cdc#AdditionDistribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#AdditionDistribution> <http://www.w3.org/2000/01/rdf-schema#comment> "A cdc:AdditionDistribution is used to classify a distribution of a dataset B that complements another dataset A (connected using the cdc:complements relation). The content of the addition complement distribution of dataset B should be added to the entire content of dataset A to form dataset B. When the dataset B is the result of both additions and deletions on dataset A, dataset B should have a direct distribution with two subdistributions (cdc:hasSubDistribution): one containing triples to be deleted (cdc:DeletetionDistribution) from the source dataset and another containing triples that should be added (cdc:AdditionDistribution) to the source dataset."@en <https://w3id.org/cdc> .
+<https://w3id.org/cdc#AdditionDistribution> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/cdc#DeletionDistribution> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#AdditionDistribution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Distribution> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#AdditionDistribution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/cdc> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#onlyInTargetDS> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/cdc#ValidationReport> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#onlyInTargetDS> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <https://w3id.org/cdc> .
+<https://w3id.org/cdc#onlyInTargetDS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/cdc> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#onlyInTargetDS> <http://www.w3.org/2000/01/rdf-schema#label> "only in target dataset "@en <https://w3id.org/cdc> .
+<https://w3id.org/cdc#onlyInTargetDS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#onlyInTargetDS> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Dataset> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#onlyInTargetDS> <http://www.w3.org/2000/01/rdf-schema#comment> "When the validation is done by comparing a descriptive RDF dataset A (source) containing the proposed design or executed construction to an RDF dataset B (target) containing the requirements, a diff is calculated between the two datasets. The triples that are only available in dataset B should be contained in a dataset that is connected using this property."@en <https://w3id.org/cdc> .
+<https://w3id.org/cto#RemovalTask> <http://www.w3.org/2000/01/rdf-schema#label> "a removal task"@en <https://w3id.org/cto> .
+<https://w3id.org/cto#RemovalTask> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/cto> <https://w3id.org/cto> .
+<https://w3id.org/cto#RemovalTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/cto> .
+<https://w3id.org/cto#RemovalTask> <http://www.w3.org/2000/01/rdf-schema#comment> "A specialized type of a (planned or executed) construction task that physically removes a construction component from the construction. The removal results in the removal of all the (directly or indirectly) asserted triples related to the thing that is subject of this task, including triples that use terminology from BOT (building topology), DOT (damage topology), OMG/FOG (geometry, properties, etc."@en <https://w3id.org/cto> .
+<https://w3id.org/cto#RemovalTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/cto#Task> <https://w3id.org/cto> .
+<https://w3id.org/cto#InstallmentTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/cto#Task> <https://w3id.org/cto> .
+<https://w3id.org/cto#InstallmentTask> <http://www.w3.org/2000/01/rdf-schema#comment> "A specialized type of a (planned or executed) construction task that physically installs a construction component as part of the construction. The installment results in the addition of asserted triple(s) connecting the installed object to other construction elements and/or spatial zones and other triples describing the object through classification, properties and/or geometry."@en <https://w3id.org/cto> .
+<https://w3id.org/cto#InstallmentTask> <http://www.w3.org/2000/01/rdf-schema#label> "an installment task"@en <https://w3id.org/cto> .
+<https://w3id.org/cto#InstallmentTask> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/cto> <https://w3id.org/cto> .
+<https://w3id.org/cto#InstallmentTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/cto> .

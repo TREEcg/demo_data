@@ -1,0 +1,100 @@
+<https://w3id.org/rdfp/GraphValidationRule> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <https://w3id.org/rdfp/> .
+<https://w3id.org/rdfp/GraphValidationRule> <http://www.w3.org/2000/01/rdf-schema#label> "Graph Validation Rule"@en <https://w3id.org/rdfp/> .
+<https://w3id.org/rdfp/GraphValidationRule> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of graph validation rules resources. \n  Such resources may have various representations:\n\n- a RDF Graph representation that contains SHACL instances;\n- a ShEx document;\n- a SPARQL ASK rule.\n\nFor example, \n\n```\n<g> a rdfp:GraphDescription ;\n  rdfp:validationRule <v> .\n```\n\nAn RDFP engine willing to validate the conformance of a graph G described by `<g>` with SPARQL ASK queries should follow these steps:\n\n- operate a GET request at URI `<v>` with accepted media type \"application/sparql-query\"\n- run the retrieved SPARQL ASK query against G.\n- If the result is true, then G validates against `<v>`."@en <https://w3id.org/rdfp/> .
+<https://w3id.org/rdfp/GraphValidationRule> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/rdfp/> <https://w3id.org/rdfp/> .
+<https://w3id.org/rdfp/GraphValidationRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/rdfp/> .
+<https://w3id.org/rdfp/validationRule> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/rdfp/> <https://w3id.org/rdfp/> .
+<https://w3id.org/rdfp/validationRule> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <https://w3id.org/rdfp/> .
+<https://w3id.org/rdfp/validationRule> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a graph description (resp. a presentation) to a validation rule against which graphs conforming to this description (resp. representations conforming to this presentation) should validate. Such resources may have various representations.\n\nFor example, resource identified by `<some_validation_rule>` may have a representation as a [SPARQL ASK query](https://www.w3.org/TR/sparql11-query/#ask), as a [ShEx expression](http://shexspec.github.io/), or as a [SHACL shape](https://www.w3.org/TR/shacl/)."@en <https://w3id.org/rdfp/> .
+<https://w3id.org/rdfp/validationRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/rdfp/> .
+<https://w3id.org/rdfp/validationRule> <http://www.w3.org/2000/01/rdf-schema#label> "validation rule"@en <https://w3id.org/rdfp/> .
+<http://www.w3.org/ns/shacl#Rule> <http://www.w3.org/2000/01/rdf-schema#label> "Rule"@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#Rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#Rule> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#Rule> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of SHACL rules. Never instantiated directly."@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#Rule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#Function> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of SHACL functions."@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#Function> <http://www.w3.org/2000/01/rdf-schema#label> "Function"@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/shacl#Parameterizable> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#Function> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSValidator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSValidator> <http://www.w3.org/2000/01/rdf-schema#comment> "A SHACL validator based on JavaScript. This can be used to declare SHACL constraint components that perform JavaScript-based validation when used."@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSValidator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/shacl#Validator> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSValidator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSValidator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/shacl#JSExecutable> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSValidator> <http://www.w3.org/2000/01/rdf-schema#label> "JavaScript validator"@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of SHACL validation reports."@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#ValidationReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#label> "Validation report"@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSRule> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/shacl#JSExecutable> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSRule> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of SHACL rules expressed using JavaScript."@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/shacl#Rule> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSRule> <http://www.w3.org/2000/01/rdf-schema#label> "JavaScript rule"@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSFunction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSFunction> <http://www.w3.org/2000/01/rdf-schema#label> "JavaScript function"@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSFunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/shacl#JSExecutable> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of SHACL functions that execute a JavaScript function when called."@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSFunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/shacl#Function> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#JSFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#> <http://www.w3.org/2000/01/rdf-schema#label> "W3C Shapes Constraint Language (SHACL) Vocabulary"@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#declare> _:Bbd6da7985c5bc433395e8223f4d410d9 <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#> <http://www.w3.org/2000/01/rdf-schema#comment> "This vocabulary defines terms used in SHACL, the W3C Shapes Constraint Language."@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#suggestedShapesGraph> <http://www.w3.org/ns/shacl-shacl#> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#shapesGraphWellFormed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#shapesGraphWellFormed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/shacl#ValidationReport> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#shapesGraphWellFormed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#shapesGraphWellFormed> <http://www.w3.org/2000/01/rdf-schema#comment> "If true then the validation engine was certain that the shapes graph has passed all SHACL syntax requirements during the validation process."@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#shapesGraphWellFormed> <http://www.w3.org/2000/01/rdf-schema#label> "shapes graph well-formed"@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#shapesGraphWellFormed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#SPARQLRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/shacl#SPARQLConstructExecutable> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#SPARQLRule> <http://www.w3.org/2000/01/rdf-schema#label> "SPARQL CONSTRUCT rule"@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#SPARQLRule> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#SPARQLRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/shacl#Rule> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#SPARQLRule> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of SHACL rules based on SPARQL CONSTRUCT queries."@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#SPARQLRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/shacl#> .
+<https://w3id.org/idsa/core/shapesGraph> <http://www.w3.org/2000/01/rdf-schema#label> "shapeGraph"@en <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/shapesGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/shapesGraph> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/shacl#shapesGraph> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/shapesGraph> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/idsa/core/DescribedSemantically> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/shapesGraph> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/shapesGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "Reference to SHACL shape graph, which describes domain-specific knowledge."@en <https://w3id.org/idsa/core> .
+<https://w3id.org/cdc#OwnerRequirementsDS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#OwnerRequirementsDS> <http://www.w3.org/2000/01/rdf-schema#comment> "A dataset describing the requirements imposed by the construction owner at the start of a construction project. Such a dataset, when using RDF, can for example be described using SHACL shapes or a graph describing the components and spatial zones (and their properties) that should be provided in the delivered construction."@en <https://w3id.org/cdc> .
+<https://w3id.org/cdc#OwnerRequirementsDS> <http://www.w3.org/2000/01/rdf-schema#label> "owner requirements dataset"@en <https://w3id.org/cdc> .
+<https://w3id.org/cdc#OwnerRequirementsDS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#OwnerRequirementsDS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/cdc> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/cdc> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of this class is used to describe the result of a comparison between a design, a construction planning or a finalized as-built dataset and a dataset with requirements it tries to fulfill. The validation report node can be equal to the top node of a SHACL validation report RDF graph (e.g. owner requirements vs. design), or it can point to either two RDF datasets (cdc:onlyInSourceDS or cdc:onlyInTargetDS) containing the result of a subtraction (e.g. design vs. as-built) or a free text explanation of the comparison result (rdfs:comment)."@en <https://w3id.org/cdc> .
+<https://w3id.org/cdc#ValidationReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/cdc> .
+<https://w3id.org/cdc#ValidationReport> <http://www.w3.org/2000/01/rdf-schema#label> "validation report"@en <https://w3id.org/cdc> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/sh> <http://purl.org/dc/terms/modified> "2018-04-10"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/sh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/sh> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.w3.org/ns/shacl#> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/sh> <http://purl.org/dc/terms/title> "W3C Shapes Constraint Language (SHACL) Vocabulary"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/sh> <http://purl.org/dc/terms/issued> "2018-04-10"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/dc/terms/title> "W3C Shapes Constraint Language (SHACL) Vocabulary"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/dc/terms/publisher> <https://www.w3.org/2014/data-shapes/> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/sh/versions/2017-07-20.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/dc/terms/creator> <https://www.w3.org/2014/data-shapes/> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "sh" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/dcat#keyword> "W3C Rec" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/dc/terms/description> "This vocabulary defines terms used in SHACL, the W3C Shapes Constraint Language."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/dc/terms/issued> "2017-07-20"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/dc/terms/modified> "2017-07-20"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/vocommons/voaf#reusedByVocabularies> "2"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/dc/terms/contributor> <http://google.com/+DimitrisKontokostas> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/stuff/rev#hasReview> _:B7e7e68878178b7022e7b83dd85fa9f81 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/dc/terms/contributor> <https://plus.google.com/106969429416107454583> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://xmlns.com/foaf/0.1/homepage> "https://www.w3.org/TR/shacl/" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/dcat#keyword> "Quality" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/ns/shacl#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.w3.org/ns/shacl#" <https://lov.linkeddata.es/dataset/lov> .

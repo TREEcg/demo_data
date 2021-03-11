@@ -1,0 +1,289 @@
+<http://purl.org/spar/cito/DistantCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/cito/Citation> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/DistantCitation> <http://www.w3.org/2000/01/rdf-schema#label> "distant citation"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/DistantCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation in which the citing and the cited entities have nothing significant in common with one another (for example authors, journal, institutional affiliation, or funding agency) over and beyond their subject matter."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/DistantCitation> <http://purl.org/dc/elements/1.1/description> "Derived from the article 'A Small World of Citations? The Influence of Collaboration Networks on Citation Practices' by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339)."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/DistantCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/confirms> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity confirms facts, ideas or statements presented in the cited entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/confirms> <http://purl.org/dc/elements/1.1/description> "Example: Our findings are similar to those published in [X]."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/confirms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/confirms> <http://www.w3.org/2000/01/rdf-schema#label> "confirms"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/confirms> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/confirms> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/isConfirmedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/AuthorSelfCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/AuthorSelfCitation> <http://www.w3.org/2000/01/rdf-schema#label> "author self citation"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/AuthorSelfCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation in which the citing and the cited entities have at least one author in common.\n\nIn particular, like the ancestor class cito:Citation, cito:AuthorSelfCitation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties, accompanied by an additional statement using cito:sharesAuthorWith for linking the citing paper and the cited paper. \n\nFor example, the following cito:AuthorSelfCitation resource\n\n     :thisCitation a cito:AuthorSelfCitation ; \n          cito:hasCitingEntity :paperA ;\n          cito:hasCitationCharacterization cito:extends ;\n          cito:hasCitedEntity :paperB .\n\ncan be alternatively described as follows\n\n     :paperA cito:extends :paperB .\n     :paperA cito:sharesAuthorWith :paperB ."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/AuthorSelfCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/cito/SelfCitation> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isPlagiarizedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is plagiarized by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isPlagiarizedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/plagiarizes> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isPlagiarizedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isPlagiarizedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity is plagiarized by the author of the citing entity, who includes within the citing entity textual or other elements from the cited entity without formal acknowledgement of their source. The cited entity is thus not explicitly cited from within the citing entity, according to the norms of scholarly practice, but is cited implicitly."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isPlagiarizedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/containsAssertionFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/containsAssertionFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/containsAssertionFrom> <http://purl.org/dc/elements/1.1/description> "Example: We think that to stand on the top of giants [X] is a valuable principle to follow for our own research."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/containsAssertionFrom> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/providesAssertionFor> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/containsAssertionFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity contains a statement of fact or a logical assertion (or a collection of such facts and/or assertions) originally present in the cited entity.   This object property is designed to be used to relate a separate abstract, summary or nanopublication to the cited entity upon which it is based."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/containsAssertionFrom> <http://www.w3.org/2000/01/rdf-schema#label> "contains assertion from"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCreditedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCreditedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity makes contributions that are acknowledged by the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCreditedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCreditedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is credited by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/corrects> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/isCorrectedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/corrects> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity corrects statements, ideas or conclusions presented in the cited entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/corrects> <http://www.w3.org/2000/01/rdf-schema#label> "corrects"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/corrects> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/corrects> <http://purl.org/dc/elements/1.1/description> "Example: The result published in [X] is partially wrong, the correct result is 42."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/corrects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isConfirmedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isConfirmedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is confirmed by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isConfirmedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isConfirmedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity presents facts, ideas or statements that are confirmed by the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsMetadataDocumentBy> <http://www.w3.org/2000/01/rdf-schema#label> "is cited as metadata document by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsMetadataDocumentBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsMetadataDocumentBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity is cited as being the container of metadata relating to the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsMetadataDocumentBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/givesBackgroundTo> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/obtainsBackgroundFrom> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/givesBackgroundTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/givesBackgroundTo> <http://www.w3.org/2000/01/rdf-schema#label> "gives background to"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/givesBackgroundTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity provides background information for the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/givesBackgroundTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/updates> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/updates> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity updates statements, ideas, hypotheses or understanding presented in the cited entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/updates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/updates> <http://purl.org/dc/elements/1.1/description> "Example: Earth moves, said Galileo [X]; in addition, we can say now it moves very fast."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/updates> <http://www.w3.org/2000/01/rdf-schema#label> "updates"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/agreesWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/agreesWith> <http://purl.org/dc/elements/1.1/description> "Example: We share Galileo's opinion: the Earth moves [X]."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/agreesWith> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/isAgreedWithBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/agreesWith> <http://www.w3.org/2000/01/rdf-schema#label> "agrees with"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/agreesWith> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity agrees with statements, ideas or conclusions presented in the cited entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/agreesWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/givesSupportTo> <http://www.w3.org/2000/01/rdf-schema#label> "gives support to"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/givesSupportTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/givesSupportTo> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/obtainsSupportFrom> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/givesSupportTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/givesSupportTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity provides intellectual or factual support for the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isDiscussedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity presents statements, ideas or conclusions that are discussed by the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isDiscussedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isDiscussedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is discussed by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isDiscussedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isRetractedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isRetractedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity is formally retracted by the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isRetractedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isRetractedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is retracted by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isRetractedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/retracts> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/documents> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity documents information about the cited entity." <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/documents> <http://purl.org/dc/elements/1.1/description> "Example: Herein we report in detail the complete set of ontological rules defined in the Overlapping Ontology [X]."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/documents> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/isDocumentedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/documents> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/documents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/documents> <http://www.w3.org/2000/01/rdf-schema#label> "documents"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/includesQuotationFrom> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/providesQuotationFor> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/includesQuotationFrom> <http://purl.org/dc/elements/1.1/description> "A quotation is a repetition of what someone has said, and is presented \"within quotation marks\", for example:\n\nOn June 4th 1940, Winston Churchill made a speech on the radio that has since become famous, that included the words: \" . . . we shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender . . .\""@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/includesQuotationFrom> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/includesQuotationFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/includesQuotationFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity includes one or more quotations from the cited entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/includesQuotationFrom> <http://purl.org/dc/elements/1.1/description> "Example: As Newton wrote in [X]: \"We are like dwarfs standing on the shoulders of giants\"."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/includesQuotationFrom> <http://www.w3.org/2000/01/rdf-schema#label> "includes quotation from"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/providesQuotationFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/providesQuotationFor> <http://www.w3.org/2000/01/rdf-schema#label> "provides quotation for"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/providesQuotationFor> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity contains information, usually of a textual nature, that is quoted by (used as a quotation within) the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/providesQuotationFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/extends> <http://www.w3.org/2000/01/rdf-schema#label> "extends"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/extends> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity extends facts, ideas or understandings presented in the cited entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/extends> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/isExtendedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/extends> <http://purl.org/dc/elements/1.1/description> "Example: We add to Galileo's findings concerning the Earth [X] that also the Moon moves."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/extends> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/extends> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/providesExcerptFor> <http://www.w3.org/2000/01/rdf-schema#label> "provides excerpt for"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/providesExcerptFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/providesExcerptFor> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity contains information, usually of a textual nature, that is excerpted by (used as an excerpt within) the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/providesExcerptFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isLinkedToBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isLinkedToBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/linksTo> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isLinkedToBy> <http://www.w3.org/2000/01/rdf-schema#label> "is linked to by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isLinkedToBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isLinkedToBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity is the target for an HTTP Uniform Resource Locator (URL) link within the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsRelatedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsRelatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity is cited as being related to the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsRelatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsRelatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is cited as related by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/plagiarizes> <http://purl.org/dc/elements/1.1/description> "Example: The conclusion of our dissertation can be summarised by the following motto, we created specifically for this purpose: we are like dwarfs standing on the shoulders of giants."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/plagiarizes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/plagiarizes> <http://www.w3.org/2000/01/rdf-schema#comment> "A property indicating that the author of the citing entity plagiarizes the cited entity, by including textual or other elements from the cited entity without formal acknowledgement of their source.  The citing entity thus contains no explicit citation of the cited entity, according to the norms of scholarly practice, but cites it implicitly."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/plagiarizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/plagiarizes> <http://www.w3.org/2000/01/rdf-schema#label> "plagiarizes"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsMetadataDocument> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity cites the cited entity as being the container of metadata describing the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsMetadataDocument> <http://purl.org/dc/elements/1.1/description> "Example: Basic bibliographic, entity and project metadata relating to this article, recorded in a structured machine-readable form, is available as an additional file [X] accompanying this paper."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsMetadataDocument> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsMetadataDocument> <http://www.w3.org/2000/01/rdf-schema#label> "cites as metadata document"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsMetadataDocument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsMetadataDocument> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/isCitedAsMetadataDocumentBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isUpdatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isUpdatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is updated by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isUpdatedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/updates> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isUpdatedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isUpdatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity presents statements, ideas, hypotheses or understanding that are updated by the cited entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/JournalSelfCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/JournalSelfCitation> <http://www.w3.org/2000/01/rdf-schema#label> "journal self citation"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/JournalSelfCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation in which the citing and the cited entities are published in the same journal.\n\nIn particular, like the ancestor class cito:Citation, cito:JournalSelfCitation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties, accompanied by an additional statement using cito:sharesJournalWith for linking the citing paper and the cited paper. \n\nFor example, the following cito:JournalSelfCitation resource\n\n     :thisCitation a cito:JournalSelfCitation ; \n          cito:hasCitingEntity :paperA ;\n          cito:hasCitationCharacterization cito:extends ;\n          cito:hasCitedEntity :paperB .\n\ncan be alternatively described as follows\n\n     :paperA cito:extends :paperB .\n     :paperA cito:sharesJournalWith :paperB ."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/JournalSelfCitation> <http://purl.org/dc/elements/1.1/description> "Derived from the blog post 'Journal self-citations are increasingly biased toward impact factor years' by Ludo Waltman and Caspar Chorus (https://www.cwts.nl/blog?article=n-q2x264)."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/JournalSelfCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/cito/SelfCitation> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/refutes> <http://purl.org/dc/elements/1.1/description> "Example: We do not think that all their arguments in favour of their own and against the other strategies are equally convincing [X]."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/refutes> <http://www.w3.org/2000/01/rdf-schema#label> "refutes"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/refutes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/refutes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/refutes> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity refutes statements, ideas or conclusions presented in the cited entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0b570f5389a1c0530ccef9d616d47ab2 <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://www.w3.org/2000/01/rdf-schema#label> "author network self citation"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation in which at least one author of the citing entity has direct or indirect co-authorship links with one of the authors of the cited entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/cito/SelfCitation> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://purl.org/dc/elements/1.1/description> "Derived from the article 'A Small World of Citations? The Influence of Collaboration Networks on Citation Practices' by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339)."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsRecommendedReadingBy> <http://www.w3.org/2000/01/rdf-schema#label> "is cited as recommended reading by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsRecommendedReadingBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsRecommendedReadingBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity is cited by the citing entity as an item of recommended reading.  This property can be used, for example, to describe references in a lecture reading list, where the cited references are relevant to the general topic of the lecture, but might not be individually cited within the text of the lecture.  Similarly, it could be used to describe items in a 'Suggested further reading' list at the end of a book chapter."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsRecommendedReadingBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isSpeculatedOnBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isSpeculatedOnBy> <http://www.w3.org/2000/01/rdf-schema#label> "is speculated on by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isSpeculatedOnBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/speculatesOn> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isSpeculatedOnBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity is cited because the citing article contains speculations on its content or ideas."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isSpeculatedOnBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsDataSourceBy> <http://www.w3.org/2000/01/rdf-schema#label> "is cited as data source by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsDataSourceBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsDataSourceBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity is cited as a data source by the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsDataSourceBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is supported by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isSupportedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity receives intellectual or factual support from the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isSupportedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isSupportedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/supports> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/FunderSelfCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/FunderSelfCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation in which the works reported in the citing and the cited entities were funded by the same funding agency.\n\nIn particular, like the ancestor class cito:Citation, cito:FunderSelfCitation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties, accompanied by an additional statement using cito:sharesFundingAgencyWith for linking the citing paper and the cited paper. \n\nFor example, the following cito:FundingSelfCitation resource\n\n     :thisCitation a cito:FundingSelfCitation ; \n          cito:hasCitingEntity :paperA ;\n          cito:hasCitationCharacterization cito:extends ;\n          cito:hasCitedEntity :paperB .\n\ncan be alternatively described as follows\n\n     :paperA cito:extends :paperB .\n     :paperA cito:sharesFundingAgencyWith :paperB ."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/FunderSelfCitation> <http://www.w3.org/2000/01/rdf-schema#label> "funder self citation"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/FunderSelfCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/cito/SelfCitation> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/ridicules> <http://www.w3.org/2000/01/rdf-schema#label> "ridicules"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/ridicules> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/ridicules> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity ridicules the cited entity or aspects of its contents."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/ridicules> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/ridicules> <http://purl.org/dc/elements/1.1/description> "Example: Galileo said that the Earth \"moves\" [X]; really? And where is it going?"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/providesMethodFor> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity details a method that is used in work described by the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/providesMethodFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/providesMethodFor> <http://www.w3.org/2000/01/rdf-schema#label> "provides method for"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/providesMethodFor> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/usesMethodIn> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/providesMethodFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCritiquedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is critiqued by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCritiquedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCritiquedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity presents statements, ideas or conclusions that are critiqued by the citing entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCritiquedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isDeridedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity contains ideas or conclusions for which the citing entity express derision."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isDeridedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isDeridedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is derided by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isDeridedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/discusses> <http://www.w3.org/2000/01/rdf-schema#label> "discusses"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/discusses> <http://purl.org/dc/elements/1.1/description> "Example: We now examine if Galileo is right when he writes [X] that the Earth moves."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/discusses> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity discusses statements, ideas or conclusions presented in the cited entity."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/discusses> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/isDiscussedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/discusses> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/discusses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2000/01/rdf-schema#label> "cites as recommended reading"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://purl.org/dc/elements/1.1/description> "Example: To our knowledge, [X] is the best source of exercises about UML, making it a valuable proposal for beginners."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/isCitedAsRecommendedReadingBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity cites the cited entity as an item of recommended reading.  This property can be used, for example, to describe references in a lecture reading list, where the cited references are relevant to the general topic of the lecture, but might not be individually cited within the text of the lecture.  Similarly, it could be used to describe items in a 'Suggested further reading' list at the end of a book chapter."@en <http://purl.org/spar/cito> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/cited.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/cited.nt> <https://w3id.org/tree#relation> _:Bcitedd .
+_:Bcitedd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcitedd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/citedd.nt> .
+_:Bcitedd <https://w3id.org/tree#value> "citedd" .
+_:Bcitedd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/citedd.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/cited.nt> <https://w3id.org/tree#relation> _:Bcitedp .
+_:Bcitedp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcitedp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/citedp.nt> .
+_:Bcitedp <https://w3id.org/tree#value> "citedp" .
+_:Bcitedp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/citedp.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/cited.nt> <https://w3id.org/tree#relation> _:Bcitedu .
+_:Bcitedu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcitedu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/citedu.nt> .
+_:Bcitedu <https://w3id.org/tree#value> "citedu" .
+_:Bcitedu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/citedu.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/cited.nt> <https://w3id.org/tree#relation> _:Bcitedw .
+_:Bcitedw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcitedw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/citedw.nt> .
+_:Bcitedw <https://w3id.org/tree#value> "citedw" .
+_:Bcitedw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/citedw.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/cited.nt> <https://w3id.org/tree#relation> _:BaX2Bcited .
+_:BaX2Bcited <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bcited <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+cited.nt> .
+_:BaX2Bcited <https://w3id.org/tree#value> "a" .
+_:BaX2Bcited <https://w3id.org/tree#value> "cited" .
+_:BaX2Bcited <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+cited.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/cited.nt> <https://w3id.org/tree#relation> _:BbX2Bcited .
+_:BbX2Bcited <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bcited <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+cited.nt> .
+_:BbX2Bcited <https://w3id.org/tree#value> "b" .
+_:BbX2Bcited <https://w3id.org/tree#value> "cited" .
+_:BbX2Bcited <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+cited.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/cited.nt> <https://w3id.org/tree#relation> _:BcX2Bcited .
+_:BcX2Bcited <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Bcited <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+cited.nt> .
+_:BcX2Bcited <https://w3id.org/tree#value> "c" .
+_:BcX2Bcited <https://w3id.org/tree#value> "cited" .
+_:BcX2Bcited <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+cited.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/cited.nt> <https://w3id.org/tree#relation> _:BcitedX2Be .
+_:BcitedX2Be <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcitedX2Be <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/cited+e.nt> .
+_:BcitedX2Be <https://w3id.org/tree#value> "cited" .
+_:BcitedX2Be <https://w3id.org/tree#value> "e" .
+_:BcitedX2Be <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/cited+e.nt> <https://w3id.org/tree#remainingItems> "38"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/cited.nt> <https://w3id.org/tree#relation> _:BcitedX2Bi .
+_:BcitedX2Bi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcitedX2Bi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/cited+i.nt> .
+_:BcitedX2Bi <https://w3id.org/tree#value> "cited" .
+_:BcitedX2Bi <https://w3id.org/tree#value> "i" .
+_:BcitedX2Bi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/cited+i.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/cited.nt> <https://w3id.org/tree#relation> _:BcitedX2Bj .
+_:BcitedX2Bj <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcitedX2Bj <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/cited+j.nt> .
+_:BcitedX2Bj <https://w3id.org/tree#value> "cited" .
+_:BcitedX2Bj <https://w3id.org/tree#value> "j" .
+_:BcitedX2Bj <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/cited+j.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/cited.nt> <https://w3id.org/tree#relation> _:BcitedX2Bo .
+_:BcitedX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcitedX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/cited+o.nt> .
+_:BcitedX2Bo <https://w3id.org/tree#value> "cited" .
+_:BcitedX2Bo <https://w3id.org/tree#value> "o" .
+_:BcitedX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/cited+o.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/cited.nt> <https://w3id.org/tree#relation> _:BcitedX2Br .
+_:BcitedX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcitedX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/cited+r.nt> .
+_:BcitedX2Br <https://w3id.org/tree#value> "cited" .
+_:BcitedX2Br <https://w3id.org/tree#value> "r" .
+_:BcitedX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/cited+r.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/cited.nt> <https://w3id.org/tree#relation> _:BcitedX2Bw .
+_:BcitedX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcitedX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/cited+w.nt> .
+_:BcitedX2Bw <https://w3id.org/tree#value> "cited" .
+_:BcitedX2Bw <https://w3id.org/tree#value> "w" .
+_:BcitedX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/cited+w.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .

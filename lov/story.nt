@@ -1,0 +1,290 @@
+<http://purl.org/ontology/stories/tells> <http://www.w3.org/2000/01/rdf-schema#comment> "A story told by this Thing. The Thing could be a photograph which has a story attached to it, a person, a country, a monument, etc."@en <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/tells> <http://www.w3.org/2000/01/rdf-schema#label> "tells"@en <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/tells> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/stories/Story> <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/tells> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/subject> <http://www.w3.org/2000/01/rdf-schema#label> "subject"@en <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/subject> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject(s) of the story. e.g. characters, events, skos concepts."@en <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/subject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/stories/Story> <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/events> <http://www.w3.org/2000/01/rdf-schema#comment> "An ordered list of Events within this story."@en <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/events> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/events> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/stories/Story> <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/events> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/stories/EventList> <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/events> <http://www.w3.org/2000/01/rdf-schema#label> "event"@en <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/Interpretation> <http://www.w3.org/2000/01/rdf-schema#comment> "An interpretation of something in the context of a story, given some supporting material. This is the viewpoint of the interpretation's creator, and may assert statements about the item."@en <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/Interpretation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/Interpretation> <http://www.w3.org/2000/01/rdf-schema#label> "Interpretation"@en <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/Story> <http://www.w3.org/2000/01/rdf-schema#label> "Story"@en <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/Story> <http://www.w3.org/2000/01/rdf-schema#comment> "A story that may be told, contain other stories, and have a sequence of events."@en <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/Story> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/sub_story> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/stories/Story> <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/sub_story> <http://www.w3.org/2000/01/rdf-schema#label> "sub_story"@en <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/sub_story> <http://www.w3.org/2000/01/rdf-schema#comment> "A story which is contained within this story. For example, a TV episode may contain stories for different characters, or one overarching story may contain several other smaller stories."@en <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/sub_story> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/stories/Story> <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/sub_story> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/EventList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/EventList> <http://www.w3.org/2000/01/rdf-schema#label> "EventList"@en <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/EventList> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides a means to create an ordered list of events that occur within a story - effectively a pairing of an Event and a numeric position."@en <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/stories/EventList> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/olo/core#OrderedList> <http://purl.org/ontology/stories/> .
+<http://purl.org/ontology/storyline/StorylineComponent> <http://www.w3.org/2000/01/rdf-schema#label> "StorylineComponent"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/StorylineComponent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/StorylineComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/StorylineComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/StorylineComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "An abstract parent class of storyline components."@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Attribution> <http://www.w3.org/2000/01/rdf-schema#label> "Attribution"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Attribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Attribution> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribution of a storyline used for attributing the interpretation of the storyline to some agent. An interface class, that doesn't restrict the implementation of an attribution."@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Attribution> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Attribution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://www.bbc.co.uk/ontologies/provenance/canonicalLocation> "https://repo.dev.bbc.co.uk/services/linked-data/ontologies/domain/news/storyline-0.3.ttl" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/elements/1.1/contributor> "Helen Lippell"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/elements/1.1/rights> "This ontology is distributed under the Creative Commons SA-3.0 license"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/ontology/storyline/0.3> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/elements/1.1/contributor> "Dan Brickley"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/elements/1.1/description> "An ontology to represent News Storylines."@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://www.bbc.co.uk/ontologies/provenance/public> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/elements/1.1/contributor> "Paul Rissen"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://www.bbc.co.uk/ontologies/provenance/provider> <mailto:sam.starling@bbc.co.uk> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://www.w3.org/2002/07/owl#versionInfo> "0.3" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/elements/1.1/creator> <http://uk.linkedin.com/in/paulwilton> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://www.w3.org/2000/01/rdf-schema#label> "Storyline Ontology"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/elements/1.1/contributor> "Tom Leitch"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/elements/1.1/contributor> "Matt Chadburn"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://www.w3.org/2002/07/owl#priorVersion> <http://purl.org/ontology/storyline/0.2> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/elements/1.1/title> "A News Storyline Ontology"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/elements/1.1/contributor> "Michael Smethurst"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.bbc.co.uk/ontologies/provenance/Ontology> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://www.bbc.co.uk/ontologies/provenance/version> "0.3"^^<http://www.w3.org/2001/XMLSchema#double> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/elements/1.1/date> "2013-05-01"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology to represent News Storylines."@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/elements/1.1/contributor> "Sebastien Cevey"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/elements/1.1/creator> <http://www.bbc.co.uk/blogs/internet/authors/Jeremy_Tarling> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://www.bbc.co.uk/ontologies/provenance/provided> "2014-04-10T09:56:56+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://www.bbc.co.uk/ontologies/provenance/changeReason> "added nsl:createdDate, moved domain of nsl:time to nsl:StorylineSLot"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://www.bbc.co.uk/ontologies/provenance/slug> "storyline" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by-sa/3.0/> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline> <http://purl.org/dc/elements/1.1/creator> <http://uk.linkedin.com/in/jarredmcginnis> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/synopsis> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/synopsis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/synopsis> <http://www.w3.org/2000/01/rdf-schema#label> "synopsis"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/synopsis> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/storyline/Storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/synopsis> <http://www.w3.org/2000/01/rdf-schema#comment> "The synopsis of a storyline"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/synopsis> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/synopsis> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/StorylineSlot> <http://www.w3.org/2000/01/rdf-schema#comment> "A storyline slot, used as a container for storyline components."@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/StorylineSlot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/StorylineSlot> <http://www.w3.org/2000/01/rdf-schema#label> "StorylineSlot"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/StorylineSlot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/StorylineSlot> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/title> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/storyline/Storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/title> <http://www.w3.org/2000/01/rdf-schema#comment> "A title of a storyline"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/title> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/title> <http://www.w3.org/2000/01/rdf-schema#label> "title"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/contains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/contains> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/storyline/StorylineSlot> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/contains> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/storyline/StorylineComponent> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a Slot to a StorylineComponent contained therein. Can be a news event or another storyline"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasUpdate> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a slot to a storyline as an update to an existing storyline."@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasUpdate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/storyline/hasSlot> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasUpdate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasUpdate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasUpdate> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/storyline/StorylineSlot> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasUpdate> <http://www.w3.org/2000/01/rdf-schema#label> "hasUpdate"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasUpdate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/storyline/Storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasUpdate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Storyline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Storyline> <http://www.w3.org/2000/01/rdf-schema#comment> "A news storyline."@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Storyline> <http://www.w3.org/2000/01/rdf-schema#label> "Storyline"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Storyline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/storyline/StorylineComponent> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Storyline> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Storyline> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasSlot> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasSlot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasSlot> <http://www.w3.org/2000/01/rdf-schema#label> "hasSlot"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasSlot> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/storyline/StorylineSlot> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasSlot> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/storyline/Storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasSlot> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a slot to a storyline. A storyline can have many slots"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasSlot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasChapter> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/storyline/hasSlot> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasChapter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasChapter> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasChapter> <http://www.w3.org/2000/01/rdf-schema#label> "hasChapter"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasChapter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasChapter> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/storyline/StorylineSlot> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasChapter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/storyline/Storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasChapter> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a slot to a storyline as a chapter of an existing storyline."@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/dateCreated> <http://www.w3.org/2000/01/rdf-schema#label> "dateCreated"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/dateCreated> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/dateCreated> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/dateCreated> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/storyline/StorylineComponent> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/dateCreated> <http://www.w3.org/2000/01/rdf-schema#comment> "The date a storyline was created"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/dateCreated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/dateCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasDevelopment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/storyline/hasSlot> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasDevelopment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasDevelopment> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasDevelopment> <http://www.w3.org/2000/01/rdf-schema#label> "hasDevelopment"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasDevelopment> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a slot to a storyline as a development of an existing storyline."@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasDevelopment> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/storyline/StorylineSlot> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasDevelopment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/storyline/Storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/hasDevelopment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Topic> <http://www.w3.org/2000/01/rdf-schema#label> "Topic"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Topic> <http://www.w3.org/2000/01/rdf-schema#comment> "The topic of a storyline. An interface to some concept in a knowledge domain."@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Topic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Topic> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/Topic> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/attributedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/storyline/Storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/attributedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a storyline to its attribution. Provides for interpretation provenance through attribution"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/attributedTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/storyline/Attribution> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/attributedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/attributedTo> <http://www.w3.org/2000/01/rdf-schema#label> "attributedTo"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/attributedTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/attributedTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/comment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/comment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#comment> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/comment> <http://www.w3.org/2000/01/rdf-schema#label> "comment"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/comment> <http://www.w3.org/2000/01/rdf-schema#comment> "An editorial comment on a storyline"@en-gb <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/comment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/storyline/Storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/comment> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/storyline> .
+<http://purl.org/ontology/storyline/comment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/storyline> <http://purl.org/ontology/storyline> .
+<http://purl.org/spar/doco/Afterword> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B13f998211d9ac89765e51aa50c9378ab <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Afterword> <http://www.w3.org/2000/01/rdf-schema#comment> "A literary device that is often found at the end of a piece of literature. It generally covers the story of how the book came into being, or how the idea for the book was developed. Alternatively, it may be written by someone other than the author of the book, and may discuss the work's historical or cultural context, if the work is being reissued many years after its original publication."@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Afterword> <http://www.w3.org/2000/01/rdf-schema#label> "afterword"@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Afterword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/doco> .
+<http://purl.org/spar/fabio/Film> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Movie> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Film> <http://www.w3.org/2000/01/rdf-schema#comment> "A movie with an accompanying soundtrack, typically created by a professional film studio, designed to communicate a fictional story, record an artistic event, or impart information that is scientific or documentary in nature."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Film> <http://www.w3.org/2000/01/rdf-schema#label> "film"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Film> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ShortStory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/LiteraryArtisticWork> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ShortStory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ShortStory> <http://www.w3.org/2000/01/rdf-schema#label> "short story"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ShortStory> <http://www.w3.org/2000/01/rdf-schema#comment> "A work of fiction that is usually written in prose, often in narrative format. This format tends to be more focused and less elaborate than longer works of fiction such as novels."@en <http://purl.org/spar/fabio> .
+<http://rdaregistry.info/Elements/a/P50082> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60029> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50082> <http://metadataregistry.org/uri/profile/RegAp/name> "storytellerOf"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50082> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdaregistry.info/Elements/e/P20023> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50082> <http://www.w3.org/2000/01/rdf-schema#label> "is storyteller of"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50082> <http://www.w3.org/2004/02/skos/core#definition> "Relates a performer contributing to an expression of a work by relaying a creator's original story with dramatic or theatrical interpretation to the expression."@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50082> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/a/P50147> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50082> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/a/> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50082> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/a/storytellerOf.en> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50082> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50082> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10002> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50082> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50082> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdaregistry.info/Elements/c/C10006> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/e/P20023> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/e/P20039> <http://rdaregistry.info/Elements/e> .
+<http://rdaregistry.info/Elements/e/P20023> <http://www.w3.org/2002/07/owl#sameAs> <http://rdaregistry.info/Elements/e/storyteller> <http://rdaregistry.info/Elements/e> .
+<http://rdaregistry.info/Elements/e/P20023> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/u/P60154> <http://rdaregistry.info/Elements/e> .
+<http://rdaregistry.info/Elements/e/P20023> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdaregistry.info/Elements/a/P50082> <http://rdaregistry.info/Elements/e> .
+<http://rdaregistry.info/Elements/e/P20023> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/e> .
+<http://rdaregistry.info/Elements/e/P20023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/e> .
+<http://rdaregistry.info/Elements/e/P20023> <http://www.w3.org/2004/02/skos/core#definition> "Relates an expression to a performer contributing to an expression of a work by relaying a creator’s original story with dramatic or theatrical interpretation."@en <http://rdaregistry.info/Elements/e> .
+<http://rdaregistry.info/Elements/e/P20023> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/e/> <http://rdaregistry.info/Elements/e> .
+<http://rdaregistry.info/Elements/e/P20023> <http://metadataregistry.org/uri/profile/RegAp/name> "storyteller"@en <http://rdaregistry.info/Elements/e> .
+<http://rdaregistry.info/Elements/e/P20023> <http://www.w3.org/2000/01/rdf-schema#label> "has storyteller"@en <http://rdaregistry.info/Elements/e> .
+<http://rdaregistry.info/Elements/e/P20023> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdaregistry.info/Elements/c/C10002> <http://rdaregistry.info/Elements/e> .
+<http://rdaregistry.info/Elements/e/P20023> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10006> <http://rdaregistry.info/Elements/e> .
+<http://rdaregistry.info/Elements/u/P60029> <http://www.w3.org/2000/01/rdf-schema#label> "is storyteller of"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60029> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdaregistry.info/Elements/u/P60154> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60029> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60029> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/u/P60615> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60029> <http://metadataregistry.org/uri/profile/RegAp/name> "storytellerOf"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60029> <http://www.w3.org/2004/02/skos/core#definition> "Relates a performer contributing to a resource by relaying a creator's original story with dramatic or theatrical interpretation to the resource."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60029> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/storytellerOf.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60029> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60029> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50082> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60154> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/storyteller.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60154> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a performer contributing to a resource by relaying a creator's original story with dramatic or theatrical interpretation."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60154> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60154> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60154> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60154> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/u/P60387> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60154> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/e/P20023> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60154> <http://www.w3.org/2000/01/rdf-schema#label> "has storyteller"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60154> <http://metadataregistry.org/uri/profile/RegAp/name> "storyteller"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60154> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdaregistry.info/Elements/u/P60029> <http://rdaregistry.info/Elements/u> .
+<http://rdvocab.info/roles/storyteller> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storyteller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storyteller> <http://www.w3.org/2000/01/rdf-schema#label> "Geschichtenerzähler "@de <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storyteller> <http://www.w3.org/2000/01/rdf-schema#label> "Storyteller"@en <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storyteller> <http://metadataregistry.org/uri/profile/RegAp/name> "storyteller"@en <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storyteller> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/roles/performer> <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storyteller> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/roles> <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storytellerExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/roles> <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storytellerExpression> <http://metadataregistry.org/uri/profile/RegAp/name> "storytellerExpression"@en <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storytellerExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdvocab.info/uri/schema/FRBRentitiesRDA/Expression> <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storytellerExpression> <http://www.w3.org/2004/02/skos/core#definition> "A performer contributing to an expression of a work by relaying a creator’s original story with dramatic or theatrical interpretation."@en <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storytellerExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/roles/performerExpression> <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storytellerExpression> <http://www.w3.org/2000/01/rdf-schema#label> "Geschichtenerzähler (Expression)"@de <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storytellerExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storytellerExpression> <http://www.w3.org/2004/02/skos/core#definition> "Ein Darsteller, der an einer Expression eines Werks mitwirkt, indem er die ursprüngliche Geschichte eines geistigen Schöpfers mit dramatischer oder theatralischer Interpretation weitergibt."@de <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storytellerExpression> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/storytellerExpression> <http://www.w3.org/2000/01/rdf-schema#label> "Storyteller (Expression)"@en <http://rdvocab.info/roles> .
+<http://www.bbc.co.uk/ontologies/bbc/primaryContent> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.bbc.co.uk/ontologies/bbc/primaryContentOf> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/primaryContent> <http://www.w3.org/2000/01/rdf-schema#label> "primaryContent"@en-gb <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/primaryContent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.bbc.co.uk/ontologies/creativework/CreativeWork> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/primaryContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the fact that a web document has as primary content the creative work (e.g., a news story about Tom Daley is the primary content of a webpage)."@en-gb <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/primaryContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/primaryContent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.bbc.co.uk/ontologies/bbc/WebDocument> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/primaryContent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/bbc> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/provenance/CreativeWorkGraph> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/provenance> <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.bbc.co.uk/ontologies/provenance/CreativeWorkGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.bbc.co.uk/ontologies/provenance/CreativeWorkGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of named graphs which contain the metadata for the CreativeWorks. For example all the metadata for a news story provided by a CMS will be contained in a single CreativeWorkGraph instance."@en-gb <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.bbc.co.uk/ontologies/provenance/CreativeWorkGraph> <http://www.w3.org/2000/01/rdf-schema#label> "CreativeWorkGraph"@en-gb <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.bbc.co.uk/ontologies/provenance/CreativeWorkGraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.bbc.co.uk/ontologies/provenance/Graph> <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.cidoc-crm.org/cidoc-crm/P5_consists_of> <http://www.w3.org/2000/01/rdf-schema#comment> "This property describes the decomposition of an E3 Condition State into discrete, subsidiary states. \nIt is assumed that the sub-states into which the condition state is analysed form a logical whole - although the entire story may not be completely known – and that the sub-states are in fact constitutive of the general condition state. For example, a general condition state of “in ruins” may be decomposed into the individual stages of decay"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P5_consists_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P5_consists_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P5_consists_of> <http://www.w3.org/2000/01/rdf-schema#label> "consiste en"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P5_consists_of> <http://www.w3.org/2000/01/rdf-schema#label> "consiste de"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P5_consists_of> <http://www.w3.org/2000/01/rdf-schema#label> "αποτελείται από"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P5_consists_of> <http://www.w3.org/2000/01/rdf-schema#label> "besteht aus"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P5_consists_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E3_Condition_State> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P5_consists_of> <http://www.w3.org/2000/01/rdf-schema#label> "состоит из"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P5_consists_of> <http://www.w3.org/2000/01/rdf-schema#label> "consists of"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#ContextualReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#IndividualReference> <http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> .
+<http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#ContextualReference> <http://www.w3.org/2000/01/rdf-schema#comment> "An IndividualReference that is denoted by a ContextualExpression (anaphoric or deictic), e.g. 'the book in my bag', 'the book mentioned at the beginning of the story'.\nThe extensional interpretation of Named and Contextual references in a de-reified model can be equivalent, reflecting the paraphrastic property of natural languages, e.g. the extensional interpretations of 'Linosa' and 'the Italian most southern island' are equivalent. This corresponds to saying that names and contextual expressions can denote the same entities." <http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> .
+<http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#ContextualReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> .
+<http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#ContextualReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8216dd08d3cbb740aff621cf0c1e5d78 <http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> .
+<http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl#ContextualReference> <http://www.w3.org/2000/01/rdf-schema#label> "Contextual reference"@en <http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> .
+<http://comicmeta.org/cbo/storyTitle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://comicmeta.org/cbo/Story> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/storyTitle> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/storyTitle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/title> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/storyTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "The title of a comic story."@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/storyTitle> <http://www.w3.org/2000/01/rdf-schema#label> "story title"@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/storyTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/storyTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/storyArc> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/hasPart> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/storyArc> <http://www.w3.org/2000/01/rdf-schema#range> <http://comicmeta.org/cbo/Story> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/storyArc> <http://www.w3.org/2000/01/rdf-schema#label> "story arc" <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/storyArc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/storyArc> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/storyArc> <http://www.w3.org/2000/01/rdf-schema#domain> <http://comicmeta.org/cbo/Story> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/storyArc> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a comic story to a story arc."@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/subject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/subject> <http://www.w3.org/2000/01/rdf-schema#label> "subject"@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/subject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://comicmeta.org/cbo/Story> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/subject> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/subject> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject of a comic story."@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/story> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a comic issue to a story."@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/story> <http://www.w3.org/2000/01/rdf-schema#domain> <http://comicmeta.org/cbo/Issue> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/story> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/story> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/story> <http://www.w3.org/2000/01/rdf-schema#range> <http://comicmeta.org/cbo/Story> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/story> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/hasPart> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/story> <http://www.w3.org/2000/01/rdf-schema#label> "story"@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/Story> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/Story> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://comicmeta.org/cbo/Comic> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/Story> <http://www.w3.org/2000/01/rdf-schema#label> "Story"@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/Story> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/Story> <http://www.w3.org/2000/01/rdf-schema#comment> "A comic story."@en <http://comicmeta.org/cbo/> .

@@ -1,0 +1,24 @@
+<http://www.kanzaki.com/ns/music#Musician> <http://www.w3.org/2000/01/rdf-schema#comment> "An artist who performs, composes or conducts music" <http://www.kanzaki.com/ns/music> .
+<http://www.kanzaki.com/ns/music#Musician> <http://www.w3.org/2000/01/rdf-schema#label> "Musician" <http://www.kanzaki.com/ns/music> .
+<http://www.kanzaki.com/ns/music#Musician> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.kanzaki.com/ns/music> <http://www.kanzaki.com/ns/music> .
+<http://www.kanzaki.com/ns/music#Musician> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.kanzaki.com/ns/music#Artist> <http://www.kanzaki.com/ns/music> .
+<http://www.kanzaki.com/ns/music#Musician> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.kanzaki.com/ns/music> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#substanceMeronym> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#substanceMeronym> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#meronymTerm> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#substanceMeronym> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#substanceMeronym> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates this is a substance that composes the other"@en <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#substanceMeronym> <http://www.w3.org/2000/01/rdf-schema#label> "substance meronym"@en <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://purl.org/ipo/core#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Step> <http://www.w3.org/2000/01/rdf-schema#label> "Step"@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Step> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ipo/core> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Step> <http://www.w3.org/2000/01/rdf-schema#comment> "A step to be performed within a CompoundAction. Every Step has an Action to be performed and a Transition to another Step to be performed after completing the execution of the Action. \nWith Steps is possible to establish an order for the execution of Actions, as each Step has a Transition that sets the Step of origin and destination. Once a CompoundAction has an initial Step (IPO: hasFirstStep), from this Step can be run all other steps that composes the compoundAction following the Transition between them."@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ipo/core> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasStep> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ipo/core#Step> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasStep> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ipo/core#CompoundAction> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasStep> <http://www.w3.org/2000/01/rdf-schema#label> "hasStep"@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasStep> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:Bd3c24e7e8640e08a5fe7b92f4825dae6 <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasStep> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a Step that composes the compoundAction."@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ipo/core> .
+<http://purl.org/net/step#RawTrajectory> <http://www.w3.org/2000/01/rdf-schema#label> "Raw Trajectory"@en <http://purl.org/net/step> .
+<http://purl.org/net/step#RawTrajectory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/net/step> .
+<http://purl.org/net/step#RawTrajectory> <http://www.w3.org/2000/01/rdf-schema#comment> "Represent the raw data from trajectories. As there's no official support for ensuring sequential ordering of tuples, we advise putting sequential numbers into the URLs of fixes to be able to retrieve the spatial footprint of the trajectory. Another solution is querying using an ORDER BY statement that sorts by the time:Interval of each Fix that composes the RawTrajectory."@en <http://purl.org/net/step> .

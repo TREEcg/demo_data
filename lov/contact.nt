@@ -1,0 +1,605 @@
+<http://purl.org/spar/scoro/contact-person> <http://www.w3.org/2000/01/rdf-schema#label> "contact person"@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/contact-person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/contact-person> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/contact-person> <http://www.w3.org/2000/01/rdf-schema#comment> "The role of a person who serves as the primary contact and information provider for third parties wishing to find out more about an organization or an activity."@en <http://purl.org/spar/scoro/> .
+<http://purl.org/vocab/relationship/lostContactWith> <http://www.w3.org/2000/01/rdf-schema#label> "Lost Contact With"@en <http://purl.org/vocab/relationship/> .
+<http://purl.org/vocab/relationship/lostContactWith> <http://www.w3.org/2004/02/skos/core#historyNote> _:B38afcad43acdf287fd6425d61087a051 <http://purl.org/vocab/relationship/> .
+<http://purl.org/vocab/relationship/lostContactWith> <http://www.w3.org/2004/02/skos/core#definition> "A person who was once known by this person but has subsequently become uncontactable."@en <http://purl.org/vocab/relationship/> .
+<http://purl.org/vocab/relationship/lostContactWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> <http://purl.org/vocab/relationship/> .
+<http://purl.org/vocab/relationship/lostContactWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#differentFrom> <http://purl.org/vocab/relationship/> .
+<http://purl.org/vocab/relationship/lostContactWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Person> <http://purl.org/vocab/relationship/> .
+<http://purl.org/vocab/relationship/lostContactWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/knows> <http://purl.org/vocab/relationship/> .
+<http://purl.org/vocab/relationship/lostContactWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://purl.org/vocab/relationship/> .
+<http://purl.org/vocab/relationship/lostContactWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/relationship/> <http://purl.org/vocab/relationship/> .
+<http://purl.org/vocab/relationship/examples/2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://open.vocab.org/terms/SchemaExample> <http://purl.org/vocab/relationship/> .
+<http://purl.org/vocab/relationship/examples/2> <http://www.w3.org/2000/01/rdf-schema#comment> "<p>\n\n      The relationship vocabulary can be used to describe relationships with the people linked from a web page. This is particularly useful for blogrolls or contact lists but can be used with any type of link. The HTML <code>a</code> element provides two attributes, <a href=\"http://www.w3.org/TR/html401/struct/links.html#adef-rel\">rel and rev</a>, that can be used to specify the relationship. Both <code>rel</code> and <code>rev</code> take a space separated list of keywords as their value. To use a term from the relationship vocabulary just drop the <code>http://purl.org/vocab/relationship/</code> namespace to leave the property name, e.g. <code>http://purl.org/vocab/relationship/worksWith</code> would become <code>worksWith</code> which can be added as the value of <code>rel</code> or <code>rev</code>.\n    </p>\n    <dl>\n      <dt>\n        <code>rel</code>\n      </dt>\n      <dd>\n        <p>\n          The <code>rel</code> attribute specifies a relationship that the author of the <em>linked</em> page has with the author of the <em>linking</em> page.\n          For example:\n        </p>\n        <pre><code><span class=\"elem\">&lt;a</span><span class=\"attr\">href</span>=\"<span class=\"attrVal\">http://example.com/boats</span>\" <span class=\"attr highlight\">rel</span>=\"<span class=\"attrVal\">childOf</span>\"<span class=\"elem\">&gt;</span><span class=\"text\">The boat we restored</span><span class=\"elem\">\"&lt;/a&gt;</span></code></pre>\n        <p>This link states that the author of <code>http://example.com/boats</code> is a child of the author of the html above. </p>\n      </dd>\n      <dt>\n        <code>rev</code>\n      </dt>\n      <dd>\n        <p>\n          The <code>rev</code> attribute specifies a relationship that the author of the <em>linking</em> page has with the author of the   <em>linked</em> page. The example here is:\n        </p>\n        <pre><code><span class=\"elem\">&lt;a</span><span class=\"attr\">href</span>=\"<span class=\"attrVal\">http://example.com/boats</span>\" <span class=\"attr highlight\">rev</span>=\"<span class=\"attrVal\">childOf</span>\"<span class=\"elem\">&gt;</span><span class=\"text\">The boat we restored</span><span class=\"elem\">\"&lt;/a&gt;</span></code></pre>\n        <p>In this case the meaning of the link is reversed: the author of the html above is a child of the author of <code>http://example.com/boats</code>.</p>\n      </dd>\n    </dl>\n    <p>The HTML and XHTML recommendations require an HTML document to declare a custom profile if it uses any non-standard <code>rel</code> or <code>rev</code> types. This is done by adding a <code>profile</code> attribute with a value of <code>http://purl.org/vocab/relationship/</code> to the document's <code>head</code> element. </p>\n    <pre><code>  &lt;head profile=\"http://purl.org/vocab/relationship/\"&gt;\n    &lt;title&gt;People I Know&lt;/title&gt;\n  &lt;/head&gt;</code></pre>\n    <h3>Complete Example</h3>\n    <pre><code>  &lt;html profile=\"http://purl.org/vocab/relationship/\"&gt;\n    &lt;head&gt;\n      &lt;title&gt;People I Know&lt;/title&gt;\n    &lt;/head&gt;\n    &lt;body&gt;\n      &lt;p&gt;Here are the people I know:&lt;/p&gt;\n        &lt;ul&gt;\n          &lt;li&gt;&lt;a href=\"http://example.com/~freddy\" rel=\"closeFriendOf\"&gt;Freddy (he's cool!)&lt;/a&gt;&lt;/li&gt;\n          &lt;li&gt;&lt;a href=\"http://frooble.com/\" rel=\"mentorOf\"&gt;Jimbo&lt;/a&gt;&lt;/li&gt;\n          &lt;li&gt;&lt;a href=\"http://mmmm.com/klm\" rel=\"friendOf\"&gt;Katie&lt;/a&gt;&lt;/li&gt;\n          &lt;li&gt;&lt;a href=\"http://example.com/~omah\" rel=\"worksWith\"&gt;Omah (does the coding)&lt;/a&gt;&lt;/li&gt;\n          &lt;li&gt;&lt;a href=\"http://example.com/~jason\" rev=\"closeFriendOf employedBy\"&gt;Jason, my henchman&lt;/a&gt;&lt;/li&gt;\n        &lt;/ul&gt;\n      &lt;/body&gt;\n    &lt;/html&gt;\n</code></pre>\n    <h3>RDF Interpretation</h3>\n    <p>Custom parsers that extract RDF from (X)HTML can use the relationships expressed in the links to infer the\n  equivilent RDF triples. It should be remembered that the relationship is between the authors of the pages not between\n  the pages themselves. Given the following link on a document at <code>http://example.com/mypage.html</code>:\n  </p>\n    <pre><code><span class=\"elem\">&lt;a</span><span class=\"attr\">href</span>=\"<span class=\"attrVal\">http://example.com/boats</span>\" <span class=\"attr highlight\">rel</span>=\"<span class=\"attrVal\">childOf</span>\"<span class=\"elem\">&gt;</span><span class=\"text\">The boat we restored</span><span class=\"elem\">\"&lt;/a&gt;</span></code></pre>\n    <p>a suggested RDF extraction is:</p>\n    <pre><code>  &lt;foaf:Person&gt;\n    &lt;foaf:maker rdf:resource=\"http://example.com/boats\"/&gt;\n    &lt;rel:childOf&gt;\n      &lt;foaf:Person&gt;\n        &lt;foaf:maker rdf:resource=\"http://example.com/mypage.html\"/&gt;\n      &lt;/foaf:Person&gt;\n    &lt;/rel:childOf&gt;\n  &lt;/foaf:Person&gt;</code></pre>\n"^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#XMLLiteral> <http://purl.org/vocab/relationship/> .
+<http://purl.org/vocab/relationship/examples/2> <http://www.w3.org/2000/01/rdf-schema#label> "Using With HTML and XHTML" <http://purl.org/vocab/relationship/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/deciradian> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.w3.org/2000/01/rdf-schema#label> "contact angle"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/attoradian> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/radian> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/milliradian> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/centiradian> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/microsecond-Angle> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gon> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/mil-Angle> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/revolution> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/second-Angle> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/femtoradian> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/microradian> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/millisecond-Angle> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontology-of-units-of-measure.org/resource/om-2/Angle> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/nanoradian> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerMetre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/degree> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/picoradian> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ContactAngle> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/minute-Angle> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://rdaregistry.info/Elements/m/P30141> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "contact information"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30141> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30141> <http://www.w3.org/2000/01/rdf-schema#label> "has contact information"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30141> <http://metadataregistry.org/uri/profile/RegAp/name> "contactInformation"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30141> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30141> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60490> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30141> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30141> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30141> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to information about an organization, etc., from which a resource may be obtained."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30141> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "4.3" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30141> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/contactInformation.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30141> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "Information about an organization, etc., from which a resource may be obtained."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/u/P60490> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60490> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60490> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to information about an organization, etc., from which a resource may be obtained."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60490> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/m/P30141> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60490> <http://www.w3.org/2000/01/rdf-schema#label> "has contact information"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60490> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60490> <http://metadataregistry.org/uri/profile/RegAp/name> "contactInformation"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60490> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/contactInformation.en> <http://rdaregistry.info/Elements/u> .
+<http://rdf.myexperiment.org/ontologies/base/contact-details> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf.myexperiment.org/ontologies/base/User> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/contact-details> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/contact-details> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf.myexperiment.org/ontologies/base/> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/contact-details> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/contact-details> <http://www.w3.org/2000/01/rdf-schema#label> "contact-details" <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/contact-details> <http://www.w3.org/2000/01/rdf-schema#comment> "A User has contact-details" <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdvocab.info/Elements/contactInformation> <http://www.w3.org/2004/02/skos/core#definition> "Information relating to an organization, etc., from which a resource may be obtained."@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/Elements> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformation> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdvocab.info/Elements/contactInformationManifestation> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformation> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Contact information"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformation> <http://metadataregistry.org/uri/profile/RegAp/name> "contactInformation"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationItem> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationItem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/Elements/contentType> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/Elements> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationItem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdvocab.info/uri/schema/FRBRentitiesRDA/Item> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationItem> <http://metadataregistry.org/uri/profile/RegAp/name> "contactInformationItem"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationItem> <http://www.w3.org/2000/01/rdf-schema#label> "Contact information (Item)"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationItem> <http://www.w3.org/2004/02/skos/core#definition> "Information relating to an organization, etc., from which a resource may be obtained. "@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationManifestation> <http://www.w3.org/2000/01/rdf-schema#label> "Contact information (Manifestation)"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationManifestation> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationManifestation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/Elements/contactInformation> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationManifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationManifestation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdvocab.info/uri/schema/FRBRentitiesRDA/Manifestation> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationManifestation> <http://www.w3.org/2004/02/skos/core#definition> "Information relating to an organization, etc., from which a resource may be obtained."@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationManifestation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/Elements> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/contactInformationManifestation> <http://metadataregistry.org/uri/profile/RegAp/name> "contactInformationManifestation"@en <http://rdvocab.info/Elements> .
+<http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#Communication> <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/2000/01/rdf-schema#label> "Language" <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/2002/07/owl#equivalentClass> _:B02d23542917a25558bd29b1e05aad78e <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bf6f16496211919a526613cf888f7565c <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the language(s) that may be used for contacting the entity associated with the vCard." <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000029> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.obolibrary.org/obo/ARG_2000028> <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000029> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.obolibrary.org/obo/ARG_2000379> <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000029> <http://www.w3.org/2000/01/rdf-schema#label> "contact info for" <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000029> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000399> <http://www.w3.org/2000/01/rdf-schema#label> "has contact agent" <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000399> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Contact> <http://www.w3.org/2000/01/rdf-schema#label> "Contact" <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Contact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#RelatedType> <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000028> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.obolibrary.org/obo/ARG_2000379> <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000028> <http://www.w3.org/2000/01/rdf-schema#label> "has contact info" <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000028> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000376> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000376> <http://www.w3.org/2000/01/rdf-schema#label> "Contact Qualifier" <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000376> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
+<http://vivoweb.org/ontology/core#contactInformation> <http://www.w3.org/2000/01/rdf-schema#label> "contact information" <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000037> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000037> <http://purl.obolibrary.org/obo/IAO_0000115> "Service offered by the organization." <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000037> <http://purl.obolibrary.org/obo/IAO_0000119> "PERSON: Melissa Haendel" <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000037> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bd6906acb2532931f076b3c013ef6f0ba <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000037> <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Melissa Haendel" <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000037> <http://www.w3.org/2000/01/rdf-schema#label> "contact or provider for service" <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000037> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.obolibrary.org/obo/ERO_0000005> <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000037> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000037> <http://purl.obolibrary.org/obo/IAO_0000111> "provides services" <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000037> <http://purl.obolibrary.org/obo/IAO_0000112> "A core lab providing cell sorting to individual labs." <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000037> <http://www.w3.org/2000/01/rdf-schema#domain> _:B5224f5251eac6490686921f3b5a16fa8 <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000379> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000379> <http://www.w3.org/2000/01/rdf-schema#label> "Contact" <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ARG_2000379> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
+<http://voag.linkedmodel.org/voag#pointOfContact> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://voag.linkedmodel.org/schema/voag> <http://voag.linkedmodel.org/schema/voag> .
+<http://voag.linkedmodel.org/voag#pointOfContact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://voag.linkedmodel.org/schema/voag> .
+<http://voag.linkedmodel.org/voag#pointOfContact> <http://www.w3.org/2000/01/rdf-schema#label> "point of contact" <http://voag.linkedmodel.org/schema/voag> .
+<http://voag.linkedmodel.org/voag#pointOfContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://voag.linkedmodel.org/schema/voag> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of agents defined by contact details according to X500 syntax."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.agls.gov.au/agls/terms/AgentClass> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://gold.directory.gov.au/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://www.w3.org/2000/01/rdf-schema#label> "Government Online Directory"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.agls.gov.au/documents/AglsAvail/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.agls.gov.au/agls/terms/AvailClass> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://www.w3.org/2000/01/rdf-schema#label> "AGLS Availability Scheme"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of resource availability or physical access to a resource defined by contact details according to Dublin Core Structured Values"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAgent> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of agents defined by contact details according to Dublin Core Structured Values"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAgent> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.agls.gov.au/documents/AglsAgent/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAgent> <http://www.w3.org/2000/01/rdf-schema#label> "AAGLS Agent Scheme"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAgent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.agls.gov.au/agls/terms/AgentClass> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAgent> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/availability> <http://purl.org/dc/terms/issued> "2007-12-19" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/availability> <http://purl.org/dc/terms/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/availability> <http://www.w3.org/2000/01/rdf-schema#comment> "How the resource can be obtained or accessed, or contact information."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/availability> <http://www.w3.org/2000/01/rdf-schema#label> "Availability"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/availability> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/availability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/availability> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.agls.gov.au/agls/1.2/availability> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/availability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.agls.gov.au/agls/terms> .
+<http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point> <http://www.w3.org/2000/01/rdf-schema#label> "Kontaktpunkt"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point> <http://www.w3.org/2000/01/rdf-schema#label> "Контакт"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point> <http://www.w3.org/2000/01/rdf-schema#label> "Ponto de Contato"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point> <http://www.w3.org/2000/01/rdf-schema#label> "Στοιχείο Επικοινωνίας"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises identifiers employed, or understood, by communication services to direct communications to an instance of E39 Actor. These include E-mail addresses, telephone numbers, post office boxes, Fax numbers, URLs etc. Most postal addresses can be considered both as instances of E44 Place Appellation and E51 Contact Point. In such cases the subclass E45 Address should be used. \nURLs are addresses used by machines to access another machine through an http request. Since the accessed machine acts on behalf of the E39 Actor providing the machine, URLs are considered as instances of E51 Contact Point to that E39 Actor.\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point> <http://www.w3.org/2000/01/rdf-schema#label> "Coordonnées individuelles"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point> <http://www.w3.org/2000/01/rdf-schema#label> "Contact Point"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point> <http://www.w3.org/2000/01/rdf-schema#label> "hat Kontaktpunkt"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point> <http://www.w3.org/2000/01/rdf-schema#label> "a pour coordonnées individuelles"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point> <http://www.w3.org/2000/01/rdf-schema#comment> "This property identifies an E51 Contact Point of any type that provides access to an E39 Actor by any communication method, such as e-mail or fax.\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point> <http://www.w3.org/2000/01/rdf-schema#label> "possui ponto de contato"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point> <http://www.w3.org/2000/01/rdf-schema#label> "имеет контакт"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point> <http://www.w3.org/2000/01/rdf-schema#label> "has contact point"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point> <http://www.w3.org/2000/01/rdf-schema#label> "έχει σημείο επικοινωνίας"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76_has_contact_point> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76i_provides_access_to> <http://www.w3.org/2000/01/rdf-schema#label> "bietet Zugang zu"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76i_provides_access_to> <http://www.w3.org/2000/01/rdf-schema#label> "permettent de contacter"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76i_provides_access_to> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76i_provides_access_to> <http://www.w3.org/2000/01/rdf-schema#label> "provides access to"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76i_provides_access_to> <http://www.w3.org/2000/01/rdf-schema#label> "παρέχει πρόσβαση σε"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76i_provides_access_to> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76i_provides_access_to> <http://www.w3.org/2000/01/rdf-schema#label> "предоставляет доступ к"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76i_provides_access_to> <http://www.w3.org/2000/01/rdf-schema#label> "é ponto de contado de"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P76i_provides_access_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence> <http://www.w3.org/2000/01/rdf-schema#label> "a fait cesser d’exister"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence> <http://www.w3.org/2000/01/rdf-schema#label> "cessou a existência de"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence> <http://www.w3.org/2000/01/rdf-schema#label> "beendete die Existenz von"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence> <http://www.w3.org/2000/01/rdf-schema#label> "αναίρεσε"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E64_End_of_Existence> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence> <http://www.w3.org/2000/01/rdf-schema#label> "положил конец существованию"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows an E64 End of Existence event to be linked to the E77 Persistent Item taken out of existence by it.\nIn the case of immaterial things, the E64 End of Existence is considered to take place with the destruction of the last physical carrier.\nThis allows an “end” to be attached to any Persistent Item being documented i.e. E70 Thing, E72 Legal Object, E39 Actor, E41 Appellation, E51 Contact Point and E55 Type. For many Persistent Items we know the maximum life-span and can infer, that they must have ended to exist. We assume in that case an End of Existence, which may be as unnoticeable as forgetting the secret knowledge by the last representative of some indigenous nation.\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P93_took_out_of_existence> <http://www.w3.org/2000/01/rdf-schema#label> "took out of existence"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E55_Type> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.w3.org/2000/01/rdf-schema#label> "hat den Typus"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.w3.org/2000/01/rdf-schema#label> "has type"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.w3.org/2000/01/rdf-schema#label> "έχει τύπο"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.w3.org/2000/01/rdf-schema#label> "имеет тип"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.w3.org/2000/01/rdf-schema#label> "est de type"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.w3.org/2000/01/rdf-schema#label> "é do tipo"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P2_has_type> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows sub typing of CRM entities - a form of specialisation – through the use of a terminological hierarchy, or thesaurus. \nThe CRM is intended to focus on the high-level entities and relationships needed to describe data structures. Consequently, it does not specialise entities any further than is required for this immediate purpose. However, entities in the isA hierarchy of the CRM may by specialised into any number of sub entities, which can be defined in the E55 Type hierarchy. E51 Contact Point, for example, may be specialised into “e-mail address”, “telephone number”, “post office box”, “URL” etc. none of which figures explicitly in the CRM hierarchy. Sub typing obviously requires consistency between the meaning of the terms assigned and the more general intent of the CRM entity in question.\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E63_Beginning_of_Existence> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> <http://www.w3.org/2000/01/rdf-schema#label> "brought into existence"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> <http://www.w3.org/2000/01/rdf-schema#label> "a fait exister"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> <http://www.w3.org/2000/01/rdf-schema#label> "γέννησε"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> <http://www.w3.org/2000/01/rdf-schema#comment> "This property allows an E63 Beginning of Existence event to be linked to the E77 Persistent Item brought into existence by it.\nIt allows a “start” to be attached to any Persistent Item being documented i.e. E70 Thing, E72 Legal Object, E39 Actor, E41 Appellation, E51 Contact Point and E55 Type"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> <http://www.w3.org/2000/01/rdf-schema#label> "brachte in Existenz"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E77_Persistent_Item> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> <http://www.w3.org/2000/01/rdf-schema#label> "trouxe à existência"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> <http://www.w3.org/2000/01/rdf-schema#label> "создал"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P92_brought_into_existence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.cidoc-crm.org/cidoc-crm/P12_occurred_in_the_presence_of> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E45_Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E45_Address> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises identifiers expressed in coding systems for places, such as postal addresses used for mailing.\nAn E45 Address can be considered both as the name of an E53 Place and as an E51 Contact Point for an E39 Actor. This dual aspect is reflected in the multiple inheritance. However, some forms of mailing addresses, such as a postal box, are only instances of E51 Contact Point, since they do not identify any particular Place. These should not be documented as instances of E45 Address.\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E45_Address> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E44_Place_Appellation> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E45_Address> <http://www.w3.org/2000/01/rdf-schema#label> "Adresse"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E45_Address> <http://www.w3.org/2000/01/rdf-schema#label> "Adresse"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E45_Address> <http://www.w3.org/2000/01/rdf-schema#label> "Endereço"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E45_Address> <http://www.w3.org/2000/01/rdf-schema#label> "Адрес"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E45_Address> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E51_Contact_Point> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E45_Address> <http://www.w3.org/2000/01/rdf-schema#label> "Address"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E45_Address> <http://www.w3.org/2000/01/rdf-schema#label> "Διεύθυνση"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isFictitiousContact> <http://www.w3.org/2000/01/rdf-schema#comment> "To identify Contact/persons being fictitious."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isFictitiousContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isFictitiousContact> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Character> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isFictitiousContact> <http://www.w3.org/2000/01/rdf-schema#label> "Fictitious contact"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasAffiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "A property to establish the relation between a\n            Contact/person and an Organisation."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#label> "Affiliation"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Contact> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Organisation> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isOwnedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Owner"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isOwnedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Agent> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isOwnedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Service> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isOwnedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isOwnedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isOwnedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "To identify the Agent (Contact/person or\n            Organisation) who owns a Service operating a PublicationChannel."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Character> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Character> <http://www.w3.org/2000/01/rdf-schema#comment> "E.g. a fictitious contact / person."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Character> <http://www.w3.org/2000/01/rdf-schema#label> "Character"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Character> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Agent> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasMetadataAttributor> <http://www.w3.org/2000/01/rdf-schema#comment> "To identify the Agent (Contact/person or\n            Organisation) who has created the metadata."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasMetadataAttributor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Subject> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasMetadataAttributor> <http://www.w3.org/2000/01/rdf-schema#label> "Metadata attributor"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasMetadataAttributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Contact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Agent> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Contact> <http://www.w3.org/2000/01/rdf-schema#label> "Contact"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Contact> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical person."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasRightsHolder> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Rights> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasRightsHolder> <http://www.w3.org/2000/01/rdf-schema#label> "Rights holder"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasRightsHolder> <http://www.w3.org/2000/01/rdf-schema#comment> "To identify an Agent (Contact/person or\n            Organisation) having/managing Rights."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasRightsHolder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#owns> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Service> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#owns> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Agent> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#owns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#owns> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isOwnedBy> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#owns> <http://www.w3.org/2000/01/rdf-schema#label> "Owns"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#owns> <http://www.w3.org/2000/01/rdf-schema#comment> "To identify the service (s) that an Agent\n            (Contact/person or Organisation) owns."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#owns> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/relation> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentWebHomepage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Agent> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentWebHomepage> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://xmlns.com/foaf/0.1/homepage> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentWebHomepage> <http://www.w3.org/2000/01/rdf-schema#comment> "To provide the address of the webpage of an\n            Agent (Contact/person or Organisation)."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentWebHomepage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentWebHomepage> <http://www.w3.org/2000/01/rdf-schema#label> "Homepage"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentWebHomepage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "To identify a Contact/person or Organisation as part of a cast list."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isAgent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Cast> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#isAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#privateMobileTelephoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#privateMobileTelephoneNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Mobile (private)"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#privateMobileTelephoneNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "To provide the private mobile telephone number\n            of an agent (Contact/person)."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#privateMobileTelephoneNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentMobileTelephoneNumber> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasRightsContact> <http://www.w3.org/2000/01/rdf-schema#label> "Contact"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasRightsContact> <http://www.w3.org/2000/01/rdf-schema#comment> "To identify a Contact/person who can provide\n            assistance / guidance regarding the associated Rights."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasRightsContact> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Rights> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasRightsContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentAge> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentAge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentAge> <http://www.w3.org/2000/01/rdf-schema#label> "Age"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentAge> <http://www.w3.org/2000/01/rdf-schema#comment> "The age of a Contact/Person" <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentAge> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Contact> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentName> <http://www.w3.org/2000/01/rdf-schema#comment> "To provide the full name of Contact/person - family and given name."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Agent> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentName> <http://www.w3.org/2000/01/rdf-schema#label> "Name"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#contactOccupation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Contact> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#contactOccupation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#contactOccupation> <http://www.w3.org/2000/01/rdf-schema#label> "Occupation"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#contactOccupation> <http://www.w3.org/2000/01/rdf-schema#comment> "The job / occupation name of a Contact /\n            person."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#contactOccupation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#officeMobileTelephoneNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "To provide the professional/office/company\n            mobile telephone number of an agent (Contact/person or organisation)."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#officeMobileTelephoneNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Mobile (office)"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#officeMobileTelephoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#officeMobileTelephoneNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#agentMobileTelephoneNumber> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasContact> <http://www.w3.org/2000/01/rdf-schema#label> "Contact"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasContact> <http://www.w3.org/2000/01/rdf-schema#comment> "To provide information on a Contact for an\n            Organisation or a physical person (e.g. the agent of an actor)."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasContact> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Agent> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#Party> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#InformationElement> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact> <http://www.w3.org/2000/01/rdf-schema#comment> "A Contact. A piece of data that can provide means to identify or communicate with an entity." <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Contact> <http://www.w3.org/2000/01/rdf-schema#label> "Contact" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#contact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#contact> <http://www.w3.org/2000/01/rdf-schema#comment> "The property is used to represent contact information or alternately a reference to contact information associated with the calendar component. Inspired by RFC 2445 sec. 4.8.4.2 with the following reservations: the LANGUAGE parameter has been discarded. Please use xml:lang literals to express language. For the ALTREP parameter use the contactAltRep property.RFC doesn't define any format for the string." <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#contact> <http://www.w3.org/2000/01/rdf-schema#label> "contact" <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#contact> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionOfEventFreebusyJournalTodo> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.w3.org/2002/12/cal/ical#contact> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bdeb95c6c5776d82be8e4a8a0906ac289 <http://www.w3.org/2002/12/cal/ical> .
+<http://www.w3.org/2002/12/cal/ical#contact> <http://www.w3.org/2000/01/rdf-schema#comment> "The property is used to represent contact information or alternately a reference to contact information associated with the calendar component." <http://www.w3.org/2002/12/cal/ical> .
+<http://www.w3.org/2002/12/cal/ical#contact> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/2002/12/cal/ical> .
+<http://www.w3.org/2002/12/cal/ical#contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.w3.org/2002/12/cal/ical> .
+<http://www.w3.org/2002/12/cal/ical#contact> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t    value type: TEXT" <http://www.w3.org/2002/12/cal/ical> .
+<http://www.w3.org/2002/12/cal/ical#contact> <http://www.w3.org/2002/12/cal/icalSpec#valueType> "TEXT" <http://www.w3.org/2002/12/cal/ical> .
+<http://www.w3.org/2002/12/cal/ical#contact> <http://www.w3.org/2000/01/rdf-schema#label> "CONTACT" <http://www.w3.org/2002/12/cal/ical> .
+<http://www.w3.org/2006/vcard/ns#Contact> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> <http://www.w3.org/2006/vcard/ns> .
+<http://www.w3.org/2006/vcard/ns#Contact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#RelatedType> <http://www.w3.org/2006/vcard/ns> .
+<http://www.w3.org/2006/vcard/ns#Contact> <http://www.w3.org/2000/01/rdf-schema#label> "Contact"@en <http://www.w3.org/2006/vcard/ns> .
+<http://www.w3.org/2006/vcard/ns#Contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/2006/vcard/ns> .
+<http://dataid.dbpedia.org/ns/core#Contact> <http://dataid.dbpedia.org/ns/core#allowsFor> <http://dataid.dbpedia.org/ns/core#ModifyContent> <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#Contact> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://dataid.dbpedia.org/ns/core#> <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#Contact> <http://dataid.dbpedia.org/ns/core#allowsFor> <http://dataid.dbpedia.org/ns/core#ResponseToContact> <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#Contact> <http://www.w3.org/2000/01/rdf-schema#label> "contact"@en <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#Contact> <http://www.w3.org/2000/01/rdf-schema#comment> "Contact agent. An agent that can be contacted for general requests about the resource."@en <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#Contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dataid.dbpedia.org/ns/core#AgentRole> <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#Contact> <http://dataid.dbpedia.org/ns/core#allowsFor> <http://dataid.dbpedia.org/ns/core#ReadContent> <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#Contact> <http://dataid.dbpedia.org/ns/core#allowsFor> <http://dataid.dbpedia.org/ns/core#ReadDataId> <http://dataid.dbpedia.org/ns/core#> .
+<https://saref.etsi.org/saref4ehaw/Contact> <http://www.w3.org/2000/01/rdf-schema#label> "Contact"@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/Contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/Contact> <http://www.w3.org/2002/07/owl#equivalentClass> <https://saref.etsi.org/saref4ehaw/HealthActor> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/Contact> <http://www.w3.org/2000/01/rdf-schema#comment> "A BAN has one or multiple contacts, i.e. some health actors, e.g. the patient or user that is monitored through this BAN, the caregiver that is using this BAN for monitoring purposes..."@en <https://saref.etsi.org/saref4ehaw/> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:B7b6649c6681925fa58434821f321612a <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/fra> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:Bd1ca1f44a331367fc9afbb45128a659b <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://www.w3.org/ns/dcat#keyword> "People" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:B15464e1ced9e2d0d2c2379f684f9b40b <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.w3.org/2000/10/swap/pim/contact#" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/dc/terms/publisher> <http://www.w3.org/data#W3C> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:B00d4b7214a634f753fbc7badf4e42d7d <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/dc/terms/title> "Contact"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/dc/terms/description> "Utility concepts for everyday life"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:Beeaddf486cf1a8dbce01afb8c9fa8960 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/stuff/rev#hasReview> _:Bf7af7ff371a8f5aa333a6f80fba58f55 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocab/vann/preferredNamespacePrefix> "con" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:B846b0297be982c34e25857c688c1084c <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:B756b319425e34301e0f3bc83549912c6 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:B93c8672d68748506eb188c3baad85be2 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/con/versions/2011-02-01.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:B0010721f0734a73901422431ebeed3c9 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:Be1a48657aca7275314c3e50d4b4e06bf <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:B774c112791fc33a5445abcdf4a859f27 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/tim-berners-lee> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:B72d31ab6f6a32957e72b128e71fb0126 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/stuff/rev#hasReview> _:Bb50b8fd4ba4f093ea598f4df4eab00a4 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:Bedd5baa287b80dd66884d80b7d1cfa33 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/dc/terms/modified> "2011-02-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/stuff/rev#hasReview> _:B98c96d9e966ef36faf0703d14ab3e13c <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "23380"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:B22391285bcf0683df9e36d5048888dc1 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#reusedByDatasets> "16"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:Bdf14d782aa7d40bf5678c8f0aa7d8566 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2000/10/swap/pim/contact> <http://purl.org/vocommons/voaf#usageInDataset> _:B23cbec7ffcd0492fc4fc62f23acad3dc <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/con> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/con> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.w3.org/2000/10/swap/pim/contact> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/con> <http://purl.org/dc/terms/title> "Contact"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/con> <http://purl.org/dc/terms/modified> "2015-08-21"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/con> <http://purl.org/dc/terms/issued> "2013-06-18"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/contact.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:Bcontacta .
+_:Bcontacta <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcontacta <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contacta.nt> .
+_:Bcontacta <https://w3id.org/tree#value> "contacta" .
+_:Bcontacta <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contacta.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:Bcontactc .
+_:Bcontactc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcontactc <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contactc.nt> .
+_:Bcontactc <https://w3id.org/tree#value> "contactc" .
+_:Bcontactc <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contactc.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:Bcontacte .
+_:Bcontacte <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcontacte <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contacte.nt> .
+_:Bcontacte <https://w3id.org/tree#value> "contacte" .
+_:Bcontacte <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contacte.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:Bcontactf .
+_:Bcontactf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcontactf <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contactf.nt> .
+_:Bcontactf <https://w3id.org/tree#value> "contactf" .
+_:Bcontactf <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contactf.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:Bcontactg .
+_:Bcontactg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcontactg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contactg.nt> .
+_:Bcontactg <https://w3id.org/tree#value> "contactg" .
+_:Bcontactg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contactg.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:Bcontacth .
+_:Bcontacth <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcontacth <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contacth.nt> .
+_:Bcontacth <https://w3id.org/tree#value> "contacth" .
+_:Bcontacth <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contacth.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:Bcontacti .
+_:Bcontacti <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcontacti <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contacti.nt> .
+_:Bcontacti <https://w3id.org/tree#value> "contacti" .
+_:Bcontacti <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contacti.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:Bcontactl .
+_:Bcontactl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcontactl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contactl.nt> .
+_:Bcontactl <https://w3id.org/tree#value> "contactl" .
+_:Bcontactl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contactl.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:Bcontactm .
+_:Bcontactm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcontactm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contactm.nt> .
+_:Bcontactm <https://w3id.org/tree#value> "contactm" .
+_:Bcontactm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contactm.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:Bcontacto .
+_:Bcontacto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcontacto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contacto.nt> .
+_:Bcontacto <https://w3id.org/tree#value> "contacto" .
+_:Bcontacto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contacto.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:Bcontactp .
+_:Bcontactp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcontactp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contactp.nt> .
+_:Bcontactp <https://w3id.org/tree#value> "contactp" .
+_:Bcontactp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contactp.nt> <https://w3id.org/tree#remainingItems> "32"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:Bcontacts .
+_:Bcontacts <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcontacts <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contacts.nt> .
+_:Bcontacts <https://w3id.org/tree#value> "contacts" .
+_:Bcontacts <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contacts.nt> <https://w3id.org/tree#remainingItems> "25"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:Bcontactt .
+_:Bcontactt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcontactt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contactt.nt> .
+_:Bcontactt <https://w3id.org/tree#value> "contactt" .
+_:Bcontactt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contactt.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:Bcontactu .
+_:Bcontactu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcontactu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contactu.nt> .
+_:Bcontactu <https://w3id.org/tree#value> "contactu" .
+_:Bcontactu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contactu.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:B1X2Bcontact .
+_:B1X2Bcontact <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:B1X2Bcontact <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/1+contact.nt> .
+_:B1X2Bcontact <https://w3id.org/tree#value> "1" .
+_:B1X2Bcontact <https://w3id.org/tree#value> "contact" .
+_:B1X2Bcontact <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/1+contact.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BaX2Bcontact .
+_:BaX2Bcontact <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bcontact <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+contact.nt> .
+_:BaX2Bcontact <https://w3id.org/tree#value> "a" .
+_:BaX2Bcontact <https://w3id.org/tree#value> "contact" .
+_:BaX2Bcontact <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+contact.nt> <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BbX2Bcontact .
+_:BbX2Bcontact <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bcontact <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+contact.nt> .
+_:BbX2Bcontact <https://w3id.org/tree#value> "b" .
+_:BbX2Bcontact <https://w3id.org/tree#value> "contact" .
+_:BbX2Bcontact <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+contact.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcX2Bcontact .
+_:BcX2Bcontact <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Bcontact <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+contact.nt> .
+_:BcX2Bcontact <https://w3id.org/tree#value> "c" .
+_:BcX2Bcontact <https://w3id.org/tree#value> "contact" .
+_:BcX2Bcontact <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+contact.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Bd .
+_:BcontactX2Bd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Bd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+d.nt> .
+_:BcontactX2Bd <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Bd <https://w3id.org/tree#value> "d" .
+_:BcontactX2Bd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+d.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Bf .
+_:BcontactX2Bf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Bf <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+f.nt> .
+_:BcontactX2Bf <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Bf <https://w3id.org/tree#value> "f" .
+_:BcontactX2Bf <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+f.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Bg .
+_:BcontactX2Bg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Bg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+g.nt> .
+_:BcontactX2Bg <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Bg <https://w3id.org/tree#value> "g" .
+_:BcontactX2Bg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+g.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Bi .
+_:BcontactX2Bi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Bi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+i.nt> .
+_:BcontactX2Bi <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Bi <https://w3id.org/tree#value> "i" .
+_:BcontactX2Bi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+i.nt> <https://w3id.org/tree#remainingItems> "36"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Bl .
+_:BcontactX2Bl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Bl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+l.nt> .
+_:BcontactX2Bl <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Bl <https://w3id.org/tree#value> "l" .
+_:BcontactX2Bl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+l.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Bm .
+_:BcontactX2Bm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Bm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+m.nt> .
+_:BcontactX2Bm <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Bm <https://w3id.org/tree#value> "m" .
+_:BcontactX2Bm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+m.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Bn .
+_:BcontactX2Bn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Bn <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+n.nt> .
+_:BcontactX2Bn <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Bn <https://w3id.org/tree#value> "n" .
+_:BcontactX2Bn <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+n.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Bo .
+_:BcontactX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+o.nt> .
+_:BcontactX2Bo <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Bo <https://w3id.org/tree#value> "o" .
+_:BcontactX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+o.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Bp .
+_:BcontactX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+p.nt> .
+_:BcontactX2Bp <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Bp <https://w3id.org/tree#value> "p" .
+_:BcontactX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+p.nt> <https://w3id.org/tree#remainingItems> "72"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Br .
+_:BcontactX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+r.nt> .
+_:BcontactX2Br <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Br <https://w3id.org/tree#value> "r" .
+_:BcontactX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+r.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Bs .
+_:BcontactX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+s.nt> .
+_:BcontactX2Bs <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Bs <https://w3id.org/tree#value> "s" .
+_:BcontactX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+s.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Bt .
+_:BcontactX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+t.nt> .
+_:BcontactX2Bt <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Bt <https://w3id.org/tree#value> "t" .
+_:BcontactX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+t.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Bu .
+_:BcontactX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+u.nt> .
+_:BcontactX2Bu <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Bu <https://w3id.org/tree#value> "u" .
+_:BcontactX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+u.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Bv .
+_:BcontactX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+v.nt> .
+_:BcontactX2Bv <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Bv <https://w3id.org/tree#value> "v" .
+_:BcontactX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+v.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/contact.nt> <https://w3id.org/tree#relation> _:BcontactX2Bw .
+_:BcontactX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcontactX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/contact+w.nt> .
+_:BcontactX2Bw <https://w3id.org/tree#value> "contact" .
+_:BcontactX2Bw <https://w3id.org/tree#value> "w" .
+_:BcontactX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/contact+w.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .

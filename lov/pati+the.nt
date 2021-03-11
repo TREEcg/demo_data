@@ -1,0 +1,37 @@
+<http://purl.org/ipo/core#Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Asset> <http://www.w3.org/2000/01/rdf-schema#label> "Asset"@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Asset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be09aa770095107da5466859954c22e1b <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Asset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ipo/core> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Asset> <http://www.w3.org/2000/01/rdf-schema#comment> "Any \"thing\" that a IssueEntity is related. \nFor example, a problem (disease) diagnosed in a patient, can have a virus and the patient as Asset, since the virus is the causative agent of the problem and the patient is the host in which the problem manifests itself.\nAn Asset can be a person, an object, a report, a document, etc."@en <http://purl.org/ipo/core> .
+<https://saref.etsi.org/saref4ehaw/hasInput> <http://www.w3.org/2000/01/rdf-schema#comment> "The service process has data input like e.g. the patient ID, the timestamp, the read value from a sensor..."@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/hasInput> <http://www.w3.org/2000/01/rdf-schema#label> "has input"@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/hasInput> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4ehaw/ServiceProcess> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/hasInput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/Contact> <http://www.w3.org/2000/01/rdf-schema#label> "Contact"@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/Contact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/Contact> <http://www.w3.org/2002/07/owl#equivalentClass> <https://saref.etsi.org/saref4ehaw/HealthActor> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/Contact> <http://www.w3.org/2000/01/rdf-schema#comment> "A BAN has one or multiple contacts, i.e. some health actors, e.g. the patient or user that is monitored through this BAN, the caregiver that is using this BAN for monitoring purposes..."@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/hasContact> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4ehaw/Ban> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/hasContact> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/saref4ehaw/Contact> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/hasContact> <http://www.w3.org/2000/01/rdf-schema#label> "has contact"@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/hasContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/hasContact> <http://www.w3.org/2000/01/rdf-schema#comment> "A BAN has one or multiple contacts (e.g. the patient or user that is monitored through this BAN, the caregiver that is using this BAN for monitoring purposes)."@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/banGeolocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/banGeolocation> <http://www.w3.org/2000/01/rdf-schema#label> "BAN geolocation"@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/banGeolocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/banGeolocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4ehaw/Ban> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/banGeolocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The geolocation of the BAN, when available and needed, shall be given relatively to the current location - geolocation as standardized ISO 6709, e.g. +40.75-074.00/  - of the patient wearing the BAN."@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/DailyActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Daily activity"@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/DailyActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "The patient/user activities that occur during daytime."@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/DailyActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/DailyActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/saref4ehaw/Activity> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/hasPhysicalLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the physical location of the patient, i.e. its postal address and/or its geolocation (when available)."@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/hasPhysicalLocation> <http://www.w3.org/2000/01/rdf-schema#label> "has physical location"@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/hasPhysicalLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4ehaw/Patient> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/hasPhysicalLocation> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/saref4ehaw/PhysicalLocation> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/hasPhysicalLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/NocturnalActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Nocturnal activity"@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/NocturnalActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/NocturnalActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "The patient/user activities that occur during the night."@en <https://saref.etsi.org/saref4ehaw/> .
+<https://saref.etsi.org/saref4ehaw/NocturnalActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/saref4ehaw/Activity> <https://saref.etsi.org/saref4ehaw/> .

@@ -1,0 +1,82 @@
+<https://w3id.org/GConsent#MinorDataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "A Minor is a Data Subject who cannot provide their own consent (that is legally valid). Therefore, their consent must be obtained via a Guardian or Legal Representative or Parent. Minor is a subclass of Data Subject.\n\nConsent given in lieu of a Minor (by their Representative) is associated with the `ConsentInstance` class/instance using the `wasGivenBy` property.\n\nThe ontology currently does not capture this relationship between the Minor and their Representative. This is due to required clarifications regarding how this role should be represented. For example, the `DataSubject` cannot be subclassed to create a `Representative` class, as this would make the `DataSubject` a permanent representative for the Minor. Instead, the role of 'acting as representative' is only for the instance of the given consent. Therefore, this could be represented with a `ConsentRepresentativeRole` class that links to the `MinorDataSubject` with `roleHadDataSubject` property, and the `DataSubject` that gave the consent via the `roleHadRepresentative` property. The relationship or reason or situation of this given consent can be captured by further annotating the `ConsentRepresentativeRole` instance. This approach can also be extended to other similar situations where one `DataSubject` gives consent in lieu of another.\n\nNote: A Minor can provide their own consent in certain cases, or conversely, a minor's consent may need to be provided by a 'parental' representative in some cases."@en <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#MinorDataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRov#DataSubject> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#MinorDataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GConsent#DataSubject> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#MinorDataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Minor Data Subject"@en <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#MinorDataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GConsent> .
+<https://w3id.org/GDPRtEXT#RecordPurposeOfProcessing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#RecordPurposeOfProcessing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRtEXT#MaintainRecordsOfProcessingActivities> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#RecordPurposeOfProcessing> <http://www.w3.org/2000/01/rdf-schema#label> "Record purpose of processing" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#RecordPurposeOfProcessing> <http://www.w3.org/2000/01/rdf-schema#comment> "This obligation requires Controllers to record the purpose of processing associated with personal data and the given consent."@en <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#RecordPurposeOfProcessing> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#Processing> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#WithdrawingConsent> <http://www.w3.org/2000/01/rdf-schema#label> "Withdrawing Given Consent" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#WithdrawingConsent> <http://www.w3.org/2000/01/rdf-schema#comment> "This activity represents the data subject withdrawing given consent."@en <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#WithdrawingConsent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRtEXT#ConsentActivity> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#WithdrawingConsent> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#DataSubject> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#WithdrawingConsent> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#GivenConsent> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#WithdrawingConsent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#EraseWhenConsentWasWithdrawn> <http://www.w3.org/2000/01/rdf-schema#label> "Erase if conesnt was withdrawn" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#EraseWhenConsentWasWithdrawn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRtEXT#RightOfErasure> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#EraseWhenConsentWasWithdrawn> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#WithdrawingConsent> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#EraseWhenConsentWasWithdrawn> <http://www.w3.org/2000/01/rdf-schema#comment> "The right of erasure applies when the data subject withdraws given consent"@en <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#EraseWhenConsentWasWithdrawn> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#EraseData> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#EraseWhenConsentWasWithdrawn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#EraseWhenConsentWasWithdrawn> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#GivenConsent> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#recital42> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#GivenConsent> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#PersonalData> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#GivenConsent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#label> "Given Consent" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#comment> "Given Consent refers specifically to the form of consent given by the data subject in relation to their personal data and the proposed usage by activities."@en <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRtEXT#Consent> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#article6-1-a> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRtEXT#LawfulBasisForProcessing> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#article9-2-a> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#GivenConsent> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#DataSubject> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#recital43> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#GivenConsent> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#Processing> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#recital32> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRov#ModifyConsentActivity> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/GDPRov#ConsentModificationStep> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#ModifyConsentActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Is an activity that modifies given consent." <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#ModifyConsentActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRov#ConsentActivity> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#ModifyConsentActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Modify Consent Activity" <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#ModifyConsentActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Entity> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT#GivenConsent> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the given consent by the data subject." <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/GDPRov#ConsentAgreement> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#label> "Given Consent" <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#GivenConsent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#WithdrawConsentActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Is an activity that withdraws given consent. Can also term it so as to depict withdrawal as a modification of consent." <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#WithdrawConsentActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#WithdrawConsentActivity> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/GDPRov#ConsentWithdrawalStep> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#WithdrawConsentActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Withdraw Consent Activity" <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#WithdrawConsentActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRov#ModifyConsentActivity> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#WithdrawConsentActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT#WithdrawingConsent> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#GivenConsentTemplate> <http://www.w3.org/2000/01/rdf-schema#comment> "Is the template used to obtain the given consent." <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#GivenConsentTemplate> <http://www.w3.org/2000/01/rdf-schema#label> "Given Consent Template" <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#GivenConsentTemplate> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/GDPRov#ConsentAgreementTemplate> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#GivenConsentTemplate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/p-plan#Entity> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#GivenConsentTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRov> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier"@en <http://data.europa.eu/esco/model> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "released" <http://data.europa.eu/esco/model> .
+<http://purl.org/dc/terms/identifier> <http://purl.org/dc/terms/modified> "2013-12-03"^^<http://www.w3.org/2001/XMLSchema#date> <http://data.europa.eu/esco/model> .
+<http://purl.org/dc/terms/identifier> <http://purl.org/dc/terms/issued> "2013-06-27"^^<http://www.w3.org/2001/XMLSchema#date> <http://data.europa.eu/esco/model> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://data.europa.eu/esco/model> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.europa.eu/esco/model> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An unambiguous reference to the resource within a given context.\n\nRecommended best practice is to identify the resource by means of a string conforming to a formal identification system.\n\nESCO note:\nESCO formats identiefers using\n{qualifier}:{identifier}\n\n{qualifier} is one of:\nCEFR: Common European Framework of Reference for Languages: Learning, Teaching, Assessment\nEQF: European Qualifications Framework identifer\nISCED 2013 FoET: UNESCO ISCED 2013/FoET identifier for \nESCO-CTC: Esco tool CTC\nESCO ITM: ESCO TMS tool (ITM - from Mondeca)\nESCO-TM: Esco tool for Text Mining\nISO 3166-1.A2: 2 character ISO 3166 country code\nISO 3166-1.A3: 3 character ISO 3166 country code\nISO 3166-1.num: Numeric ISO 3166 country identifier\nISO 639.1: The ISO 639-1 code (2 characters)\nISO 639.2T: The ISO 639-2 terminological code (3 characters)\nISO 639.2B: The ISO 639-2 bibliographic code (3 characters)\nISO 639.3: The ISO 639-3 code (3 characters) – typical for use on sign languages\nNACE rev 2: NACE rev 2 industry sector identifiers\nNUTS 2008: The NUTS classification (Nomenclature of territorial units for statistics) is a hierarchical system for dividing up the economic territory of the EU"@en <http://data.europa.eu/esco/model> .
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "An unambiguous reference to the resource within a given context."@en <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/elements/1.1/identifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#DiscoverSensors> <http://www.w3.org/2000/01/rdf-schema#comment> "Discover sensors in a given context"@en <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#DiscoverSensors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#DiscoverSensors> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/adaptcentre/openscience/ontologies/consent#Action> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#DiscoverSensors> <http://www.w3.org/2000/01/rdf-schema#label> "Discover Sensors"@en <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<https://w3id.org/sbeo#RoleInContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B78450177de2489c68f89a236fa6fbf55 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#RoleInContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7a1850d502fef54d8e016861926581cf <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#RoleInContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#RoleInContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B93e9b6a89f1a125b41b28b451b38b62a <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#RoleInContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1803d5e9bf1da05fe08be94385760252 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#RoleInContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B73ae4ddc30501734f903aa5af4de2c59 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#RoleInContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf4ebe2239b1382d8c07ee1d6a0e6352b <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#RoleInContext> <http://www.w3.org/2000/01/rdf-schema#comment> "A concept to express that an agent is playing a role in a given context."@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#RoleInContext> <http://www.w3.org/2000/01/rdf-schema#label> "Role In Context"@en <https://w3id.org/sbeo> .

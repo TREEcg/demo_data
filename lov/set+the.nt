@@ -1,0 +1,485 @@
+<http://openprovenance.org/model/opmo#Annotable> <http://www.w3.org/2000/01/rdf-schema#label> "Annotable" <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Annotable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openprovenance.org/model/opmo#Entity> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Annotable> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of OPM entities that can be annotated." <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Annotable> <http://www.w3.org/2002/07/owl#equivalentClass> _:B42cb03f7027dc2c1cde737dbfd9b1a94 <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Annotable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Annotable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://openprovenance.org/model/opmo> <http://openprovenance.org/model/opmo> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#taMsClassRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#taMsClassRef> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#taMsClassRef> <http://www.w3.org/2000/01/rdf-schema#comment> "This property marks the most specific class from itsrdf:taClassRef. The rule is: from the set S of itsrdf:taClassRef attached to this resource taMscRef points to the one that does not have any subclasses in the set S except itself. So if taClassRef is owl:Thing, dbo:Agent, dbo:Person, dbp:Actor taMsClassRef is dbo:Actor "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#taMsClassRef> <http://www.w3.org/2000/01/rdf-schema#label> "most specific class reference"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#label> "Configuration"@fr <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#label> "Configuration"@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#comment> "A state of the configuration process, assumed to correspond to a valid partially defined product - valid in the sense that it can be completed into an existing fully specified product, one that can be ordered, without changing any of the current selections.\n\nA configuration is defined by a Lexicon (the set of the descriptive attributes of the configured product, cf. the \"lexicon\" property), and by the set of choices that have been made so far (typically  selected specifications), cf. the \"definingChoice\" property.\n\nNote: A configurator application may conceivably have to handle “invalid configurations”, that is, combinations of specifications that are impossible. This can happen, for instance, if the user is allowed to begin the configuration process by choosing features without any control of their compatibility; or if she is allowed to choose a feature incompatible with her previous selections. In this case, it is the responsibility of the configurator application to restore the consistency of the configuration, necessarily by excluding some of the previous user selections. This Configuration class excludes such invalid combinations. \n\nRelation with GoodRelations and schema.org vocabularies :\nbecause a configuration mainly describes a Partially Defined Product, it can be seen as a GoodRelations \"ProductOrServiceModel\" (or a schema.org \"ProductModel): \"an intangible entity that specifies some characteristics of a group of similar, usually mass-produced products, in the sense of a prototype\". The suffix \"Model\" may seem misleading when used for a Configuration, as it suggests something such as \"Ford T\", and not \"Ford T with sunroof and climat control (itself not a completely defined product -  you still can choose, well, the color: it is a \"prototype of similar products\").\n\nOn the other hand, a Configuration has a price (more precisely, a \"from price\" - the minimum of the \"suggested retail prices\" of all the matching completely defined products). As such, a Configuration may be seen as a commercial offer. It can also be used to represent a customer's wish list, constrained by the definition of the range. It could therefore be considered as a gr:Offering (or a schema:Offer) as well.\n\nBut gr:ProductOrService and gr:Offering are disjoint classes: a given Configuration cannot be both. Depending on the use case, a publisher of configuration data may want to type her Configurations with either of these classes."@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Lexicon> <http://www.w3.org/2000/01/rdf-schema#label> "Lexicon"@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Lexicon> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of specifications (and of their corresponding configuration variables) used in the configuration process: all the possible descriptive attributes of the configured product."@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Lexicon> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Lexicon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/configurationontology> .
+<http://purl.org/dc/terms/UDC> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of conceptual resources specified by the Universal Decimal Classification."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/UDC> <http://www.w3.org/2000/01/rdf-schema#label> "UDC"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/UDC> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/UDC> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/UDC> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#UDC-003> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/UDC> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/UDC> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.udcc.org/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/UDC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of labeled concepts specified by the Medical Subject Headings."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.nlm.nih.gov/mesh/meshhome.html> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://www.w3.org/2000/01/rdf-schema#label> "MeSH"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#MESH-003> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC5646> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#RFC5646-001> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC5646> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC5646> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of tags constructed according to RFC 5646 for the identification of languages."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC5646> <http://purl.org/dc/terms/description> "RFC 5646 obsoletes RFC 4646."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC5646> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC5646> <http://purl.org/dc/terms/issued> "2010-10-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC5646> <http://www.w3.org/2000/01/rdf-schema#label> "RFC 5646"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC5646> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ietf.org/rfc/rfc5646.txt> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCSH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCSH> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of labeled concepts specified by the Library of Congress Subject Headings."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCSH> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCSH> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCSH> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCSH> <http://www.w3.org/2000/01/rdf-schema#label> "LCSH"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCSH> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#LCSH-003> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Point> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of points in space defined by their geographic coordinates according to the DCMI Point Encoding Scheme."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Point> <http://www.w3.org/2000/01/rdf-schema#label> "DCMI Point"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Point> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#Point-003> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Point> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Point> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Point> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Point> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dublincore.org/documents/dcmi-point/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC4646> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC4646> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#RFC4646-001> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC4646> <http://purl.org/dc/terms/issued> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC4646> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ietf.org/rfc/rfc4646.txt> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC4646> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC4646> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of tags constructed according to RFC 4646 for the identification of languages."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC4646> <http://www.w3.org/2000/01/rdf-schema#label> "RFC 4646"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC4646> <http://purl.org/dc/terms/description> "RFC 4646 obsoletes RFC 3066."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO639-3> <http://www.w3.org/2000/01/rdf-schema#label> "ISO 639-3"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO639-3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO639-3> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of three-letter codes listed in ISO 639-3 for the representation of names of languages."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO639-3> <http://purl.org/dc/terms/issued> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO639-3> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO639-3> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#ISO639-3-001> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO639-3> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.sil.org/iso639-3/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/IMT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/IMT> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#IMT-004> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/IMT> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/IMT> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/IMT> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/IMT> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.iana.org/assignments/media-types/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/IMT> <http://www.w3.org/2000/01/rdf-schema#label> "IMT"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/IMT> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of media types specified by the Internet Assigned Numbers Authority."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO3166> <http://www.w3.org/2000/01/rdf-schema#label> "ISO 3166"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO3166> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO3166> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO3166> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#ISO3166-004> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO3166> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of codes listed in ISO 3166-1 for the representation of names of countries."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO3166> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO3166> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/ISO3166> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.iso.org/iso/en/prods-services/iso3166ma/02iso-3166-code-lists/list-en1.html> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/W3CDTF> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#W3CDTF-003> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/W3CDTF> <http://www.w3.org/2000/01/rdf-schema#label> "W3C-DTF"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/W3CDTF> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/W3CDTF> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/W3CDTF> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/W3CDTF> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/TR/NOTE-datetime> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/W3CDTF> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of dates and times constructed according to the W3C Date and Time Formats Specification."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/W3CDTF> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/URI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/URI> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of identifiers constructed according to the generic syntax for Uniform Resource Identifiers as specified by the Internet Engineering Task Force."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/URI> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#URI-003> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/URI> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ietf.org/rfc/rfc3986.txt> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/URI> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/URI> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/URI> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/URI> <http://www.w3.org/2000/01/rdf-schema#label> "URI"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DDC> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.oclc.org/dewey/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DDC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DDC> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#DDC-003> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DDC> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of conceptual resources specified by the Dewey Decimal Classification."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DDC> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DDC> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DDC> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DDC> <http://www.w3.org/2000/01/rdf-schema#label> "DDC"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC1766> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ietf.org/rfc/rfc1766.txt> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC1766> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC1766> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC1766> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#RFC1766-003> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC1766> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of tags, constructed according to RFC 1766, for the identification of languages."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC1766> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC1766> <http://www.w3.org/2000/01/rdf-schema#label> "RFC 1766"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC1766> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DCMIType> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DCMIType> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/dcmitype/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DCMIType> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#DCMIType-005> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DCMIType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DCMIType> <http://www.w3.org/2000/01/rdf-schema#label> "DCMI Type Vocabulary"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DCMIType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DCMIType> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/DCMIType> <http://purl.org/dc/terms/modified> "2012-06-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC3066> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC3066> <http://purl.org/dc/terms/description> "RFC 3066 has been obsoleted by RFC 4646."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC3066> <http://purl.org/dc/terms/issued> "2002-07-13"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC3066> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of tags constructed according to RFC 3066 for the identification of languages."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC3066> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ietf.org/rfc/rfc3066.txt> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC3066> <http://www.w3.org/2000/01/rdf-schema#label> "RFC 3066"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC3066> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC3066> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/RFC3066> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#RFC3066-002> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/TGN> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/TGN> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/TGN> <http://www.w3.org/2000/01/rdf-schema#label> "TGN"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/TGN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/TGN> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.getty.edu/research/tools/vocabulary/tgn/index.html> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/TGN> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of places specified by the Getty Thesaurus of Geographic Names."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/TGN> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/TGN> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#TGN-003> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Period> <http://www.w3.org/2000/01/rdf-schema#label> "DCMI Period"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Period> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Period> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Period> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Period> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Period> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of time intervals defined by their limits according to the DCMI Period Encoding Scheme."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Period> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dublincore.org/documents/dcmi-period/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Period> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#Period-003> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCC> <http://www.w3.org/2000/01/rdf-schema#label> "LCC"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCC> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCC> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#LCC-003> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCC> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://lcweb.loc.gov/catdir/cpso/lcco/lcco.html> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCC> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of conceptual resources specified by the Library of Congress Classification."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCC> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/LCC> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/NLM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/NLM> <http://www.w3.org/2000/01/rdf-schema#label> "NLM"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/NLM> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#NLM-002> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/NLM> <http://purl.org/dc/terms/issued> "2005-06-13"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/NLM> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/NLM> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/NLM> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of conceptual resources specified by the National Library of Medicine Classification."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/NLM> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://wwwcf.nlm.nih.gov/class/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Box> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#Box-003> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Box> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Box> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Box> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of regions in space defined by their geographic coordinates according to the DCMI Box Encoding Scheme."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Box> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dublincore.org/documents/dcmi-box/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Box> <http://www.w3.org/2000/01/rdf-schema#label> "DCMI Box"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Box> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/Box> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/TenseProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/2000/01/rdf-schema#label> "PresentTense"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/2000/01/rdf-schema#comment> "A value of Tense Property assigned to the designated element in the clause when the meaning selected for the clause is that intended to locate the event spoken about as simultaneous with the deictic centre of the utterance. Most commonly, this tense meaning is referred to as 'present', because in absolute tense systems the deictic centre is the moment of speech. However, in relative tense systems, where the deictic centre can be moved to any point on the time line, it is more appropriate to refer to this temporal relation as 'simultaneous'.\nIt is important to note --- for all tense values, but in particular for the Present Tense --- that the 'times' which are used to locate the event, the deictic centre, and the reference point, may or may not be 'points' on the time line. Conventionally, these concepts are considered neutral with regard to whether they are points or intervals of time longer than a point. In a formal model of tense meanings they could, for example, be represented as sets (of points): in order to capture temporal distinctions, the notion of an event being 'simultaneous with the moment of speech', may be understood as (the set of) event time (points) and (the set of) speech time (points) having a non-empty intersection. Hence, this semantic model of the Present Tense value may include the interpretation of the present as 'universal' or 'generic'.\nThe simultaneous temporal relation may obtain either in 'simple' or 'perfect' contexts. Modelling of this distinction originates from [Reichenbach 1947], who suggested using a third point in time, 'reference point', to capture all possible tense distinctions. In all 'simple' temporal relations, the reference point coincides with the location of the event spoken about. 'Perfect' tense meanings are created when the reference point is separated and moved away from the event time, thus altering the viewing of the temporal location of the event even though the event's actual location with respect to the deictic centre remains the same.\nA common instance of a simultaneous temporal relationship obtaining in a 'perfect' context occurs when the reference point is moved away from the event time and located instead before the moment of speech. The event time is still simultaneous with the moment of speech, but it is viewed against a stretch of time which began at the reference point and continues up to the moment of speech --- e.g. the English I have lived here [for ten years] --- hence the interpretation that the event which began in the past extends up to the moment of speech. In some languages (e.g. English) this tense meaning is labelled as (one of the uses of the) Present Perfect, in others (e.g. Polish) this meaning may be collapsed with the 'simple' simultaneous meaning and labelled simply as Present.\nTypically, for a tense value to be labelled as Present Tense, the tense meaning has to minimally express the simultaneous temporal relationship, although it may additionally express other temporal, aspectual, or modal meanings. [Kibort 2008c: 4-5]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PresentTense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CausativeVoice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CausativeVoice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/VoiceProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CausativeVoice> <http://www.w3.org/2000/01/rdf-schema#comment> "A construction can be classified as a morphological causative when there is specific morphological encoding of causativity within the verb. Moreover, a causative is associated with an additional core argument, a causer or causal agent, added to the set of core arguments assigned by the corresponding noncausative verb. [Klaiman 1991: 51]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CausativeVoice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CausativeVoice> <http://www.w3.org/2000/01/rdf-schema#label> "CausativeVoice"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PhonologicalSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PhonologicalSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of consonant and vowel units that make up the words of a language or language variety, a phonological system is a list of contrastive sounds used in a language that are capable of distinguishing between two words with different meanings together with the ranges of variety each sound has and where those variants are found. [Ball and Mueller 2005: 120]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PhonologicalSystem> <http://www.w3.org/2000/01/rdf-schema#label> "PhonologicalSystem"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PhonologicalSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Abstract> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PhonologicalSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/BinaryPredicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/BinaryPredicator> <http://www.w3.org/2000/01/rdf-schema#comment> "Binary predicates define relationships between keywords. Each binary predicate is viewed as function: given the value of the first argument, it returns the set of values for the second argument that would make the predicate true. [Feldman and Hirsh 1996: 344] BinaryPredicators are the class of syntactic words that require two arguments."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/BinaryPredicator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/BinaryPredicator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Predicator> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/BinaryPredicator> <http://www.w3.org/2000/01/rdf-schema#label> "BinaryPredicator"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FormalAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "One more distinction can be made within both types of inherently assigned feature values: that between formal and semantic assignment. This distinction was proposed by Corbett (1991) to account for the criteria according to which nouns can be allotted to genders. Corbett demonstrates that gender assignment systems in languages can be semantic or semantic-and-formal – that is, the set of rules that determine the assignment of inherent gender values to nouns refer to the meaning of words, or a combination of the meaning of words and the form of words. [Kibort 2008d: 12]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FormalAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/FeatureAssignmentSystem> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FormalAssignmentSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FormalAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FormalAssignmentSystem> <http://www.w3.org/2000/01/rdf-schema#label> "FormalAssignmentSystem"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linked-data/api/vocab#where> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/api/vocab#> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#where> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/api/vocab#Selector> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#where> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#where> <http://www.w3.org/2000/01/rdf-schema#label> "Where"@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#where> <http://www.w3.org/2000/01/rdf-schema#comment> "A GroupGraphPattern suitable for embedding within a SPARQL WHERE clause. This is used for filtering the set of items that the selector selects."@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#where> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/cube#measureType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/cube> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#measureType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#measureType> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic measure dimension, the value of this dimension indicates which measure (from the set of measures in the DSD) is being given by the obsValue (or other primary measure)"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#measureType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#measureType> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linked-data/cube#MeasureProperty> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#measureType> <http://www.w3.org/2000/01/rdf-schema#label> "measure type"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/oslo/ns/localgov> <http://www.w3.org/2000/01/rdf-schema#comment> "This file specifies the set of RDF classes and properties used in the OSLO exchange standard for local administrations in Flanders." <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://purl.org/vocommons/voaf#reliesOn> <http://www.opengis.net/rdf#> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://purl.org/dc/terms/conformsTo> <https://joinup.ec.europa.eu/elibrary/document/isa-deliverable-process-and-methodology-developing-core-vocabularies> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://xmlns.com/foaf/0.1/depiction> <http://purl.org/oslo/model> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.1.0 30 May 2014" <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://www.w3.org/2000/01/rdf-schema#label> "OSLO Exchange Standard" <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://xmlns.com/foaf/0.1/maker> _:B75a12496d72b0c4c2f2e1d33b6e9e914 <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://purl.org/dc/terms/description> "This is the RDF encoding of the OSLO Vocabulary developed under the OSLO (Open Standards for Local Administrations) Programme." <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://purl.org/dc/terms/creator> _:B8a5404c5cba7b45ecbfc71914a9ed7c1 <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://purl.org/dc/terms/modified> "2014-05-30Z"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://spinrdf.org/spin#imports> <http://topbraid.org/spin/rdfsplus> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://creativecommons.org/ns#attributionURL> <http://www.v-ict-or.be> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://spinrdf.org/spin#imports> <http://topbraid.org/spin/owlrl-all> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://purl.org/dc/terms/license> <https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v11> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://purl.org/vocommons/voaf#reliesOn> <http://purl.org/dc/terms/> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://purl.org/dc/terms/abstract> "This version of the OSLO Exchange Standard provides a minimum set of classes and properties for describing a natural person, i.e. the individual as opposed to any role they may play in society or the relationships they have to other people, organisations and property; all of which contribute significantly to the broader concept of identity. The vocabulary is closely integrated with the Person, Organisation and Location Vocabularies published by the W3C in the Gov Linked Data Project." <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://purl.org/dc/terms/rights> "Copyright (c) 2013-2014 V-ICT-OR." <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://creativecommons.org/ns#attributionURL> <http://purl.org/oslo> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://www.w3.org/2007/05/powder-s#describedby> <https://joinup.ec.europa.eu/system/files/project/Core_Vocabularies-Business_Location_Person-Specification-v0.3_0.zip> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://www.w3.org/1999/xhtml/vocab#last> <http://purl.org/oslo/ns/localgov> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://purl.org/dc/terms/creator> _:Bdff92d402008f897bd529e7c243e72ef <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/oslo/ns/localgov#" <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://purl.org/dc/terms/rights> "Copyright Â© 2013-2014 V-ICT-OR" <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://purl.org/vocab/vann/preferredNamespacePrefix> "oslo" <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://purl.org/vocab/vann/preferredNamespacePrefix> "oslo"@en <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov> <http://creativecommons.org/ns#attributionName> "V-ICT-OR" <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.  It is recommended that SKOS lexical labels should be used to label the Organization. In particular `skos:prefLabel` for the primary (possibly legally recognized name), `skos:altLabel` for alternative names (trading names, colloquial names) and `skos:notation` to denote a code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_"@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org#> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization"@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#Organization> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Organization> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#Organization> <http://purl.org/dc/terms/identifier> "org:Organization" <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/isVersionOf> <http://purl.org/vocab/changeset/schema#> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      The vocabulary introduces the notion of a ChangeSet which encapsulates the delta between two versions of a \n      resource description. In this context a resource description is the set of triples that in some way comprise a \n      description of a resource. The delta is represented by two sets of triples: additions and removals. A ChangeSet can be used to \n      modify a resource description by first removing all triples from the description that are in the removals set and\n      adding the triples in the additions set.\n    "@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2004/02/skos/core#changeNote> _:B2ee539cce6a456213639306563f30433 <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/example> <http://vocab.org/changeset/changesets-example2-20060321.html> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cs" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/example> <http://vocab.org/changeset/changesets-example3-20060321.html> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2004/02/skos/core#historyNote> _:B921dd4997dce45c4038c24107de63f6c <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/rights> "Copyright © 2005 Talis Information Ltd." <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/date> "2006-03-21" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/issued> "2005-12-14" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/title> "Changeset"@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      This vocabulary defines a set of terms for describing changes to resource descriptions.\n    "@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2004/02/skos/core#changeNote> _:B5feb42781afd93df9e95b4940162e4b7 <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocab/changeset/schema#" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/identifier> "http://purl.org/vocab/changeset/schema-20060321" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/creator> <http://iandavis.com/id/me> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/replaces> <http://purl.org/vocab/changeset/schema-20051214> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/vann/example> <http://vocab.org/changeset/changesets-example-20060321.html> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/2004/02/skos/core#historyNote> _:B6ca26f68ecd9fa1884ed114551b11fb7 <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://purl.org/dc/terms/creator> "Sam Tunnicliffe" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/vocab/changeset/schema> .
+<http://reference.data.gov.uk/def/payment#ExpenditureCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Expenditure categories"@en <http://reference.data.gov.uk/def/payment#> .
+<http://reference.data.gov.uk/def/payment#ExpenditureCategory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://reference.data.gov.uk/def/payment#> <http://reference.data.gov.uk/def/payment#> .
+<http://reference.data.gov.uk/def/payment#ExpenditureCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://reference.data.gov.uk/def/payment#> .
+<http://reference.data.gov.uk/def/payment#ExpenditureCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://reference.data.gov.uk/def/payment#> .
+<http://reference.data.gov.uk/def/payment#ExpenditureCategory> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://reference.data.gov.uk/def/payment#> .
+<http://reference.data.gov.uk/def/payment#ExpenditureCategory> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.hmrc.gov.uk/manuals/bimmanual/bim35010.htm> <http://reference.data.gov.uk/def/payment#> .
+<http://reference.data.gov.uk/def/payment#ExpenditureCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of expenditure categories in the expenditure-category scheme for capital/revenue."@en <http://reference.data.gov.uk/def/payment#> .
+<http://reference.data.gov.uk/def/payment#ExpenditureCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> <http://reference.data.gov.uk/def/payment#> .
+<http://vocab.deri.ie/cogs#DimensionTable> <http://www.w3.org/2000/01/rdf-schema#label> "DimensionTable" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#DimensionTable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#Table> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#DimensionTable> <http://www.w3.org/2000/01/rdf-schema#comment> "One of the set of companion tables to a fact table. @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#DimensionTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#DimensionTable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of agents defined by contact details according to X500 syntax."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.agls.gov.au/agls/terms/AgentClass> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://gold.directory.gov.au/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/GOLD> <http://www.w3.org/2000/01/rdf-schema#label> "Government Online Directory"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-document> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.agls.gov.au/agls/terms/DocumentClass> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-document> <http://www.w3.org/2000/01/rdf-schema#label> "AGLS Document Vocabulary"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-document> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of document types specified by the AGLS Document Scheme."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-document> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-document> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-document> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.agls.gov.au/documents/agls-document/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/edna-audience> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/edna-audience> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.edna.edu.au/edna/go/resources/metadata/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/edna-audience> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of audience types specified by Education Network Australia."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/edna-audience> <http://www.w3.org/2000/01/rdf-schema#label> "Education Network Australia Audience Vocabulary"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/edna-audience> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/edna-audience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/edna-audience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.agls.gov.au/agls/terms/AudienceClass> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/edna-audience> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AZNSCO> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.abs.gov.au/anzsco/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AZNSCO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.agls.gov.au/agls/terms/AudienceClass> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AZNSCO> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of occupations specified by the Australian Bureau of Statistics."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AZNSCO> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AZNSCO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AZNSCO> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AZNSCO> <http://www.w3.org/2000/01/rdf-schema#label> "Australian and New Zealand Standard Classification of Occupations"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AZNSCO> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.agls.gov.au/agls/terms/ServiceClass> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-service> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-service> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of service types specified by the AGLS Service Scheme."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-service> <http://purl.org/dc/terms/modified> "2010-04-13" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-service> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.agls.gov.au/documents/agls-service/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-service> <http://www.w3.org/2000/01/rdf-schema#label> "AGLS Service Vocabulary"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-service> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.agls.gov.au/documents/AglsAvail/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.agls.gov.au/agls/terms/AvailClass> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://www.w3.org/2000/01/rdf-schema#label> "AGLS Availability Scheme"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AglsAvail> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of resource availability or physical access to a resource defined by contact details according to Dublin Core Structured Values"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/ANZSIC> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of industries specified by the Australian Bureau of Statistics."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/ANZSIC> <http://www.w3.org/2000/01/rdf-schema#label> "Australian and New Zealand Standard Industrial Classification"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/ANZSIC> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/ANZSIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/ANZSIC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.agls.gov.au/agls/terms/AudienceClass> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/ANZSIC> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.abs.gov.au/anzsic/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/ANZSIC> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/ANZSIC> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-audience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.agls.gov.au/agls/terms/AgentClass> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-audience> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-audience> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-audience> <http://www.w3.org/2000/01/rdf-schema#label> "AGLS Audience Vocabulary"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-audience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-audience> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.agls.gov.au/documents/agls-audience/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-audience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-audience> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/agls-audience> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of audience types specified by the AGLS Audience Scheme."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APT> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APT> <http://www.w3.org/2000/01/rdf-schema#label> "Australian Picture Thesaurus"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APT> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APT> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of subject terms for indexing Australian images specified by the National Library of Australia"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APT> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.picturethesaurus.gov.au/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APT> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/SubjectScheme> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AGIFT> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AGIFT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.agls.gov.au/agls/terms/FunctionClass> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AGIFT> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.naa.gov.au/agift/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AGIFT> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AGIFT> <http://www.w3.org/2000/01/rdf-schema#label> "Australian Governments' Interactive Functions Thesaurus"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AGIFT> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of function types specified by the National Archives of Australia."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AGIFT> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/AGIFT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://www.w3.org/2000/01/rdf-schema#label> "Australian Public Affairs Information Service"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/SubjectScheme> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of Australian economic, social, political and cultural affairs subjects specified by the National Library of Australia."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.nla.gov.au/apais/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/roleCode> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/roleCode> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of functions codes to describe the function performed by the responsible party."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/roleCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/roleCode> <http://purl.org/dc/terms/issued> "2008-10-07" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/roleCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.agls.gov.au/agls/terms/AudienceClass> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/roleCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/roleCode> <http://www.w3.org/2000/01/rdf-schema#label> "Role Code"@en-au <http://www.agls.gov.au/agls/terms> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/set+the.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/set+the.nt> <https://w3id.org/tree#relation> _:BsetmX2Bthe .
+_:BsetmX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsetmX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/setm+the.nt> .
+_:BsetmX2Bthe <https://w3id.org/tree#value> "setm" .
+_:BsetmX2Bthe <https://w3id.org/tree#value> "the" .
+_:BsetmX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/setm+the.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/set+the.nt> <https://w3id.org/tree#relation> _:BsetpX2Bthe .
+_:BsetpX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsetpX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/setp+the.nt> .
+_:BsetpX2Bthe <https://w3id.org/tree#value> "setp" .
+_:BsetpX2Bthe <https://w3id.org/tree#value> "the" .
+_:BsetpX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/setp+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/set+the.nt> <https://w3id.org/tree#relation> _:BsetrX2Bthe .
+_:BsetrX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsetrX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/setr+the.nt> .
+_:BsetrX2Bthe <https://w3id.org/tree#value> "setr" .
+_:BsetrX2Bthe <https://w3id.org/tree#value> "the" .
+_:BsetrX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/setr+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/set+the.nt> <https://w3id.org/tree#relation> _:BsetsX2Bthe .
+_:BsetsX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsetsX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/sets+the.nt> .
+_:BsetsX2Bthe <https://w3id.org/tree#value> "sets" .
+_:BsetsX2Bthe <https://w3id.org/tree#value> "the" .
+_:BsetsX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/sets+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/set+the.nt> <https://w3id.org/tree#relation> _:BsettX2Bthe .
+_:BsettX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsettX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/sett+the.nt> .
+_:BsettX2Bthe <https://w3id.org/tree#value> "sett" .
+_:BsettX2Bthe <https://w3id.org/tree#value> "the" .
+_:BsettX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/sett+the.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/set+the.nt> <https://w3id.org/tree#relation> _:BsetwX2Bthe .
+_:BsetwX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsetwX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/setw+the.nt> .
+_:BsetwX2Bthe <https://w3id.org/tree#value> "setw" .
+_:BsetwX2Bthe <https://w3id.org/tree#value> "the" .
+_:BsetwX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/setw+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/set+the.nt> <https://w3id.org/tree#relation> _:B8X2BsetX2Bthe .
+_:B8X2BsetX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:B8X2BsetX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/8+set+the.nt> .
+_:B8X2BsetX2Bthe <https://w3id.org/tree#value> "8" .
+_:B8X2BsetX2Bthe <https://w3id.org/tree#value> "set" .
+_:B8X2BsetX2Bthe <https://w3id.org/tree#value> "the" .
+_:B8X2BsetX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/8+set+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/set+the.nt> <https://w3id.org/tree#relation> _:BcX2BsetX2Bthe .
+_:BcX2BsetX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2BsetX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+set+the.nt> .
+_:BcX2BsetX2Bthe <https://w3id.org/tree#value> "c" .
+_:BcX2BsetX2Bthe <https://w3id.org/tree#value> "set" .
+_:BcX2BsetX2Bthe <https://w3id.org/tree#value> "the" .
+_:BcX2BsetX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+set+the.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/set+the.nt> <https://w3id.org/tree#relation> _:BdX2BsetX2Bthe .
+_:BdX2BsetX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2BsetX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+set+the.nt> .
+_:BdX2BsetX2Bthe <https://w3id.org/tree#value> "d" .
+_:BdX2BsetX2Bthe <https://w3id.org/tree#value> "set" .
+_:BdX2BsetX2Bthe <https://w3id.org/tree#value> "the" .
+_:BdX2BsetX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+set+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/set+the.nt> <https://w3id.org/tree#relation> _:BeX2BsetX2Bthe .
+_:BeX2BsetX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2BsetX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+set+the.nt> .
+_:BeX2BsetX2Bthe <https://w3id.org/tree#value> "e" .
+_:BeX2BsetX2Bthe <https://w3id.org/tree#value> "set" .
+_:BeX2BsetX2Bthe <https://w3id.org/tree#value> "the" .
+_:BeX2BsetX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+set+the.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/set+the.nt> <https://w3id.org/tree#relation> _:BiX2BsetX2Bthe .
+_:BiX2BsetX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2BsetX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+set+the.nt> .
+_:BiX2BsetX2Bthe <https://w3id.org/tree#value> "i" .
+_:BiX2BsetX2Bthe <https://w3id.org/tree#value> "set" .
+_:BiX2BsetX2Bthe <https://w3id.org/tree#value> "the" .
+_:BiX2BsetX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+set+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/set+the.nt> <https://w3id.org/tree#relation> _:BoX2BsetX2Bthe .
+_:BoX2BsetX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2BsetX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+set+the.nt> .
+_:BoX2BsetX2Bthe <https://w3id.org/tree#value> "o" .
+_:BoX2BsetX2Bthe <https://w3id.org/tree#value> "set" .
+_:BoX2BsetX2Bthe <https://w3id.org/tree#value> "the" .
+_:BoX2BsetX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+set+the.nt> <https://w3id.org/tree#remainingItems> "171"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/set+the.nt> <https://w3id.org/tree#relation> _:BsetX2BtheX2Bu .
+_:BsetX2BtheX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsetX2BtheX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/set+the+u.nt> .
+_:BsetX2BtheX2Bu <https://w3id.org/tree#value> "set" .
+_:BsetX2BtheX2Bu <https://w3id.org/tree#value> "the" .
+_:BsetX2BtheX2Bu <https://w3id.org/tree#value> "u" .
+_:BsetX2BtheX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/set+the+u.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

@@ -1,0 +1,341 @@
+<http://spinrdf.org/spin#construct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#MagicProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#construct> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluates a given sp:Construct or SPIN template call (first argument on the left hand side) and binds the resulting triples to the variables on the right hand side.\n\nExample:\n\n    (?query \"this\" owl:Thing) spin:construct (?s ?p ?o)\n\nwill execute the sp:Construct ?query using the binding of owl:Thing to ?this. The resulting triples will be bound to ?s, ?p and ?o. If any of ?s ?p ?o are bound, it will only return the matching triples." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#construct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#MagicProperties> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#construct> <http://www.w3.org/2000/01/rdf-schema#label> "construct" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#column> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#column> <http://www.w3.org/2000/01/rdf-schema#comment> "Can link a TableDataProvider (esp. SelectTemplate) with one or more columns that provide metadata for rendering purposes. Columns can be sorted by their spin:columnIndex (which must align with the ordering of variables in the SELECT query starting with 0). Not all result variables of the underlying query need to have a matching spin:Column." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#column> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#systemProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#column> <http://www.w3.org/2000/01/rdf-schema#label> "column" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#column> <http://www.w3.org/2000/01/rdf-schema#range> <http://spinrdf.org/spin#Column> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#column> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spinrdf.org/spin#TableDataProvider> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#select> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#MagicProperties> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#select> <http://www.w3.org/2000/01/rdf-schema#label> "select" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#select> <http://www.w3.org/2000/01/rdf-schema#comment> "Executes a given SELECT or ASK query (or a corresponding SPIN template call) and binds its result rows to the variables specified on the right hand side. May also pre-bind variables for the query execution, using name-value pairs on the left hand side.\n\nExample:\n\n    (?query \"this\" owl:Thing) spin:select (?a ?b)\n\nwill execute the sp:Select or sp:Ask that ?query points to and pre-bind ?this with the value of owl:Thing for the execution of the query. The first result variable of the query's result set will be bound to ?a, the second to ?b etc. If the nodes on the right are bound (or constants) then it will match with the values from the result set." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#select> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#MagicProperty> <http://spinrdf.org/spin> .
+<http://vocab.deri.ie/cogs#StringFilter> <http://www.w3.org/2000/01/rdf-schema#label> "StringFilter" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#StringFilter> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides means for matching strings of text, such as particular characters, words, or patterns of characters. @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#StringFilter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#StringFilter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#StringFilter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#Filter> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#SimilarityMatching> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#AutomatedMatching> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#SimilarityMatching> <http://www.w3.org/2000/01/rdf-schema#comment> "The process of matching two objects by a similarity measure. @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#SimilarityMatching> <http://www.w3.org/2000/01/rdf-schema#label> "SimilarityMatching" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#SimilarityMatching> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#SimilarityMatching> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#StringSimilarity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#StringSimilarity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#SimilarityMatching> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#StringSimilarity> <http://www.w3.org/2000/01/rdf-schema#label> "StringSimilarity" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#StringSimilarity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#StringSimilarity> <http://www.w3.org/2000/01/rdf-schema#comment> "Matching based on string similarity measures. @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#DestructiveMerge> <http://www.w3.org/2000/01/rdf-schema#comment> "Inputs the incoming data to the target data if the primary key of an incoming record matches with the key of an existing record, updating the matching target record. If the incoming record is a new record without a match with any existing record, it adds the incoming record to the target table. @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#DestructiveMerge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#Loading> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#DestructiveMerge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#DestructiveMerge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#DestructiveMerge> <http://www.w3.org/2000/01/rdf-schema#label> "DestructiveMerge" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#SemanticSimilarity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#SemanticSimilarity> <http://www.w3.org/2000/01/rdf-schema#comment> "Matching by a measure of semantic similarity. @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#SemanticSimilarity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#SimilarityMatching> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#SemanticSimilarity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#SemanticSimilarity> <http://www.w3.org/2000/01/rdf-schema#label> "SemanticSimilarity" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#RulesBasedMatching> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#RulesBasedMatching> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#RulesBasedMatching> <http://www.w3.org/2000/01/rdf-schema#comment> "Matching of data based on a rule or group of rules. @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#RulesBasedMatching> <http://www.w3.org/2000/01/rdf-schema#label> "RulesBasedMatching" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#RulesBasedMatching> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#AutomatedMatching> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#HumanMatching> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#HumanMatching> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#HumanMatching> <http://www.w3.org/2000/01/rdf-schema#label> "HumanMatching" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#HumanMatching> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#MappingProcess> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#HumanMatching> <http://www.w3.org/2000/01/rdf-schema#comment> "Matching based on a human decision." <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#PredefinedMatching> <http://www.w3.org/2000/01/rdf-schema#label> "PredefinedMatching" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#PredefinedMatching> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#MappingProcess> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#PredefinedMatching> <http://www.w3.org/2000/01/rdf-schema#comment> "Forces a matching under a certain predefined criteria.  @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#PredefinedMatching> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#PredefinedMatching> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#ConstructiveMerge> <http://www.w3.org/2000/01/rdf-schema#label> "ConstructiveMerge" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#ConstructiveMerge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#ConstructiveMerge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#ConstructiveMerge> <http://www.w3.org/2000/01/rdf-schema#comment> "If the primary key of an incoming record matches with the key of an existing Record, leaves the existing Record, adds the incoming record and marks the added record as superseding the old record. @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#ConstructiveMerge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#Loading> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#ObjectRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#ObjectRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "ObjectRepresentation" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#ObjectRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#ObjectRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Internal representation of an object suitable for matching its features. @en-us" <http://vocab.deri.ie/cogs> .
+<http://purl.org/NET/schema-org-csv#HeaderRow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/scsv> .
+<http://purl.org/NET/schema-org-csv#HeaderRow> <http://www.w3.org/2000/01/rdf-schema#label> "header row" <http://vocab.deri.ie/scsv> .
+<http://purl.org/NET/schema-org-csv#HeaderRow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/scsv> .
+<http://purl.org/NET/schema-org-csv#HeaderRow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/schema-org-csv#Row> <http://vocab.deri.ie/scsv> .
+<http://purl.org/NET/schema-org-csv#HeaderRow> <http://www.w3.org/2000/01/rdf-schema#comment> "The header row, that is the first row of the table that contains the column heads that are matched against Schema.org terms." <http://vocab.deri.ie/scsv> .
+<http://rdfs.org/ns/void#uriRegexPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/ns/void#Dataset> <http://vocab.deri.ie/void> .
+<http://rdfs.org/ns/void#uriRegexPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://vocab.deri.ie/void> .
+<http://rdfs.org/ns/void#uriRegexPattern> <http://www.w3.org/2000/01/rdf-schema#label> "has URI regular expression pattern" <http://vocab.deri.ie/void> .
+<http://rdfs.org/ns/void#uriRegexPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a regular expression pattern matching URIs in the dataset." <http://vocab.deri.ie/void> .
+<http://vocab.getty.edu/ontology#ScopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.getty.edu/ontology> .
+<http://vocab.getty.edu/ontology#ScopeNote> <http://purl.org/dc/terms/description> "Defines a GVP subject or provides usage information. Has fields:\n- dc:identifier: numeric ID, also used in the URL.\n- rdf:value: the note itself (as per SKOS Primer: 4.2 Advanced Documentation Features) with language tag\n- dct:language: matches the language tag\n- gvp:displayOrder, order of this note amongst others\n- gvp:historicFlag, vp:estStart, gvp:estEnd, rdfs:comment: Historic Information about applicability\n- dct:source or subproperties thereof \n- dct:contributor or subproperties thereof" <http://vocab.getty.edu/ontology> .
+<http://vocab.getty.edu/ontology#ScopeNote> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.getty.edu/ontology> <http://vocab.getty.edu/ontology> .
+<http://vocab.getty.edu/ontology#ScopeNote> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a GVP subject or provides usage information. Has fields:\n- dc:identifier: numeric ID, also used in the URL.\n- rdf:value: the note itself (as per SKOS Primer: 4.2 Advanced Documentation Features) with language tag\n- dct:language: matches the language tag\n- gvp:displayOrder, order of this note amongst others\n- gvp:historicFlag, gvp:estStart, gvp:estEnd, rdfs:comment: Historic Information about applicability\n- dct:source or subproperties thereof \n- dct:contributor or subproperties thereof" <http://vocab.getty.edu/ontology> .
+<http://www.bbc.co.uk/ontologies/creativework/LiveCoverage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.bbc.co.uk/ontologies/creativework/CreativeWork> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/LiveCoverage> <http://www.w3.org/2000/01/rdf-schema#label> "LiveCoverage"@en-gb <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/LiveCoverage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/creativework/1.4> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/LiveCoverage> <http://www.w3.org/2000/01/rdf-schema#comment> "This class is used to describe that creative works which are coverage of a live event. (Note that this isn't meant to describe the fact that the event is live currently. An example of a Live Coverage creative work is the live event page covering live the England VS Australia cricket match, last saturday's football matches or last year's elections)"@en-gb <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/LiveCoverage> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/LiveCoverage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/sport/Match> <http://www.w3.org/2000/01/rdf-schema#label> "Match"@en-gb <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/Match> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/sport> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/Match> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.bbc.co.uk/ontologies/sport/UnitCompetition> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/Match> <http://www.w3.org/2000/01/rdf-schema#comment> "The smallest unit of sporting competition."@en-gb <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/Match> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/UnitCompetition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/UnitCompetition> <http://www.w3.org/2000/01/rdf-schema#label> "UnitCompetition"@en-gb <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/UnitCompetition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/sport> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/UnitCompetition> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit competition is the unit of competition defined by a competition discipline rules. Examples include a 100m race or Football match."@en-gb <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/UnitCompetition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.bbc.co.uk/ontologies/sport/Competition> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/awayCompetitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/awayCompetitor> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/awayCompetitor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.bbc.co.uk/ontologies/sport/Match> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/awayCompetitor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a match to one competitor, by definition or designation not the home competitor."@en-gb <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/awayCompetitor> <http://www.w3.org/2000/01/rdf-schema#label> "awayCompetitor"@en-gb <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/awayCompetitor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/sport> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/hasMatch> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a round to a match."@en-gb <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/hasMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/hasMatch> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.bbc.co.uk/ontologies/sport/Round> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/hasMatch> <http://www.w3.org/2000/01/rdf-schema#label> "hasMatch"@en-gb <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/hasMatch> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.bbc.co.uk/ontologies/sport/Match> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/hasMatch> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.bbc.co.uk/ontologies/sport/hasUnitCompetition> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/hasMatch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/sport> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/isMatchOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.bbc.co.uk/ontologies/sport/Round> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/isMatchOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/sport> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/isMatchOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.bbc.co.uk/ontologies/sport/hasMatch> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/isMatchOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/isMatchOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a match to a round."@en-gb <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/isMatchOf> <http://www.w3.org/2000/01/rdf-schema#label> "isMatchOf"@en-gb <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/isMatchOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.bbc.co.uk/ontologies/sport/Match> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/homeCompetitor> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/homeCompetitor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.bbc.co.uk/ontologies/sport/Match> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/homeCompetitor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a match to one competitor, by definition or designation not the away competitor."@en-gb <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/homeCompetitor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/homeCompetitor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.bbc.co.uk/ontologies/sport/hasCompetitor> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/homeCompetitor> <http://www.w3.org/2000/01/rdf-schema#label> "homeCompetitor"@en-gb <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.bbc.co.uk/ontologies/sport/homeCompetitor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/sport> <http://www.bbc.co.uk/ontologies/sport> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#label> "Μετακίνηση"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#label> "Déplacement"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises changes of the physical location of the instances of E19 Physical Object. \nNote, that the class E9 Move inherits the property P7 took place at (witnessed): E53 Place. This property should be used to describe the trajectory or a larger area within which a move takes place, whereas the properties P26 moved to (was destination of), P27 moved from (was origin of) describe the start and end points only. Moves may also be documented to consist of other moves (via P9 consists of (forms part of)), in order to describe intermediate stages on a trajectory. In that case, start and end points of the partial moves should match appropriately between each other and with the overall event.\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#label> "Objektbewegung"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#label> "Locomoção"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#label> "Move"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#label> "Перемещение"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#AmbilightSpectra3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#VideoFeatures> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#AmbilightSpectra3> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "TV"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#AmbilightSpectra3> <http://www.w3.org/2000/01/rdf-schema#comment> "Enlarges the screen further by projecting a glow of light from the back of the screen onto the surrounding wall. Ambilight adjusts automatically the colour and brightness of the light surrounding the TV to match with the picture."@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#AmbilightSpectra3> <http://www.w3.org/2000/01/rdf-schema#label> "Ambilight Spectra 3"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#AmbilightSpectra3> <http://www.w3.org/2000/01/rdf-schema#label> "Ambilight Spectra 3"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PerfectPixelHD> <http://www.w3.org/2000/01/rdf-schema#comment> "Perfect Pixel HD Engine offers the unique combination of ultimate sharpness, natural detail, vivid colours and smooth natural motion on all qualities of HD, standard TV signals and multimedia content, for high definition displays. Each pixel of the incoming picture is enhanced to better match the surrounding pixels, resulting in a more natural picture."@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PerfectPixelHD> <http://www.w3.org/2000/01/rdf-schema#label> "Perfect Pixel HD"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PerfectPixelHD> <http://www.w3.org/2000/01/rdf-schema#label> "Perfect Pixel HD"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PerfectPixelHD> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "TV"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PerfectPixelHD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#VideoFeatures> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PixelPlus3HD> <http://www.w3.org/2000/01/rdf-schema#comment> "Pixel Plus 3 HD offers the unique combination of ultimate sharpness, natural detail, vivid colours and smooth natural motion on all qualities of HD, standard TV signals and multimedia content for high definition displays. Each pixel of the incoming picture is enhanced to better match the surrounding pixels, resulting in a more natural picture. Artefacts and noise in all sources from multimedia to standard TV and also in highly compressed HD are detected and reduced."@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PixelPlus3HD> <http://www.w3.org/2000/01/rdf-schema#label> "Pixel Plus 3 HD"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PixelPlus3HD> <http://www.w3.org/2000/01/rdf-schema#label> "Pixel Plus 3 HD"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PixelPlus3HD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#VideoFeatures> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#PixelPlus3HD> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "TV"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.gsi.dit.upm.es/ontologies/marl/ns#algorithmConfidence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.gsi.dit.upm.es/ontologies/marl/ns#Opinion> <http://www.gsi.dit.upm.es/ontologies/marl/ns> .
+<http://www.gsi.dit.upm.es/ontologies/marl/ns#algorithmConfidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://www.gsi.dit.upm.es/ontologies/marl/ns> .
+<http://www.gsi.dit.upm.es/ontologies/marl/ns#algorithmConfidence> <http://www.w3.org/2000/01/rdf-schema#label> "algorithmConfidence"@en <http://www.gsi.dit.upm.es/ontologies/marl/ns> .
+<http://www.gsi.dit.upm.es/ontologies/marl/ns#algorithmConfidence> <http://www.w3.org/2000/01/rdf-schema#comment> "A numerical value that describe how much the algorithm was confident of the assessment of the opinion (eg. how much the opinion matches a gives object/product)."@en <http://www.gsi.dit.upm.es/ontologies/marl/ns> .
+<http://www.gsi.dit.upm.es/ontologies/marl/ns#algorithmConfidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.gsi.dit.upm.es/ontologies/marl/ns#" <http://www.gsi.dit.upm.es/ontologies/marl/ns> .
+<http://www.gsi.dit.upm.es/ontologies/marl/ns#algorithmConfidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.gsi.dit.upm.es/ontologies/marl/ns> .
+<http://www.gsi.dit.upm.es/ontologies/onyx/ns#algorithmConfidence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.gsi.dit.upm.es/ontologies/onyx/ns#Emotion> <http://www.gsi.dit.upm.es/ontologies/onyx/ns> .
+<http://www.gsi.dit.upm.es/ontologies/onyx/ns#algorithmConfidence> <http://www.w3.org/2000/01/rdf-schema#label> "algorithmConfidence"@en <http://www.gsi.dit.upm.es/ontologies/onyx/ns> .
+<http://www.gsi.dit.upm.es/ontologies/onyx/ns#algorithmConfidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://www.gsi.dit.upm.es/ontologies/onyx/ns> .
+<http://www.gsi.dit.upm.es/ontologies/onyx/ns#algorithmConfidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.gsi.dit.upm.es/ontologies/onyx/ns" <http://www.gsi.dit.upm.es/ontologies/onyx/ns> .
+<http://www.gsi.dit.upm.es/ontologies/onyx/ns#algorithmConfidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.gsi.dit.upm.es/ontologies/onyx/ns> .
+<http://www.gsi.dit.upm.es/ontologies/onyx/ns#algorithmConfidence> <http://www.w3.org/2000/01/rdf-schema#comment> "A numerical value that represents the accuracy of result as estimated by the algorithm itself (how much the emotion matches a gives object/product)."@en <http://www.gsi.dit.upm.es/ontologies/onyx/ns> .
+<http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://www.w3.org/2000/01/rdf-schema#label> "Has Exact External\n      Authority" <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://www.w3.org/2000/01/rdf-schema#comment> "Records a relationship\n      between an Authority and one to which it matches exactly but from a different MADS\n      Scheme." <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.loc.gov/mads/rdf/v1#hasCloseExternalAuthority> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasExactExternalAuthority> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#SubjectSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfaa2580a4067e3c617c142d3adb15ec7 <http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#SubjectSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bdba5d61c7e1d6addf9af6fa7f1bb14a8 <http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#SubjectSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#SubjectSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Subject space"@en <http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#SubjectSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Any atomic Region in a TopicSpace that is used to localize a dul:SocialObject that hasTopic a Topic that dul:hasRegion that TopicSpace.\nIn Welty's formal ontology of subjects, it is assumed as a point. The reason why we do not assume subjects as points is the relativity of atomicity: although the intuition goes to atomicity, one cannot exclude that subjects can have other subjects as parts; for example, consider the subject of an article on a football match: we might conceive a subject of a paragraph within that article that is about a penalty occurred during the football match." <http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#SubjectSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Soggetto"@it <http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl#SubjectSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Region> <http://www.ontologydesignpatterns.org/ont/dul/ontopic.owl> .
+<http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> <http://www.w3.org/2002/07/owl#versionInfo> "1.2\n1.1\n- Edited annotations\n- Added class: Gloss\n- Added property: hasCoInterpretant\n1.2\n- Simplified several restrictions (in non-lossy way) in order to reduce complexity of reasoning" <http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> .
+<http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> <http://www.w3.org/2000/01/rdf-schema#label> "Lexical MetaModel Level 2" <http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> .
+<http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> .
+<http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> <http://www.w3.org/2002/07/owl#imports> <http://www.ontologydesignpatterns.org/ont/lmm/LMM_L1.owl> <http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> .
+<http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology for aligning existing linguistic ontologies, and for describing the research objects of NLP.\nIt uses the ontology IOLite.owl, a plugin of DOLCE-Ultralite for information objects; it imports LMM_L1.owl, a design pattern for the basic semiotic categories.\nThe ontology also includes a proposal to match term types to referenced entity types, as an example of the usage of this ontology in NER and sense tagging applications." <http://www.ontologydesignpatterns.org/ont/lmm/LMM_L2.owl> .
+<http://www.ontotext.com/proton/protonext#SportGame> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#SportEvent> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#SportGame> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#SportGame> <http://www.w3.org/2000/01/rdf-schema#comment> "A sport game is any instance of a sport event, where teams or individuals gather to play according to particular predetermined rules, such as soccer match, tennis match, car race, etc. It can also denote the activity of playing a particular sport game."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#SportGame> <http://www.w3.org/2000/01/rdf-schema#label> "Sport Game"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#SportGame> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#Game> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#FootballMatch> <http://www.w3.org/2000/01/rdf-schema#comment> "Any instance of a soccer match."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#FootballMatch> <http://www.w3.org/2000/01/rdf-schema#label> "Football match"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#FootballMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#FootballMatch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#SportGame> <http://www.ontotext.com/proton/protonext> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.2.2.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#F.2.2> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.2.2.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.2.2.3> <http://www.w3.org/2000/01/rdf-schema#label> "F.2.2.3. Pattern matching" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://www.w3.org/2003/12/exif/ns#pimColorBalance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimColorBalance> <http://www.w3.org/2000/01/rdf-schema#comment> "ColorBalance info for print image matching"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimColorBalance> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#pimInfo> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimColorBalance> <http://www.w3.org/2000/01/rdf-schema#label> "PrintIM ColorBalance"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimColorBalance> <http://www.w3.org/2003/12/exif/ns#tagNumber> "11"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimBrightness> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#pimInfo> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimBrightness> <http://www.w3.org/2003/12/exif/ns#tagNumber> "10"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimBrightness> <http://www.w3.org/2000/01/rdf-schema#comment> "Brightness info for print image matching"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimBrightness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimBrightness> <http://www.w3.org/2000/01/rdf-schema#label> "PrintIM Brightness"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimInfo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#exifAttribute> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "An attribute relating to print image matching"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimInfo> <http://www.w3.org/2000/01/rdf-schema#label> "PIM Info"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimContrast> <http://www.w3.org/2003/12/exif/ns#tagNumber> "9"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimContrast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimContrast> <http://www.w3.org/2000/01/rdf-schema#label> "PrintIM Contrast"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimContrast> <http://www.w3.org/2000/01/rdf-schema#comment> "Contrast info for print image matching"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimContrast> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#pimInfo> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimSaturation> <http://www.w3.org/2000/01/rdf-schema#label> "PrintIM Saturation"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimSaturation> <http://www.w3.org/2000/01/rdf-schema#comment> "Saturation info for print image matching"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimSaturation> <http://www.w3.org/2003/12/exif/ns#tagNumber> "12"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimSaturation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimSaturation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#pimInfo> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#printImageMatching_IFD_Pointer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#printImageMatching_IFD_Pointer> <http://www.w3.org/2000/01/rdf-schema#comment> "A pointer to the print image matching IFD"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#printImageMatching_IFD_Pointer> <http://www.w3.org/2003/12/exif/ns#tagNumber> "50341"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#printImageMatching_IFD_Pointer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#ifdPointer> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#printImageMatching_IFD_Pointer> <http://www.w3.org/2000/01/rdf-schema#label> "PrintImageMatching IFD Pointer"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimSharpness> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#pimInfo> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimSharpness> <http://www.w3.org/2000/01/rdf-schema#label> "PrintIM Sharpness"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimSharpness> <http://www.w3.org/2000/01/rdf-schema#comment> "Sharpness info for print image matching"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimSharpness> <http://www.w3.org/2003/12/exif/ns#tagNumber> "13"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#pimSharpness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/2004/02/skos/core#definition> "skos:closeMatch is used to link two concepts that are sufficiently similar that they can be used interchangeably in some information retrieval applications. In order to avoid the possibility of \"compound errors\" when combining mappings across more than two concept schemes, skos:closeMatch is not declared to be a transitive property."@en <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/2000/01/rdf-schema#label> "has close match"@en <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#mappingRelation> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.w3.org/2004/02/skos/core#definition> "skos:relatedMatch is used to state an associative mapping link between two conceptual resources in different concept schemes."@en <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#related> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.w3.org/2000/01/rdf-schema#label> "has related match"@en <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#mappingRelation> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#relatedMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#broadMatch> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#broadMatch> <http://www.w3.org/2004/02/skos/core#definition> "skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes."@en <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#broadMatch> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#mappingRelation> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#broadMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#broadMatch> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#broadMatch> <http://www.w3.org/2000/01/rdf-schema#label> "has broader match"@en <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#broadMatch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#broadMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/2000/01/rdf-schema#label> "has exact match"@en <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/2000/01/rdf-schema#comment> "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."@en <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/2004/02/skos/core#definition> "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch."@en <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2004/02/skos/core> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2004/02/skos/core#mappingRelation> <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.w3.org/2004/02/skos/core#definition> "skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes."@en <http://www.w3.org/2004/02/skos/core> .
+<http://www.w3.org/2004/02/skos/core#narrowMatch> <http://www.w3.org/2000/01/rdf-schema#label> "has narrower match"@en <http://www.w3.org/2004/02/skos/core> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/match.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/match.nt> <https://w3id.org/tree#relation> _:Bmatchd .
+_:Bmatchd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmatchd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/matchd.nt> .
+_:Bmatchd <https://w3id.org/tree#value> "matchd" .
+_:Bmatchd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/matchd.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/match.nt> <https://w3id.org/tree#relation> _:Bmatche .
+_:Bmatche <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmatche <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/matche.nt> .
+_:Bmatche <https://w3id.org/tree#value> "matche" .
+_:Bmatche <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/matche.nt> <https://w3id.org/tree#remainingItems> "21"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/match.nt> <https://w3id.org/tree#relation> _:Bmatchi .
+_:Bmatchi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmatchi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/matchi.nt> .
+_:Bmatchi <https://w3id.org/tree#value> "matchi" .
+_:Bmatchi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/matchi.nt> <https://w3id.org/tree#remainingItems> "17"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/match.nt> <https://w3id.org/tree#relation> _:Bmatchm .
+_:Bmatchm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmatchm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/matchm.nt> .
+_:Bmatchm <https://w3id.org/tree#value> "matchm" .
+_:Bmatchm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/matchm.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/match.nt> <https://w3id.org/tree#relation> _:Bmatchs .
+_:Bmatchs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmatchs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/matchs.nt> .
+_:Bmatchs <https://w3id.org/tree#value> "matchs" .
+_:Bmatchs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/matchs.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/match.nt> <https://w3id.org/tree#relation> _:BaX2Bmatch .
+_:BaX2Bmatch <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bmatch <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+match.nt> .
+_:BaX2Bmatch <https://w3id.org/tree#value> "a" .
+_:BaX2Bmatch <https://w3id.org/tree#value> "match" .
+_:BaX2Bmatch <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+match.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/match.nt> <https://w3id.org/tree#relation> _:BbX2Bmatch .
+_:BbX2Bmatch <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bmatch <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+match.nt> .
+_:BbX2Bmatch <https://w3id.org/tree#value> "b" .
+_:BbX2Bmatch <https://w3id.org/tree#value> "match" .
+_:BbX2Bmatch <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+match.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/match.nt> <https://w3id.org/tree#relation> _:BlX2Bmatch .
+_:BlX2Bmatch <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2Bmatch <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+match.nt> .
+_:BlX2Bmatch <https://w3id.org/tree#value> "l" .
+_:BlX2Bmatch <https://w3id.org/tree#value> "match" .
+_:BlX2Bmatch <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+match.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/match.nt> <https://w3id.org/tree#relation> _:BmatchX2Bo .
+_:BmatchX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmatchX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/match+o.nt> .
+_:BmatchX2Bo <https://w3id.org/tree#value> "match" .
+_:BmatchX2Bo <https://w3id.org/tree#value> "o" .
+_:BmatchX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/match+o.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/match.nt> <https://w3id.org/tree#relation> _:BmatchX2Br .
+_:BmatchX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmatchX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/match+r.nt> .
+_:BmatchX2Br <https://w3id.org/tree#value> "match" .
+_:BmatchX2Br <https://w3id.org/tree#value> "r" .
+_:BmatchX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/match+r.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/match.nt> <https://w3id.org/tree#relation> _:BmatchX2Bt .
+_:BmatchX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmatchX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/match+t.nt> .
+_:BmatchX2Bt <https://w3id.org/tree#value> "match" .
+_:BmatchX2Bt <https://w3id.org/tree#value> "t" .
+_:BmatchX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/match+t.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .

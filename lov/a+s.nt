@@ -1,0 +1,786 @@
+<http://bblfish.net/work/atom-owl/2006-06-06/#summary> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bblfish.net/work/atom-owl/2006-06-06/#Entry> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#summary> <http://www.w3.org/2000/01/rdf-schema#comment> "See §4.2.13 of rfc 4287 spec. A summary of the content of the Entry"@en <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#summary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#summary> <http://www.w3.org/2000/01/rdf-schema#label> "summary"@en <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#summary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#summary> <http://www.w3.org/2000/01/rdf-schema#range> <http://bblfish.net/work/atom-owl/2006-06-06/#TextContent> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#Link> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#Link> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#Link> <http://www.w3.org/2000/01/rdf-schema#comment> "see §4.2.7 of rfc 4287 spec. Note that the href, hreflang and lengtlength attributes of rfc 4287 have been moved to the content class and a content relation from the Link to a Content class has been made. The href is translated onto the awol:src relation of the Content class. A link is a reified relation between an entry an a content, for the purpose of adding some metadata such as a title. If it is a reified statement, it is a special type of such a statement, one that implies always the reified statement itself (see N3 rule)"@en <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#Link> <http://www.w3.org/2000/01/rdf-schema#label> "Link Class"@en <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://www.iana.org/assignments/relation/via> <http://www.w3.org/2000/01/rdf-schema#comment> "see §4.2.7.2.5 of rfc 4287. The object provided a source of the information found in the subject."@en <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://www.iana.org/assignments/relation/via> <http://www.w3.org/2000/01/rdf-schema#label> "via relation"@en <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://www.iana.org/assignments/relation/via> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bblfish.net/work/atom-owl/2006-06-06/#Version> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://www.iana.org/assignments/relation/via> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://bblfish.net/work/atom-owl/2006-06-06/#RelationType> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#entry> <http://www.w3.org/2000/01/rdf-schema#label> "entry relation"@en <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#entry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#entry> <http://www.w3.org/2000/01/rdf-schema#comment> "The feed contains the given Entry and that Entry has the feed as its source. See §4.1.1 of rfc 4287. This relation is a little bit more specialised than the rfc 4287 entry element. It relates only awol:Feed objects to :Entry objects where the :Feed is a :source of the :Entry. See also the :source and :contains relations. "@en <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#entry> <http://www.w3.org/2000/01/rdf-schema#range> <http://bblfish.net/work/atom-owl/2006-06-06/#Entry> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#entry> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bblfish.net/work/atom-owl/2006-06-06/#Feed> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#entry> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://bblfish.net/work/atom-owl/2006-06-06/#contains> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#entry> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> _:B83505d235514b76eff4d94085fc4125b <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#src> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bblfish.net/work/atom-owl/2006-06-06/#Content> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#src> <http://www.w3.org/2000/01/rdf-schema#label> "source"@en <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#src> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#src> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://sw.nokia.com/WebArch-1/representationOf> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#src> <http://www.w3.org/2000/01/rdf-schema#range> <http://sw.nokia.com/WebArch-1/InformationResource> <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://bblfish.net/work/atom-owl/2006-06-06/#src> <http://www.w3.org/2000/01/rdf-schema#comment> "a source of the representation"@en <http://bblfish.net/work/atom-owl/2006-06-06/> .
+<http://contextus.net/ontology/ontomedia/core/expression#Occurrence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#Occurrence> <http://www.w3.org/2000/01/rdf-schema#label> "Occurrence" <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#Occurrence> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a single occurrence of an event, placing it at a position in a timeline" <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#Occurrence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Entity> <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#precondition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/core/expression#Event> <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#precondition> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is a state that must exist before the event can occur" <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#precondition> <http://www.w3.org/2000/01/rdf-schema#range> _:B93d394c9b7b765f2ff1896a684be3090 <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#precondition> <http://www.w3.org/2000/01/rdf-schema#label> "Precondition" <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#precondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#Timeline> <http://www.w3.org/2000/01/rdf-schema#comment> "This class contains a sequence of occurring events" <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#Timeline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#Timeline> <http://www.w3.org/2000/01/rdf-schema#label> "Timeline" <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#Timeline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Entity> <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#Social> <http://www.w3.org/2000/01/rdf-schema#comment> "This event class describes a sequence focusing on social, interpersonal and personal emotional elements" <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#Social> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#Social> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Event> <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/expression#Social> <http://www.w3.org/2000/01/rdf-schema#label> "Social" <http://contextus.net/ontology/ontomedia/core/expression#> .
+<http://contextus.net/ontology/ontomedia/core/space#Sea> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is to be used to describe a sea region" <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Sea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/space#Aquatic> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Sea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Sea> <http://www.w3.org/2000/01/rdf-schema#label> "Sea" <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Space> <http://www.w3.org/2002/07/owl#equivalentClass> <http://contextus.net/ontology/ontomedia/misc/AKTlocation#Abstract-Space> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/expression#Entity> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is to be used to describe a space" <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Space" <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Area> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is to be used to describe a specific area" <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Area> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Area> <http://www.w3.org/2000/01/rdf-schema#label> "Area" <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Area> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/space#Region> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Level-Traversing-Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Level-Traversing-Space> <http://www.w3.org/2000/01/rdf-schema#label> "Level Traversing Space" <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Level-Traversing-Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/space#Space> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Level-Traversing-Space> <http://www.w3.org/2000/01/rdf-schema#comment> "This class is used to represent a space which traverses levels" <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Seashore> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/space#Bounding> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Seashore> <http://www.w3.org/2000/01/rdf-schema#label> "Seashore" <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Seashore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Seashore> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is to be used to describe a sea shore" <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Swamp> <http://www.w3.org/2000/01/rdf-schema#label> "Swamp" <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Swamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Swamp> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is to be used to describe a swampy region" <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Swamp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/space#Hydrated> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Stream> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is to be used to describe a stream region" <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Stream> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Stream> <http://www.w3.org/2000/01/rdf-schema#label> "Stream" <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/core/space#Stream> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/core/space#Aquatic> <http://contextus.net/ontology/ontomedia/core/space#> .
+<http://contextus.net/ontology/ontomedia/ext/common/being#Step> <http://www.w3.org/2000/01/rdf-schema#label> "Step Family Bond" <http://contextus.net/ontology/ontomedia/ext/common/being#> .
+<http://contextus.net/ontology/ontomedia/ext/common/being#Step> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a step bond that exists between beings or groups of beings" <http://contextus.net/ontology/ontomedia/ext/common/being#> .
+<http://contextus.net/ontology/ontomedia/ext/common/being#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contextus.net/ontology/ontomedia/ext/common/being#> .
+<http://contextus.net/ontology/ontomedia/ext/common/being#Step> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/ext/common/being#Family> <http://contextus.net/ontology/ontomedia/ext/common/being#> .
+<http://contextus.net/ontology/ontomedia/ext/common/being#sibling-of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://contextus.net/ontology/ontomedia/ext/common/being#Family> <http://contextus.net/ontology/ontomedia/ext/common/being#> .
+<http://contextus.net/ontology/ontomedia/ext/common/being#sibling-of> <http://www.w3.org/2000/01/rdf-schema#label> "Sibling Of" <http://contextus.net/ontology/ontomedia/ext/common/being#> .
+<http://contextus.net/ontology/ontomedia/ext/common/being#sibling-of> <http://www.w3.org/2000/01/rdf-schema#range> <http://contextus.net/ontology/ontomedia/ext/common/being#Being> <http://contextus.net/ontology/ontomedia/ext/common/being#> .
+<http://contextus.net/ontology/ontomedia/ext/common/being#sibling-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://contextus.net/ontology/ontomedia/ext/common/being#is-relation-of> <http://contextus.net/ontology/ontomedia/ext/common/being#> .
+<http://contextus.net/ontology/ontomedia/ext/common/being#sibling-of> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies that the being is a sibling of the specified being" <http://contextus.net/ontology/ontomedia/ext/common/being#> .
+<http://contextus.net/ontology/ontomedia/ext/common/being#sibling-of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://contextus.net/ontology/ontomedia/ext/common/being#> .
+<http://contextus.net/ontology/ontomedia/ext/common/being#sibling-of> <http://www.w3.org/2002/07/owl#inverseOf> <http://contextus.net/ontology/ontomedia/ext/common/being#sibling-of> <http://contextus.net/ontology/ontomedia/ext/common/being#> .
+<http://contextus.net/ontology/ontomedia/ext/common/trait#Style> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/ext/common/trait#Description> <http://contextus.net/ontology/ontomedia/ext/common/trait#> .
+<http://contextus.net/ontology/ontomedia/ext/common/trait#Style> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a style type" <http://contextus.net/ontology/ontomedia/ext/common/trait#> .
+<http://contextus.net/ontology/ontomedia/ext/common/trait#Style> <http://www.w3.org/2000/01/rdf-schema#label> "Style" <http://contextus.net/ontology/ontomedia/ext/common/trait#> .
+<http://contextus.net/ontology/ontomedia/ext/common/trait#Style> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contextus.net/ontology/ontomedia/ext/common/trait#> .
+<http://contextus.net/ontology/ontomedia/ext/common/trait#Solid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/ext/common/trait#Corporeal> <http://contextus.net/ontology/ontomedia/ext/common/trait#> .
+<http://contextus.net/ontology/ontomedia/ext/common/trait#Solid> <http://www.w3.org/2000/01/rdf-schema#label> "Solid" <http://contextus.net/ontology/ontomedia/ext/common/trait#> .
+<http://contextus.net/ontology/ontomedia/ext/common/trait#Solid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contextus.net/ontology/ontomedia/ext/common/trait#> .
+<http://contextus.net/ontology/ontomedia/ext/common/trait#Solid> <http://www.w3.org/2000/01/rdf-schema#comment> "This class describes an Entity which is a solid" <http://contextus.net/ontology/ontomedia/ext/common/trait#> .
+<http://contextus.net/ontology/ontomedia/misc/date#Calendar> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contextus.net/ontology/ontomedia/ext/detail/know#Culture> <http://contextus.net/ontology/ontomedia/misc/date#> .
+<http://contextus.net/ontology/ontomedia/misc/date#Calendar> <http://www.w3.org/2000/01/rdf-schema#comment> "This class represents a system of representing time" <http://contextus.net/ontology/ontomedia/misc/date#> .
+<http://contextus.net/ontology/ontomedia/misc/date#Calendar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contextus.net/ontology/ontomedia/misc/date#> .
+<http://contextus.net/ontology/ontomedia/misc/date#Calendar> <http://www.w3.org/2000/01/rdf-schema#label> "Calendar" <http://contextus.net/ontology/ontomedia/misc/date#> .
+<http://contsem.unizar.es/def/sector-publico/pproc#SubjectiveAwardCriterion> <http://www.w3.org/2000/01/rdf-schema#comment> "Clase para especificar los criterios que dependen de una opinion subjetiva."@es <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#SubjectiveAwardCriterion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/procurement/public-contracts#AwardCriterion> <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#SubjectiveAwardCriterion> <http://www.w3.org/2000/01/rdf-schema#label> "Criterio de adjudicación subjetivo"@es <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#SubjectiveAwardCriterion> <http://www.w3.org/2000/01/rdf-schema#comment> "Class used to describe criteria that depend on a subjetive opinion."@en <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#SubjectiveAwardCriterion> <http://www.w3.org/2000/01/rdf-schema#label> "Subjective award criterion"@en <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#SubjectiveAwardCriterion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#Committee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#Committee> <http://www.w3.org/2000/01/rdf-schema#comment> "Clase abstracta que representa un conjunto de personas en comité y sus roles dentro del esta agrupación."@es <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#Committee> <http://www.w3.org/2000/01/rdf-schema#label> "Tender committee"@en <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#Committee> <http://www.w3.org/2000/01/rdf-schema#label> "Comité de contratación"@es <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#Committee> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract class describing a set of persons in committee and its roles."@en <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#ConcessionContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://contsem.unizar.es/def/sector-publico/pproc#PublicServicesManagementContract> <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#ConcessionContract> <http://www.w3.org/2000/01/rdf-schema#comment> "Clase de los contratos en los que el empresario gestionará el servicio a su propio riesgo y ventura."@es <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#ConcessionContract> <http://www.w3.org/2000/01/rdf-schema#label> "Concession contract"@en <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#ConcessionContract> <http://www.w3.org/2000/01/rdf-schema#comment> "Class of the contracts in which the awarded tenderer manage the public service themselves."@en <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#ConcessionContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#ConcessionContract> <http://www.w3.org/2000/01/rdf-schema#label> "Concesión"@es <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#BundlePriceSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#PriceSpecification> <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#BundlePriceSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Precio de paquete"@es <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#BundlePriceSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Clase que representa el precio de conjuntos de objetos o un paquete determinado.\n\nSe utiliza para especificar el precio de la clase gr:Offering cuando este precio se refiere al del conjunto de los objetos (y no a su precio unitario)."@es <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#BundlePriceSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Bundle price"@en <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#BundlePriceSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "Class used to describe the price a set of objets.\n\nCan be used to define the total price of an gr:Offering. Its value must be equal to the gr:UnitPriceSpecification multiplied by the number of items."@en <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://contsem.unizar.es/def/sector-publico/pproc#BundlePriceSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://courseware.rkbexplorer.com/ontologies/courseware#Assessment-Method> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://courseware.rkbexplorer.com/ontologies/courseware> <http://courseware.rkbexplorer.com/ontologies/courseware> .
+<http://courseware.rkbexplorer.com/ontologies/courseware#Assessment-Method> <http://www.w3.org/2000/01/rdf-schema#comment> "A method by which a student is assessed; instances of this class may include examination, coursework, etc." <http://courseware.rkbexplorer.com/ontologies/courseware> .
+<http://courseware.rkbexplorer.com/ontologies/courseware#Assessment-Method> <http://www.w3.org/2000/01/rdf-schema#label> "Assessment Method" <http://courseware.rkbexplorer.com/ontologies/courseware> .
+<http://courseware.rkbexplorer.com/ontologies/courseware#Assessment-Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://courseware.rkbexplorer.com/ontologies/courseware> .
+<http://courseware.rkbexplorer.com/ontologies/courseware#Student-Interaction-Type> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://courseware.rkbexplorer.com/ontologies/courseware> <http://courseware.rkbexplorer.com/ontologies/courseware> .
+<http://courseware.rkbexplorer.com/ontologies/courseware#Student-Interaction-Type> <http://www.w3.org/2000/01/rdf-schema#label> "Student Interaction Type" <http://courseware.rkbexplorer.com/ontologies/courseware> .
+<http://courseware.rkbexplorer.com/ontologies/courseware#Student-Interaction-Type> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of interaction in which a student engages whilst undertaking a course; instances of this class may include lectures, laboratory sessions, and group or individual projects." <http://courseware.rkbexplorer.com/ontologies/courseware> .
+<http://courseware.rkbexplorer.com/ontologies/courseware#Student-Interaction-Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://courseware.rkbexplorer.com/ontologies/courseware> .
+<http://creativecommons.org/ns#License> <http://www.w3.org/2000/01/rdf-schema#label> "License"@en-us <http://creativecommons.org/ns> .
+<http://creativecommons.org/ns#License> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://creativecommons.org/ns> .
+<http://creativecommons.org/ns#License> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dc/terms/LicenseDocument> <http://creativecommons.org/ns> .
+<http://creativecommons.org/ns#License> <http://www.w3.org/2000/01/rdf-schema#comment> "a set of\n\t\t    requests/permissions to users of a Work, e.g. a\n\t\t    copyright license, the public domain, information\n\t\t    for distributors"@en-us <http://creativecommons.org/ns> .
+<http://data.archiveshub.ac.uk/def/Level> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.archiveshub.ac.uk/def/> <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/Level> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/Level> <http://www.w3.org/2000/01/rdf-schema#label> "Level"@en <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/Level> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/Level> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/Level> <http://www.w3.org/2000/01/rdf-schema#comment> "An indicator of the part of an archival collection constituted by an archival resource, whether it is the whole collection or a sub-section of it."@en <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/Level> <http://www.w3.org/2004/02/skos/core#prefLabel> "Level"@en <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/dateCreatedAccumulatedString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/dateCreatedAccumulatedString> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/dateCreatedAccumulatedString> <http://www.w3.org/2004/02/skos/core#prefLabel> "Date created or accumulated"@en <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/dateCreatedAccumulatedString> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/dateCreatedAccumulatedString> <http://www.w3.org/2000/01/rdf-schema#comment> "The date, represented as a string, of a time interval during which the archival resource was created or accumulated."@en <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/dateCreatedAccumulatedString> <http://www.w3.org/2000/01/rdf-schema#label> "Date created or accumulated"@en <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/dateCreatedAccumulatedString> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.archiveshub.ac.uk/def/> <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/Function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/Function> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.archiveshub.ac.uk/def/> <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/Function> <http://www.w3.org/2000/01/rdf-schema#label> "Function"@en <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/Function> <http://www.w3.org/2000/01/rdf-schema#comment> "A sphere of activity or process."@en <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/Function> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/Function> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> <http://data.archiveshub.ac.uk/def/> .
+<http://data.archiveshub.ac.uk/def/Function> <http://www.w3.org/2004/02/skos/core#prefLabel> "Function"@en <http://data.archiveshub.ac.uk/def/> .
+<http://data.ign.fr/def/topo#borneFin> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.ign.fr/def/topo#BornePostale> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#borneFin> <http://www.w3.org/2000/01/rdf-schema#label> "final civic number marker"@en <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#borneFin> <http://www.w3.org/2000/01/rdf-schema#label> "borne finale"@fr <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#borneFin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#borneFin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/topo> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#borneFin> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation entre un tronÃ§on de route et la borne postale correspondant Ã  son point final."@fr <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#borneFin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/topo#Route> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#borneIni> <http://www.w3.org/2000/01/rdf-schema#label> "borne initiale"@fr <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#borneIni> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.ign.fr/def/topo#BornePostale> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#borneIni> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/topo#Route> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#borneIni> <http://www.w3.org/2000/01/rdf-schema#label> "initial civic number marker"@en <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#borneIni> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#borneIni> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/topo> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#borneIni> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation entre un tronÃ§on de route et la borne postale correspondant Ã  son point initial."@fr <http://data.ign.fr/def/topo> .
+<http://ns.inria.fr/semed/eduprogression/v1#PointOfReference> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of class PointOfReference represents an educational reference element on a specific element of knowledge and skills (an instance of EKS). An instance of EKS is related to an instance of class PointOfReference through the property hasPointOfReference."@en <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#PointOfReference> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#PointOfReference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.inria.fr/semed/eduprogression#> <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#PointOfReference> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#PointOfReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#PointOfReference> <http://www.w3.org/2000/01/rdf-schema#label> "Point of reference"@en <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#PointOfReference> <http://www.w3.org/2000/01/rdf-schema#label> "Repère"@fr <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1> <http://purl.org/dc/elements/1.1/title> "EduProgression Ontology"@en <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1> <http://purl.org/vocab/vann/preferredNamespacePrefix> "eduprogression" <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1> <http://purl.org/dc/elements/1.1/creator> <https://plus.google.com/106595696646939943813> <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1> <http://purl.org/dc/elements/1.1/creator> <http://www.oscarrodriguez.me> <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1> <http://purl.org/dc/elements/1.1/publisher> <http://dbpedia.org/resource/National_Institute_for_Research_in_Computer_Science_and_Control> <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://ns.inria.fr/semed/eduprogression/v1#" <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1> <http://purl.org/dc/terms/modified> "2016-09-01" <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1> <http://www.w3.org/2000/01/rdf-schema#comment> "The EduProgression ontology formalizes the educational progressions of the French educational system, making possible to represent the existing progressions in a standard formal model, searchable and understandable by machines (OWL)."@en <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1> <http://purl.org/dc/elements/1.1/description> "The EduProgression ontology formalizes the educational progressions of the French educational system, making possible to represent the existing progressions in a standard formal model, searchable and understandable by machines (OWL)."@en <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1> <http://purl.org/dc/terms/issued> "2016-09-01" <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1> <http://purl.org/dc/elements/1.1/rights> "This ontology is distributed under a Creative Commons Attribution License - http://creativecommons.org/licenses/by/3.0 ."@en <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#EKS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#EKS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#EKS> <http://www.w3.org/2000/01/rdf-schema#label> "Element de connaissances et de competences"@fr <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#EKS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.inria.fr/semed/eduprogression#> <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#EKS> <http://www.w3.org/2000/01/rdf-schema#label> "Element of knowledge and skills "@en <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#EKS> <http://www.w3.org/2000/01/rdf-schema#comment> "An element of knowledge and skills is an instance of this class and it is associated to a set of knowledge pieces (class Knowledge) and skills (class Skill) for a specific French school cycle (class Course) containing reference points (class PointOfReference) and also a vocabulary of associated terms (class Vocabulary)."@en <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#EKS> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#Knowledge> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.inria.fr/semed/eduprogression#> <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#Knowledge> <http://www.w3.org/2000/01/rdf-schema#comment> "It is represented by class Knowledge and each of its instances is a skos:Concept that is part of a skos:ConceptScheme that contains all the knowledge pieces of a given progression. An instance of EKS is related to an instance of Knowledge through property hasKnowledge."@en <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#Knowledge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#Knowledge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#Knowledge> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge "@en <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#Knowledge> <http://www.w3.org/2000/01/rdf-schema#label> "Connaissance"@fr <http://ns.inria.fr/semed/eduprogression/> .
+<http://ns.inria.fr/semed/eduprogression/v1#Knowledge> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://ns.inria.fr/semed/eduprogression/> .
+<https://w3id.org/ep-plan#Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Policy> <http://www.w3.org/2002/07/owl#disjointWith> _:Bc4ebf7ee555d1f21202d4c7ca055035a <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Policy> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic representation of a collection of rules that may be applicable in the context of a specific plan. A policy can provide a rationale for constraints being applied to steps as well as explain reasons including other plan elements. For example, a data protection policy might require that steps are executed by specific agents and that a data anonymisation step is included in the plan." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Policy> <http://www.w3.org/2000/01/rdf-schema#label> "Policy" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#CommunicationSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "CommunicationSpecification" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#CommunicationSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A specification of how communication/exchange of variables between two steps should be performed." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#CommunicationSpecification> <http://www.w3.org/2002/07/owl#disjointWith> _:B3092f1725d47330b089d4ccd23d724aa <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#CommunicationSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPart> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ep-plan#Variable> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPart> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ep-plan#isPartOf> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPart> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ep-plan#MultiVariable> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPart> <http://www.w3.org/2000/01/rdf-schema#comment> "ep-plan:hasPart links amn ep-plan:MultiVariable to another ep-plan:Variable that represents a smaller part of a composite variable." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "hasPart" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Plan> <http://www.w3.org/2000/01/rdf-schema#comment> "An ep-plan:Plan is a specific type of prov:Plan. It is composed of smaller steps that use and produce variables." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Plan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Plan> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Plan> <http://www.w3.org/2000/01/rdf-schema#label> "Plan" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ConstraintEvaluation> <http://www.w3.org/2000/01/rdf-schema#comment> "A concept used to qualify the relationship between a trace activity and a constraint associated with a step to which such activity corresponds to. The concept provides an opportunity to link additional information documenting the constraint evaluation process (e.g. a tool or an algorithm used to check for constraint violations, time when constraints were evaluated, etc.)." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ConstraintEvaluation> <http://www.w3.org/2000/01/rdf-schema#label> "ConstraintEvaluation" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ConstraintEvaluation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ep-plan#isElementOfPlan> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ep-plan#Plan> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#label> "isSubPlanOfPlan" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isSubPlanOfPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isSubPlanOfPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ep-plan#Plan> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "ep-plan:Plan may be a subplan of another bigger ep-plan:Plan. The relation ep-plan:isSubPlanOfPlan is used to state the link among the two different plans. Note that if p1 is a sub-plan of p2, p1 will not necessarily be a step of p2. A multistep will represent p1 in p2, and link to p1 with the hasStepDecomposition relationship." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Objective> <http://www.w3.org/2000/01/rdf-schema#label> "Objective" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Objective> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Objective> <http://www.w3.org/2000/01/rdf-schema#comment> " ep-plan:Objective describes information detailing a specific purpose of a plan. Plans can have more than one objectives. Users are encouraged to extend this class, for example, to identify primary and secondary objectives of a plan." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ExecutionTraceBundle> <http://www.w3.org/2000/01/rdf-schema#label> "Execution Trace Bundle" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ExecutionTraceBundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ExecutionTraceBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Bundle> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ExecutionTraceBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Entity> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ExecutionTraceBundle> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of trace elements that were generated during a single plan execution." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Rationale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Rationale> <http://www.w3.org/2000/01/rdf-schema#label> "Rationale" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Rationale> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic concept describing a specific justification of a plan or an individual plan element. For example, a  data anonymisation step might be included in the plan to protect personal information as a result of a data protection policy associated with a plan (i.e. the reason for including such a step in a plan). Similarly, a data protection policy associated with a plan can be linked to a description of the General Data Protection Regulation (GDPR) which provides the reason why such policy was implemented." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "hasConstraint" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0796b9357a8f23f8a316a946ddc144a1 <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ep-plan#Constraint> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "ep-plan:hasConstraint links ep-plan:Step, ep-plan:CommunicationSpec or ep-plan:Plan to a ep-plan:Constraint. Please note, that we do not stipulate that this constriant must be strictly satisfied before the plan can continue. This is to enable inclusions of constraints defined by policies which can be violated under certain conditions and to also enable capture of incorrect behaviour of a system (e.g. a plan ignored a constriant)." <https://w3id.org/ep-plan> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+s.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BabX2Bs .
+_:BabX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BabX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ab+s.nt> .
+_:BabX2Bs <https://w3id.org/tree#value> "ab" .
+_:BabX2Bs <https://w3id.org/tree#value> "s" .
+_:BabX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ab+s.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BacX2Bs .
+_:BacX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BacX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ac+s.nt> .
+_:BacX2Bs <https://w3id.org/tree#value> "ac" .
+_:BacX2Bs <https://w3id.org/tree#value> "s" .
+_:BacX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ac+s.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BadX2Bs .
+_:BadX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BadX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ad+s.nt> .
+_:BadX2Bs <https://w3id.org/tree#value> "ad" .
+_:BadX2Bs <https://w3id.org/tree#value> "s" .
+_:BadX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ad+s.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaeX2Bs .
+_:BaeX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaeX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ae+s.nt> .
+_:BaeX2Bs <https://w3id.org/tree#value> "ae" .
+_:BaeX2Bs <https://w3id.org/tree#value> "s" .
+_:BaeX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ae+s.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaiX2Bs .
+_:BaiX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaiX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ai+s.nt> .
+_:BaiX2Bs <https://w3id.org/tree#value> "ai" .
+_:BaiX2Bs <https://w3id.org/tree#value> "s" .
+_:BaiX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ai+s.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BalX2Bs .
+_:BalX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BalX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/al+s.nt> .
+_:BalX2Bs <https://w3id.org/tree#value> "al" .
+_:BalX2Bs <https://w3id.org/tree#value> "s" .
+_:BalX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/al+s.nt> <https://w3id.org/tree#remainingItems> "57"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BanX2Bs .
+_:BanX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BanX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/an+s.nt> .
+_:BanX2Bs <https://w3id.org/tree#value> "an" .
+_:BanX2Bs <https://w3id.org/tree#value> "s" .
+_:BanX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/an+s.nt> <https://w3id.org/tree#remainingItems> "53"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaoX2Bs .
+_:BaoX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaoX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ao+s.nt> .
+_:BaoX2Bs <https://w3id.org/tree#value> "ao" .
+_:BaoX2Bs <https://w3id.org/tree#value> "s" .
+_:BaoX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ao+s.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BapX2Bs .
+_:BapX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BapX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ap+s.nt> .
+_:BapX2Bs <https://w3id.org/tree#value> "ap" .
+_:BapX2Bs <https://w3id.org/tree#value> "s" .
+_:BapX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ap+s.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BarX2Bs .
+_:BarX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BarX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ar+s.nt> .
+_:BarX2Bs <https://w3id.org/tree#value> "ar" .
+_:BarX2Bs <https://w3id.org/tree#value> "s" .
+_:BarX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ar+s.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BasX2Bs .
+_:BasX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BasX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/as+s.nt> .
+_:BasX2Bs <https://w3id.org/tree#value> "as" .
+_:BasX2Bs <https://w3id.org/tree#value> "s" .
+_:BasX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/as+s.nt> <https://w3id.org/tree#remainingItems> "466"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BatX2Bs .
+_:BatX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BatX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/at+s.nt> .
+_:BatX2Bs <https://w3id.org/tree#value> "at" .
+_:BatX2Bs <https://w3id.org/tree#value> "s" .
+_:BatX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/at+s.nt> <https://w3id.org/tree#remainingItems> "80"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BauX2Bs .
+_:BauX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BauX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/au+s.nt> .
+_:BauX2Bs <https://w3id.org/tree#value> "au" .
+_:BauX2Bs <https://w3id.org/tree#value> "s" .
+_:BauX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/au+s.nt> <https://w3id.org/tree#remainingItems> "22"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BavX2Bs .
+_:BavX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BavX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/av+s.nt> .
+_:BavX2Bs <https://w3id.org/tree#value> "av" .
+_:BavX2Bs <https://w3id.org/tree#value> "s" .
+_:BavX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/av+s.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bs4 .
+_:BaX2Bs4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bs4 <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+s4.nt> .
+_:BaX2Bs4 <https://w3id.org/tree#value> "a" .
+_:BaX2Bs4 <https://w3id.org/tree#value> "s4" .
+_:BaX2Bs4 <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+s4.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsa .
+_:BaX2Bsa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsa <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sa.nt> .
+_:BaX2Bsa <https://w3id.org/tree#value> "a" .
+_:BaX2Bsa <https://w3id.org/tree#value> "sa" .
+_:BaX2Bsa <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sa.nt> <https://w3id.org/tree#remainingItems> "153"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsb .
+_:BaX2Bsb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsb <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sb.nt> .
+_:BaX2Bsb <https://w3id.org/tree#value> "a" .
+_:BaX2Bsb <https://w3id.org/tree#value> "sb" .
+_:BaX2Bsb <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sb.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsc .
+_:BaX2Bsc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsc <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sc.nt> .
+_:BaX2Bsc <https://w3id.org/tree#value> "a" .
+_:BaX2Bsc <https://w3id.org/tree#value> "sc" .
+_:BaX2Bsc <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sc.nt> <https://w3id.org/tree#remainingItems> "293"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsd .
+_:BaX2Bsd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sd.nt> .
+_:BaX2Bsd <https://w3id.org/tree#value> "a" .
+_:BaX2Bsd <https://w3id.org/tree#value> "sd" .
+_:BaX2Bsd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sd.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bse .
+_:BaX2Bse <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bse <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+se.nt> .
+_:BaX2Bse <https://w3id.org/tree#value> "a" .
+_:BaX2Bse <https://w3id.org/tree#value> "se" .
+_:BaX2Bse <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+se.nt> <https://w3id.org/tree#remainingItems> "1424"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsh .
+_:BaX2Bsh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sh.nt> .
+_:BaX2Bsh <https://w3id.org/tree#value> "a" .
+_:BaX2Bsh <https://w3id.org/tree#value> "sh" .
+_:BaX2Bsh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sh.nt> <https://w3id.org/tree#remainingItems> "222"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsi .
+_:BaX2Bsi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+si.nt> .
+_:BaX2Bsi <https://w3id.org/tree#value> "a" .
+_:BaX2Bsi <https://w3id.org/tree#value> "si" .
+_:BaX2Bsi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+si.nt> <https://w3id.org/tree#remainingItems> "1439"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsk .
+_:BaX2Bsk <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsk <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sk.nt> .
+_:BaX2Bsk <https://w3id.org/tree#value> "a" .
+_:BaX2Bsk <https://w3id.org/tree#value> "sk" .
+_:BaX2Bsk <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sk.nt> <https://w3id.org/tree#remainingItems> "64"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsl .
+_:BaX2Bsl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sl.nt> .
+_:BaX2Bsl <https://w3id.org/tree#value> "a" .
+_:BaX2Bsl <https://w3id.org/tree#value> "sl" .
+_:BaX2Bsl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sl.nt> <https://w3id.org/tree#remainingItems> "79"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsm .
+_:BaX2Bsm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sm.nt> .
+_:BaX2Bsm <https://w3id.org/tree#value> "a" .
+_:BaX2Bsm <https://w3id.org/tree#value> "sm" .
+_:BaX2Bsm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sm.nt> <https://w3id.org/tree#remainingItems> "74"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsn .
+_:BaX2Bsn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsn <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sn.nt> .
+_:BaX2Bsn <https://w3id.org/tree#value> "a" .
+_:BaX2Bsn <https://w3id.org/tree#value> "sn" .
+_:BaX2Bsn <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sn.nt> <https://w3id.org/tree#remainingItems> "16"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bso .
+_:BaX2Bso <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bso <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+so.nt> .
+_:BaX2Bso <https://w3id.org/tree#value> "a" .
+_:BaX2Bso <https://w3id.org/tree#value> "so" .
+_:BaX2Bso <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+so.nt> <https://w3id.org/tree#remainingItems> "325"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsp .
+_:BaX2Bsp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sp.nt> .
+_:BaX2Bsp <https://w3id.org/tree#value> "a" .
+_:BaX2Bsp <https://w3id.org/tree#value> "sp" .
+_:BaX2Bsp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sp.nt> <https://w3id.org/tree#remainingItems> "1157"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsq .
+_:BaX2Bsq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsq <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sq.nt> .
+_:BaX2Bsq <https://w3id.org/tree#value> "a" .
+_:BaX2Bsq <https://w3id.org/tree#value> "sq" .
+_:BaX2Bsq <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sq.nt> <https://w3id.org/tree#remainingItems> "57"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bst .
+_:BaX2Bst <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bst <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+st.nt> .
+_:BaX2Bst <https://w3id.org/tree#value> "a" .
+_:BaX2Bst <https://w3id.org/tree#value> "st" .
+_:BaX2Bst <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+st.nt> <https://w3id.org/tree#remainingItems> "883"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsu .
+_:BaX2Bsu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+su.nt> .
+_:BaX2Bsu <https://w3id.org/tree#value> "a" .
+_:BaX2Bsu <https://w3id.org/tree#value> "su" .
+_:BaX2Bsu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+su.nt> <https://w3id.org/tree#remainingItems> "1082"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsw .
+_:BaX2Bsw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sw.nt> .
+_:BaX2Bsw <https://w3id.org/tree#value> "a" .
+_:BaX2Bsw <https://w3id.org/tree#value> "sw" .
+_:BaX2Bsw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sw.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsy .
+_:BaX2Bsy <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsy <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sy.nt> .
+_:BaX2Bsy <https://w3id.org/tree#value> "a" .
+_:BaX2Bsy <https://w3id.org/tree#value> "sy" .
+_:BaX2Bsy <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sy.nt> <https://w3id.org/tree#remainingItems> "240"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:B2X2BaX2Bs .
+_:B2X2BaX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:B2X2BaX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/2+a+s.nt> .
+_:B2X2BaX2Bs <https://w3id.org/tree#value> "2" .
+_:B2X2BaX2Bs <https://w3id.org/tree#value> "a" .
+_:B2X2BaX2Bs <https://w3id.org/tree#value> "s" .
+_:B2X2BaX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/2+a+s.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2BaX2Bs .
+_:BaX2BaX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BaX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+a+s.nt> .
+_:BaX2BaX2Bs <https://w3id.org/tree#value> "a" .
+_:BaX2BaX2Bs <https://w3id.org/tree#value> "a" .
+_:BaX2BaX2Bs <https://w3id.org/tree#value> "s" .
+_:BaX2BaX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+a+s.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2BeX2Bs .
+_:BaX2BeX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BeX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+e+s.nt> .
+_:BaX2BeX2Bs <https://w3id.org/tree#value> "a" .
+_:BaX2BeX2Bs <https://w3id.org/tree#value> "e" .
+_:BaX2BeX2Bs <https://w3id.org/tree#value> "s" .
+_:BaX2BeX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+e+s.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2BkX2Bs .
+_:BaX2BkX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BkX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+k+s.nt> .
+_:BaX2BkX2Bs <https://w3id.org/tree#value> "a" .
+_:BaX2BkX2Bs <https://w3id.org/tree#value> "k" .
+_:BaX2BkX2Bs <https://w3id.org/tree#value> "s" .
+_:BaX2BkX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+k+s.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+s.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BabX2Bs .
+_:BabX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BabX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ab+s.nt> .
+_:BabX2Bs <https://w3id.org/tree#value> "ab" .
+_:BabX2Bs <https://w3id.org/tree#value> "s" .
+_:BabX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ab+s.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BacX2Bs .
+_:BacX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BacX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ac+s.nt> .
+_:BacX2Bs <https://w3id.org/tree#value> "ac" .
+_:BacX2Bs <https://w3id.org/tree#value> "s" .
+_:BacX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ac+s.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BadX2Bs .
+_:BadX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BadX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ad+s.nt> .
+_:BadX2Bs <https://w3id.org/tree#value> "ad" .
+_:BadX2Bs <https://w3id.org/tree#value> "s" .
+_:BadX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ad+s.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaeX2Bs .
+_:BaeX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaeX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ae+s.nt> .
+_:BaeX2Bs <https://w3id.org/tree#value> "ae" .
+_:BaeX2Bs <https://w3id.org/tree#value> "s" .
+_:BaeX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ae+s.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaiX2Bs .
+_:BaiX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaiX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ai+s.nt> .
+_:BaiX2Bs <https://w3id.org/tree#value> "ai" .
+_:BaiX2Bs <https://w3id.org/tree#value> "s" .
+_:BaiX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ai+s.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BalX2Bs .
+_:BalX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BalX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/al+s.nt> .
+_:BalX2Bs <https://w3id.org/tree#value> "al" .
+_:BalX2Bs <https://w3id.org/tree#value> "s" .
+_:BalX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/al+s.nt> <https://w3id.org/tree#remainingItems> "57"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BanX2Bs .
+_:BanX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BanX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/an+s.nt> .
+_:BanX2Bs <https://w3id.org/tree#value> "an" .
+_:BanX2Bs <https://w3id.org/tree#value> "s" .
+_:BanX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/an+s.nt> <https://w3id.org/tree#remainingItems> "53"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaoX2Bs .
+_:BaoX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaoX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ao+s.nt> .
+_:BaoX2Bs <https://w3id.org/tree#value> "ao" .
+_:BaoX2Bs <https://w3id.org/tree#value> "s" .
+_:BaoX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ao+s.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BapX2Bs .
+_:BapX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BapX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ap+s.nt> .
+_:BapX2Bs <https://w3id.org/tree#value> "ap" .
+_:BapX2Bs <https://w3id.org/tree#value> "s" .
+_:BapX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ap+s.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BarX2Bs .
+_:BarX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BarX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ar+s.nt> .
+_:BarX2Bs <https://w3id.org/tree#value> "ar" .
+_:BarX2Bs <https://w3id.org/tree#value> "s" .
+_:BarX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ar+s.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BasX2Bs .
+_:BasX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BasX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/as+s.nt> .
+_:BasX2Bs <https://w3id.org/tree#value> "as" .
+_:BasX2Bs <https://w3id.org/tree#value> "s" .
+_:BasX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/as+s.nt> <https://w3id.org/tree#remainingItems> "466"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BatX2Bs .
+_:BatX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BatX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/at+s.nt> .
+_:BatX2Bs <https://w3id.org/tree#value> "at" .
+_:BatX2Bs <https://w3id.org/tree#value> "s" .
+_:BatX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/at+s.nt> <https://w3id.org/tree#remainingItems> "80"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BauX2Bs .
+_:BauX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BauX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/au+s.nt> .
+_:BauX2Bs <https://w3id.org/tree#value> "au" .
+_:BauX2Bs <https://w3id.org/tree#value> "s" .
+_:BauX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/au+s.nt> <https://w3id.org/tree#remainingItems> "22"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BavX2Bs .
+_:BavX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BavX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/av+s.nt> .
+_:BavX2Bs <https://w3id.org/tree#value> "av" .
+_:BavX2Bs <https://w3id.org/tree#value> "s" .
+_:BavX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/av+s.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bs4 .
+_:BaX2Bs4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bs4 <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+s4.nt> .
+_:BaX2Bs4 <https://w3id.org/tree#value> "a" .
+_:BaX2Bs4 <https://w3id.org/tree#value> "s4" .
+_:BaX2Bs4 <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+s4.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsa .
+_:BaX2Bsa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsa <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sa.nt> .
+_:BaX2Bsa <https://w3id.org/tree#value> "a" .
+_:BaX2Bsa <https://w3id.org/tree#value> "sa" .
+_:BaX2Bsa <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sa.nt> <https://w3id.org/tree#remainingItems> "153"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsb .
+_:BaX2Bsb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsb <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sb.nt> .
+_:BaX2Bsb <https://w3id.org/tree#value> "a" .
+_:BaX2Bsb <https://w3id.org/tree#value> "sb" .
+_:BaX2Bsb <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sb.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsc .
+_:BaX2Bsc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsc <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sc.nt> .
+_:BaX2Bsc <https://w3id.org/tree#value> "a" .
+_:BaX2Bsc <https://w3id.org/tree#value> "sc" .
+_:BaX2Bsc <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sc.nt> <https://w3id.org/tree#remainingItems> "293"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsd .
+_:BaX2Bsd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sd.nt> .
+_:BaX2Bsd <https://w3id.org/tree#value> "a" .
+_:BaX2Bsd <https://w3id.org/tree#value> "sd" .
+_:BaX2Bsd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sd.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bse .
+_:BaX2Bse <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bse <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+se.nt> .
+_:BaX2Bse <https://w3id.org/tree#value> "a" .
+_:BaX2Bse <https://w3id.org/tree#value> "se" .
+_:BaX2Bse <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+se.nt> <https://w3id.org/tree#remainingItems> "1424"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsh .
+_:BaX2Bsh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sh.nt> .
+_:BaX2Bsh <https://w3id.org/tree#value> "a" .
+_:BaX2Bsh <https://w3id.org/tree#value> "sh" .
+_:BaX2Bsh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sh.nt> <https://w3id.org/tree#remainingItems> "222"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsi .
+_:BaX2Bsi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+si.nt> .
+_:BaX2Bsi <https://w3id.org/tree#value> "a" .
+_:BaX2Bsi <https://w3id.org/tree#value> "si" .
+_:BaX2Bsi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+si.nt> <https://w3id.org/tree#remainingItems> "1439"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsk .
+_:BaX2Bsk <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsk <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sk.nt> .
+_:BaX2Bsk <https://w3id.org/tree#value> "a" .
+_:BaX2Bsk <https://w3id.org/tree#value> "sk" .
+_:BaX2Bsk <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sk.nt> <https://w3id.org/tree#remainingItems> "64"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsl .
+_:BaX2Bsl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sl.nt> .
+_:BaX2Bsl <https://w3id.org/tree#value> "a" .
+_:BaX2Bsl <https://w3id.org/tree#value> "sl" .
+_:BaX2Bsl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sl.nt> <https://w3id.org/tree#remainingItems> "79"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsm .
+_:BaX2Bsm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sm.nt> .
+_:BaX2Bsm <https://w3id.org/tree#value> "a" .
+_:BaX2Bsm <https://w3id.org/tree#value> "sm" .
+_:BaX2Bsm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sm.nt> <https://w3id.org/tree#remainingItems> "74"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsn .
+_:BaX2Bsn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsn <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sn.nt> .
+_:BaX2Bsn <https://w3id.org/tree#value> "a" .
+_:BaX2Bsn <https://w3id.org/tree#value> "sn" .
+_:BaX2Bsn <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sn.nt> <https://w3id.org/tree#remainingItems> "16"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bso .
+_:BaX2Bso <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bso <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+so.nt> .
+_:BaX2Bso <https://w3id.org/tree#value> "a" .
+_:BaX2Bso <https://w3id.org/tree#value> "so" .
+_:BaX2Bso <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+so.nt> <https://w3id.org/tree#remainingItems> "325"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsp .
+_:BaX2Bsp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sp.nt> .
+_:BaX2Bsp <https://w3id.org/tree#value> "a" .
+_:BaX2Bsp <https://w3id.org/tree#value> "sp" .
+_:BaX2Bsp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sp.nt> <https://w3id.org/tree#remainingItems> "1157"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsq .
+_:BaX2Bsq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsq <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sq.nt> .
+_:BaX2Bsq <https://w3id.org/tree#value> "a" .
+_:BaX2Bsq <https://w3id.org/tree#value> "sq" .
+_:BaX2Bsq <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sq.nt> <https://w3id.org/tree#remainingItems> "57"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bst .
+_:BaX2Bst <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bst <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+st.nt> .
+_:BaX2Bst <https://w3id.org/tree#value> "a" .
+_:BaX2Bst <https://w3id.org/tree#value> "st" .
+_:BaX2Bst <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+st.nt> <https://w3id.org/tree#remainingItems> "883"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsu .
+_:BaX2Bsu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+su.nt> .
+_:BaX2Bsu <https://w3id.org/tree#value> "a" .
+_:BaX2Bsu <https://w3id.org/tree#value> "su" .
+_:BaX2Bsu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+su.nt> <https://w3id.org/tree#remainingItems> "1082"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsw .
+_:BaX2Bsw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sw.nt> .
+_:BaX2Bsw <https://w3id.org/tree#value> "a" .
+_:BaX2Bsw <https://w3id.org/tree#value> "sw" .
+_:BaX2Bsw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sw.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2Bsy .
+_:BaX2Bsy <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsy <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sy.nt> .
+_:BaX2Bsy <https://w3id.org/tree#value> "a" .
+_:BaX2Bsy <https://w3id.org/tree#value> "sy" .
+_:BaX2Bsy <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sy.nt> <https://w3id.org/tree#remainingItems> "240"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:B2X2BaX2Bs .
+_:B2X2BaX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:B2X2BaX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/2+a+s.nt> .
+_:B2X2BaX2Bs <https://w3id.org/tree#value> "2" .
+_:B2X2BaX2Bs <https://w3id.org/tree#value> "a" .
+_:B2X2BaX2Bs <https://w3id.org/tree#value> "s" .
+_:B2X2BaX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/2+a+s.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2BaX2Bs .
+_:BaX2BaX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BaX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+a+s.nt> .
+_:BaX2BaX2Bs <https://w3id.org/tree#value> "a" .
+_:BaX2BaX2Bs <https://w3id.org/tree#value> "a" .
+_:BaX2BaX2Bs <https://w3id.org/tree#value> "s" .
+_:BaX2BaX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+a+s.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2BeX2Bs .
+_:BaX2BeX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BeX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+e+s.nt> .
+_:BaX2BeX2Bs <https://w3id.org/tree#value> "a" .
+_:BaX2BeX2Bs <https://w3id.org/tree#value> "e" .
+_:BaX2BeX2Bs <https://w3id.org/tree#value> "s" .
+_:BaX2BeX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+e+s.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+s.nt> <https://w3id.org/tree#relation> _:BaX2BkX2Bs .
+_:BaX2BkX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BkX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+k+s.nt> .
+_:BaX2BkX2Bs <https://w3id.org/tree#value> "a" .
+_:BaX2BkX2Bs <https://w3id.org/tree#value> "k" .
+_:BaX2BkX2Bs <https://w3id.org/tree#value> "s" .
+_:BaX2BkX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+k+s.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

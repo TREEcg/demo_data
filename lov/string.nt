@@ -1,0 +1,603 @@
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString> <http://www.w3.org/2000/01/rdf-schema#label> "Offset-based String"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#CString> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#OffsetBasedString> <http://www.w3.org/2000/01/rdf-schema#comment> "cf. Linked-Data Aware URI Schemes for Referencing Text Fragments by Sebastian Hellmann, Jens Lehmann und Sören Auer in EKAW 2012 http://jens-lehmann.org/files/2012/ekaw_nif.pdf\n\t\n\trequires the existence of begin, endIndex and referenceContext\n\t\n\tChangelog: \n\t* 1.0.0 originally a plain text string was attached to this uri scheme, but this was removed later, because of complaints and complexity. \n\t* 1.1.0 subclassing of nif:CString\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> <http://www.w3.org/2000/01/rdf-schema#label> "Annotation" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Individuals of this class are annotations of strings. This class can be used if an annotation statement has to be annotated with further information, like confidence or annotation provenance (like which tool produced the annotation). \n    Changelog:\n    * 0.0.1 initial commit of class"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Annotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/2000/01/rdf-schema#comment> "This property (and nif:previousSentence, nif:nextWord, nif:previousWord and their transitive extension) can be used to make resources of nif:Sentence and nif:Word traversable, it can not be assumed that no gaps or whitespaces between sentences or words exist, i.e. string adjacency is not mandatory. The transitivity axioms are included in nif-core-inf.ttl and need to be included separately to keep a low reasoning profile. They are modeled after skos:broader and skos:broaderTransitive\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/2000/01/rdf-schema#range> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentenceTrans> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/2002/07/owl#inverseOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.2" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/2000/01/rdf-schema#label> "is string"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/2000/01/rdf-schema#comment> "The reference text as rdf:Literal for this nif:Context resource.  \n    NIF requires that the reference text (i.e. the context) is always included in the RDF as an rdf:Literal.\n    Note, that the isString property is *the* place to keep the string itself in RDF.\n    All other nif:Strings and nif:URISchemes relate to the text of this property to calculate character position and indices. \n    \n    Changelog\n    * 1.0.0: Introduced stable version.\n    * 1.0.1 improved documentation\n    * 1.0.2: merged val+inf\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext> <http://www.w3.org/2000/01/rdf-schema#label> "reference context"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a URI of a string to its reference context of type nif:Context.  The reference context determines the calculation of begin and end index\n    Each String that is not an instance of nif:Context MUST have exactly one reference context. \n    \n    Inferences (nif-core-inf.ttl): \n    Instances of nif:Context do have itself as reference context, this is inferred automatically, MAY be materialized, as well.  \n    \n    OWL validation (nif-core-val.ttl): \n    This property is functional.\n    \n    Changelog:\n    * 1.0.0: Introduced stable version.\n    * 1.0.1: merged val model\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#referenceContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#code> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.omgsysml.org/qudv#Data" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#code> <http://www.w3.org/2000/01/rdf-schema#label> "code" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#code> <http://purl.org/dc/elements/1.1/source> "skos:closeMatch 'code' [QUDT] http://qudt.org/" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#code> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#code> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#code> <http://www.w3.org/2000/01/rdf-schema#comment> "A code is a string that uniquely identifies an individual." <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#code> <http://purl.org/dc/elements/1.1/description> "short symbolic name" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#code> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/qu" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.org/acco/ns#propertyID> <http://www.w3.org/2000/01/rdf-schema#comment> "A global identifier, e.g. a URI, a prefixed string, or any other identifier that can be used to refer to a standardized property type.\n\nThe following prefixes and values are reserved:\nstarRating:HOTREC \nstarRating:DEHOGA\nstarRating:WHR\nstarRating:Hotelstars\n"@en <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#propertyID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#propertyID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/acco/ns#AccommodationFeature> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#propertyID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#propertyID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/acco/ns#> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#propertyID> <http://www.w3.org/2000/01/rdf-schema#label> "property ID (0..1)"@en <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#propertyID> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty> <http://purl.org/acco/ns> .
+<http://purl.org/biodiversity/taxon/scientificName> <http://www.w3.org/2000/01/rdf-schema#comment> "The scientific name without the authority string i.e. Felidae or Puma concolor" <http://purl.org/biodiversity/taxon/> .
+<http://purl.org/biodiversity/taxon/scientificName> <http://www.w3.org/2000/01/rdf-schema#label> "scientificName" <http://purl.org/biodiversity/taxon/> .
+<http://purl.org/biodiversity/taxon/scientificName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/biodiversity/taxon/> .
+<http://purl.org/biodiversity/taxon/scientificName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.taxonconcept.org/ontology/taxon.owl> <http://purl.org/biodiversity/taxon/> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique and unambiguous reference to the resource within a given context.\n\nRecommended best practice is to identify the resource by means of a string conforming to a formal identification system."@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/cerif/frapo/> .
+<http://purl.org/dqm-vocabulary/v1/dqm#operatedValue> <http://www.w3.org/2000/01/rdf-schema#label> "Operated Value"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#operatedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#operatedValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The operated value property is an abstract property for datatype properties that are used to express string filtering criteria."@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#contains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dqm-vocabulary/v1/dqm#operatedValue> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#contains> <http://www.w3.org/2000/01/rdf-schema#label> "Contains"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#contains> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#contains> <http://www.w3.org/2000/01/rdf-schema#comment> "Holds one or more consecutive characters that are supposed to be found in strings of another property."@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#contains> <http://www.w3.org/2000/01/rdf-schema#domain> _:Baa4477abb1412641975db6fef3f031e9 <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#startsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#startsWith> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0d399d8d60aee722737da787cea21ddb <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#startsWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#startsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#startsWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Holds one or more consecutive characters that are supposed to be found at the beginning of strings of another property."@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#startsWith> <http://www.w3.org/2000/01/rdf-schema#label> "Starts With"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#startsWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dqm-vocabulary/v1/dqm#operatedValue> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#equals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#equals> <http://www.w3.org/2000/01/rdf-schema#domain> _:B6f498c4f24d0cc3cc79d2d7059881684 <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#equals> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#equals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#equals> <http://www.w3.org/2000/01/rdf-schema#label> "Equals"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#equals> <http://www.w3.org/2000/01/rdf-schema#comment> "Holds one or more consecutive characters that are supposed to be found in the same order in strings of another property."@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#equals> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dqm-vocabulary/v1/dqm#operatedValue> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#WhitespaceRemoval> <http://www.w3.org/2000/01/rdf-schema#comment> "A white space removal rule states that whitespaces at the beginning of a string and at the end of a string shall be removed for the specified property."@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#WhitespaceRemoval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dqm-vocabulary/v1/dqm#LiteralCleansingRule> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#WhitespaceRemoval> <http://www.w3.org/2000/01/rdf-schema#label> "White Space Removal Rule"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#WhitespaceRemoval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#endsWith> <http://www.w3.org/2000/01/rdf-schema#domain> _:B8cb8a9b3089816f6fc582eb30cba377a <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#endsWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#endsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#endsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#endsWith> <http://www.w3.org/2000/01/rdf-schema#label> "Ends With"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#endsWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dqm-vocabulary/v1/dqm#operatedValue> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#endsWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Holds one or more consecutive characters that are supposed to be found at the end of strings of another property."@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/goodrelations/v1#eligibleDuration> <http://www.w3.org/2000/01/rdf-schema#label> "eligible duration (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleDuration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleDuration> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bec2afc38e94d0aa8e579944614a54f56 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleDuration> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "The minimal and maximal duration for which the given gr:Offering or gr:License is valid. This is mostly used for offers regarding accommodation, the rental of objects, or software licenses. The duration is specified by attaching an instance of gr:QuantitativeValue. The lower and upper boundaries are specified using the properties gr:hasMinValue and gr:hasMaxValue to that instance. If they are the same, use the gr:hasValue property. The unit of measurement is specified using the property gr:hasUnitOfMeasurement with a string holding a UN/CEFACT code suitable for durations, e.g. MON (months), DAY (days), HUR (hours), or MIN (minutes).\n\nThe difference to the gr:validFrom and gr:validThrough properties is that those specify the absiolute interval during which the gr:Offering or gr:License is valid, while gr:eligibleDuration specifies the acceptable duration of the contract or usage."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty> <http://www.w3.org/2000/01/rdf-schema#label> "datatype product or service property (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is the super property for all pure datatype properties that can be used to describe a gr:ProductOrService.\n\nIn products and services ontologies, only such properties that are no quantitative properties and that have no predefined gr:QualitativeValue instances are subproperties of this property. In practice, this refers to a few integer properties for which the integer value represents qualitative aspects, for string datatypes (as long as no predefined values exist), for boolean datatype properties, and for dates and times."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty> <http://www.w3.org/2000/01/rdf-schema#domain> _:B117ffc47d2edb1fe2aa50dbf6bd63614 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#advanceBookingRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "The minimal and maximal amount of time that is required between accepting the gr:Offering and the actual usage of the resource or service. This is mostly relevant for offers regarding hotel rooms, the rental of objects, or the provisioning of services. The duration is specified relatively to the beginning of the usage of the contracted object. It is represented by attaching an instance of the class gr:QuantitativeValueInteger. The lower and upper boundaries are specified using the properties gr:hasMinValueInteger and gr:hasMaxValueInteger to that instance. The unit of measurement is specified using the property gr:hasUnitOfMeasurement with a string holding a UN/CEFACT code suitable for durations, e.g. MON (months), DAY (days), HUR (hours), or MIN (minutes).\n\nThe difference to the gr:validFrom and gr:validThrough properties is that those specify the interval during which the gr:Offering is valid, while gr:advanceBookingRequirement specifies the acceptable relative amount of time between accepting the offer and the fulfilment or usage."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#advanceBookingRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "advance booking requirement (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#advanceBookingRequirement> <http://www.w3.org/2000/01/rdf-schema#domain> _:B3403eb14799757730d32055d44bbe1c0 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#advanceBookingRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValueInteger> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#advanceBookingRequirement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#advanceBookingRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#deliveryLeadTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#deliveryLeadTime> <http://www.w3.org/2000/01/rdf-schema#label> "delivery lead time (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#deliveryLeadTime> <http://www.w3.org/2000/01/rdf-schema#domain> _:B4f16fc4662532fd0ebb93b03f82914fb <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#deliveryLeadTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#deliveryLeadTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValueInteger> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#deliveryLeadTime> <http://www.w3.org/2000/01/rdf-schema#comment> "This property can be used to indicate the promised delay between the receipt of the order and the goods leaving the warehouse.\n\nThe duration is specified by attaching an instance of gr:QuantitativeValueInteger. The lower and upper boundaries are specified using the properties gr:hasMinValueInteger and gr:hasMaxValueInteger to that instance. A point value can be modeled with the gr:hasValueInteger property. The unit of measurement is specified using the property gr:hasUnitOfMeasurement with a string holding a UN/CEFACT code suitable for durations, e.g. MON (months), DAY (days), HUR (hours), or MIN (minutes)."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.2030.0020> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.BasicAnnotationBox> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.2030.0020> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.2030.0020> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#TextString> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.2030.0020> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.2030.0020> <http://www.w3.org/2000/01/rdf-schema#label> "Text String" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.2030.0020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#TextString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#TextString> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.2030.0020> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#TextString> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#TextString> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#TextString> <http://www.w3.org/2000/01/rdf-schema#label> "Text String" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#TextString> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.BasicAnnotationBox> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/linguistics/gold/StructuralDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/LinguisticDataStructure> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/StructuralDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/StructuralDescription> <http://www.w3.org/2000/01/rdf-schema#label> "StructuralDescription"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/StructuralDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/StructuralDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "A term used in (esp. classical) transformational grammar to refer to an analysis of a terminal string in terms of a labeled bracketing.  In transformational analysis, the SD identifies the input to a transformational rule: it specifies which phrase-markers are to be affected by the rule.  i.e. which will 'satisfy' or 'meet' the conditions of the rule. The terms structural analysis and structure index are also used. [Crystal 2008: 458]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/stringRep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/stringRep> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linguistics/gold/LinguisticUnit> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/stringRep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/stringRep> <http://www.w3.org/2000/01/rdf-schema#label> "stringRep"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/stringRep> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/linguistics/gold> .
+<http://purl.org/linked-data/api/vocab#itemTemplate> <http://www.w3.org/2000/01/rdf-schema#label> "Item template"@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#itemTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#itemTemplate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/api/vocab#> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#itemTemplate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#itemTemplate> <http://www.w3.org/2000/01/rdf-schema#comment> "A template for the URI of the item that the item endpoint should return. Any instances of {varName} within the string are replaced by the value of the relevant variable."@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#itemTemplate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/api/vocab#ItemEndpoint> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linkingyou/search> <http://www.w3.org/2000/01/rdf-schema#label> "search page"@en <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/search> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/search> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Document> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/search> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/search> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/search> <http://www.w3.org/2000/01/rdf-schema#comment> "Perhaps this should link to a string with a variable in to indicate how to construct a search?"@en <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/search> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linkingyou/> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/search> <http://purl.org/dc/terms/subject> <http://purl.org/linkingyou/core> <http://purl.org/linkingyou/> .
+<http://purl.org/lobid/lv#urn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#urn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#urn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/lobid/lv> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#urn> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to indicate the uniform resource name (URN) of a bibliographic resource. The URN must be stated as a string not as URI, thus identifying the identifier itself and not the resource that is identified by the URN."@en <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#urn> <http://www.w3.org/2000/01/rdf-schema#label> "URN"@de <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#urn> <http://www.w3.org/2000/01/rdf-schema#label> "URN"@en <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#urn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dc/terms/BibliographicResource> <http://purl.org/lobid/lv> .
+<http://purl.org/net/wf-motifs#WorkflowOverload> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wf-motifs#InterWorkflowMotif> <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#WorkflowOverload> <http://www.w3.org/2000/01/rdf-schema#label> "Workflow overload"@en <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#WorkflowOverload> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#WorkflowOverload> <http://www.w3.org/2000/01/rdf-schema#comment> "Inter-workflow motif used to characterize workflows that are used to operate over different input parameter types. An example is performing an analysis over a String input parameter, or performing it over the contents of a specified File. Overloading is a direct response to the heterogeneity of environments in which workflows are used."@en <http://purl.org/net/wf-motifs> .
+<http://purl.org/ontology/af/text> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/af/> .
+<http://purl.org/ontology/af/text> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\tRelates a Text segment (classifying a time interval that can \n\t\tbe associated to some text) to a text string or other literals (number, etc.)\n\t\t" <http://purl.org/ontology/af/> .
+<http://purl.org/ontology/af/text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/ontology/af/> .
+<http://purl.org/ontology/af/text> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/ontology/af/> .
+<http://purl.org/ontology/af/text> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/af/Text> <http://purl.org/ontology/af/> .
+<http://purl.org/ontology/af/text> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/event.owl#hasLiteralFactor> <http://purl.org/ontology/af/> .
+<http://purl.org/ontology/af/text> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/ontology/af/> .
+<http://purl.org/ontology/bibo/pages> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/pages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/pages> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/ontology/bibo/"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/pages> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/ontology/bibo/locator> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/pages> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/bibo/Document> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/pages> <http://www.w3.org/2000/01/rdf-schema#comment> "A string of non-contiguous page spans that locate a Document within a Collection. Example: 23-25, 34, 54-56. For continuous page ranges, use the pageStart and pageEnd properties."@en <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/pages> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/pages> <http://www.w3.org/2000/01/rdf-schema#label> "pages"@en <http://purl.org/ontology/bibo/> .
+<http://purl.org/openorg/twitterHashtag> <http://www.w3.org/2000/01/rdf-schema#comment> "This is used to relate a concept to the Twitter hashtag people are using to talk about that thing.\n\nWe've created the twitterHashtag in the open org namespace. A hashtag can be related to a concept, location, event, or anything. A combination of hashtags may be used in one literal to indicate that it is that combination of hashtags which is associated with that resource.\n\nHaving two oo:twitterHashtag properties, however, would indicate that either is used to refer to the same thing (not recommended).\n\n<oo:twitterHashtag>#myconf2010<oo:twitterHashtag>\n\nor, to indicate a combo hashtag:\n\n<oo:twitterHashtag>#myconf2010 #track2<oo:twitterHashtag>\n\nInstead of a string literal this may also point to a URI used to identify the hashtag." <http://purl.org/openorg/> .
+<http://purl.org/openorg/twitterHashtag> <http://www.w3.org/2000/01/rdf-schema#label> "twitter hashtag" <http://purl.org/openorg/> .
+<http://purl.org/openorg/twitterHashtag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/openorg/> .
+<http://purl.org/openorg/twitterHashtag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/openorg/> .
+<http://purl.org/openorg/twitterHashtag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/openorg/> .
+<http://purl.org/oslo/ns/localgov#fullAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov#fullAddress> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/locn#fullAddress> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov#fullAddress> <http://www.w3.org/2000/01/rdf-schema#label> "full address"@en <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov#fullAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/oslo/ns/localgov#ExtendedAddress> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov#fullAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/locn#> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov#fullAddress> <http://purl.org/dc/terms/identifier> "oslo:fullAddress" <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov#fullAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/oslo/ns/localgov#fullAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "The complete address written as a string, with or without formatting. The domain of locn:fullAddress is locn:Address."@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/regorg#legalName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/TR/vocab-regorg/> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/regorg#legalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/regorg#legalName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/regorg#legalName> <http://purl.org/dc/terms/identifier> "rov:legalName" <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/regorg#legalName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/regorg#> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/regorg#legalName> <http://www.w3.org/2000/01/rdf-schema#comment> "The legal name of the business. A business might have more than one \n    legal name, particularly in countries with more than one official language. In such cases the \n    language of the string should be identified."@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/regorg#legalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/regorg#legalName> <http://www.w3.org/2000/01/rdf-schema#comment> "The legal name of the business. A business might have more than one \n      legal name, particularly in countries with more than one official language. In such cases the \n      language of the string should be identified."@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/regorg#legalName> <http://www.w3.org/2000/01/rdf-schema#label> "legal name"@en <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/pav/version> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/previousVersion> <http://purl.org/pav/> .
+<http://purl.org/pav/version> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/versionNumber> <http://purl.org/pav/> .
+<http://purl.org/pav/version> <http://www.w3.org/2000/01/rdf-schema#label> "Version"@en <http://purl.org/pav/> .
+<http://purl.org/pav/version> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/pav/> .
+<http://purl.org/pav/version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/version> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/version> <http://www.w3.org/2000/01/rdf-schema#comment> "The version number of a resource. This is a freetext string, typical values are \"1.5\" or \"21\". The URI identifying the previous version can be provided using prov:previousVersion.\n\nThis property is normally used in a functional way, although PAV does not formally restrict this." <http://purl.org/pav/> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/2000/01/rdf-schema#label> "in-text reference pointer"@en <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://purl.org/dc/elements/1.1/description> "An in-text reference pointer is a textual device denoting a single bibliographic reference that is embedded in the text of a document within the context of a particular sentence."@en <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbff2705292ac13096c32325d13d9f745 <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B04397527cd46f00516dfa464f2108061 <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://purl.org/dc/elements/1.1/description> <https://svn.code.sf.net/p/sempublishing/code/C4O/InTextReferencePointer%20module.png> <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba9b35abc7c8f9e855e85102d05bd7fcd <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B553deb45cefa064414708d1f05ed2363 <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/2000/01/rdf-schema#comment> "The in-text reference pointer is a textual element, usually embedded at the end of a phrase or sentence within the text of a document, that denotes a specific bibliographic reference present in the reference list of that document. For example, if the item in the reference list is: \n\n4.  Ko AI, Reis MG, Ribeiro Dourado CM, Johnson WD Jr, Riley LW (1999). Urban epidemic of severe leptospirosis in Brazil. Salvador Leptospirosis Study Group. Lancet 354: 820-825.\n\nthe in-text reference pointer to this paper in a journal article may be manifested in a number of ways:\t\n\nNumerically, for example by using the numeral 4 in superscript or between square brackets, thus: [4].  Such numerical in-text \nreference pointers are frequently aggregated, e.g. [4, 5, 6-9].  In such cases, the missing pointers to references 7 and 8 are inferred (and should be added explicitly to the XML mark-up at this point in the text!). \n\nOr by use of the author names (or the first author's name plus et al.) and the publication year in parentheses, thus: (Ko et al., 1999). \n\nOr, less commonly, by the use of a code, e.g. by specifying the first surname letter of the first three author of the cited work followed by the last two digits of the year of publication, this string of characters being enclosed within square brackets, thus: [KRR99]."@en <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Expression> <http://purl.org/spar/c4o> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/spar/fabio> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A unique and unambiguous reference to the resource within a given context.\n\nRecommended best practice is to identify the resource by means of a string conforming to a formal identification system."@en <http://purl.org/spar/fabio> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "has identifier"@en <http://purl.org/spar/fabio> .
+<http://purl.org/twc/vocab/conversion/template_pattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/twc/vocab/conversion/> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/template_pattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/template_pattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/twc/vocab/conversion/TemplateResourcePromotionEnhancement> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/template_pattern> <http://www.w3.org/2000/01/rdf-schema#comment> "String representing a templated URI. Placeholders in the template are replaced by values of the row in the specified columns. Columns are cited by local name or column number. For example, http://some.other.org/instances/[value]. http://some.other.org/instances/[state]-[county], http://some.other.org/instances/[#4]-[#6]" <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/template_pattern> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/CaseInsensitiveLODLink> <http://www.w3.org/2000/01/rdf-schema#comment> "Ignore string case when attempting to match identifiers between the input table and the identifiers in the LODLinks graph" <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/CaseInsensitiveLODLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/CaseInsensitiveLODLink> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/twc/vocab/conversion/Enhancement> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/uco/ns#licensePlate> <http://www.w3.org/2000/01/rdf-schema#label> "license plate (0..*)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#licensePlate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#licensePlate> <http://www.w3.org/2000/01/rdf-schema#comment> "The license plate string(s) assigned to the vehicle during the period of ownership"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#licensePlate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/uco/ns#OwnershipInfo> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#licensePlate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#licensePlate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#propertyID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#propertyID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/uco/ns#PropertyValue> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#propertyID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#propertyID> <http://www.w3.org/2000/01/rdf-schema#comment> "A global identifier, e.g. a URI, a prefixed string, or any other identifier that can be used to refer to a standardized property type"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#propertyID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#propertyID> <http://www.w3.org/2000/01/rdf-schema#label> "property ID (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#unitText> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#unitText> <http://www.w3.org/2000/01/rdf-schema#comment> "A string or text indicating the unit of measurement. Useful if you cannot provide a standard unit code for uco:unitCode."@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#unitText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#unitText> <http://www.w3.org/2000/01/rdf-schema#label> "unit text (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#unitText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/uco/ns#PropertyValue> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#unitText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/uco/ns#> .
+<http://rdaregistry.info/Elements/u/P60347> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/u/P60109> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60347> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60347> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/stringsOfCoordinatePairs.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60347> <http://www.w3.org/2000/01/rdf-schema#label> "has strings of coordinate pairs"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60347> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/w/P10083> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60347> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60347> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60347> <http://metadataregistry.org/uri/profile/RegAp/name> "stringsOfCoordinatePairs"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60347> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a system for identifying the precise area covered by the cartographic content of a resource using coordinates for each vertex of a polygon."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/w/P10083> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/w/stringsOfCoordinatePairs.en> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10083> <http://www.w3.org/2002/07/owl#sameAs> <http://rdaregistry.info/Elements/w/stringsOfCoordinatePairs> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10083> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/w/P10024> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10083> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/u/P60347> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10083> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "7.4.3" <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10083> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10083> <http://www.w3.org/2004/02/skos/core#definition> "Relates a work to a system for identifying the precise area covered by the cartographic content of a resource using coordinates for each vertex of a polygon."@en <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10083> <http://metadataregistry.org/uri/profile/RegAp/name> "stringsOfCoordinatePairs"@en <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10083> <http://www.w3.org/2000/01/rdf-schema#label> "has strings of coordinate pairs"@en <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10083> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A system for identifying the precise area covered by the cartographic content of a resource using coordinates for each vertex of a polygon."@en <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10083> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "strings of coordinate pairs"@en <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10083> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60347> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10083> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10001> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10083> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10083> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/w/> <http://rdaregistry.info/Elements/w> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDecimalSeparator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/phdd> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDecimalSeparator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/reusable_xsd/elements/DefaultDecimalSeparator.html> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDecimalSeparator> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\tThe character used to separate whole numbers from decimals expressed as a one character string.\n\n\tEquivalent element in DDI 3.2: r:DefaultDecimalSeparator\n\tDDI 3.2 Documentation: http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/reusable_xsd/elements/DefaultDecimalSeparator.html\n\t"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDecimalSeparator> <http://www.w3.org/2000/01/rdf-schema#label> "Default decimal separator"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDecimalSeparator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDecimalSeparator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDecimalSeparator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf-vocabulary.ddialliance.org/phdd#TableStructure> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDecimalSeparator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDigitGroupSeparator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDigitGroupSeparator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf-vocabulary.ddialliance.org/phdd#TableStructure> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDigitGroupSeparator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDigitGroupSeparator> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\tThe character used to separate the component of whole numbers (thousands, millions, etc.) expressed as a one character string.\n\n\tEquivalent element in DDI 3.2: r:DefaultDigitGroupSeparator\n\tDDI 3.2 Documentation: http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/reusable_xsd/elements/DefaultDigitGroupSeparator.html\n\t"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDigitGroupSeparator> <http://www.w3.org/2000/01/rdf-schema#label> "default digit group separator"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDigitGroupSeparator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDigitGroupSeparator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/reusable_xsd/elements/DefaultDigitGroupSeparator.html> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultDigitGroupSeparator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/phdd> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf.myexperiment.org/ontologies/base/username> <http://www.w3.org/2000/01/rdf-schema#comment> "A User may have a username represented as a string" <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/username> <http://www.w3.org/2000/01/rdf-schema#label> "username" <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/username> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/username> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf.myexperiment.org/ontologies/base/> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/username> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/username> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/request-token> <http://www.w3.org/2000/01/rdf-schema#comment> "Requests may have a request-token as a string" <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/request-token> <http://www.w3.org/2000/01/rdf-schema#label> "request-token" <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/request-token> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf.myexperiment.org/ontologies/base/Request> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/request-token> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/request-token> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/request-token> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf.myexperiment.org/ontologies/base/> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/request-token> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairs> <http://metadataregistry.org/uri/profile/RegAp/name> "stringsOfCoordinatePairs"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairs> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdvocab.info/Elements/stringsOfCoordinatePairsWork> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairs> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairs> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/Elements/coordinatesOfCartographicContent> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairs> <http://www.w3.org/2000/01/rdf-schema#label> "Strings of coordinate pairs"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairs> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/Elements> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairs> <http://www.w3.org/2004/02/skos/core#definition> "A system for identifying the precise area covered by the cartographic content of a resource using coordinates for each vertex of a polygon."@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairsWork> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdvocab.info/uri/schema/FRBRentitiesRDA/Work> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairsWork> <http://www.w3.org/2004/02/skos/core#definition> "A system for identifying the precise area covered by the cartographic content of a resource using coordinates for each vertex of a polygon."@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairsWork> <http://metadataregistry.org/uri/profile/RegAp/name> "stringsOfCoordinatePairsWork"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairsWork> <http://www.w3.org/2000/01/rdf-schema#label> "Strings of coordinate pairs (Work)"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairsWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/Elements> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairsWork> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairsWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/Elements/stringsOfCoordinatePairs> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairsWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/Elements/coordinatesOfCartographicContentWork> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/stringsOfCoordinatePairsWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/Elements> .
+<http://sensormeasurement.appspot.com/ont/home/homeActivity#string> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://sensormeasurement.appspot.com/ont/home/homeActivity#> .
+<http://sensormeasurement.appspot.com/ont/home/homeActivity#string> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://sensormeasurement.appspot.com/ont/home/homeActivity#UndefinedClass> <http://sensormeasurement.appspot.com/ont/home/homeActivity#> .
+<http://sensormeasurement.appspot.com/ont/home/homeActivity#string> <http://www.w3.org/2000/01/rdf-schema#label> "string" <http://sensormeasurement.appspot.com/ont/home/homeActivity#> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#string> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-344> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#string> <http://purl.org/dc/elements/1.1/#creator> "Wright, Sue Ellen" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#string> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.lexinfo.net/ontology/2.0/lexinfo#TermType> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#string> <http://www.w3.org/2000/01/rdf-schema#label> "строка"@ru <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#string> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#string> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#string> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#string> <http://www.w3.org/2002/07/owl#versionInfo> "1:0" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#string> <http://www.w3.org/2000/01/rdf-schema#comment> "A chunk of text used in a software interface, documentation, help file, or the like." <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#string> <http://www.w3.org/2000/01/rdf-schema#label> "string" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/2000/01/rdf-schema#label> "String" <http://data.businessgraph.io/ontology#> .
+<http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://data.businessgraph.io/ontology#> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/string.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringa .
+_:Bstringa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringa <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringa.nt> .
+_:Bstringa <https://w3id.org/tree#value> "stringa" .
+_:Bstringa <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringa.nt> <https://w3id.org/tree#remainingItems> "15"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringc .
+_:Bstringc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringc <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringc.nt> .
+_:Bstringc <https://w3id.org/tree#value> "stringc" .
+_:Bstringc <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringc.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringd .
+_:Bstringd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringd.nt> .
+_:Bstringd <https://w3id.org/tree#value> "stringd" .
+_:Bstringd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringd.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringe .
+_:Bstringe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringe.nt> .
+_:Bstringe <https://w3id.org/tree#value> "stringe" .
+_:Bstringe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringe.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringf .
+_:Bstringf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringf <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringf.nt> .
+_:Bstringf <https://w3id.org/tree#value> "stringf" .
+_:Bstringf <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringf.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringg .
+_:Bstringg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringg.nt> .
+_:Bstringg <https://w3id.org/tree#value> "stringg" .
+_:Bstringg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringg.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringh .
+_:Bstringh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringh.nt> .
+_:Bstringh <https://w3id.org/tree#value> "stringh" .
+_:Bstringh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringh.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringi .
+_:Bstringi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringi.nt> .
+_:Bstringi <https://w3id.org/tree#value> "stringi" .
+_:Bstringi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringi.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringl .
+_:Bstringl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringl.nt> .
+_:Bstringl <https://w3id.org/tree#value> "stringl" .
+_:Bstringl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringl.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringm .
+_:Bstringm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringm.nt> .
+_:Bstringm <https://w3id.org/tree#value> "stringm" .
+_:Bstringm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringm.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringn .
+_:Bstringn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringn <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringn.nt> .
+_:Bstringn <https://w3id.org/tree#value> "stringn" .
+_:Bstringn <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringn.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringo .
+_:Bstringo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringo.nt> .
+_:Bstringo <https://w3id.org/tree#value> "stringo" .
+_:Bstringo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringo.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringp .
+_:Bstringp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringp.nt> .
+_:Bstringp <https://w3id.org/tree#value> "stringp" .
+_:Bstringp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringp.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringq .
+_:Bstringq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringq <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringq.nt> .
+_:Bstringq <https://w3id.org/tree#value> "stringq" .
+_:Bstringq <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringq.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringr .
+_:Bstringr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringr.nt> .
+_:Bstringr <https://w3id.org/tree#value> "stringr" .
+_:Bstringr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringr.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstrings .
+_:Bstrings <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstrings <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/strings.nt> .
+_:Bstrings <https://w3id.org/tree#value> "strings" .
+_:Bstrings <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/strings.nt> <https://w3id.org/tree#remainingItems> "53"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringt .
+_:Bstringt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringt.nt> .
+_:Bstringt <https://w3id.org/tree#value> "stringt" .
+_:Bstringt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringt.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringu .
+_:Bstringu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringu.nt> .
+_:Bstringu <https://w3id.org/tree#value> "stringu" .
+_:Bstringu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringu.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:Bstringw .
+_:Bstringw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bstringw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/stringw.nt> .
+_:Bstringw <https://w3id.org/tree#value> "stringw" .
+_:Bstringw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/stringw.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:B4X2Bstring .
+_:B4X2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:B4X2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/4+string.nt> .
+_:B4X2Bstring <https://w3id.org/tree#value> "4" .
+_:B4X2Bstring <https://w3id.org/tree#value> "string" .
+_:B4X2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/4+string.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:B8X2Bstring .
+_:B8X2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:B8X2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/8+string.nt> .
+_:B8X2Bstring <https://w3id.org/tree#value> "8" .
+_:B8X2Bstring <https://w3id.org/tree#value> "string" .
+_:B8X2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/8+string.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BaX2Bstring .
+_:BaX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+string.nt> .
+_:BaX2Bstring <https://w3id.org/tree#value> "a" .
+_:BaX2Bstring <https://w3id.org/tree#value> "string" .
+_:BaX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+string.nt> <https://w3id.org/tree#remainingItems> "15"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BbX2Bstring .
+_:BbX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+string.nt> .
+_:BbX2Bstring <https://w3id.org/tree#value> "b" .
+_:BbX2Bstring <https://w3id.org/tree#value> "string" .
+_:BbX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+string.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BcX2Bstring .
+_:BcX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+string.nt> .
+_:BcX2Bstring <https://w3id.org/tree#value> "c" .
+_:BcX2Bstring <https://w3id.org/tree#value> "string" .
+_:BcX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+string.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BdX2Bstring .
+_:BdX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+string.nt> .
+_:BdX2Bstring <https://w3id.org/tree#value> "d" .
+_:BdX2Bstring <https://w3id.org/tree#value> "string" .
+_:BdX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+string.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BeX2Bstring .
+_:BeX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+string.nt> .
+_:BeX2Bstring <https://w3id.org/tree#value> "e" .
+_:BeX2Bstring <https://w3id.org/tree#value> "string" .
+_:BeX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+string.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BfX2Bstring .
+_:BfX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+string.nt> .
+_:BfX2Bstring <https://w3id.org/tree#value> "f" .
+_:BfX2Bstring <https://w3id.org/tree#value> "string" .
+_:BfX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+string.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BgX2Bstring .
+_:BgX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BgX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/g+string.nt> .
+_:BgX2Bstring <https://w3id.org/tree#value> "g" .
+_:BgX2Bstring <https://w3id.org/tree#value> "string" .
+_:BgX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/g+string.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BiX2Bstring .
+_:BiX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+string.nt> .
+_:BiX2Bstring <https://w3id.org/tree#value> "i" .
+_:BiX2Bstring <https://w3id.org/tree#value> "string" .
+_:BiX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+string.nt> <https://w3id.org/tree#remainingItems> "27"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BkX2Bstring .
+_:BkX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BkX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/k+string.nt> .
+_:BkX2Bstring <https://w3id.org/tree#value> "k" .
+_:BkX2Bstring <https://w3id.org/tree#value> "string" .
+_:BkX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/k+string.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BlX2Bstring .
+_:BlX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+string.nt> .
+_:BlX2Bstring <https://w3id.org/tree#value> "l" .
+_:BlX2Bstring <https://w3id.org/tree#value> "string" .
+_:BlX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+string.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BmX2Bstring .
+_:BmX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+string.nt> .
+_:BmX2Bstring <https://w3id.org/tree#value> "m" .
+_:BmX2Bstring <https://w3id.org/tree#value> "string" .
+_:BmX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+string.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BoX2Bstring .
+_:BoX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+string.nt> .
+_:BoX2Bstring <https://w3id.org/tree#value> "o" .
+_:BoX2Bstring <https://w3id.org/tree#value> "string" .
+_:BoX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+string.nt> <https://w3id.org/tree#remainingItems> "34"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BpX2Bstring .
+_:BpX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BpX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/p+string.nt> .
+_:BpX2Bstring <https://w3id.org/tree#value> "p" .
+_:BpX2Bstring <https://w3id.org/tree#value> "string" .
+_:BpX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/p+string.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BqX2Bstring .
+_:BqX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BqX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/q+string.nt> .
+_:BqX2Bstring <https://w3id.org/tree#value> "q" .
+_:BqX2Bstring <https://w3id.org/tree#value> "string" .
+_:BqX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/q+string.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BrX2Bstring .
+_:BrX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/r+string.nt> .
+_:BrX2Bstring <https://w3id.org/tree#value> "r" .
+_:BrX2Bstring <https://w3id.org/tree#value> "string" .
+_:BrX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/r+string.nt> <https://w3id.org/tree#remainingItems> "14"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BsX2Bstring .
+_:BsX2Bstring <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsX2Bstring <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/s+string.nt> .
+_:BsX2Bstring <https://w3id.org/tree#value> "s" .
+_:BsX2Bstring <https://w3id.org/tree#value> "string" .
+_:BsX2Bstring <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/s+string.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BstringX2Bt .
+_:BstringX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BstringX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/string+t.nt> .
+_:BstringX2Bt <https://w3id.org/tree#value> "string" .
+_:BstringX2Bt <https://w3id.org/tree#value> "t" .
+_:BstringX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/string+t.nt> <https://w3id.org/tree#remainingItems> "24"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BstringX2Bu .
+_:BstringX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BstringX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/string+u.nt> .
+_:BstringX2Bu <https://w3id.org/tree#value> "string" .
+_:BstringX2Bu <https://w3id.org/tree#value> "u" .
+_:BstringX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/string+u.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BstringX2Bv .
+_:BstringX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BstringX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/string+v.nt> .
+_:BstringX2Bv <https://w3id.org/tree#value> "string" .
+_:BstringX2Bv <https://w3id.org/tree#value> "v" .
+_:BstringX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/string+v.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/string.nt> <https://w3id.org/tree#relation> _:BstringX2Bw .
+_:BstringX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BstringX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/string+w.nt> .
+_:BstringX2Bw <https://w3id.org/tree#value> "string" .
+_:BstringX2Bw <https://w3id.org/tree#value> "w" .
+_:BstringX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/string+w.nt> <https://w3id.org/tree#remainingItems> "16"^^<http://www.w3.org/2001/XMLSchema#int> .

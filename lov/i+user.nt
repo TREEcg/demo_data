@@ -1,0 +1,388 @@
+<http://purl.oclc.org/NET/mvco.owl#EndUser> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#EndUser> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/mvco.owl#User> <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#EndUser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#EndUser> <http://www.w3.org/2000/01/rdf-schema#comment> "A User in a Value-Chain who ultimately consumes Content."@en <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#EndUser> <http://www.w3.org/2002/07/owl#equivalentClass> _:B07b4cb4a446205a4a76b2aa24ffdecf6 <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.org/configurationontology> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cold" <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/edouard-chevalier> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology> <http://purl.org/dc/terms/creator> <http://dbpedia.org/resource/Renault> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology> <http://www.w3.org/2000/01/rdf-schema#label> "'Configuration as Linked Data' ontology"@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/francois-paul-servant> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology> <http://www.w3.org/2000/01/rdf-schema#comment> "Ontology for the description of customizable products. It models the configuration process as the traversal of a graph of partially defined products, or \"Configurations\".\n\nRanges of customizable products are described rather effectively, for human users, by means of dedicated web applications called configurators. A configurator helps a user interactively define a product step by step, each step typically describing a valid partially defined product (or \"Configuration\"), with a start price and a list of remaining choices given all previous selections. Each of these choices links to another configuration until completion. Thus, the configuration process traverses a graph whose nodes are configurations. Now identify each configuration with a URI returning the list of the configurations it is linked to, among other relevant information: what you have is a description of the range as Linked Data.\n\nThe main classes of this ontology are Configuration (a state of the configuration process), Specification (a possible value of a characteristic of the configured product) and ConfigurationLink (which models a change of the state of the configuration process)."@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#label> "Configuration"@fr <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#label> "Configuration"@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#comment> "A state of the configuration process, assumed to correspond to a valid partially defined product - valid in the sense that it can be completed into an existing fully specified product, one that can be ordered, without changing any of the current selections.\n\nA configuration is defined by a Lexicon (the set of the descriptive attributes of the configured product, cf. the \"lexicon\" property), and by the set of choices that have been made so far (typically  selected specifications), cf. the \"definingChoice\" property.\n\nNote: A configurator application may conceivably have to handle “invalid configurations”, that is, combinations of specifications that are impossible. This can happen, for instance, if the user is allowed to begin the configuration process by choosing features without any control of their compatibility; or if she is allowed to choose a feature incompatible with her previous selections. In this case, it is the responsibility of the configurator application to restore the consistency of the configuration, necessarily by excluding some of the previous user selections. This Configuration class excludes such invalid combinations. \n\nRelation with GoodRelations and schema.org vocabularies :\nbecause a configuration mainly describes a Partially Defined Product, it can be seen as a GoodRelations \"ProductOrServiceModel\" (or a schema.org \"ProductModel): \"an intangible entity that specifies some characteristics of a group of similar, usually mass-produced products, in the sense of a prototype\". The suffix \"Model\" may seem misleading when used for a Configuration, as it suggests something such as \"Ford T\", and not \"Ford T with sunroof and climat control (itself not a completely defined product -  you still can choose, well, the color: it is a \"prototype of similar products\").\n\nOn the other hand, a Configuration has a price (more precisely, a \"from price\" - the minimum of the \"suggested retail prices\" of all the matching completely defined products). As such, a Configuration may be seen as a commercial offer. It can also be used to represent a customer's wish list, constrained by the definition of the range. It could therefore be considered as a gr:Offering (or a schema:Offer) as well.\n\nBut gr:ProductOrService and gr:Offering are disjoint classes: a given Configuration cannot be both. Depending on the use case, a publisher of configuration data may want to type her Configurations with either of these classes."@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/configurationontology#definingChoice> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/configurationontology#Specification> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/configurationontology#Configuration> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#comment> "A SubProperty of co:definingChoice listing the specifications selected by the user: \nIf two or more of the cold:chosenSpec of a Configuration correspond to the same cold:ConfigurationVariable, by convention they are to be interpreted as ORed (even XORed, by the way, as such specifications are alternative). \nSo:\nex:AConf coold:chosenSpec ex:SimpleRadio, ex:RadioMP3.\nmeans that the car has either a ex:SimpleRadio, or a ex:RadioMP3, not both. "@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#label> "chosen specification"@en <http://purl.org/configurationontology> .
+<http://purl.org/healthcarevocab/v1#Tag.0072.000E> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.HangingProtocol> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0072.000E> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#HangingProtocolUserIdentificationCodeSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0072.000E> <http://www.w3.org/2000/01/rdf-schema#label> "Hanging Protocol User Identification Code Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0072.000E> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0072.000E> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0072.000E> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#HangingProtocolUserIdentificationCodeSequence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.HangingProtocol> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#HangingProtocolUserIdentificationCodeSequence> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0072.000E> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#HangingProtocolUserIdentificationCodeSequence> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#HangingProtocolUserIdentificationCodeSequence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#HangingProtocolUserIdentificationCodeSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#HangingProtocolUserIdentificationCodeSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Hanging Protocol User Identification Code Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.HangingProtocolUserIdentificationCodeSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.HangingProtocolUserIdentificationCodeSequence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.HangingProtocolUserIdentificationCodeSequence> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0072.000E> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.HangingProtocolUserIdentificationCodeSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Hanging Protocol User Identification Code Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0072.000E> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0072.000E> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0072.000E> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Hanging Protocol User Identification Code Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0072.000E> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.HangingProtocolUserIdentificationCodeSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/muto/core#hasAccess> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/muto/core#> <http://purl.org/muto/core> .
+<http://purl.org/muto/core#hasAccess> <http://www.w3.org/2000/01/rdf-schema#label> "has access"@en <http://purl.org/muto/core> .
+<http://purl.org/muto/core#hasAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "A user account or user group can have access to a private tagging from another user if the access is explicitly permitted by the creator of the tagging. This property can also be used in public tagging to link a user account or user group to a tagging (e.g. if the creator of a tagging has suggested the tagging to another user)."@en <http://purl.org/muto/core> .
+<http://purl.org/muto/core#hasAccess> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/muto/core#grantAccess> <http://purl.org/muto/core> .
+<http://purl.org/muto/core#hasAccess> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.0: see muto:grantAccess" <http://purl.org/muto/core> .
+<http://purl.org/muto/core#hasAccess> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/muto/core#Tagging> <http://purl.org/muto/core> .
+<http://purl.org/muto/core#hasAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/muto/core> .
+<http://purl.org/vocab/lifecycle/schema#next> <http://www.w3.org/2000/01/rdf-schema#label> "next"@en <http://purl.org/vocab/lifecycle/schema> .
+<http://purl.org/vocab/lifecycle/schema#next> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/lifecycle/schema#> <http://purl.org/vocab/lifecycle/schema> .
+<http://purl.org/vocab/lifecycle/schema#next> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/vocab/lifecycle/schema> .
+<http://purl.org/vocab/lifecycle/schema#next> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bf3f148f3690dce79a62d93d964d63ef9 <http://purl.org/vocab/lifecycle/schema> .
+<http://purl.org/vocab/lifecycle/schema#next> <http://purl.org/dc/terms/issued> "2008-06-03" <http://purl.org/vocab/lifecycle/schema> .
+<http://purl.org/vocab/lifecycle/schema#next> <http://www.w3.org/2000/01/rdf-schema#comment> "provides a simple ordering relationship to allow tasks to be ordered in user interfaces." <http://purl.org/vocab/lifecycle/schema> .
+<http://purl.org/vocab/lifecycle/schema#next> <http://www.w3.org/2000/01/rdf-schema#range> _:B464078e24424fc8a6652870973090aba <http://purl.org/vocab/lifecycle/schema> .
+<http://rdf.myexperiment.org/ontologies/base/organisation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/organisation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf.myexperiment.org/ontologies/base/> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/organisation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/organisation> <http://www.w3.org/2000/01/rdf-schema#label> "organisation" <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/organisation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf.myexperiment.org/ontologies/base/User> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/organisation> <http://www.w3.org/2000/01/rdf-schema#comment> "A User is part of an organisation" <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/annotator-of> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf.myexperiment.org/ontologies/base/> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/annotator-of> <http://www.w3.org/2000/01/rdf-schema#comment> "A User is an annotator-of an Annotation" <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/annotator-of> <http://www.w3.org/2000/01/rdf-schema#label> "annotator" <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/annotator-of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdfs.org/sioc/ns#owner_of> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/annotator-of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/annotator-of> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdf.myexperiment.org/ontologies/base/has-annotator> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/annotator-of> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdf.myexperiment.org/ontologies/base/Annotation> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/annotator-of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf.myexperiment.org/ontologies/base/User> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/country> <http://www.w3.org/2000/01/rdf-schema#label> "country" <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/country> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf.myexperiment.org/ontologies/base/User> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/country> <http://www.w3.org/2000/01/rdf-schema#comment> "A User is based in a country" <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/country> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf.myexperiment.org/ontologies/base/> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/country> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdf.myexperiment.org/ontologies/base/country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://rdf.myexperiment.org/ontologies/base/> .
+<http://rdfs.org/sioc/ns#id> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifier of a SIOC concept instance. For example, a user ID. Must be unique for instances of each type of SIOC concept within the same site."@en <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#id> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#id> <http://www.w3.org/2000/01/rdf-schema#label> "id"@en <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#id> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/sioc/ns#> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#id> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#User> <http://www.w3.org/2002/07/owl#versionInfo> "This class is deprecated. Use sioc:UserAccount from the SIOC ontology instead." <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#User> <http://www.w3.org/2002/07/owl#equivalentClass> <http://rdfs.org/sioc/ns#UserAccount> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#User> <http://www.w3.org/2002/07/owl#disjointWith> <http://rdfs.org/sioc/ns#Usergroup> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#User> <http://www.w3.org/2002/07/owl#disjointWith> <http://rdfs.org/sioc/ns#Container> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#User> <http://www.w3.org/2002/07/owl#disjointWith> <http://rdfs.org/sioc/ns#Space> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#User> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DeprecatedClass> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#User> <http://www.w3.org/2000/01/rdf-schema#label> "User"@en <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#User> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/OnlineAccount> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#User> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/sioc/ns#> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#User> <http://www.w3.org/2000/01/rdf-schema#comment> "UserAccount is now preferred. This is a deprecated class for a User in an online community site."@en <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#User> <http://www.w3.org/2002/07/owl#disjointWith> <http://rdfs.org/sioc/ns#Role> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#User> <http://www.w3.org/2002/07/owl#disjointWith> <http://rdfs.org/sioc/ns#Item> <http://rdfs.org/sioc/ns#> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7dc2cf2a9a8bc41014701277bb45dbd3 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2e56f7fd8b5e4e84778f0d6c3496ecb0 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#Use> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Befffdf388f7823bd8b91ae24ff93590c <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#Ambient> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba8feb14ab9f62b400fc5061ce3b24a6d <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfb040e949b65ba049281bb0c952bd188 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#Transfer> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6d9d98b1df779682604c3cfba92256d2 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#label> "Access"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb999e5695c57aab81bd60b212b5bacad <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the action that consumes the communication of a MakeAvailable, i.e. an InteractiveCommunication. Consequently, it is an interactive action from the point of view of the consumer, who is able to determine the time line of the content. Usually, the content is consumed from its beginning and from the time point when the content is accessed. Moreover, the user is usually free to pause, resume, forward and rewind the content. However, all these issues are specific to the technological means used to make the content available, e.g. internet video on-demand streamers. It is important to note that this same features can be enjoyed with non-interactive communications but a recording system at the consumers place is then required."@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MakeAvailable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#Communicate> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MakeAvailable> <http://www.w3.org/2000/01/rdf-schema#label> "Make Available"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MakeAvailable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#MakingAvailableRight> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MakeAvailable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B785476618a382bf0785ac9013d947e0c <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MakeAvailable> <http://www.w3.org/2002/07/owl#disjointWith> <http://rhizomik.net/ontologies/copyrightonto.owl#Broadcast> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MakeAvailable> <http://www.w3.org/2000/01/rdf-schema#comment> "Traditionally communication actions related to the communication right were quite passive from the point of view of the communication consumer. The communicator decided when a concrete work was broadcasted and the consumers had just to the option to get or not access to the communication medium in order to consume the content. Consumers did not have any alternative to time-shift content consumption without the intervention of recording mediums.\nHowever, communication mediums that allow user interaction have appeared, among which the Internet is the more important one nowadays. The consequence is a particular kind of communication where members of the public access works from a place and at a time individually chosen by them. This kind of communication is called to MakeAvailable in the copyright context."@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MakeAvailable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4e8e2b889b56890c7fb421d847ed5e35 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#MakeAvailable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://securitytoolbox.appspot.com/stac#AnonymityMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Anonymity Method"@en <http://securitytoolbox.appspot.com/stac> .
+<http://securitytoolbox.appspot.com/stac#AnonymityMethod> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://securitytoolbox.appspot.com/stac#SecurityPropertyMethod> <http://securitytoolbox.appspot.com/stac> .
+<http://securitytoolbox.appspot.com/stac#AnonymityMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Anonymity protects user identity, making it hard to track the whereabouts of a certain user."@en <http://securitytoolbox.appspot.com/stac> .
+<http://securitytoolbox.appspot.com/stac#AnonymityMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://securitytoolbox.appspot.com/stac> .
+<http://spinrdf.org/spin#private> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#private> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be set to true to indicate that a SPIN function or template is only meant to be used as a helper of other modules, but not directly. Among others, this allows user interfaces to filter out private modules. Furthermore, it tells potential users of this module that they should avoid using this module, as it may not be stable." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#private> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#systemProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#private> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spinrdf.org/spin#Module> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#private> <http://www.w3.org/2000/01/rdf-schema#label> "private" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#private> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://spinrdf.org/spin> .
+<http://voag.linkedmodel.org/voag#userID> <http://www.w3.org/2000/01/rdf-schema#label> "user ID" <http://voag.linkedmodel.org/schema/voag> .
+<http://voag.linkedmodel.org/voag#userID> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anySimpleType> <http://voag.linkedmodel.org/schema/voag> .
+<http://voag.linkedmodel.org/voag#userID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://voag.linkedmodel.org/schema/voag> <http://voag.linkedmodel.org/schema/voag> .
+<http://voag.linkedmodel.org/voag#userID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://voag.linkedmodel.org/schema/voag> .
+<http://www.biopax.org/release/biopax-level3.owl#dataSource> <http://www.w3.org/2000/01/rdf-schema#comment> "A free text description of the source of this data, e.g. a database or person name. This property should be used to describe the source of the data. This is meant to be used by databases that export their data to the BioPAX format or by systems that are integrating data from multiple sources. The granularity of use (specifying the data source in many or few instances) is up to the user. It is intended that this property report the last data source, not all data sources that the data has passed through from creation." <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#dataSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.biopax.org/release/biopax-level3.owl#Provenance> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#dataSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#dataSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.biopax.org/release/biopax-level3.owl#Entity> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXTiger> <http://www.w3.org/2000/01/rdf-schema#label> "Mac OS X Tiger"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXTiger> <http://www.w3.org/2000/01/rdf-schema#label> "Mac OS X Tiger"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXTiger> <http://www.w3.org/2000/01/rdf-schema#comment> "Mac OS is the trademarked name for a series of graphical user interface-based operating systems developed by Apple Inc. for their Macintosh line of computer systems."@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXTiger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#CompatibleOperatingSystems> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXTiger> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "MP3Player, Printer, DigitalCamera, Camcorder"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXSnowLeopard> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "MP3Player, Printer, DigitalCamera, Camcorder"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXSnowLeopard> <http://www.w3.org/2000/01/rdf-schema#label> "Mac OS X Snow Leopard"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXSnowLeopard> <http://www.w3.org/2000/01/rdf-schema#label> "Mac OS X Snow Leopard"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXSnowLeopard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#CompatibleOperatingSystems> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXSnowLeopard> <http://www.w3.org/2000/01/rdf-schema#comment> "Mac OS is the trademarked name for a series of graphical user interface-based operating systems developed by Apple Inc. for their Macintosh line of computer systems."@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXJaguar> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "MP3Player, Printer, DigitalCamera, Camcorder"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXJaguar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#CompatibleOperatingSystems> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXJaguar> <http://www.w3.org/2000/01/rdf-schema#comment> "Mac OS is the trademarked name for a series of graphical user interface-based operating systems developed by Apple Inc. for their Macintosh line of computer systems."@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXJaguar> <http://www.w3.org/2000/01/rdf-schema#label> "Mac OS X Jaguar"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXJaguar> <http://www.w3.org/2000/01/rdf-schema#label> "Mac OS X Jaguar"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXPanther> <http://www.w3.org/2000/01/rdf-schema#comment> "Mac OS is the trademarked name for a series of graphical user interface-based operating systems developed by Apple Inc. for their Macintosh line of computer systems."@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXPanther> <http://www.w3.org/2000/01/rdf-schema#label> "Mac OS X Panther"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXPanther> <http://www.w3.org/2000/01/rdf-schema#label> "Mac OS X Panther"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXPanther> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "MP3Player, Printer, DigitalCamera, Camcorder"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXPanther> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#CompatibleOperatingSystems> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXCheetah> <http://www.w3.org/2000/01/rdf-schema#label> "Mac OS X Cheetah"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXCheetah> <http://www.w3.org/2000/01/rdf-schema#label> "Mac OS X Cheetah"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXCheetah> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#CompatibleOperatingSystems> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXCheetah> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "MP3Player, Printer, DigitalCamera, Camcorder"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXCheetah> <http://www.w3.org/2000/01/rdf-schema#comment> "Mac OS is the trademarked name for a series of graphical user interface-based operating systems developed by Apple Inc. for their Macintosh line of computer systems."@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXLeopard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#CompatibleOperatingSystems> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXLeopard> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "MP3Player, Printer, DigitalCamera, Camcorder"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXLeopard> <http://www.w3.org/2000/01/rdf-schema#label> "Mac OS X Leopard"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXLeopard> <http://www.w3.org/2000/01/rdf-schema#label> "Mac OS X Leopard"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXLeopard> <http://www.w3.org/2000/01/rdf-schema#comment> "Mac OS is the trademarked name for a series of graphical user interface-based operating systems developed by Apple Inc. for their Macintosh line of computer systems."@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXPuma> <http://www.w3.org/2000/01/rdf-schema#comment> "Mac OS is the trademarked name for a series of graphical user interface-based operating systems developed by Apple Inc. for their Macintosh line of computer systems."@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXPuma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#CompatibleOperatingSystems> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXPuma> <http://www.w3.org/2000/01/rdf-schema#label> "Mac OS X Puma"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXPuma> <http://www.w3.org/2000/01/rdf-schema#label> "Mac OS X Puma"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#MacOSXPuma> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "MP3Player, Printer, DigitalCamera, Camcorder"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.eclap.eu/schema/eclap/isAdminOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.eclap.eu/schema/eclap/> .
+<http://www.eclap.eu/schema/eclap/isAdminOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eclap.eu/schema/eclap/isMemberOf> <http://www.eclap.eu/schema/eclap/> .
+<http://www.eclap.eu/schema/eclap/isAdminOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eclap.eu/schema/eclap/User> <http://www.eclap.eu/schema/eclap/> .
+<http://www.eclap.eu/schema/eclap/isAdminOf> <http://www.w3.org/2000/01/rdf-schema#label> "isAdminOf"@en <http://www.eclap.eu/schema/eclap/> .
+<http://www.eclap.eu/schema/eclap/isAdminOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an User is the administrator of a group, and it is also a member of the same group."@en <http://www.eclap.eu/schema/eclap/> .
+<http://www.eclap.eu/schema/eclap/isAdminOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Group> <http://www.eclap.eu/schema/eclap/> .
+<http://www.eclap.eu/schema/eclap/isAdminOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.eclap.eu/schema/eclap/admin> <http://www.eclap.eu/schema/eclap/> .
+<http://www.eclap.eu/schema/eclap/isAdminOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eclap.eu/schema/eclap/> <http://www.eclap.eu/schema/eclap/> .
+<http://www.eclap.eu/schema/eclap/isMemberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.eclap.eu/schema/eclap/> .
+<http://www.eclap.eu/schema/eclap/isMemberOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://xmlns.com/foaf/0.1/member> <http://www.eclap.eu/schema/eclap/> .
+<http://www.eclap.eu/schema/eclap/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eclap.eu/schema/eclap/User> <http://www.eclap.eu/schema/eclap/> .
+<http://www.eclap.eu/schema/eclap/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#label> "isMemberOf"@en <http://www.eclap.eu/schema/eclap/> .
+<http://www.eclap.eu/schema/eclap/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a User is member of a group, it is the inverse of the foaof:member property"@en <http://www.eclap.eu/schema/eclap/> .
+<http://www.eclap.eu/schema/eclap/isMemberOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eclap.eu/schema/eclap/> <http://www.eclap.eu/schema/eclap/> .
+<http://www.identity.org/ontologies/identity.owl#businessUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Department or Division of Organization and eventually where user is employed."@en <http://www.identity.org/ontologies/identity.owl> .
+<http://www.identity.org/ontologies/identity.owl#businessUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.identity.org/ontologies/identity.owl#IdentityInformation> <http://www.identity.org/ontologies/identity.owl> .
+<http://www.identity.org/ontologies/identity.owl#businessUnit> <http://www.w3.org/2000/01/rdf-schema#label> "businessUnit" <http://www.identity.org/ontologies/identity.owl> .
+<http://www.identity.org/ontologies/identity.owl#businessUnit> <http://purl.org/dc/elements/1.1/type> "Demographic and Socieconomic Data"@en <http://www.identity.org/ontologies/identity.owl> .
+<http://www.identity.org/ontologies/identity.owl#businessUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.identity.org/ontologies/identity.owl> .
+<http://www.ontotext.com/proton/protonext#VideoGame> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#Software> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#VideoGame> <http://www.w3.org/2000/01/rdf-schema#comment> "Any electronic game that involves interaction with a user interface to generate visual feedback on a video device. (Wikipedia)"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#VideoGame> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#VideoGame> <http://www.w3.org/2000/01/rdf-schema#label> "Video Game"@en <http://www.ontotext.com/proton/protonext> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.2.2.12> <http://www.w3.org/2000/01/rdf-schema#label> "D.2.2.12. User interfaces" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.2.2.12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.2.2.12> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#D.2.2> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.4.3> <http://www.w3.org/2000/01/rdf-schema#label> "H.5.4.3. User issues" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.4.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.4.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#H.5.4> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.3.7.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.3.7.4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#H.3.7> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.3.7.4> <http://www.w3.org/2000/01/rdf-schema#label> "H.3.7.4. User issues" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.2> <http://www.w3.org/2000/01/rdf-schema#comment> "See also #D.2.2, #H.1.2, #I.3.6." <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#H.5> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.2> <http://www.w3.org/2000/01/rdf-schema#label> "H.5.2. User Interfaces" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.2.4> <http://www.w3.org/2000/01/rdf-schema#label> "H.5.2.4. Graphical user interfaces" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.2.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.2.4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#H.5.2> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.2.16> <http://www.w3.org/2000/01/rdf-schema#label> "H.5.2.16. User interface management systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.2.16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.2.16> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#H.5.2> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.4.7> <http://www.w3.org/2000/01/rdf-schema#label> "G.4.7. User interfaces" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.4.7> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#G.4> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.4.7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#comment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionOfTimezoneObservanceEventFreebusyJournalTimezoneTodo> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#comment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#comment> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#comment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#comment> <http://www.w3.org/2000/01/rdf-schema#label> "comment" <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#comment> <http://www.w3.org/2000/01/rdf-schema#comment> "Non-processing information intended to provide a comment to the calendar user. Inspired by RFC 2445 sec. 4.8.1.4 with the following reservations:  the LANGUAGE parameter has been discarded. Please use xml:lang literals to express language. For the ALTREP parameter use the commentAltRep property." <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticweb.org/ontologies/2008/11/OntologySecurity.owl#InteractionModes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.semanticweb.org/ontologies/2008/11/OntologySecurity.owl> .
+<http://www.semanticweb.org/ontologies/2008/11/OntologySecurity.owl#InteractionModes> <http://www.w3.org/2000/01/rdf-schema#comment> "User interaction to confirm the execution of some senstive actions like sending a sms or opening a network connection/" <http://www.semanticweb.org/ontologies/2008/11/OntologySecurity.owl> .
+<http://www.semanticweb.org/ontologies/2008/11/OntologySecurity.owl#InteractionModes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticweb.org/ontologies/2008/11/OntologySecurity.owl#AccessControlMethods> <http://www.semanticweb.org/ontologies/2008/11/OntologySecurity.owl> .
+<http://www.w3.org/1999/xhtml/vocab#group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/1999/xhtml/vocab> .
+<http://www.w3.org/1999/xhtml/vocab#group> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of\n      user interface objects which are not intended to be included in a page\n      summary or table of contents by assistive technologies." <http://www.w3.org/1999/xhtml/vocab> .
+<http://www.w3.org/1999/xhtml/vocab#slider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/1999/xhtml/vocab> .
+<http://www.w3.org/1999/xhtml/vocab#slider> <http://www.w3.org/2000/01/rdf-schema#comment> "A user\n      input where the user selects a value from within a given range." <http://www.w3.org/1999/xhtml/vocab> .
+<http://www.w3.org/2003/12/exif/ns#userInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "An attribute relating to User Information"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#userInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#userInfo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#exifAttribute> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#userInfo> <http://www.w3.org/2000/01/rdf-schema#label> "User Info"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/ns/auth/cert#Certificate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Document> <http://www.w3.org/ns/auth/cert#> .
+<http://www.w3.org/ns/auth/cert#Certificate> <http://www.w3.org/2000/01/rdf-schema#label> "Certificate"@en <http://www.w3.org/ns/auth/cert#> .
+<http://www.w3.org/ns/auth/cert#Certificate> <http://www.w3.org/2000/01/rdf-schema#comment> "A certificate is a Document that is signed.\n    As explained here http://www.pgpi.org/doc/pgpintro/#p16\n    'A digital certificate consists of three things:\n        * A public key.\n        * Certificate information. ('Identity' information about the  \n          user, such as name, user ID, and so on.)\n        * One or more digital signatures.'\n    "@en <http://www.w3.org/ns/auth/cert#> .
+<http://www.w3.org/ns/auth/cert#Certificate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/auth/cert#> .
+<http://www.w3.org/ns/auth/cert#Certificate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/auth/cert#> <http://www.w3.org/ns/auth/cert#> .
+<http://www.w3.org/ns/auth/cert#Certificate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://www.w3.org/ns/auth/cert#> .
+<http://www.w3.org/ns/oa#questioning> <http://www.w3.org/2000/01/rdf-schema#label> "questioning" <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#questioning> <http://www.w3.org/2000/01/rdf-schema#comment> "The motivation for when the user intends to ask a question about the Target." <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#questioning> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/oa#> <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#questioning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/oa#Motivation> <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#assessing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/oa#Motivation> <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#assessing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/oa#> <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#assessing> <http://www.w3.org/2000/01/rdf-schema#comment> "The motivation for when the user intends to provide an assessment about the Target resource." <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#assessing> <http://www.w3.org/2000/01/rdf-schema#label> "assessing" <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#describing> <http://www.w3.org/2000/01/rdf-schema#comment> "The motivation for when the user intends to describe the Target, as opposed to a comment about them." <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#describing> <http://www.w3.org/2000/01/rdf-schema#label> "describing" <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#describing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/oa#Motivation> <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#describing> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/oa#> <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#highlighting> <http://www.w3.org/2000/01/rdf-schema#label> "highlighting" <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#highlighting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/oa#Motivation> <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#highlighting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/oa#> <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#highlighting> <http://www.w3.org/2000/01/rdf-schema#comment> "The motivation for when the user intends to highlight the Target resource or segment of it." <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#commenting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/oa#Motivation> <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#commenting> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/oa#> <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#commenting> <http://www.w3.org/2000/01/rdf-schema#label> "commenting" <http://www.w3.org/ns/oa#> .
+<http://www.w3.org/ns/oa#commenting> <http://www.w3.org/2000/01/rdf-schema#comment> "The motivation for when the user intends to comment about the Target." <http://www.w3.org/ns/oa#> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/i+user.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BidX2Buser .
+_:BidX2Buser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BidX2Buser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/id+user.nt> .
+_:BidX2Buser <https://w3id.org/tree#value> "id" .
+_:BidX2Buser <https://w3id.org/tree#value> "user" .
+_:BidX2Buser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/id+user.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BieX2Buser .
+_:BieX2Buser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BieX2Buser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ie+user.nt> .
+_:BieX2Buser <https://w3id.org/tree#value> "ie" .
+_:BieX2Buser <https://w3id.org/tree#value> "user" .
+_:BieX2Buser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ie+user.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BifX2Buser .
+_:BifX2Buser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BifX2Buser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/if+user.nt> .
+_:BifX2Buser <https://w3id.org/tree#value> "if" .
+_:BifX2Buser <https://w3id.org/tree#value> "user" .
+_:BifX2Buser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/if+user.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BinX2Buser .
+_:BinX2Buser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BinX2Buser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/in+user.nt> .
+_:BinX2Buser <https://w3id.org/tree#value> "in" .
+_:BinX2Buser <https://w3id.org/tree#value> "user" .
+_:BinX2Buser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/in+user.nt> <https://w3id.org/tree#remainingItems> "42"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BisX2Buser .
+_:BisX2Buser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2Buser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+user.nt> .
+_:BisX2Buser <https://w3id.org/tree#value> "is" .
+_:BisX2Buser <https://w3id.org/tree#value> "user" .
+_:BisX2Buser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+user.nt> <https://w3id.org/tree#remainingItems> "27"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BitX2Buser .
+_:BitX2Buser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BitX2Buser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/it+user.nt> .
+_:BitX2Buser <https://w3id.org/tree#value> "it" .
+_:BitX2Buser <https://w3id.org/tree#value> "user" .
+_:BitX2Buser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/it+user.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BiX2Busers .
+_:BiX2Busers <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2Busers <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+users.nt> .
+_:BiX2Busers <https://w3id.org/tree#value> "i" .
+_:BiX2Busers <https://w3id.org/tree#value> "users" .
+_:BiX2Busers <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+users.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BaX2BiX2Buser .
+_:BaX2BiX2Buser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BiX2Buser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+i+user.nt> .
+_:BaX2BiX2Buser <https://w3id.org/tree#value> "a" .
+_:BaX2BiX2Buser <https://w3id.org/tree#value> "i" .
+_:BaX2BiX2Buser <https://w3id.org/tree#value> "user" .
+_:BaX2BiX2Buser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+i+user.nt> <https://w3id.org/tree#remainingItems> "16"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/i+user.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BidX2Buser .
+_:BidX2Buser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BidX2Buser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/id+user.nt> .
+_:BidX2Buser <https://w3id.org/tree#value> "id" .
+_:BidX2Buser <https://w3id.org/tree#value> "user" .
+_:BidX2Buser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/id+user.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BieX2Buser .
+_:BieX2Buser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BieX2Buser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ie+user.nt> .
+_:BieX2Buser <https://w3id.org/tree#value> "ie" .
+_:BieX2Buser <https://w3id.org/tree#value> "user" .
+_:BieX2Buser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ie+user.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BifX2Buser .
+_:BifX2Buser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BifX2Buser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/if+user.nt> .
+_:BifX2Buser <https://w3id.org/tree#value> "if" .
+_:BifX2Buser <https://w3id.org/tree#value> "user" .
+_:BifX2Buser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/if+user.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BinX2Buser .
+_:BinX2Buser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BinX2Buser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/in+user.nt> .
+_:BinX2Buser <https://w3id.org/tree#value> "in" .
+_:BinX2Buser <https://w3id.org/tree#value> "user" .
+_:BinX2Buser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/in+user.nt> <https://w3id.org/tree#remainingItems> "42"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BisX2Buser .
+_:BisX2Buser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2Buser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+user.nt> .
+_:BisX2Buser <https://w3id.org/tree#value> "is" .
+_:BisX2Buser <https://w3id.org/tree#value> "user" .
+_:BisX2Buser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+user.nt> <https://w3id.org/tree#remainingItems> "27"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BitX2Buser .
+_:BitX2Buser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BitX2Buser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/it+user.nt> .
+_:BitX2Buser <https://w3id.org/tree#value> "it" .
+_:BitX2Buser <https://w3id.org/tree#value> "user" .
+_:BitX2Buser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/it+user.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BiX2Busers .
+_:BiX2Busers <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2Busers <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+users.nt> .
+_:BiX2Busers <https://w3id.org/tree#value> "i" .
+_:BiX2Busers <https://w3id.org/tree#value> "users" .
+_:BiX2Busers <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+users.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/i+user.nt> <https://w3id.org/tree#relation> _:BaX2BiX2Buser .
+_:BaX2BiX2Buser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BiX2Buser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+i+user.nt> .
+_:BaX2BiX2Buser <https://w3id.org/tree#value> "a" .
+_:BaX2BiX2Buser <https://w3id.org/tree#value> "i" .
+_:BaX2BiX2Buser <https://w3id.org/tree#value> "user" .
+_:BaX2BiX2Buser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+i+user.nt> <https://w3id.org/tree#remainingItems> "16"^^<http://www.w3.org/2001/XMLSchema#int> .

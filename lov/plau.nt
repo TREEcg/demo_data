@@ -1,0 +1,71 @@
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Object> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2002/07/owl#disjointWith> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Complex> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#isAbstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#comment> "GM_Primitive (Figure 8) is the abstract root class of the geometric primitives. Its main purpose is to define the basic \"boundary\" operation that ties the primitives in each dimension together. A geometric primitive (GM_Primitive) is a geometric object that is not decomposed further into other primitives in the system. This includes curves and surfaces, even though they are composed of curve segments and surface patches, respectively. This composition is a strong aggregation: curve segments and surface patches cannot exist outside the context of a primitive.\nNOTE Most geometric primitives are decomposable infinitely many times. Adding a centre point to a line may split that line into two separate lines. A new curve drawn across a surface may divide that surface into two parts, each of which is a surface. This is the reason that the normal definition of primitive as \"non-decomposable\" is not plausible in a geometry model - the only non-decomposable object in geometry is a point.\nAny geometric object that is used to describe a feature is a collection of geometric primitives. A collection of geometric primitives may or may not be a geometric complex. Geometric complexes have additional properties such as closure by boundary operations and mutually exclusive component parts.\nGM_Primitive and GM_Complex share most semantics, in the meaning of operations, attributes and associations. There is an exception in that a GM_Primitive shall not contain its boundary (except in the trivial case of GM_Point where the boundary is empty), while a GM_Complex shall contain its boundary in all cases. This means that if an instantiated object implements GM_Object operations both as GM_Primitive and as a GM_Complex, the semantics of each set theoretic operation is determined by the its name resolution. Specifically, for a particular object such as GM_CompositeCurve, GM_Primitive::contains (returns FALSE for end points) is different from GM_Complex::contains (returns TRUE for end points). Further, if that object is cast as a GM_Primitive value and as a GM_Complex value, then the two values need not be equal as GM_Objects." <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2002/07/owl#disjointWith> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Aggregate> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2004/02/skos/core#notation> "GM_Primitive"^^<http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#ISOClassName> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry Primitive" <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.opengis.net/ont/gml#AbstractGeometricPrimitive> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Swimmingpool"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Swimmingpool"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/SwimmingPool/key/amenity/value/swimming_pool> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/SwimmingPool/key/leisure/value/swimming_pool> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Basen"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Piscina"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Piscina"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Piscina"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Piscina"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Piscina"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Piscina"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Piscina"@pt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Piscina"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Poull-neuial"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Piscine"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Schwimmbad"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Palanguyan"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Amenity> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "H??? B??i"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ??????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ??????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Sv??mmebasin"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Bazen"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Bazen"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Bazen"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Bazen"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "?????????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Plav??re??"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Leisure> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Swembad"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Uszoda"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Sv??mmebaseng"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Sundlaugin"@is <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Plaukiojimo baseinas"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Kolam Renang"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????????? ????????????"@ka <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Igerilekua"@eu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Baz??n"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "?????????? ??????"@fa <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Swimming Pool"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Simbass??ng"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "????????????"@el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "????????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "????????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Ujula"@et <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Y??zme Havuzu"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Schw??mm"@lb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Peldbaseins"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Uima-allas"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Pissine"@fur <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SwimmingPool> <http://www.w3.org/2000/01/rdf-schema#label> "Zwembad"@nl <http://linkedgeodata.org/ontology> .
+<http://www.demcare.eu/ontologies/contextdescriptor.owl#threshold> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://www.demcare.eu/ontologies/contextdescriptor.owl> .
+<http://www.demcare.eu/ontologies/contextdescriptor.owl#threshold> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.demcare.eu/ontologies/contextdescriptor.owl#ContextDescriptor> <http://www.demcare.eu/ontologies/contextdescriptor.owl> .
+<http://www.demcare.eu/ontologies/contextdescriptor.owl#threshold> <http://www.w3.org/2000/01/rdf-schema#comment> "This property can be used to assign a threshold to the context descriptor of a certain complex activity, specifying a minimum value of confidence (plausability)."@en <http://www.demcare.eu/ontologies/contextdescriptor.owl> .
+<http://www.demcare.eu/ontologies/contextdescriptor.owl#threshold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.demcare.eu/ontologies/contextdescriptor.owl> .
+<http://www.demcare.eu/ontologies/contextdescriptor.owl#threshold> <http://www.w3.org/2000/01/rdf-schema#label> "threshold"@en <http://www.demcare.eu/ontologies/contextdescriptor.owl> .

@@ -1,0 +1,594 @@
+<http://purl.org/cerif/frapo/hasCustomerNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "A data property linking an agent to an identifying number for that agent, typically used by the accounting system of the supplier when issuing quotations, fulfilling orders and submitting invoices."@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/hasCustomerNumber> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/hasCustomerNumber> <http://www.w3.org/2000/01/rdf-schema#label> "has customer number"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/hasCustomerNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/hasCustomerNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/cerif/frapo/Purchaser> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/PurchaseOrder> <http://www.w3.org/2000/01/rdf-schema#label> "purchase order"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/PurchaseOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/PurchaseOrder> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/cerif/frapo/FinancialEntity> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/PurchaseOrder> <http://www.w3.org/2000/01/rdf-schema#comment> "An official order from a purchasing institution to a supplier for the purchase of goods or services, often issued in response to the receipt of a quotation from the supplier."@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/co/List> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcaf19295d9cb27bd6444c20d3d44b30a <http://purl.org/co> .
+<http://purl.org/co/List> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B89f9c96df046b9dae6f4787a3fc2746d <http://purl.org/co> .
+<http://purl.org/co/List> <http://www.w3.org/2000/01/rdf-schema#label> "list"@en <http://purl.org/co> .
+<http://purl.org/co/List> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bab8f3bb3439fca5350f9ee11e0091eb6 <http://purl.org/co> .
+<http://purl.org/co/List> <http://www.w3.org/2000/01/rdf-schema#comment> "An ordered array of items, that can be present in multiple copies"@en <http://purl.org/co> .
+<http://purl.org/co/List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/co> .
+<http://purl.org/configurationontology#choiceSeq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#choiceSeq> <http://www.w3.org/2000/01/rdf-schema#comment> "Choices are made one at a time and in a given order, which may matter. Of course it doesn’t impact the characteristics of the product in any way, but it can be used by some applications."@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#choiceSeq> <http://www.w3.org/2000/01/rdf-schema#label> "choice sequence"@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#choiceSeq> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/configurationontology#definingChoice> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#choiceSeq> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/configurationontology#Configuration> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#choiceSeq> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Seq> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#label> "Configuration"@fr <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#label> "Configuration"@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#comment> "A state of the configuration process, assumed to correspond to a valid partially defined product - valid in the sense that it can be completed into an existing fully specified product, one that can be ordered, without changing any of the current selections.\n\nA configuration is defined by a Lexicon (the set of the descriptive attributes of the configured product, cf. the \"lexicon\" property), and by the set of choices that have been made so far (typically  selected specifications), cf. the \"definingChoice\" property.\n\nNote: A configurator application may conceivably have to handle “invalid configurations”, that is, combinations of specifications that are impossible. This can happen, for instance, if the user is allowed to begin the configuration process by choosing features without any control of their compatibility; or if she is allowed to choose a feature incompatible with her previous selections. In this case, it is the responsibility of the configurator application to restore the consistency of the configuration, necessarily by excluding some of the previous user selections. This Configuration class excludes such invalid combinations. \n\nRelation with GoodRelations and schema.org vocabularies :\nbecause a configuration mainly describes a Partially Defined Product, it can be seen as a GoodRelations \"ProductOrServiceModel\" (or a schema.org \"ProductModel): \"an intangible entity that specifies some characteristics of a group of similar, usually mass-produced products, in the sense of a prototype\". The suffix \"Model\" may seem misleading when used for a Configuration, as it suggests something such as \"Ford T\", and not \"Ford T with sunroof and climat control (itself not a completely defined product -  you still can choose, well, the color: it is a \"prototype of similar products\").\n\nOn the other hand, a Configuration has a price (more precisely, a \"from price\" - the minimum of the \"suggested retail prices\" of all the matching completely defined products). As such, a Configuration may be seen as a commercial offer. It can also be used to represent a customer's wish list, constrained by the definition of the range. It could therefore be considered as a gr:Offering (or a schema:Offer) as well.\n\nBut gr:ProductOrService and gr:Offering are disjoint classes: a given Configuration cannot be both. Depending on the use case, a publisher of configuration data may want to type her Configurations with either of these classes."@en <http://purl.org/configurationontology> .
+<http://purl.org/dqm-vocabulary/v1/dqm#expectedUpdateInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#expectedUpdateInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#expectedUpdateInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "The expected update interval specifies the time interval in which instances of a specific class must be updated in order to be current."@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#expectedUpdateInterval> <http://www.w3.org/2000/01/rdf-schema#label> "Expected Update Interval"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#expectedUpdateInterval> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#expectedUpdateInterval> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dqm-vocabulary/v1/dqm#UpdateRule> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#equals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#equals> <http://www.w3.org/2000/01/rdf-schema#domain> _:B6f498c4f24d0cc3cc79d2d7059881684 <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#equals> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#equals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#equals> <http://www.w3.org/2000/01/rdf-schema#label> "Equals"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#equals> <http://www.w3.org/2000/01/rdf-schema#comment> "Holds one or more consecutive characters that are supposed to be found in the same order in strings of another property."@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#equals> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dqm-vocabulary/v1/dqm#operatedValue> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dsnotify/vocab/eventset/targetDataset> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#Dataset> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/targetDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/targetDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A void:Dataset that is considered as 'target' dataset of the associated eventset. When the eventset is 'complete' and all events are applied in their timely order to the corresponding source dataset(s), this dataset (and all other target datasets) should be the result.\nExample: a static snapshot of a dataset at time t0+delta, e.g., the DBpedia snapshot 3.3"@en-US <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/targetDataset> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dsnotify/vocab/eventset/Eventset> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/targetDataset> <http://www.w3.org/2000/01/rdf-schema#label> "target dataset"@en-US <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/sourceDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A void:Dataset that is considered as 'source' dataset of the associated eventset. When the eventset is 'complete' and all events in this  eventset are applied in their timely order to this and all other source datasets, it will become equal to the corresponding target dataset(s).\nExample: a static snapshot of a dataset at time t0, e.g., the DBpedia snapshot 3.2"@en-US <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/sourceDataset> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dsnotify/vocab/eventset/Eventset> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/sourceDataset> <http://www.w3.org/2000/01/rdf-schema#label> "source dataset"@en-US <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/sourceDataset> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#Dataset> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/sourceDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/eis/vocab/daq#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#value> <http://www.w3.org/2000/01/rdf-schema#comment> "Each metric will have a value computed. In order to deal with the different return type of the metric computation, this property links a metric with a value object (e.g. boolean, double, Literal)." <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#value> <http://www.w3.org/2000/01/rdf-schema#label> "value" <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#value> <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#MeasureProperty> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#value> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/cube#Observation> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#value> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#requires> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#requires> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/eis/vocab/daq#Metric> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#requires> <http://www.w3.org/2000/01/rdf-schema#comment> "A metric might require a number of external resources (e.g. a gold standard) in order to be able to measure the quality. In order to cater for the most generic requirement, this property links a metric to the required resource (e.g. a URI to the gold standard dataset used)." <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#requires> <http://www.w3.org/2000/01/rdf-schema#label> "requires" <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/goodrelations/v1#hasNext> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNext> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for gr:DayOfWeek indicates that the subject is directly followed by the object.\n\nExample: Monday hasNext Tuesday\n\nSince days of the week are a cycle, this property is not transitive."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNext> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#hasPrevious> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNext> <http://www.w3.org/2000/01/rdf-schema#label> "has next (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPrevious> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for gr:DayOfWeek indicates that the subject is directly preceeded by the object.\n\nExample: Tuesday hasPrevious Monday\n\nSince days of the week are a cycle, this property is not transitive."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPrevious> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPrevious> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPrevious> <http://www.w3.org/2000/01/rdf-schema#label> "has previous (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPrevious> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPrevious> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#hasNext> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPrevious> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleTransactionVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleTransactionVolume> <http://www.w3.org/2000/01/rdf-schema#domain> _:B8fb899e1d32e8338b22c0409e8e47b2f <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleTransactionVolume> <http://www.w3.org/2000/01/rdf-schema#label> "eligible transaction volume (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleTransactionVolume> <http://www.w3.org/2000/01/rdf-schema#comment> "This property can be used to indicate the transaction volume, in a monetary unit, for which the gr:Offering or gr:PriceSpecification is valid. This is mostly used to specify a minimal purchasing volume, to express free shipping above a certain order volume, or to limit the acceptance of credit cards to purchases above a certain amount.\n\nThe object is a gr:PriceSpecification that uses the properties gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue to indicate the lower and upper boundaries and gr:hasCurrency to indicate the currency using the ISO 4217 standard (3 characters)."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleTransactionVolume> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#eligibleTransactionVolume> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/2000/01/rdf-schema#label> "greater (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#lesser> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for qualitative values indicates that the subject is greater than the object."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/2000/01/rdf-schema#label> "lesser or equal (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for gr:QualitativeValue pairs indicates that the subject is lesser than or equal to the object."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#greaterOrEqual> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Maintain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Maintain> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Maintain> <http://www.w3.org/2000/01/rdf-schema#label> "Maintain (business function)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Maintain> <http://www.w3.org/2000/01/rdf-schema#comment> "This gr:BusinessFunction indicates that the gr:BusinessEntity offers (or seeks) typical maintenance tasks for the specified gr:ProductOrService. Maintenance tasks are actions that undo or compensate for wear or other deterioriation caused by regular usage, in order to restore the originally intended function of the product, or to prevent outage or malfunction."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/2000/01/rdf-schema#label> "greater or equal (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for qualitative values indicates that the subject is greater than or equal to the object."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#lesserOrEqual> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has Stock Keeping Unit (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "The Stock Keeping Unit, or SKU is a unique identifier for a product, service, or bundle from the perspective of a particular supplier, i.e. SKUs are mostly assigned and serialized at the merchant level. \nExamples of SKUs are the ordering or parts numbers used by a particular Web shop or catalog.\n\nConsequently, the domain of gr:hasStockKeepingUnit is the union of the classes gr:Offering and gr:ProductOrService. \nIf attached to a gr:Offering, the SKU will usually reflect a merchant-specific identifier, i.e. one valid only for that particular retailer or shop. \nIf attached to a gr:ProductOrServiceModel, the SKU can reflect either the identifier used by the merchant or the part number used by the official manufacturer of that part. For the latter, gr:hasMPN is a better choice.\n\nImportant: Be careful when assuming two products or services instances or offering instances to be identical based on the SKU. Since SKUs are unique only for the same gr:BusinessEntity, this can be assumed only when you are sure that the two SKU values refer to the same business entity. Such can be done by taking into account the provenance of the data. As long as instances of gr:Offering are concerned, you can also check that the offerings are being offered by the same gr:Business Entity.\n\nUsually, the properties gr:hasEAN_UCC-13 and gr:hasGTIN-14 are much more reliable identifiers, because they are globally unique.\n\nSee also http://en.wikipedia.org/wiki/Stock_Keeping_Unit."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#domain> _:B81924e8aa2011604c6349ad36091f109 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/productID> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#deliveryLeadTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#deliveryLeadTime> <http://www.w3.org/2000/01/rdf-schema#label> "delivery lead time (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#deliveryLeadTime> <http://www.w3.org/2000/01/rdf-schema#domain> _:B4f16fc4662532fd0ebb93b03f82914fb <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#deliveryLeadTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#deliveryLeadTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValueInteger> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#deliveryLeadTime> <http://www.w3.org/2000/01/rdf-schema#comment> "This property can be used to indicate the promised delay between the receipt of the order and the goods leaving the warehouse.\n\nThe duration is specified by attaching an instance of gr:QuantitativeValueInteger. The lower and upper boundaries are specified using the properties gr:hasMinValueInteger and gr:hasMaxValueInteger to that instance. A point value can be modeled with the gr:hasValueInteger property. The unit of measurement is specified using the property gr:hasUnitOfMeasurement with a string holding a UN/CEFACT code suitable for durations, e.g. MON (months), DAY (days), HUR (hours), or MIN (minutes)."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for gr:QualitativeValue pairs indicates that the subject is lesser than the object."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#greater> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/2000/01/rdf-schema#label> "lesser (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#nonEqual> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for gr:QualitativeValue pairs indicates that the subject is not equal to the object."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/2000/01/rdf-schema#label> "non equal (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A payment charge specification is a conceptual entity that specifies the additional costs asked for settling the payment after accepting a given gr:Offering using a particular gr:PaymentMethod. A payment charge specification is characterized by (1) a monetary amount per order specified as a literal value of type float in combination with a Currency, (2) the payment method, and (3) a whether this charge includes local sales taxes, namely VAT.\nA gr:Offering may be linked to multiple payment charge specifications that specify alternative charges for various payment methods.\n\nExamples: Payment by VISA or Mastercard costs a fee of 3 Euros including VAT, payment by bank transfer in advance is free of charge.\n\nThe total amount of this surcharge is specified as a float value of the gr:hasCurrencyValue property. The currency is specified via the gr:hasCurrency datatype property. Whether the price includes VAT or not is indicated by the gr:valueAddedTaxIncluded datatype property. The gr:PaymentMethod to which this charge applies is specified using the gr:appliesToPaymentMethod object property.\n\nIf the price can only be given as a range, use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue for the upper and lower bounds.\n\nImportant: When querying for the price, always use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Payment charge specification"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasEligibleQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasEligibleQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "has eligible quantity (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasEligibleQuantity> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0fed137afcbabd422a4542382743d730 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasEligibleQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasEligibleQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasEligibleQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "This specifies the interval and unit of measurement of ordering quantities for which the gr:Offering or gr:PriceSpecification is valid. This allows e.g. specifying that a certain freight charge is valid only for a certain quantity.\nNote that if an offering is a bundle, i.e. it consists of more than one unit of a single type of good, or if the unit of measurement for the good is different from unit (Common Code C62), then gr:hasEligibleQuantity refers to units of this bundle. In other words, \"C62\" for \"Units or pieces\" is usually the appropriate unit of measurement."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/2000/01/rdf-schema#label> "equal (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for qualitative values indicates that the subject is equal to the object."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#equal> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A delivery charge specification is a conceptual entity that specifies the additional costs asked for the delivery of a given gr:Offering using a particular gr:DeliveryMethod by the respective gr:BusinessEntity. A delivery charge specification is characterized by (1) a monetary amount per order, specified as a literal value of type float in combination with a currency, (2) the delivery method, (3) the target country or region, and (4)  whether this charge includes local sales taxes, namely VAT.\nA gr:Offering may be linked to multiple gr:DeliveryChargeSpecification nodes that specify alternative charges for disjoint combinations of target countries or regions, and delivery methods.\n\nExamples: Delivery by direct download is free of charge worldwide, delivery by UPS to Germany is 10 Euros per order, delivery by mail within the US is 5 Euros per order.\n\nThe total amount of this charge is specified as a float value of the gr:hasCurrencyValue property. The currency is specified via the gr:hasCurrency datatype property. Whether the price includes VAT or not is indicated by the gr:valueAddedTaxIncluded property. The gr:DeliveryMethod to which this charge applies is specified using the gr:appliesToDeliveryMethod object property. The region or regions to which this charge applies is specified using the gr:eligibleRegions property, which uses ISO 3166-1 and ISO 3166-2 codes.\n\nIf the price can only be given as a range, use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue for the upper and lower bounds.\n\nImportant: When querying for the price, always use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Delivery charge specification"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2006> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#PlacerOrderNumberImagingServiceRequestRetired> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2006> <http://www.w3.org/2000/01/rdf-schema#label> "Placer Order Number / Imaging Service Request (Retired)" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2006> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2006> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.OrderFillerIdentifierSequence> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0040.0027> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.OrderFillerIdentifierSequence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.OrderFillerIdentifierSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.OrderFillerIdentifierSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Order Filler Identifier Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2007> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#FillerOrderNumberImagingServiceRequestRetired> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2007> <http://www.w3.org/2000/01/rdf-schema#label> "Filler Order Number / Imaging Service Request (Retired)" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2007> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2007> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#BeamOrderIndexTrial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#BeamOrderIndexTrial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#BeamOrderIndexTrial> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0074.1024> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#BeamOrderIndexTrial> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#long> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#BeamOrderIndexTrial> <http://www.w3.org/2000/01/rdf-schema#label> "Beam Order Index (Trial)" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#BeamOrderIndexTrial> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.BeamTaskSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2008> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2008> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2008> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#OrderEnteredBy> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2008> <http://www.w3.org/2000/01/rdf-schema#label> "Order Entered By" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2009> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#OrderEntererLocation> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2009> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2009> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2009> <http://www.w3.org/2000/01/rdf-schema#label> "Order Enterer's Location" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9198> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#FirstOrderPhaseCorrection> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9198> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9198> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9198> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.Equipment> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9198> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9198> <http://www.w3.org/2000/01/rdf-schema#label> "First Order Phase Correction" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#FillerOrderNumberProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "Filler Order Number / Procedure" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#FillerOrderNumberProcedure> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0040.1007> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#FillerOrderNumberProcedure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#FillerOrderNumberProcedure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#FillerOrderNumberProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0074.1036> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.DeliveryVerificationImageSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0074.1036> <http://www.w3.org/2000/01/rdf-schema#label> "Double Exposure Ordering" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0074.1036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0074.1036> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#DoubleExposureOrdering> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0074.1036> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0074.1036> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#BeamOrderIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#BeamOrderIndex> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#BeamOrderIndex> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0074.1324> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#BeamOrderIndex> <http://www.w3.org/2000/01/rdf-schema#label> "Beam Order Index" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#BeamOrderIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#long> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2010> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2010> <http://www.w3.org/2000/01/rdf-schema#label> "Order Callback Phone Number" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2010> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.2010> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#OrderCallbackPhoneNumber> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#TransformOrderOfAxes> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#TransformOrderOfAxes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#TransformOrderOfAxes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#TransformOrderOfAxes> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0014.2226> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#TransformOrderOfAxes> <http://www.w3.org/2000/01/rdf-schema#label> "Transform Order of Axes" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.1006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.1006> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.1006> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.1006> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#PlacerOrderNumberProcedure> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.1006> <http://www.w3.org/2000/01/rdf-schema#label> "Placer Order Number / Procedure" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#PlacerOrderNumberProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "Placer Order Number / Procedure" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#PlacerOrderNumberProcedure> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#PlacerOrderNumberProcedure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#PlacerOrderNumberProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#PlacerOrderNumberProcedure> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0040.1006> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.1007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.1007> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.1007> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.1007> <http://www.w3.org/2000/01/rdf-schema#label> "Filler Order Number / Procedure" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.1007> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#FillerOrderNumberProcedure> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#PlacerOrderNumberImagingServiceRequestRetired> <http://www.w3.org/2000/01/rdf-schema#label> "Placer Order Number / Imaging Service Request (Retired)" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#PlacerOrderNumberImagingServiceRequestRetired> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0040.2006> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#PlacerOrderNumberImagingServiceRequestRetired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#PlacerOrderNumberImagingServiceRequestRetired> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#PlacerOrderNumberImagingServiceRequestRetired> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.OrderPlacerIdentifierSequence> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0040.0026> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.OrderPlacerIdentifierSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Order Placer Identifier Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.OrderPlacerIdentifierSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.OrderPlacerIdentifierSequence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OrderCallbackPhoneNumber> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0040.2010> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OrderCallbackPhoneNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OrderCallbackPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OrderCallbackPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#OrderCallbackPhoneNumber> <http://www.w3.org/2000/01/rdf-schema#label> "Order Callback Phone Number" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0040.0026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0040.0026> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0040.0026> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.OrderPlacerIdentifierSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0040.0026> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Order Placer Identifier Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0040.0027> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Order Filler Identifier Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0040.0027> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0040.0027> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.OrderFillerIdentifierSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0040.0027> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#FirstOrderPhaseCorrectionAngle> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.5600.0010> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#FirstOrderPhaseCorrectionAngle> <http://www.w3.org/2000/01/rdf-schema#label> "First Order Phase Correction Angle" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#FirstOrderPhaseCorrectionAngle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#FirstOrderPhaseCorrectionAngle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#FirstOrderPhaseCorrectionAngle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#FirstOrderPhaseCorrectionAngle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.Equipment> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/linked-data/cube#order> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates a priority order for the components of sets with this structure, used to guide presentations - lower order numbers come before higher numbers, un-numbered components come last"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#order> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/cube#ComponentSpecification> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#order> <http://www.w3.org/2000/01/rdf-schema#label> "order"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#order> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/cube> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#order> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/cube> .
+<http://purl.org/ontology/wo/Order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Order> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/wo/TaxonRank> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Order> <http://www.w3.org/2000/01/rdf-schema#label> "Order"@en-gb <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Order> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/Order_%28biology%29> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Order> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/wo/> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Order> <http://www.w3.org/2000/01/rdf-schema#comment> "An order is a scientific way to categorise related organisms. An order is a smaller grouping than a class, but bigger than a family or genus. Examples of orders are willows, cockroaches and primates."@en-gb <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Order> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.bbc.co.uk/nature/order> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/Order> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/order> <http://www.w3.org/2000/01/rdf-schema#label> "order"@en-gb <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/order> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/wo/TaxonRank> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/order> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/wo/Kingdom> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/order> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/order> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/wo/> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/order> <http://www.w3.org/2000/01/rdf-schema#comment> "associates a taxon rank with an order"@en-gb <http://purl.org/ontology/wo/> .
+<http://reference.data.gov.uk/def/payment#order> <http://www.w3.org/2000/01/rdf-schema#label> "order"@en <http://reference.data.gov.uk/def/payment#> .
+<http://reference.data.gov.uk/def/payment#order> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://reference.data.gov.uk/def/payment#> <http://reference.data.gov.uk/def/payment#> .
+<http://reference.data.gov.uk/def/payment#order> <http://www.w3.org/2000/01/rdf-schema#domain> <http://reference.data.gov.uk/def/payment#Payment> <http://reference.data.gov.uk/def/payment#> .
+<http://reference.data.gov.uk/def/payment#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://reference.data.gov.uk/def/payment#> .
+<http://reference.data.gov.uk/def/payment#order> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an order associated with this payment (optional)."@en <http://reference.data.gov.uk/def/payment#> .
+<http://reference.data.gov.uk/def/payment#order> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://reference.data.gov.uk/def/payment#> .
+<http://vocab.deri.ie/cogs#Order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#Order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#Order> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#Operation> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#Order> <http://www.w3.org/2000/01/rdf-schema#comment> "Application of a specific order to a set of elemetns.  @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#Order> <http://www.w3.org/2000/01/rdf-schema#label> "Order" <http://vocab.deri.ie/cogs> .
+<http://www.linkedmodel.org/schema/dtype#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.linkedmodel.org/schema/dtype> .
+<http://www.linkedmodel.org/schema/dtype#order> <http://www.linkedmodel.org/schema/vaem#comment> "The property \"dtype:order\" provides a means to specify a precedence. One use of order is in specifying ordered enumerations such as \"voag:ConfidentialityLevel\".  A similar property, but with an important type difference, is \"vaem:orderIndex\". This is for use on property occurrences in class axioms where it can be placed on a restriction to specify how that property may be transformed into other representations where ordering has some importance, for example, in XML Schema sequences.  Whereas \"vaem:order\" is a datatype property, \"vaem:orderIndex\" is an annotation property." <http://www.linkedmodel.org/schema/dtype> .
+<http://www.linkedmodel.org/schema/dtype#order> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.linkedmodel.org/schema/dtype> <http://www.linkedmodel.org/schema/dtype> .
+<http://www.linkedmodel.org/schema/dtype#order> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.linkedmodel.org/schema/dtype#orderIndex> <http://www.linkedmodel.org/schema/dtype> .
+<http://www.linkedmodel.org/schema/dtype#order> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.linkedmodel.org/1.1/schema/dtype> <http://www.linkedmodel.org/schema/dtype> .
+<http://www.linkedmodel.org/schema/dtype#order> <http://www.w3.org/2000/01/rdf-schema#label> "order" <http://www.linkedmodel.org/schema/dtype> .
+<http://www.linkedmodel.org/schema/dtype#order> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> <http://www.linkedmodel.org/schema/dtype> .
+<http://www.ontotext.com/proton/protonext#Order> <http://www.w3.org/2000/01/rdf-schema#label> "Order"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Order> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protontop#Statement> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Order> <http://www.w3.org/2000/01/rdf-schema#comment> "A statement used to request someone to supply something in return for payment and providing specifications and quantities. WordNet 2.1."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.w3.org/ns/shacl#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#order> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#order> <http://www.w3.org/2000/01/rdf-schema#label> "order"@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#order> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the relative order of this compared to its siblings. For example use 0 for the first, 1 for the second."@en <http://www.w3.org/ns/shacl#> .
+<http://schema.org/Order> <http://www.w3.org/2000/01/rdf-schema#comment> "An order is a confirmation of a transaction (a receipt), which can contain multiple line items, each represented by an Offer that has been accepted by the customer." <http://schema.org/> .
+<http://schema.org/Order> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Intangible> <http://schema.org/> .
+<http://schema.org/Order> <http://www.w3.org/2000/01/rdf-schema#label> "Order" <http://schema.org/> .
+<http://schema.org/Order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://qudt.org/schema/qudt/order> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/2.1/schema/qudt> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/order> <http://www.w3.org/2000/01/rdf-schema#label> "order" <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/order> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/order> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> <http://qudt.org/schema/qudt> .
+<http://data.businessgraph.io/ontology#order> <http://schema.org/domainIncludes> <http://www.w3.org/2004/02/skos/core#Concept> <http://data.businessgraph.io/ontology#> .
+<http://data.businessgraph.io/ontology#order> <http://schema.org/rangeIncludes> <http://www.w3.org/2001/XMLSchema#integer> <http://data.businessgraph.io/ontology#> .
+<http://data.businessgraph.io/ontology#order> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.businessgraph.io/ontology#> <http://data.businessgraph.io/ontology#> .
+<http://data.businessgraph.io/ontology#order> <http://www.w3.org/2000/01/rdf-schema#label> "order" <http://data.businessgraph.io/ontology#> .
+<http://data.businessgraph.io/ontology#order> <http://data.businessgraph.io/ontology#order> "110"^^<http://www.w3.org/2001/XMLSchema#integer> <http://data.businessgraph.io/ontology#> .
+<http://data.businessgraph.io/ontology#order> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.businessgraph.io/ontology#> .
+<http://data.businessgraph.io/ontology#order> <http://www.w3.org/2000/01/rdf-schema#comment> "Global order of a thesaurus concept respecting the hierarchical structure (depth-first traversal)" <http://data.businessgraph.io/ontology#> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/order.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Bordera .
+_:Bordera <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bordera <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ordera.nt> .
+_:Bordera <https://w3id.org/tree#value> "ordera" .
+_:Bordera <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ordera.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Borderb .
+_:Borderb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Borderb <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/orderb.nt> .
+_:Borderb <https://w3id.org/tree#value> "orderb" .
+_:Borderb <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/orderb.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Borderc .
+_:Borderc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Borderc <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/orderc.nt> .
+_:Borderc <https://w3id.org/tree#value> "orderc" .
+_:Borderc <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/orderc.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Borderd .
+_:Borderd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Borderd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/orderd.nt> .
+_:Borderd <https://w3id.org/tree#value> "orderd" .
+_:Borderd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/orderd.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Bordere .
+_:Bordere <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bordere <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ordere.nt> .
+_:Bordere <https://w3id.org/tree#value> "ordere" .
+_:Bordere <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ordere.nt> <https://w3id.org/tree#remainingItems> "156"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Borderg .
+_:Borderg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Borderg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/orderg.nt> .
+_:Borderg <https://w3id.org/tree#value> "orderg" .
+_:Borderg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/orderg.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Borderh .
+_:Borderh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Borderh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/orderh.nt> .
+_:Borderh <https://w3id.org/tree#value> "orderh" .
+_:Borderh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/orderh.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Borderi .
+_:Borderi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Borderi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/orderi.nt> .
+_:Borderi <https://w3id.org/tree#value> "orderi" .
+_:Borderi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/orderi.nt> <https://w3id.org/tree#remainingItems> "43"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Borderl .
+_:Borderl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Borderl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/orderl.nt> .
+_:Borderl <https://w3id.org/tree#value> "orderl" .
+_:Borderl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/orderl.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Borderm .
+_:Borderm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Borderm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/orderm.nt> .
+_:Borderm <https://w3id.org/tree#value> "orderm" .
+_:Borderm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/orderm.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Bordern .
+_:Bordern <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bordern <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ordern.nt> .
+_:Bordern <https://w3id.org/tree#value> "ordern" .
+_:Bordern <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ordern.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Bordero .
+_:Bordero <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bordero <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ordero.nt> .
+_:Bordero <https://w3id.org/tree#value> "ordero" .
+_:Bordero <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ordero.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Borderp .
+_:Borderp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Borderp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/orderp.nt> .
+_:Borderp <https://w3id.org/tree#value> "orderp" .
+_:Borderp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/orderp.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Borderq .
+_:Borderq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Borderq <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/orderq.nt> .
+_:Borderq <https://w3id.org/tree#value> "orderq" .
+_:Borderq <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/orderq.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Borderr .
+_:Borderr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Borderr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/orderr.nt> .
+_:Borderr <https://w3id.org/tree#value> "orderr" .
+_:Borderr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/orderr.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Borders .
+_:Borders <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Borders <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/orders.nt> .
+_:Borders <https://w3id.org/tree#value> "orders" .
+_:Borders <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/orders.nt> <https://w3id.org/tree#remainingItems> "25"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:Bordert .
+_:Bordert <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bordert <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ordert.nt> .
+_:Bordert <https://w3id.org/tree#value> "ordert" .
+_:Bordert <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ordert.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:B1X2Border .
+_:B1X2Border <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:B1X2Border <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/1+order.nt> .
+_:B1X2Border <https://w3id.org/tree#value> "1" .
+_:B1X2Border <https://w3id.org/tree#value> "order" .
+_:B1X2Border <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/1+order.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BaX2Border .
+_:BaX2Border <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Border <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+order.nt> .
+_:BaX2Border <https://w3id.org/tree#value> "a" .
+_:BaX2Border <https://w3id.org/tree#value> "order" .
+_:BaX2Border <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+order.nt> <https://w3id.org/tree#remainingItems> "16"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BbX2Border .
+_:BbX2Border <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Border <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+order.nt> .
+_:BbX2Border <https://w3id.org/tree#value> "b" .
+_:BbX2Border <https://w3id.org/tree#value> "order" .
+_:BbX2Border <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+order.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BcX2Border .
+_:BcX2Border <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Border <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+order.nt> .
+_:BcX2Border <https://w3id.org/tree#value> "c" .
+_:BcX2Border <https://w3id.org/tree#value> "order" .
+_:BcX2Border <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+order.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BdX2Border .
+_:BdX2Border <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2Border <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+order.nt> .
+_:BdX2Border <https://w3id.org/tree#value> "d" .
+_:BdX2Border <https://w3id.org/tree#value> "order" .
+_:BdX2Border <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+order.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BeX2Border .
+_:BeX2Border <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2Border <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+order.nt> .
+_:BeX2Border <https://w3id.org/tree#value> "e" .
+_:BeX2Border <https://w3id.org/tree#value> "order" .
+_:BeX2Border <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+order.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BfX2Border .
+_:BfX2Border <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2Border <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+order.nt> .
+_:BfX2Border <https://w3id.org/tree#value> "f" .
+_:BfX2Border <https://w3id.org/tree#value> "order" .
+_:BfX2Border <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+order.nt> <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BhX2Border .
+_:BhX2Border <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2Border <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+order.nt> .
+_:BhX2Border <https://w3id.org/tree#value> "h" .
+_:BhX2Border <https://w3id.org/tree#value> "order" .
+_:BhX2Border <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+order.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BiX2Border .
+_:BiX2Border <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2Border <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+order.nt> .
+_:BiX2Border <https://w3id.org/tree#value> "i" .
+_:BiX2Border <https://w3id.org/tree#value> "order" .
+_:BiX2Border <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+order.nt> <https://w3id.org/tree#remainingItems> "30"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BjX2Border .
+_:BjX2Border <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BjX2Border <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/j+order.nt> .
+_:BjX2Border <https://w3id.org/tree#value> "j" .
+_:BjX2Border <https://w3id.org/tree#value> "order" .
+_:BjX2Border <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/j+order.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BkX2Border .
+_:BkX2Border <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BkX2Border <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/k+order.nt> .
+_:BkX2Border <https://w3id.org/tree#value> "k" .
+_:BkX2Border <https://w3id.org/tree#value> "order" .
+_:BkX2Border <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/k+order.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BlX2Border .
+_:BlX2Border <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2Border <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+order.nt> .
+_:BlX2Border <https://w3id.org/tree#value> "l" .
+_:BlX2Border <https://w3id.org/tree#value> "order" .
+_:BlX2Border <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+order.nt> <https://w3id.org/tree#remainingItems> "231"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BnX2Border .
+_:BnX2Border <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnX2Border <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/n+order.nt> .
+_:BnX2Border <https://w3id.org/tree#value> "n" .
+_:BnX2Border <https://w3id.org/tree#value> "order" .
+_:BnX2Border <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/n+order.nt> <https://w3id.org/tree#remainingItems> "14"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BoX2Border .
+_:BoX2Border <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2Border <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+order.nt> .
+_:BoX2Border <https://w3id.org/tree#value> "o" .
+_:BoX2Border <https://w3id.org/tree#value> "order" .
+_:BoX2Border <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+order.nt> <https://w3id.org/tree#remainingItems> "31"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BorderX2Bp .
+_:BorderX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorderX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/order+p.nt> .
+_:BorderX2Bp <https://w3id.org/tree#value> "order" .
+_:BorderX2Bp <https://w3id.org/tree#value> "p" .
+_:BorderX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/order+p.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BorderX2Br .
+_:BorderX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorderX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/order+r.nt> .
+_:BorderX2Br <https://w3id.org/tree#value> "order" .
+_:BorderX2Br <https://w3id.org/tree#value> "r" .
+_:BorderX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/order+r.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BorderX2Bs .
+_:BorderX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorderX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/order+s.nt> .
+_:BorderX2Bs <https://w3id.org/tree#value> "order" .
+_:BorderX2Bs <https://w3id.org/tree#value> "s" .
+_:BorderX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/order+s.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BorderX2Bt .
+_:BorderX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorderX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/order+t.nt> .
+_:BorderX2Bt <https://w3id.org/tree#value> "order" .
+_:BorderX2Bt <https://w3id.org/tree#value> "t" .
+_:BorderX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/order+t.nt> <https://w3id.org/tree#remainingItems> "202"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BorderX2Bu .
+_:BorderX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorderX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/order+u.nt> .
+_:BorderX2Bu <https://w3id.org/tree#value> "order" .
+_:BorderX2Bu <https://w3id.org/tree#value> "u" .
+_:BorderX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/order+u.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BorderX2Bv .
+_:BorderX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorderX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/order+v.nt> .
+_:BorderX2Bv <https://w3id.org/tree#value> "order" .
+_:BorderX2Bv <https://w3id.org/tree#value> "v" .
+_:BorderX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/order+v.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/order.nt> <https://w3id.org/tree#relation> _:BorderX2Bw .
+_:BorderX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BorderX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/order+w.nt> .
+_:BorderX2Bw <https://w3id.org/tree#value> "order" .
+_:BorderX2Bw <https://w3id.org/tree#value> "w" .
+_:BorderX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/order+w.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .

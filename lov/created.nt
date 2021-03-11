@@ -1,0 +1,561 @@
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdAt> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/creator> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent primary responsible for making the digital artifact or resource representation.\n\nThis property is distinct from forming the content, which is indicated with pav:contributedBy or its subproperties; pav:authoredBy, which identifies who authored the knowledge expressed by this resource; and pav:curatedBy, which identifies who curated the knowledge into its current form.\n\npav:createdBy is more specific than its superproperty dct:creator - which might or might not be interpreted to cover this creator.\n\nFor instance, the author wrote 'this species has bigger wings than normal' in his log book. The curator, going through the log book and identifying important knowledge, formalizes this as 'locus perculus has wingspan > 0.5m'. The creator enters this knowledge as a digital resource in the knowledge system, thus creating the digital artifact (say as JSON, RDF, XML or HTML).\n\nA different example is a news article. pav:authoredBy indicates the journalist who wrote the article. pav:contributedBy can indicate the artist who added an illustration. pav:curatedBy can indicate the editor who made the article conform to the news paper's style. pav:createdBy can indicate who put the article on the web site.\n\nThe software tool used by the creator to make the digital resource (say Protege, Wordpress or OpenOffice) can be indicated with pav:createdWith.\n\nThe date the digital resource was created can be indicated with pav:createdOn.\n\nThe location the agent was at when creating the digital resource can be made using pav:createdAt."@en <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/curatedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdOn> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/authoredBy> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/createdBy> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#label> "Created by"@en <http://purl.org/pav/> .
+<http://purl.org/pav/createdOn> <http://www.w3.org/2000/01/rdf-schema#label> "Created on"@en <http://purl.org/pav/> .
+<http://purl.org/pav/createdOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/createdOn> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/createdOn> <http://purl.org/pav/> .
+<http://purl.org/pav/createdOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdBy> <http://purl.org/pav/> .
+<http://purl.org/pav/createdOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/createdOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/pav/> .
+<http://purl.org/pav/createdOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The date of creation of the resource representation.\n\nThe agents responsible can be indicated with pav:createdBy.\n\nThis property is normally used in a functional way, indicating the time of creation, although PAV does not formally restrict this. pav:lastUpdateOn can be used to indicate minor updates that did not affect the creating date.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/createdAt> <http://www.w3.org/2000/01/rdf-schema#label> "Created at"@en <http://purl.org/pav/> .
+<http://purl.org/pav/createdAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The geo-location of the agents when creating the resource (pav:createdBy). For instance  a photographer takes a picture of the Eiffel Tower while standing in front of it."@en <http://purl.org/pav/> .
+<http://purl.org/pav/createdAt> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdBy> <http://purl.org/pav/> .
+<http://purl.org/pav/createdAt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/createdAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/createdWith> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdBy> <http://purl.org/pav/> .
+<http://purl.org/pav/createdWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/createdWith> <http://www.w3.org/2000/01/rdf-schema#comment> "The software/tool used by the creator (pav:createdBy) when making the digital resource, for instance a word processor or an annotation tool. A more independent software agent that creates the resource without direct interaction by a human creator should instead should instead by indicated using pav:createdBy.\n"@en <http://purl.org/pav/> .
+<http://purl.org/pav/createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/createdWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/pav/> .
+<http://purl.org/pav/createdWith> <http://www.w3.org/2000/01/rdf-schema#label> "Created with"@en <http://purl.org/pav/> .
+<http://purl.org/saws/ontology#EditorSection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/saws/ontology#Section> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#EditorSection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#EditorSection> <http://www.w3.org/2000/01/rdf-schema#comment> "Any division within a linguistic object created by an editor, e.g. to make the navigation of the text clearer or to mark a region of interest"@en <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#EditorSection> <http://www.w3.org/2000/01/rdf-schema#label> "editor section"@en <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#EditorSection> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/saws/ontology#ScribeSection> <http://purl.org/saws/ontology> .
+<http://purl.org/spar/cito/hasCitationCreationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/hasCitationCreationDate> <http://www.w3.org/2000/01/rdf-schema#label> "has citation creation date"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/hasCitationCreationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date on which the citation was created. This has the same numerical value as the publication date of the citing bibliographic resource, but is a property of the citation itself.  When combined with the citation time span, it permits that citation to be located in history."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/2000/01/rdf-schema#label> "citation"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/2002/07/owl#equivalentClass> _:B04968240c6a322af912cf2d61c8fb4c0 <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation is a conceptual directional link from a citing entity to a cited entity, created by a human performative act of making a citation, typically instantiated by the inclusion of a bibliographic reference (biro:BibliographicReference) in the reference list of the citing entity, or by the inclusion within the citing entity of a link, in the form of an HTTP Uniform Resource Locator (URL), to a resource on the World Wide Web.\n\nThe time span of a citation, i.e. the interval between the publication year of the citing entity and the publication year of the cited entity, can be recorded using the data property cito:hasCitationTimeSpan.\n\nThe nature or type of a citation can be characterized by using CiTO object properties, e.g. http://purl.org/spar/cito/citesAsDataSource (definition: “The citing entity cites the cited entity as a source of data”).  \n\nThis CiTO class cito:Citation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties. \n\nFor example, the following RDF statement\n\n     :paperA cito:extends :paperB .\n\ncan be alternatively described as follows\n\n     :thisCitation a cito:Citation ; \n          cito:hasCitingEntity :paperA ;\n          cito:hasCitationCharacterization cito:extends ;\n          cito:hasCitedEntity :paperB .\n\nThis usage involved OWL2 punning, whereby a CiTO object property, such as the aforementioned cito:extends, is used as the object of the OWL assertion.\n\n     :thisCitation cito:hasCitationCharacterization cito:extends .\n\nUsing such OWL2 punning (described at http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), the CiTO object property is considered as a proper named individual of the class owl:Thing. \n\nSuch reification of citation acts can be very useful, since it permits one to combine these CiTO properties with other vocabularies, or to handle situations in which none of the citation characterizations available in CiTO are applicable.  \n\nSuch situations can be resolved by the creation of a user-defined citation characterization, for example by using the Open Annotation Data Model, as explained at http://semanticpublishing.wordpress.com/2013/07/03/extending-cito-for-open-annotations/."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/2000/01/rdf-schema#comment> "The Virtual International Authority File is an international authority file created by amalagamating the national authority files of several national libraries and operated by the Online Computer Library Center (OCLC).  It contains information about many topics including personal names."@en <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/2000/01/rdf-schema#label> "viaf"@en <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/viaf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://viaf.org/> <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/researcherid> <http://www.w3.org/2000/01/rdf-schema#comment> "ResearcherID is an identifying system for scientific authors created and owned by Thomson Reuters."@en <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/researcherid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.researcherid.com/> <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/researcherid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/datacite/PersonalIdentifierScheme> <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/researcherid> <http://www.w3.org/2000/01/rdf-schema#label> "researcherid"@en <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/researcherid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/datacite> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#label> "has creation date"@en <http://purl.org/spar/fabio> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/spar/fabio> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#comment> "The date on which an entity has been created."@en <http://purl.org/spar/fabio> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/spar/fabio> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/spar/fabio> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/date> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/InstructionalWork> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Work> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/InstructionalWork> <http://www.w3.org/2000/01/rdf-schema#label> "instructional work"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/InstructionalWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/InstructionalWork> <http://www.w3.org/2000/01/rdf-schema#comment> "A work created for the purpose of education or instruction, that may be expressed as a  text book, a lecture, a tutorial or an instruction manual."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectReport> <http://www.w3.org/2000/01/rdf-schema#comment> "A report describing the outcomes of specific project, typically listing 'deliverables' created or 'milestones' achieved during the project."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectReport> <http://www.w3.org/2000/01/rdf-schema#label> "deliverable report"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectReport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Report> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ProjectReport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/2000/01/rdf-schema#label> "archival record"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "An archival record connotes a material created or received by a person, family, or organization, public or private, in the conduct of their affairs that is preserved because of the enduring value contained in the information it contains or as evidence of the function and the responsibilities of its creator."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbcec970458f3c79b52ba21e2bedcc959 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Work> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Film> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Movie> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Film> <http://www.w3.org/2000/01/rdf-schema#comment> "A movie with an accompanying soundtrack, typically created by a professional film studio, designed to communicate a fictional story, record an artistic event, or impart information that is scientific or documentary in nature."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Film> <http://www.w3.org/2000/01/rdf-schema#label> "film"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Film> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/DemoPaper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/DemoPaper> <http://www.w3.org/2000/01/rdf-schema#comment> "A demonstration paper, typically describing a new product, service or system created as a result of research, usually presented during a conference or workshop."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/DemoPaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/DemoPaper> <http://www.w3.org/2000/01/rdf-schema#label> "demo paper"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Catalog> <http://www.w3.org/2000/01/rdf-schema#label> "catalog"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Catalog> <http://www.w3.org/2000/01/rdf-schema#comment> "A list of items describing the content of a resource, for example items in an exhibition, items offered for sale by a vendor, or entities contained within a library or collection.  Ideally, catalogs are created according to specific and uniform principles of construction and are under the control of an authority file."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Catalog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Catalog> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Specification> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Notebook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Notebook> <http://www.w3.org/2000/01/rdf-schema#comment> "A book containing personal notes, typically created by writing into a physical book with blank pages."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Notebook> <http://www.w3.org/2000/01/rdf-schema#label> "notebook"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Notebook> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Book> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/scoro/> <http://www.w3.org/2000/01/rdf-schema#comment> "SCoRO is written in OWL 2 DL, and imports FOAF, the Friend of a Friend Ontology (http://xmlns.com/foaf/spec/) and PRO the Publishing Roles Ontology (http://purl.org/spar/pro/).   This ontology is available at http://purl.org/spar/scoro/, and uses the namespace prefix 'scoro'.\n\nIt is designed to be used in conjunction with FRAPO, the Funding, Research Administration and Projects Ontology (http://purl.org/spar/frapo/), and with FaBiO, the FRBR-aligned Bibliographic Ontology (http://purl.org/spar/fabio/).\n\nA Web-based scholarly contributions report form based on this ontology, for use in creating metadata to describe authorship roles and scholarly contributions to journal articles and their underlying research, is available from http://purl.org/spar/scoro/**** (to be created).\n\nAlternatively, an Excel Scholarly Contributions Report Form based on this ontology, created using RightField (http://www.sysmo-db.org/rightfield) also for use in creating metadata to describe authorship roles and scholarly contributions to journal articles and their underlying research, is available from http://purl.org/spar/scoro/SCoRF.xls."@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/> <http://purl.org/dc/elements/1.1/description> "SCoRO, the Scholarly Contributions and Roles Ontology, is an ontology for use by authors and publishers for describing the contributions that may be made and the roles that may be held by a person with respect to a journal article or other publication, and by research administrators for describing contributions and roles with respect to other aspects of scholarly research.\n\nIn this ontology, the object properties (e.g. scoro:makesContribution) and the individuals within classes (e.g. scoro:conducts-experiments) are expressed in the present tense, as is conventional for ontologies, but should be taken as potentially referring to past, present or future roles and contributions."@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/> <http://www.w3.org/2002/07/owl#versionInfo> "1.8.2.1" <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/> <http://purl.org/dc/elements/1.1/creator> "David Shotton" <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/> <http://purl.org/dc/elements/1.1/date> "2014-05-21" <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/spar/pro> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/> <http://purl.org/dc/elements/1.1/contributor> "Silvio Peroni" <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/> <http://purl.org/dc/elements/1.1/title> "SCoRO, the Scholarly Contributions and Roles Ontology"@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/> <http://purl.org/dc/elements/1.1/rights> "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/> <http://purl.org/dc/elements/1.1/description> "Since roles have contexts and times that are important to take into account (for example, a person can be author of one paper and reviewer of another, while another person will be editor of a journal only for a defined period, not for ever), the SCORO ontology permit these contexts to be specified, using an ontological design pattern called the time-indexed value in context (TVC) (http://www.essepuntato.it/2012/04/tvc/) which is part of the PRO ontology (http://purl.org/spar/pro/) imported by SCORO. \n \nThis ontology design pattern permits one to construct the following RDF statements:\n       foaf:Agent pro:holdsRoleInTime [ a pro:RoleInTime pro:withRole pro:editor ] .\n\nThus the domain of pro:withRole is not foaf:Agent, but rather an anonymous member of the class pro:RoleInTime, which itself is the range of the property pro:holdsRoleInTime, for which the domain is foaf:Agent. \n\nThe range of pro:withRole is the class pro:Role, and its sub-classes pro:PublishingRole, scoro:InvestigationalRole, scoro:OrganizationalRole, etc., whose members permit specific roles to be specified.  \n   \nThis single step of indirection permits other contextual and temporal attributes (not shown here) to be specified for this member of the class pro:RoleInTime, putting that role into context.\n\nExemplar usage: \n\nfabio:Dataset  dcterms:contributor  [ rdf:type foaf:Organization ; \n   foaf:name \"Met Office\" ;  \n   foaf:homepage <http://www.metoffice.gov.uk/>  ; \n   pro:holdsRoleInTime [ a pro:RoleInTime \n      pro:withRole  scoro:data-creator ]  ] .\n\nExactly the same use of TVC and of individuals within the class scoro:Contribution and its sub-classes is used for scoro:withContribution, enabling contributions to be time-limited and given contexts.\n"@en <http://purl.org/spar/scoro/> .
+<http://purl.org/twc/vocab/conversion/ConversionMetaDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Metadata for a dataset that is created during the dataset's conversion invocation." <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ConversionMetaDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/twc/vocab/conversion/MetaDataset> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ConversionMetaDataset> <http://www.w3.org/2000/01/rdf-schema#label> "ConversionMetaDataset" <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ConversionMetaDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/SubjectAnnotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/SubjectAnnotation> <http://www.w3.org/2000/01/rdf-schema#label> "SubjectAnnotation" <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/SubjectAnnotation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/twc/vocab/conversion/> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/SubjectAnnotation> <http://www.w3.org/2000/01/rdf-schema#comment> "add a predicate-object description to the subject of a triple created." <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/label> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/twc/vocab/conversion/> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/label> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/twc/vocab/conversion/LabelRenameEnhancement> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/label> <http://www.w3.org/2000/01/rdf-schema#comment> "A human-friendly label (like rdfs:label) that will be used to create the property local name when creating the property URI. The exact value of conversion:label will also be used for the rdfs:label of the property created." <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/label> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/label> <http://www.w3.org/2000/01/rdf-schema#label> "label" <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B14a940b2239e732e3e1b3e85b1e7fc6a <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A materialized (captured in time) dataset -- something is now on disk. Union of all LayerDatasets created by different conversion parameters." <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/twc/vocab/conversion/AbstractDataset> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/twc/vocab/conversion/LayerDataset> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2000/01/rdf-schema#label> "Versioned Dataset" <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/twc/vocab/conversion/Dataset> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B95553bb99282770055fb3092bfb10cd6 <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/comment> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <https://github.com/timrdf/csv2rdf4lod-automation/wiki/conversion:comment> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/comment> <http://www.w3.org/2000/01/rdf-schema#label> "comment" <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/comment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/comment> <http://www.w3.org/2000/01/rdf-schema#comment> "A comment (like rdfs:comment) that will be applied to the property created during conversion." <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/comment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/twc/vocab/conversion/PropertyCommentEnhancement> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/comment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/twc/vocab/conversion/> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/LODLinks> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/ns/void#Dataset> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/LODLinks> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/LODLinks> <http://www.w3.org/2000/01/rdf-schema#comment> "An RDF Graph of resources with identifiers (dcterms:identifer, etc) that is used to link to resources created during conversion." <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://purl.org/dc/terms/issued> "2005-12-14" <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/changeset/schema> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2000/01/rdf-schema#comment> "\n      The date should be in W3CDTF format\n    "@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/changeset/schema#ChangeSet> <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2004/02/skos/core#definition> "the date that the changeset was created"@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bafecda7e3e6025e9bfff22b3b6e35a95 <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2000/01/rdf-schema#label> "createdDate"@en <http://purl.org/vocab/changeset/schema> .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> <http://purl.org/vocab/changeset/schema> .
+<http://purl.uniprot.org/core/created> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bf1153ab9bf8e6e90ca55a17347c0c693 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/created> <http://www.w3.org/2000/01/rdf-schema#comment> "The date a resource was created." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/created> <http://www.w3.org/2000/01/rdf-schema#domain> _:B7e1aa8573c2e0951bdfa293ba0b44f94 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.uniprot.org/core/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicParsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumerator> <http://www.ontology-of-units-of-measure.org/resource/om-2/solarMass> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicParsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/hasDenominator> <http://www.ontology-of-units-of-measure.org/resource/om-2/gigayearCubicParsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicParsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "M_☉/(Gyr pc3)" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicParsec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontology-of-units-of-measure.org/resource/om-2/UnitDivision> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicParsec> <http://www.w3.org/2000/01/rdf-schema#label> "solar mass per gigayear cubic parsec"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicParsec> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of stellar mass created per cubic parsec in each billion years."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicParsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeSymbol> "M_☉ Gyr-1 pc-3" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicParsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeSymbol> "M_☉·Gyr-1·pc-3" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicKiloparsec> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of stellar mass created per cubic kiloparsec in each billion years."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicKiloparsec> <http://www.w3.org/2000/01/rdf-schema#label> "solar mass per gigayear cubic kiloparsec"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicKiloparsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeSymbol> "M_☉·Gyr-1·kpc-3" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicKiloparsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumerator> <http://www.ontology-of-units-of-measure.org/resource/om-2/solarMass> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicKiloparsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/LaTeXSymbol> "M_{\\astrosun}Gyr^{-1}kpc^{-1}" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicKiloparsec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ontology-of-units-of-measure.org/resource/om-2/UnitDivision> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicKiloparsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "M_☉/(Gyr kpc3)" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicKiloparsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeSymbol> "M_☉ Gyr-1 kpc-3" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicKiloparsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/hasDenominator> <http://www.ontology-of-units-of-measure.org/resource/om-2/gigayearCubicKiloparsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/scot/ns#> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/scot/ns#Tagcloud> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/2000/01/rdf-schema#label> "created by"@en <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/maker> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an agent as type of a foaf:Agent, who generates a Tagcloud."@en <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/sioc/ns#created_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#created_at> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/sioc/ns#Post> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#created_at> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/sioc/ns#> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#created_at> <http://www.w3.org/2000/01/rdf-schema#comment> "When this was created, in ISO 8601 format."@en <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#created_at> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#created_at> <http://www.w3.org/2002/07/owl#versionInfo> "This property is deprecated. Use dcterms:created from the Dublin Core ontology instead." <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#created_at> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DeprecatedProperty> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#created_at> <http://www.w3.org/2000/01/rdf-schema#label> "created at"@en <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#reference> <http://www.w3.org/2000/01/rdf-schema#label> "reference"@en <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#reference> <http://www.w3.org/2002/07/owl#versionInfo> "Renamed to sioc:links_to." <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#reference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DeprecatedProperty> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#reference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/sioc/ns#> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#reference> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/sioc/ns#Post> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#reference> <http://www.w3.org/2000/01/rdf-schema#comment> "Links either created explicitly or extracted implicitly on the HTML level from the Post."@en <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#reference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/types#AnnotationSet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/sioc/types#> <http://rdfs.org/sioc/types#> .
+<http://rdfs.org/sioc/types#AnnotationSet> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/2000/10/annotation-ns#Annotation> <http://rdfs.org/sioc/types#> .
+<http://rdfs.org/sioc/types#AnnotationSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/sioc/ns#Container> <http://rdfs.org/sioc/types#> .
+<http://rdfs.org/sioc/types#AnnotationSet> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes a set of annotations, for example, those created by a particular user or related to a particular topic."@en <http://rdfs.org/sioc/types#> .
+<http://rdfs.org/sioc/types#AnnotationSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rdfs.org/sioc/types#> .
+<http://rdfs.org/sioc/types#AnnotationSet> <http://www.w3.org/2000/01/rdf-schema#label> "Annotation Set"@en <http://rdfs.org/sioc/types#> .
+<http://rdfunit.aksw.org/ns/core#AutoGenerated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://rdfunit.aksw.org/ns/core#> .
+<http://rdfunit.aksw.org/ns/core#AutoGenerated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfunit.aksw.org/ns/core#TestGenerationType> <http://rdfunit.aksw.org/ns/core#> .
+<http://rdfunit.aksw.org/ns/core#AutoGenerated> <http://www.w3.org/2000/01/rdf-schema#label> "AutoGenerated"@en <http://rdfunit.aksw.org/ns/core#> .
+<http://rdfunit.aksw.org/ns/core#AutoGenerated> <http://www.w3.org/2000/01/rdf-schema#comment> "AutoGenerated: This test was created automatically"@en <http://rdfunit.aksw.org/ns/core#> .
+<http://rdfunit.aksw.org/ns/core#ManuallyGenerated> <http://www.w3.org/2000/01/rdf-schema#comment> "ManuallyGenerated: This test was created manually"@en <http://rdfunit.aksw.org/ns/core#> .
+<http://rdfunit.aksw.org/ns/core#ManuallyGenerated> <http://www.w3.org/2000/01/rdf-schema#label> "ManuallyGenerated"@en <http://rdfunit.aksw.org/ns/core#> .
+<http://rdfunit.aksw.org/ns/core#ManuallyGenerated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://rdfunit.aksw.org/ns/core#> .
+<http://rdfunit.aksw.org/ns/core#ManuallyGenerated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdfunit.aksw.org/ns/core#TestGenerationType> <http://rdfunit.aksw.org/ns/core#> .
+<http://rdvocab.info/roles/illustratorExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/roles> <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/illustratorExpression> <http://www.w3.org/2000/01/rdf-schema#label> "Illustrator (Expression)"@en <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/illustratorExpression> <http://www.w3.org/2000/01/rdf-schema#label> "Illustrator (Expression)"@de <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/illustratorExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "If the work is primarily the artistic content created by this entity, see artist and photographer."@en <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/illustratorExpression> <http://www.w3.org/2004/02/skos/core#definition> "A person, family, or corporate body contributing to an expression of a work by supplementing the primary content with drawings, diagrams, photographs, etc. "@en <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/illustratorExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdvocab.info/uri/schema/FRBRentitiesRDA/Expression> <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/illustratorExpression> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/illustratorExpression> <http://metadataregistry.org/uri/profile/RegAp/name> "illustratorExpression"@en <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/illustratorExpression> <http://www.w3.org/2004/02/skos/core#definition> "Eine Person, Familie oder Körperschaft, die an einer Expression eines Werkes mitwirkt, indem sie den primären Inhalt mit Zeichnungen, Diagrammen, Fotografien usw. ausschmückt / ergänzt. "@de <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/illustratorExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/roles/contributor> <http://rdvocab.info/roles> .
+<http://rdvocab.info/roles/illustratorExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/roles> .
+<http://simile.mit.edu/2003/10/ontologies/vraCore3#Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://simile.mit.edu/2003/10/ontologies/vraCore3#> .
+<http://simile.mit.edu/2003/10/ontologies/vraCore3#Work> <http://www.w3.org/2000/01/rdf-schema#comment> "A work record is used for physical or created objects" <http://simile.mit.edu/2003/10/ontologies/vraCore3#> .
+<http://simile.mit.edu/2003/10/ontologies/vraCore3#Work> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://simile.mit.edu/2003/10/ontologies/vraCore3#Record> <http://simile.mit.edu/2003/10/ontologies/vraCore3#> .
+<http://simile.mit.edu/2003/10/ontologies/vraCore3#Work> <http://www.w3.org/2000/01/rdf-schema#label> "Work"@en <http://simile.mit.edu/2003/10/ontologies/vraCore3#> .
+<http://spinrdf.org/sp#arg5> <http://www.w3.org/2000/01/rdf-schema#label> "arg5" <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#arg5> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/sp#arg> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#arg5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#arg5> <http://www.w3.org/2000/01/rdf-schema#comment> "The fifth argument of a function call. Further arguments are not common in SPARQL, therefore no sp:arg6, etc are defined here. However, they can be created if needed." <http://spinrdf.org/sp> .
+<http://spinrdf.org/spin#ConstraintViolation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstraintViolation> <http://www.w3.org/2000/01/rdf-schema#comment> "An object that can be created by spin:constraints to provide information about a constraint violation." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstraintViolation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstraintViolation> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint violation" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#command> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#label> "constructor" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be used to attach a \"constructor\" to a class. A constructor is a SPARQL CONSTRUCT query or INSERT/DELETE Update operation that can add initial values to the current instance. At execution time, the variable ?this is bound to the current instance. Tools can call constructors of a class and its superclasses when an instance of a class has been created. Constructors will also be used to initialize resources that have received a new rdf:type triple as a result of spin:rules firing." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#range> <http://spinrdf.org/spin#Rule> <http://spinrdf.org/spin> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/2000/01/rdf-schema#comment> "Erstellungsdatum von Irgendwas, angegeben im YYYY-MM-DD Format, z.B. 2004-04-05."@de <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/2000/01/rdf-schema#label> "created"@en <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/2000/01/rdf-schema#comment> "Date à laquelle a été créé quelque chose, au format AAAA-MM-JJ (par ex. 2004-04-05)"@fr <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/2000/01/rdf-schema#label> "vytvořeno"@cs <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/2000/01/rdf-schema#comment> "Date when something was created, in YYYY-MM-DD form. e.g. 2004-04-05"@en <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/2000/01/rdf-schema#comment> "Fecha en la que algo fue creado, en formato AAAA-MM-DD. e.g. 2004-04-05"@es <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/2000/01/rdf-schema#label> "créé"@fr <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/2000/01/rdf-schema#comment> "Datum, kdy bylo něco vytvořeno ve formátu RRRR-MM-DD, např. 2004-04-05"@cs <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/2000/01/rdf-schema#comment> "何かが作成された日付、AAAA-MM-JJの型、例えば2004-04-05。"@ja <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/2000/01/rdf-schema#label> "erstellt"@de <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/2000/01/rdf-schema#label> "作成日付"@ja <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/2000/01/rdf-schema#label> "creado"@es <http://usefulinc.com/ns/doap#> .
+<http://usefulinc.com/ns/doap#created> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://usefulinc.com/ns/doap#> <http://usefulinc.com/ns/doap#> .
+<http://purl.obolibrary.org/obo/ERO_0000007> <http://purl.obolibrary.org/obo/IAO_0000119> "http://en.wikipedia.org/wiki/Technique" <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000007> <http://www.w3.org/2000/01/rdf-schema#comment> "Protocol is added to eagle-i temporarily until a relationship between the informatio entity \"protocol\" and these planned processes is created. This class refers to the axtual process not the document" <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000007> <http://purl.obolibrary.org/obo/IAO_0000112> "Flow cytometry is a technique." <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000007> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000007> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/OBI_0000011> <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000007> <http://purl.obolibrary.org/obo/IAO_0000115> "A technique is a planned process used to accomplish a specific activity or task." <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000007> <http://www.w3.org/2000/01/rdf-schema#label> "Technique" <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000007> <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Melissa Haendel" <http://vivoweb.org/ontology/core> .
+<http://purl.obolibrary.org/obo/ERO_0000007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Beb00f02f9f8f264df8161603366ac432 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2d26359328d7b41c550e33db5afa00a0 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/ontology/bibo/"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9608545f6d505d056701152ed5c2a3c8 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://purl.obolibrary.org/obo/IAO_0000112> "Short Definition from OCLC Input Standards, EntW" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be3d6f233a81fe246068d0febd3fd3e98 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#label> "Thesis" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://purl.obolibrary.org/obo/IAO_0000115> "Works created to satisfy the requirements for an academic certification or degree; also called dissertation" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#comment> "A document created to summarize research findings associated with the completion of an academic degree."@en <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> <http://vivoweb.org/ontology/core> .
+<http://vocab.data.gov/def/drm#hasSchemaElement> <http://www.w3.org/2000/01/rdf-schema#label> "has schema element" <http://vocab.data.gov/def/drm> .
+<http://vocab.data.gov/def/drm#hasSchemaElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://vocab.data.gov/def/drm> .
+<http://vocab.data.gov/def/drm#hasSchemaElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.data.gov/def/drm> <http://vocab.data.gov/def/drm> .
+<http://vocab.data.gov/def/drm#hasSchemaElement> <http://www.w3.org/2000/01/rdf-schema#comment> "This relationship is not explicitly stated in the DRM document. It has been created because there was a need to connect the schema with the entities, relationships, etc." <http://vocab.data.gov/def/drm> .
+<http://vocab.org/whisky/terms> <http://purl.org/dc/elements/1.1/title> "Vocabulary for describing whisky varieties"@en <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://vocab.org/whisky/terms> .
+<http://vocab.org/whisky/terms> <http://www.w3.org/2000/01/rdf-schema#comment> "Created at vocamp oxford 2008"@en <http://vocab.org/whisky/terms> .
+<http://www.agls.gov.au/agls/terms/mandate> <http://purl.org/dc/terms/issued> "2007-12-19" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/mandate> <http://purl.org/dc/terms/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/mandate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/mandate> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/mandate> <http://www.w3.org/2000/01/rdf-schema#label> "Mandate"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/mandate> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific legal instrument which requires a resource to be created or made available."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/mandate> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/mandate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.agls.gov.au/agls/1.2/mandate> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/mandate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/mandate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.agls.gov.au/agls/terms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.w3.org/2002/07/owl#imports> <http://www.bbc.co.uk/ontologies/provenance> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.bbc.co.uk/ontologies/provenance/public> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/terms/> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.bbc.co.uk/ontologies/provenance/slug> "cms" <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.bbc.co.uk/ontologies/provenance/provided> "2016-02-03T15:20:48+00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/4.0/> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://purl.org/dc/elements/1.1/date> "2012-12-01"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://purl.org/dc/elements/1.1/creator> <mailto:LinkedData@bbc.co.uk> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.w3.org/2002/07/owl#versionInfo> "3.7" <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.bbc.co.uk/ontologies/provenance/Ontology> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.w3.org/2002/07/owl#priorVersion> <http://www.bbc.co.uk/ontologies/cms/3.6> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.bbc.co.uk/ontologies/provenance/version> "3.7" <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.bbc.co.uk/ontologies/provenance/changeReason> "Added Travel and Weather locator type"@en-gb <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://purl.org/dc/terms/modified> "2016-02-01"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.bbc.co.uk/ontologies/cms/3.7> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.w3.org/2000/01/rdf-schema#label> "CMS Ontology"@en-gb <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology to represent the content management systems and their interaction with the triplestore. For instance, how should an entity in the triplestore, e.g., the URI for Manchester United, be linked to an external CMS that provides more information about Manchester United, e.g., sports statistics, or how should a creative work URI in the triplestore refer to the CMS it was created. The CMS ontology provides the Linked Data Platform customers with pointers to additional information about a thing in other systems."@en-gb <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.bbc.co.uk/ontologies/provenance/provider> <mailto:Matthew.Gamble@bbc.co.uk> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/dc/elements/1.1/> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms> <http://www.bbc.co.uk/ontologies/provenance/canonicalLocation> "https://github.com/bbc/ontologies/blob/master/core/cms.ttl" <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/creativework/dateCreated> <http://www.w3.org/2000/01/rdf-schema#label> "dateCreated"@en-gb <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/dateCreated> <http://www.w3.org/2000/01/rdf-schema#comment> "Date created of CreativeWork"@en-gb <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/dateCreated> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/creativework> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/dateCreated> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.bbc.co.uk/ontologies/creativework/CreativeWork> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/dateCreated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/dateCreated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/LiveEventPage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.bbc.co.uk/ontologies/creativework/CreativeWork> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/LiveEventPage> <http://www.w3.org/2000/01/rdf-schema#comment> "This class is created to support the LiveEventPages from CPS. This will be soon deprecated for the sake of LiveCoverage"@en-gb <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/LiveEventPage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/creativework/1.4> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/LiveEventPage> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/LiveEventPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/LiveEventPage> <http://www.w3.org/2000/01/rdf-schema#label> "LiveEventPage"@en-gb <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/provenance/created> <http://www.w3.org/2000/01/rdf-schema#label> "created"@en-gb <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.bbc.co.uk/ontologies/provenance/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.bbc.co.uk/ontologies/provenance/created> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/provenance> <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.bbc.co.uk/ontologies/provenance/created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.bbc.co.uk/ontologies/provenance/created> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.bbc.co.uk/ontologies/coreconcepts/Thing> <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.bbc.co.uk/ontologies/provenance/created> <http://www.w3.org/2000/01/rdf-schema#comment> "The date when a Thing was created."@en-gb <http://www.bbc.co.uk/ontologies/provenance> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://www.linkedmodel.org/schema/vaem> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> <http://www.linkedmodel.org/schema/vaem> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://www.linkedmodel.org/schema/vaem> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#label> "created" <http://www.linkedmodel.org/schema/vaem> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1" <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of creation of the DataObject. Note that this date refers to the creation of the DataObject itself (i.e. the physical representation). Compare with nie:contentCreated." <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/created> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#DataObject> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/08/15/nao#created> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#modified> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created> <http://www.w3.org/2000/01/rdf-schema#label> "created" <http://www.semanticdesktop.org/ontologies/2007/01/19/nie> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created> <http://www.semanticdesktop.org/ontologies/2007/08/15/nrl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#integer> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the date and time that the calendar information was created by the calendar user agent in the calendar store. Note: This is analogous to the creation date and time for a file in the file system. Inspired by RFC 2445 sec. 4.8.7.1. Note that this property is a subproperty of nie:created. The domain of nie:created is nie:DataObject. It is not a superclass of UnionOf_Vevent_Vjournal_Vtodo, but since that union is conceived as an 'abstract' class, and in real-life all resources referenced by this property will also be DataObjects, than this shouldn't cause too much of a problem. Note that RFC allows ONLY UTC time values for this property." <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.semanticdesktop.org/ontologies/2007/01/19/nie#created> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created> <http://www.w3.org/2000/01/rdf-schema#label> "created" <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionOfEventJournalTodo> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
+<http://www.w3.org/2002/12/cal/ical#created> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba1069e4de00f979a968e1ff2d4a86ccf <http://www.w3.org/2002/12/cal/ical> .
+<http://www.w3.org/2002/12/cal/ical#created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/2002/12/cal/ical> .
+<http://www.w3.org/2002/12/cal/ical#created> <http://www.w3.org/2000/01/rdf-schema#label> "CREATED" <http://www.w3.org/2002/12/cal/ical> .
+<http://www.w3.org/2002/12/cal/ical#created> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t    value type: DATE-TIME" <http://www.w3.org/2002/12/cal/ical> .
+<http://www.w3.org/2002/12/cal/ical#created> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the date and time that the calendar information was created by the calendar user agent in the calendar store. Note: This is analogous to the creation date and time for a file in the file system." <http://www.w3.org/2002/12/cal/ical> .
+<http://www.w3.org/2002/12/cal/ical#created> <http://www.w3.org/2002/12/cal/icalSpec#valueType> "DATE-TIME" <http://www.w3.org/2002/12/cal/ical> .
+<http://www.w3.org/2002/12/cal/ical#created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/12/cal/ical#Value_DATE-TIME> <http://www.w3.org/2002/12/cal/ical> .
+<http://purl.org/dita/ns#created> <http://www.w3.org/2000/01/rdf-schema#label> "created" <http://purl.org/dita/ns#> .
+<http://purl.org/dita/ns#created> <http://www.w3.org/2000/01/rdf-schema#comment> "The created element specifies the document creation date using the date attribute."@en-US <http://purl.org/dita/ns#> .
+<http://purl.org/dita/ns#created> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/W3CDTF> <http://purl.org/dita/ns#> .
+<http://purl.org/dita/ns#created> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dita/ns#Doctype> <http://purl.org/dita/ns#> .
+<http://purl.org/dita/ns#created> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/created> <http://purl.org/dita/ns#> .
+<http://purl.org/dita/ns#created> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/created.html> <http://purl.org/dita/ns#> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> <http://qudt.org/schema/qudt> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/2000/01/rdf-schema#label> "created" <http://qudt.org/schema/qudt> .
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://qudt.org/schema/qudt> .
+<https://w3id.org/idsa/core/created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTimeStamp> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/created> <http://www.w3.org/2000/01/rdf-schema#comment> "The date of the creation of the Digital Content. In contrast to the ids:temporalCoverage, creation dates of ids:Representation, ids:Artifacts or any other form of meta-data, this property describes the creation date of referenced Digital Content itself."@en <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/created> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/issued> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/created> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bb37acc7a474d6718270ae03b9a0ff38b <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/created> <http://www.w3.org/2000/01/rdf-schema#label> "created"@en <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/created> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/created> <https://w3id.org/idsa/core> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/created.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:Bcreateda .
+_:Bcreateda <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcreateda <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/createda.nt> .
+_:Bcreateda <https://w3id.org/tree#value> "createda" .
+_:Bcreateda <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/createda.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:Bcreatedb .
+_:Bcreatedb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcreatedb <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/createdb.nt> .
+_:Bcreatedb <https://w3id.org/tree#value> "createdb" .
+_:Bcreatedb <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/createdb.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:Bcreatedc .
+_:Bcreatedc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcreatedc <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/createdc.nt> .
+_:Bcreatedc <https://w3id.org/tree#value> "createdc" .
+_:Bcreatedc <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/createdc.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:Bcreatedd .
+_:Bcreatedd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcreatedd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/createdd.nt> .
+_:Bcreatedd <https://w3id.org/tree#value> "createdd" .
+_:Bcreatedd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/createdd.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:Bcreatedg .
+_:Bcreatedg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcreatedg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/createdg.nt> .
+_:Bcreatedg <https://w3id.org/tree#value> "createdg" .
+_:Bcreatedg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/createdg.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:Bcreatedh .
+_:Bcreatedh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcreatedh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/createdh.nt> .
+_:Bcreatedh <https://w3id.org/tree#value> "createdh" .
+_:Bcreatedh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/createdh.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:Bcreatedi .
+_:Bcreatedi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcreatedi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/createdi.nt> .
+_:Bcreatedi <https://w3id.org/tree#value> "createdi" .
+_:Bcreatedi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/createdi.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:Bcreatedm .
+_:Bcreatedm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcreatedm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/createdm.nt> .
+_:Bcreatedm <https://w3id.org/tree#value> "createdm" .
+_:Bcreatedm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/createdm.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:Bcreatedo .
+_:Bcreatedo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcreatedo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/createdo.nt> .
+_:Bcreatedo <https://w3id.org/tree#value> "createdo" .
+_:Bcreatedo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/createdo.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:Bcreatedp .
+_:Bcreatedp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcreatedp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/createdp.nt> .
+_:Bcreatedp <https://w3id.org/tree#value> "createdp" .
+_:Bcreatedp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/createdp.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:Bcreatedr .
+_:Bcreatedr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcreatedr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/createdr.nt> .
+_:Bcreatedr <https://w3id.org/tree#value> "createdr" .
+_:Bcreatedr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/createdr.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:Bcreatedt .
+_:Bcreatedt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcreatedt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/createdt.nt> .
+_:Bcreatedt <https://w3id.org/tree#value> "createdt" .
+_:Bcreatedt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/createdt.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:B3X2Bcreated .
+_:B3X2Bcreated <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:B3X2Bcreated <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/3+created.nt> .
+_:B3X2Bcreated <https://w3id.org/tree#value> "3" .
+_:B3X2Bcreated <https://w3id.org/tree#value> "created" .
+_:B3X2Bcreated <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/3+created.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BaX2Bcreated .
+_:BaX2Bcreated <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bcreated <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+created.nt> .
+_:BaX2Bcreated <https://w3id.org/tree#value> "a" .
+_:BaX2Bcreated <https://w3id.org/tree#value> "created" .
+_:BaX2Bcreated <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+created.nt> <https://w3id.org/tree#remainingItems> "23"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BbX2Bcreated .
+_:BbX2Bcreated <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bcreated <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+created.nt> .
+_:BbX2Bcreated <https://w3id.org/tree#value> "b" .
+_:BbX2Bcreated <https://w3id.org/tree#value> "created" .
+_:BbX2Bcreated <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+created.nt> <https://w3id.org/tree#remainingItems> "65"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BcX2Bcreated .
+_:BcX2Bcreated <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Bcreated <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+created.nt> .
+_:BcX2Bcreated <https://w3id.org/tree#value> "c" .
+_:BcX2Bcreated <https://w3id.org/tree#value> "created" .
+_:BcX2Bcreated <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+created.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BcreatedX2Bd .
+_:BcreatedX2Bd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcreatedX2Bd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/created+d.nt> .
+_:BcreatedX2Bd <https://w3id.org/tree#value> "created" .
+_:BcreatedX2Bd <https://w3id.org/tree#value> "d" .
+_:BcreatedX2Bd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/created+d.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BcreatedX2Be .
+_:BcreatedX2Be <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcreatedX2Be <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/created+e.nt> .
+_:BcreatedX2Be <https://w3id.org/tree#value> "created" .
+_:BcreatedX2Be <https://w3id.org/tree#value> "e" .
+_:BcreatedX2Be <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/created+e.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BcreatedX2Bf .
+_:BcreatedX2Bf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcreatedX2Bf <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/created+f.nt> .
+_:BcreatedX2Bf <https://w3id.org/tree#value> "created" .
+_:BcreatedX2Bf <https://w3id.org/tree#value> "f" .
+_:BcreatedX2Bf <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/created+f.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BcreatedX2Bg .
+_:BcreatedX2Bg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcreatedX2Bg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/created+g.nt> .
+_:BcreatedX2Bg <https://w3id.org/tree#value> "created" .
+_:BcreatedX2Bg <https://w3id.org/tree#value> "g" .
+_:BcreatedX2Bg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/created+g.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BcreatedX2Bi .
+_:BcreatedX2Bi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcreatedX2Bi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/created+i.nt> .
+_:BcreatedX2Bi <https://w3id.org/tree#value> "created" .
+_:BcreatedX2Bi <https://w3id.org/tree#value> "i" .
+_:BcreatedX2Bi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/created+i.nt> <https://w3id.org/tree#remainingItems> "23"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BcreatedX2Bl .
+_:BcreatedX2Bl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcreatedX2Bl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/created+l.nt> .
+_:BcreatedX2Bl <https://w3id.org/tree#value> "created" .
+_:BcreatedX2Bl <https://w3id.org/tree#value> "l" .
+_:BcreatedX2Bl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/created+l.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BcreatedX2Bo .
+_:BcreatedX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcreatedX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/created+o.nt> .
+_:BcreatedX2Bo <https://w3id.org/tree#value> "created" .
+_:BcreatedX2Bo <https://w3id.org/tree#value> "o" .
+_:BcreatedX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/created+o.nt> <https://w3id.org/tree#remainingItems> "17"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BcreatedX2Bp .
+_:BcreatedX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcreatedX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/created+p.nt> .
+_:BcreatedX2Bp <https://w3id.org/tree#value> "created" .
+_:BcreatedX2Bp <https://w3id.org/tree#value> "p" .
+_:BcreatedX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/created+p.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BcreatedX2Br .
+_:BcreatedX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcreatedX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/created+r.nt> .
+_:BcreatedX2Br <https://w3id.org/tree#value> "created" .
+_:BcreatedX2Br <https://w3id.org/tree#value> "r" .
+_:BcreatedX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/created+r.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BcreatedX2Bs .
+_:BcreatedX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcreatedX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/created+s.nt> .
+_:BcreatedX2Bs <https://w3id.org/tree#value> "created" .
+_:BcreatedX2Bs <https://w3id.org/tree#value> "s" .
+_:BcreatedX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/created+s.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BcreatedX2Bt .
+_:BcreatedX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcreatedX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/created+t.nt> .
+_:BcreatedX2Bt <https://w3id.org/tree#value> "created" .
+_:BcreatedX2Bt <https://w3id.org/tree#value> "t" .
+_:BcreatedX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/created+t.nt> <https://w3id.org/tree#remainingItems> "36"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BcreatedX2Bu .
+_:BcreatedX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcreatedX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/created+u.nt> .
+_:BcreatedX2Bu <https://w3id.org/tree#value> "created" .
+_:BcreatedX2Bu <https://w3id.org/tree#value> "u" .
+_:BcreatedX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/created+u.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/created.nt> <https://w3id.org/tree#relation> _:BcreatedX2Bw .
+_:BcreatedX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcreatedX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/created+w.nt> .
+_:BcreatedX2Bw <https://w3id.org/tree#value> "created" .
+_:BcreatedX2Bw <https://w3id.org/tree#value> "w" .
+_:BcreatedX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/created+w.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .

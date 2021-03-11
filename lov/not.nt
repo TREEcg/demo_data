@@ -1,0 +1,667 @@
+<https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "A concept representing an activity that was not executed in full, for example, due to constraint violation. Such an activity usually marks the point when the plan execution was interrupted due to some problem." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Activity> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Failed Activity" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPermittedAgent> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bfa76e30a8936967a65c40755c144ff7a <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPermittedAgent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ep-plan#ResponsibleAgent> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPermittedAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPermittedAgent> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ep-plan#isPermittedAgentFor> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPermittedAgent> <http://www.w3.org/2000/01/rdf-schema#label> "hasPermittedAgent" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPermittedAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "ep-plan:hasPermittedAgent links ep-plan:Step or the overall ep-plan:Plan to an ep-plan:ResponsibleAgent denoting that  the agent is allowed to assume some form of responsibility during the execution. Please note that not all linked ep-plan:ResponsibleAgent(s) must also appear in the execution trace as ep-plan:Agent. ep-plan:hasPermittedAgent relationship merely indicates that it is possible for this agent to asssume some responsibility during the execution." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#violated> <http://www.w3.org/2000/01/rdf-schema#comment> "ep-plan:satisfied links ep-plan:Activity or ep-plan:Communication to a ep-plan:Constraint. The property indicates that the execution trace element did not satisfy the constraint." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#violated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#violated> <http://www.w3.org/2000/01/rdf-schema#label> "violated" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#violated> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba3ac1398fcce79ac8f006c068c686088 <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#violated> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ep-plan#violatedBy> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#violated> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ep-plan#evaluatedAgainst> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#violated> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ep-plan#Constraint> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/ep-plan#isElementOfPlan> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ep-plan#Plan> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#label> "isSubPlanOfPlan" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isSubPlanOfPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isSubPlanOfPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ep-plan#Plan> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isSubPlanOfPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "ep-plan:Plan may be a subplan of another bigger ep-plan:Plan. The relation ep-plan:isSubPlanOfPlan is used to state the link among the two different plans. Note that if p1 is a sub-plan of p2, p1 will not necessarily be a step of p2. A multistep will represent p1 in p2, and link to p1 with the hasStepDecomposition relationship." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "hasConstraint" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0796b9357a8f23f8a316a946ddc144a1 <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ep-plan#Constraint> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "ep-plan:hasConstraint links ep-plan:Step, ep-plan:CommunicationSpec or ep-plan:Plan to a ep-plan:Constraint. Please note, that we do not stipulate that this constriant must be strictly satisfied before the plan can continue. This is to enable inclusions of constraints defined by policies which can be violated under certain conditions and to also enable capture of incorrect behaviour of a system (e.g. a plan ignored a constriant)." <https://w3id.org/ep-plan> .
+<http://data.ign.fr/def/ignf#Ellipsoid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/ignf> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#Ellipsoid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#Ellipsoid> <http://www.w3.org/2000/01/rdf-schema#comment> "Surface formed by the rotation of an ellipse about its minor axis, defined by a semi-major axis and a flattening parameter and fairly geocentric. NB : It is a mathematical model of the geoid, i.e. the Earth without its relief. Many geodetic ellipsoids exist. Cf. ISO 19111:2007:2007-07, part 10.2.2, table 36 and annex B.3.2.3."@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#Ellipsoid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#Ellipsoid> <http://www.w3.org/2000/01/rdf-schema#comment> "Surface de révolution engendrée par une ellipse tournant autour de son petit axe, définie par le rayon équatorial et un paramètre d'aplatissement, et sensiblement géocentrique. Note : Il s'agit d'un modèle mathématique du géoïde, c'est-à-dire de la Terre débarrassée de son relief. Il existe de nombreux ellipsoïdes géodésiques. Cf. ISO 19111:2007:2007-07, partie 10.2.2, tableau 36 et annexe B.3.2.3."@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#Ellipsoid> <http://www.w3.org/2000/01/rdf-schema#label> "Ellipsoïde"@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#Ellipsoid> <http://www.w3.org/2000/01/rdf-schema#label> "Ellipsoid"@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#Ellipsoid> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B210bbf786c2d80c4bb294c5d5c8d54f0 <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#VerticalCRS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/ignf> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#VerticalCRS> <http://www.w3.org/2000/01/rdf-schema#label> "Système de coordonnées de référence vertical"@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#VerticalCRS> <http://www.w3.org/2000/01/rdf-schema#comment> "Système de coordonnées de référence à une dimension, associé à un référentiel vertical, et utilisé pour enregistrer des hauteurs ou des profondeurs. Les hauteurs ellipsoïdales ne sont pas enregistrées à l'aide d'un système de coordonnées de référence vertical, mais au sein d'un tuple de coordonnées 3D défini dans un système de coordonnées de référence géodésique 3D. Cf. ISO 19111:2007:2007-07, parties 8.2.2.b, tableau 14 et annexe B.1.2.1.b."@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#VerticalCRS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#VerticalCRS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#VerticalCRS> <http://www.w3.org/2000/01/rdf-schema#label> "Vertical coordinate reference system"@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#VerticalCRS> <http://www.w3.org/2000/01/rdf-schema#comment> "One-dimensional coordinate reference system associated with a vertical datum and used for recording heights or depths.Ellipsoidal heights are not captured in a vertical coordinate reference system but as part of a 3D coordinates tuple defined in a geodetic 3D coordinate reference system. Cf. ISO 19111:2007:2007-07, parts 8.2.2.b, table 14 and annex B.1.2.1.b."@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#VerticalCRS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.ign.fr/def/ignf#SingleCRS> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#VerticalCRS> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bea31f5b1e0da26aab7c708a01176a7c9 <http://data.ign.fr/def/ignf> .
+<http://data.lirmm.fr/ontologies/food#vitaminB1Per100g> <http://www.w3.org/2000/01/rdf-schema#comment> "Note that vitamin B1 is also known as thiamin" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB1Per100g> <http://www.w3.org/2000/01/rdf-schema#label> "Nutrition data: vitamin B1 (in g) per 100g (or 100ml for liquids)" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB1Per100g> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/food#Food> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB1Per100g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB1Per100g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB1Per100g> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB9Per100g> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/food#Food> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB9Per100g> <http://www.w3.org/2000/01/rdf-schema#comment> "Note that vitamin B9 is also known as folacin or folic acid or vitamin M" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB9Per100g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB9Per100g> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB9Per100g> <http://www.w3.org/2000/01/rdf-schema#label> "Nutrition data: vitamin B9 (in g) per 100g (or 100ml for liquids)" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB9Per100g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#biotinPer100g> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/food#Food> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#biotinPer100g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#biotinPer100g> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#biotinPer100g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#biotinPer100g> <http://www.w3.org/2000/01/rdf-schema#label> "Nutrition data: biotin (in g) per 100g (or 100ml for liquids)" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#biotinPer100g> <http://www.w3.org/2000/01/rdf-schema#comment> "Note that biotin is also known as vitamin H or vitamin B7" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#pantothenicAcidPer100g> <http://www.w3.org/2000/01/rdf-schema#comment> "Note that pantothenic acid is also known as vitamin B5" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#pantothenicAcidPer100g> <http://www.w3.org/2000/01/rdf-schema#label> "Nutrition data: pantothenic acid (in g) per 100g (or 100ml for liquids)" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#pantothenicAcidPer100g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#pantothenicAcidPer100g> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/food#Food> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#pantothenicAcidPer100g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#pantothenicAcidPer100g> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB2Per100g> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/food#Food> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB2Per100g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB2Per100g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB2Per100g> <http://www.w3.org/2000/01/rdf-schema#comment> "Note that vitamin B2 is also known as riboflavin" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB2Per100g> <http://www.w3.org/2000/01/rdf-schema#label> "Nutrition data: vitamin B2 (in g) per 100g (or 100ml for liquids)" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB2Per100g> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#Ingredient> <http://www.w3.org/2000/01/rdf-schema#label> "An ingredient : a certain quantity of food that is part of another food" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#Ingredient> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an ingredient line in a recipe (for a Dish) or an ingredient listed in the ingredient list (for a Product).\n\nWe need to specify a quantity and unit, so the relation is not binary. So the value for the containsIngredient property of a Food object is an object of the IngredientAmount class (instead of a Food object or string directly). See http://www.w3.org/TR/swbp-n-aryRelations/ for details." <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#Ingredient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#Ingredient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB3Per100g> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB3Per100g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB3Per100g> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/food#Food> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB3Per100g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB3Per100g> <http://www.w3.org/2000/01/rdf-schema#comment> "Note that vitamin B3 is also known as vitamin Pp or niacin or nicotinic acid" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminB3Per100g> <http://www.w3.org/2000/01/rdf-schema#label> "Nutrition data: vitamin B3 (in g) per 100g (or 100ml for liquids)" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminCPer100g> <http://www.w3.org/2000/01/rdf-schema#comment> "Note that vitamin C is also known as L-ascorbic acid" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminCPer100g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminCPer100g> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/food#Food> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminCPer100g> <http://www.w3.org/2000/01/rdf-schema#label> "Nutrition data: vitamin C (in g) per 100g (or 100ml for liquids)" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminCPer100g> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#vitaminCPer100g> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/passim#isAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://data.lirmm.fr/ontologies/passim> .
+<http://data.lirmm.fr/ontologies/passim#isAccessibilityForDisabledPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.lirmm.fr/ontologies/passim> .
+<http://data.lirmm.fr/ontologies/passim#isAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> <http://data.lirmm.fr/ontologies/passim> .
+<http://data.lirmm.fr/ontologies/passim#isAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#label> "isAccessibilityForDisabledPerson" <http://data.lirmm.fr/ontologies/passim> .
+<http://data.lirmm.fr/ontologies/passim#isAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"isAccessibilityForDisabledPerson\" represents if the transport is for the disabled person or not." <http://data.lirmm.fr/ontologies/passim> .
+<http://data.lirmm.fr/ontologies/passim#isAccessibilityForDisabledPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/passim> .
+<http://data.lirmm.fr/ontologies/passim#isWebSiteAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://data.lirmm.fr/ontologies/passim> .
+<http://data.lirmm.fr/ontologies/passim#isWebSiteAccessibilityForDisabledPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.lirmm.fr/ontologies/passim> .
+<http://data.lirmm.fr/ontologies/passim#isWebSiteAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#comment> "The property \"isWebSiteAccessibilityForDisabledPerson\" represents if the website of the transport is for the disabled person or not." <http://data.lirmm.fr/ontologies/passim> .
+<http://data.lirmm.fr/ontologies/passim#isWebSiteAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/passim#TransportServiceInformation> <http://data.lirmm.fr/ontologies/passim> .
+<http://data.lirmm.fr/ontologies/passim#isWebSiteAccessibilityForDisabledPerson> <http://www.w3.org/2000/01/rdf-schema#label> "isWebSiteAccessibilityForDisabledPerson" <http://data.lirmm.fr/ontologies/passim> .
+<http://data.lirmm.fr/ontologies/passim#isWebSiteAccessibilityForDisabledPerson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/passim> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CivilParish> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf66b4d1c6e1e67ec7534bbd23bcaaa6c <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CivilParish> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.ordnancesurvey.co.uk/ontology/admingeo/CivilAdministrativeArea> <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CivilParish> <http://www.w3.org/2000/01/rdf-schema#label> "Civil Parish"@en <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CivilParish> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb3026769a34e917ab5bbce7ecf367e3d <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CivilParish> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B85192accf90bba5095bd66d0300707e0 <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CivilParish> <http://www.w3.org/2000/01/rdf-schema#comment> "Parishes are subdivisions of local authorities in many parts of England, and their councils are the most local level of government. Unlike electoral wards/divisions however, parishes are not found in all parts of England. The Welsh equivalents are communities. Note that the full term for administrative parishes is &apos;civil parishes&apos;, to distinguish them from the ecclesiastical parishes which are found in all parts of the UK."@en <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CivilParish> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be4ce61d5f200ebcc9e142eef9d7837e8 <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CivilParish> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CivilParish> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ordnancesurvey.co.uk/ontology/admingeo.owl> <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CivilParish> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba3ad581f198f56b103ee5de778705980 <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CivilParish> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6f0dbe50e17926af7caa63067495cdb4 <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CivilParish> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1b93b7838587450eabdedf4a86409710 <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CountyElectoralDivision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5f10e9efcc51a16bbdb06caf0c3f0d34 <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CountyElectoralDivision> <http://www.w3.org/2000/01/rdf-schema#label> "County Electoral Division"@en <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CountyElectoralDivision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B39f747dfc2e4523023986cd00a283df9 <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CountyElectoralDivision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.ordnancesurvey.co.uk/ontology/admingeo/CivilVotingArea> <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CountyElectoralDivision> <http://www.w3.org/2000/01/rdf-schema#comment> "Apart from the special cases of the Isles of Scilly and the Greater London Authority (GLA), the English county councils are the only type of local authority in the UK which does not use standard electoral wards/divisions for electing councillors. Instead they use their own larger units, which are confusingly also termed electoral divisions. These county electoral divisions must be confined within district boundaries, but need not be based on whole electoral wards. Like electoral wards/divisions, county electoral divisions are defined by the Boundary Committee for England (BCFE)."@en <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CountyElectoralDivision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B93900c849df7da9187336ed34b56215b <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CountyElectoralDivision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bedfec7df939dd5c52cd9b7f19835993f <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CountyElectoralDivision> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ordnancesurvey.co.uk/ontology/admingeo.owl> <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/CountyElectoralDivision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.opengis.net/ont/geosparql#sfDisjoint> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B35f1171425850083dcfeebd914c64b81 <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B2ea1aac4d876e9548054a73f9e6f61a4 <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B71c77fc3cf49cd22037a3353ad0699eb <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint> <http://www.w3.org/2000/01/rdf-schema#label> "disjoint"@en <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ordnancesurvey.co.uk/ontology/spatialrelations.owl> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The boundaries and interiors of the two objects do not intersect, i.e. they have no points in common." <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B923887f66b10b15dc85071d7ce686fb2 <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/disjoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B42107aca2b6f390dadfe42ce20b9af43 <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ordnancesurvey.co.uk/ontology/spatialrelations.owl> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains> <http://www.w3.org/2000/01/rdf-schema#comment> "The interior of one object completely contains the interior of the other. Their boundaries may or may not intersect." <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B7594a7ddff02acfb6b7b0e99cfcfed3f <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.opengis.net/ont/geosparql#sfContains> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains"@en <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches> <http://www.w3.org/2000/01/rdf-schema#label> "touches"@en <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B8cc98aa94be186f48a2592b77b6cbc85 <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ordnancesurvey.co.uk/ontology/spatialrelations.owl> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches> <http://www.w3.org/2000/01/rdf-schema#comment> "The boundaries of the two objects intersect but their interiors do not." <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B65da569826a70346ff56fd6a79cc27d9 <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/touches> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.opengis.net/ont/geosparql#sfTouches> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within> <http://www.w3.org/2000/01/rdf-schema#comment> "The interior of one object is completely within the interior of the other object. Their boundaries may or may not intersect." <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within> <http://www.w3.org/2002/07/owl#inverseOf> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/contains> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.opengis.net/ont/geosparql#sfWithin> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B266321b489c0633cc2029b22986171b6 <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B4300d66138bac5fea859e7f7ba6722be <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within> <http://www.w3.org/2000/01/rdf-schema#label> "within"@en <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.ordnancesurvey.co.uk/ontology/spatialrelations/within> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opengis.net/ont/geosparql#SpatialObject> <http://data.ordnancesurvey.co.uk/ontology/spatialrelations/> .
+<http://data.press.net/ontology/stuff/notablyAssociatedWith> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.press.net/ontology/stuff/> .
+<http://data.press.net/ontology/stuff/notablyAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.press.net/ontology/stuff/Stuff> <http://data.press.net/ontology/stuff/> .
+<http://data.press.net/ontology/stuff/notablyAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/stuff/> <http://data.press.net/ontology/stuff/> .
+<http://data.press.net/ontology/stuff/notablyAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.press.net/ontology/stuff/Stuff> <http://data.press.net/ontology/stuff/> .
+<http://data.press.net/ontology/stuff/notablyAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#label> "Property that notably associates stuff together"@en <http://data.press.net/ontology/stuff/> .
+<http://data.press.net/ontology/stuff/notablyAssociatedWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that notably associates stuff together, for example Karl Lagerfeld is notably associated with Fashion"@en <http://data.press.net/ontology/stuff/> .
+<http://data.press.net/ontology/stuff/notablyAssociatedWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.press.net/ontology/stuff/> .
+<http://data.semanticweb.org/ns/swc/ontology#TrackEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#TrackEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Track Event" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#TrackEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t\n\t\t\t<p>\n\t\t\t\tA track groups all those sessions or events at a conference or workshop that belong to a common, overall theme. Depending on the conference, tracks can be quite generic, such as \"Research\" or \"Industrial\", but can also be more specific, such as \"Semantic Web\" or \"Numismatics\". SWC does not define any specific tracks, since conferences often differ so much with respect to how they structure their tracks, that it would be pointless to try and find a set of tracks that would suit all conferences.\n\t\t\t</p>\n\t\t\t<p>Sub-classes of TrackEvent which were defined in previous versions of the SWC ontology are now deprecated.</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#TrackEvent> <http://purl.org/dc/terms/subject> <http://data.semanticweb.org/ns/swc/ontology#AcademicEvent> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#TrackEvent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#TrackEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.semanticweb.org/ns/swc/ontology#AcademicEvent> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#NonAcademicEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Non-academic Event" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#NonAcademicEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t\n\t\t\t<p>\n\t\t\t\tIn the context of SWC, a non-academic event is any kind or <a href=\"#OrganisedEvent\">organised event</a> which does not concern the topic or theme of the conference as such. Examples are breaks, dinners, parties, etc.\n\t\t\t</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#NonAcademicEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#NonAcademicEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.semanticweb.org/ns/swc/ontology#OrganisedEvent> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#NonAcademicEvent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#NonAcademicEvent> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Event> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#hasNotificationDeadline> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#hasNotificationDeadline> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>The call classes have been deprecated in SWC. Instead, we suggest to use the <a href=\"http://sw.deri.org/2005/08/conf/cfp\">CfP ontology</a>.</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#hasNotificationDeadline> <http://www.w3.org/2000/01/rdf-schema#label> "has notification deadline" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#hasNotificationDeadline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.semanticweb.org/ns/swc/ontology#Call> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#hasNotificationDeadline> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#hasNotificationDeadline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DeprecatedProperty> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#memberOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://xmlns.com/foaf/0.1/member> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#memberOf> <http://www.w3.org/2000/01/rdf-schema#label> "member of" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#memberOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Person> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#memberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>FOAF does not define an inverse of <code>foaf:member</code>, so SWC does it.</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#memberOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Group> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#memberOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#CommunalPlace> <http://www.w3.org/2000/01/rdf-schema#label> "Communal Place" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#CommunalPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t\n\t\t\t<p>\n\t\t\t\tA location at the <a href=\"#ConferenceVenuePlace\">conference venue</a> (or elsewhere), which is not a meeting room. \n\t\t\t</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#CommunalPlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#CommunalPlace> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#CommunalPlace> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Place> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#CommunalPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#SystemDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.semanticweb.org/ns/swc/ontology#Paper> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#SystemDescription> <http://www.w3.org/2000/01/rdf-schema#label> "System Description" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#SystemDescription> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Document> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#SystemDescription> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#SystemDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>\n\t\t\t\tA type of paper which is mainly describes the properties, implementation or architecture of an system (such as a software system).\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t\tDeprecating this: it's too specific for, not generic enough to apply for most conferences.\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#SystemDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DeprecatedClass> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#03_roles> <http://www.w3.org/2000/01/rdf-schema#label> "Roles" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#03_roles> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>\n\t\t\t\tOne of the basic design choices in SWC is to use role modelling for describing the different functions at a conference, such as chairs, reviewers, etc. For any particular role at a given conference, the <code>swc:Role</code> class or a sub-class will be instantiated. This role instance stands in relation to a person (who plays the role) and an event. The figure below gives an example showing how to model the role of the metadata chair (or \"dog food tsar\") at ISWC+ASWC2007, which was held by Knud Möller (together with Tom Heath, not shown in the figure).\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t\tNote that the metadata chair role is not modelled with its own dedicated class (although it could have been). Instead, an instance of the generic <a href=\"#Chair\">Chair</a> class is used and labelled accordingly.\n\t\t\t</p>\n\t\t\t<div align=\"center\">\n\t\t\t\t<a href=\"documentation/20090510-Roles_new.pdf\"><img src=\"documentation/20090510-Roles_new.png\" /></a>\n\t\t\t</div>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.totl.net/game/nothing> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates nothing is in a location." <http://data.totl.net/game/> .
+<http://data.totl.net/game/nothing> <http://www.w3.org/2000/01/rdf-schema#label> "Nothing" <http://data.totl.net/game/> .
+<http://data.totl.net/game/nothing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://data.totl.net/game/Nothing> <http://data.totl.net/game/> .
+<http://data.totl.net/game/contains> <http://www.w3.org/2000/01/rdf-schema#label> "contains" <http://data.totl.net/game/> .
+<http://data.totl.net/game/contains> <http://www.w3.org/2000/01/rdf-schema#comment> "The piece(s) in a location of a location state, or nothing." <http://data.totl.net/game/> .
+<http://data.totl.net/game/contains> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/LocationState> <http://data.totl.net/game/> .
+<http://data.totl.net/game/contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/contains> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Pieces> <http://data.totl.net/game/> .
+<http://data.totl.net/game/Player> <http://www.w3.org/2000/01/rdf-schema#comment> "A player in a game. Only indicates an abstract side for the type of game, not a specific player in a single game." <http://data.totl.net/game/> .
+<http://data.totl.net/game/Player> <http://www.w3.org/2000/01/rdf-schema#label> "Player" <http://data.totl.net/game/> .
+<http://data.totl.net/game/Player> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.totl.net/game/> .
+<http://data.totl.net/game/Player> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> <http://data.totl.net/game/> .
+<http://dati.camera.it/ocd/note> <http://www.w3.org/2000/01/rdf-schema#label> "note" <http://dati.camera.it/ocd/> .
+<http://dati.camera.it/ocd/note> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dati.camera.it/ocd/> .
+<http://dati.camera.it/ocd/note> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dati.camera.it/ocd/documenti> <http://dati.camera.it/ocd/> .
+<http://dbpedia.org/ontology/Town> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q3957> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Town> <http://www.w3.org/2000/01/rdf-schema#label> "Stadt"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Town> <http://www.w3.org/2000/01/rdf-schema#label> "stad"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Town> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Settlement> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Town> <http://www.w3.org/2000/01/rdf-schema#comment> "a settlement ranging from a few hundred to several thousand (occasionally hundreds of thousands). The precise meaning varies between countries and is not always a matter of legal definition. Usually, a town is thought of as larger than a village but smaller than a city, though there are exceptions to this rule."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Town> <http://www.w3.org/2000/01/rdf-schema#label> "miasteczko"@pl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Town> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Town> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Town> <http://www.w3.org/2000/01/rdf-schema#label> "ville"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Town> <http://www.w3.org/2000/01/rdf-schema#label> "町"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Town> <http://www.w3.org/2000/01/rdf-schema#label> "πόλη"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Town> <http://www.w3.org/2000/01/rdf-schema#label> "town"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Town> <http://www.w3.org/2000/01/rdf-schema#label> "baile"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Town> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Castle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Building> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Castle> <http://www.w3.org/2000/01/rdf-schema#comment> "Castles often are, but need not be a military structure. They can serve for status, pleasure and hunt as well."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Castle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Castle> <http://www.w3.org/2000/01/rdf-schema#label> "castello"@it <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Castle> <http://www.w3.org/2000/01/rdf-schema#label> "城"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Castle> <http://www.w3.org/2000/01/rdf-schema#label> "château"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Castle> <http://www.w3.org/2000/01/rdf-schema#label> "caisleán"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Castle> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q23413> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Castle> <http://www.w3.org/2000/01/rdf-schema#label> "성 (건축)"@ko <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Castle> <http://www.w3.org/2000/01/rdf-schema#label> "κάστρο"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Castle> <http://www.w3.org/2000/01/rdf-schema#label> "castle"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Castle> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Castle> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Castle> <http://www.w3.org/2000/01/rdf-schema#label> "burg"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Castle> <http://www.w3.org/2000/01/rdf-schema#label> "kasteel"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tower> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q12518> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tower> <http://www.w3.org/2000/01/rdf-schema#label> "πύργος"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tower> <http://www.w3.org/2000/01/rdf-schema#label> "Turm"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tower> <http://www.w3.org/2000/01/rdf-schema#label> "tower"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tower> <http://www.w3.org/2000/01/rdf-schema#label> "toren"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tower> <http://www.w3.org/2002/07/owl#disjointWith> <http://dbpedia.org/ontology/Person> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tower> <http://www.w3.org/2000/01/rdf-schema#label> "túr"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tower> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Tower> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tower> <http://www.w3.org/2000/01/rdf-schema#label> "塔"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tower> <http://www.w3.org/2000/01/rdf-schema#comment> "A Tower is a kind of structure (not necessarily a building) that is higher than the rest"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tower> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/ArchitecturalStructure> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Monument> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Place> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Monument> <http://www.w3.org/2000/01/rdf-schema#label> "Denkmal"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Monument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Monument> <http://www.w3.org/2000/01/rdf-schema#label> "μνημείο"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Monument> <http://www.w3.org/2000/01/rdf-schema#label> "モニュメント"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Monument> <http://www.w3.org/2000/01/rdf-schema#label> "séadchomhartha"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Monument> <http://www.w3.org/2000/01/rdf-schema#comment> "A type of structure (a statue or an art object) created to commemorate a person or important event, not necessarily of a catastrophic nature."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Monument> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Monument> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Monument> <http://www.w3.org/2000/01/rdf-schema#label> "monument"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Monument> <http://www.w3.org/2000/01/rdf-schema#label> "monument"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Monument> <http://www.w3.org/2000/01/rdf-schema#label> "monument"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Monument> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q4989906> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/protectionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/protectionStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The sort of status that is granted to a protected Building or Monument. This is not about being protected or not, this is about the nature of the protection regime. E.g., in the Netherlands the protection status 'rijksmonument' points to more elaborate protection than other statuses."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/protectionStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Place> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/protectionStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Aanduiding van het soort beschermingsregime. Bijv. 'rijksmonument' in Nederland of 'Monument Historique' in Belgie of Frankrijk"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/protectionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "monumentStatus"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/protectionStatus> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:protectionStatus> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/protectionStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/protectionStatus> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://dbpedia.org/ontology/Status> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/protectionStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/protectionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "monument protection status"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/classis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/classis> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:classis> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/classis> <http://www.w3.org/2000/01/rdf-schema#label> "clase (biología)"@es <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/classis> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.wikidata.org/entity/P77> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/classis> <http://www.w3.org/2000/01/rdf-schema#comment> "the living thing class (from the Latin \"classis\"), according to the biological taxonomy"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/classis> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Species> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/classis> <http://www.w3.org/2000/01/rdf-schema#label> "klasse"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/classis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/classis> <http://www.w3.org/2000/01/rdf-schema#comment> "Troisième niveau de la classification classique (c’est-à-dire n’utilisant pas la notion de distance génétique) des espèces vivantes (voir systématique)."@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/classis> <http://www.w3.org/2000/01/rdf-schema#label> "綱_(分類学)"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/classis> <http://www.w3.org/2000/01/rdf-schema#label> "classis"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/classis> <http://www.w3.org/2000/01/rdf-schema#label> "classe (biologie)"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/operatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/operatedBy> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:operatedBy> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/operatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "operated by"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/operatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Organisation or city who is the operator of an ArchitecturalStructure, PublicTransitSystem, etc. Not to confuse with maintainer or the owner."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/operatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/operatedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#coparticipatesWith> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/operatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "betrieben von"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketStages> <http://www.w3.org/2000/01/rdf-schema#label> "number of rocket stages"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketStages> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketStages> <http://www.w3.org/2000/01/rdf-schema#label> "Anzahl von Raketenstufen"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketStages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketStages> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:rocketStages> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketStages> <http://www.w3.org/2000/01/rdf-schema#comment> "number of stages, not including boosters"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketStages> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rocketStages> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Rocket> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/shipDraft> <http://www.w3.org/2000/01/rdf-schema#comment> "The draft (or draught) of a ship's hull is the vertical distance between the waterline and the bottom of the hull (keel), with the thickness of the hull included; in the case of not being included the draft outline would be obtained."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/shipDraft> <http://www.w3.org/2000/01/rdf-schema#label> "ship draft (μ)"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/shipDraft> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/shipDraft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/shipDraft> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:shipDraft> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/shipDraft> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/shipDraft> <http://www.w3.org/2000/01/rdf-schema#label> "Schiffsentwurf (μ)"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/shipDraft> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Ship> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/lineLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/lineLength> <http://www.w3.org/2000/01/rdf-schema#label> "Linienlänge (μ)"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/lineLength> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:lineLength> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/lineLength> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/RouteOfTransportation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/lineLength> <http://www.w3.org/2000/01/rdf-schema#comment> "Length of the line. Wikipedians usually do not differentiate between track length and line lenght."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/lineLength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/lineLength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/lineLength> <http://www.w3.org/2000/01/rdf-schema#label> "line length (μ)"@en <http://dbpedia.org/ontology/> .
+<http://vocab.deri.ie/csp#Not> <http://www.w3.org/2000/01/rdf-schema#label> "Not" <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp#Not> <http://www.w3.org/2000/01/rdf-schema#comment> "Models the negation of a logical sub-expression NOT(BoolExpr)." <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp#Not> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/csp#BoolExpr> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp#Not> <http://www.w3.org/2002/07/owl#disjointWith> <http://vocab.deri.ie/csp#Or> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp#Not> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp#Not> <http://www.w3.org/2002/07/owl#disjointWith> <http://vocab.deri.ie/csp#And> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp#Not> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp#not> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.deri.ie/csp#BoolExpr> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp#not> <http://www.w3.org/2000/01/rdf-schema#label> "not" <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp#not> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.deri.ie/csp#Not> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp#not> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a logical negation operator to its argument." <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp#not> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/ppo#Not> <http://www.w3.org/2000/01/rdf-schema#comment> "Logical Negation" <http://vocab.deri.ie/ppo> .
+<http://vocab.deri.ie/ppo#Not> <http://www.w3.org/2000/01/rdf-schema#label> "Not" <http://vocab.deri.ie/ppo> .
+<http://vocab.deri.ie/ppo#Not> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/ppo#Operator> <http://vocab.deri.ie/ppo> .
+<http://vocab.deri.ie/ppo#Not> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/ppo> .
+<http://vocab.deri.ie/ppo#Not> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/ppo> .
+<http://www.w3.org/ns/shacl#not> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/shacl#Shape> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#not> <http://www.w3.org/2000/01/rdf-schema#label> "not"@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#not> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a shape that the value nodes must not conform to."@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#not> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#not> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/not.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnot3 .
+_:Bnot3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnot3 <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/not3.nt> .
+_:Bnot3 <https://w3id.org/tree#value> "not3" .
+_:Bnot3 <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/not3.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnota .
+_:Bnota <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnota <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/nota.nt> .
+_:Bnota <https://w3id.org/tree#value> "nota" .
+_:Bnota <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/nota.nt> <https://w3id.org/tree#remainingItems> "186"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnotb .
+_:Bnotb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnotb <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/notb.nt> .
+_:Bnotb <https://w3id.org/tree#value> "notb" .
+_:Bnotb <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/notb.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnotc .
+_:Bnotc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnotc <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/notc.nt> .
+_:Bnotc <https://w3id.org/tree#value> "notc" .
+_:Bnotc <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/notc.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnotd .
+_:Bnotd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnotd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/notd.nt> .
+_:Bnotd <https://w3id.org/tree#value> "notd" .
+_:Bnotd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/notd.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnote .
+_:Bnote <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnote <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/note.nt> .
+_:Bnote <https://w3id.org/tree#value> "note" .
+_:Bnote <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/note.nt> <https://w3id.org/tree#remainingItems> "1019"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnotf .
+_:Bnotf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnotf <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/notf.nt> .
+_:Bnotf <https://w3id.org/tree#value> "notf" .
+_:Bnotf <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/notf.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnoth .
+_:Bnoth <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnoth <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/noth.nt> .
+_:Bnoth <https://w3id.org/tree#value> "noth" .
+_:Bnoth <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/noth.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnoti .
+_:Bnoti <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnoti <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/noti.nt> .
+_:Bnoti <https://w3id.org/tree#value> "noti" .
+_:Bnoti <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/noti.nt> <https://w3id.org/tree#remainingItems> "319"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnotk .
+_:Bnotk <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnotk <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/notk.nt> .
+_:Bnotk <https://w3id.org/tree#value> "notk" .
+_:Bnotk <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/notk.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnotl .
+_:Bnotl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnotl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/notl.nt> .
+_:Bnotl <https://w3id.org/tree#value> "notl" .
+_:Bnotl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/notl.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnotm .
+_:Bnotm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnotm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/notm.nt> .
+_:Bnotm <https://w3id.org/tree#value> "notm" .
+_:Bnotm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/notm.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnotn .
+_:Bnotn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnotn <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/notn.nt> .
+_:Bnotn <https://w3id.org/tree#value> "notn" .
+_:Bnotn <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/notn.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnoto .
+_:Bnoto <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnoto <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/noto.nt> .
+_:Bnoto <https://w3id.org/tree#value> "noto" .
+_:Bnoto <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/noto.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnotp .
+_:Bnotp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnotp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/notp.nt> .
+_:Bnotp <https://w3id.org/tree#value> "notp" .
+_:Bnotp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/notp.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnotr .
+_:Bnotr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnotr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/notr.nt> .
+_:Bnotr <https://w3id.org/tree#value> "notr" .
+_:Bnotr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/notr.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnots .
+_:Bnots <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnots <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/nots.nt> .
+_:Bnots <https://w3id.org/tree#value> "nots" .
+_:Bnots <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/nots.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnott .
+_:Bnott <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnott <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/nott.nt> .
+_:Bnott <https://w3id.org/tree#value> "nott" .
+_:Bnott <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/nott.nt> <https://w3id.org/tree#remainingItems> "37"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnotu .
+_:Bnotu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnotu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/notu.nt> .
+_:Bnotu <https://w3id.org/tree#value> "notu" .
+_:Bnotu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/notu.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnotw .
+_:Bnotw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnotw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/notw.nt> .
+_:Bnotw <https://w3id.org/tree#value> "notw" .
+_:Bnotw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/notw.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:Bnoty .
+_:Bnoty <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bnoty <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/noty.nt> .
+_:Bnoty <https://w3id.org/tree#value> "noty" .
+_:Bnoty <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/noty.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:B0X2Bnot .
+_:B0X2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:B0X2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/0+not.nt> .
+_:B0X2Bnot <https://w3id.org/tree#value> "0" .
+_:B0X2Bnot <https://w3id.org/tree#value> "not" .
+_:B0X2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/0+not.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BaX2Bnot .
+_:BaX2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+not.nt> .
+_:BaX2Bnot <https://w3id.org/tree#value> "a" .
+_:BaX2Bnot <https://w3id.org/tree#value> "not" .
+_:BaX2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+not.nt> <https://w3id.org/tree#remainingItems> "332"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BbX2Bnot .
+_:BbX2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+not.nt> .
+_:BbX2Bnot <https://w3id.org/tree#value> "b" .
+_:BbX2Bnot <https://w3id.org/tree#value> "not" .
+_:BbX2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+not.nt> <https://w3id.org/tree#remainingItems> "261"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BcX2Bnot .
+_:BcX2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+not.nt> .
+_:BcX2Bnot <https://w3id.org/tree#value> "c" .
+_:BcX2Bnot <https://w3id.org/tree#value> "not" .
+_:BcX2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+not.nt> <https://w3id.org/tree#remainingItems> "151"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BdX2Bnot .
+_:BdX2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+not.nt> .
+_:BdX2Bnot <https://w3id.org/tree#value> "d" .
+_:BdX2Bnot <https://w3id.org/tree#value> "not" .
+_:BdX2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+not.nt> <https://w3id.org/tree#remainingItems> "128"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BeX2Bnot .
+_:BeX2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+not.nt> .
+_:BeX2Bnot <https://w3id.org/tree#value> "e" .
+_:BeX2Bnot <https://w3id.org/tree#value> "not" .
+_:BeX2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+not.nt> <https://w3id.org/tree#remainingItems> "84"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BfX2Bnot .
+_:BfX2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+not.nt> .
+_:BfX2Bnot <https://w3id.org/tree#value> "f" .
+_:BfX2Bnot <https://w3id.org/tree#value> "not" .
+_:BfX2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+not.nt> <https://w3id.org/tree#remainingItems> "101"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BgX2Bnot .
+_:BgX2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BgX2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/g+not.nt> .
+_:BgX2Bnot <https://w3id.org/tree#value> "g" .
+_:BgX2Bnot <https://w3id.org/tree#value> "not" .
+_:BgX2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/g+not.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BhX2Bnot .
+_:BhX2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+not.nt> .
+_:BhX2Bnot <https://w3id.org/tree#value> "h" .
+_:BhX2Bnot <https://w3id.org/tree#value> "not" .
+_:BhX2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+not.nt> <https://w3id.org/tree#remainingItems> "90"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BiX2Bnot .
+_:BiX2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+not.nt> .
+_:BiX2Bnot <https://w3id.org/tree#value> "i" .
+_:BiX2Bnot <https://w3id.org/tree#value> "not" .
+_:BiX2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+not.nt> <https://w3id.org/tree#remainingItems> "221"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BjX2Bnot .
+_:BjX2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BjX2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/j+not.nt> .
+_:BjX2Bnot <https://w3id.org/tree#value> "j" .
+_:BjX2Bnot <https://w3id.org/tree#value> "not" .
+_:BjX2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/j+not.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BkX2Bnot .
+_:BkX2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BkX2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/k+not.nt> .
+_:BkX2Bnot <https://w3id.org/tree#value> "k" .
+_:BkX2Bnot <https://w3id.org/tree#value> "not" .
+_:BkX2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/k+not.nt> <https://w3id.org/tree#remainingItems> "16"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BlX2Bnot .
+_:BlX2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+not.nt> .
+_:BlX2Bnot <https://w3id.org/tree#value> "l" .
+_:BlX2Bnot <https://w3id.org/tree#value> "not" .
+_:BlX2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+not.nt> <https://w3id.org/tree#remainingItems> "37"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BmX2Bnot .
+_:BmX2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+not.nt> .
+_:BmX2Bnot <https://w3id.org/tree#value> "m" .
+_:BmX2Bnot <https://w3id.org/tree#value> "not" .
+_:BmX2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+not.nt> <https://w3id.org/tree#remainingItems> "126"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BnX2Bnot .
+_:BnX2Bnot <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnX2Bnot <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/n+not.nt> .
+_:BnX2Bnot <https://w3id.org/tree#value> "n" .
+_:BnX2Bnot <https://w3id.org/tree#value> "not" .
+_:BnX2Bnot <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/n+not.nt> <https://w3id.org/tree#remainingItems> "138"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BnotX2Bo .
+_:BnotX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnotX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/not+o.nt> .
+_:BnotX2Bo <https://w3id.org/tree#value> "not" .
+_:BnotX2Bo <https://w3id.org/tree#value> "o" .
+_:BnotX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/not+o.nt> <https://w3id.org/tree#remainingItems> "64"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BnotX2Bp .
+_:BnotX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnotX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/not+p.nt> .
+_:BnotX2Bp <https://w3id.org/tree#value> "not" .
+_:BnotX2Bp <https://w3id.org/tree#value> "p" .
+_:BnotX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/not+p.nt> <https://w3id.org/tree#remainingItems> "113"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BnotX2Bq .
+_:BnotX2Bq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnotX2Bq <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/not+q.nt> .
+_:BnotX2Bq <https://w3id.org/tree#value> "not" .
+_:BnotX2Bq <https://w3id.org/tree#value> "q" .
+_:BnotX2Bq <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/not+q.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BnotX2Br .
+_:BnotX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnotX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/not+r.nt> .
+_:BnotX2Br <https://w3id.org/tree#value> "not" .
+_:BnotX2Br <https://w3id.org/tree#value> "r" .
+_:BnotX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/not+r.nt> <https://w3id.org/tree#remainingItems> "146"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BnotX2Bs .
+_:BnotX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnotX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/not+s.nt> .
+_:BnotX2Bs <https://w3id.org/tree#value> "not" .
+_:BnotX2Bs <https://w3id.org/tree#value> "s" .
+_:BnotX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/not+s.nt> <https://w3id.org/tree#remainingItems> "121"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BnotX2Bt .
+_:BnotX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnotX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/not+t.nt> .
+_:BnotX2Bt <https://w3id.org/tree#value> "not" .
+_:BnotX2Bt <https://w3id.org/tree#value> "t" .
+_:BnotX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/not+t.nt> <https://w3id.org/tree#remainingItems> "294"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BnotX2Bu .
+_:BnotX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnotX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/not+u.nt> .
+_:BnotX2Bu <https://w3id.org/tree#value> "not" .
+_:BnotX2Bu <https://w3id.org/tree#value> "u" .
+_:BnotX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/not+u.nt> <https://w3id.org/tree#remainingItems> "55"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BnotX2Bv .
+_:BnotX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnotX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/not+v.nt> .
+_:BnotX2Bv <https://w3id.org/tree#value> "not" .
+_:BnotX2Bv <https://w3id.org/tree#value> "v" .
+_:BnotX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/not+v.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BnotX2Bw .
+_:BnotX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnotX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/not+w.nt> .
+_:BnotX2Bw <https://w3id.org/tree#value> "not" .
+_:BnotX2Bw <https://w3id.org/tree#value> "w" .
+_:BnotX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/not+w.nt> <https://w3id.org/tree#remainingItems> "30"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/not.nt> <https://w3id.org/tree#relation> _:BnotX2By .
+_:BnotX2By <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnotX2By <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/not+y.nt> .
+_:BnotX2By <https://w3id.org/tree#value> "not" .
+_:BnotX2By <https://w3id.org/tree#value> "y" .
+_:BnotX2By <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/not+y.nt> <https://w3id.org/tree#remainingItems> "22"^^<http://www.w3.org/2001/XMLSchema#int> .

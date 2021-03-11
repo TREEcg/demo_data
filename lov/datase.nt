@@ -1,0 +1,306 @@
+<http://purl.org/eis/vocab/daq#requires> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#requires> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/eis/vocab/daq#Metric> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#requires> <http://www.w3.org/2000/01/rdf-schema#comment> "A metric might require a number of external resources (e.g. a gold standard) in order to be able to measure the quality. In order to cater for the most generic requirement, this property links a metric to the required resource (e.g. a URI to the gold standard dataset used)." <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#requires> <http://www.w3.org/2000/01/rdf-schema#label> "requires" <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://purl.org/dc/terms/modified> "2015-04-01"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://purl.org/dc/terms/creator> _:Bd35ad032c4e949d817e8706116608a8c <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset Quality Vocabulary (daQ)" <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://purl.org/dc/terms/creator> _:Bd384462ef302f4a2ab271b7efb734902 <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://www.w3.org/2000/01/rdf-schema#comment> "The Dataset Quality Vocabulary (daQ) is a lightweight, extensible core vocabulary for attaching the result of quality benchmarking of a linked open dataset (usually an expensive process) to that dataset.  daQ is designed to be extended by custom quality metrics.  Use cases include filtering and ranking datasets by quality." <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#computedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#computedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#computedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/cube#Observation> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#computedOn> <http://www.w3.org/2000/01/rdf-schema#label> "computed on" <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#computedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/linked-data/cube#DimensionProperty> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#computedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Quality metrics can be (in principle) calculated on various forms of data (such as datasets, graphs, set of triples etc...). This vocabulary allow the owner/user of such RDF data to calculate metrics on multiple (and different) resources." <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#computedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#Category> <http://www.w3.org/2000/01/rdf-schema#label> "Category" <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#Category> <http://www.w3.org/2000/01/rdf-schema#comment> "The highest level of quality metric is a category. A category groups a number of dimensions relevant to each other which aims at measuring the quality of a dataset from different aspects. Categories are provided as subclasses of this abstract class, which is not intended for direct usage." <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/healthcarevocab/v1#SegmentedBluePaletteColorLookupTableData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SegmentedBluePaletteColorLookupTableData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SegmentedBluePaletteColorLookupTableData> <http://www.w3.org/2000/01/rdf-schema#label> "Segmented Blue Palette Color Lookup Table Data" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SegmentedBluePaletteColorLookupTableData> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bf74f150543ce0565540f722a01962478 <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SegmentedBluePaletteColorLookupTableData> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0028.1223> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1221> <http://www.w3.org/2000/01/rdf-schema#domain> _:B8e33859c9e443c25c542716ced5e1d6e <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1221> <http://www.w3.org/2000/01/rdf-schema#label> "Segmented Red Palette Color Lookup Table Data" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1221> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1221> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1221> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#SegmentedRedPaletteColorLookupTableData> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1222> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#SegmentedGreenPaletteColorLookupTableData> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1222> <http://www.w3.org/2000/01/rdf-schema#domain> _:B33962baa37b4b298008943e393872297 <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1222> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1222> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1222> <http://www.w3.org/2000/01/rdf-schema#label> "Segmented Green Palette Color Lookup Table Data" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1223> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1223> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1223> <http://www.w3.org/2000/01/rdf-schema#label> "Segmented Blue Palette Color Lookup Table Data" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1223> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#SegmentedBluePaletteColorLookupTableData> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.1223> <http://www.w3.org/2000/01/rdf-schema#domain> _:B341c8feefa3a1e118bbbdf30b6261481 <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceOfCompressedData> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceOfCompressedData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceOfCompressedData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceOfCompressedData> <http://www.w3.org/2000/01/rdf-schema#label> "Sequence of Compressed Data" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceOfCompressedData> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0028.0403> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SegmentedGreenPaletteColorLookupTableData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SegmentedGreenPaletteColorLookupTableData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SegmentedGreenPaletteColorLookupTableData> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bc41ed705e8f0bc5df38c6ed4d1edd15b <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SegmentedGreenPaletteColorLookupTableData> <http://www.w3.org/2000/01/rdf-schema#label> "Segmented Green Palette Color Lookup Table Data" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SegmentedGreenPaletteColorLookupTableData> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0028.1222> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SegmentedRedPaletteColorLookupTableData> <http://www.w3.org/2000/01/rdf-schema#label> "Segmented Red Palette Color Lookup Table Data" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SegmentedRedPaletteColorLookupTableData> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SegmentedRedPaletteColorLookupTableData> <http://www.w3.org/2000/01/rdf-schema#domain> _:B7c1390e80d3967ab33f8f01337bbc635 <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SegmentedRedPaletteColorLookupTableData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SegmentedRedPaletteColorLookupTableData> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0028.1221> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.0403> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#SequenceOfCompressedData> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.0403> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.0403> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.0403> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.0403> <http://www.w3.org/2000/01/rdf-schema#label> "Sequence of Compressed Data" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/limo-ontology/limo#rawData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#rawData> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/limo-ontology/limo#Model> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#rawData> <http://www.w3.org/2000/01/rdf-schema#label> "limo:rawData" <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#rawData> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a model with it's dataset." <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#rawData> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/dcmitype#Dataset> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#data> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linked-data/cube#Dataset> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#data> <http://www.w3.org/2000/01/rdf-schema#label> "limo:data" <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#data> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#data> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/limo-ontology/limo/limo#Model> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#data> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a model to the dataset that contains the actual data that have been used for the development of the model." <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#evaluationData> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a model to the dataset that represents its evaluation data." <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#evaluationData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#evaluationData> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/limo-ontology/limo#data> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#evaluationData> <http://www.w3.org/2000/01/rdf-schema#label> "limo:evaluationData" <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/linked-data/cube#observationGroup> <http://www.w3.org/2000/01/rdf-schema#label> "observation group"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#observationGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#observationGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/cube> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#observationGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a group of observations. The domain of this property is left open so that a group may be attached to different resources and need not be restricted to a single DataSet"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#observationGroup> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linked-data/cube#ObservationGroup> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#observationGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#SliceKey> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a subset of the component properties of a DataSet which are fixed in the corresponding slices"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#SliceKey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#ComponentSet> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#SliceKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#SliceKey> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/cube> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#SliceKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#SliceKey> <http://www.w3.org/2000/01/rdf-schema#label> "Slice key"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#componentProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#componentProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/cube> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#componentProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linked-data/cube#ComponentProperty> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#componentProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/cube#ComponentSet> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#componentProperty> <http://www.w3.org/2000/01/rdf-schema#label> "component"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#componentProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#componentProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates a ComponentProperty (i.e. attribute/dimension) expected on a DataSet, or a dimension fixed in a SliceKey"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#Slice> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a subset of a DataSet defined by fixing a subset of the dimensional values, component properties on the Slice"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#Slice> <http://www.w3.org/2000/01/rdf-schema#label> "Slice"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#Slice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#Attachable> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#Slice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/cube> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#Slice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#ObservationGroup> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#Slice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#Slice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#slice> <http://www.w3.org/2000/01/rdf-schema#label> "slice"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#slice> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linked-data/cube#Slice> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#slice> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a subset of a DataSet defined by fixing a subset of the dimensional values"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#slice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/cube#DataSet> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#slice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/cube> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#slice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#slice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/cube#observationGroup> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#slice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#component> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates a component specification which is included in the structure of the dataset"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#component> <http://www.w3.org/2000/01/rdf-schema#label> "component specification"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#component> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linked-data/cube#ComponentSpecification> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#component> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/cube#DataStructureDefinition> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#component> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/cube> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#DataStructureDefinition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#ComponentSet> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#DataStructureDefinition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/cube> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#DataStructureDefinition> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the structure of a DataSet or slice"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#DataStructureDefinition> <http://www.w3.org/2000/01/rdf-schema#label> "Data structure definition"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#DataStructureDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#DataStructureDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#sliceKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#sliceKey> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/cube> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#sliceKey> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linked-data/cube#SliceKey> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#sliceKey> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/cube#DataStructureDefinition> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#sliceKey> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates a slice key which is used for slices in this dataset"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#sliceKey> <http://www.w3.org/2000/01/rdf-schema#label> "slice key"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#sliceKey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/sdmx#CountRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://purl.org/linked-data/sdmx> .
+<http://purl.org/linked-data/sdmx#CountRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linked-data/sdmx> .
+<http://purl.org/linked-data/sdmx#CountRole> <http://www.w3.org/2000/01/rdf-schema#comment> "concept for a dimension or attribute that plays the role of an identifier where the identifier is taken from a known system of counts (e.g. the Nth current dataset update for a given day)"@en <http://purl.org/linked-data/sdmx> .
+<http://purl.org/linked-data/sdmx#CountRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/sdmx#ConceptRole> <http://purl.org/linked-data/sdmx> .
+<http://purl.org/linked-data/sdmx#CountRole> <http://www.w3.org/2000/01/rdf-schema#label> "Count property"@en <http://purl.org/linked-data/sdmx> .
+<http://purl.org/net/wf-motifs#HumanInteractionStep> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wf-motifs#IntraWorkflowMotif> <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#HumanInteractionStep> <http://www.w3.org/2000/01/rdf-schema#label> "Human interaction step"@en <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#HumanInteractionStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#HumanInteractionStep> <http://www.w3.org/2000/01/rdf-schema#comment> "Intra-workflow motif used to characterize the activities that require human inputs during their execution. For example, manual data curation of a table for a future step in the workflow, cleaning and filtering steps (such as selecting a specific dataset to continue the experiment), etc. "@en <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#Split> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#Split> <http://www.w3.org/2000/01/rdf-schema#comment> "Data preparation motif that refers to the step or steps in the workflow separating an input into different outputs. For example, splitting a dataset in three different subsets to be processed in parallel in a workflow."@en <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#Split> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wf-motifs#DataPreparation> <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#Split> <http://www.w3.org/2000/01/rdf-schema#label> "Split"@en <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#DataAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "Data operation motif that refers to a broad category of tasks in diverse domains. An important number of workflows are designed with the purpose of analyzing different features of input data, ranging from simple comparisons between the datasets to complex protein analysis to see whether two molecules can be docked successfully or not. "@en <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#DataAnalysis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/net/wf-motifs#DataOperationMotif> <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#DataAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Data analysis"@en <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#DataAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/net/wf-motifs> .
+<http://purl.org/ontology/dvia#consumes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#consumes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/dcat#Dataset> <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#consumes> <http://www.w3.org/2000/01/rdf-schema#label> "consumes"@en <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#consumes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/dvia#Application> <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#consumes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#consumes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/dvia> <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#consumes> <http://www.w3.org/2000/01/rdf-schema#comment> "links to the dataset used to make the application, and could be of different types or formats"@en <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#consumes> <http://www.w3.org/2000/01/rdf-schema#label> "consomme"@fr <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#datasetDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Property for a given descriptive informations of the datasets used for making the application. It could be used when no more details are given on the datasets like URL, formats, etc."@en <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#datasetDescription> <http://www.w3.org/2000/01/rdf-schema#label> "dataset description"@en <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#datasetDescription> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/dvia#Application> <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#datasetDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#datasetDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#datasetDescription> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/dvia> <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#datasetDescription> <http://www.w3.org/2000/01/rdf-schema#label> "description du jeu de donn�es"@fr <http://purl.org/ontology/dvia> .
+<http://purl.org/openorg/corrections> <http://www.w3.org/2000/01/rdf-schema#comment> "A sub-property of oo:contact indicating a route to have corrections made to data relating to this resource. Intended for use on a dataset, but it may be used on any URI -- for example you may use it to indicate that certain records in a dataset have different people to contact them to get it fixed." <http://purl.org/openorg/> .
+<http://purl.org/openorg/corrections> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/openorg/contact> <http://purl.org/openorg/> .
+<http://purl.org/openorg/corrections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/openorg/> .
+<http://purl.org/openorg/corrections> <http://www.w3.org/2000/01/rdf-schema#label> "Corrections" <http://purl.org/openorg/> .
+<http://purl.org/openorg/organization> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Organization> <http://purl.org/openorg/> .
+<http://purl.org/openorg/organization> <http://www.w3.org/2000/01/rdf-schema#label> "organization" <http://purl.org/openorg/> .
+<http://purl.org/openorg/organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates something to an organization. Intended for use to link things other than people and organizations to an organization, for example, equipment, key datasets (places, members)." <http://purl.org/openorg/> .
+<http://purl.org/openorg/organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/openorg/> .
+<http://purl.org/openorg/capacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/openorg/> .
+<http://purl.org/openorg/capacity> <http://www.w3.org/2000/01/rdf-schema#comment> "This is used to indicate the capacity of a thing when performing its default function. Ideally a more semantically meaningful predicate should be used, describing the capacity of something in a particular function.\n\nThis may be used to associate:\n\n    a classroom, theatre, cinema or resturant with the number of people it seats\n    a bar or other entertainment venue with the fire limit for the venue\n    a school with how many students it can teach\n    a pencil case with how many pencils it can hold. \n\nYou should be able to assume that resources of the same type, described in the same dataset, have capacities calculated in a more-or-less similar way.\n\nIt should only be treated as a rough guide." <http://purl.org/openorg/> .
+<http://purl.org/openorg/capacity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/openorg/> .
+<http://purl.org/openorg/capacity> <http://www.w3.org/2000/01/rdf-schema#label> "capacity" <http://purl.org/openorg/> .
+<http://purl.org/openorg/capacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/openorg/> .
+<http://purl.org/pav/sourceAccessedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Source accessed by"@en <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The resource is related to a source which was accessed or consulted\nby the given agent. The source(s) should be specified using pav:sourceAccessedAt, and the time with pav:sourceAccessedOn.\n\nFor instance, the given agent could be a curator (also pav:curatedBy) which consulted figures in a published paper to confirm that a dataset was correctly pav:importedFrom the paper's supplementary CSV file."@en <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/sourceAccessedAt> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedAt> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/sourceAccessedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedAt> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/retrievedFrom> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedAt> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/sourceAccessedOn> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasInfluencedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedAt> <http://www.w3.org/2000/01/rdf-schema#label> "Source accessed at"@en <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedAt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedAt> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/importedFrom> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The resource is related to a given source which was accessed or consulted (but not retrieved, imported or derived from). This access can be detailed with pav:sourceAccessedBy and pav:sourceAccessedOn.\n\nFor instance, a curator (pav:curatedBy) might have consulted figures in a published paper to confirm that a dataset was correctly pav:importedFrom the paper's supplementary CSV file.\n\nAnother example: I can access the page for tomorrow weather in Boston (http://www.weather.com/weather/tomorrow/Boston+MA+02143)  and I can blog ‘tomorrow is going to be nice’. The source does not make any claims about the nice weather, that is my interpretation; therefore the blog post has pav:sourceAccessedAt the weather page. "@en <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedAt> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/sourceLastAccessedOn> <http://purl.org/pav/> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property permitting specification of the general type of a resource, defined from the DataCite controlled list of Collection, Dataset, Event, Film, Image, InteractiveResource, Model, PhysicalObject, Service, Software, Sound and Text.\n\nAll DataCite-required general resource type terms with the exception of Model are defined by classes in the Dublin Core Metadata Initiative Type Vocabulary (http://purl.org/dc/dcmitype/).  One of the following should be used as the range for the object property datacite:hasGeneralResourceType: \n   dcmitype:Collection\n   dcmitype:Dataset\n   dcmitype:Event\n   dcmitype:MovingImage\t\n   dcmitype:Image\n   dcmitype:InteractiveResource\n   fabio:Model\n   dcmitype:PhysicalObject\n   dcmitype:Service\n   dcmitype:Software\n   dcmitype:Sound\n   dcmitype:StillImage\n   dcmitype:Text\n"@en <http://purl.org/spar/datacite> .
+<http://purl.org/spar/datacite/hasGeneralResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "has general resource type"@en <http://purl.org/spar/datacite> .
+<http://purl.org/spar/deo/DatasetDescription> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/ExternalResourceDescription> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/DatasetDescription> <http://www.w3.org/2000/01/rdf-schema#comment> "Information describing a dataset held in an external database or repository and including a reference to it, such as a database ID or an accession number."@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/DatasetDescription> <http://www.w3.org/2000/01/rdf-schema#label> "dataset description"@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/DatasetDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/deo> .
+<http://purl.org/spar/fabio/Email> <http://www.w3.org/2000/01/rdf-schema#comment> "A message transmitted over the internet as an item of electronic mail, typically based on the Simple Mail Transfer Protocol (SMTP).  Emails can have computer files containing documents, dataset and images attached to them or embedded within them."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Email> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Email> <http://www.w3.org/2000/01/rdf-schema#label> "e-mail"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MinimalInformationStandard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Specification> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MinimalInformationStandard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MinimalInformationStandard> <http://www.w3.org/2000/01/rdf-schema#comment> "A metadata standard specifying items to be included when creating metadata describing a dataset of a particular type, or when creating a structured summary of the main findings of an article or report in a particular domain of interest, thereby ensuring adequate descriptive information is recorded for subsequent resource discovery and/or interpretation of the information described.  [See also fabio:ReportingStandard.]" <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MinimalInformationStandard> <http://www.w3.org/2000/01/rdf-schema#label> "minimal information standard"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/StructuredSummary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/SpecificationDocument> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/StructuredSummary> <http://www.w3.org/2000/01/rdf-schema#label> "structured summary"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/StructuredSummary> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured summary containing essential metadata describing a research investigation and/or the research outputs that have resulted from it, for example datasets and journal articles, structured according to some minimal information standard.  Such a structured summary can be embodied in both human-readable and machine-readable manifestations, e.g. HTML and RDF.  Such a structured summary differs from the Abstract of a journal article, in that the latter is written as a piece of continuous prose, but typically omits vital factual information about the investigation, such as when and where it was conducted, by whom, and on now many specimens or subjects."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/StructuredSummary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb80c2a080441b2860dded10a4f0f0d73 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/StructuredSummary> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/spar/fabio/Abstract> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/StructuredSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Dataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Work> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Dataset> <http://www.w3.org/2000/01/rdf-schema#label> "dataset"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Dataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Dataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of related facts, often expressed in numerical form and encoded in a defined structure."@en <http://purl.org/spar/fabio> .
+<http://prismstandard.org/namespaces/basic/2.0/doi> <http://www.w3.org/2000/01/rdf-schema#label> "has Digital Object Identifier"@en <http://purl.org/spar/fabio> .
+<http://prismstandard.org/namespaces/basic/2.0/doi> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.doi.org/> <http://purl.org/spar/fabio> .
+<http://prismstandard.org/namespaces/basic/2.0/doi> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> <http://purl.org/spar/fabio> .
+<http://prismstandard.org/namespaces/basic/2.0/doi> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Endeavour> <http://purl.org/spar/fabio> .
+<http://prismstandard.org/namespaces/basic/2.0/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/spar/fabio> .
+<http://prismstandard.org/namespaces/basic/2.0/doi> <http://www.w3.org/2000/01/rdf-schema#comment> "A Digital Object Identifier for a serial publication item, a dataset or some other entity."@en <http://purl.org/spar/fabio> .
+<http://prismstandard.org/namespaces/basic/2.0/doi> <http://www.w3.org/2000/01/rdf-schema#label> "has DOI"@en <http://purl.org/spar/fabio> .
+<http://prismstandard.org/namespaces/basic/2.0/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/WebContent> <http://www.w3.org/2000/01/rdf-schema#label> "web content"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/WebContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/WebContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B563d7f520a3da67785931dde99248552 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/WebContent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/WebContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Information prepared specifically and primarily for manifestation in a web page, comprising text, images, datasets and/or other works."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ResourcePaper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ResourcePaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/ScholarlyWork> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ResourcePaper> <http://www.w3.org/2000/01/rdf-schema#label> "resource paper"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ResourcePaper> <http://www.w3.org/2000/01/rdf-schema#comment> "A scholarly work that describes resources developed to provide experimental materials or facilities, support a research hypothesis, to provide answers to a research question, or that have contributed to the generation of novel scientific work. Examples of such resources include, for experimental sciences, mouse mutant lines and large communally used X-ray or neutron sources, and, for computer sciences, datasets, ontologies, vocabularies, ontology design patterns, evaluation benchmarks or methods, services, APIs and software frameworks, workflows, crowdsourcing task designs, protocols and metrics.\n\nE.g. see http://iswc2018.semanticweb.org/call-for-resources-track-papers/"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Timetable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Timetable> <http://www.w3.org/2000/01/rdf-schema#label> "timetable"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Timetable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Dataset> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Timetable> <http://www.w3.org/2000/01/rdf-schema#comment> "A tabular dataset providing information about the times and locations of a planned series of events."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Work> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B90272baa80402c84a5f951f1b42cdc44 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Work> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Work> <http://purl.org/dc/elements/1.1/description> "A fabio:Work can only have part or be part of another fabio:Work. Moreover, it can be realized only by fabio:Expression(s)."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Work> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of FRBR work, restricted to works that are published or potentially publishable, and that contain or are referred to by bibliographic references, or entities used to define bibliographic references. FaBiO works, and their expressions and manifestations, are primarily textual publications such as books, magazines, newspapers and journals, and items of their content.  However, they also include datasets, computer algorithms, experimental protocols, formal specifications and vocabularies, legal records, governmental papers, technical and commercial reports and similar publications, and also bibliographies, reference lists, library catalogues and similar collections. For this reason, fabio:Work is not an equivalent class to frbr:ScholarlyWork.  An example of a fabio:Work is your latest research paper."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Work> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Work> <http://www.w3.org/2000/01/rdf-schema#label> "work"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Work> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba69fe1324db66b17b44b737692408ad5 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/pso/open-access> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of a published work (typically a scholarly publication or a dataset) that is freely available via the Internet for third parties to read without payment of access or subscription fees, and (in the case of a work published under a full open-access license) that is freely available to download and reuse for any purposes including commercial ones, including modification of the original work, its integration with other material, and its re-publication, subject typically to a requirement that the original authors and the source of the original work are acknowledged in compliance with scholarly citation norms. [See also: pso:gratis-open-access, pso:libre-open-access, pso:gold-open-access, pso:green-open-access, pso:embargoed and pso:subscription-access.]"@en <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/open-access> <http://www.w3.org/2000/01/rdf-schema#label> "open access"@en <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/open-access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pso/PublicationStatus> <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/open-access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/pso> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/datase.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/datase.nt> <https://w3id.org/tree#relation> _:Bdatasec .
+_:Bdatasec <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdatasec <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/datasec.nt> .
+_:Bdatasec <https://w3id.org/tree#value> "datasec" .
+_:Bdatasec <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/datasec.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/datase.nt> <https://w3id.org/tree#relation> _:Bdataseg .
+_:Bdataseg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdataseg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/dataseg.nt> .
+_:Bdataseg <https://w3id.org/tree#value> "dataseg" .
+_:Bdataseg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/dataseg.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/datase.nt> <https://w3id.org/tree#relation> _:Bdatasen .
+_:Bdatasen <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdatasen <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/datasen.nt> .
+_:Bdatasen <https://w3id.org/tree#value> "datasen" .
+_:Bdatasen <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/datasen.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/datase.nt> <https://w3id.org/tree#relation> _:Bdataseq .
+_:Bdataseq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdataseq <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/dataseq.nt> .
+_:Bdataseq <https://w3id.org/tree#value> "dataseq" .
+_:Bdataseq <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/dataseq.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/datase.nt> <https://w3id.org/tree#relation> _:Bdataser .
+_:Bdataser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdataser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/dataser.nt> .
+_:Bdataser <https://w3id.org/tree#value> "dataser" .
+_:Bdataser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/dataser.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/datase.nt> <https://w3id.org/tree#relation> _:Bdataset .
+_:Bdataset <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdataset <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/dataset.nt> .
+_:Bdataset <https://w3id.org/tree#value> "dataset" .
+_:Bdataset <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/dataset.nt> <https://w3id.org/tree#remainingItems> "708"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/datase.nt> <https://w3id.org/tree#relation> _:Bdatasev .
+_:Bdatasev <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdatasev <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/datasev.nt> .
+_:Bdatasev <https://w3id.org/tree#value> "datasev" .
+_:Bdatasev <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/datasev.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/datase.nt> <https://w3id.org/tree#relation> _:BaX2Bdatase .
+_:BaX2Bdatase <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bdatase <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+datase.nt> .
+_:BaX2Bdatase <https://w3id.org/tree#value> "a" .
+_:BaX2Bdatase <https://w3id.org/tree#value> "datase" .
+_:BaX2Bdatase <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+datase.nt> <https://w3id.org/tree#remainingItems> "104"^^<http://www.w3.org/2001/XMLSchema#int> .

@@ -1,0 +1,258 @@
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#inter> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\tThis object property models a relation between two nif:Strings. The name \"inter\" is kept generic and can be used to express any kind of relation in between (inter) two nif:Strings. Extensions can create rdfs:subPropertyOf for \"head\", \"dependent\", nif:substring and nif:nextWord.  \n\t\t\n\t\tChangelog: \n\t\t* 0.1.0 initial commit of property \"dependency\"\n\t\t* 0.2.0 changed name to \"inter\" which is more general than \"dependency\".\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#inter> <http://www.w3.org/2000/01/rdf-schema#range> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#inter> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#inter> <http://www.w3.org/2000/01/rdf-schema#label> "inter"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#inter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#inter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#oliaConf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#oliaConf> <http://www.w3.org/2000/01/rdf-schema#label> "Confidence of OLiA tag" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#oliaConf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#oliaConf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#oliaConf> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#oliaConf> <http://www.w3.org/2000/01/rdf-schema#comment> "The confidence is relative to the tool and can be between 0.0 and 1.0, it is for nif:oliaLink and therefore also for nif:oliaCategory.\n    Changelog:\n    0.2.0 merged confidence for category and link\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#category> <http://www.w3.org/2000/01/rdf-schema#label> "category" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#category> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#category> <http://www.w3.org/2000/01/rdf-schema#comment> "A simple annotation for machine learning purposes. The object can be anything, e.g. the literal \"A. PRESS: Reportage\" from Brown or any URI.  \n\tChangeLog:\n\t* 0.2.0 changed nif:class to nif:category due to conflict with Java \n\t"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#hadPrimarySource> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl> <http://www.w3.org/2000/01/rdf-schema#label> "source URL"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl> <http://www.w3.org/2000/01/rdf-schema#comment> "The URL the context was extracted from, e.g. the blog or news article url. Doesn't matter whether it is HTML or XML or plain text. rdfs:range is foaf:Document.  Subproperty of prov:hadPrimarySource. In case the string comes from another NIF String and gives the exact provenance, please use nif:wasConvertedFrom or a subProperty thereof.\n    Changelog:\n    * 0.2.0 added subPropertyOf prov:hadPrimarySource\n    * 0.2.1 clarification\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence> <http://www.w3.org/2000/01/rdf-schema#range> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links words and other structures to their sentence.\n    Changelog:\n    * 0.2.0 Changed domain from nif:Word to nif:Structure, not longer inverseOf nif:word"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a nif:ContextCollection to its contexts. \n    \n    Changelog\n    * 0.2.0. renamed property since a lot of people where too confused by nif:context\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#ContextCollection> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <http://www.w3.org/2000/01/rdf-schema#label> "has context"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#hasContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://purl.org/NET/biol/botany#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/NET/biol/ns#> <http://purl.org/NET/biol/botany#> .
+<http://purl.org/NET/biol/botany#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/NET/biol/zoology#> <http://purl.org/NET/biol/botany#> .
+<http://purl.org/NET/biol/botany#> <http://purl.org/dc/terms/creator> <http://tobyinkster.co.uk/#i> <http://purl.org/NET/biol/botany#> .
+<http://purl.org/NET/biol/botany#> <http://purl.org/dc/terms/source> <http://en.wikipedia.org/wiki/Taxonomic_rank#All_taxonomic_ranks> <http://purl.org/NET/biol/botany#> .
+<http://purl.org/NET/biol/botany#> <http://purl.org/dc/terms/title> "Biological Taxonomy Vocabulary 0.2 (Botany)"@en-gb <http://purl.org/NET/biol/botany#> .
+<http://purl.org/NET/biol/botany#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/NET/biol/botany#> .
+<http://purl.org/NET/biol/botany#> <http://purl.org/dc/terms/modified> "2009-03-18"@en-gb <http://purl.org/NET/biol/botany#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_family> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_class> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#section> <http://purl.org/NET/biol/ns.html#section_Changes> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_ZooTaxonomy> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_kingdom> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#help> <http://purl.org/NET/biol/ns.html#section_Examples> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_hierarchy> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#section_References-I> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#section_Properties> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#section_Acknowledgments> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_BotTaxonomy> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/bibliographicCitation> <http://microformats.org/wiki/species> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_uri> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/creator> _:B669dc415aa9303666a80c91ebe4e04d6 <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_secondLevelClassification> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_phylum> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/modified> "2008-10-06"@en <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_hasTaxonomy> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_Taxonomy> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_lifedoc> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#section_Classes> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#section_Examples> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_class> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_full> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_morePrecise> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#section_References> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_rank> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_species> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_division> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#appendix> <http://purl.org/NET/biol/ns.html#section_Changes> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_genus> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_simple_rdfa> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_seeAlso> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#toc> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/title> "Biological Taxonomy Vocabulary 0.2 (Core)"@en <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#license> <http://creativecommons.org/licenses/by-sa/2.0/uk/> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_commonName> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_taxodoc> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_order> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_authority> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#contents> <http://purl.org/NET/biol/ns.html#toc> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_name> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_basic> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_lifedoc> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by-sa/2.0/uk/> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#section> <http://purl.org/NET/biol/ns.html#section_References> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_secondLevelClassification> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/bibliographicCitation> <http://en.wikipedia.org/wiki/Taxonomic_rank> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#chapter> <http://purl.org/NET/biol/ns.html#section_Classes> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_phylum> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_uri> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#appendix> <http://purl.org/NET/biol/ns.html#section_Acknowledgments> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#section> <http://purl.org/NET/biol/ns.html#section_Examples> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_Taxonomy> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#section> <http://purl.org/NET/biol/ns.html#section_Classes> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#chapter> <http://purl.org/NET/biol/ns.html#section_Examples> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_hasTaxonomy> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_hierarchy> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#section_References-I> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_BotTaxonomy> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_ZooTaxonomy> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_family> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/conformsTo> <http://www.w3.org/TR/rdfa-syntax> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_class> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_kingdom> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_authority> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#section> <http://purl.org/NET/biol/ns.html#section_Acknowledgments> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#section> <http://purl.org/NET/biol/ns.html#section_Properties> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_order> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_taxodoc> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_name> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#example_basic> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#chapter> <http://purl.org/NET/biol/ns.html#section_Properties> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_seeAlso> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#appendix> <http://purl.org/NET/biol/ns.html#section_References> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#alternate> <http://purl.org/NET/biol/ns-20081006.rdf> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#section_Changes> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_commonName> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_division> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_genus> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_morePrecise> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_rank> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#term_species> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_simple_rdfa> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#bookmark> <http://purl.org/NET/biol/ns.html#example_full> <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/creator> _:B7115d0b81e90825eea7e50d03b3433bf <http://purl.org/NET/biol/ns#> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/xhtml/vocab#subsection> <http://purl.org/NET/biol/ns.html#term_class> <http://purl.org/NET/biol/ns#> .
+<http://www.biopax.org/release/biopax-level3.owl#ionicStrength> <http://www.w3.org/2000/01/rdf-schema#comment> "The ionic strength is defined as half of the total sum of the concentration (ci) of every ionic species (i) in the solution times the square of its charge (zi). For example, the ionic strength of a 0.1 M solution of CaCl2 is 0.5 x (0.1 x 22 + 0.2 x 12) = 0.3 M" <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#ionicStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#ionicStrength> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#ionicStrength> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bd617e798e4592ee69dc6057b18f7cee1 <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#ionicStrength> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#GSM_USSD> <http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#hasBearerType> <http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#USSD> <http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl> .
+<http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#GSM_USSD> <http://www.w3.org/2000/01/rdf-schema#comment> "USSD is a technology built into the GSM standard for support of transmitting information over the signaling channels of the GSM network. USSD provides session-based communication. Defined within the GSM standard in the documents GSM 02.90 (USSD Stage 1) and GSM 03.90 (USSD Stage 2)." <http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl> .
+<http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#GSM_USSD> <http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#referesToNetwork> <http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#GSM> <http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl> .
+<http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#GSM_USSD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl#DataBearerService> <http://www.tele.pw.edu.pl/~sims-onto/ConnectivityType.owl> .
+<http://www.w3.org/2003/12/exif/ns#cfaPattern> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#pictTaking> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#cfaPattern> <http://www.w3.org/2003/12/exif/ns#tagNumber> "41730"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#cfaPattern> <http://www.w3.org/2000/01/rdf-schema#label> "CFAPattern"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#cfaPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "The color filter array (CFA) geometric pattern of the image sensor when a one-chip color area sensor is used. It does not apply to all sensing methods."@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#cfaPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#cfaPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "CCDに付いているColor filter array(CFA)のパターン。例えば普通のRGBフィルターだと、CFAPatternのデータは 02 02 00 01 01 02"@ja <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/ns/prov-aq#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/ns/prov#> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov-aq#> <http://www.w3.org/2000/01/rdf-schema#label> "PROV Access and Query Ontology"@en <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov-aq#> <http://www.w3.org/2000/01/rdf-schema#comment> "This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). \n\nIf you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome."@en <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov-aq#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov-aq#> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/> <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov-aq#> <http://www.w3.org/2000/01/rdf-schema#comment> "0.2" <http://www.w3.org/ns/prov#> .
+<http://www.w3.org/ns/prov-aq#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/TR/prov-aq/> <http://www.w3.org/ns/prov#> .
+<http://purl.oclc.org/NET/ssnx/cf/cf-property#beaufort_wind_force> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ssnx/qu/dim#Dimensionless> <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
+<http://purl.oclc.org/NET/ssnx/cf/cf-property#beaufort_wind_force> <http://purl.org/dc/elements/1.1/source> "Climate and Forecast (CF)" <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
+<http://purl.oclc.org/NET/ssnx/cf/cf-property#beaufort_wind_force> <http://www.w3.org/2000/01/rdf-schema#comment> "\"Beaufort wind force\" is an index assigned on the Beaufort wind force scale and relates a qualitative description of the degree of disturbance or destruction caused by wind to the speed of the wind.  The Beaufort wind scale varies between 0 (qualitatively described as calm, smoke rises vertically, sea appears glassy) (wind speeds in the range 0 - 0.2 m s-1) and 12 (hurricane, wave heights in excess of 14 m) (wind speeds in excess of 32.7 m s-1)." <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
+<http://purl.oclc.org/NET/ssnx/cf/cf-property#beaufort_wind_force> <http://purl.oclc.org/NET/ssnx/qu/qu#generalQuantityKind> <http://purl.oclc.org/NET/ssnx/qu/quantity#dimensionless> <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
+<http://purl.oclc.org/NET/ssnx/cf/cf-property#beaufort_wind_force> <http://purl.oclc.org/NET/ssnx/qu/qu#propertyType> <http://purl.oclc.org/NET/ssnx/qu/quantity#scalar> <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
+<http://purl.oclc.org/NET/ssnx/cf/cf-property#beaufort_wind_force> <http://www.w3.org/2000/01/rdf-schema#label> "beaufort wind force" <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
+<http://lod.nl.go.kr/ontology/keyTitle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.nl.go.kr/ontology/> <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/keyTitle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/keyTitle> <http://www.w3.org/2000/01/rdf-schema#label> "key title"@en <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/keyTitle> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/keyTitle> <http://www.w3.org/2000/01/rdf-schema#comment> "등록표제는 022(ISSN) 필드에 기록된 국제표준연속간행물번호(ISSN)와 관련되어 연속간행물에 부여되는 표제이다. 이 표제는 한 편의 연속간행물에서 그대로 옮겨온 표제정보로 작성되거나, 필요한 경우 유일성을 갖도록 하는 한정어로 구성된다. 등록표제는 국가센터에 의해 부여된 데이터요소이며 ISSN 네트워크에 연결된 국가센터에서 부여한다."@ko <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/keyTitle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/bibo/Collection> <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/keyTitle> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/keyTitle> <http://www.w3.org/2000/01/rdf-schema#label> "등록표제"@ko <http://lod.nl.go.kr/ontology/> .
+<http://vocab.datex.org/terms#RGBColour> <http://www.w3.org/2000/01/rdf-schema#comment> "An RGB colour described by values for red, green and blue (0..255) as well as an optional name."@en <http://vocab.datex.org/terms#> .
+<http://vocab.datex.org/terms#RGBColour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.datex.org/terms#> .
+<http://vocab.datex.org/terms#RGBColour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bdfa14b5df6ca04072ff181890e56f3ff <http://vocab.datex.org/terms#> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/15.03.20/1> <http://sparql.sstu.ru:3030/speciality/equalsTo> <http://sparql.sstu.ru:3030/speciality/lists/2/speciality/151000/1> <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/15.03.20/1> <http://www.w3.org/2000/01/rdf-schema#label> "01 Машиностроение " <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/15.03.20/1> <http://www.w3.org/2000/01/rdf-schema#label> "Технологические машины и оборудование " <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/15.03.20/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sparql.sstu.ru:3030/speciality/Speciality> <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/15.03.20/1> <http://www.w3.org/2000/01/rdf-schema#label> "02 Технологические машины и оборудование " <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/15.03.20/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/15.03.20/1> <http://sparql.sstu.ru:3030/speciality/hasCode> "15.03.20" <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/15.03.20/1> <http://sparql.sstu.ru:3030/speciality/equalsTo> <http://sparql.sstu.ru:3030/speciality/lists/2/speciality/150700/1> <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/15.03.20/1> <http://sparql.sstu.ru:3030/speciality/isPartOfUGSN> <http://sparql.sstu.ru:3030/speciality/lists/3/ugsn/15.00.00> <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/15.03.20/1> <http://sparql.sstu.ru:3030/speciality/equalsTo> <http://sparql.sstu.ru:3030/speciality/lists/1/speciality/150407/2> <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/15.03.20/1> <http://www.w3.org/2000/01/rdf-schema#label> "Машиностроение " <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/15.03.20/1> <http://sparql.sstu.ru:3030/speciality/hasLevelEducation> <http://sparql.sstu.ru:3030/speciality/level/1> <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/15.03.20/1> <http://sparql.sstu.ru:3030/speciality/equalsTo> <http://sparql.sstu.ru:3030/speciality/lists/1/speciality/150206/2> <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/21.03.20/1> <http://sparql.sstu.ru:3030/speciality/hasLevelEducation> <http://sparql.sstu.ru:3030/speciality/level/1> <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/21.03.20/1> <http://www.w3.org/2000/01/rdf-schema#label> "Землеустройство и кадастры " <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/21.03.20/1> <http://sparql.sstu.ru:3030/speciality/isPartOfUGSN> <http://sparql.sstu.ru:3030/speciality/lists/3/ugsn/21.00.00> <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/21.03.20/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://sparql.sstu.ru:3030/speciality/Speciality> <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/21.03.20/1> <http://sparql.sstu.ru:3030/speciality/hasCode> "21.03.20" <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/21.03.20/1> <http://sparql.sstu.ru:3030/speciality/equalsTo> <http://sparql.sstu.ru:3030/speciality/lists/2/speciality/120700/1> <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/21.03.20/1> <http://www.w3.org/2000/01/rdf-schema#label> "02 Землеустройство и кадастры " <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/21.03.20/1> <http://sparql.sstu.ru:3030/speciality/equalsTo> <http://sparql.sstu.ru:3030/speciality/lists/1/speciality/120303/2> <http://sparql.sstu.ru:3030/speciality/> .
+<http://sparql.sstu.ru:3030/speciality/lists/3/speciality/21.03.20/1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://sparql.sstu.ru:3030/speciality/> .
+<http://www.arpenteur.org/ontology/Arpenteur.owl#has_m02> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://www.arpenteur.org/ontology/Arpenteur.owl> .
+<http://www.arpenteur.org/ontology/Arpenteur.owl#has_m02> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.arpenteur.org/ontology/Arpenteur.owl#RotationMatrix> <http://www.arpenteur.org/ontology/Arpenteur.owl> .
+<http://www.arpenteur.org/ontology/Arpenteur.owl#has_m02> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.arpenteur.org/ontology/Arpenteur.owl> .
+<http://www.arpenteur.org/ontology/Arpenteur.owl#has_m02> <http://www.w3.org/2000/01/rdf-schema#label> "has matrix coordinate (0,2)"@en <http://www.arpenteur.org/ontology/Arpenteur.owl> .
+<http://purl.org/toco/nwTos> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> <http://purl.org/toco/> .
+<http://purl.org/toco/nwTos> <http://www.w3.org/2000/01/rdf-schema#comment> "network type of service. the nw_tos property of a flow. It should be a decimal number with the value between 0-255." <http://purl.org/toco/> .
+<http://purl.org/toco/nwTos> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/toco/Flow> <http://purl.org/toco/> .
+<http://purl.org/toco/nwTos> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/toco/hasFlowProperty> <http://purl.org/toco/> .
+<http://purl.org/toco/nwTos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/toco/> .
+<http://purl.org/NET/biol/botany#> <http://purl.org/dc/terms/description> "This is a specialist botanical variant of the Biological Taxonomy Vocabulary."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/botany#> <http://purl.org/dc/terms/title> "Biological Taxonomy Vocabulary 0.2 (Botany)"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/botany#> <http://purl.org/stuff/rev#hasReview> _:B76bceeededfb876bb5c374ecb1554cf7 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/botany#> <http://purl.org/stuff/rev#hasReview> _:B2da964edf7e746cb9c54675509397f80 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/botany#> <http://www.w3.org/ns/dcat#keyword> "Biology" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/botany#> <http://purl.org/dc/terms/modified> "2009-03-18"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/botany#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "botany" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/botany#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/botany/versions/2009-03-18.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/botany#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/botany#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/botany#> <http://purl.org/stuff/rev#hasReview> _:B4b5236914cab508df7be4bcafdb84842 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/botany#> <http://purl.org/dc/terms/creator> <http://tobyinkster.co.uk/#i> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/botany#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/NET/biol/botany#" <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/biol> <http://purl.org/dc/terms/title> "Biological Taxonomy Vocabulary 0.2 (Core)"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/biol> <http://purl.org/dc/terms/issued> "2013-06-03"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/biol> <http://purl.org/dc/terms/modified> "2018-04-23"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/biol> <http://xmlns.com/foaf/0.1/primaryTopic> <http://purl.org/NET/biol/ns#> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/biol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/ita> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/deu> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/sme> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/vocommons/voaf#metadataVoc> <http://purl.org/dc/terms/> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/vocommons/voaf#classNumber> "7"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/vocommons/voaf#metadataVoc> <http://purl.org/vocab/vann/> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/vocommons/voaf#metadataVoc> <http://purl.org/dc/elements/1.1/> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/vocommons/voaf#datatypeNumber> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2002/07/owl> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/vocommons/voaf#propertyNumber> "10"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/dc/terms/title> "0.2.0" <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/nld> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/vocommons/voaf#instanceNumber> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/dc/terms/issued> "2017-10-27"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/spa> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/dan> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/bto/versions/2017-10-27.n3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#Distribution> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/creator> <http://tobyinkster.co.uk/#i> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/description> "An RDF vocabulary for the taxonomy of all forms of life"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/modified> "2008-10-06"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/stuff/rev#hasReview> _:B736806912c4b4bb71ebc77b3996983c4 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/issued> "2008-05-07"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/NET/biol/ns#" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/biol/versions/2008-10-06.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/ns/dcat#keyword> "Biology" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/stuff/rev#hasReview> _:B793b885f50908df7d2250fa57300db8f <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/dc/terms/title> "Biological Taxonomy Vocabulary 0.2 (Core)"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "biol" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/stuff/rev#hasReview> _:Baf2bcb58d6c1948517b3cadc3f0af85c <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/biol/versions/2008-05-13.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/NET/biol/ns#> <http://purl.org/stuff/rev#hasReview> _:B1afc06799b9fdd6ba4e7e57d3dcdcda7 <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/botany> <http://xmlns.com/foaf/0.1/primaryTopic> <http://purl.org/NET/biol/botany#> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/botany> <http://purl.org/dc/terms/title> "Biological Taxonomy Vocabulary 0.2 (Botany)"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/botany> <http://purl.org/dc/terms/issued> "2013-08-31"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/botany> <http://purl.org/dc/terms/modified> "2016-01-25"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/botany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .

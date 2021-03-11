@@ -1,0 +1,126 @@
+<http://purl.org/vocommons/voaf#hasEquivalencesWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocommons/voaf#reliesOn> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasEquivalencesWith> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasEquivalencesWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique que le vocabulaire sujet déclare des équivalences de classes ou de propriétés avec le vocabulaire objet"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasEquivalencesWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasEquivalencesWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasEquivalencesWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the subject vocabulary declares some equivalent classes or properties with the object vocabulary."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasEquivalencesWith> <http://purl.org/dc/terms/description> "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n\t\tPREFIX owl:<http://www.w3.org/2002/07/owl#>\n\t\tPREFIX voaf:<http://purl.org/vocommons/voaf#>\n\t\tPREFIX skos:<http://www.w3.org/2004/02/skos/core#>\n\t\t\n\t\tCONSTRUCT{\n\t\t\t?vocab1 voaf:hasEquivalencesWith ?vocab2\n\t\t}\n\t\tWHERE{\n\t\t\t{?elem1 owl:equivalentProperty ?elem2.}\n\t\t\tUNION{?elem1 owl:sameAs ?elem2.}\n\t\t\tUNION{?elem1 owl:equivalentClass ?elem2.}\n\t\t\tUNION{?elem2 owl:equivalentProperty ?elem1.}\n\t\t\tUNION{?elem2 owl:equivalentClass ?elem1.}\n\t\t\tUNION{?elem1 skos:exactMatch ?elem2.}\n\t\t\tUNION{?elem2 skos:exactMatch ?elem1.}\n\t\t\tFILTER(!isBlank(?elem2))\n\t\t\t?elem1 rdfs:isDefinedBy ?vocab1.\n\t\t\t?vocab1 a voaf:Vocabulary.\n\t\t\t?elem2 rdfs:isDefinedBy ?vocab2.\n\t\t\t?vocab2 a voaf:Vocabulary.\n\t\t\tFILTER(?vocab1!=?vocab2)\n\t\t}" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasEquivalencesWith> <http://www.w3.org/2000/01/rdf-schema#label> "a des équivalences avec"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasEquivalencesWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasEquivalencesWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasEquivalencesWith> <http://www.w3.org/2000/01/rdf-schema#label> "has equivalences with"@en <http://purl.org/vocommons/voaf> .
+<http://rdaregistry.info/Elements/i/P40053> <http://www.w3.org/2000/01/rdf-schema#label> "has equivalent item relationship with"@en <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40053> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "An item that is equivalent to the item."@en <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40053> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40053> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/i/equivalentItemRelationship.en> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40053> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/i/P40046> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40053> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdaregistry.info/Elements/c/C10003> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40053> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdaregistry.info/Elements/i/P40053> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40053> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "equivalent item relationship"@en <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40053> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/i/> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40053> <http://metadataregistry.org/uri/profile/RegAp/name> "equivalentItemRelationship"@en <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40053> <http://www.w3.org/2004/02/skos/core#definition> "Relates an item to an item that is equivalent to the item."@en <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40053> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10003> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40053> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60712> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40053> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/i/P40053> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/i/P40031> <http://rdaregistry.info/Elements/i> .
+<http://rdaregistry.info/Elements/m/P30212> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/m/P30048> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30212> <http://metadataregistry.org/uri/profile/RegAp/name> "equivalentManifestationRelationship"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30212> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30212> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60712> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30212> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30212> <http://www.w3.org/2000/01/rdf-schema#label> "has equivalent manifestation relationship with"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30212> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30212> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdaregistry.info/Elements/m/P30212> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30212> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/equivalentManifestationRelationship.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30212> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30212> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30212> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A manifestation that is equivalent to the manifestation."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30212> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/m/P30024> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30212> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "equivalent manifestation relationship"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30212> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a manifestation that is equivalent to the manifestation."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30162> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "equipment or system requirement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30162> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30162> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to the equipment or system required for use, playback, etc., of an analog, digital, etc., resource."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30162> <http://metadataregistry.org/uri/profile/RegAp/name> "equipmentOrSystemRequirement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30162> <http://www.w3.org/2000/01/rdf-schema#label> "has equipment or system requirement"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30162> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30162> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60528> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30162> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "3.2" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30162> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "The equipment or system required for use, playback, etc., of an analog, digital, etc., resource."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30162> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30162> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30162> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/equipmentOrSystemRequirement.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/u/P60506> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/equinox.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60506> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/w/P10214> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60506> <http://metadataregistry.org/uri/profile/RegAp/name> "equinox"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60506> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60506> <http://www.w3.org/2000/01/rdf-schema#label> "has equinox"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60506> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60506> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to one of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0°."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60506> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60528> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/m/P30162> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60528> <http://metadataregistry.org/uri/profile/RegAp/name> "equipmentOrSystemRequirement"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60528> <http://www.w3.org/2000/01/rdf-schema#label> "has equipment or system requirement"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60528> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60528> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to the equipment or system required for use, playback, etc., of an analog, digital, etc., resource."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60528> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60528> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60528> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/equipmentOrSystemRequirement.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60712> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/equivalentResourceRelationshipWith.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60712> <http://www.w3.org/2000/01/rdf-schema#label> "has equivalent resource relationship with"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60712> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/u/P60191> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60712> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/m/P30212> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60712> <http://metadataregistry.org/uri/profile/RegAp/name> "equivalentResourceRelationshipWith"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60712> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a resource that is equivalent to the resource."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60712> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60712> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/i/P40053> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60712> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60712> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60712> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdaregistry.info/Elements/u/P60712> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/w/P10214> <http://www.w3.org/2004/02/skos/core#definition> "Relates a work to one of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0°."@en <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10214> <http://www.w3.org/2002/07/owl#sameAs> <http://rdaregistry.info/Elements/w/equinox> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10214> <http://www.w3.org/2000/01/rdf-schema#label> "has equinox"@en <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10214> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10214> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/w/equinox.en> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10214> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdaregistry.info/Elements/u/P60506> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10214> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10001> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10214> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/w/> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10214> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10214> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60506> <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10214> <http://metadataregistry.org/uri/profile/RegAp/name> "equinox"@en <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10214> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0�."@en <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10214> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "equinox"@en <http://rdaregistry.info/Elements/w> .
+<http://rdaregistry.info/Elements/w/P10214> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "7.5" <http://rdaregistry.info/Elements/w> .
+<http://vivoweb.org/ontology/core#hasEquipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://vivoweb.org/ontology/core> .
+<http://vivoweb.org/ontology/core#hasEquipment> <http://www.w3.org/2000/01/rdf-schema#label> "has equipment" <http://vivoweb.org/ontology/core> .
+<http://vivoweb.org/ontology/core#hasEquipment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> <http://vivoweb.org/ontology/core> .
+<http://vivoweb.org/ontology/core#hasEquipment> <http://www.w3.org/2002/07/owl#inverseOf> <http://vivoweb.org/ontology/core#equipmentFor> <http://vivoweb.org/ontology/core> .
+<http://vivoweb.org/ontology/core#hasEquipment> <http://www.w3.org/2000/01/rdf-schema#range> <http://vivoweb.org/ontology/core#Equipment> <http://vivoweb.org/ontology/core> .
+<http://iflastandards.info/ns/isbd/elements/P1052> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource that is cartographic to its equinox (one of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees)."@en <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1052> <http://www.w3.org/2004/02/skos/core#definition> "Relaciona un recurso cartográfico con su equinoccio (uno de los dos puntos de la interesección de la eclíptica y el Ecuador celeste, ocupado por el sol cuando su declinación es de 0 grados)."@es <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1052> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1052> <http://metadataregistry.org/uri/profile/RegAp/name> "hasEquinox"@en <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1052> <http://www.w3.org/2000/01/rdf-schema#label> "has equinox"@en <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1052> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1052> <http://www.w3.org/2000/01/rdf-schema#label> "tiene equinoccio"@es <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1052> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/isbd/elements/C2001> <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1052> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/isbd/elements/> <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1134> <http://metadataregistry.org/uri/profile/RegAp/name> "hasEqualization"@en <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1134> <http://www.w3.org/2004/02/skos/core#definition> "Relaciona un recurso con la ecualización que emplea."@es <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1134> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to the equalization it employs."@en <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1134> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/isbd/elements/C2001> <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1134> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1134> <http://www.w3.org/2000/01/rdf-schema#label> "has equalization"@en <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1134> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1134> <http://www.w3.org/2000/01/rdf-schema#label> "tiene ecualización"@es <http://iflastandards.info/ns/isbd/elements/> .
+<http://iflastandards.info/ns/isbd/elements/P1134> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/isbd/elements/> <http://iflastandards.info/ns/isbd/elements/> .
+<http://data.europa.eu/esco/model#hasEQFLevel> <http://purl.org/dc/terms/issued> "2013-06-27"^^<http://www.w3.org/2001/XMLSchema#date> <http://data.europa.eu/esco/model> .
+<http://data.europa.eu/esco/model#hasEQFLevel> <http://www.w3.org/2000/01/rdf-schema#label> "has EQF Level"@en <http://data.europa.eu/esco/model> .
+<http://data.europa.eu/esco/model#hasEQFLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "The level (as specified by the European Qualification Framework) applicable to the subject qualification."@en <http://data.europa.eu/esco/model> .
+<http://data.europa.eu/esco/model#hasEQFLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.europa.eu/esco/model> .
+<http://data.europa.eu/esco/model#hasEQFLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.europa.eu/esco/model#EQFLevel> <http://data.europa.eu/esco/model> .
+<http://data.europa.eu/esco/model#hasEQFLevel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/subject> <http://data.europa.eu/esco/model> .
+<http://data.europa.eu/esco/model#hasEQFLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.europa.eu/esco/model> <http://data.europa.eu/esco/model> .
+<http://data.europa.eu/esco/model#hasEQFLevel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "released" <http://data.europa.eu/esco/model> .
+<http://data.europa.eu/esco/model#hasEQFLevel> <http://purl.org/dc/terms/modified> "2013-06-27"^^<http://www.w3.org/2001/XMLSchema#date> <http://data.europa.eu/esco/model> .

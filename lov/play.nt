@@ -1,0 +1,564 @@
+<http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember> <http://www.w3.org/2000/01/rdf-schema#label> "Programme Committee Member" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>\n\t\t\t\tThis role is played by the members of the programme committee of a conference or conference-like event. We found this role to be so significant that it justifies to be represented by its own class.\n\t\t\t</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.semanticweb.org/ns/swc/ontology#Role> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Role> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#ProgrammeCommitteeMember> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#03_roles> <http://www.w3.org/2000/01/rdf-schema#label> "Roles" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#03_roles> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>\n\t\t\t\tOne of the basic design choices in SWC is to use role modelling for describing the different functions at a conference, such as chairs, reviewers, etc. For any particular role at a given conference, the <code>swc:Role</code> class or a sub-class will be instantiated. This role instance stands in relation to a person (who plays the role) and an event. The figure below gives an example showing how to model the role of the metadata chair (or \"dog food tsar\") at ISWC+ASWC2007, which was held by Knud Möller (together with Tom Heath, not shown in the figure).\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t\tNote that the metadata chair role is not modelled with its own dedicated class (although it could have been). Instead, an instance of the generic <a href=\"#Chair\">Chair</a> class is used and labelled accordingly.\n\t\t\t</p>\n\t\t\t<div align=\"center\">\n\t\t\t\t<a href=\"documentation/20090510-Roles_new.pdf\"><img src=\"documentation/20090510-Roles_new.png\" /></a>\n\t\t\t</div>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.totl.net/game/belongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The player this type of piece belongs to." <http://data.totl.net/game/> .
+<http://data.totl.net/game/belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/PieceType> <http://data.totl.net/game/> .
+<http://data.totl.net/game/belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "piece belongs to" <http://data.totl.net/game/> .
+<http://data.totl.net/game/belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Player> <http://data.totl.net/game/> .
+<http://data.totl.net/game/belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/winner> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Player> <http://data.totl.net/game/> .
+<http://data.totl.net/game/winner> <http://www.w3.org/2000/01/rdf-schema#label> "game won by" <http://data.totl.net/game/> .
+<http://data.totl.net/game/winner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/State> <http://data.totl.net/game/> .
+<http://data.totl.net/game/winner> <http://www.w3.org/2000/01/rdf-schema#comment> "The player who has won." <http://data.totl.net/game/> .
+<http://data.totl.net/game/winner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/turn> <http://www.w3.org/2000/01/rdf-schema#label> "player turn" <http://data.totl.net/game/> .
+<http://data.totl.net/game/turn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/turn> <http://www.w3.org/2000/01/rdf-schema#comment> "The player who's turn it is in a given state." <http://data.totl.net/game/> .
+<http://data.totl.net/game/turn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/State> <http://data.totl.net/game/> .
+<http://data.totl.net/game/turn> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Player> <http://data.totl.net/game/> .
+<http://data.totl.net/game/takes> <http://www.w3.org/2000/01/rdf-schema#label> "pieces taken" <http://data.totl.net/game/> .
+<http://data.totl.net/game/takes> <http://www.w3.org/2000/01/rdf-schema#comment> "The pieces taken in a move and removed from play." <http://data.totl.net/game/> .
+<http://data.totl.net/game/takes> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Pieces> <http://data.totl.net/game/> .
+<http://data.totl.net/game/takes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/takes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://data.totl.net/game/captures> <http://data.totl.net/game/> .
+<http://data.totl.net/game/takes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/Move> <http://data.totl.net/game/> .
+<http://data.totl.net/game/takes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://data.totl.net/game/removes> <http://data.totl.net/game/> .
+<http://data.totl.net/game/madeBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The player making a move." <http://data.totl.net/game/> .
+<http://data.totl.net/game/madeBy> <http://www.w3.org/2000/01/rdf-schema#label> "made by" <http://data.totl.net/game/> .
+<http://data.totl.net/game/madeBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/madeBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Player> <http://data.totl.net/game/> .
+<http://data.totl.net/game/madeBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/Move> <http://data.totl.net/game/> .
+<http://data.totl.net/game/converts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://data.totl.net/game/captures> <http://data.totl.net/game/> .
+<http://data.totl.net/game/converts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/Move> <http://data.totl.net/game/> .
+<http://data.totl.net/game/converts> <http://www.w3.org/2000/01/rdf-schema#label> "pieces converted" <http://data.totl.net/game/> .
+<http://data.totl.net/game/converts> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Pieces> <http://data.totl.net/game/> .
+<http://data.totl.net/game/converts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/converts> <http://www.w3.org/2000/01/rdf-schema#comment> "The pieces converted to the players own side, in a move." <http://data.totl.net/game/> .
+<http://data.totl.net/game/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "A location in a game, such as a square or the players hand." <http://data.totl.net/game/> .
+<http://data.totl.net/game/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.totl.net/game/> .
+<http://data.totl.net/game/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Game Location" <http://data.totl.net/game/> .
+<http://data.totl.net/game/capturesLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://data.totl.net/game/moveLocation> <http://data.totl.net/game/> .
+<http://data.totl.net/game/capturesLocation> <http://www.w3.org/2000/01/rdf-schema#label> "move captures location" <http://data.totl.net/game/> .
+<http://data.totl.net/game/capturesLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/capturesLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Location> <http://data.totl.net/game/> .
+<http://data.totl.net/game/capturesLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A location which is captured by the player making the move. For example in reversi all pieces which change to their colour." <http://data.totl.net/game/> .
+<http://data.totl.net/game/capturesLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/Move> <http://data.totl.net/game/> .
+<http://data.totl.net/game/removes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/Move> <http://data.totl.net/game/> .
+<http://data.totl.net/game/removes> <http://www.w3.org/2000/01/rdf-schema#comment> "The pieces removed completel from play in a move." <http://data.totl.net/game/> .
+<http://data.totl.net/game/removes> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Pieces> <http://data.totl.net/game/> .
+<http://data.totl.net/game/removes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/removes> <http://www.w3.org/2000/01/rdf-schema#label> "pieces removed" <http://data.totl.net/game/> .
+<http://data.totl.net/game/Player> <http://www.w3.org/2000/01/rdf-schema#comment> "A player in a game. Only indicates an abstract side for the type of game, not a specific player in a single game." <http://data.totl.net/game/> .
+<http://data.totl.net/game/Player> <http://www.w3.org/2000/01/rdf-schema#label> "Player" <http://data.totl.net/game/> .
+<http://data.totl.net/game/Player> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.totl.net/game/> .
+<http://data.totl.net/game/Player> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Agent> <http://data.totl.net/game/> .
+<http://dbpedia.org/ontology/LacrossePlayer> <http://www.w3.org/2000/01/rdf-schema#label> "lacrosse-speler"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/LacrossePlayer> <http://www.w3.org/2000/01/rdf-schema#label> "ラクロス選手"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/LacrossePlayer> <http://www.w3.org/2000/01/rdf-schema#label> "imreoir crosógaíochta"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/LacrossePlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Athlete> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/LacrossePlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:LacrossePlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/LacrossePlayer> <http://www.w3.org/2000/01/rdf-schema#label> "παίκτης χόκεϋ σε χόρτο"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/LacrossePlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Lacrossespieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/LacrossePlayer> <http://www.w3.org/2000/01/rdf-schema#label> "lacrosse player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/LacrossePlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "jogador de basebol"@pt <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/2000/01/rdf-schema#comment> "Ο αθλητής (άνδρας ή γυναίκα) που συμμετέχει σε μία ομάδα μπέιζμπολ."@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q10871364> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "imreoir daorchluiche"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "παίκτης μπέιζμπολ"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "joueur de baseball"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Athlete> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "giocatore di baseball"@it <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "honkballer"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "야구 선수"@ko <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Baseballspieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "野球選手"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "baseball player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BaseballPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:BaseballPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/HandballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Handballspieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/HandballPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Athlete> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/HandballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "παίκτης του handball"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/HandballPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/HandballPlayer> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q13365117> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/HandballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "jugador de balonmano"@es <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/HandballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "handballer"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/HandballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "handball player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/HandballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "imreoir liathróid láimhe"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/HandballPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:HandballPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/HandballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "joueur de handball"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Play> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Play> <http://www.w3.org/2000/01/rdf-schema#comment> "Ένα παιχνίδι είναι μια μορφή της λογοτεχνίας, γραμμένο από έναν συγγραφέα, που συνήθως αποτελείται από σενάριο του διαλόγου μεταξύ των χαρακτήρων, που προορίζεται για την θεατρική παράσταση και όχι μόνο ανάγνωση."@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Play> <http://www.w3.org/2000/01/rdf-schema#label> "dráma"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Play> <http://www.w3.org/2000/01/rdf-schema#label> "παιχνίδι"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Play> <http://www.w3.org/2000/01/rdf-schema#label> "obra de teatro"@es <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Play> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q25379> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Play> <http://www.w3.org/2000/01/rdf-schema#label> "Theaterstück"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Play> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/WrittenWork> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Play> <http://www.w3.org/2000/01/rdf-schema#label> "toneelstuk"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Play> <http://www.w3.org/2000/01/rdf-schema#label> "戯曲"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Play> <http://www.w3.org/2000/01/rdf-schema#comment> "A play is a form of literature written by a playwright, usually consisting of scripted dialogue between characters, intended for theatrical performance rather than just reading."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Play> <http://www.w3.org/2000/01/rdf-schema#label> "play"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Play> <http://www.w3.org/2000/01/rdf-schema#label> "pièce de théâtre"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Play> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Play> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/muteCharacterInPlay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/muteCharacterInPlay> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Play> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/muteCharacterInPlay> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://dbpedia.org/ontology/characterInPlay> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/muteCharacterInPlay> <http://www.w3.org/2000/01/rdf-schema#label> "mute character in play"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/muteCharacterInPlay> <http://www.w3.org/2000/01/rdf-schema#comment> "Name of a mute character in play."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/muteCharacterInPlay> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:muteCharacterInPlay> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/muteCharacterInPlay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/muteCharacterInPlay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ChessPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "schaker"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ChessPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "chess player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ChessPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "παίκτης σκάκι"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ChessPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "체스 선수"@ko <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ChessPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "szachista"@pl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ChessPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "チェスプレーヤー"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ChessPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "giocatore di scacchi"@it <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ChessPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Athlete> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ChessPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "imreoir fichille"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ChessPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Schachspieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ChessPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ChessPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:ChessPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/IceHockeyPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/WinterSportPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/IceHockeyPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "ice hockey player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/IceHockeyPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/IceHockeyPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "joueur de hockey sur glace"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/IceHockeyPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "ijshockeyspeler"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/IceHockeyPlayer> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q11774891> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/IceHockeyPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "παίκτης χόκεϋ"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/IceHockeyPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:IceHockeyPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/IceHockeyPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Eishockeyspieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/IceHockeyPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "아이스하키 선수"@ko <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/number> <http://www.w3.org/2000/01/rdf-schema#label> "number"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/number> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/number> <http://www.w3.org/2000/01/rdf-schema#label> "Anzahl"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/number> <http://www.w3.org/2000/01/rdf-schema#comment> "Jersey number of an Athlete (sports player, eg \"99\") or sequential number of an Album (eg \"Third studio album\")"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/number> <http://www.w3.org/2000/01/rdf-schema#label> "αριθμός"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/number> <http://www.w3.org/2000/01/rdf-schema#label> "nummer"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/number> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:number> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AmericanFootballPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:AmericanFootballPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AmericanFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "American footballspeler"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AmericanFootballPlayer> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q14128148> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AmericanFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "joueur de football américain"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AmericanFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "jugador de fútbol americano"@es <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AmericanFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/GridironFootballPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AmericanFootballPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AmericanFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "미식 축구 선수"@ko <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AmericanFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "xogador de fútbol americano"@gl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AmericanFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "giocatore di football americano"@it <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AmericanFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "παίκτης αμερικανικού ποδοσφαίρου"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AmericanFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "american football player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AmericanFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "American Footballspieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AmericanFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "アメリカンフットボール選手"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SoccerPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "joueur de football"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SoccerPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "축구 선수"@ko <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SoccerPlayer> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q937857> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SoccerPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SoccerPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "παίχτης ποδοσφαίρου"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SoccerPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Fußballspieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SoccerPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "futbolista"@es <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SoccerPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "サッカー選手"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SoccerPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:SoccerPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SoccerPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Athlete> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SoccerPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "soccer player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SoccerPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "voetballer"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SoccerPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "imreoir sacair"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BeachVolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "beachvolleybal speler"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BeachVolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "παίκτης του beach volley"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BeachVolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#comment> "Ένα άτομο (άνδρας ή γυναίκα) που ασχολείται με το άθλημα του μπίτς βόλλεϋ."@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BeachVolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "giocatore di beach volley"@it <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BeachVolleyballPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BeachVolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "beach volleyball player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BeachVolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/VolleyballPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BeachVolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "비치발리볼 선수"@ko <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BeachVolleyballPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:BeachVolleyballPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BeachVolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "ビーチバレー選手"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/BeachVolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Beachvolleyballspieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/CanadianFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Canadese football speler"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/CanadianFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "canadian football Player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/CanadianFootballPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/CanadianFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/GridironFootballPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/CanadianFootballPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:CanadianFootballPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/CanadianFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "καναδός παίκτης ποδοσφαίρου"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/CanadianFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "kanadischer Footballspieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/CanadianFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "joueur de football canadien"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/CanadianFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "캐나다 축구 선수"@ko <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/CanadianFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "giocatore di football canadese"@it <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/CanadianFootballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "jogador de futebol canadense"@pt <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/subjectOfPlay> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Play> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/subjectOfPlay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/subjectOfPlay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/subjectOfPlay> <http://www.w3.org/2000/01/rdf-schema#label> "subject of play"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/subjectOfPlay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/subjectOfPlay> <http://www.w3.org/2000/01/rdf-schema#comment> "The overall subject matter dealt with by the play."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/subjectOfPlay> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:subjectOfPlay> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/NetballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "netball player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/NetballPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:NetballPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/NetballPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Athlete> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/NetballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "giocatore di netball"@it <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/NetballPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/NetballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Korbballspieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playRole> <http://www.w3.org/2000/01/rdf-schema#label> "play role"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playRole> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:playRole> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playRole> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://dbpedia.org/ontology/uses> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playRole> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasRole> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Play> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:premiereDate> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date the play was first performed."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/2000/01/rdf-schema#label> "premiere date"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://dbpedia.org/ontology/releaseDate> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:SnookerPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "biljarter"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerPlayer> <http://www.w3.org/2000/01/rdf-schema#comment> "Ein Sportler der Snooker spielt, eine bekannte Billardvariante"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Snookerspieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "imreoir snúcair"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "snooker player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Athlete> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerPlayer> <http://www.w3.org/2000/01/rdf-schema#comment> "An athlete that plays snooker, which is a billard derivate"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premierePlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premierePlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Play> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premierePlace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#coparticipatesWith> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premierePlace> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:premierePlace> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premierePlace> <http://www.w3.org/2000/01/rdf-schema#label> "premiere place"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premierePlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premierePlace> <http://www.w3.org/2000/01/rdf-schema#comment> "The theatre and/or city the play was first performed in."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerInTeam> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:playerInTeam> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerInTeam> <http://www.w3.org/2000/01/rdf-schema#comment> "A person playing for a sports team. inverseOf team"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerInTeam> <http://www.w3.org/2000/01/rdf-schema#label> "παίχτης σε ομάδα"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerInTeam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerInTeam> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Person> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerInTeam> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/SportsTeam> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerInTeam> <http://www.w3.org/2000/01/rdf-schema#label> "Spieler im Team"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerInTeam> <http://www.w3.org/2000/01/rdf-schema#label> "player in team"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerInTeam> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerInTeam> <http://www.w3.org/2000/01/rdf-schema#comment> "Άτομο που παίζει για αθλητική ομάδα."@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerInTeam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerStatus> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:playerStatus> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Person> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerStatus> <http://www.w3.org/2000/01/rdf-schema#label> "player status"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Spielerstatus"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SquashPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SquashPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "giocatore di squash"@it <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SquashPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "스쿼시 선수"@ko <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SquashPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Squashspieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SquashPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Athlete> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SquashPlayer> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q16278103> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SquashPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:SquashPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SquashPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "squash player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SquashPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "squasher"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerChamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerChamp> <http://www.w3.org/2000/01/rdf-schema#label> "snooker world champion"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerChamp> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:SnookerChamp> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerChamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Ein Sportler der Snooker spielt und mindestens einmal die Weltmeisterschaft gewonnen hat"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerChamp> <http://www.w3.org/2000/01/rdf-schema#label> "Snookerweltmeister"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerChamp> <http://www.w3.org/2000/01/rdf-schema#comment> "An athlete that plays snooker and won the world championship at least once"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerChamp> <http://www.w3.org/2000/01/rdf-schema#label> "curadh domhanda sa snúcar"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SnookerChamp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/SnookerPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/2000/01/rdf-schema#label> "premiere year"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:premiereYear> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://dbpedia.org/ontology/releaseYear> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Play> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYear> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/2000/01/rdf-schema#comment> "Year the play was first performed."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerSeason> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:playerSeason> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerSeason> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Agent> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerSeason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerSeason> <http://www.w3.org/2000/01/rdf-schema#label> "player season"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/playerSeason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/VolleyballPlayer> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q15117302> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/VolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Athlete> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/VolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "volleyball player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/VolleyballPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/VolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "παίχτης βόλεϊ"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/VolleyballPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:VolleyballPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/VolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "siatkarz"@pl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/VolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "배구 선수"@ko <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/VolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Volleyballspieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/VolleyballPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "volleyballer"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PlayboyPlaymate> <http://www.w3.org/2000/01/rdf-schema#label> "Playboy Playmate"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PlayboyPlaymate> <http://www.w3.org/2000/01/rdf-schema#label> "Playboy Playmate"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PlayboyPlaymate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PlayboyPlaymate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Person> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PlayboyPlaymate> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:PlayboyPlaymate> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PlayboyPlaymate> <http://www.w3.org/2000/01/rdf-schema#label> "playboy playmate"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PlayboyPlaymate> <http://www.w3.org/2000/01/rdf-schema#label> "playmate pour Playboy"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Soccer> <http://www.w3.org/2000/01/rdf-schema#label> "voetbal"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Soccer> <http://www.w3.org/2000/01/rdf-schema#comment> "A sports game in which the ball must be played by foot"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Soccer> <http://www.w3.org/2000/01/rdf-schema#label> "football"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Soccer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Soccer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Soccer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Soccer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/TeamSport> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "テニス選手"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "παίχτης τένις"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "tennis player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TennisPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Athlete> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TennisPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:TennisPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TennisPlayer> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q10833314> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TennisPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "tenista"@es <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "joueur de tennis"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "imreoir leadóige"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "tennisser"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Tennisspieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "jogador de tennis"@pt <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AthleticsPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Athlet"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AthleticsPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "lúthchleasaí"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AthleticsPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:AthleticsPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AthleticsPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "陸上競技選手"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AthleticsPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "atleet"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AthleticsPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "giocatore di atletica leggera"@it <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AthleticsPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AthleticsPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "athletics player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/AthleticsPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Athlete> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterPoloPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Wasserpolo Spieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterPoloPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "waterpoloër"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterPoloPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterPoloPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:WaterPoloPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterPoloPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "giocatore di pallanuoto"@it <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterPoloPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "water polo Player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterPoloPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Athlete> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TableTennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "table tennis player"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TableTennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "Tischtennisspieler"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TableTennisPlayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Athlete> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TableTennisPlayer> <http://www.w3.org/2000/01/rdf-schema#comment> "O αθλητής που παίζει πινγκ-πονγκ"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TableTennisPlayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TableTennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "卓球選手"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TableTennisPlayer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:TableTennisPlayer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TableTennisPlayer> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q13382519> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TableTennisPlayer> <http://www.w3.org/2000/01/rdf-schema#comment> "Athlete who plays table tennis"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TableTennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "탁구 선수"@ko <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TableTennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "imreoir leadóg bhoird"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TableTennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "tafeltennisser"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/TableTennisPlayer> <http://www.w3.org/2000/01/rdf-schema#label> "παίκτης πινγκ-πονγκ"@el <http://dbpedia.org/ontology/> .
+<http://purl.org/spar/fabio/Play> <http://www.w3.org/2000/01/rdf-schema#label> "play"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Play> <http://www.w3.org/2000/01/rdf-schema#comment> "A form of literature written by a playwright, usually consisting of scripted dialogue between characters, intended for theatrical performance rather than reading."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Play> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/LiteraryArtisticWork> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Play> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://www.ontotext.com/proton/protonext#Play> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Play> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#PublishedMaterial> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Play> <http://www.w3.org/2000/01/rdf-schema#comment> "A play is a form of literature written by a playwright, usually consisting of scripted dialogue between characters, intended for theatrical performance rather than just reading. DBPedia"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Play> <http://www.w3.org/2000/01/rdf-schema#label> "Play"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/ns/odrl/2/includedIn> <http://www.w3.org/ns/odrl/2/use> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/2004/02/skos/core#note> "For example, to play a video or audio track. If the action is to be performed to a wider audience than just the Assignees, then the Recipient constraint is recommended to be used." <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/2000/01/rdf-schema#label> "Play"@en <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/2004/02/skos/core#scopeNote> "Non-Normative"@en <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/2004/02/skos/core#definition> "To create a sequential and transient rendition of an Asset."@en <http://www.w3.org/ns/odrl/2/> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/play.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplaya .
+_:Bplaya <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplaya <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/playa.nt> .
+_:Bplaya <https://w3id.org/tree#value> "playa" .
+_:Bplaya <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/playa.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplayb .
+_:Bplayb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplayb <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/playb.nt> .
+_:Bplayb <https://w3id.org/tree#value> "playb" .
+_:Bplayb <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/playb.nt> <https://w3id.org/tree#remainingItems> "26"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplayc .
+_:Bplayc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplayc <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/playc.nt> .
+_:Bplayc <https://w3id.org/tree#value> "playc" .
+_:Bplayc <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/playc.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplaye .
+_:Bplaye <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplaye <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/playe.nt> .
+_:Bplaye <https://w3id.org/tree#value> "playe" .
+_:Bplaye <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/playe.nt> <https://w3id.org/tree#remainingItems> "260"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplayg .
+_:Bplayg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplayg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/playg.nt> .
+_:Bplayg <https://w3id.org/tree#value> "playg" .
+_:Bplayg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/playg.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplayh .
+_:Bplayh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplayh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/playh.nt> .
+_:Bplayh <https://w3id.org/tree#value> "playh" .
+_:Bplayh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/playh.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplayi .
+_:Bplayi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplayi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/playi.nt> .
+_:Bplayi <https://w3id.org/tree#value> "playi" .
+_:Bplayi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/playi.nt> <https://w3id.org/tree#remainingItems> "65"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplayl .
+_:Bplayl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplayl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/playl.nt> .
+_:Bplayl <https://w3id.org/tree#value> "playl" .
+_:Bplayl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/playl.nt> <https://w3id.org/tree#remainingItems> "41"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplaym .
+_:Bplaym <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplaym <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/playm.nt> .
+_:Bplaym <https://w3id.org/tree#value> "playm" .
+_:Bplaym <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/playm.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplayn .
+_:Bplayn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplayn <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/playn.nt> .
+_:Bplayn <https://w3id.org/tree#value> "playn" .
+_:Bplayn <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/playn.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplayo .
+_:Bplayo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplayo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/playo.nt> .
+_:Bplayo <https://w3id.org/tree#value> "playo" .
+_:Bplayo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/playo.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplayp .
+_:Bplayp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplayp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/playp.nt> .
+_:Bplayp <https://w3id.org/tree#value> "playp" .
+_:Bplayp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/playp.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplays .
+_:Bplays <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplays <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/plays.nt> .
+_:Bplays <https://w3id.org/tree#value> "plays" .
+_:Bplays <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/plays.nt> <https://w3id.org/tree#remainingItems> "58"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplayt .
+_:Bplayt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplayt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/playt.nt> .
+_:Bplayt <https://w3id.org/tree#value> "playt" .
+_:Bplayt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/playt.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:Bplayw .
+_:Bplayw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bplayw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/playw.nt> .
+_:Bplayw <https://w3id.org/tree#value> "playw" .
+_:Bplayw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/playw.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:BaX2Bplay .
+_:BaX2Bplay <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bplay <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+play.nt> .
+_:BaX2Bplay <https://w3id.org/tree#value> "a" .
+_:BaX2Bplay <https://w3id.org/tree#value> "play" .
+_:BaX2Bplay <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+play.nt> <https://w3id.org/tree#remainingItems> "52"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:BbX2Bplay .
+_:BbX2Bplay <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bplay <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+play.nt> .
+_:BbX2Bplay <https://w3id.org/tree#value> "b" .
+_:BbX2Bplay <https://w3id.org/tree#value> "play" .
+_:BbX2Bplay <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+play.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:BcX2Bplay .
+_:BcX2Bplay <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Bplay <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+play.nt> .
+_:BcX2Bplay <https://w3id.org/tree#value> "c" .
+_:BcX2Bplay <https://w3id.org/tree#value> "play" .
+_:BcX2Bplay <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+play.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:BdX2Bplay .
+_:BdX2Bplay <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2Bplay <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+play.nt> .
+_:BdX2Bplay <https://w3id.org/tree#value> "d" .
+_:BdX2Bplay <https://w3id.org/tree#value> "play" .
+_:BdX2Bplay <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+play.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:BeX2Bplay .
+_:BeX2Bplay <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2Bplay <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+play.nt> .
+_:BeX2Bplay <https://w3id.org/tree#value> "e" .
+_:BeX2Bplay <https://w3id.org/tree#value> "play" .
+_:BeX2Bplay <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+play.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:BfX2Bplay .
+_:BfX2Bplay <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2Bplay <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+play.nt> .
+_:BfX2Bplay <https://w3id.org/tree#value> "f" .
+_:BfX2Bplay <https://w3id.org/tree#value> "play" .
+_:BfX2Bplay <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+play.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:BhX2Bplay .
+_:BhX2Bplay <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2Bplay <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+play.nt> .
+_:BhX2Bplay <https://w3id.org/tree#value> "h" .
+_:BhX2Bplay <https://w3id.org/tree#value> "play" .
+_:BhX2Bplay <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+play.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:BiX2Bplay .
+_:BiX2Bplay <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2Bplay <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+play.nt> .
+_:BiX2Bplay <https://w3id.org/tree#value> "i" .
+_:BiX2Bplay <https://w3id.org/tree#value> "play" .
+_:BiX2Bplay <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+play.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:BmX2Bplay .
+_:BmX2Bplay <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2Bplay <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+play.nt> .
+_:BmX2Bplay <https://w3id.org/tree#value> "m" .
+_:BmX2Bplay <https://w3id.org/tree#value> "play" .
+_:BmX2Bplay <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+play.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:BoX2Bplay .
+_:BoX2Bplay <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2Bplay <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+play.nt> .
+_:BoX2Bplay <https://w3id.org/tree#value> "o" .
+_:BoX2Bplay <https://w3id.org/tree#value> "play" .
+_:BoX2Bplay <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+play.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:BpX2Bplay .
+_:BpX2Bplay <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BpX2Bplay <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/p+play.nt> .
+_:BpX2Bplay <https://w3id.org/tree#value> "p" .
+_:BpX2Bplay <https://w3id.org/tree#value> "play" .
+_:BpX2Bplay <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/p+play.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:BplayX2Bs .
+_:BplayX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BplayX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/play+s.nt> .
+_:BplayX2Bs <https://w3id.org/tree#value> "play" .
+_:BplayX2Bs <https://w3id.org/tree#value> "s" .
+_:BplayX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/play+s.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:BplayX2Bt .
+_:BplayX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BplayX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/play+t.nt> .
+_:BplayX2Bt <https://w3id.org/tree#value> "play" .
+_:BplayX2Bt <https://w3id.org/tree#value> "t" .
+_:BplayX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/play+t.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/play.nt> <https://w3id.org/tree#relation> _:BplayX2Bw .
+_:BplayX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BplayX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/play+w.nt> .
+_:BplayX2Bw <https://w3id.org/tree#value> "play" .
+_:BplayX2Bw <https://w3id.org/tree#value> "w" .
+_:BplayX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/play+w.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .

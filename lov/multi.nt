@@ -1,0 +1,424 @@
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "This specifies the business function of the gr:Offering, i.e. whether the gr:BusinessEntity is offering to sell, to lease, or to repair the particular type of product. In the case of bundles, it is also possible to attach individual business functions to each gr:TypeAndQuantityNode. The business function of the main gr:Offering determines the business function for all included objects or services, unless a business function attached to a gr:TypeAndQuantityNode overrides it.\n\t\nNote: While it is possible that an entity is offering multiple types of business functions for the same set of objects (e.g. rental and sales), this should usually not be stated by attaching multiple business functions to the same gr:Offering, since the gr:UnitPriceSpecification for the varying business functions will typically be very different."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has business function (1..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#domain> _:B40462f78bf0e86cb61ec3902c16712c7 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/goodrelations/v1#LocationOfSalesOrServiceProvisioning> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "A location is a point or area of interest from which a particular product or service is available, e.g. a store, a bus stop, a gas station, or a ticket booth. The difference to gr:BusinessEntity is that the gr:BusinessEntity is the legal entity (e.g. a person or corporation) making the offer, while gr:Location is the store, office, or place. A chain restaurant will e.g. have one legal entity but multiple restaurant locations. Locations are characterized by an address or geographical position and a set of opening hour specifications for various days of the week.\n\t\t\nExample: A rental car company may offer the Business Function Lease Out of cars from two locations, one in Fort Myers, Florida, and one in Boston, Massachussetts. Both stations are open 7:00 - 23:00 Mondays through Saturdays.\n\nNote: Typical address standards (vcard) and location data (geo, WGC84) should be attached to a gr:Location node. Since there already exist established vocabularies for this, the GoodRelations ontology does not provide respective attributes. Instead, the use of respective vocabularies is recommended. However, the gr:hasGlobalLocationNumber property is  provided for linking to public identifiers for business locations.\n\t\t\nCompatibility with schema.org: This class is equivalent to http://schema.org/Place."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntity> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyPromise> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#TypeAndQuantityNode> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Brand> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Offering> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyScope> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A payment charge specification is a conceptual entity that specifies the additional costs asked for settling the payment after accepting a given gr:Offering using a particular gr:PaymentMethod. A payment charge specification is characterized by (1) a monetary amount per order specified as a literal value of type float in combination with a Currency, (2) the payment method, and (3) a whether this charge includes local sales taxes, namely VAT.\nA gr:Offering may be linked to multiple payment charge specifications that specify alternative charges for various payment methods.\n\nExamples: Payment by VISA or Mastercard costs a fee of 3 Euros including VAT, payment by bank transfer in advance is free of charge.\n\nThe total amount of this surcharge is specified as a float value of the gr:hasCurrencyValue property. The currency is specified via the gr:hasCurrency datatype property. Whether the price includes VAT or not is indicated by the gr:valueAddedTaxIncluded datatype property. The gr:PaymentMethod to which this charge applies is specified using the gr:appliesToPaymentMethod object property.\n\nIf the price can only be given as a range, use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue for the upper and lower bounds.\n\nImportant: When querying for the price, always use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Payment charge specification"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMakeAndModel> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#ProductOrServiceModel> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMakeAndModel> <http://www.w3.org/2000/01/rdf-schema#label> "has make and model (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMakeAndModel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMakeAndModel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMakeAndModel> <http://www.w3.org/2000/01/rdf-schema#domain> _:B4a2383c1f7532c764749a478c8f1d416 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMakeAndModel> <http://www.w3.org/2000/01/rdf-schema#comment> "This states that an actual product instance (gr:Individual) or a placeholder instance for multiple, unidentified such instances (gr:SomeItems) is one occurence of a particular gr:ProductOrServiceModel.\n\nExample: myFordT hasMakeAndModel FordT."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the beginning of the validity of the gr:Offering, gr:PriceSpecification, gr:License, or gr:OpeningHoursSpecification.\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2008-05-30T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2008-05-30T09:30:10-09:00\n\nor\n\n2008-05-30T09:30:10+09:00.\n\nNote: If multiple contradicting instances of a gr:Offering, gr:PriceSpecification, or gr:OpeningHoursSpecification exist, it is a good heuristics to assume that\n1. Information with validity information for the respective period of time ranks higher than information without validity information.\n2. Among conflicting nodes both having validity information, the one with the shorter validity span ranks higher."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validFrom> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0422858174d80f56dc0d95a6adf5d5fd <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validFrom> <http://www.w3.org/2000/01/rdf-schema#label> "valid from (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#domain> _:Be458e2f400874d122f010385eff6760a <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the end of the validity of the gr:Offering, gr:PriceSpecification, gr:License, or gr:OpeningHoursSpecification.\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2008-05-30T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2008-05-30T09:30:10-09:00\n\nor\n2008-05-30T09:30:10+09:00.\n\nNote 1: If multiple contradicting instances of a gr:Offering, gr:PriceSpecification, or gr:OpeningHoursSpecification exist, it is a good heuristics to assume that\n1. Information with validity information for the respective period of time ranks higher than information without validity information.\n2. Among conflicting nodes both having validity information, the one with the shorter validity span ranks higher.\nNote 2: For Google, attaching a gr:validThrough statement to a gr:UnitPriceSpecification is mandatory. \n"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#label> "valid through (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#includesObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#includesObject> <http://www.w3.org/2000/01/rdf-schema#domain> _:B23f5f80e0484bda92f0a4bd0c7407faf <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#includesObject> <http://www.w3.org/2000/01/rdf-schema#comment> "This object property links a gr:Offering to one or multiple gr:TypeAndQuantityNode or nodes that specify the components that are included in the respective offer."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#includesObject> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#TypeAndQuantityNode> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#includesObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#includesObject> <http://www.w3.org/2000/01/rdf-schema#label> "includes object (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A delivery charge specification is a conceptual entity that specifies the additional costs asked for the delivery of a given gr:Offering using a particular gr:DeliveryMethod by the respective gr:BusinessEntity. A delivery charge specification is characterized by (1) a monetary amount per order, specified as a literal value of type float in combination with a currency, (2) the delivery method, (3) the target country or region, and (4)  whether this charge includes local sales taxes, namely VAT.\nA gr:Offering may be linked to multiple gr:DeliveryChargeSpecification nodes that specify alternative charges for disjoint combinations of target countries or regions, and delivery methods.\n\nExamples: Delivery by direct download is free of charge worldwide, delivery by UPS to Germany is 10 Euros per order, delivery by mail within the US is 5 Euros per order.\n\nThe total amount of this charge is specified as a float value of the gr:hasCurrencyValue property. The currency is specified via the gr:hasCurrency datatype property. Whether the price includes VAT or not is indicated by the gr:valueAddedTaxIncluded property. The gr:DeliveryMethod to which this charge applies is specified using the gr:appliesToDeliveryMethod object property. The region or regions to which this charge applies is specified using the gr:eligibleRegions property, which uses ISO 3166-1 and ISO 3166-2 codes.\n\nIf the price can only be given as a range, use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue for the upper and lower bounds.\n\nImportant: When querying for the price, always use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Delivery charge specification"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1068> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1068> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1068> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1068> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#MultiplexGroupTimeOffset> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1068> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.WaveformSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1068> <http://www.w3.org/2000/01/rdf-schema#label> "Multiplex Group Time Offset" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0028.9505> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Multi-frame Presentation Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0028.9505> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0028.9505> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0028.9505> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.MultiFramePresentationSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.003A.0020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.003A.0020> <http://www.w3.org/2000/01/rdf-schema#label> "Multiplex Group Label" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.003A.0020> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.003A.0020> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.003A.0020> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#MultiplexGroupLabel> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.003A.0020> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.WaveformSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilConfiguration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilConfiguration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilConfiguration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.MRReceiveCoilSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilConfiguration> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0018.9046> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-Coil Configuration" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilElementUsed> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0018.9048> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilElementUsed> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-Coil Element Used" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilElementUsed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilElementUsed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilElementUsed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.MultiCoilDefinitionSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilElementUsed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultipleCopiesFlag> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.GeneralPurposeScheduledProcedureStep> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultipleCopiesFlag> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0040.4006> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultipleCopiesFlag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultipleCopiesFlag> <http://www.w3.org/2000/01/rdf-schema#label> "Multiple Copies Flag" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultipleCopiesFlag> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultipleCopiesFlag> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultipleSpinEcho> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultipleSpinEcho> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultipleSpinEcho> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultipleSpinEcho> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0018.9011> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultipleSpinEcho> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.Image> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultipleSpinEcho> <http://www.w3.org/2000/01/rdf-schema#label> "Multiple Spin Echo" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexedAudioChannelsDescriptionCodeSequence> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.003A.0300> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexedAudioChannelsDescriptionCodeSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Multiplexed Audio Channels Description Code Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexedAudioChannelsDescriptionCodeSequence> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexedAudioChannelsDescriptionCodeSequence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexedAudioChannelsDescriptionCodeSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexedAudioChannelsDescriptionCodeSequence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.Image> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.9505> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-frame Presentation Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.9505> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.9505> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.9505> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.PresentationState> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.9505> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0028.9505> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#MultiFramePresentationSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.4006> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.GeneralPurposeScheduledProcedureStep> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.4006> <http://www.w3.org/2000/01/rdf-schema#label> "Multiple Copies Flag" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.4006> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.4006> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.4006> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.4006> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#MultipleCopiesFlag> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0018.9045> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Multi-Coil Definition Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0018.9045> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.MultiCoilDefinitionSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0018.9045> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0018.9045> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0008.1167> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.FrameExtractionSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0008.1167> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0008.1167> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0008.1167> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-Frame Source SOP Instance UID" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0008.1167> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#MultiFrameSourceSOPInstanceUID> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.MultiCoilDefinitionSequence> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0018.9045> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.MultiCoilDefinitionSequence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.MultiCoilDefinitionSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.MultiCoilDefinitionSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Multi-Coil Definition Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.003A.0300> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.003A.0300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.003A.0300> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.MultiplexedAudioChannelsDescriptionCodeSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.003A.0300> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Multiplexed Audio Channels Description Code Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9045> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9045> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9045> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9045> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.MRReceiveCoilSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9045> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#MultiCoilDefinitionSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9045> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-Coil Definition Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexGroupLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexGroupLabel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexGroupLabel> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.003A.0020> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexGroupLabel> <http://www.w3.org/2000/01/rdf-schema#label> "Multiplex Group Label" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexGroupLabel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexGroupLabel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.WaveformSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilDefinitionSequence> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilDefinitionSequence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilDefinitionSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilDefinitionSequence> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0018.9045> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilDefinitionSequence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.MRReceiveCoilSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilDefinitionSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-Coil Definition Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.MultiFramePresentationSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Multi-frame Presentation Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.MultiFramePresentationSequence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.MultiFramePresentationSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.MultiFramePresentationSequence> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0028.9505> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9046> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9046> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9046> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9046> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#MultiCoilConfiguration> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9046> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-Coil Configuration" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9046> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.MRReceiveCoilSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiFramePresentationSequence> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiFramePresentationSequence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiFramePresentationSequence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.PresentationState> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiFramePresentationSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiFramePresentationSequence> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0028.9505> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiFramePresentationSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-frame Presentation Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiPlanarExcitation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.Image> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiPlanarExcitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiPlanarExcitation> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0018.9012> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiPlanarExcitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiPlanarExcitation> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-planar Excitation" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiPlanarExcitation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9047> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9047> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#MultiCoilElementName> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9047> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9047> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.MultiCoilDefinitionSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9047> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9047> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-Coil Element Name" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilElementName> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0018.9047> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilElementName> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-Coil Element Name" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilElementName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilElementName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilElementName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.MultiCoilDefinitionSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiCoilElementName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiFrameSourceSOPInstanceUID> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0008.1167> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiFrameSourceSOPInstanceUID> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-Frame Source SOP Instance UID" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiFrameSourceSOPInstanceUID> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.FrameExtractionSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiFrameSourceSOPInstanceUID> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiFrameSourceSOPInstanceUID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.MultiplexedAudioChannelsDescriptionCodeSequence> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.Tag.003A.0300> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.MultiplexedAudioChannelsDescriptionCodeSequence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.MultiplexedAudioChannelsDescriptionCodeSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.MultiplexedAudioChannelsDescriptionCodeSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Multiplexed Audio Channels Description Code Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexGroupTimeOffset> <http://www.w3.org/2000/01/rdf-schema#label> "Multiplex Group Time Offset" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexGroupTimeOffset> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.WaveformSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexGroupTimeOffset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexGroupTimeOffset> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexGroupTimeOffset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#MultiplexGroupTimeOffset> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0018.1068> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9048> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9048> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9048> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.MultiCoilDefinitionSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9048> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9048> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#MultiCoilElementUsed> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9048> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-Coil Element Used" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.003A.0300> <http://www.w3.org/2000/01/rdf-schema#label> "Multiplexed Audio Channels Description Code Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.003A.0300> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.003A.0300> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.003A.0300> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.003A.0300> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#MultiplexedAudioChannelsDescriptionCodeSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.003A.0300> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.Image> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9011> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9011> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9011> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.Image> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9011> <http://www.w3.org/2000/01/rdf-schema#label> "Multiple Spin Echo" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9011> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#MultipleSpinEcho> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9012> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9012> <http://www.w3.org/2000/01/rdf-schema#label> "Multi-planar Excitation" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9012> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9012> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#MultiPlanarExcitation> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9012> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.Image> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/imbi/ru-meta.owl#alt_spr_cls> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://purl.org/imbi/ru-meta.owl> .
+<http://purl.org/imbi/ru-meta.owl#alt_spr_cls> <http://www.w3.org/2000/01/rdf-schema#comment> "An alternative superclass assertion. Used to capture multiple parenthood." <http://purl.org/imbi/ru-meta.owl> .
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/2000/01/rdf-schema#comment> "super class of ISO Thesaurus\n\nThe mandatory attribute identifier may be mapped to the Dublin Core property dc:identifier. A typical representation of a thesaurus should document a (scoped) relationship between an identifier of this thesaurus and the URI of the RDF Concept Scheme URI.\n\nThe mandatory attribute lang can be mapped to either of the Dublin Core properties dc:language or dct:language. The value space is defined by RFC 4646. For multilingual thesaurus, one lang attribute is needed per supported language.\n\nTypically these can be mapped to the corresponding Dublin Core dc: (or dct:) properties:\n- dc:contributor\n- dc:coverage\n- dc:creator\n- dct:created\n- dct:modified\n- dc:date\n- skos:definition\n- dc:format\n- dc:publisher\n- dc:relation, dct:relation or a specialization\n- dc:rights\n- dc:source\n- dc:subject\n- dc:title\n- dc:type\n\nThe association \"hasVersion\" is discussed in the Version_History section of the mapping documentation (http://www.niso.org/schemas/iso25964/correspondencesSKOS/)."@en <http://purl.org/iso25964/skos-thes> .
+<http://www.w3.org/2004/02/skos/core#notation> <http://www.w3.org/2000/01/rdf-schema#comment> "Best practice in SKOS is to (RDF) type the notation value object. This allows multiple notation value types for the same concept or term to be distinguished. \n\nNote: In ISO 25964-1, such typing is implicit in the thesaurus or it is part of the \"notation\" value."@en <http://purl.org/iso25964/skos-thes> .
+<http://purl.org/library/InteractiveMultimedia> <http://www.w3.org/2002/07/owl#equivalentClass> <http://schema.org/CreativeWork/InteractiveMultimedia> <http://purl.org/library/> .
+<http://purl.org/library/InteractiveMultimedia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> <http://purl.org/library/> .
+<http://purl.org/library/InteractiveMultimedia> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://purl.org/library/> .
+<http://purl.org/library/InteractiveMultimedia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/library/> .
+<http://purl.org/library/InteractiveMultimedia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> <http://purl.org/library/> .
+<http://purl.org/library/InteractiveMultimedia> <http://www.w3.org/2000/01/rdf-schema#label> "Interactive Multimedia"@en <http://purl.org/library/> .
+<http://purl.org/linguistics/gold/TenseProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/TenseProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/MorphosemanticProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/TenseProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/TenseProperty> <http://www.w3.org/2000/01/rdf-schema#label> "TenseProperty"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/TenseProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Following [Comrie 1985: vii], we take tense to be the grammaticalisation of location in time. Tense Property is assigned to clauses on the basis of semantics: a tense value is selected for the clause from the range of tense values available in the given language. Tense Property is typically realised on the verb, but it may be found expressed multiply on different elements in the same clause. For example, tense may be found on more than one element of the verbal complex (e.g. in Kayardild [Evans 2003] or  Paamese [Crowley 2002: 68], or on verbs as well as on certain spatial and temporal adverbs and certain prepositions in the same clause (e.g. in Malagasy [Randriamasimanana 1981: 355-367],  [Keenan and Polinsky 1998: 566-567].\n\nIn the given language, the values of the Tense Property are assigned to the designated elements as a consequence of semantic choice, and all the available options of particular tense values expressing particular tense meanings can be described with a Tense Assignment System for that language. Since no languages have been found for which tense values are assigned by a Tense Distribution System (i.e. contextually, through agreement or government), Tense Property is not a Morphosyntactic Property. Instead, it is a Morphosemantic Property only."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NominalClassifier> <http://www.w3.org/2000/01/rdf-schema#label> "NominalClassifier"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NominalClassifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NominalClassifier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Classifier> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NominalClassifier> <http://www.w3.org/2000/01/rdf-schema#comment> "A classifier used within a system of noun classes where the morphosyntactic loci are adjectives and, rarely, numerals, as modifiers. Nominal classifiers have all the properties of noun class system classifiers with differences regarding the size of the system (bigger); semantics (animacy/sex/shape/size), transparency of semantic basis (may be opaque), variability of assignment (possible), use in multiple classifier systems (possible), and interrelations with other categories (only with number). [Aikhenvald 2003: 68]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/NominalClassifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/MultiplicativeNumeral> <http://www.w3.org/2000/01/rdf-schema#label> "MultiplicativeNumeral"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/MultiplicativeNumeral> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Numeral> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/MultiplicativeNumeral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/MultiplicativeNumeral> <http://www.w3.org/2000/01/rdf-schema#comment> "A multiplicative numeral is a numeral that expresses how many fold or how many times [Pei and Gaynor 1954: 149; Hartmann and Stork 1972: 147]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/MultiplicativeNumeral> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#comment> "A Glyph is a symbol used in a writing system to represent some kind of linguistic unit, such as a single sound, a  phoneme or an entire word. Glyphs are concatenated in a writing system to form orthographic parts and orthographic words. Consider the printed word 'apple'. This word contains two instances of the 'p' glyph, which is a subclass of Glyph. Instances of a Glyph share a similar shape and can be called 'shapemes'. The class Glyph is not the same as Grapheme. A Grapheme is a contrastive unit within a particular writing system. The notion of a glyph is relevant across writing systems. For instance, consider the symbol 'р' used in a printed instance of a Russian word 'русский'. Now consider the symbol 'p' used in the printed instance of an English word 'pickle'. Both symbols are instances of the same Glyph. They share the same general shape, but do not have the same phonemic value."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/OrthographicPart> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#comment> "A shape that is the visual representation of a character. It is a graphic object stored within a font. Glyphs are objects that are recognizably related to particular characters and which are dependent on particular design. Glyphs may or may not correspond to characters in a one-to-one manner. For example, a single character may correspond to multiple glyphs that have complementary distributions based upon context (e.g. final and non-final sigma in Greek), or several characters may correspond to a single glyph known as a ligature. [Lyons, et al. 2001]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/2000/01/rdf-schema#label> "Glyph"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Glyph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linked-data/cube#hierarchyRoot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/cube> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#hierarchyRoot> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies a root of the hierarchy. A hierarchy may have multiple roots but must have at least one."@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#hierarchyRoot> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/cube#HierarchicalCodeList> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#hierarchyRoot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#hierarchyRoot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:B71c52aa81b121cdad7cd1296319b72b4 <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/modified> "2013-07-26"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:Bb7bae32098dcdd38589810e0f2c440c5 <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:Bd151dd3553176c2f83c6108e389ec2c1 <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:B223e5bc27d2c2841aa2333cfcd3e948f <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/title> "Vocabulary for multi-dimensional (e.g. statistical) data publishing" <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://www.w3.org/2000/01/rdf-schema#label> "The data cube vocabulary" <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/modified> "2013-03-02"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://www.w3.org/2002/07/owl#versionInfo> "0.2" <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://www.w3.org/2000/01/rdf-schema#comment> "This vocabulary allows multi-dimensional data, such as statistics, to be published in RDF. It is based on the core information model from SDMX (and thus also DDI)." <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:Bbcc34b44e260fa7a89a6525752d376a9 <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/modified> "2010-11-27"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/created> "2010-07-12"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/license> <http://www.opendatacommons.org/licenses/pddl/1.0/> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#HierarchicalCodeList> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a generalized hierarchy of concepts which can be used for coding. The hierarchy is defined by one or more roots together with a property which relates concepts in the hierarchy to thier child concept .  The same concepts may be members of multiple hierarchies provided that different qb:parentChildProperty values are used for each hierarchy."@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#HierarchicalCodeList> <http://www.w3.org/2000/01/rdf-schema#label> "Hierarchical Code List"@en <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#HierarchicalCodeList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#HierarchicalCodeList> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/cube> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube#HierarchicalCodeList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linked-data/cube> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/multi.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultia .
+_:Bmultia <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultia <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multia.nt> .
+_:Bmultia <https://w3id.org/tree#value> "multia" .
+_:Bmultia <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multia.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultic .
+_:Bmultic <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultic <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multic.nt> .
+_:Bmultic <https://w3id.org/tree#value> "multic" .
+_:Bmultic <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multic.nt> <https://w3id.org/tree#remainingItems> "27"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultid .
+_:Bmultid <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultid <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multid.nt> .
+_:Bmultid <https://w3id.org/tree#value> "multid" .
+_:Bmultid <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multid.nt> <https://w3id.org/tree#remainingItems> "15"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultie .
+_:Bmultie <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultie <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multie.nt> .
+_:Bmultie <https://w3id.org/tree#value> "multie" .
+_:Bmultie <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multie.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultif .
+_:Bmultif <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultif <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multif.nt> .
+_:Bmultif <https://w3id.org/tree#value> "multif" .
+_:Bmultif <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multif.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultig .
+_:Bmultig <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultig <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multig.nt> .
+_:Bmultig <https://w3id.org/tree#value> "multig" .
+_:Bmultig <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multig.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultil .
+_:Bmultil <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultil <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multil.nt> .
+_:Bmultil <https://w3id.org/tree#value> "multil" .
+_:Bmultil <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multil.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultim .
+_:Bmultim <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultim <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multim.nt> .
+_:Bmultim <https://w3id.org/tree#value> "multim" .
+_:Bmultim <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multim.nt> <https://w3id.org/tree#remainingItems> "50"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultio .
+_:Bmultio <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultio <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multio.nt> .
+_:Bmultio <https://w3id.org/tree#value> "multio" .
+_:Bmultio <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multio.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultip .
+_:Bmultip <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultip <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multip.nt> .
+_:Bmultip <https://w3id.org/tree#value> "multip" .
+_:Bmultip <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multip.nt> <https://w3id.org/tree#remainingItems> "487"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultir .
+_:Bmultir <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultir <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multir.nt> .
+_:Bmultir <https://w3id.org/tree#value> "multir" .
+_:Bmultir <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multir.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultis .
+_:Bmultis <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultis <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multis.nt> .
+_:Bmultis <https://w3id.org/tree#value> "multis" .
+_:Bmultis <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multis.nt> <https://w3id.org/tree#remainingItems> "36"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultit .
+_:Bmultit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multit.nt> .
+_:Bmultit <https://w3id.org/tree#value> "multit" .
+_:Bmultit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multit.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultiu .
+_:Bmultiu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultiu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multiu.nt> .
+_:Bmultiu <https://w3id.org/tree#value> "multiu" .
+_:Bmultiu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multiu.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultiv .
+_:Bmultiv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultiv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multiv.nt> .
+_:Bmultiv <https://w3id.org/tree#value> "multiv" .
+_:Bmultiv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multiv.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:Bmultiw .
+_:Bmultiw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bmultiw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multiw.nt> .
+_:Bmultiw <https://w3id.org/tree#value> "multiw" .
+_:Bmultiw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multiw.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:BcX2Bmulti .
+_:BcX2Bmulti <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Bmulti <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+multi.nt> .
+_:BcX2Bmulti <https://w3id.org/tree#value> "c" .
+_:BcX2Bmulti <https://w3id.org/tree#value> "multi" .
+_:BcX2Bmulti <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+multi.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:BlX2Bmulti .
+_:BlX2Bmulti <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2Bmulti <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+multi.nt> .
+_:BlX2Bmulti <https://w3id.org/tree#value> "l" .
+_:BlX2Bmulti <https://w3id.org/tree#value> "multi" .
+_:BlX2Bmulti <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+multi.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:BmX2Bmulti .
+_:BmX2Bmulti <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2Bmulti <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+multi.nt> .
+_:BmX2Bmulti <https://w3id.org/tree#value> "m" .
+_:BmX2Bmulti <https://w3id.org/tree#value> "multi" .
+_:BmX2Bmulti <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+multi.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:BmultiX2Bp .
+_:BmultiX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmultiX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multi+p.nt> .
+_:BmultiX2Bp <https://w3id.org/tree#value> "multi" .
+_:BmultiX2Bp <https://w3id.org/tree#value> "p" .
+_:BmultiX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multi+p.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/multi.nt> <https://w3id.org/tree#relation> _:BmultiX2Bs .
+_:BmultiX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmultiX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/multi+s.nt> .
+_:BmultiX2Bs <https://w3id.org/tree#value> "multi" .
+_:BmultiX2Bs <https://w3id.org/tree#value> "s" .
+_:BmultiX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/multi+s.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

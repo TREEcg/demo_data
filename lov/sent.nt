@@ -1,0 +1,496 @@
+<http://kdo.render-project.eu/kdo#Statement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://kdo.render-project.eu/kdo#> <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#Statement> <http://www.w3.org/2000/01/rdf-schema#comment> "The statement class is the central class in the core of the KD ontology. It serves as a hub that connects sentiments (kdo:hasSentiment), opinions (kdo:hasOpinion), biases (kdo:hasBias), posts (kdo:hasPost), and agents (kdo:involvedAgent). Moreover, each statement may have an expression which is a string literal.\n"@en <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Statement"@en <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#hasSentiment> <http://www.w3.org/2000/01/rdf-schema#range> <http://kdo.render-project.eu/kdo#Sentiment> <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#hasSentiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#hasSentiment> <http://www.w3.org/2000/01/rdf-schema#label> "has sentiment"@en <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#hasSentiment> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bb6fa71eb19b4cc3b79b80f64ee261b13 <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#hasSentiment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://kdo.render-project.eu/kdo#> <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#hasSentiment> <http://www.w3.org/2000/01/rdf-schema#comment> "The kdo:hasSentiment property is used to specify which kdo:Sentiment is attached to a sioc:Post.\n"@en <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#hasScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#hasScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#hasScore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://kdo.render-project.eu/kdo#> <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#hasScore> <http://www.w3.org/2000/01/rdf-schema#label> "has score"@en <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#hasScore> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates the score of a kdo:Sentiment. This score is denoted as a decimal. However, the range can vary and depends on the implementation of the sentiment extraction process.\n"@en <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#hasScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://kdo.render-project.eu/kdo#Sentiment> <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#Sentiment> <http://www.w3.org/2000/01/rdf-schema#label> "Sentiment"@en <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#Sentiment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://kdo.render-project.eu/kdo#> <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#Sentiment> <http://www.w3.org/2000/01/rdf-schema#comment> "The sentiment class represents the sentiments expressed by the opinions and posts. A sentiment can have (kdo:hasPolarity) different types of polarity (positive, negative, and neutral) and a decimal score (kdo:hasScore). It is in the range of kdo:hasSentiment.\n"@en <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#Sentiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#Polarity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#Polarity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://kdo.render-project.eu/kdo#> <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#Polarity> <http://www.w3.org/2000/01/rdf-schema#comment> "The kdo:Polarity class is used to express the polarity of sentiments. The predefined instances of this class are: kdo:neutralPolarity, kdo:positivePolarity, kdo:negativePolarity.\n"@en <http://kdo.render-project.eu/kdo#> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Lovagl????t"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ferradura"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Sentiero pro cavallos"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/Bridleway/key/highway/value/bridleway> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ruiterpad"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ruiterpad"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ridevei"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Caleya"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ridesti"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????????? ????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????????? ?????? ???????? ??????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Lorong Kuda"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ratsastuspolku"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????? ?????? ??????????"@el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Rruge pa osfallt"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Jahalna pot"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Pista de cabalos"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Izj??des taka"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Daanan ng Kabayo"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Percorso per equitazione"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Cesta pre kone"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????????????????? ?????????"@ka <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ko??sk?? stezka"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Hent evit ar varc'hegerien"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Konji??ka staza"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Konji??ka staza"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "J??chanski pu??"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????? ??????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Droga dla koni"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Riedpadd"@nds <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Chemin pour cavaliers"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ratsatee"@et <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ???????? ??????????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ridstig"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Pista para cavalos"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "At y??r??y???? yolu"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "??irg?? kelias"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Bridleway"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????ng C?????i ng???a"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????????? ?????? ??????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/HighwayThing> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Reitweg"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Rejtarska dro??ka"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????????? ??????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Camino prioritario para peatones y caballos"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Rrug?? e kambsorve"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Gwenodenn evit an droadeien"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Chodnik"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Lorong Pejalan Kaki"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????????? ??????????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Gyalog??t"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Polku"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Footpath"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Sentiero pro pedones"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????"@el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????? ??????????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/Footway/key/highway/value/footway> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Pu??ik"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Percorso pedonale"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Footpadd"@nds <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Pe??a??ka staza"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Chemin pi??ton"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Makitid na Lakaran ng Tao"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Fousswee"@lb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Ch??dnik"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Gangsti"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Gangsti"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Carreiro"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Yaya yolu"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????????????"@ka <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "G??ngv??g"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Voetpad"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Voetpad"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "P??s??i??j?? takelis"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Sendero"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/HighwayThing> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Taka"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Jalgrada"@et <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Sienda"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Chodn??k"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Chodn??k"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Oinezkoen bide"@eu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Fu??weg"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Sendera"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ???????????? ??????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Pje??a??ka staza"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "???????ng b???"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????? ????"@fa <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "?????? ????????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "?????? ????????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Caminho"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????? ??????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Pe??pot"@sl <http://linkedgeodata.org/ontology> .
+<http://www.loted.eu/ontology#DS> <http://www.w3.org/2000/01/rdf-schema#label> "Dokument abgeschickt"@de <http://loted.eu/ontology> .
+<http://www.loted.eu/ontology#DS> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://loted.eu/ontology> .
+<http://www.loted.eu/ontology#DS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://loted.eu/ontology> .
+<http://www.loted.eu/ontology#DS> <http://www.w3.org/2000/01/rdf-schema#label> "Document sent"@en <http://loted.eu/ontology> .
+<http://www.loted.eu/ontology#DS> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.loted.eu/ontology#Tender> <http://loted.eu/ontology> .
+<http://www.loted.eu/ontology#DS> <http://www.w3.org/2000/01/rdf-schema#label> "Document envoyé"@fr <http://loted.eu/ontology> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Propriété utilisée quand le libellé d'un tag indique à quel utilisateur une ressource a été suggérée (modélise des fonctionalités existantes telles que les tags \"for:-username\" sur Delicious)."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentTo> <http://www.w3.org/2000/01/rdf-schema#label> "Verstuurd aan"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentTo> <http://www.w3.org/2000/01/rdf-schema#label> "Sent to"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontologydesignpatterns.org/ont/web/irw.owl#WebRepresentation> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Propriedad usada cuando el contenido de una etiqueta indica a que usuario un recurso ha sido sugerido (modeliza funcionalidades existentes como las etiquetas \"for:usuario\" en Delicious)."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentTo> <http://www.w3.org/2000/01/rdf-schema#label> "Inviato a"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Proprietà usata quando il contenuto di una tag indica a quale utente una risorsa è stata suggerita (modellizza funzionalità esistenti come le tag \"for:utente\" in Delicious)."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Eigenschap die gebruikt wordt wanneer het label van een tag aangeeft aan wie de bron is voorgesteld (modelleert bestaande functionaliteit zoals de \"for:-username\" tags op Delicious)."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentTo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#isRelatedTo> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentTo> <http://www.w3.org/2000/01/rdf-schema#label> "Enviado a"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentTo> <http://www.w3.org/2000/01/rdf-schema#label> "Envoyé à"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/sioc/ns#UserAccount> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Property used when the label of a tag indicates to whom a resource was suggested (models existing features like delicious \"for:-username\" tags)."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag wanneer deze gebruikt wordt om een gevoel, emotie, etc. uit te drukken."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Gevoelens uitdrukken"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza con una etiqueta cuando es usada para expresar un sentimiento, una emoción, etc."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Express feelings"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che si compie con una tag quando questa è usata per esprimere un sentimento, un'emozione, ecc."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Esprimere un sentimento"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag dès lors que celui-ci est utilisé pour exprimer un sentiment, une émotion, etc."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a tag whenever it is used to express a feeling, an emotion, etc."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Expresar un sentimiento"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Exprimer un ressenti"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentBy> <http://www.w3.org/2000/01/rdf-schema#label> "Enviado por"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#isRelatedTo> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Correspond à l'utilisation de signes qui indiquent à qui une ressource a été suggérée."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentBy> <http://www.w3.org/2000/01/rdf-schema#label> "Sent by"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentBy> <http://www.w3.org/2000/01/rdf-schema#label> "Envoyé par"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/sioc/ns#UserAccount> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Corrisponde all'uso di tagche indicano da chi è stata suggerita una risorsa."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Corresponde al uso de etiquetas que indican por quien ha sido sugerido un recurso."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentBy> <http://www.w3.org/2000/01/rdf-schema#label> "Inviato da"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontologydesignpatterns.org/ont/web/irw.owl#WebRepresentation> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentBy> <http://www.w3.org/2000/01/rdf-schema#label> "Verstuurd door"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Komt overeen met het gebruik van labels die aangeven door wie deze bron is voorgesteld."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#sentBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Corresponds to uses of labels that indicate by whom a resource was suggested."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ogp.me/ns#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://ogp.me/ns> .
+<http://ogp.me/ns#description> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ogp.me/ns#> <http://ogp.me/ns> .
+<http://ogp.me/ns#description> <http://www.w3.org/2000/01/rdf-schema#comment> "A one to two sentence description of your object."@en-us <http://ogp.me/ns> .
+<http://ogp.me/ns#description> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#comment> <http://ogp.me/ns> .
+<http://ogp.me/ns#description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en-us <http://ogp.me/ns> .
+<http://ogp.me/ns#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://ogp.me/ns/class#string> <http://ogp.me/ns> .
+<http://ogp.me/ns#determiner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://ogp.me/ns> .
+<http://ogp.me/ns#determiner> <http://www.w3.org/2000/01/rdf-schema#label> "determiner"@en-us <http://ogp.me/ns> .
+<http://ogp.me/ns#determiner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ogp.me/ns#> <http://ogp.me/ns> .
+<http://ogp.me/ns#determiner> <http://www.w3.org/2000/01/rdf-schema#range> <http://ogp.me/ns/class#determiner_str> <http://ogp.me/ns> .
+<http://ogp.me/ns#determiner> <http://www.w3.org/2000/01/rdf-schema#comment> "The word to precede the object's title in a sentence (e.g., \"the\" in \"the statue of liberty\").  Valid values are \"a\", \"an\", \"the\", \"\", and \"auto\"."@en-us <http://ogp.me/ns> .
+<http://open-services.net/ns/core#queryBase> <http://www.w3.org/2000/01/rdf-schema#label> "queryBase" <http://open-services.net/ns/core#> .
+<http://open-services.net/ns/core#queryBase> <http://www.w3.org/2000/01/rdf-schema#comment> "The base URI to use for queries. Queries may be invoked either by HTTP GET or HTTP POST. For HTTP GET, a query URI is formed by appending a key=value pair to the base URI. For HTTP POST, the query parameters are encoded as content with media type application/x-www-form-urlencoded and sent in the request body. The base URI MAY accept other query languages and media types in the request body, e.g. application/sparql-query for SPARQL queries." <http://open-services.net/ns/core#> .
+<http://open-services.net/ns/core#queryBase> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open-services.net/ns/core#> <http://open-services.net/ns/core#> .
+<http://open-services.net/ns/core#queryBase> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Query_Capability> <http://open-services.net/ns/core#> .
+<http://open-services.net/ns/core#queryBase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open-services.net/ns/core#> .
+<http://open.vocab.org/terms/postalAddress> <http://purl.org/dc/elements/1.1/created> "2011-05-09T14:56:05Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/postalAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/postalAddress> <http://purl.org/net/vocab/2004/03/label#plural> "Postal Addresses"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/postalAddress> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/postalAddress> <http://www.w3.org/2000/01/rdf-schema#label> "Postal Address"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/postalAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "A postal address to which letters and parcels can be sent to a Person or Organisation."@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/postalAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/postalAddress> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/docs/postalAddress> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/postalAddress> <http://www.w3.org/2004/02/skos/core#note> <http://open.vocab.org/changes/0a25d0c90e12975a61316ba9e15445e4> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/postalAddress> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/postalAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/firstSentence> <http://www.w3.org/2000/01/rdf-schema#label> "First Sentence"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/firstSentence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/firstSentence> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/terms/firstSentence.html> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/firstSentence> <http://purl.org/net/vocab/2004/03/label#plural> "First Sentences"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/firstSentence> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/firstSentence> <http://schemas.talis.com/2005/dir/schema#etag> "\"d0c054eb-1301-4435-b0e9-c26543ceea6d\"" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/firstSentence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/firstSentence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/firstSentence> <http://www.w3.org/2000/01/rdf-schema#comment> "The first sentence of a resource."@en <http://open.vocab.org/terms> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure> <http://www.w3.org/2000/01/rdf-schema#label> "Structure"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure> <http://www.w3.org/2000/01/rdf-schema#comment> "A structure is a more or less arbitrary label for a partitioning of a string. We do not follow a strict approach for what a word, phrase, sentence, title, paragraph is. These labels enable the definition processes for tool chains, e.g. tool analyses nif:Paragraph and calculates term frequency. \n    \n    This is an abstract class and should not be serialized. \n    \n    Changelog\n    0.1.1 not to be serialized comment\n    " <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentimentValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentimentValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentimentValue> <http://www.w3.org/2000/01/rdf-schema#label> "sentiment value" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentimentValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentimentValue> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentimentValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Between -1 negative and 1 positive "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#broaderContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#broaderContext> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#broaderContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#broaderContext> <http://www.w3.org/2000/01/rdf-schema#label> "broader Context"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#broaderContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#broaderContext> <http://www.w3.org/2000/01/rdf-schema#comment> "This property should be used to express that one Context is contained in another Context, e.g. several sentences of a document are modelled indivudally and refer to the broader context of the whole document."@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word> <http://www.w3.org/2000/01/rdf-schema#range> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links sentences to their words."@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word> <http://www.w3.org/2000/01/rdf-schema#label> "has word"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links sentences to their first word.\n    Changelog:\n    * 0.1.1 merged inf+val\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord> <http://www.w3.org/2000/01/rdf-schema#range> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#firstWord> <http://www.w3.org/2000/01/rdf-schema#label> "has first word"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence> <http://www.w3.org/2000/01/rdf-schema#label> "Sentence"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    A sentence.\n    Changelog:\n    * 0.1.1 fixed spelling, added language tag\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence> <http://www.w3.org/2000/01/rdf-schema#range> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sentence> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links words and other structures to their sentence.\n    Changelog:\n    * 0.2.0 Changed domain from nif:Word to nif:Structure, not longer inverseOf nif:word"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lastWord> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#word> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lastWord> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lastWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lastWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lastWord> <http://www.w3.org/2000/01/rdf-schema#range> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lastWord> <http://www.w3.org/2000/01/rdf-schema#label> "has last word"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lastWord> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.2" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#lastWord> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links sentences to their last word.\n\t Changelog:\n\t * 0.1.1 fixed label\n\t * 0.1.2 merged inf+val\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/2000/01/rdf-schema#comment> "This property (and nif:previousSentence, nif:nextWord, nif:previousWord and their transitive extension) can be used to make resources of nif:Sentence and nif:Word traversable, it can not be assumed that no gaps or whitespaces between sentences or words exist, i.e. string adjacency is not mandatory. The transitivity axioms are included in nif-core-inf.ttl and need to be included separately to keep a low reasoning profile. They are modeled after skos:broader and skos:broaderTransitive\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/2000/01/rdf-schema#range> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentenceTrans> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/2002/07/owl#inverseOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#previousSentence> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Sentence> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#nextSentence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#SonicRanging> <http://www.w3.org/2000/01/rdf-schema#comment> "measure the elapsed time between emission and return of an ultrasonic pulse sent vertically down to the snow covered ground surface" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#SonicRanging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#SonicRanging> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc57561bfffb7f8a3ec8520dc745dd9df <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#SonicRanging> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/meteo/aws#PrecipitationSensor> <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#SonicRanging> <http://purl.org/dc/elements/1.1/source> "skos:closeMatch Sonic ranging [ET-AWS] http://www.hydrometeoindustry.org/Meetings2010/ET-AWS-6/Doc8[1]-AWS-MetadataCatalogues.pdf" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#SonicRanging> <http://www.w3.org/2000/01/rdf-schema#label> "Sonic ranging" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#SonicRanging> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8bda2f8b041f3277a60ef542e1dd740b <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#SonicRanging> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbba3094770d01efa81188f931ed650ee <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#SonicRanging> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6a8fea7366336d25aeb99f0ca9e776f4 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.org/linguistics/gold/DiscourseUnit> <http://www.w3.org/2000/01/rdf-schema#label> "DiscourseUnit"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DiscourseUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DiscourseUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Discourse is the name given to stretches of language longer than one sentence, e.g., conversations, narratives, arguments, and speeches. A discourse unit is an identifiable structure within a discourse. The form of a discourse unit is partly determined by genre and partly by its social context. [Aristar-Dry 2010 (p.c.); based on Mills 1997]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DiscourseUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DiscourseUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/LinguisticUnit> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "SyntacticUnit (also called constituent) is a 'term in grammatical analysis for a linguistic unit which is a functional component of a larger construction. Based on a combination of intuitive and formal (e.g. distributional) criteria, a sentence can be analysed into a series of constituents, such as subject + predicate, or NP+VP, etc. [Crystal 2003: 99]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticUnit> <http://www.w3.org/2000/01/rdf-schema#label> "SyntacticUnit"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/GrammarUnit> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PastPerfectTense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PastPerfectTense> <http://www.w3.org/2000/01/rdf-schema#label> "PastPerfectTense"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PastPerfectTense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/TenseProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PastPerfectTense> <http://www.w3.org/2000/01/rdf-schema#comment> "A tense in which the event that the speaker is referring to precedes the time of the state of affairs denoted by the sentence.  Also referred to as 'past in past' form.  Past perfect can also be used modally to represent situations as non-factual or counterfactual.  [Michaelis 2006: 223; Depraetere and Reed 2006: 271]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PastPerfectTense> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "FeatureConstraint"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A term used in linguistics, and especially in generative grammar, to refer to a condition which restricts the application of a rule, to ensure that the sentences generated are well formed. For example, in generative phonology, a distinction can be made between ‘simulatenous’ and ‘sequential’ constraints: the former states the restrictions on the simulataneous occurrence of features, e.g. a segment cannot be at once [+high] and [+low]; the latter states the restrictions on sequences of features, e.g. whether a language permits consonant clusters. In generative syntax there are also several constraints which have to be imposed in order to prevent the derivation of ill formed phrase-markers, e.g. constraints on the ordering of rules. The notion of constraints takes on a different direction in optimality theory, where it is the principle explanatory device. Here, constraints are ways of characterizing language universals. Each language has its own ranking of constraints (e.g. which determine morpheme position or syllable structure), and differences between these rankings result in the variations observed between languages. [Crystal 2003: 101]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureConstraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/LinguisticDataStructure> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureConstraint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Interjection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/PartOfSpeechProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Interjection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Interjection> <http://www.w3.org/2000/01/rdf-schema#label> "Interjection"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Interjection> <http://www.w3.org/2000/01/rdf-schema#comment> "An interjection is a part of speech, typically brief in form, such as one syllable or word, whose members are used most often as exclamations or parts of an exclamation. An interjection, typically expressing an emotional reaction, often with respect to an accompanying sentence, is not syntactically related to other accompanying expressions, and may include a combination of sounds not otherwise found in the language [Crystal 1997: 200]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Interjection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ReflexivePronoun> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Pronominal> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ReflexivePronoun> <http://www.w3.org/2000/01/rdf-schema#label> "ReflexivePronoun"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ReflexivePronoun> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ReflexivePronoun> <http://www.w3.org/2000/01/rdf-schema#comment> "A pronoun which is interpreted as coreferential with another nominal, usually the subject, of the sentence or clause in which it occurs. [Schachter 1985: 27]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/ReflexivePronoun> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/HumanGender> <http://www.w3.org/2000/01/rdf-schema#comment> "A grammatical category used for analysis of word-classes displaying such contrasts as masculine/feminine/neuter, animate/inanimate, etc. It is also important to distinguish natural gender, items referring to the sex of real-world entities, and grammatical gender, which does not always correspond to sex, but which has an important role in signaling grammatical relations between words in a sentence. [Crystal 1985: 133]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/HumanGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/HumanGender> <http://www.w3.org/2000/01/rdf-schema#label> "HumanGender"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/HumanGender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/GenderProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/HumanGender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PersonalPronoun> <http://www.w3.org/2000/01/rdf-schema#comment> "A pronoun used to refer to the speaker, the person spoken to, and other persons and things whose referents are presumed to be clear from the context.  While some personal pronouns in some languages occur in essentially the same sentence position as other nominal expressions, it is rather common for them to show distributional peculiarities.  Personal pronouns may be clitics whose distribution may be consistently distinct from that of non-clitic nominals.  It is also common for the equivalent of personal pronouns to be expressed by affixes on the verb. [Schachter 1985: 25-26]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PersonalPronoun> <http://www.w3.org/2000/01/rdf-schema#label> "PersonalPronoun"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PersonalPronoun> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PersonalPronoun> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Pronominal> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PersonalPronoun> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CaseProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CaseProperty> <http://www.w3.org/2000/01/rdf-schema#label> "CaseProperty"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CaseProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CaseProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "CaseProperty is the class of properties that concerns the grammatical encoding of a noun's relationship (syntactic or semantic) to some other element in the sentence, such as a verb, noun, pronoun, or adposition [Pei and Gaynor 1954: 35; Crystal 1980: 53-54; Anderson 1985: 179-180; Andrews 1985: 7172; Kuno 1973: 45; Blake 2001]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/CaseProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/MorphosyntacticProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "This term is often used in linguistics and phonetics to refer to any entity which constitutes the focus of an enquiry. The unit is the stretch of language that carries grammatical patterns, and within which grammatical choices are made. For example, the unit sentence consists of one or more instances of the unit clause, and so on. [Crystal 2008: 503]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticUnit> <http://www.w3.org/2000/01/rdf-schema#label> "LinguisticUnit"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Abstract> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticWord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/SyntacticUnit> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticWord> <http://www.w3.org/2000/01/rdf-schema#label> "SyntacticWord"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticWord> <http://www.w3.org/2000/01/rdf-schema#comment> "SyntacticWord is the class of syntactic units occupying the lowest position in a syntactic construction.  They are the largest units resistant to insertion of new constituents within their boundaries; or they are the smallest constituents that can be moved within a sentence without making the sentence ungrammatical. [SIL International 2004]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticWord> <http://www.w3.org/2000/01/rdf-schema#comment> "It can be moved about in the sentence, or at least its position relative to other constituents can be altered by inserting new material.  It cannot be interrupted or its parts reordered. [Cruse 2000: 87-88]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticWord> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LexicalItem> <http://www.w3.org/2000/01/rdf-schema#label> "LexicalItem"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LexicalItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LexicalItem> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit of the vocabulary of a language such as a word, phrase or term as listed in a dictionary. It usually has a pronounceable or graphic form, fulfils a grammatical role in a sentence, and carries semantic meaning. [Hartmann and Stork 1972: 128]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LexicalItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LexicalItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/LinguisticDataStructure> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FocusAntipassiveVoice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FocusAntipassiveVoice> <http://www.w3.org/2000/01/rdf-schema#label> "FocusAntipassiveVoice"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FocusAntipassiveVoice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/VoiceProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FocusAntipassiveVoice> <http://www.w3.org/2000/01/rdf-schema#comment> "Blocks the patient or logical object (basic absolutive) nominal from being assigned Focus salience. Topic salience is available for assignment to various arguments, including the patient, but Focus salience is always assigned to agent, and is therefore inaccessible to the patient or any other nominal. [Klaiman 1991: 236] Dayley describes the focus antipassive as a rearranging voice whose primary function is to indicate that the agent of a transitive sentence is highlighted or in focus. The focus antipassive is used when the agent is in contrastive focus or highly emphatic, when the agent is questioned, and when the agent is relativized. [Dayley 1985: 348]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FocusAntipassiveVoice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Grapheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Grapheme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/FormUnit> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Grapheme> <http://www.w3.org/2000/01/rdf-schema#comment> "Crystal defines a grapheme as the minimal contrastive unit in the writing system of a language; usually enclosed in angle brackets. The grapheme <a>, for example, is realized as several allographs A, a, a, etc., which may be seen as units in complementary distribution (e.g. upper case restricted to sentence-initial position, proper names, etc.), or in free variation (as in some styles of handwriting), just as in phonemic analysis. 'Grapheme Analysis' is the main business of graphemics (or graphology). [Crystal 2008: 220]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Grapheme> <http://www.w3.org/2000/01/rdf-schema#comment> "A Grapheme is the smallest meaningful contrastive unit in a writing system. A grapheme is an abstraction over a set of like glyphs, the actual images on the  page. That is, a particular grapheme is realized by particular glyphs. More than one glyph can realize the same grapheme. For instance, the letter A  and its cursive equivalent are each realizations of the grapheme Latin Capital Letter A."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Grapheme> <http://www.w3.org/2000/01/rdf-schema#label> "Grapheme"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Grapheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DistributiveNumeral> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DistributiveNumeral> <http://www.w3.org/2000/01/rdf-schema#label> "DistributiveNumeral"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DistributiveNumeral> <http://www.w3.org/2000/01/rdf-schema#comment> "Most languages also have various series of numerals, whose denotations combine the concept of number with other concepts of a variety of different kinds. The meaning of sentences containing distributive numerals can be described in terms of a binary semantic relationship of distributivity that obtains between an expression containing the distributive numeral, the distributive share, and some other expression in the sentence, the distributive key. [Gill 2005: 222] Distributive numerals are special adnominal numerals that express distributive relations, as in German ‘Die Männer trugen je drei Koffer’, ‘The men carried three suitcases each.’ English lacks distributive numerals, because in a sentence like ‘They carried three suitcases each, the numeral does not form a continuous constituent with the distributive word ‘each’, i.e. ‘three…each’ does not qualify as a numeral. [Michaelis, Maurer, Haspelmath and Huber 2008]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DistributiveNumeral> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Numeral> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DistributiveNumeral> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Adverbial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Adverbial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Predicator> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Adverbial> <http://www.w3.org/2000/01/rdf-schema#label> "Adverbial"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Adverbial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Adverbial> <http://www.w3.org/2000/01/rdf-schema#comment> "An adverbial, or 'adverb', narrowly defined, is a part of speech whose members modify verbs for such categories as time, manner, place, or direction. An adverbal, broadly defined, is a part of speech whose members modify any constituent class of words other than nouns, such as verbs, adjectives, adverbs, phrases, clauses, or sentences. Under this definition, the possible type of modification depends on the class of the constituent being modified [Crystal 1997: 11; Payne 1997: 69]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Expletive> <http://www.w3.org/2000/01/rdf-schema#comment> "An expletive (also known as a dummy word) is a part of speech whose members have no meaning, but complete a sentence to make it grammatical [Crystal 1997: 127]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Expletive> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Expletive> <http://www.w3.org/2000/01/rdf-schema#label> "Expletive"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Expletive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/PartOfSpeechProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Expletive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/OrthographicSentence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/OrthographicPhrase> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/OrthographicSentence> <http://www.w3.org/2000/01/rdf-schema#label> "OrthographicSentence"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/OrthographicSentence> <http://www.w3.org/2000/01/rdf-schema#comment> "An OrthographicSentence is a special type of orthographic phrase, usually representing a clause. In Western writing systems, an orthographic sentence is set off by white space on the left edge and some kind of puncuation, such as a period or question mark, on the right."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/OrthographicSentence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/OrthographicSentence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/sent.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:Bsentb .
+_:Bsentb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsentb <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/sentb.nt> .
+_:Bsentb <https://w3id.org/tree#value> "sentb" .
+_:Bsentb <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/sentb.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:Bsente .
+_:Bsente <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsente <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/sente.nt> .
+_:Bsente <https://w3id.org/tree#value> "sente" .
+_:Bsente <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/sente.nt> <https://w3id.org/tree#remainingItems> "121"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:Bsenti .
+_:Bsenti <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsenti <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/senti.nt> .
+_:Bsenti <https://w3id.org/tree#value> "senti" .
+_:Bsenti <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/senti.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:Bsentm .
+_:Bsentm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsentm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/sentm.nt> .
+_:Bsentm <https://w3id.org/tree#value> "sentm" .
+_:Bsentm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/sentm.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:Bsento .
+_:Bsento <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsento <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/sento.nt> .
+_:Bsento <https://w3id.org/tree#value> "sento" .
+_:Bsento <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/sento.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:Bsentp .
+_:Bsentp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsentp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/sentp.nt> .
+_:Bsentp <https://w3id.org/tree#value> "sentp" .
+_:Bsentp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/sentp.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:Bsentq .
+_:Bsentq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsentq <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/sentq.nt> .
+_:Bsentq <https://w3id.org/tree#value> "sentq" .
+_:Bsentq <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/sentq.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:Bsentr .
+_:Bsentr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsentr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/sentr.nt> .
+_:Bsentr <https://w3id.org/tree#value> "sentr" .
+_:Bsentr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/sentr.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:Bsents .
+_:Bsents <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsents <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/sents.nt> .
+_:Bsents <https://w3id.org/tree#value> "sents" .
+_:Bsents <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/sents.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:Bsentt .
+_:Bsentt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsentt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/sentt.nt> .
+_:Bsentt <https://w3id.org/tree#value> "sentt" .
+_:Bsentt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/sentt.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:Bsentw .
+_:Bsentw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsentw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/sentw.nt> .
+_:Bsentw <https://w3id.org/tree#value> "sentw" .
+_:Bsentw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/sentw.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:BaX2Bsent .
+_:BaX2Bsent <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsent <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+sent.nt> .
+_:BaX2Bsent <https://w3id.org/tree#value> "a" .
+_:BaX2Bsent <https://w3id.org/tree#value> "sent" .
+_:BaX2Bsent <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+sent.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:BbX2Bsent .
+_:BbX2Bsent <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bsent <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+sent.nt> .
+_:BbX2Bsent <https://w3id.org/tree#value> "b" .
+_:BbX2Bsent <https://w3id.org/tree#value> "sent" .
+_:BbX2Bsent <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+sent.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:BeX2Bsent .
+_:BeX2Bsent <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2Bsent <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+sent.nt> .
+_:BeX2Bsent <https://w3id.org/tree#value> "e" .
+_:BeX2Bsent <https://w3id.org/tree#value> "sent" .
+_:BeX2Bsent <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+sent.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:BfX2Bsent .
+_:BfX2Bsent <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2Bsent <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+sent.nt> .
+_:BfX2Bsent <https://w3id.org/tree#value> "f" .
+_:BfX2Bsent <https://w3id.org/tree#value> "sent" .
+_:BfX2Bsent <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+sent.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:BiX2Bsent .
+_:BiX2Bsent <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2Bsent <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+sent.nt> .
+_:BiX2Bsent <https://w3id.org/tree#value> "i" .
+_:BiX2Bsent <https://w3id.org/tree#value> "sent" .
+_:BiX2Bsent <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+sent.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:BmX2Bsent .
+_:BmX2Bsent <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2Bsent <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+sent.nt> .
+_:BmX2Bsent <https://w3id.org/tree#value> "m" .
+_:BmX2Bsent <https://w3id.org/tree#value> "sent" .
+_:BmX2Bsent <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+sent.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:BsentX2Bt .
+_:BsentX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsentX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/sent+t.nt> .
+_:BsentX2Bt <https://w3id.org/tree#value> "sent" .
+_:BsentX2Bt <https://w3id.org/tree#value> "t" .
+_:BsentX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/sent+t.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/sent.nt> <https://w3id.org/tree#relation> _:BsentX2Bv .
+_:BsentX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsentX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/sent+v.nt> .
+_:BsentX2Bv <https://w3id.org/tree#value> "sent" .
+_:BsentX2Bv <https://w3id.org/tree#value> "v" .
+_:BsentX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/sent+v.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .

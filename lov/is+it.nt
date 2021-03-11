@@ -1,0 +1,895 @@
+<http://inference-web.org/2.0/pml-provenance.owl#hasEnglishDescriptionTemplate> <http://www.w3.org/2000/01/rdf-schema#label> "english-description-template"@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#hasEnglishDescriptionTemplate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#hasEnglishDescriptionTemplate> <http://www.w3.org/2000/01/rdf-schema#comment> "it is sub-property of rdfs:comment. It is also a simplified template for adding rule description template in English rather than using hasDescription."@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#hasEnglishDescriptionTemplate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://inference-web.org/2.0/pml-provenance.owl#InferenceRule> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#hasEnglishDescriptionTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#hasFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "it specifies the format of information, e.g. \"pdf\", \"ppt\" (Power Point). It is mainly used to determine the appropriate application for process/display purpose."@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#hasFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://inference-web.org/2.0/pml-provenance.owl#Information> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#hasFormat> <http://www.w3.org/2000/01/rdf-schema#range> <http://inference-web.org/2.0/pml-provenance.owl#Format> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#hasFormat> <http://www.w3.org/2000/01/rdf-schema#label> "format"@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#hasFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://www.w3.org/2000/01/rdf-schema#label> "PML2 provenance ontology"@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://www.w3.org/2002/07/owl#versionInfo> "version 2.0, Authors: Deborah L. McGuinness, Li Ding, Paulo Pinheiro da Silva, Alyssa Glass, and Cynthia Chang"@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://www.w3.org/2002/07/owl#imports> <http://inference-web.org/2.0/ds.owl#> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://www.w3.org/2000/01/rdf-schema#comment> "The provenance part of PML2 ontology. It is a fundamental component of PML2 ontology."@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#Information> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcd9c7de0ca8d531756d90fe365d396b4 <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#Information> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0ff6a7e0380f0d9de962be5dfb0fe655 <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#Information> <http://www.w3.org/2000/01/rdf-schema#comment> "A piece of information, e.g. a formula in logic languages, and an utterance/word/phrase/sentence/paragraph/article in natural language. It is used as a range of iw:hasContent. This class and two of its sub-classes enable users to specify four types of semantics  (i) Information Annotation - annotate just the format and language used by the content of information; (ii) Information With Content - additionally provide the content of information that is materialized as string without loading a web page; (iii) Information external - additionally provide the URL for fetching the content; and (iv) Information - with every thing including the content string and URL. The second semantics is especially useful when the content is short or mainly used locally. For example, when learning by instruction, the utterances used for learning can be stored within the PML document without being externally stored. By assigning URI reference to information, we can even use owl:sameAs to capture the equivalence of two pieces of information. "@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#Information> <http://www.w3.org/2000/01/rdf-schema#label> "Information"@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#Information> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B83924801e35c283a9163b2b7b64e443d <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#Information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#Information> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://inference-web.org/2.0/pml-provenance.owl#IdentifiedThing> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#Information> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6cf370c2c63a34b79eddbf03560121a6 <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#Information> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfc163de3790507d9a245d5cc07a8c2ab <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#Information> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B486b673c42f12e954b96c176bc7c619c <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#Information> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf14a40abb5f55436f1cb8c1716114c63 <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#hasRuleExample> <http://www.w3.org/2000/01/rdf-schema#domain> <http://inference-web.org/2.0/pml-provenance.owl#InferenceRule> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#hasRuleExample> <http://www.w3.org/2000/01/rdf-schema#range> <http://inference-web.org/2.0/pml-provenance.owl#Information> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#hasRuleExample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#hasRuleExample> <http://www.w3.org/2000/01/rdf-schema#label> "rule example"@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#hasRuleExample> <http://www.w3.org/2000/01/rdf-schema#comment> "it is sub-property of rdfs:comment. It is used to provide an example to help users understand the referred entity."@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://kdo.render-project.eu/kdo#Sentiment> <http://www.w3.org/2000/01/rdf-schema#label> "Sentiment"@en <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#Sentiment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://kdo.render-project.eu/kdo#> <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#Sentiment> <http://www.w3.org/2000/01/rdf-schema#comment> "The sentiment class represents the sentiments expressed by the opinions and posts. A sentiment can have (kdo:hasPolarity) different types of polarity (positive, negative, and neutral) and a decimal score (kdo:hasScore). It is in the range of kdo:hasSentiment.\n"@en <http://kdo.render-project.eu/kdo#> .
+<http://kdo.render-project.eu/kdo#Sentiment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://kdo.render-project.eu/kdo#> .
+<http://lawd.info/ontology/Attestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://lawd.info/ontology/> .
+<http://lawd.info/ontology/Attestation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/EvidentiaryItem> <http://lawd.info/ontology/> .
+<http://lawd.info/ontology/Attestation> <http://www.w3.org/2000/01/rdf-schema#comment> "An Attestation models a piece of evidence for something in a text (e.g. the mention of a person in a document). Typically it is the conjunction of a Citation and an entity like a name or person."@en <http://lawd.info/ontology/> .
+<http://linkedscience.org/lsc/ns#reportedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://linkedscience.org/lsc/ns#Publication> <http://linkedscience.org/lsc/ns#> .
+<http://linkedscience.org/lsc/ns#reportedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://linkedscience.org/lsc/ns#> .
+<http://linkedscience.org/lsc/ns#reportedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linkedscience.org/lsc/ns#Research> <http://linkedscience.org/lsc/ns#> .
+<http://linkedscience.org/lsc/ns#reportedIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://linkedscience.org/lsc/ns#reportedIn> <http://linkedscience.org/lsc/ns#> .
+<http://linkedscience.org/lsc/ns#reportedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract property to relate a research to the publications it is reported in."@en <http://linkedscience.org/lsc/ns#> .
+<http://linkedscience.org/lsc/ns#reportedIn> <http://www.w3.org/2000/01/rdf-schema#label> "reportedIn"@en <http://linkedscience.org/lsc/ns#> .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#domain> _:B70b6148369995d38d1b93d3f57da647d <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#FindingAid> <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#label> "È contenuta in"@it <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://culturalis.org/oad#contains> <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents the relationship between an instance and the finding aid in which it is contained"@en <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà descrive la relazione tra l'istanziazione di una risorsa archivistica o di un'entity e lo strumento di ricerca in cui è contenuta"@it <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2000/01/rdf-schema#label> "Is contained in"@en <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#isContainedIn> <http://www.w3.org/2002/07/owl#versionInfo> "Questa proprietà è stata aggiunta nella versione del 2 agosto 2018" <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/2000/01/rdf-schema#comment> "The property represents an extent type and it is related to a skos vocabulary"@en <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà rappresenta le informazioni relative alla tipologia di estensione e punta ad un vocabolario skos"@it <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/2000/01/rdf-schema#label> "Has extent type"@en <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/2000/01/rdf-schema#label> "Ha tipo di estensione"@it <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#ExtentAndMedium> <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/2002/07/owl#versionInfo> "Questa proprietà è stata aggiunta nella versione del 2 agosto 2018" <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasExtentType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> <http://culturalis.org/oad#> .
+<http://lsdis.cs.uga.edu/projects/semdis/opus#chapter_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a book chapter belongs to a specific book. It is debateable whether this should be subclass of Collection." <http://lsdis.cs.uga.edu/projects/semdis/opus#> .
+<http://lsdis.cs.uga.edu/projects/semdis/opus#chapter_of> <http://www.w3.org/2000/01/rdf-schema#label> "Chapter Of" <http://lsdis.cs.uga.edu/projects/semdis/opus#> .
+<http://lsdis.cs.uga.edu/projects/semdis/opus#chapter_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://lsdis.cs.uga.edu/projects/semdis/opus#Edited_Book> <http://lsdis.cs.uga.edu/projects/semdis/opus#> .
+<http://lsdis.cs.uga.edu/projects/semdis/opus#chapter_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lsdis.cs.uga.edu/projects/semdis/opus#Book_Chapter> <http://lsdis.cs.uga.edu/projects/semdis/opus#> .
+<http://lsdis.cs.uga.edu/projects/semdis/opus#chapter_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://lsdis.cs.uga.edu/projects/semdis/opus#> .
+<http://lsdis.cs.uga.edu/projects/semdis/opus#Webpage> <http://www.w3.org/2000/01/rdf-schema#label> "Webpage" <http://lsdis.cs.uga.edu/projects/semdis/opus#> .
+<http://lsdis.cs.uga.edu/projects/semdis/opus#Webpage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://lsdis.cs.uga.edu/projects/semdis/opus#> .
+<http://lsdis.cs.uga.edu/projects/semdis/opus#Webpage> <http://www.w3.org/2000/01/rdf-schema#comment> "A webpage, it is subclass of Document because we want to emphasize that the URL of the webpage is used the URI." <http://lsdis.cs.uga.edu/projects/semdis/opus#> .
+<http://lsdis.cs.uga.edu/projects/semdis/opus#Webpage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/foaf/0.1/Document> <http://lsdis.cs.uga.edu/projects/semdis/opus#> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#TownDetail.section> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#TownDetail.section> <http://www.w3.org/2000/01/rdf-schema#comment> "Town section. For example, it is common for there to be 36 sections per township." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#TownDetail.section> <http://www.w3.org/2000/01/rdf-schema#label> "section" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#TownDetail.section> <http://langdale.com.au/2005/UML#hasStereotype> <http://langdale.com.au/2005/UML#attribute> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#Package_Metering> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8a5ae616f3bb32fa7aaa0ea5a604b804 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bff54dae1b802b13fd4ff1483d7585263 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B52127a07f9b96f71f1b78480acf67657 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7249054f846547b28433d807c70dd1db <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4fbb0b17d33299e1512bf013dae3f11e <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7e8216b481fe3d93326888050e6aed67 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#IdentifiedObject> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B59b6372ba71973a46404ef6d7379e79a <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#label> "UsagePoint" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be116f7e1d51639f9222ee47c8a4eb52b <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B50e30e757a982f2a78f12acadf29c0d3 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B728e1d090030c689d594fbd4383c1093 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc3dfad6450c2f298a559675fd9c8c0a0 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B73a0d15556444153a864dd737fb3779a <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf3ccc80d894d8d5983301b79d476cd4c <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfced3043fa10e2c94a6b8e5bf7e17b56 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5e8f079ab5090bf3d02d4d1820d01fd7 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bac58e6118797c27469467533c012fd0f <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B817f522a7e8757d497927ad9ed233076 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd8c6df84afe587492930ecb7f2f6ccf1 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B21a05acb4e4660e4c34d606adf4d23d6 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Logical or physical point in the network to which readings or events may be attributed. Used at the place where a physical or virtual meter may be located; however, it is not required that a meter be present." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B22d39bf17b541f528ba78ab8544b83f0 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B476c44955c5dfb7f485d97f9896144e9 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9455ba3888a565caff915034a07a3ccf <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bdc5b78d422bac8b8041e0e97dc707c0f <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B97e693b862eb636b7240e4f8af2dbc26 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8b3a8254cda8f4266d066b22f68ec6d7 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B16f2ae9f603130579bf2c5dd8712c363 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be9beae39a0a5270f06ce9eb57e2c0074 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2929f75cf887af57430188bf23f41133 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbad4043b7b1cf3818839348c831c9c7b <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf11f8043f3b280277b5408e62c01cb93 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0a50aa4d9446e064c1fd4020f0c10ab4 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B67d5486f25037a75ce7baeaf63a6f017 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#ReadingType.measuringPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "measuringPeriod" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#ReadingType.measuringPeriod> <http://langdale.com.au/2005/UML#hasStereotype> <http://langdale.com.au/2005/UML#attribute> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#ReadingType.measuringPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "Time attribute inherent or fundamental to the reading value (as opposed to 'macroPeriod' that supplies an \"adjective\" to describe aspects of a time period with regard to the measurement). It refers to the way the value was originally measured and not to the frequency at which it is reported or presented. For example, an hourly interval of consumption data would have value 'hourly' as an attribute. However in the case of an hourly sampled voltage value, the meterReadings schema would carry the 'hourly' interval size information.\r\nIt is common for meters to report demand in a form that is measured over the course of a portion of an hour, while enterprise applications however commonly assume the demand (in kW or kVAr) normalised to 1 hour. The sytem that receives readings directly from the meter therefore must perform this transformation before publishing readings for use by the other enterprise systems. The scalar used is chosen based on the block size (not any sub-interval size)." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#ReadingType.measuringPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#IdentifiedObject.aliasName> <http://www.w3.org/2000/01/rdf-schema#label> "aliasName" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#IdentifiedObject.aliasName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#IdentifiedObject.aliasName> <http://www.w3.org/2000/01/rdf-schema#comment> "The aliasName is free text human readable name of the object alternative to IdentifiedObject.name. It may be non unique and may not correlate to a naming hierarchy.\r\nThe attribute aliasName is retained because of backwards compatibility between CIM relases. It is however recommended to replace aliasName with the Name class as aliasName is planned for retirement at a future time." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#IdentifiedObject.aliasName> <http://langdale.com.au/2005/UML#hasStereotype> <http://langdale.com.au/2005/UML#attribute> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a tag whenever it is used to point to a specific part of a Web representation (the segment of a video,\n  a user-generated commentary to a newspaper article, etc.)."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag wanneer deze gebruikt wordt om naar een specifiek deel van een web-representatie te verwijzen (een segment van een video, een door een gebruiker gegenereerd commentaar bij een krantenartikel, etc.)."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che si compie con una tag quando questa è usata per fare riferimento a una parte specifica della rappresentazione di una risorsa Web (il segmento di un video, il commento generato dagli utenti a un articolo di un quotidiano, ecc.)."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza con una etiqueta cuando es usada para referirse a una parte específica de un recurso Web (el segmento de un video, comentarios generados por los usuarios a un artículo de periódico)."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Pointer"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Puntar"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Aanwijzen"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag dès lors que celui-ci est utilisé pour faire référence à une portion spécifique de la représentation \n d'une ressource sur le Web (le segment d'une vidéo, un commentaire produit par les utilisateurs au pied d'un article, etc.)."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Puntare"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza con una etiqueta de tipo \"quehacer\" cuando es usada para crear una tarea en espera de realización."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a \"todo\" tag whenever it is used to create a task awaiting performance."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag van het type “te doen” wanneer deze gebruikt wordt om een taak te maken in afwachting van haar realisatie."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#label> "Définir une tâche"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#VisitorTagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#label> "Definire un compito"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che si compie con una tag di tipo \"dafare\", quando questa è usata per creare un compito in attesa di realizzazione."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#label> "Taak definiëren"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#label> "Set task"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag de type \"àfaire\" dès lors que celui-ci est utilisé pour définir une tâche attendant sa réalisation."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#label> "Definir una tarea"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag wanneer deze gebruikt wordt om een gevoel, emotie, etc. uit te drukken."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Gevoelens uitdrukken"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza con una etiqueta cuando es usada para expresar un sentimiento, una emoción, etc."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Express feelings"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che si compie con una tag quando questa è usata per esprimere un sentimento, un'emozione, ecc."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Esprimere un sentimento"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag dès lors que celui-ci est utilisé pour exprimer un sentiment, une émotion, etc."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a tag whenever it is used to express a feeling, an emotion, etc."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Expresar un sentimiento"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Exprimer un ressenti"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza con una etiqueta cuando es usada para expresar aprobación o desaprobación o, mas en general, una evaluación."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che si compie con una tag quando questa è usata per esprimere approvazione o disapprovazione, o, più in generale, una valutazione."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#label> "Valutare"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#label> "Beoordelen"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluar"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a tag whenever it is used to give a notation, a mark of approval and disapproval, or,\n  more generally speaking, an evaluation."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag wanneer deze gebruikt wordt om een klassering, een teken van goedkeuring of afkeuring, of meer algemeen een beoordeling te geven."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluate"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag dès lors que celui-ci est utilisé pour donner une note, marquer son approbation ou sa désapprobation ou, plus généralement, produirez une évaluation."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluer"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che si compie con una tag quando questa è usata per definire a chi sono accordati o negati i diritti di accesso a una risorsa."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#label> "Accorder des droits d'accès à"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a tag whenever it is used to define to whom access rights to a resource are granted or denied."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag wanneer deze gebruikt wordt om vast te stellen aaan wie toegangsrechten tot een bron worden toegekend of ontzegd."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#label> "Accordare diritti di accesso a"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#label> "Acordar derechos de acceso a"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag dès lors que celui-ci est utilisé pour définir les personnes auxquelles sont octroyés des droits d'accès à des ressource en ligne (permission ou refus)."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza con una etiqueta cuando es usada para definir a quien son concedidos o negados derechos de acceso a un recurso.."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#label> "Toegangsrechten verlenen aan"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#label> "Give access rights to"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a tag whenever it is used to assert anything about a resource."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag dès lors que celui-ci est utilisé pour affirmer quoi que ce soit à propos d'une ressource."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che viene svolta con una tag quando questa è utilizzata per affermare qualcosa a proposito di una risorsa."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag wanneer deze gebruikt wordt om iets over een bron te bevestigen."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción realizada con una tag quando esta es usada para afirmar algo sobre un recurso."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#label> "Asserter"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#label> "Asserire"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#label> "Bevestigen"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#label> "Afirmar"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#label> "Assert"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#label> "Partager"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag wanneer deze gebruikt wordt om de representatie van een bron op het web te delen met een gebruiker van een dienst als Twitter of Delicious. (sioc:UserAccount, wat niet per se een foaf:Person is aangezien het ook om een bot kan gaan of een instelling die met het verlopen van de tijd door verschillende personen vertegenwoordigd kan worden)."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#label> "Delen"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a tag whenever it is used to share the representation of a WebResource on various services - Twitter or Delicious for instance - with the owner of a sioc:UserAccount (not necessarily a foaf:Person as it might be either a bot, a person or an institution whose representatives may well vary over time)."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che si compie con una tag quando questa è usata per condividere la rappresentazizone di una risorsa su uno specifico servizio Web, per esempio Delicious o Twitter, con il titolare di un account su tale servizio (sioc:UserAccount, che non è necessariamente una foaf:Person, ma può trattarsi anche di un robot, o di una istituzione i cui rappresentanti possono variare nel tempo)."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#label> "Compartir"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag dès lors que celui-ci est utilisé pour partager une représentation d'une ressource sur le Web, notamment sur Delicious ou Twitter. Ce partage ne se fait pas nécessairement avec une autre personne mais plutôt avec le  titulaire d'un compte sur l'un ou l'autre de ces services (sioc:UserAccount, qui n'est pas nécessairement une foaf:Person étant donné qu'il peut s'agir aussi bien d'un robot, d'une personne ou encore d'une institution dont les représentants sont potentiellement amenés à varier au fil du temps)."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#label> "Share"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#label> "Condividere"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza con una etiqueta cuando es usada para compartir la representación de un recurso  en un servicio Web, por ejemplo Delicious o Twitter, con el titular de una cuenta en este servicio (sioc:UserAccount, que no es necesariamente una foaf:Person, porqué puede ser también un robot o una institución cuyos representantes pueden variar en el tiempo."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/prissma/v2#Device> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en <http://ns.inria.fr/prissma/v2#> .
+<http://ns.inria.fr/prissma/v2#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device" <http://ns.inria.fr/prissma/v2#> .
+<http://ns.inria.fr/prissma/v2#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "The Device represents the mobile device on which Web of Data resource consumption takes place. It enables device-specific data representation. It is equivalent to the Device class of the delivery context ontology" <http://ns.inria.fr/prissma/v2#> .
+<http://ns.inria.fr/prissma/v2#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/prissma/v2#> .
+<http://ns.inria.fr/prissma/v2#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://ns.inria.fr/prissma/v2#> .
+<http://ns.inria.fr/prissma/v2#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2007/uwa/context/deliveryContext.owl#Device> <http://ns.inria.fr/prissma/v2#> .
+<http://ns.inria.fr/s4ac/v2#AccessPolicy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#AccessPolicy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.inria.fr/s4ac/v2#> <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#AccessPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "An Access Policy (AP) is a composed by an Access Condition Set, a Subject, an Access Evaluation Context, an Access Privilege, and a URI of the resource to which it is applied. "@en <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#AccessPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#AccessPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "AccessPolicy"@en <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#ConjunctiveAccessConditionSet> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#ConjunctiveAccessConditionSet> <http://www.w3.org/2000/01/rdf-schema#label> "ConjontiveAccessConditionSet"@en <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#ConjunctiveAccessConditionSet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.inria.fr/s4ac/v2#> <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#ConjunctiveAccessConditionSet> <http://www.w3.org/2002/07/owl#disjointWith> <http://ns.inria.fr/s4ac/v2#DisjunctiveAccessConditionSet> <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#ConjunctiveAccessConditionSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/s4ac/v2#AccessConditionSet> <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#ConjunctiveAccessConditionSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A Conjunctive ACS (CACS) is a logical conjunction of Access Conditions, and it is said to be verified if and only if every Access Condition it contains is verified.\n\t\t"@en <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#ConjunctiveAccessConditionSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#DisjunctiveAccessConditionSet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.inria.fr/s4ac/v2#> <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#DisjunctiveAccessConditionSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A Disjunctive ACS (DACS) is a logical disjunction of Access Conditions, and it is said to be verified if and only if at least one Access Condition it contains is verified.\n\t\t"@en <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#DisjunctiveAccessConditionSet> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#DisjunctiveAccessConditionSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#DisjunctiveAccessConditionSet> <http://www.w3.org/2002/07/owl#disjointWith> <http://ns.inria.fr/s4ac/v2#ConjunctiveAccessConditionSet> <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#DisjunctiveAccessConditionSet> <http://www.w3.org/2000/01/rdf-schema#label> "DisjontiveAccessConditionSet"@en <http://ns.inria.fr/s4ac/v2> .
+<http://ns.inria.fr/s4ac/v2#DisjunctiveAccessConditionSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/s4ac/v2#AccessConditionSet> <http://ns.inria.fr/s4ac/v2> .
+<http://ontology.it/itsmo/v1#ManagementProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Is a process of planning and controlling one or more of activities. Here \n    are some examples:\n\n    <ul>\n      <li>\n        <b>Configuration Management</b>: the process responsible for ensuring \n        that the assets required to deliver services are properly controlled, \n        and that accurate and reliable information about those assets is \n        available when and where it is needed. This information includes \n        details of how the assets have been configured and the relationships \n        betweens [ITIL glossary].\n      </li>\n      <li>\n        <b>Project Management</b>: the discipline of planning, organizing, \n        securing, and managing resources to achieve specific goals. A project \n        is a temporary endeavor with a defined beginning and end (usually \n        time-constrained, and often constrained by funding or deliverables), \n        undertaken to meet unique goals and objectives, typically to bring \n        about beneficial change or added value[Wikipedia].\n      </li>\n      <li>\n        Change Management: the process responsible for controlling the \n        lifecycle of all changes, enabling beneficial changes to be made with \n        minimum disruption to IT services.[ITIL glossary]\n      </li>\n    </ul>\n    <p>"@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#ManagementProcess> <http://www.w3.org/2000/01/rdf-schema#label> "ManagementProcess" <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#ManagementProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#ManagementProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.it/itsmo/v1#Process> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#ITService> <http://purl.org/dc/terms/conformsTo> <http://www.itil-officialsite.com/InternationalActivities/ITILGlossaries_2.aspx#English_2011_Glossary> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#ITService> <http://www.w3.org/2000/01/rdf-schema#comment> "A service is a means of delivering value to customers by facilitating \n      outcomes customers want to achieve without the ownership of specific \n      costs and risks. An IT is a service provided by an IT service provider. \n      An IT service is made up of a combination of information technology, \n      people and processes. A customer-facing IT service directly supports the \n      business processes of one or more customers and its service level \n      targets should be defined in a service level agreement. Other IT \n      services, called supporting services, are not directly used by the \n      business but are required by the service provider to deliver \n      customer-facing services."@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#ITService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba03473ef14e1e6940c1892da998b5d20 <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#ITService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ontology.it/itsmo/v1> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#ITService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.it/itsmo/v1#RunnableResource> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#ITService> <http://www.w3.org/2000/01/rdf-schema#label> "IT Service" <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#ITService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Application> <http://www.w3.org/2000/01/rdf-schema#comment> "Application should be executable and installable Software Package. For example a library is not an application but it is a Software Package. [Not ITIL definition]"@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Application> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.it/itsmo/v1#SoftwarePackage> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Application> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Application> <http://www.w3.org/2000/01/rdf-schema#label> "Application" <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Application> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ontology.it/itsmo/v1> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Application> <http://www.w3.org/2000/01/rdf-schema#comment> "Software that provides functions which are required by an IT service. Each application\nmay be part of more than one IT service. An application runs on one or more servers or\nclients."@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#Application> <http://purl.org/dc/terms/conformsTo> <http://www.itil-officialsite.com/InternationalActivities/ITILGlossaries_2.aspx#English_2011_Glossary> <http://ontology.it/itsmo/v1> .
+<http://open.vocab.org/terms/commonExpression> <http://purl.org/net/vocab/2004/03/label#plural> "Common Expressions"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to declare that two resources which may or may not conform to the FRBR (Functional Requirements for Bibliographic Resources) entity model share the same Expression. An example of its use would be to relate a resource described with a vocabulary such as bibo (which does not acknowledge the FRBR model) to other resources that describe endeavours which have the same implied Expression (which could be other bibo resources or FRBR entities or anything else). \n\nThe property is symmetrical, so if <_:someBiboBook> <ov:commonExpression> <_:otherEdition>, this also means <_:otherEdition> <ov:commonExpression> <_:someBiboBook>. \n\nIt is not transitive. \n\nHaving this property also implies ov:commonWork."@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonExpression> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://open.vocab.org/terms/commonEndeavour> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonExpression> <http://www.w3.org/2004/02/skos/core#note> <http://open.vocab.org/changes/86a4f8ed109d61399297c12ac96ba4e4> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonExpression> <http://purl.org/dc/elements/1.1/created> "2010-12-06T17:43:57Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonExpression> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonExpression> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonExpression> <http://www.w3.org/2000/01/rdf-schema#label> "Common Expression"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonExpression> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonExpression> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/docs/commonExpression> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonWork> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonWork> <http://www.w3.org/2000/01/rdf-schema#label> "Common Work"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonWork> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/docs/commonWork> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonWork> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://open.vocab.org/terms/commonEndeavour> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonWork> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonWork> <http://purl.org/dc/elements/1.1/created> "2010-12-06T17:18:34Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonWork> <http://purl.org/net/vocab/2004/03/label#plural> "Common Works"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonWork> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonWork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonWork> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to declare that two resources which may or may not conform to the FRBR (Functional Requirements for Bibliographic Resources) entity model share the same Work. An example of its use would be to relate a resource described with a vocabulary such as bibo (which does not acknowledge the FRBR model) to other resources that describe endeavours that fall within the same implied Work (which could be other bibo resources or FRBR entities or anything else). \n\nThe property is symmetrical, so if <_:someBiboBook> <ov:commonWork> <_:someOtherBiboBook>, this also means <_:someOtherBiboBook> <ov:commonWork> <_:someBiboBook>. \n\nIt is not transitive."@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonWork> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonWork> <http://www.w3.org/2004/02/skos/core#note> <http://open.vocab.org/changes/0524c589f9c5a22734e5f2974dc558eb> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonManifestation> <http://schemas.talis.com/2005/dir/schema#etag> "f78eed93-fa94-4591-ac90-1846598f3920" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonManifestation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://open.vocab.org/terms/commonEndeavour> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonManifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonManifestation> <http://www.w3.org/2004/02/skos/core#note> <http://open.vocab.org/changes/f4c354ac688a3dd54750034b7cf3746d> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonManifestation> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/docs/> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonManifestation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonManifestation> <http://www.w3.org/2004/02/skos/core#note> <http://open.vocab.org/changes/eb54915b9158f343feacb0c7cb03dade> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonManifestation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonManifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonManifestation> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to declare that two resources which may or may not conform to the FRBR (Functional Requirements for Bibliographic Resources) entity model share the same Manifestation.  An example of its use would be to relate a resource described with a vocabulary such as bibo (which does not acknowledge the FRBR model) to other resources that describe endeavours which include the same implied Manifestation (which could be other bibo resources or FRBR entities or anything else).\n\nThe property is symmetrical, so if <_:someBiboBook> <ov:commonManifestation> <_:someFrbrWork>, this also means <_:someFrbrWork> <ov:commonManifestation> <_:someBiboBook>.  It is not transitive.\n\nHaving this property also implies ov:commonExpression and ov:commonWork."@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonManifestation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonManifestation> <http://purl.org/net/vocab/2004/03/label#plural> "Common Manifestations"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonManifestation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonManifestation> <http://www.w3.org/2000/01/rdf-schema#label> "Common Manifestation"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/provenance> <http://www.w3.org/2000/01/rdf-schema#comment> "It is about provenance of web data."@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/provenance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/provenance> <http://www.w3.org/2004/02/skos/core#note> <http://open.vocab.org/changes/c5d83def5fafac12b8f9f86d40a61d76> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/provenance> <http://purl.org/net/vocab/2004/03/label#plural> "provenance"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/provenance> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/provenance> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/docs/provenance> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/provenance> <http://www.w3.org/2000/01/rdf-schema#label> "provenance"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/provenance> <http://purl.org/dc/elements/1.1/created> "2011-09-21T15:47:49Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonItem> <http://purl.org/net/vocab/2004/03/label#plural> "Common Items"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonItem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonItem> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to declare that two resources which may or may not conform to the FRBR (Functional Requirements for Bibliographic Resources) entity model share the same Item. An example of its use would be to relate a resource described with a vocabulary such as bibo (which does not acknowledge the FRBR model) to other resources that describe endeavours which contains the same specific Item (which could be other bibo resources or FRBR entities or anything else). This implies identical WEMI hierarchies.\n\nThe property is symmetrical, so if <_:specificPhysicalItem> <ov:commonItem> <_:someArchive>, this also means <_:someArchive> <ov:commonItem> <_:specificPhysicalItem>. \n\nIt is not transitive. \n\nHaving this property also entails ov:commonManifestation, ov:commonExpression and ov:commonWork."@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonItem> <http://purl.org/dc/elements/1.1/created> "2010-12-06T17:52:51Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonItem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://open.vocab.org/terms/commonEndeavour> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonItem> <http://www.w3.org/2004/02/skos/core#note> <http://open.vocab.org/changes/ff9fe956a8ecdfc589ec8ce8c8bfdb7c> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonItem> <http://www.w3.org/2000/01/rdf-schema#label> "Common Item"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonItem> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonItem> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/docs/commonItem> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/commonItem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AmateurRadioContact> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AmateurRadioContact> <http://www.w3.org/2004/02/skos/core#note> <http://open.vocab.org/changes/3b85ef90699be917133ff9ab187284ee> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AmateurRadioContact> <http://www.w3.org/2000/01/rdf-schema#label> "An event that is a contact between two AmateurRadioOperators"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AmateurRadioContact> <http://purl.org/net/vocab/2004/03/label#plural> "Events that are a contact between two AmateurRadioOperators"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AmateurRadioContact> <http://purl.org/dc/elements/1.1/created> "2010-06-25T17:28:25Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AmateurRadioContact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AmateurRadioContact> <http://www.w3.org/2004/02/skos/core#note> <http://open.vocab.org/changes/5bb6ac8ed573eab20eca171eb6521932> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AmateurRadioContact> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AmateurRadioContact> <http://www.w3.org/2000/01/rdf-schema#comment> "It is a major goal of Amateur Radio Operators to make contact with each other.  This contact is formally defined as the exchange of certain information, usually consisting of each operator's call sign and a signal report (how well each operator receives the signal of the other).  A contact can last a few seconds to many minutes.  Nickname \"QSL\"."@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/AmateurRadioContact> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/docs/AmateurRadioContact> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/similarTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/docs/> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/similarTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Having two things that are not the owl:sameAs but are similar to a certain extent. It is thought of being used where owl:sameAs is too strong but rdfs:seeAlso is too loose. Motivation: http://lists.w3.org/Archives/Public/public-lod/2009Feb/0189.html"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/similarTo> <http://www.w3.org/2004/02/skos/core#note> <http://open.vocab.org/changes/c63961b7972a1d52e563cb1a8d4536ee> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/similarTo> <http://www.w3.org/2004/02/skos/core#note> <http://open.vocab.org/changes/1e0717f3c6dcf23f0aff8b2f82a22afb> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/similarTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/similarTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/similarTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/similarTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/similarTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/similarTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/similarTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/similarTo> <http://schemas.talis.com/2005/dir/schema#etag> "bc9f8c5f-96b2-4812-a1eb-e2aafe15525d" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/similarTo> <http://www.w3.org/2000/01/rdf-schema#label> "similar to"@en <http://open.vocab.org/terms> .
+<http://openprovenance.org/model/opmo#WasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/net/opmv/ns#wasGeneratedBy> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openprovenance.org/model/opmo#Edge> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc5d87d7419fe31ae3263efdc1955e16f <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A “was generated by” edge from an artifact to a process is a relationship intended to mean that the process was required to initiate its execution for the artifact to have been generated. When several artifacts are connected to a same process by multiple “was generated by” edges, the process had to have begun, for all of them to be generated.\n\nWasGeneratedBy is a class that  encompasses all the properties defined by OPM for this kind of edge. It is a reification of the opmv:wasGeneratedBy property." <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#label> "WasGeneratedBy" <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://openprovenance.org/model/opmo> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bda48c654be348ae389bca7979b14707f <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasGeneratedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B173bf1476d8c0ea03016af310852c14d <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B514f539eed6f02d1ca07d4636edda64b <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasGeneratedBy> <http://www.w3.org/2002/07/owl#disjointWith> <http://openprovenance.org/model/opmo#WasTriggeredBy> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasGeneratedBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8700bdf6bd87b776d4c4bdc01912a85e <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfbad8e7cc7ca1c7c14015fe099dec18f <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/net/opmv/ns#wasDerivedFrom> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "An edge “was derived from” from artifact A2 to artifact A1 is a relationship that indicates that artifact A1 needs to have been generated for A2 to be generated. The piece of state associated with A2 is dependent on the presence of A1 or on the piece of state associated with A1 .\n\nWasDerivedFrom is a class that  encompasses all the properties defined by OPM for this kind of edge. It is a reification of the opmv:wasDerivedFrom property." <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasDerivedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://openprovenance.org/model/opmo> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B596c5c2cf886a12dc9de4f62903b3ad5 <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5bb5595c8f3af3352d4fa6b2e460cde5 <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openprovenance.org/model/opmo#Edge> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "WasDerivedFrom" <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasDerivedFrom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8789158866ba54a3983f1fe14181910d <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasDerivedFrom> <http://www.w3.org/2002/07/owl#disjointWith> <http://openprovenance.org/model/opmo#WasGeneratedBy> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasDerivedFrom> <http://www.w3.org/2002/07/owl#disjointWith> <http://openprovenance.org/model/opmo#WasTriggeredBy> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasControlledBy> <http://www.w3.org/2000/01/rdf-schema#label> "WasControlledBy" <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasControlledBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9e961858ea88b7b071c6ccc74ebd022a <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasControlledBy> <http://www.w3.org/2002/07/owl#disjointWith> <http://openprovenance.org/model/opmo#WasGeneratedBy> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasControlledBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasControlledBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://openprovenance.org/model/opmo> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasControlledBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B06f872793eddfc94f0da5c33ae4ccb70 <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasControlledBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B86d7d352f551fc97ed20129b5c159226 <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasControlledBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf9ecd81af96b0193048f7d73f20bbb3f <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasControlledBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/net/opmv/ns#wasControlledBy> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasControlledBy> <http://www.w3.org/2002/07/owl#disjointWith> <http://openprovenance.org/model/opmo#WasTriggeredBy> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasControlledBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An edge “was controlled by” from a process P to an agent Ag is a  dependency that indicates that the start and end of process P was controlled by agent Ag.\n\nWasControlledBy is a class that  encompasses all the properties defined by OPM for this kind of edge. It is a reification of the opmv:wasControlledBy property." <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasControlledBy> <http://www.w3.org/2002/07/owl#disjointWith> <http://openprovenance.org/model/opmo#WasDerivedFrom> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasControlledBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openprovenance.org/model/opmo#Edge> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasControlledBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd3291e55d8939c21b1bd1ef8f8bf9cec <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasTriggeredBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/net/opmv/ns#wasTriggeredBy> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasTriggeredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An edge “was triggered by” from a process P2 to a process P1 is a causal dependency that indicates that the start of process P1 was required for P2 to be able to complete.\n\nWasTriggeredBy is a class that  encompasses all the properties defined by OPM for this kind of edge. It is a reification of the opmv:wasTriggeredBy property." <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasTriggeredBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1e4439d3b3d2cd796eaf8e8ef56f6fbb <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasTriggeredBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://openprovenance.org/model/opmo> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasTriggeredBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B29ff1c531a9602984d45e01cfdcfff5c <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasTriggeredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasTriggeredBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcaed11c281ea0ee10d5d43b950fb2111 <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasTriggeredBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3cc1dbeb0dae47c6e07b1c3d5fdf7cf6 <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasTriggeredBy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openprovenance.org/model/opmo#Edge> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#WasTriggeredBy> <http://www.w3.org/2000/01/rdf-schema#label> "WasTriggeredBy" <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#effectInverse> <http://www.w3.org/2000/01/rdf-schema#range> <http://openprovenance.org/model/opmo#Edge> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#effectInverse> <http://www.w3.org/2002/07/owl#inverseOf> <http://openprovenance.org/model/opmo#effect> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#effectInverse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#effectInverse> <http://www.w3.org/2000/01/rdf-schema#label> "effectInverse" <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#effectInverse> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://openprovenance.org/model/opmo> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#effectInverse> <http://www.w3.org/2000/01/rdf-schema#comment> "Convenience class introduced to describe the inverse of an effect. It is used to express property chains." <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#effectInverse> <http://www.w3.org/2000/01/rdf-schema#domain> <http://openprovenance.org/model/opmo#Node> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/2002/07/owl#disjointWith> <http://openprovenance.org/model/opmo#WasControlledBy> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba76a3ee27a92390dda02c505f0e6f414 <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb91332446cc7b7046b337b87a8acfcc9 <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bdea862cb7c86654a1decf30aa8db8342 <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/2002/07/owl#disjointWith> <http://openprovenance.org/model/opmo#WasDerivedFrom> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://openprovenance.org/model/opmo#Edge> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba50a3618d624a1420c53852815f271a2 <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/2000/01/rdf-schema#label> "Used" <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/2002/07/owl#disjointWith> <http://openprovenance.org/model/opmo#WasTriggeredBy> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://openprovenance.org/model/opmo> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/2000/01/rdf-schema#comment> "A “used” edge from process to an artifact is a relationship intended to indicate that the process required the availability of the artifact to be able to complete its execution. When several artifacts are connected to a same process by multiple “used” edges, all of them were required for the process to complete.\n\nUsed is a class that  encompasses all the properties defined by OPM for this kind of edge. It is a reification of the opmv:used property." <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://openprovenance.org/model/opmo#Used> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/2002/07/owl#disjointWith> <http://openprovenance.org/model/opmo#WasGeneratedBy> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#Used> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd917cebe980add6ce4be579721675df9 <http://openprovenance.org/model/opmo> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasWindDirection> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasWindSpeed> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#sunAngleNoon> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasPressure> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasDewPoint> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasTemperature> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherState> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasHumidity> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> "A WeatherPhenomenon specifies information about the weather (temperature, humidity etc.) for a certain WeatherState. It is linked to the WeatherState using the belongsToState property.\n\nFor specifying the weather information, there exist several data properties: hasTemperature, hasHumidity, hasDewPoint, hasWindSpeed, hasWindDirection, hasPrecipitationProbability, hasPrecipitationValue, hasPressure, hasCloudCover, hasCloudAltitude, hasSunRadiation and hasSunAngleNoon." <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasSunRadiation> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasCloudCover> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasPrecipitationProbability> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasCloudAltitude> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasPrecipitationValue> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://www.w3.org/2000/01/rdf-schema#comment> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#belongsToState> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherState> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasTemporalEntity> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherState> <http://www.w3.org/2000/01/rdf-schema#comment> "A WeatherState is a set of weather information (temperature, humidity etc.). It is assigned to exactly one WeatherObservation (properties belongsToWeatherObservation/hasWeatherState), has a priority (property hasPriority) and has a source (where the weather information comes from, properties hasSource/isSourceOf).\n\nThe weather information itself (temperature, humidity etc.) is provided using instances of WeatherPhenomenon that are connected using the belongsToState/hasWeatherPhenomenon properties." <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherState> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherStateSource> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherState> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherObservation> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherState> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasSource> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherState> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherState> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasWeatherState> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherState> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasWeatherPhenomenon> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherState> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/2006/time#TemporalEntity> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#CurrentWeatherReportFromSensor> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bbcb245064bcabf08eb64de38a67cd918 <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#CurrentWeatherReportFromSensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#CurrentWeatherReportFromSensor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherStateFromSensor> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#CurrentWeatherReportFromSensor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#CurrentWeatherState> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#CurrentWeatherReportFromSensor> <http://www.w3.org/2000/01/rdf-schema#comment> "A WeatherState about the current weather based on data retrieved from a (collection of) sensor(s), e.g. it is connected to an instance of SensorSource via the hasSource property." <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#CurrentWeatherReportFromSensor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherState> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherCondition> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bef969d4b26bcfba06c91959fda9a08e9 <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasCondition> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "A WeatherCondition is a simple description of the state of the weather. Currently there are: Cloud, Fog, LightCloud, PartlyCloud, Rain, Sleet, Snow, Sun, Thunder.\n\nSeveral instances of WeatherCondition can be associated with the same instance of WeatherPhenomenon using the hasCondition property. That way, it is possible to describe a thunderstorm that comes with rain." <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/is+it.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BislX2Bit .
+_:BislX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BislX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/isl+it.nt> .
+_:BislX2Bit <https://w3id.org/tree#value> "isl" .
+_:BislX2Bit <https://w3id.org/tree#value> "it" .
+_:BislX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/isl+it.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BistX2Bit .
+_:BistX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BistX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ist+it.nt> .
+_:BistX2Bit <https://w3id.org/tree#value> "ist" .
+_:BistX2Bit <https://w3id.org/tree#value> "it" .
+_:BistX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ist+it.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2Bita .
+_:BisX2Bita <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2Bita <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+ita.nt> .
+_:BisX2Bita <https://w3id.org/tree#value> "is" .
+_:BisX2Bita <https://w3id.org/tree#value> "ita" .
+_:BisX2Bita <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+ita.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2Bite .
+_:BisX2Bite <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2Bite <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+ite.nt> .
+_:BisX2Bite <https://w3id.org/tree#value> "is" .
+_:BisX2Bite <https://w3id.org/tree#value> "ite" .
+_:BisX2Bite <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+ite.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2Bits .
+_:BisX2Bits <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2Bits <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+its.nt> .
+_:BisX2Bits <https://w3id.org/tree#value> "is" .
+_:BisX2Bits <https://w3id.org/tree#value> "its" .
+_:BisX2Bits <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+its.nt> <https://w3id.org/tree#remainingItems> "37"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BaX2BisX2Bit .
+_:BaX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+is+it.nt> .
+_:BaX2BisX2Bit <https://w3id.org/tree#value> "a" .
+_:BaX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BaX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BaX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+is+it.nt> <https://w3id.org/tree#remainingItems> "325"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BbX2BisX2Bit .
+_:BbX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+is+it.nt> .
+_:BbX2BisX2Bit <https://w3id.org/tree#value> "b" .
+_:BbX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BbX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BbX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+is+it.nt> <https://w3id.org/tree#remainingItems> "31"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BcX2BisX2Bit .
+_:BcX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+is+it.nt> .
+_:BcX2BisX2Bit <https://w3id.org/tree#value> "c" .
+_:BcX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BcX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BcX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+is+it.nt> <https://w3id.org/tree#remainingItems> "71"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BdX2BisX2Bit .
+_:BdX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+is+it.nt> .
+_:BdX2BisX2Bit <https://w3id.org/tree#value> "d" .
+_:BdX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BdX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BdX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+is+it.nt> <https://w3id.org/tree#remainingItems> "50"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BeX2BisX2Bit .
+_:BeX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+is+it.nt> .
+_:BeX2BisX2Bit <https://w3id.org/tree#value> "e" .
+_:BeX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BeX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BeX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+is+it.nt> <https://w3id.org/tree#remainingItems> "25"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BfX2BisX2Bit .
+_:BfX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+is+it.nt> .
+_:BfX2BisX2Bit <https://w3id.org/tree#value> "f" .
+_:BfX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BfX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BfX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+is+it.nt> <https://w3id.org/tree#remainingItems> "24"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BgX2BisX2Bit .
+_:BgX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BgX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/g+is+it.nt> .
+_:BgX2BisX2Bit <https://w3id.org/tree#value> "g" .
+_:BgX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BgX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BgX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/g+is+it.nt> <https://w3id.org/tree#remainingItems> "20"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BhX2BisX2Bit .
+_:BhX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+is+it.nt> .
+_:BhX2BisX2Bit <https://w3id.org/tree#value> "h" .
+_:BhX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BhX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BhX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+is+it.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BiX2BisX2Bit .
+_:BiX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+is+it.nt> .
+_:BiX2BisX2Bit <https://w3id.org/tree#value> "i" .
+_:BiX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BiX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BiX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+is+it.nt> <https://w3id.org/tree#remainingItems> "77"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bj .
+_:BisX2BitX2Bj <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bj <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+j.nt> .
+_:BisX2BitX2Bj <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bj <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bj <https://w3id.org/tree#value> "j" .
+_:BisX2BitX2Bj <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+j.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bk .
+_:BisX2BitX2Bk <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bk <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+k.nt> .
+_:BisX2BitX2Bk <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bk <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bk <https://w3id.org/tree#value> "k" .
+_:BisX2BitX2Bk <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+k.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bl .
+_:BisX2BitX2Bl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+l.nt> .
+_:BisX2BitX2Bl <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bl <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bl <https://w3id.org/tree#value> "l" .
+_:BisX2BitX2Bl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+l.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bm .
+_:BisX2BitX2Bm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+m.nt> .
+_:BisX2BitX2Bm <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bm <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bm <https://w3id.org/tree#value> "m" .
+_:BisX2BitX2Bm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+m.nt> <https://w3id.org/tree#remainingItems> "41"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bn .
+_:BisX2BitX2Bn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bn <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+n.nt> .
+_:BisX2BitX2Bn <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bn <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bn <https://w3id.org/tree#value> "n" .
+_:BisX2BitX2Bn <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+n.nt> <https://w3id.org/tree#remainingItems> "79"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bo .
+_:BisX2BitX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+o.nt> .
+_:BisX2BitX2Bo <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bo <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bo <https://w3id.org/tree#value> "o" .
+_:BisX2BitX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+o.nt> <https://w3id.org/tree#remainingItems> "26"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bp .
+_:BisX2BitX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+p.nt> .
+_:BisX2BitX2Bp <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bp <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bp <https://w3id.org/tree#value> "p" .
+_:BisX2BitX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+p.nt> <https://w3id.org/tree#remainingItems> "69"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bq .
+_:BisX2BitX2Bq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bq <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+q.nt> .
+_:BisX2BitX2Bq <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bq <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bq <https://w3id.org/tree#value> "q" .
+_:BisX2BitX2Bq <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+q.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Br .
+_:BisX2BitX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+r.nt> .
+_:BisX2BitX2Br <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Br <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Br <https://w3id.org/tree#value> "r" .
+_:BisX2BitX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+r.nt> <https://w3id.org/tree#remainingItems> "87"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bs .
+_:BisX2BitX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+s.nt> .
+_:BisX2BitX2Bs <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bs <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bs <https://w3id.org/tree#value> "s" .
+_:BisX2BitX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+s.nt> <https://w3id.org/tree#remainingItems> "103"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bt .
+_:BisX2BitX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+t.nt> .
+_:BisX2BitX2Bt <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bt <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bt <https://w3id.org/tree#value> "t" .
+_:BisX2BitX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+t.nt> <https://w3id.org/tree#remainingItems> "188"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bu .
+_:BisX2BitX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+u.nt> .
+_:BisX2BitX2Bu <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bu <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bu <https://w3id.org/tree#value> "u" .
+_:BisX2BitX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+u.nt> <https://w3id.org/tree#remainingItems> "68"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bv .
+_:BisX2BitX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+v.nt> .
+_:BisX2BitX2Bv <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bv <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bv <https://w3id.org/tree#value> "v" .
+_:BisX2BitX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+v.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bw .
+_:BisX2BitX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+w.nt> .
+_:BisX2BitX2Bw <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bw <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bw <https://w3id.org/tree#value> "w" .
+_:BisX2BitX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+w.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/is+it.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BislX2Bit .
+_:BislX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BislX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/isl+it.nt> .
+_:BislX2Bit <https://w3id.org/tree#value> "isl" .
+_:BislX2Bit <https://w3id.org/tree#value> "it" .
+_:BislX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/isl+it.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BistX2Bit .
+_:BistX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BistX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ist+it.nt> .
+_:BistX2Bit <https://w3id.org/tree#value> "ist" .
+_:BistX2Bit <https://w3id.org/tree#value> "it" .
+_:BistX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ist+it.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2Bita .
+_:BisX2Bita <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2Bita <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+ita.nt> .
+_:BisX2Bita <https://w3id.org/tree#value> "is" .
+_:BisX2Bita <https://w3id.org/tree#value> "ita" .
+_:BisX2Bita <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+ita.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2Bite .
+_:BisX2Bite <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2Bite <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+ite.nt> .
+_:BisX2Bite <https://w3id.org/tree#value> "is" .
+_:BisX2Bite <https://w3id.org/tree#value> "ite" .
+_:BisX2Bite <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+ite.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2Bits .
+_:BisX2Bits <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2Bits <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+its.nt> .
+_:BisX2Bits <https://w3id.org/tree#value> "is" .
+_:BisX2Bits <https://w3id.org/tree#value> "its" .
+_:BisX2Bits <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+its.nt> <https://w3id.org/tree#remainingItems> "37"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BaX2BisX2Bit .
+_:BaX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+is+it.nt> .
+_:BaX2BisX2Bit <https://w3id.org/tree#value> "a" .
+_:BaX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BaX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BaX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+is+it.nt> <https://w3id.org/tree#remainingItems> "325"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BbX2BisX2Bit .
+_:BbX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+is+it.nt> .
+_:BbX2BisX2Bit <https://w3id.org/tree#value> "b" .
+_:BbX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BbX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BbX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+is+it.nt> <https://w3id.org/tree#remainingItems> "31"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BcX2BisX2Bit .
+_:BcX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+is+it.nt> .
+_:BcX2BisX2Bit <https://w3id.org/tree#value> "c" .
+_:BcX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BcX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BcX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+is+it.nt> <https://w3id.org/tree#remainingItems> "71"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BdX2BisX2Bit .
+_:BdX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+is+it.nt> .
+_:BdX2BisX2Bit <https://w3id.org/tree#value> "d" .
+_:BdX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BdX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BdX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+is+it.nt> <https://w3id.org/tree#remainingItems> "50"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BeX2BisX2Bit .
+_:BeX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+is+it.nt> .
+_:BeX2BisX2Bit <https://w3id.org/tree#value> "e" .
+_:BeX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BeX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BeX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+is+it.nt> <https://w3id.org/tree#remainingItems> "25"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BfX2BisX2Bit .
+_:BfX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+is+it.nt> .
+_:BfX2BisX2Bit <https://w3id.org/tree#value> "f" .
+_:BfX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BfX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BfX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+is+it.nt> <https://w3id.org/tree#remainingItems> "24"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BgX2BisX2Bit .
+_:BgX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BgX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/g+is+it.nt> .
+_:BgX2BisX2Bit <https://w3id.org/tree#value> "g" .
+_:BgX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BgX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BgX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/g+is+it.nt> <https://w3id.org/tree#remainingItems> "20"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BhX2BisX2Bit .
+_:BhX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+is+it.nt> .
+_:BhX2BisX2Bit <https://w3id.org/tree#value> "h" .
+_:BhX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BhX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BhX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+is+it.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BiX2BisX2Bit .
+_:BiX2BisX2Bit <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2BisX2Bit <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+is+it.nt> .
+_:BiX2BisX2Bit <https://w3id.org/tree#value> "i" .
+_:BiX2BisX2Bit <https://w3id.org/tree#value> "is" .
+_:BiX2BisX2Bit <https://w3id.org/tree#value> "it" .
+_:BiX2BisX2Bit <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+is+it.nt> <https://w3id.org/tree#remainingItems> "77"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bj .
+_:BisX2BitX2Bj <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bj <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+j.nt> .
+_:BisX2BitX2Bj <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bj <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bj <https://w3id.org/tree#value> "j" .
+_:BisX2BitX2Bj <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+j.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bk .
+_:BisX2BitX2Bk <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bk <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+k.nt> .
+_:BisX2BitX2Bk <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bk <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bk <https://w3id.org/tree#value> "k" .
+_:BisX2BitX2Bk <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+k.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bl .
+_:BisX2BitX2Bl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+l.nt> .
+_:BisX2BitX2Bl <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bl <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bl <https://w3id.org/tree#value> "l" .
+_:BisX2BitX2Bl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+l.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bm .
+_:BisX2BitX2Bm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+m.nt> .
+_:BisX2BitX2Bm <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bm <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bm <https://w3id.org/tree#value> "m" .
+_:BisX2BitX2Bm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+m.nt> <https://w3id.org/tree#remainingItems> "41"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bn .
+_:BisX2BitX2Bn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bn <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+n.nt> .
+_:BisX2BitX2Bn <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bn <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bn <https://w3id.org/tree#value> "n" .
+_:BisX2BitX2Bn <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+n.nt> <https://w3id.org/tree#remainingItems> "79"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bo .
+_:BisX2BitX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+o.nt> .
+_:BisX2BitX2Bo <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bo <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bo <https://w3id.org/tree#value> "o" .
+_:BisX2BitX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+o.nt> <https://w3id.org/tree#remainingItems> "26"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bp .
+_:BisX2BitX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+p.nt> .
+_:BisX2BitX2Bp <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bp <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bp <https://w3id.org/tree#value> "p" .
+_:BisX2BitX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+p.nt> <https://w3id.org/tree#remainingItems> "69"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bq .
+_:BisX2BitX2Bq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bq <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+q.nt> .
+_:BisX2BitX2Bq <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bq <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bq <https://w3id.org/tree#value> "q" .
+_:BisX2BitX2Bq <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+q.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Br .
+_:BisX2BitX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+r.nt> .
+_:BisX2BitX2Br <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Br <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Br <https://w3id.org/tree#value> "r" .
+_:BisX2BitX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+r.nt> <https://w3id.org/tree#remainingItems> "87"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bs .
+_:BisX2BitX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+s.nt> .
+_:BisX2BitX2Bs <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bs <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bs <https://w3id.org/tree#value> "s" .
+_:BisX2BitX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+s.nt> <https://w3id.org/tree#remainingItems> "103"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bt .
+_:BisX2BitX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+t.nt> .
+_:BisX2BitX2Bt <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bt <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bt <https://w3id.org/tree#value> "t" .
+_:BisX2BitX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+t.nt> <https://w3id.org/tree#remainingItems> "188"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bu .
+_:BisX2BitX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+u.nt> .
+_:BisX2BitX2Bu <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bu <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bu <https://w3id.org/tree#value> "u" .
+_:BisX2BitX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+u.nt> <https://w3id.org/tree#remainingItems> "68"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bv .
+_:BisX2BitX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+v.nt> .
+_:BisX2BitX2Bv <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bv <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bv <https://w3id.org/tree#value> "v" .
+_:BisX2BitX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+v.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/is+it.nt> <https://w3id.org/tree#relation> _:BisX2BitX2Bw .
+_:BisX2BitX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BisX2BitX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/is+it+w.nt> .
+_:BisX2BitX2Bw <https://w3id.org/tree#value> "is" .
+_:BisX2BitX2Bw <https://w3id.org/tree#value> "it" .
+_:BisX2BitX2Bw <https://w3id.org/tree#value> "w" .
+_:BisX2BitX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/is+it+w.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .

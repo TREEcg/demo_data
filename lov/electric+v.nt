@@ -1,0 +1,201 @@
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/seas/FeatureOfInterest> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Connection Point"@en <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of connection points of systems, at which they may be connected to other systems.\r\n\r\nThis class qualifies properties `seas:connectsSystem` and `seas:connectedThrough`.\r\n\r\nA connection point belongs to exactly one system.\r\n\r\n\r\nFor example, an electric vehicle service equipment may have three power connection points: two different kinds of plugs that enable to charge electric vehicles, and a three phase power bus connection point to the grid:\r\n\r\n```\r\n<electric_vehicle> seas:connectsAt <plug_high_voltage> , <normal_plug> , <three_phase_connection_point> .\r\n```\r\n\r\n\r\nAny system connected through a connection is connected at one of its connection points to the connection:\r\n  if:\r\n\r\n```\r\n<system> a seas:System .\r\n<system> seas:connectedThrough <connection> .\r\n<connection> a seas:Connection .\r\n```\r\n\r\n  then there exists `_:connectionPoint` such that:\r\n\r\n```\r\n<system> seas:connectsAt _:connectionPoint .\r\n\r\n_:connectionPoint seas:connectsSystemAt <connection> .\r\n```\r\n\r\n\r\nThe system of a connection point that is connected through a connection is itself connected through the connection:. If:\r\n\r\n```\r\n<connection> a seas:Connection .\r\n<system> a seas:System .\r\n<connectionPoint> a seas:ConnectionPoint ;\r\n<connectionPoint> seas:connectsSystemThrough <connection> .\r\n```\r\n\r\nthen it is true that:\r\n\r\n```\r\n<connectionPoint> seas:connectionPointOf <system> .\r\n```\r\n\r\nFigure below illustrates connection points of systems:\r\n\r\n[![Connection points of systems](https://w3id.org/seas/system3.png)](https://w3id.org/seas/system3.png)\r\n\r\n"@en <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/SystemOntology> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/seas/Connection> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/seas/System> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B44e9b9f7ca867b412837b7201018dd2d <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectedTo> <http://www.w3.org/2000/01/rdf-schema#label> "connected to"@en <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectedTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/seas/System> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a system to a system it is connected to.\r\n\r\nConnected systems interact in some way. The exact meaning of _interact_ is defined by sub properties of `seas:connectedTo`.\r\n\r\nFor example, for the electricity to directly flow between an electric vehicle service equipment and an electric vehicle, then they must be linked by property `seas:exchangesElectricityWith`: \r\n\r\n```\r\nseas:exchangesElectricityWith rdfs:subPropertyOf seas:connectedTo .\r\n\r\n<electric_vehicle> seas:exchangesElectricityWith <electric_vehicle_service_equipment> .\r\n```\r\n\r\nProperty `seas:connectedTo` is symmetric:\r\n\r\n```\r\nif x seas:connectedTo y, then it is true that y seas:connectedTo x.\r\n```\r\n\r\nThis property can be qualified using class `seas:Connection`, which connects the two systems.\r\n\r\nIf there is a connection between several systems, then one may infer these systems are pairwise connected."@en <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectedTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/SystemOntology> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/seas/System> <https://w3id.org/seas/SystemOntology> .
+<http://schema.mobivoc.org/ElectricVehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Véhicule électrique"@fr <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/ElectricVehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Electric vehicle"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/ElectricVehicle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/ElectricVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Vehicle> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/ElectricVehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Elektrofahrzeug"@de <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/ElectricVehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "A wheeled, self-powered motor vehicle using an electric drivetrain."@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/ChargingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Charging point"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/ChargingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Ladestation"@de <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/ChargingPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/ChargingPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CivicStructure> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/ChargingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/ChargingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/ChargingPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Civic structure that supplies electric energy for the recharging of electric vehicles." <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/PlugType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/PlugType> <http://www.w3.org/2000/01/rdf-schema#label> "Plug type"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/PlugType> <http://www.w3.org/2000/01/rdf-schema#comment> "Type of a plug that is used to connect electric vehicles." <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/PlugType> <http://www.w3.org/2000/01/rdf-schema#label> "Steckertyp"@de <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/PlugType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/PlugType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Plug> <http://www.w3.org/2000/01/rdf-schema#label> "Plug"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Plug> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Plug> <http://www.w3.org/2000/01/rdf-schema#label> "Anschluss"@de <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Plug> <http://www.w3.org/2000/01/rdf-schema#comment> "Component of a charger to connect an electric vehicle. There are different plug types used for charging electric vehicles." <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Plug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Plug> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_J1772-2001> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_J1772-2001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.mobivoc.org/PlugType> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_J1772-2001> <http://www.w3.org/2000/01/rdf-schema#comment> "SAE J1772 (IEC Type 1) is a North American standard for electrical connectors for electric vehicles maintained by the SAE International and has the formal title \"SAE Surface Vehicle Recommended Practice J1772, SAE Electric Vehicle Conductive Charge Coupler\"." <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_J1772-2001> <http://schema.mobivoc.org/ocmConnectionID> "7" <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_J1772-2001> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://en.wikipedia.org/wiki/SAE_J1772> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_J1772-2001> <http://www.w3.org/2000/01/rdf-schema#label> "J1772"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Mennekes_Type_2> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Mennekes_Type_2> <http://schema.mobivoc.org/ocmConnectionID> "1036" <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Mennekes_Type_2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.mobivoc.org/PlugType> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Mennekes_Type_2> <http://www.w3.org/2000/01/rdf-schema#comment> "The IEC 62196 Type 2 connector (commonly referred to as Mennekes) is used for charging electric cars within Europe. The connector is circular in shape, with a flattened top edge and originally specified for charging battery electric vehicles at 3–120 kilowatts." <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Mennekes_Type_2> <http://schema.mobivoc.org/ocmConnectionID> "25" <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Mennekes_Type_2> <http://www.w3.org/2004/02/skos/core#altLabel> "IEC_62196 Type 2" <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Mennekes_Type_2> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://en.wikipedia.org/wiki/Type_2_connector> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Mennekes_Type_2> <http://xmlns.com/foaf/0.1/depiction> <https://upload.wikimedia.org/wikipedia/commons/f/f3/VDE-AR-E_2623-2-2-plug.jpg> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Mennekes_Type_2> <http://www.w3.org/2000/01/rdf-schema#label> "Mennekes (Type 2)"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_J1772-2009> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://en.wikipedia.org/wiki/IEC_62196#Type_1_(SAE_J1772-2009),_Yazaki> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_J1772-2009> <http://www.w3.org/2000/01/rdf-schema#label> "J1772 2009"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_J1772-2009> <http://xmlns.com/foaf/0.1/depiction> <https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/SAE_J1772_7058855567.jpg/1280px-SAE_J1772_7058855567.jpg> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_J1772-2009> <http://www.w3.org/2004/02/skos/core#altLabel> "IEC 62196 Type 1" <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_J1772-2009> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_J1772-2009> <http://schema.mobivoc.org/ocmConnectionID> "1" <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_J1772-2009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.mobivoc.org/PlugType> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_J1772-2009> <http://www.w3.org/2000/01/rdf-schema#comment> "SAE J1772 (IEC Type 1) is a North American standard for electrical connectors for electric vehicles maintained by the SAE International and has the formal title \"SAE Surface Vehicle Recommended Practice J1772, SAE Electric Vehicle Conductive Charge Coupler\". \n    The SAE J1772-2009 connector specification has been added to the international IEC 62196-2 standard." <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Charger> <http://www.w3.org/2000/01/rdf-schema#label> "Ladegerät"@de <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Charger> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Charger> <http://www.w3.org/2000/01/rdf-schema#label> "Charger"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Charger> <http://www.w3.org/2000/01/rdf-schema#comment> "Component of a charging point used to charge electric vehicles. A charging point can have one or more chargers." <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Charger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/Charger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_Combo> <http://xmlns.com/foaf/0.1/depiction> <https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/CCSCombo2.svg/1052px-CCSCombo2.svg.png> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_Combo> <http://schema.mobivoc.org/ocmConnectionID> "32" <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_Combo> <http://www.w3.org/2000/01/rdf-schema#comment> "The Combined Charging System is a quick charging method for battery electric vehicles delivering high-voltage direct current via a special electrical connector derived from the SAE J1772 (IEC Type 1)." <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_Combo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.mobivoc.org/PlugType> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_Combo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_Combo> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://en.wikipedia.org/wiki/Combined_Charging_System> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/SAE_Combo> <http://www.w3.org/2000/01/rdf-schema#label> "SAE Combo (DC Fast Charge J1772)"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CCS_Type2> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://en.wikipedia.org/wiki/Combined_Charging_System> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CCS_Type2> <http://www.w3.org/2000/01/rdf-schema#label> "CCS Type2"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CCS_Type2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.mobivoc.org/PlugType> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CCS_Type2> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CCS_Type2> <http://www.w3.org/2004/02/skos/core#altLabel> "Combo2" <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CCS_Type2> <http://xmlns.com/foaf/0.1/depiction> <https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/CCSCombo2.svg/1052px-CCSCombo2.svg.png> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CCS_Type2> <http://schema.mobivoc.org/ocmConnectionID> "33" <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CCS_Type2> <http://www.w3.org/2000/01/rdf-schema#comment> "The Combined Charging System is a quick charging method for battery electric vehicles delivering high-voltage direct current via a special electrical connector derived from the  IEC Type 2 connector. As the plug is a combination of an AC connector with a DC option the resulting connector is also called Combo Coupler and the variant with Type 2 is abbreviated as Combo2." <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CHAdeMO> <http://xmlns.com/foaf/0.1/depiction> <https://upload.wikimedia.org/wikipedia/commons/d/d3/CHAdeMO_Plug_VacavilleDavisStDC2.jpg> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CHAdeMO> <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/CHAdeMO> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CHAdeMO> <http://schema.mobivoc.org/ocmConnectionID> "2" <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CHAdeMO> <http://www.w3.org/2000/01/rdf-schema#label> "CHAdeMO"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CHAdeMO> <http://www.w3.org/2000/01/rdf-schema#comment> "CHAdeMO is the trade name of a quick charging method for battery electric vehicles delivering up to 62.5 kW of direct current (500 V, 125 A[1]) via a special electrical connector." <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CHAdeMO> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.mobivoc.org/PlugType> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CHAdeMO> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://en.wikipedia.org/wiki/CHAdeMO> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/CHAdeMO> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://www.w3id.org/urban-iot/electric#ChargingStation> <http://www.w3.org/2000/01/rdf-schema#label> "Charging Station"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#ChargingStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/urban-iot/core#MobilityStation> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#ChargingStation> <http://www.w3.org/2000/01/rdf-schema#comment> "Luogo dove si possono ricaricare veicoli elettrici, comprensivo sia di Colonnine di Ricarica per Veicoli Elettrici (EVSE) che delle aree di sosta per lasciare il veicolo durante la ricarica."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#ChargingStation> <http://www.w3.org/2000/01/rdf-schema#comment> "Place where it is possible to recharge vehicles, that includes both Electric Vehicle Supply Equipments (EVSE) and the parking areas to allow the vehicle stop during the charging activity."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#ChargingStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/urban-iot/core#ServiceResource> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#ChargingStation> <http://www.w3.org/2000/01/rdf-schema#label> "Stazione di Ricarica"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#ChargingStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasParkingRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "has parking restriction"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasParkingRestriction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasParkingRestriction> <http://www.w3.org/2000/01/rdf-schema#comment> "Associa una Colonnina di Ricarica per Veicoli Elettrici (EVSE) a possibili restrizioni di sosta per poter sfruttare il servizio."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasParkingRestriction> <http://www.w3.org/2000/01/rdf-schema#label> "ha restrizioni di parcheggio"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasParkingRestriction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasParkingRestriction> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates an Electric Vehicle Supply Equipment (EVSE) to possible parking restrictions to use the charging service."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasParkingRestriction> <http://www.w3.org/2000/01/rdf-schema#range> _:B2b38483989b87bdd4d5fa2ce0876b73e <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasConnector> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/urban-iot/electric#Connector> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasConnector> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasConnector> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3id.org/urban-iot/electric#isConnectorOf> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasConnector> <http://www.w3.org/2000/01/rdf-schema#comment> "Associa un Connettore ad una Colonnina di Ricarica per Veicoli Elettrici (EVSE)."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasConnector> <http://www.w3.org/2000/01/rdf-schema#label> "has connector"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasConnector> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a Connector to an Electric Vehicle Supply Equipment (EVSE)."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasConnector> <http://www.w3.org/2000/01/rdf-schema#label> "ha un connettore"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasConnector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#Connector> <http://www.w3.org/2000/01/rdf-schema#label> "Connettore"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#Connector> <http://www.w3.org/2000/01/rdf-schema#label> "Connector"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#Connector> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#Connector> <http://www.w3.org/2000/01/rdf-schema#comment> "Connector related to an Electric Vehicle Supply Equipment (EVSE)."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#Connector> <http://www.w3.org/2000/01/rdf-schema#comment> "Connettore collegato a una Colonnina di Ricarica per Veicoli Elettrici (EVSE)."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3.org/2000/01/rdf-schema#comment> "Colonnina di Ricarica (EVSE) messa a disposizione per la ricarica di veicoli elettrici."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/Sensor> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3.org/2000/01/rdf-schema#label> "Colonnina di Ricarica per Veicoli Elettrici (EVSE)"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3.org/2000/01/rdf-schema#label> "Electric Vehicle Supply Equipment (EVSE)"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3.org/2000/01/rdf-schema#comment> "Electric Vehicle Supply Equipment (EVSE) available for charging vehicles."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSEState> <http://www.w3.org/2000/01/rdf-schema#comment> "Associazioni a possibili stati  in cui una Colonnina per la Ricarica Veicoli Elettrici (EVSE) può trovarsi."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSEState> <http://www.w3.org/2000/01/rdf-schema#range> _:Bf6911d93389b23d8fefaaed6950373c3 <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSEState> <http://www.w3.org/2000/01/rdf-schema#label> "EVSE state"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSEState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSEState> <http://www.w3.org/2000/01/rdf-schema#label> "stato dell'EVSE"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSEState> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/urban-iot/electric#EVSERecord> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSEState> <http://www.w3.org/2000/01/rdf-schema#comment> "Connection to possible states for an EVSE (Electric Vehicle Supply Equipment)."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#isEVSEOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates an Electric Vehicle Supply Equipment (EVSE) to a Charging Station."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#isEVSEOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#isEVSEOf> <http://www.w3.org/2000/01/rdf-schema#label> "è EVSE di"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#isEVSEOf> <http://www.w3.org/2000/01/rdf-schema#label> "is EVSE of"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#isEVSEOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#isEVSEOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Associa una Colonnina di Ricarica per Veicoli Elettrici (EVSE) ad una Stazione di Ricarica."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#isEVSEOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/urban-iot/electric#ChargingStation> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#usedEVSE> <http://www.w3.org/2000/01/rdf-schema#label> "used EVSE"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#usedEVSE> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#usedEVSE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#usedEVSE> <http://www.w3.org/2000/01/rdf-schema#label> "EVSE utilizzato"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#usedEVSE> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a Charging Session to an Electric Vehicle Supply Equipment (EVSE) which is used during the Session."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#usedEVSE> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/urban-iot/electric#ChargingSession> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#usedEVSE> <http://www.w3.org/2000/01/rdf-schema#comment> "Associa una Sessione di Ricarica ad una Colonnina di Ricarica per Veicoli Elettrici (EVSE), che viene utilizzata durante la Sessione."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#isConnectorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/urban-iot/electric#Connector> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#isConnectorOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a Connector to an Electric Vehicle Supply Equipment (EVSE)."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#isConnectorOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#isConnectorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#isConnectorOf> <http://www.w3.org/2000/01/rdf-schema#label> "is connector of"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#isConnectorOf> <http://www.w3.org/2000/01/rdf-schema#label> "è connettore di"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#isConnectorOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Associa un Connettore ad una Colonnina di Ricarica per Veicoli Elettrici (EVSE)."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasChargeAccessMethod> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasChargeAccessMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Association for an Electric Vehicle Supply Equipment (EVSE) to possible methods to activate the charge."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasChargeAccessMethod> <http://www.w3.org/2000/01/rdf-schema#label> "has charge access method"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasChargeAccessMethod> <http://www.w3.org/2000/01/rdf-schema#range> _:Bda917b204b3497aa13e47b50149309cd <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasChargeAccessMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasChargeAccessMethod> <http://www.w3.org/2000/01/rdf-schema#label> "ha un metodo di accesso alla ricarica"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasChargeAccessMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "Associazione di una Colonnina di Ricarica per Veicoli Elettrici (EVSE) a possibili metodi per attivare la ricarica."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSE> <http://www.w3.org/2000/01/rdf-schema#label> "has EVSE"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSE> <http://www.w3.org/2000/01/rdf-schema#label> "ha un EVSE"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSE> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSE> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/urban-iot/electric#ChargingStation> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSE> <http://www.w3.org/2000/01/rdf-schema#comment> "Associa una Stazione di Ricarica a una Colonnina per la Ricarica di Veicoli Elettrici (EVSE)."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSE> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a Charging Station to an Electric Vehicle Supply Equipment (EVSE)."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSE> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3id.org/urban-iot/electric#isEVSEOf> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSEChargeCategory> <http://www.w3.org/2000/01/rdf-schema#label> "has EVSE Charge Category"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSEChargeCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a Electric Vehicle Supply Equipment (EVSE) to the possible charge categories."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSEChargeCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSEChargeCategory> <http://www.w3.org/2000/01/rdf-schema#label> "ha una categoria di ricarica per EVSE"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSEChargeCategory> <http://www.w3.org/2000/01/rdf-schema#range> _:Bc6f4463b4cf5cd3152459a39ddb1f0df <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSEChargeCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Associa una Colonnina di Ricarica per Veicoli Elettirci (EVSE) alle possibili categorie di ricarica."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasEVSEChargeCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#ChargingService> <http://www.w3.org/2000/01/rdf-schema#label> "Charging Service"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#ChargingService> <http://www.w3.org/2000/01/rdf-schema#label> "Servizio di Ricarica"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#ChargingService> <http://www.w3.org/2000/01/rdf-schema#comment> "Servizio operato da un Gestore di Servizi per la ricarica elettrica, con il fine di gestire l'utilizzo di Colonnine di Ricarica (EVSE)."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#ChargingService> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Service> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#ChargingService> <http://www.w3.org/2000/01/rdf-schema#comment> "Service operated by an eMobility Service Provider, with the purpose to manage the use of Electric Vehicle Supply Equipments (EVSE)."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#ChargingService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSERecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSERecord> <http://www.w3.org/2000/01/rdf-schema#comment> "Registration status for the Electric Vehicle Supply Equipment (EVSE): in charge, available, inoperative, ecc."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSERecord> <http://www.w3.org/2000/01/rdf-schema#comment> "Registrazione dello stato in cui si trova nei vari momenti la Colonnina di Ricarica (EVSE): in carica, disponibile, inattiva, etc."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSERecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3id.org/urban-iot/core#SensorRecord> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSERecord> <http://www.w3.org/2000/01/rdf-schema#label> "Electric Vehicle Supply Equipment Record"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSERecord> <http://www.w3.org/2000/01/rdf-schema#label> "Stato della Colonnina di Ricarica"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#floorLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/urban-iot/electric#EVSE> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#floorLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#floorLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Piano al quale è installata la colonnina di ricarica per veicoli elettrici (EVSE)."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#floorLevel> <http://www.w3.org/2000/01/rdf-schema#label> "numero di piano"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#floorLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Floore level where the Electric Vehicle Supply Equimpment (EVSE) is installed."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#floorLevel> <http://www.w3.org/2000/01/rdf-schema#label> "floor level"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#floorLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSE-state> <http://www.w3.org/2000/01/rdf-schema#comment> "Stato della Colonnina di Ricarica per Veicoli Elettrici."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSE-state> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSE-state> <http://www.w3.org/2000/01/rdf-schema#label> "EVSE state"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSE-state> <http://www.w3.org/2000/01/rdf-schema#label> "Stato Colonnina di Ricarica"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#EVSE-state> <http://www.w3.org/2000/01/rdf-schema#comment> "State for Electric Vehicle Supply Equipment."@en <http://www.w3id.org/urban-iot/electric> .

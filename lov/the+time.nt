@@ -1,0 +1,898 @@
+<http://purl.org/pav/sourceAccessedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdAt> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedOn> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/sourceAccessedOn> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/sourceAccessedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The resource is related to a source which was originally accessed or consulted on the given date as part of creating or authoring the resource. The source(s) should be specified using pav:sourceAccessedAt.\n\nFor instance, if the source accessed described the weather forecast for the next day, the time of source access can be crucial information.\n\nThis property is normally used in a functional way, although PAV does not formally restrict this. If the source is subsequently checked again (say to verify validity), this should be indicated with pav:sourceLastAccessedOn.\n\nIn the case multiple sources being accessed at different times or by different agents, PAV does not distinguish who accessed when what. If such details are required, they may be provided by additionally using prov:qualifiedInfluence.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/sourceLastAccessedOn> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedOn> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/sourceFirstAccessedOn> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedOn> <http://www.w3.org/2000/01/rdf-schema#label> "Source accessed on"@en <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/sourceAccessedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/sourceAccessedAt> <http://purl.org/pav/> .
+<http://purl.org/pav/createdOn> <http://www.w3.org/2000/01/rdf-schema#label> "Created on"@en <http://purl.org/pav/> .
+<http://purl.org/pav/createdOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/createdOn> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/createdOn> <http://purl.org/pav/> .
+<http://purl.org/pav/createdOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdBy> <http://purl.org/pav/> .
+<http://purl.org/pav/createdOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/createdOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/pav/> .
+<http://purl.org/pav/createdOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The date of creation of the resource representation.\n\nThe agents responsible can be indicated with pav:createdBy.\n\nThis property is normally used in a functional way, indicating the time of creation, although PAV does not formally restrict this. pav:lastUpdateOn can be used to indicate minor updates that did not affect the creating date.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity responsible for retrieving the data from an external source.\n\nThe retrieving agent is usually a software entity, which has done the retrieval from the original source without performing any transcription.\n\nThe source that was retrieved should be given with pav:retrievedFrom. The time of the retrieval should be indicated using pav:retrievedOn.\n\nSee pav:importedFrom for a discussion of import vs. retrieve vs. derived."@en <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Retrieved by"@en <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/importedFrom> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedOn> <http://www.w3.org/2000/01/rdf-schema#label> "Retrieved on"@en <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/retrievedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/retrievedFrom> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The date the source for this resource was retrieved.\n\nThe source that was retrieved should be indicated with pav:retrievedFrom. The agent that performed the retrieval may be specified with pav:retrievedBy.\n\nThis property is normally used in a functional way, although PAV does not formally restrict this.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdOn> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/authoredBy> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdBy> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/pav/contributedOn> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The date this resource was authored.\n\npav:authoredBy gives the authoring agent.\n\nNote that pav:authoredOn is different from pav:createdOn, although they are often the same. See pav:createdBy for a discussion.\n\nThis property is normally used in a functional way, indicating the last time of authoring, although PAV does not formally restrict this.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/authoredOn> <http://www.w3.org/2000/01/rdf-schema#label> "Authored on"@en <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The date of the last update of the resource. An update is a change which did not warrant making a new resource related using pav:previousVersion, for instance correcting a spelling mistake.\n\nThis property is normally used in a functional way, although PAV does not formally restrict this.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdOn> <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/lastUpdateOn> <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/2000/01/rdf-schema#label> "Last updated on"@en <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/previousVersion> <http://purl.org/pav/> .
+<http://purl.org/pav/importedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/importedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/importedBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/importedFrom> <http://purl.org/pav/> .
+<http://purl.org/pav/importedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Imported by"@en <http://purl.org/pav/> .
+<http://purl.org/pav/importedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/pav/> .
+<http://purl.org/pav/importedBy> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/importedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/importedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity responsible for importing the data.\n\nThe importer is usually a software entity which has done the transcription from the original source.\n\nNote that pav:importedBy may overlap with pav:createdWith.\n\nThe source for the import should be given with pav:importedFrom. The time of the import should be given with pav:importedOn.\n\nSee pav:importedFrom for a discussion of import vs. retrieve vs. derived."@en <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/importedOn> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The date this resource was imported from a source (pav:importedFrom).\n\nNote that pav:importedOn may overlap with pav:createdOn, but in cases where they differ, the import time indicates the time of the retrieval and transcription of the original source, while the creation time indicates when the final resource was made, for instance after user approval.\n\nThis property is normally used in a functional way, indicating the first import date, although PAV does not formally restrict this. If the resource is later reimported, this should instead be indicated with pav:lastRefreshedOn.\n\nThe source of the import should be given with pav:importedFrom. The agent that performed the import should be given with pav:importedBy.\n\nSee pav:importedFrom for a discussion about import vs. retrieval.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/importedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#label> "Imported on"@en <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/importedFrom> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/curatedOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/pav/contributedOn> <http://purl.org/pav/> .
+<http://purl.org/pav/curatedOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/curatedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/curatedOn> <http://www.w3.org/2000/01/rdf-schema#label> "Curated on"@en <http://purl.org/pav/> .
+<http://purl.org/pav/curatedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The date this resource was curated.\n\npav:curatedBy gives the agent(s) that performed the curation.\n\nThis property is normally used in a functional way, indicating the last curation date, although PAV does not formally restrict this.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/curatedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/curatedBy> <http://purl.org/pav/> .
+<http://purl.org/spar/fabio/hasEmbargoDuration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/date> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/hasEmbargoDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/hasEmbargoDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "The time period for which an entity is embargoed.  During this period, the entity should not be published or, in the case of a press release, should not be reported on.  For open-access journal articles, the embargo duration specifies that period of time during which availability of the open-access version of the article is delayed by the publisher, following subscription-access availability of the published work.  The end of the embargo period can be specified by fabio:hasEmbargoDate."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/hasEmbargoDuration> <http://www.w3.org/2000/01/rdf-schema#label> "has embargo period"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ExecutiveSummary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/BriefReport> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ExecutiveSummary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ExecutiveSummary> <http://www.w3.org/2000/01/rdf-schema#label> "executive summary"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ExecutiveSummary> <http://www.w3.org/2000/01/rdf-schema#comment> "An executive summary is a brief report summarizing a longer formal report, designed to present the key points, conclusions and recommendations arising from the study being reported, for readers too busy to take the time to read the complete report."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Timetable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Timetable> <http://www.w3.org/2000/01/rdf-schema#label> "timetable"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Timetable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Dataset> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Timetable> <http://www.w3.org/2000/01/rdf-schema#comment> "A tabular dataset providing information about the times and locations of a planned series of events."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/pro/RoleInTime> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.essepuntato.it/2012/04/tvc/hasValue> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A property relating an agent to a role that the agent holds.  This is done via the indirection: foaf:Agent pro:holdsRoleInTime [ a pro:RoleInTime ; pro:withRole pro:Role ] .  The ontology permits one to specify the time period over which a role is held, and the other contextual entities to which that agent's role relates."@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/pro/holdsRoleInTime> <http://www.w3.org/2000/01/rdf-schema#label> "holds role in time"@en <http://purl.org/spar/pro> .
+<http://purl.org/spar/scoro/makesContribution> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property linking an agent to a contribution.  This is done via the indirection: foaf:Agent scoro:makesContribution [ a scoro:ContributionSituation ; scoro:withContribution scoro:Contribution ; scoro:withEffort scoro:ContributionEffort ] .  The ontology permits one to specify the time period over which a contribution is made, and the other contextual entities to which that agent's contribution relates."@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/makesContribution> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/scoro/ContributionSituation> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/makesContribution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/makesContribution> <http://www.w3.org/2000/01/rdf-schema#label> "makes contribution"@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/makesContribution> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.essepuntato.it/2012/04/tvc/hasValue> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/makesContribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/scoro/> .
+<http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the beginning of the validity of the access or right that the ticket grants. \nIt can be attached to the tio:Ticket (if meant for the ticket as a whole) and to individual tio:ScopeOfAccess entities (if meant for just a particular part of the access rights).\n\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2010-11-15T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2010-11-15T09:30:10-09:00\n\nor\n\n2010-11-15T09:30:10+09:00."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0c61d629129a8c065605b91e013afd06 <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#label> "validFrom (0..1)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#ends> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time for which the event is scheduled to end\n\nNote: You can attach the time and date of the event using tio:starts and tio:ends as simple datatype properties,\neven if lode:Event and event:Event recommend other, more sophisticated ways of modeling the temporal aspects of events."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#ends> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#ends> <http://www.w3.org/2000/01/rdf-schema#label> "ends (0..1)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#ends> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#ends> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#ends> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/tio/ns#Event> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#label> "validThrough (0..1)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bee530f1e715011ef1c8838a98bea38bd <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the ending of the validity of the access or right that the ticket grants. \nIt can be attached to the tio:Ticket (if meant for the ticket as a whole) and to individual tio:ScopeOfAccess entities (if meant for just a particular part of the access rights).\n\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2010-11-15T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2010-11-15T09:30:10-09:00\n\nor\n\n2010-11-15T09:30:10+09:00."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/tio/ns#SeatingLayout> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/tio/ns#ScopeOfAccess> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Offering> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyScope> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryMethod> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3c45cf74595c35680a321ebcc5d1a89f <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/tio/ns#Stop> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#LocationOfSalesOrServiceProvisioning> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntity> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#N-Ary-Relations> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "An event, e.g. a concert, a show, etc. You can also safely use the following external classes for describing the respective event:\n\nhttp://linkedevents.org/ontology/Event (lode:Event)\nhttp://purl.org/NET/c4dm/event.owl#Event (event:Event)\nhttp://www.loa-cnr.it/ontologies/DUL.owl#Event (dul:Event)\n\nNote: You can attach the time and date of the event using tio:starts and tio:ends as simple datatype properties, even if lode:Event and event:Event recommend other, more sophisticated ways of modeling the temporal aspects of events."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentMethod> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleTimes> <http://www.w3.org/2000/01/rdf-schema#label> "eligibleTimes (0..*)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleTimes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/tio/ns#ScopeOfAccess> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleTimes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleTimes> <http://www.w3.org/2000/01/rdf-schema#comment> "This links a tio:ScopeOfAccess node to one or more gr:OpeningHoursSpecifications that indicate the times of access.\n\nNote: The times of access for a particular ticket may be more constrained than the opening hours of the location, event, or transportation service. Use tio:openingHours for specifying the overall opening hours or hours of operation."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleTimes> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleTimes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#openingHours> <http://www.w3.org/2000/01/rdf-schema#label> "openingHours (0..*)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#openingHours> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/tio/ns#POI> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#openingHours> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#openingHours> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#openingHours> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#openingHours> <http://www.w3.org/2000/01/rdf-schema#comment> "This indicates the opening hours for a point of interest. \n\nNote: The opening hours of the location and the time-windows for which a particular ticket is eligible may differ. Use tio:eligibleTimes for the latter."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#available> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of tickets of this category still available at the time of publishing the data"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#available> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#available> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/tio/ns#TicketPlaceholder> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#available> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#available> <http://www.w3.org/2000/01/rdf-schema#label> "available (0..1)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#available> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#starts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#starts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#starts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/tio/ns#Event> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#starts> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#starts> <http://www.w3.org/2000/01/rdf-schema#label> "starts (0..1)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#starts> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time for which the event is scheduled to begin\n\nNote: You can attach the time and date of the event using tio:starts and tio:ends as simple datatype properties,\neven if lode:Event and event:Event recommend other, more sophisticated ways of modeling the temporal aspects of events."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#sold> <http://www.w3.org/2000/01/rdf-schema#label> "sold (0..1)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#sold> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#sold> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#sold> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of tickets of this category already sold at the time of publishing the data"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#sold> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/tio/ns#TicketPlaceholder> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#sold> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/tio/ns#> .
+<http://purl.org/uco/ns#listPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vso/ns#Vehicle> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#listPrice> <http://www.w3.org/2000/01/rdf-schema#label> "listPrice (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#listPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The original list price of the new car at the time of production"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#listPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#listPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#listPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/uco/ns#> .
+<http://purl.org/vso/ns#acceleration> <http://www.w3.org/2000/01/rdf-schema#comment> "The time needed to accelerate the vehicle from a given start velocity to a given target velocity\nTypical unit code(s): SEC for seconds\n\nNote: There are unfortunately no standard unit codes for seconds/0..100 km/h or seconds/0..60 mph. Simply use \"SEC\" for seconds and indicate the velocities in the rdfs:label of the gr:QuantitativeValueFloat, or use vso:referenceSpeeds with vso:0to60MPH (0..60 mph) or vso:0to100KMH (0..100 km/h) to specify the reference speeds."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#acceleration> <http://www.w3.org/2000/01/rdf-schema#label> "acceleration (0..*)"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#acceleration> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bacc9aad6796b8f0d5f04fd0480c89bf1 <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#acceleration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#acceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#acceleration> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValueFloat> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#acceleration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vso/ns> <http://purl.org/vso/ns> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/LightTime> <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "τ" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/LightTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontology-of-units-of-measure.org/resource/om-2/Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/LightTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time electromagnetic radiation takes to reach Earth from a distant source. Often the correction in light time is needed to accurately calculate the apparent position of solar system objects or to calculate the period of variable stars (different times are observed when the Earth is at a different position in its orbit)."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/LightTime> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/second-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/LightTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/LightTime> <http://www.w3.org/2000/01/rdf-schema#label> "light time"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/centiwatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/femtowatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/horsepower-British> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/horsepower-Metric> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/hectowatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/horsepower-Electric> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/microwatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/solarLuminosity> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.w3.org/2000/01/rdf-schema#label> "功率"@zh <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/deciwatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/horsepower-Boiler> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.w3.org/2000/01/rdf-schema#comment> "Power is the time rate at which work is done. It is a derived quantity in the International System of Units. Power is energy divided by time."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/exawatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "P" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/terawatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/watt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5449d587b773bd948f6c91a0d840f338 <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gigawatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/megawatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/milliwatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/kilowatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/attowatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/decawatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/tonOfRefrigeration> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.w3.org/2000/01/rdf-schema#label> "power"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/joulePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B66b220a8f70caeaa597ce6f0d2e2e4fd <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/horsepower-Water> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/picowatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/nanowatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/petawatt> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Power> <http://www.w3.org/2000/01/rdf-schema#label> "vermogen"@nl <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/millimetrePerDay> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerMicrosecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/femtometrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerPetasecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/decimetrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/centimetrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerNanosecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/mile-StatutePerHour> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.w3.org/2000/01/rdf-schema#label> "snelheid (scalair)"@nl <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gigametrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/picometrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/exametrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerDecasecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerDay> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.w3.org/2000/01/rdf-schema#comment> "Speed is the time rate of motion measured by the distance moved over in unit time."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/decametrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/kilometrePerHour> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/nauticalMile-InternationalPerHour> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/petametrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerGigasecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerAttosecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerHectosecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/millimetrePerHour> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerPicosecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.w3.org/2000/01/rdf-schema#label> "速度"@zh <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be455c8fce4254b008e6679aaba7780fa <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/terametrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/kilometrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerMegasecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerFemtosecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/millimetrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7c64794a3c4e1b54d30b0cf84d8f46f2 <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerExasecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/hectometrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/nanometrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerDecisecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerKilosecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeSymbol> "u" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerCentisecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/micrometrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "v" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/knot-International> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/megametrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.w3.org/2000/01/rdf-schema#label> "speed"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/attometrePerSecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerMillisecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/centimetrePerDay> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Speed> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metrePerTerasecond-Time> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://rdf-vocabulary.ddialliance.org/discovery#LogicalDataSet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/discovery> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#LogicalDataSet> <http://www.w3.org/2000/01/rdf-schema#comment> "Each study has a set of logical metadata associated with the processing of data, at the time of collection or later during cleaning, and re-coding. LogicalDataSet represents the microdata dataset."@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#LogicalDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#LogicalDataSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#LogicalDataSet> <http://www.w3.org/2000/01/rdf-schema#label> "Ensemble de données"@fr <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#LogicalDataSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Dataset> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#LogicalDataSet> <http://www.w3.org/2000/01/rdf-schema#label> "LogicalDataSet"@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://reference.data.gov.uk/def/central-government/formedAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The time at which the Government was formed."@en <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/formedAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/net/opmv/ns#wasGeneratedAt> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/formedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/formedAt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://reference.data.gov.uk/def/central-government> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/formedAt> <http://www.w3.org/2000/01/rdf-schema#domain> <http://reference.data.gov.uk/def/central-government/Government> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/formedAt> <http://www.w3.org/2000/01/rdf-schema#label> "Formed At"@en <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/formedAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/formedAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://reference.data.gov.uk/def/central-government> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7dc2cf2a9a8bc41014701277bb45dbd3 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2e56f7fd8b5e4e84778f0d6c3496ecb0 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#Use> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Befffdf388f7823bd8b91ae24ff93590c <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#Ambient> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba8feb14ab9f62b400fc5061ce3b24a6d <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfb040e949b65ba049281bb0c952bd188 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#Transfer> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6d9d98b1df779682604c3cfba92256d2 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#label> "Access"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb999e5695c57aab81bd60b212b5bacad <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Access> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the action that consumes the communication of a MakeAvailable, i.e. an InteractiveCommunication. Consequently, it is an interactive action from the point of view of the consumer, who is able to determine the time line of the content. Usually, the content is consumed from its beginning and from the time point when the content is accessed. Moreover, the user is usually free to pause, resume, forward and rewind the content. However, all these issues are specific to the technological means used to make the content available, e.g. internet video on-demand streamers. It is important to note that this same features can be enjoyed with non-interactive communications but a recording system at the consumers place is then required."@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://securitytoolbox.appspot.com/stac#Timestamp> <http://www.w3.org/2000/01/rdf-schema#label> "Timestamp"@en <http://securitytoolbox.appspot.com/stac> .
+<http://securitytoolbox.appspot.com/stac#Timestamp> <http://www.w3.org/2000/01/rdf-schema#comment> "In order to ensure the freshness of packet, a timestamp can be attached to the packet. A receiving node can compare the timestamp in the packet with its own time clock and determine whether the packet is valid or not."@en <http://securitytoolbox.appspot.com/stac> .
+<http://securitytoolbox.appspot.com/stac#Timestamp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://securitytoolbox.appspot.com/stac#DataFreshnessMethod> <http://securitytoolbox.appspot.com/stac> .
+<http://securitytoolbox.appspot.com/stac#Timestamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://securitytoolbox.appspot.com/stac> .
+<http://semanticscience.org/resource/SIO_001291> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_001288> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001291> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001291> <http://semanticscience.org/resource/hasSynonym> "most of the time" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001291> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001291> <http://purl.org/dc/terms/description> "most refers to in the majority of occasions" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001291> <http://www.w3.org/2000/01/rdf-schema#label> "most of the time"@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001291> <http://purl.org/dc/elements/1.1/identifier> "SIO_001291" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001290> <http://www.w3.org/2000/01/rdf-schema#label> "some of the time"@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001290> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_001288> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001290> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001290> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001290> <http://purl.org/dc/elements/1.1/identifier> "SIO_001290" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001290> <http://semanticscience.org/resource/hasSynonym> "some of the time" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001290> <http://purl.org/dc/terms/description> "some refers to in the minority of occasions" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/Time> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticweb.cs.vu.nl/2009/11/sem/Core> <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/Time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/Time> <http://www.w3.org/2004/02/skos/core#broadMatch> <http://www.w3.org/2006/timeTemporalEntity> <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/Time> <http://www.w3.org/2000/01/rdf-schema#label> "Time" <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/Time> <http://www.w3.org/2000/01/rdf-schema#comment> "Time contains symbolic representations of when an Event took place. Time instances do not necessarily need to have a timestamp associated with them. The Time class exists to represent semantics of time, e.g. that one thing happens before another, even though the exact timestamps are unknown." <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp> <http://www.w3.org/2004/02/skos/core#closeMatch> <http://www.kulttuurisampo.fi/ebkr/time> <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp> <http://www.w3.org/2000/01/rdf-schema#label> "has timestamp" <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Has timestamp is used to put time indicators on any individual. It is the most common way to state when an Event took place. There are subproperties of hasTimeStamp to represent time intervals and uncertain time intervals. If the exact moment is not known, but it is necessary to specify a certain time, use hasTime instead. All of these properties are also used to indicate the time at which a property under the Temporary Constraint is valid." <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://spitfire-project.eu/ontology/ns/activityEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/activityEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spitfire-project.eu/ontology/ns/LinkActivity> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/activityEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/activityEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship among a LinkActivity and the end datetime of the time range which it refers to." <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/activityEnd> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://spitfire-project.eu/ontology/ns> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/linkActivityValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/linkActivityValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spitfire-project.eu/ontology/ns/LinkActivity> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/linkActivityValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship among a LinkActivity and the amount of packets received in the time range specified by the predicates :startDateTime and :endDateTime" <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/linkActivityValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://spitfire-project.eu/ontology/ns> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/linkActivityValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/activityStart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/activityStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/activityStart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spitfire-project.eu/ontology/ns/LinkActivity> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/activityStart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://spitfire-project.eu/ontology/ns> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/activityStart> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship among an Activity and the start datetime of the time range which it refers to." <http://spitfire-project.eu/ontology/ns> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://purl.org/dc/elements/1.1/title> "Starting Time"@EN <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://www.w3.org/2000/01/rdf-schema#domain> _:B7be82d7aa3cd229207d78b60a254e812 <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://purl.org/dc/elements/1.1/description> "The time when some event starts."@EN <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.wsmo.org/ontologies/dateTime#time> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time when some event starts." <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://purl.org/dc/elements/1.1/date> "2004-10-20" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://purl.org/dc/elements/1.1/creator> "DERI International" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://purl.org/dc/elements/1.1/rights> "http://www.deri.org/privacy.html" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://purl.org/dc/elements/1.1/type> "http://www.w3.org/2002/07/owl#FunctionalProperty" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://purl.org/dc/elements/1.1/coverage> "world" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://purl.org/dc/elements/1.1/publisher> "DERI International" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://www.w3.org/2000/01/rdf-schema#label> "Starting Time"@en <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasStarttime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://www.w3.org/2000/01/rdf-schema#label> "Endtime"@en <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.wsmo.org/ontologies/dateTime#time> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time when some event ends. " <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://purl.org/dc/elements/1.1/description> "The time when some event ends. "@EN <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bdfd54752eb95f430798b63640fcc5c3b <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://purl.org/dc/elements/1.1/coverage> "world" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://purl.org/dc/elements/1.1/publisher> "DERI International" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://purl.org/dc/elements/1.1/date> "2004-10-20" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://purl.org/dc/elements/1.1/creator> "DERI International" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://purl.org/dc/elements/1.1/rights> "http://www.deri.org/privacy.html" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://purl.org/dc/elements/1.1/title> "Endtime"@EN <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEndtime> <http://purl.org/dc/elements/1.1/type> "http://www.w3.org/2002/07/owl#FunctionalProperty" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://vocab.gtfs.org/terms#MinimumTimeTransfer> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#MinimumTimeTransfer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.gtfs.org/terms#TransferType> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#MinimumTimeTransfer> <http://www.w3.org/2000/01/rdf-schema#label> "Mimimum Time Transfer"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#MinimumTimeTransfer> <http://www.w3.org/2000/01/rdf-schema#comment> "This transfer requires a minimum amount of time between arrival and departure to ensure a connection. The time required to transfer is specified by gtfs:minimumTransferTime"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#timeZone> <http://www.w3.org/2000/01/rdf-schema#comment> "The timezone where a person or organisation is located."@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#timeZone> <http://www.w3.org/2000/01/rdf-schema#label> "Time zone"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#timeZone> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://vocab.org/transit/terms/timezone> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#timeZone> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/List_of_tz_database_time_zones> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#timeZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#timeZone> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#startTime> <http://www.w3.org/2000/01/rdf-schema#label> "Start Time"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#startTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the time at which service begins with the specified frequency"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#startTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#startTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#startTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.gtfs.org/terms#Frequency> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#startTime> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://vocab.gtfs.org/terms#> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/the+time.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtherX2Btime .
+_:BtherX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtherX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ther+time.nt> .
+_:BtherX2Btime <https://w3id.org/tree#value> "ther" .
+_:BtherX2Btime <https://w3id.org/tree#value> "time" .
+_:BtherX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ther+time.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BthesX2Btime .
+_:BthesX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BthesX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/thes+time.nt> .
+_:BthesX2Btime <https://w3id.org/tree#value> "thes" .
+_:BthesX2Btime <https://w3id.org/tree#value> "time" .
+_:BthesX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/thes+time.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheyX2Btime .
+_:BtheyX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheyX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/they+time.nt> .
+_:BtheyX2Btime <https://w3id.org/tree#value> "they" .
+_:BtheyX2Btime <https://w3id.org/tree#value> "time" .
+_:BtheyX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/they+time.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimea .
+_:BtheX2Btimea <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimea <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timea.nt> .
+_:BtheX2Btimea <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimea <https://w3id.org/tree#value> "timea" .
+_:BtheX2Btimea <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timea.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimeb .
+_:BtheX2Btimeb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimeb <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timeb.nt> .
+_:BtheX2Btimeb <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimeb <https://w3id.org/tree#value> "timeb" .
+_:BtheX2Btimeb <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timeb.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimed .
+_:BtheX2Btimed <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimed <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timed.nt> .
+_:BtheX2Btimed <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimed <https://w3id.org/tree#value> "timed" .
+_:BtheX2Btimed <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timed.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimeg .
+_:BtheX2Btimeg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimeg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timeg.nt> .
+_:BtheX2Btimeg <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimeg <https://w3id.org/tree#value> "timeg" .
+_:BtheX2Btimeg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timeg.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimei .
+_:BtheX2Btimei <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimei <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timei.nt> .
+_:BtheX2Btimei <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimei <https://w3id.org/tree#value> "timei" .
+_:BtheX2Btimei <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timei.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimel .
+_:BtheX2Btimel <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimel <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timel.nt> .
+_:BtheX2Btimel <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimel <https://w3id.org/tree#value> "timel" .
+_:BtheX2Btimel <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timel.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimem .
+_:BtheX2Btimem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timem.nt> .
+_:BtheX2Btimem <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimem <https://w3id.org/tree#value> "timem" .
+_:BtheX2Btimem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timem.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimep .
+_:BtheX2Btimep <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimep <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timep.nt> .
+_:BtheX2Btimep <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimep <https://w3id.org/tree#value> "timep" .
+_:BtheX2Btimep <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timep.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimes .
+_:BtheX2Btimes <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimes <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+times.nt> .
+_:BtheX2Btimes <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimes <https://w3id.org/tree#value> "times" .
+_:BtheX2Btimes <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+times.nt> <https://w3id.org/tree#remainingItems> "35"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimet .
+_:BtheX2Btimet <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimet <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timet.nt> .
+_:BtheX2Btimet <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimet <https://w3id.org/tree#value> "timet" .
+_:BtheX2Btimet <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timet.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimez .
+_:BtheX2Btimez <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimez <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timez.nt> .
+_:BtheX2Btimez <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimez <https://w3id.org/tree#value> "timez" .
+_:BtheX2Btimez <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timez.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BaX2BtheX2Btime .
+_:BaX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+the+time.nt> .
+_:BaX2BtheX2Btime <https://w3id.org/tree#value> "a" .
+_:BaX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BaX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BaX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+the+time.nt> <https://w3id.org/tree#remainingItems> "31"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BbX2BtheX2Btime .
+_:BbX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+the+time.nt> .
+_:BbX2BtheX2Btime <https://w3id.org/tree#value> "b" .
+_:BbX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BbX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BbX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+the+time.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BcX2BtheX2Btime .
+_:BcX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+the+time.nt> .
+_:BcX2BtheX2Btime <https://w3id.org/tree#value> "c" .
+_:BcX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BcX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BcX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+the+time.nt> <https://w3id.org/tree#remainingItems> "95"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BdX2BtheX2Btime .
+_:BdX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+the+time.nt> .
+_:BdX2BtheX2Btime <https://w3id.org/tree#value> "d" .
+_:BdX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BdX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BdX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+the+time.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BeX2BtheX2Btime .
+_:BeX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+the+time.nt> .
+_:BeX2BtheX2Btime <https://w3id.org/tree#value> "e" .
+_:BeX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BeX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BeX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+the+time.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BfX2BtheX2Btime .
+_:BfX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+the+time.nt> .
+_:BfX2BtheX2Btime <https://w3id.org/tree#value> "f" .
+_:BfX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BfX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BfX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+the+time.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BiX2BtheX2Btime .
+_:BiX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+the+time.nt> .
+_:BiX2BtheX2Btime <https://w3id.org/tree#value> "i" .
+_:BiX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BiX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BiX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+the+time.nt> <https://w3id.org/tree#remainingItems> "63"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BlX2BtheX2Btime .
+_:BlX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+the+time.nt> .
+_:BlX2BtheX2Btime <https://w3id.org/tree#value> "l" .
+_:BlX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BlX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BlX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+the+time.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BnX2BtheX2Btime .
+_:BnX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/n+the+time.nt> .
+_:BnX2BtheX2Btime <https://w3id.org/tree#value> "n" .
+_:BnX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BnX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BnX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/n+the+time.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BoX2BtheX2Btime .
+_:BoX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+the+time.nt> .
+_:BoX2BtheX2Btime <https://w3id.org/tree#value> "o" .
+_:BoX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BoX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BoX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+the+time.nt> <https://w3id.org/tree#remainingItems> "37"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BpX2BtheX2Btime .
+_:BpX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BpX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/p+the+time.nt> .
+_:BpX2BtheX2Btime <https://w3id.org/tree#value> "p" .
+_:BpX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BpX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BpX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/p+the+time.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BqX2BtheX2Btime .
+_:BqX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BqX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/q+the+time.nt> .
+_:BqX2BtheX2Btime <https://w3id.org/tree#value> "q" .
+_:BqX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BqX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BqX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/q+the+time.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BrX2BtheX2Btime .
+_:BrX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/r+the+time.nt> .
+_:BrX2BtheX2Btime <https://w3id.org/tree#value> "r" .
+_:BrX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BrX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BrX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/r+the+time.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BsX2BtheX2Btime .
+_:BsX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/s+the+time.nt> .
+_:BsX2BtheX2Btime <https://w3id.org/tree#value> "s" .
+_:BsX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BsX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BsX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/s+the+time.nt> <https://w3id.org/tree#remainingItems> "29"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtX2BtheX2Btime .
+_:BtX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/t+the+time.nt> .
+_:BtX2BtheX2Btime <https://w3id.org/tree#value> "t" .
+_:BtX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BtX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BtX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/t+the+time.nt> <https://w3id.org/tree#remainingItems> "39"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2BtimeX2Bu .
+_:BtheX2BtimeX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2BtimeX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+time+u.nt> .
+_:BtheX2BtimeX2Bu <https://w3id.org/tree#value> "the" .
+_:BtheX2BtimeX2Bu <https://w3id.org/tree#value> "time" .
+_:BtheX2BtimeX2Bu <https://w3id.org/tree#value> "u" .
+_:BtheX2BtimeX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+time+u.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2BtimeX2Bv .
+_:BtheX2BtimeX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2BtimeX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+time+v.nt> .
+_:BtheX2BtimeX2Bv <https://w3id.org/tree#value> "the" .
+_:BtheX2BtimeX2Bv <https://w3id.org/tree#value> "time" .
+_:BtheX2BtimeX2Bv <https://w3id.org/tree#value> "v" .
+_:BtheX2BtimeX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+time+v.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2BtimeX2Bw .
+_:BtheX2BtimeX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2BtimeX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+time+w.nt> .
+_:BtheX2BtimeX2Bw <https://w3id.org/tree#value> "the" .
+_:BtheX2BtimeX2Bw <https://w3id.org/tree#value> "time" .
+_:BtheX2BtimeX2Bw <https://w3id.org/tree#value> "w" .
+_:BtheX2BtimeX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+time+w.nt> <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2BtimeX2Bz .
+_:BtheX2BtimeX2Bz <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2BtimeX2Bz <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+time+z.nt> .
+_:BtheX2BtimeX2Bz <https://w3id.org/tree#value> "the" .
+_:BtheX2BtimeX2Bz <https://w3id.org/tree#value> "time" .
+_:BtheX2BtimeX2Bz <https://w3id.org/tree#value> "z" .
+_:BtheX2BtimeX2Bz <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+time+z.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/the+time.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtherX2Btime .
+_:BtherX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtherX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ther+time.nt> .
+_:BtherX2Btime <https://w3id.org/tree#value> "ther" .
+_:BtherX2Btime <https://w3id.org/tree#value> "time" .
+_:BtherX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ther+time.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BthesX2Btime .
+_:BthesX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BthesX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/thes+time.nt> .
+_:BthesX2Btime <https://w3id.org/tree#value> "thes" .
+_:BthesX2Btime <https://w3id.org/tree#value> "time" .
+_:BthesX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/thes+time.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheyX2Btime .
+_:BtheyX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheyX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/they+time.nt> .
+_:BtheyX2Btime <https://w3id.org/tree#value> "they" .
+_:BtheyX2Btime <https://w3id.org/tree#value> "time" .
+_:BtheyX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/they+time.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimea .
+_:BtheX2Btimea <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimea <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timea.nt> .
+_:BtheX2Btimea <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimea <https://w3id.org/tree#value> "timea" .
+_:BtheX2Btimea <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timea.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimeb .
+_:BtheX2Btimeb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimeb <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timeb.nt> .
+_:BtheX2Btimeb <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimeb <https://w3id.org/tree#value> "timeb" .
+_:BtheX2Btimeb <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timeb.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimed .
+_:BtheX2Btimed <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimed <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timed.nt> .
+_:BtheX2Btimed <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimed <https://w3id.org/tree#value> "timed" .
+_:BtheX2Btimed <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timed.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimeg .
+_:BtheX2Btimeg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimeg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timeg.nt> .
+_:BtheX2Btimeg <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimeg <https://w3id.org/tree#value> "timeg" .
+_:BtheX2Btimeg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timeg.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimei .
+_:BtheX2Btimei <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimei <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timei.nt> .
+_:BtheX2Btimei <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimei <https://w3id.org/tree#value> "timei" .
+_:BtheX2Btimei <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timei.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimel .
+_:BtheX2Btimel <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimel <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timel.nt> .
+_:BtheX2Btimel <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimel <https://w3id.org/tree#value> "timel" .
+_:BtheX2Btimel <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timel.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimem .
+_:BtheX2Btimem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timem.nt> .
+_:BtheX2Btimem <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimem <https://w3id.org/tree#value> "timem" .
+_:BtheX2Btimem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timem.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimep .
+_:BtheX2Btimep <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimep <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timep.nt> .
+_:BtheX2Btimep <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimep <https://w3id.org/tree#value> "timep" .
+_:BtheX2Btimep <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timep.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimes .
+_:BtheX2Btimes <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimes <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+times.nt> .
+_:BtheX2Btimes <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimes <https://w3id.org/tree#value> "times" .
+_:BtheX2Btimes <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+times.nt> <https://w3id.org/tree#remainingItems> "35"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimet .
+_:BtheX2Btimet <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimet <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timet.nt> .
+_:BtheX2Btimet <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimet <https://w3id.org/tree#value> "timet" .
+_:BtheX2Btimet <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timet.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2Btimez .
+_:BtheX2Btimez <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2Btimez <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+timez.nt> .
+_:BtheX2Btimez <https://w3id.org/tree#value> "the" .
+_:BtheX2Btimez <https://w3id.org/tree#value> "timez" .
+_:BtheX2Btimez <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+timez.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BaX2BtheX2Btime .
+_:BaX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+the+time.nt> .
+_:BaX2BtheX2Btime <https://w3id.org/tree#value> "a" .
+_:BaX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BaX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BaX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+the+time.nt> <https://w3id.org/tree#remainingItems> "31"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BbX2BtheX2Btime .
+_:BbX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+the+time.nt> .
+_:BbX2BtheX2Btime <https://w3id.org/tree#value> "b" .
+_:BbX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BbX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BbX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+the+time.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BcX2BtheX2Btime .
+_:BcX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+the+time.nt> .
+_:BcX2BtheX2Btime <https://w3id.org/tree#value> "c" .
+_:BcX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BcX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BcX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+the+time.nt> <https://w3id.org/tree#remainingItems> "95"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BdX2BtheX2Btime .
+_:BdX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+the+time.nt> .
+_:BdX2BtheX2Btime <https://w3id.org/tree#value> "d" .
+_:BdX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BdX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BdX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+the+time.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BeX2BtheX2Btime .
+_:BeX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+the+time.nt> .
+_:BeX2BtheX2Btime <https://w3id.org/tree#value> "e" .
+_:BeX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BeX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BeX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+the+time.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BfX2BtheX2Btime .
+_:BfX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+the+time.nt> .
+_:BfX2BtheX2Btime <https://w3id.org/tree#value> "f" .
+_:BfX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BfX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BfX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+the+time.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BiX2BtheX2Btime .
+_:BiX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+the+time.nt> .
+_:BiX2BtheX2Btime <https://w3id.org/tree#value> "i" .
+_:BiX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BiX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BiX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+the+time.nt> <https://w3id.org/tree#remainingItems> "63"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BlX2BtheX2Btime .
+_:BlX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+the+time.nt> .
+_:BlX2BtheX2Btime <https://w3id.org/tree#value> "l" .
+_:BlX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BlX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BlX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+the+time.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BnX2BtheX2Btime .
+_:BnX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/n+the+time.nt> .
+_:BnX2BtheX2Btime <https://w3id.org/tree#value> "n" .
+_:BnX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BnX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BnX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/n+the+time.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BoX2BtheX2Btime .
+_:BoX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+the+time.nt> .
+_:BoX2BtheX2Btime <https://w3id.org/tree#value> "o" .
+_:BoX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BoX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BoX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+the+time.nt> <https://w3id.org/tree#remainingItems> "37"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BpX2BtheX2Btime .
+_:BpX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BpX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/p+the+time.nt> .
+_:BpX2BtheX2Btime <https://w3id.org/tree#value> "p" .
+_:BpX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BpX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BpX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/p+the+time.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BqX2BtheX2Btime .
+_:BqX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BqX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/q+the+time.nt> .
+_:BqX2BtheX2Btime <https://w3id.org/tree#value> "q" .
+_:BqX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BqX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BqX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/q+the+time.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BrX2BtheX2Btime .
+_:BrX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/r+the+time.nt> .
+_:BrX2BtheX2Btime <https://w3id.org/tree#value> "r" .
+_:BrX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BrX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BrX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/r+the+time.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BsX2BtheX2Btime .
+_:BsX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/s+the+time.nt> .
+_:BsX2BtheX2Btime <https://w3id.org/tree#value> "s" .
+_:BsX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BsX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BsX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/s+the+time.nt> <https://w3id.org/tree#remainingItems> "29"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtX2BtheX2Btime .
+_:BtX2BtheX2Btime <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtX2BtheX2Btime <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/t+the+time.nt> .
+_:BtX2BtheX2Btime <https://w3id.org/tree#value> "t" .
+_:BtX2BtheX2Btime <https://w3id.org/tree#value> "the" .
+_:BtX2BtheX2Btime <https://w3id.org/tree#value> "time" .
+_:BtX2BtheX2Btime <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/t+the+time.nt> <https://w3id.org/tree#remainingItems> "39"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2BtimeX2Bu .
+_:BtheX2BtimeX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2BtimeX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+time+u.nt> .
+_:BtheX2BtimeX2Bu <https://w3id.org/tree#value> "the" .
+_:BtheX2BtimeX2Bu <https://w3id.org/tree#value> "time" .
+_:BtheX2BtimeX2Bu <https://w3id.org/tree#value> "u" .
+_:BtheX2BtimeX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+time+u.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2BtimeX2Bv .
+_:BtheX2BtimeX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2BtimeX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+time+v.nt> .
+_:BtheX2BtimeX2Bv <https://w3id.org/tree#value> "the" .
+_:BtheX2BtimeX2Bv <https://w3id.org/tree#value> "time" .
+_:BtheX2BtimeX2Bv <https://w3id.org/tree#value> "v" .
+_:BtheX2BtimeX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+time+v.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2BtimeX2Bw .
+_:BtheX2BtimeX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2BtimeX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+time+w.nt> .
+_:BtheX2BtimeX2Bw <https://w3id.org/tree#value> "the" .
+_:BtheX2BtimeX2Bw <https://w3id.org/tree#value> "time" .
+_:BtheX2BtimeX2Bw <https://w3id.org/tree#value> "w" .
+_:BtheX2BtimeX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+time+w.nt> <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/the+time.nt> <https://w3id.org/tree#relation> _:BtheX2BtimeX2Bz .
+_:BtheX2BtimeX2Bz <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtheX2BtimeX2Bz <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/the+time+z.nt> .
+_:BtheX2BtimeX2Bz <https://w3id.org/tree#value> "the" .
+_:BtheX2BtimeX2Bz <https://w3id.org/tree#value> "time" .
+_:BtheX2BtimeX2Bz <https://w3id.org/tree#value> "z" .
+_:BtheX2BtimeX2Bz <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/the+time+z.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

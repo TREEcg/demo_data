@@ -1,0 +1,732 @@
+<http://data.ign.fr/def/topo#zMax> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMax> <http://www.w3.org/2000/01/rdf-schema#comment> "Altitude maximale dâ€™un objet linÃ©aire ou surfacique. Cette information est issue de la saisie photogrammÃ©trique et concerne des objets dont les points initiaux et finaux ne sont pas caractÃ©ristiques de lâ€™altitude de lâ€™objet (objets surfaciques, objets linÃ©aires isolÃ©s). Pour des objets surfaciques comme les bÃ¢timents ou les rÃ©servoirs, il sâ€™agit de lâ€™altitude maximum du pourtour tel quâ€™il est dÃ©fini en planimÃ©trie (gÃ©nÃ©ralement lâ€™altitude aux gouttiÃ¨res) et non de lâ€™altitude maximum absolue (voir schÃ©ma ci-dessus). Dans le cas dâ€™un bÃ¢timent obtenu aprÃ¨s intÃ©gration du bÃ¢ti issu du cadastre, Z_MAX correspond Ã  une altitude toit mÃ©diane calculÃ©e, en prenant en compte les altitudes des contours des bÃ¢timents directement contigus sâ€™ils existent. Dans ce cas Z_MAX et Z_MIN prennent la mÃªme valeur. Lâ€™attribut peut prendre une valeur conventionnelle (9999) lorsque la gÃ©omÃ©trie de lâ€™objet nâ€™est pas issue dâ€™une saisie photogrammÃ©trique (ex. objets numÃ©risÃ©s sur la carte en service). "@fr <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMax> <http://www.w3.org/2000/01/rdf-schema#label> "z max"@fr <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMax> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/topo#EntiteTopographique> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMax> <http://www.w3.org/2000/01/rdf-schema#label> "max z"@en <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMax> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/topo> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMin> <http://www.w3.org/2000/01/rdf-schema#label> "z min"@fr <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMin> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/topo#EntiteTopographique> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMin> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMin> <http://www.w3.org/2000/01/rdf-schema#label> "min z"@en <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/topo> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMin> <http://www.w3.org/2000/01/rdf-schema#comment> "Altitude minimale dâ€™un objet linÃ©aire ou surfacique. Cette information est issue de la saisie photogrammÃ©trique et concerne des objets dont les points initiaux et finaux ne sont pas caractÃ©ristiques de lâ€™altitude de lâ€™objet (objets surfaciques, objets linÃ©aires isolÃ©s). Pour des objets surfaciques comme les bÃ¢timents ou les rÃ©servoirs, il sâ€™agit de lâ€™altitude minimum du pourtour tel quâ€™il est dÃ©fini en planimÃ©trie (gÃ©nÃ©ralement lâ€™altitude aux gouttiÃ¨res) et non de lâ€™altitude minimum absolue. Dans le cas dâ€™un bÃ¢timent obtenu aprÃ¨s intÃ©gration du bÃ¢ti issu du cadastre, Z_MIN correspond Ã  une altitude toit mÃ©diane calculÃ©e, en prenant en compte les altitudes des contours des bÃ¢timents directement contigus sâ€™ils existent. Dans ce cas Z_MAX et Z_MIN prennent la mÃªme valeur. Lâ€™attribut peut prendre une valeur conventionnelle (9999) lorsque la gÃ©omÃ©trie de lâ€™objet nâ€™est pas issue dâ€™une saisie photogrammÃ©trique (ex. objets numÃ©risÃ©s sur la carte en service)."@fr <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMoyen> <http://www.w3.org/2000/01/rdf-schema#comment> "Altitude moyenne des points composants la gÃ©omÃ©trie de lâ€™objet telle quâ€™il a Ã©tÃ© saisi Ã  lâ€™origine lorsquâ€™il est issu dâ€™une saisie photogrammÃ©trique. Lâ€™attribut peut prendre une valeur conventionnelle (9999) lorsque la gÃ©omÃ©trie de lâ€™objet nâ€™est pas issue dâ€™une saisie photogrammÃ©trique (ex. objets numÃ©risÃ©s sur la carte en service). "@fr <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMoyen> <http://www.w3.org/2000/01/rdf-schema#label> "average z"@en <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMoyen> <http://www.w3.org/2000/01/rdf-schema#label> "z moyen"@fr <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMoyen> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/topo> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMoyen> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/topo#EntiteTopographique> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMoyen> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/topo#zMoyen> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.ign.fr/def/topo> .
+<http://data.ign.fr/def/geofla#chefLieu> <http://www.w3.org/2000/01/rdf-schema#label> "capital of the administrative subdivision"@en <http://data.ign.fr/def/geofla> .
+<http://data.ign.fr/def/geofla#chefLieu> <http://www.w3.org/2000/01/rdf-schema#comment> "Chef-lieu de l'unité administrative lorsqu'il existe (un canton ne possède pas toujours de chef-lieu. Cela arrive dans le cas de cantons situés à la périphérie d'une ville importante constituant à elle seule un canton non précisé.)"@fr <http://data.ign.fr/def/geofla> .
+<http://data.ign.fr/def/geofla#chefLieu> <http://www.w3.org/2000/01/rdf-schema#label> "chef-lieu de l'unité administrative"@fr <http://data.ign.fr/def/geofla> .
+<http://data.ign.fr/def/geofla#chefLieu> <http://www.w3.org/2000/01/rdf-schema#domain> _:B59f729c9657b5addf938da80c6795f7b <http://data.ign.fr/def/geofla> .
+<http://data.ign.fr/def/geofla#chefLieu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.ign.fr/def/geofla> .
+<http://data.ign.fr/def/geofla#chefLieu> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.ign.fr/def/geofla#Commune> <http://data.ign.fr/def/geofla> .
+<http://data.ign.fr/id/codes/geofla/typedecommune/liste> <http://www.w3.org/2000/01/rdf-schema#comment> "Liste des différents rôles pouvant être joués par une commune dans l'organisation administrative française, représentés comme une liste de concepts SKOS."@fr <http://data.ign.fr/def/geofla> .
+<http://data.ign.fr/id/codes/geofla/typedecommune/liste> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://data.ign.fr/def/geofla> .
+<http://data.ign.fr/id/codes/geofla/typedecommune/liste> <http://www.w3.org/2000/01/rdf-schema#label> "type of commune"@en <http://data.ign.fr/def/geofla> .
+<http://data.ign.fr/id/codes/geofla/typedecommune/liste> <http://www.w3.org/2000/01/rdf-schema#label> "type de commune"@fr <http://data.ign.fr/def/geofla> .
+<http://data.ign.fr/def/ignf#Datum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#Datum> <http://www.w3.org/2000/01/rdf-schema#label> "Référentiel"@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#Datum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#Datum> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/ignf> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#Datum> <http://www.w3.org/2000/01/rdf-schema#label> "Datum"@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#Datum> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter or set of parameters that define the position of the origin, the scale and the orientation of a coordinate system. Cf. ISO 19111:2007:2007-07, part 10.1, table 33 and annex B.3."@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#Datum> <http://www.w3.org/2000/01/rdf-schema#comment> "Paramètre ou ensemble de paramètres définissant la position de l'origine, l'échelle et l'orientation d'un système de coordonnées. Cf. ISO 19111:2007:2007-07, partie 10.1, tableau 33 et annexe B.3."@fr <http://data.ign.fr/def/ignf> .
+<http://dati.camera.it/ocd/destinatario> <http://www.w3.org/2000/01/rdf-schema#label> "componente" <http://dati.camera.it/ocd/> .
+<http://dati.camera.it/ocd/destinatario> <http://www.w3.org/2000/01/rdf-schema#comment> "proprietà che designa l'organo di Governo destinatario"@it <http://dati.camera.it/ocd/> .
+<http://dati.camera.it/ocd/destinatario> <http://www.w3.org/2000/01/rdf-schema#range> <http://dati.camera.it/ocd/organoGoverno> <http://dati.camera.it/ocd/> .
+<http://dati.camera.it/ocd/destinatario> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dati.camera.it/ocd/aic> <http://dati.camera.it/ocd/> .
+<http://dati.camera.it/ocd/destinatario> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dati.camera.it/ocd/> .
+<http://dbpedia.org/ontology/Fiefdom> <http://www.w3.org/2000/01/rdf-schema#comment> "The territory under the authority of a feudal lord"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Fiefdom> <http://www.w3.org/2000/01/rdf-schema#label> "heerlijkheid"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Fiefdom> <http://www.w3.org/2000/01/rdf-schema#label> "fiefdom"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Fiefdom> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Fiefdom> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Fiefdom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/HistoricalAreaOfAuthority> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Fiefdom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Fiefdom> <http://www.w3.org/2000/01/rdf-schema#label> "封建領地"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Fiefdom> <http://www.w3.org/2000/01/rdf-schema#label> "seigneurie"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/approvedByUpperParliament> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/approvedByUpperParliament> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/approvedByUpperParliament> <http://www.w3.org/2000/01/rdf-schema#label> "datum aangenomen door Eerste Kamer, Hogerhuis, Senaat enz."@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/approvedByUpperParliament> <http://www.w3.org/2000/01/rdf-schema#comment> "Date of approval by upper parliament (House of Lords, Sénat, Eerste Kamer etc.)."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/approvedByUpperParliament> <http://www.w3.org/2000/01/rdf-schema#label> "date of approval by upper parliament"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/approvedByUpperParliament> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/approvedByUpperParliament> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Law> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/approvedByUpperParliament> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:approvedByUpperParliament> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/iobdbId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/iobdbId> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:iobdbId> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/iobdbId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/iobdbId> <http://www.w3.org/2000/01/rdf-schema#comment> "Lortel Archives Internet Off-Broadway database \"show id\" from lortel.org."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/iobdbId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/iobdbId> <http://www.w3.org/2000/01/rdf-schema#label> "IOBDB ID"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/iobdbId> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Play> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/elementBlock> <http://www.w3.org/2000/01/rdf-schema#label> "блок периодической таблицы"@ru <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/elementBlock> <http://www.w3.org/2000/01/rdf-schema#label> "element block"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/elementBlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/elementBlock> <http://www.w3.org/2000/01/rdf-schema#label> "Block des Periodensystems"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/elementBlock> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/elementBlock> <http://www.w3.org/2000/01/rdf-schema#comment> "A block of the periodic table of elements is a set of adjacent groups."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/elementBlock> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/elementBlock> <http://www.w3.org/2000/01/rdf-schema#comment> "La taula periòdica dels elements es pot dividir en blocs d'elements segons l'orbital que estiguen ocupant els electrons més externs"@ca <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/elementBlock> <http://www.w3.org/2000/01/rdf-schema#comment> "Als Block im Periodensystem werden chemische Elemente nach den energiereichsten Atomorbitalen ihrer Elektronenhülle zusammengefasst."@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/elementBlock> <http://www.w3.org/2000/01/rdf-schema#comment> "совокупность химических элементов со сходным расположением валентных электронов в атоме."@ru <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/elementBlock> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/ChemicalElement> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/elementBlock> <http://www.w3.org/2000/01/rdf-schema#label> "blok układu okresowego"@pl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/elementBlock> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:elementBlock> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/elementBlock> <http://www.w3.org/2000/01/rdf-schema#label> "bloc de la taula periòdica"@ca <http://dbpedia.org/ontology/> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Lovagl????t"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ferradura"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Sentiero pro cavallos"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/Bridleway/key/highway/value/bridleway> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ruiterpad"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ruiterpad"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ridevei"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Caleya"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ridesti"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????????? ????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????????? ?????? ???????? ??????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Lorong Kuda"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ratsastuspolku"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????? ?????? ??????????"@el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Rruge pa osfallt"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Jahalna pot"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Pista de cabalos"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Izj??des taka"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Daanan ng Kabayo"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Percorso per equitazione"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Cesta pre kone"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????????????????? ?????????"@ka <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ko??sk?? stezka"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Hent evit ar varc'hegerien"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Konji??ka staza"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Konji??ka staza"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "J??chanski pu??"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????? ??????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Droga dla koni"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Riedpadd"@nds <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Chemin pour cavaliers"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ratsatee"@et <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ???????? ??????????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ridstig"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Pista para cavalos"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "At y??r??y???? yolu"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "??irg?? kelias"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Bridleway"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????ng C?????i ng???a"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????????? ?????? ??????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/HighwayThing> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Reitweg"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Rejtarska dro??ka"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????????? ??????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Bridleway> <http://www.w3.org/2000/01/rdf-schema#label> "Camino prioritario para peatones y caballos"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Goorn"@nds <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Ogr??d"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Tr??dg??rd"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Jard??n"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Vrt"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Vrt"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Hage"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "D??rzs"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Zardin"@fur <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Sodas"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Liorzh"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "????"@ps <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Kert"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Puutarha"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "????????????"@ka <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Have"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "V?????n"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@fa <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Garden"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????"@rue <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Gaart"@lb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Jardin"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Jardin"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Zagroda"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Xard??n"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Xard??n"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Kebun"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Garten"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Zahrada"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Ba??ta"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Tuin"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Tuin"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/Garden/key/leisure/value/garden> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Z??hrada"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Giardino"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Lorategi"@eu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Leisure> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Kopsht"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "?????????"@te <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Zahroda"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Bah??e"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Halamanan"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Jard??"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Aed"@et <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Jardim"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Garden> <http://www.w3.org/2000/01/rdf-schema#label> "Jardim"@pt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Rrug?? e kambsorve"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Gwenodenn evit an droadeien"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Chodnik"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Lorong Pejalan Kaki"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????????? ??????????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Gyalog??t"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Polku"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Footpath"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Sentiero pro pedones"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????"@el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????? ??????????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/Footway/key/highway/value/footway> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Pu??ik"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Percorso pedonale"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Footpadd"@nds <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Pe??a??ka staza"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Chemin pi??ton"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Makitid na Lakaran ng Tao"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Fousswee"@lb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Ch??dnik"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Gangsti"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Gangsti"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Carreiro"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Yaya yolu"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????????????"@ka <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "G??ngv??g"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Voetpad"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Voetpad"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "P??s??i??j?? takelis"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Sendero"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/HighwayThing> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Taka"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Jalgrada"@et <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Sienda"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Chodn??k"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Chodn??k"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Oinezkoen bide"@eu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Fu??weg"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Sendera"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ???????????? ??????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Pje??a??ka staza"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "???????ng b???"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????? ????"@fa <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "?????? ????????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "?????? ????????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Caminho"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????? ??????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Footway> <http://www.w3.org/2000/01/rdf-schema#label> "Pe??pot"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Loradenda"@eu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Florist"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Blomsterhandler"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Bl??mab????in"@is <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????? ??????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Florista"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Florista"@pt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Florista"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/FloristShop/key/shop/value/florist> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Bloemist"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Blomenladen"@nds <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Bokedour"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Fleuriste"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Blumenladen"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????????"@el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Shop> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Vir??g??rus"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Bloemiste"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Fleurist"@lb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "??i??ek??i"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ??????????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Blomsterbutikk"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Kv??tin????stv??"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Kvetin??rstvo"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Blommor"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Cve??ara"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Kedai Bunga"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Lillepood"@et <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Luleshit??s"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Nagtitinda ng Bulaklak"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Kw??tkarnja"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Kw??tkarnja"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Florister??a"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Florister??a"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Florists"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Fioraio"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Cvetli??arna"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Floristeria"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "G??lininkas"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Ti???m Hoa"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Kwiaciarnia"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Florar??a"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Kukkakauppa"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "Cvje??arnica"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FloristShop> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????? ??????????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Biciklisti??ka staza"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Biciklisti??ka staza"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Py??r??tie"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Pista cyclabile"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????????? ??????????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Cyklistick?? chodn??k"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ciclovia"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Jalgrattatee"@et <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Piste cyclable"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Bisiklet Yolu"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ??????????????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Carril bici"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/HighwayThing> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "????????????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "S??a??ka za k??lasowarjow"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Veloceli????"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Kolesowarska ????e??ka"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Cycle Path"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Cyklostezka"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Percorso ciclabile"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????????????? ????????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Fietspad"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Cykelsp??r"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Ker??kp??r??t"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????????????????????? ?????????"@ka <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Lorong Basikal"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "???????ng Xe ?????p"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Dvira??i?? takas"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Daanan ng Bisikleta"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Pista de bicicletas"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "??cie??ka rowerowa"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Kolesarska steza"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????????????? ??????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/Cycleway/key/highway/value/cycleway> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Cykelsti"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Sykkelsti"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Radweg"@nds <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "Radweg"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Cycleway> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????????????"@ru <http://linkedgeodata.org/ontology> .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2000/01/rdf-schema#label> "Has related instance"@en <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <http://lod.xdams.org/reload/oad/has_relatedUnitsOfDescription> <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2000/01/rdf-schema#label> "Ha scheda descrittiva collegata"@it <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://culturalis.org/oad#Instance> <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.xdams.org/reload/oad/isadOntology/isad_3.5.3_related_units_of_description> <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links two or more instances related"@en <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2000/01/rdf-schema#range> <http://culturalis.org/oad#Instance> <http://culturalis.org/oad#> .
+<http://culturalis.org/oad#hasRelatedInstance> <http://www.w3.org/2000/01/rdf-schema#comment> "La proprietà collega tra loro due o più istanze archivistiche"@it <http://culturalis.org/oad#> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a tag whenever it is used to point to a specific part of a Web representation (the segment of a video,\n  a user-generated commentary to a newspaper article, etc.)."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag wanneer deze gebruikt wordt om naar een specifiek deel van een web-representatie te verwijzen (een segment van een video, een door een gebruiker gegenereerd commentaar bij een krantenartikel, etc.)."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che si compie con una tag quando questa è usata per fare riferimento a una parte specifica della rappresentazione di una risorsa Web (il segmento di un video, il commento generato dagli utenti a un articolo di un quotidiano, ecc.)."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza con una etiqueta cuando es usada para referirse a una parte específica de un recurso Web (el segmento de un video, comentarios generados por los usuarios a un artículo de periódico)."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Pointer"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Puntar"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Point"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Aanwijzen"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag dès lors que celui-ci est utilisé pour faire référence à une portion spécifique de la représentation \n d'une ressource sur le Web (le segment d'une vidéo, un commentaire produit par les utilisateurs au pied d'un article, etc.)."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Point> <http://www.w3.org/2000/01/rdf-schema#label> "Puntare"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza con una etiqueta de tipo \"quehacer\" cuando es usada para crear una tarea en espera de realización."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a \"todo\" tag whenever it is used to create a task awaiting performance."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag van het type “te doen” wanneer deze gebruikt wordt om een taak te maken in afwachting van haar realisatie."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#label> "Définir une tâche"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#VisitorTagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#label> "Definire un compito"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che si compie con una tag di tipo \"dafare\", quando questa è usata per creare un compito in attesa di realizzazione."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#label> "Taak definiëren"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#label> "Set task"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag de type \"àfaire\" dès lors que celui-ci est utilisé pour définir une tâche attendant sa réalisation."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#SetTask> <http://www.w3.org/2000/01/rdf-schema#label> "Definir una tarea"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag wanneer deze gebruikt wordt om een gevoel, emotie, etc. uit te drukken."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Gevoelens uitdrukken"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza con una etiqueta cuando es usada para expresar un sentimiento, una emoción, etc."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Express feelings"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che si compie con una tag quando questa è usata per esprimere un sentimento, un'emozione, ecc."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Esprimere un sentimento"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag dès lors que celui-ci est utilisé pour exprimer un sentiment, une émotion, etc."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a tag whenever it is used to express a feeling, an emotion, etc."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Expresar un sentimiento"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#ExpressFeelings> <http://www.w3.org/2000/01/rdf-schema#label> "Exprimer un ressenti"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza con una etiqueta cuando es usada para expresar aprobación o desaprobación o, mas en general, una evaluación."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che si compie con una tag quando questa è usata per esprimere approvazione o disapprovazione, o, più in generale, una valutazione."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#label> "Valutare"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#label> "Beoordelen"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluar"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a tag whenever it is used to give a notation, a mark of approval and disapproval, or,\n  more generally speaking, an evaluation."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag wanneer deze gebruikt wordt om een klassering, een teken van goedkeuring of afkeuring, of meer algemeen een beoordeling te geven."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluate"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag dès lors que celui-ci est utilisé pour donner une note, marquer son approbation ou sa désapprobation ou, plus généralement, produirez une évaluation."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Evaluate> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluer"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Ask> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag dès lors que celui-ci est utilisé pour poser une question."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Ask> <http://www.w3.org/2000/01/rdf-schema#label> "Vraag stellen"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Ask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Ask> <http://www.w3.org/2000/01/rdf-schema#label> "Porre una domanda"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Ask> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che viene compiuta con una tag quando questa viene usata per porre una domanda."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Ask> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die met de tag verricht wordt als het stellen van een vraag."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Ask> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a tag by asking a question."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Ask> <http://www.w3.org/2000/01/rdf-schema#label> "Poser une question"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Ask> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Ask> <http://www.w3.org/2000/01/rdf-schema#label> "Ask"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Ask> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza con una etiqueta cuando se usa para hacer una pregunta."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Ask> <http://www.w3.org/2000/01/rdf-schema#label> "Preguntar"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#DisambiguatedTagAction> <http://www.w3.org/2000/01/rdf-schema#label> "Disambiguate Tag Action"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#DisambiguatedTagAction> <http://www.w3.org/2000/01/rdf-schema#label> "Acte de taguer avec désambigüisation"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#DisambiguatedTagAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#DisambiguatedTagAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Usato quando il segno usato per taggare è disambiguato."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#DisambiguatedTagAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Utilisé lorsque le signe utilisé pour taguer est désambiguïsé."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#DisambiguatedTagAction> <http://www.w3.org/2000/01/rdf-schema#label> "Taghandeling met gedisambigueerd teken"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#DisambiguatedTagAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#DisambiguatedTagAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Used when the sign used to tag is disambiguated."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#DisambiguatedTagAction> <http://www.w3.org/2000/01/rdf-schema#label> "Acción de etiquetado con desambiguación"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#DisambiguatedTagAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Wordt gebruikt wanneer het teken waarmee getagd wordt gedesambigueerd is."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#DisambiguatedTagAction> <http://www.w3.org/2000/01/rdf-schema#comment> "Usado quando el signo usado para etiquetar es desambiguado."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#DisambiguatedTagAction> <http://www.w3.org/2000/01/rdf-schema#label> "Azione di tagging con disambiguazione"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che si compie con una tag quando questa è usata per definire a chi sono accordati o negati i diritti di accesso a una risorsa."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#label> "Accorder des droits d'accès à"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a tag whenever it is used to define to whom access rights to a resource are granted or denied."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag wanneer deze gebruikt wordt om vast te stellen aaan wie toegangsrechten tot een bron worden toegekend of ontzegd."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#label> "Accordare diritti di accesso a"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#label> "Acordar derechos de acceso a"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag dès lors que celui-ci est utilisé pour définir les personnes auxquelles sont octroyés des droits d'accès à des ressource en ligne (permission ou refus)."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza con una etiqueta cuando es usada para definir a quien son concedidos o negados derechos de acceso a un recurso.."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#label> "Toegangsrechten verlenen aan"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#GiveAccessRights> <http://www.w3.org/2000/01/rdf-schema#label> "Give access rights to"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a tag whenever it is used to assert anything about a resource."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag dès lors que celui-ci est utilisé pour affirmer quoi que ce soit à propos d'une ressource."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che viene svolta con una tag quando questa è utilizzata per affermare qualcosa a proposito di una risorsa."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag wanneer deze gebruikt wordt om iets over een bron te bevestigen."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción realizada con una tag quando esta es usada para afirmar algo sobre un recurso."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#label> "Asserter"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#label> "Asserire"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#label> "Bevestigen"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#label> "Afirmar"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Assert> <http://www.w3.org/2000/01/rdf-schema#label> "Assert"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#PartOfWebRepresentation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontologydesignpatterns.org/ont/web/irw.owl#WebRepresentation> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#PartOfWebRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Usato per rappresentare la parte della rappresentazione di una risorsa Web quando si è fatto uso dell'atto di tagging \"Point\"."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#PartOfWebRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "Part Of Web representation"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#PartOfWebRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "Parte de la representación de un recurso en la Web"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#PartOfWebRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to represent the part of the Web representation resource being tagged after the \"Point\" TagAction is used."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#PartOfWebRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Wordt gebruikt om het getagde deel van een web-representatie aan te geven wanneer gebruikt is gemaakt van de \"Aanwijs\" taghandeling."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#PartOfWebRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "Parte della rappresentazione di una risorsa Web"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#PartOfWebRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "Onderdeel van de representatie van een bron op het web"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#PartOfWebRepresentation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#PartOfWebRepresentation> <http://www.w3.org/2000/01/rdf-schema#label> "Partie de la représentation d'une ressource sur le Web"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#PartOfWebRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Utilisé pour représenter la partie de la représentation d'une ressource qui est taguée lorsque qu'il est fait usage de l'acte de taguer \"Pointer\"."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#PartOfWebRepresentation> <http://www.w3.org/2000/01/rdf-schema#comment> "Usado para representar la parte de la representación de un recurso Web quando se ha hecho uso del acto de etiquetado \"Point\"."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Aggregate> <http://www.w3.org/2000/01/rdf-schema#label> "Agregar"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Aggregate> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregare"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Aggregate> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt wanneer bronnen worden bijeenverzameld onder een gezamenlijk gedefinieerde tag."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Aggregate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Aggregate> <http://www.w3.org/2000/01/rdf-schema#label> "Agréger"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Aggregate> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed whenever resources are aggregated with a collectively defined tag."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Aggregate> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit lorsque des ressources sont aggrégées autour d'un tag défini de manière collective."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Aggregate> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregate"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Aggregate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Aggregate> <http://www.w3.org/2000/01/rdf-schema#label> "Verzamelen"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Aggregate> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che viene compiuta quando delle risorse sono aggregate attorno a una tag definita collettivamente."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Aggregate> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza cuando se agregan unos recursos alrededor de una etiqueta definita colectivamente."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#label> "Partager"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#comment> "Beschrijft de handeling die verricht wordt met een tag wanneer deze gebruikt wordt om de representatie van een bron op het web te delen met een gebruiker van een dienst als Twitter of Delicious. (sioc:UserAccount, wat niet per se een foaf:Person is aangezien het ook om een bot kan gaan of een instelling die met het verlopen van de tijd door verschillende personen vertegenwoordigd kan worden)."@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#label> "Delen"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes the action that is performed with a tag whenever it is used to share the representation of a WebResource on various services - Twitter or Delicious for instance - with the owner of a sioc:UserAccount (not necessarily a foaf:Person as it might be either a bot, a person or an institution whose representatives may well vary over time)."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#comment> "Descrive l'azione che si compie con una tag quando questa è usata per condividere la rappresentazizone di una risorsa su uno specifico servizio Web, per esempio Delicious o Twitter, con il titolare di un account su tale servizio (sioc:UserAccount, che non è necessariamente una foaf:Person, ma può trattarsi anche di un robot, o di una istituzione i cui rappresentanti possono variare nel tempo)."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#label> "Compartir"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#comment> "Décrit l'action que l'on accomplit avec un tag dès lors que celui-ci est utilisé pour partager une représentation d'une ressource sur le Web, notamment sur Delicious ou Twitter. Ce partage ne se fait pas nécessairement avec une autre personne mais plutôt avec le  titulaire d'un compte sur l'un ou l'autre de ces services (sioc:UserAccount, qui n'est pas nécessairement une foaf:Person étant donné qu'il peut s'agir aussi bien d'un robot, d'une personne ou encore d'une institution dont les représentants sont potentiellement amenés à varier au fil du temps)."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#label> "Share"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#label> "Condividere"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#TagAction> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#Share> <http://www.w3.org/2000/01/rdf-schema#comment> "Describe la acción que se realiza con una etiqueta cuando es usada para compartir la representación de un recurso  en un servicio Web, por ejemplo Delicious o Twitter, con el titular de una cuenta en este servicio (sioc:UserAccount, que no es necesariamente una foaf:Person, porqué puede ser también un robot o una institución cuyos representantes pueden variar en el tiempo."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://www.w3.org/ns/org#organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates Organization in which the Agent is a member."@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#organization> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Organization> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#organization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/org#Membership> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#organization> <http://www.w3.org/2000/01/rdf-schema#label> "organization"@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique l'Organization dont l'agent est membre."@fr <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#organization> <http://www.w3.org/2000/01/rdf-schema#label> "organisation"@fr <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/org#organization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/vso/ns#Truck> <http://www.w3.org/2000/01/rdf-schema#comment> "A lorry (British English) or truck (American English) is a motor vehicle designed to transport cargo."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#Truck> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vso/ns#MotorizedRoadVehicle> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#Truck> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vso/ns> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#Truck> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/Truck> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#Truck> <http://www.w3.org/2000/01/rdf-schema#label> "Truck (gr:ProductOrService)"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#Truck> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/Truck> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#Truck> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/vso/ns> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Escocia)"@es <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Skotlanti)"@fi <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://rdfs.org/ns/void#inDataset> <http://rdf.muninn-project.org/ontologies/military#datasetdefinition> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Écosse)"@fr <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Escócia)"@pt <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://rdf.muninn-project.org/ontologies/military#rankOf> <http://dbpedia.org/resource/Scotland> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Schotland)"@nl <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://xmlns.com/foaf/0.1/name> "Lord High Admiral of the Wash"@en <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Scozia)"@it <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Schottland)"@de <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2004/02/skos/core#definition> "The specific instance of the Lord High Admiral of the Wash rank in the context of country Scotland."@en <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Szkocja)"@pl <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Scotland)"@en <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Skottland)"@no <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Skottland)"@sv <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Ð¨Ð¾ÑÐ»Ð°Ð½Ð´Ð¸Ñ)"@ru <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2002/07/owl#subClass> <http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf.muninn-project.org/ontologies/military> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Scotland> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdf.muninn-project.org/ontologies/military#MilitaryRank> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_England> <http://xmlns.com/foaf/0.1/name> "Lord High Admiral of the Wash"@en <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_England> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (England)"@en <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_England> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdf.muninn-project.org/ontologies/military#MilitaryRank> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_England> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf.muninn-project.org/ontologies/military> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_England> <http://rdf.muninn-project.org/ontologies/military#rankOf> <http://dbpedia.org/resource/England> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_England> <http://www.w3.org/2004/02/skos/core#definition> "The specific instance of the Lord High Admiral of the Wash rank in the context of England."@en <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_England> <http://www.w3.org/2002/07/owl#subClass> <http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_England> <http://rdfs.org/ns/void#inDataset> <http://rdf.muninn-project.org/ontologies/military#datasetdefinition> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_England> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash> <http://www.w3.org/2002/07/owl#sameAs> <http://dbpedia.org/resource/Lord_High_Admiral_of_the_Wash> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash> <http://xmlns.com/foaf/0.1/name> "Lord High Admiral of the Wash" <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf.muninn-project.org/ontologies/military> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdf.muninn-project.org/ontologies/military#MilitaryRank> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash> <http://rdfs.org/ns/void#inDataset> <http://rdf.muninn-project.org/ontologies/military#datasetdefinition> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash"@en <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash> <http://www.w3.org/2004/02/skos/core#definition> "The position of Lord High Admiral of the Wash is an ancient hereditary naval office of England. In mediaeval times, the Lord High Admiral of the Wash was a nobleman with responsibility for the defence and protection of The Wash coast in north East Anglia. The post was granted to the le Strange family after the Norman Conquest. In the 16th century the post became obsolete and the Royal Navy took over the defence of the area."@en <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2002/07/owl#subClass> <http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (País de Gales)"@pt <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2004/02/skos/core#definition> "The specific instance of the Lord High Admiral of the Wash rank in the context of country Wales."@en <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf.muninn-project.org/ontologies/military> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://rdf.muninn-project.org/ontologies/military#MilitaryRank> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://rdf.muninn-project.org/ontologies/military#rankOf> <http://dbpedia.org/resource/Wales> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Ð£ÑÐ»ÑÑ)"@ru <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Galles)"@it <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Wales)"@no <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Wales)"@nl <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Wales)"@de <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Wales)"@fi <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Wales)"@sv <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Wales)"@en <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://xmlns.com/foaf/0.1/name> "Lord High Admiral of the Wash"@en <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Pays de Galles)"@fr <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Walia)"@pl <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://rdfs.org/ns/void#inDataset> <http://rdf.muninn-project.org/ontologies/military#datasetdefinition> <http://rdf.muninn-project.org/ontologies/military> .
+<http://rdf.muninn-project.org/ontologies/military#Rank_Lord_High_Admiral_of_the_Wash_Wales> <http://www.w3.org/2000/01/rdf-schema#label> "Lord High Admiral of the Wash (Gales)"@es <http://rdf.muninn-project.org/ontologies/military> .
+<http://reference.data.gov.uk/def/parliament/Chamber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://reference.data.gov.uk/def/parliament> .
+<http://reference.data.gov.uk/def/parliament/Chamber> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#FormalOrganization> <http://reference.data.gov.uk/def/parliament> .
+<http://reference.data.gov.uk/def/parliament/Chamber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://reference.data.gov.uk/def/parliament> <http://reference.data.gov.uk/def/parliament> .
+<http://reference.data.gov.uk/def/parliament/Chamber> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the chambers with instances like The House of Commons and The House of Lords." <http://reference.data.gov.uk/def/parliament> .
+<http://reference.data.gov.uk/def/parliament/Chamber> <http://www.w3.org/2000/01/rdf-schema#label> "Chamber"@en <http://reference.data.gov.uk/def/parliament> .
+<http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.cidoc-crm.org/cidoc-crm/P7i_witnessed> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of> <http://www.w3.org/2000/01/rdf-schema#label> "ήταν αφετηρία του/της"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E53_Place> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of> <http://www.w3.org/2000/01/rdf-schema#label> "a été l'origine de"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of> <http://www.w3.org/2000/01/rdf-schema#label> "was origin of"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of> <http://www.w3.org/2000/01/rdf-schema#label> "era origem de"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of> <http://www.w3.org/2000/01/rdf-schema#label> "war Ausgangsort von"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P27i_was_origin_of> <http://www.w3.org/2000/01/rdf-schema#label> "был исходной точкой для"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <https://w3id.org/vocab/olca#domainIncludes> <http://linkedevents.org/ontology/Event> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/vocab/lingvoj#Lingvo> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "Une langue parlée dans un lieu ou lors d'un événement"@fr <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <https://w3id.org/vocab/olca#domainIncludes> <http://xmlns.com/foaf/0.1/Project> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "ある場所やイベントで話される言語"@ja <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "idioma falado"@pt <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <https://w3id.org/vocab/olca#domainIncludes> <http://xmlns.com/foaf/0.1/Organization> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <https://w3id.org/vocab/olca#domainIncludes> <http://schema.org/Place> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "Een taal gesproken op een bepaalde plek of tijdens een evenement"@nl <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "A language which is spoken in some place or event"@en <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "Una lengua que se habla en algún lugar o evento"@es <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "gesproken taal"@nl <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "話し言葉"@ja <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "langue parlée"@fr <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "lengua hablada"@es <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "O idioma que é falado num determinado lugar ou evento"@pt <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#spokenLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "spoken language"@en <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "idioma de trabalho"@pt <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <https://w3id.org/vocab/olca#domainIncludes> <http://xmlns.com/foaf/0.1/Project> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <https://w3id.org/vocab/olca#domainIncludes> <http://xmlns.com/foaf/0.1/Organization> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "De taal gebruikt voor interne communicatie door een organisatie of binnen een project"@nl <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://purl.org/dc/terms/replaces> <https://w3id.org/vocab/lingvoj#hasWorkingLanguage> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "Une langue utilisée par l'organisation ou le projet pour sa communication interne"@fr <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "プロジェクトや組織が内部コミュニケーションに用いる言語"@ja <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "実用言語"@ja <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "O idioma que o projecto ou organização usa para a comunicação interna"@pt <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/vocab/lingvoj#Lingvo> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "working language"@en <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "A language the project or organization uses for internal communication"@en <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "lenguaje de trabajo"@es <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "Una lengua que el proyecto o la organización utiliza para comunicación interna"@es <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "werktaal"@nl <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj#workingLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "langue de travail"@fr <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2004/02/skos/core#historyNote> "v2.33 : Corrected minor typos, and added portuguese translations, provided by Mariana Curado Malta" <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2000/01/rdf-schema#label> "The Lingvoj Ontology"@en <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/language> <http://lexvo.org/id/iso639-3/spa> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/title> "Ontologie des langues"@fr <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2000/01/rdf-schema#comment> "A vocabulary for describing the use of languages by people and organizations, their geographical scope and status as well as their usage in documents or during events"@en <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/modified> "2020-05-31" <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/title> "The Lingvoj Ontology"@en <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/language> <http://lexvo.org/id/iso639-3/nld> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologie des langues"@fr <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://lingvoj.linkedvocabs.org/> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/vocab/vann/preferredNamespacePrefix> "lingvo" <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/language> <http://lexvo.org/id/iso639-3/jap> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2004/02/skos/core#historyNote> "v2.21 : Added dutch translations plus 'interpreter' property suggested by Ronald Poell, along with minor corrections" <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/language> <http://lexvo.org/id/iso639-3/fra> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2000/01/rdf-schema#comment> "Un vocabulaire pour décrire l'utilisation des langues par les personnes et les organisations, leur répartition géographique et leur statut, ainsi que leur usage dans les documents ou lors des événements"@fr <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2002/07/owl#versionInfo> "v3.0" <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2004/02/skos/core#historyNote> "v2.3 : Added :LanguageResource class, subclasses and properties. Added properties :tag :officialIn :fromCountry" <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/language> <http://www.lexvo.org/id/iso639-3/por> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/vocab/lingvoj_v2.33.ttl> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/vocab/lingvoj_v3.0.ttl> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2004/02/skos/core#historyNote> "v3.0 : Added new content negotiation to w3id since the previous website is off" <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/creator> <http://google.com/+BernardVatant> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2000/01/rdf-schema#comment> "Een vokabular voor de beschrijving en het gebruik van talen door personen en organisaties, de geografische extensie en status en het gebruik ervan in documenten en tijdens evenmenten"@nl <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2000/01/rdf-schema#label> "言語オントロジー"@ja <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia de idiomas"@pt <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/title> "言語オントロジー"@ja <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2004/02/skos/core#historyNote> "v2.32 : Added japanese translations, provided by Shuji Kamitsuna" <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/language> <http://lexvo.org/id/iso639-3/eng> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2004/02/skos/core#historyNote> "v2.31 : Added more translations, language metadata, fixed typos plus cosmetic changes in the .ttl file" <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/issued> "2007-09-17" <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/title> "Ontología de lenguajes"@es <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/title> "A Ontologia dos idiomas"@pt <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2002/07/owl#incompatibleWith> <https://w3id.org/vocab/lingvoj_v1.3.rdf> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2000/01/rdf-schema#comment> "人や組織による言語の使用、ドキュメント内やイベント期間中におけるその使用に加え、その地理的範囲と状況を記述するための語彙"@ja <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2000/01/rdf-schema#label> "Ontología de lenguajes"@es <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2004/02/skos/core#historyNote> "v2.1 : Relaxed domain constraints on several properties, replaced by Ontology Loose Coupling Annotations" <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2000/01/rdf-schema#comment> "Um vocabulário para descrever a utilização de idiomas por parte de pessoas ou organizações, o seu âmbito geográfico e seu estatuto, assim como a sua utilização em documentos ou durante eventos"@pt <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2004/02/skos/core#historyNote> "v2.2 : Added spanish translations, provided by María Poveda Villalón" <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/contributor> _:Be2f51aebd5303a17be27f1a5549aeaac <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/contributor> <https://w3id.org/people/gatemezing> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/contributor> <https://plus.google.com/113072078430654119300> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/contributor> <http://google.com/+MaríaPovedaVillalón> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/title> "Taal Ontologie"@nl <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/vocab/lingvoj#" <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/contributor> <http://google.com/+RonaldPoell> <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://purl.org/dc/terms/modified> "2014-08-11" <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2000/01/rdf-schema#label> "Taal Ontologie"@nl <https://w3id.org/vocab/lingvoj> .
+<https://w3id.org/vocab/lingvoj> <http://www.w3.org/2000/01/rdf-schema#comment> "Un vocabulario para describir la utilización de lenguas por parte de personas y organizaciones, su ambito geográfico y su estatus, así como su utilización en documentos o durante eventos"@es <https://w3id.org/vocab/lingvoj> .
+<http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#isOriginalOf> <http://www.w3.org/2000/01/rdf-schema#label> "è l'originale di"@it <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#isOriginalOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#isCopyOf> <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#isOriginalOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationRealization> <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#isOriginalOf> <http://www.w3.org/2000/01/rdf-schema#label> "is original of"@en <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#isOriginalOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#InformationRealization> <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#isOriginalOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#associatedWith> <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl#isOriginalOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.ontologydesignpatterns.org/ont/dul/IOLite.owl> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Une organisation telle que le support informatique d'une université, qui fait partie d'une Organisation Formelle plus importante et qui ne peut être reconnue qu'en tant que membre de cette organisation supérieure, ce n'est pas une entité légale en elle-même. Les unités opérationnelles peuvent être étendues, complexes et inclure elles-mêmes d'autres branches ou Unités Opérationnelles, voire des Organisations Formelles."@fr <http://www.w3.org/ns/org#> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Organization> <http://www.w3.org/ns/org#> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Organización que forma parte de una organización formal más amplia, como el servicio de informática o centro de cálculo de una universidad, y que sólo tiene reconocimiento pleno en el contexto de dicha organización formal, pero que no es una entidad legal propiamente dicha. Estas unidades pueden ser amplias y complejas, e incluir a otras unidades o incluso a otras organizaciones formales. Denominaciones alternativas: departamento."@es <http://www.w3.org/ns/org#> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/org#> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/org#> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "An Organization such as a University Support Unit which is part of some larger FormalOrganization and only has full recognition within the context of that FormalOrganization, it is not a Legal Entity in its own right. Units can be large and complex containing other Units and even FormalOrganizations. Alternative names: _OU_ _Unit_ _Department_"@en <http://www.w3.org/ns/org#> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "あるより大きな組織の一部であり、その組織の中においてのみ完全に認識される部局や支援部署などの組織です。特に、その単位はそれ自体では法的実体と見なされません。"@ja <http://www.w3.org/ns/org#> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Un'organizzazione come ad esempio l'unità dei sistemi informativi che è parte di una più grande FormalOrganization e che, pur essendo riconosciuta nel contesto della propria organizzazione di riferimento, non è legalmente riconosciuta come entità a sé stante. Le unità possono essere ampie e complesse e contenere al loro interno sia altre unità che addirittura FormalOrganization."@it <http://www.w3.org/ns/org#> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Unità Organizzativa"@it <http://www.w3.org/ns/org#> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Unité opérationnelle"@fr <http://www.w3.org/ns/org#> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#label> "unidad organizativa"@es <http://www.w3.org/ns/org#> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#label> "OrganizationalUnit"@en <http://www.w3.org/ns/org#> .
+<http://www.w3.org/ns/org#OrganizationalUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/org> <http://www.w3.org/ns/org#> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/lor.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/lor.nt> <https://w3id.org/tree#relation> _:Blora .
+_:Blora <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Blora <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/lora.nt> .
+_:Blora <https://w3id.org/tree#value> "lora" .
+_:Blora <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/lora.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/lor.nt> <https://w3id.org/tree#relation> _:Blord .
+_:Blord <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Blord <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/lord.nt> .
+_:Blord <https://w3id.org/tree#value> "lord" .
+_:Blord <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/lord.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/lor.nt> <https://w3id.org/tree#relation> _:Blore .
+_:Blore <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Blore <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/lore.nt> .
+_:Blore <https://w3id.org/tree#value> "lore" .
+_:Blore <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/lore.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/lor.nt> <https://w3id.org/tree#relation> _:Blorg .
+_:Blorg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Blorg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/lorg.nt> .
+_:Blorg <https://w3id.org/tree#value> "lorg" .
+_:Blorg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/lorg.nt> <https://w3id.org/tree#remainingItems> "34"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/lor.nt> <https://w3id.org/tree#relation> _:Blori .
+_:Blori <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Blori <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/lori.nt> .
+_:Blori <https://w3id.org/tree#value> "lori" .
+_:Blori <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/lori.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/lor.nt> <https://w3id.org/tree#relation> _:Bloro .
+_:Bloro <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bloro <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/loro.nt> .
+_:Bloro <https://w3id.org/tree#value> "loro" .
+_:Bloro <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/loro.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/lor.nt> <https://w3id.org/tree#relation> _:Blorr .
+_:Blorr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Blorr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/lorr.nt> .
+_:Blorr <https://w3id.org/tree#value> "lorr" .
+_:Blorr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/lorr.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/lor.nt> <https://w3id.org/tree#relation> _:Blors .
+_:Blors <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Blors <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/lors.nt> .
+_:Blors <https://w3id.org/tree#value> "lors" .
+_:Blors <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/lors.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/lor.nt> <https://w3id.org/tree#relation> _:BaX2Blor .
+_:BaX2Blor <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Blor <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+lor.nt> .
+_:BaX2Blor <https://w3id.org/tree#value> "a" .
+_:BaX2Blor <https://w3id.org/tree#value> "lor" .
+_:BaX2Blor <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+lor.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .

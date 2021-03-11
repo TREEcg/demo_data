@@ -1,0 +1,100 @@
+<http://purl.org/net/wf-motifs#Motif> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#Motif> <http://www.w3.org/2000/01/rdf-schema#label> "Motif"@en <http://purl.org/net/wf-motifs> .
+<http://purl.org/net/wf-motifs#Motif> <http://www.w3.org/2000/01/rdf-schema#comment> "A motif is a domain independent conceptual abstraction of one or more steps of a given workflow."@en <http://purl.org/net/wf-motifs> .
+<http://purl.org/pav/retrievedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity responsible for retrieving the data from an external source.\n\nThe retrieving agent is usually a software entity, which has done the retrieval from the original source without performing any transcription.\n\nThe source that was retrieved should be given with pav:retrievedFrom. The time of the retrieval should be indicated using pav:retrievedOn.\n\nSee pav:importedFrom for a discussion of import vs. retrieve vs. derived."@en <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Retrieved by"@en <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/retrievedBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/importedFrom> <http://purl.org/pav/> .
+<http://purl.org/pav/importedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/importedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/importedBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/importedFrom> <http://purl.org/pav/> .
+<http://purl.org/pav/importedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Imported by"@en <http://purl.org/pav/> .
+<http://purl.org/pav/importedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/pav/> .
+<http://purl.org/pav/importedBy> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/importedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/importedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity responsible for importing the data.\n\nThe importer is usually a software entity which has done the transcription from the original source.\n\nNote that pav:importedBy may overlap with pav:createdWith.\n\nThe source for the import should be given with pav:importedFrom. The time of the import should be given with pav:importedOn.\n\nSee pav:importedFrom for a discussion of import vs. retrieve vs. derived."@en <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/importedOn> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The date this resource was imported from a source (pav:importedFrom).\n\nNote that pav:importedOn may overlap with pav:createdOn, but in cases where they differ, the import time indicates the time of the retrieval and transcription of the original source, while the creation time indicates when the final resource was made, for instance after user approval.\n\nThis property is normally used in a functional way, indicating the first import date, although PAV does not formally restrict this. If the resource is later reimported, this should instead be indicated with pav:lastRefreshedOn.\n\nThe source of the import should be given with pav:importedFrom. The agent that performed the import should be given with pav:importedBy.\n\nSee pav:importedFrom for a discussion about import vs. retrieval.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/importedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#label> "Imported on"@en <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/importedFrom> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/spar/deo/Results> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Results> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/orb/1.0/Results> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Results> <http://www.w3.org/2000/01/rdf-schema#comment> "The report of the specific findings of an investigation, given without discussion or conclusion being drawn."@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Results> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/DiscourseElement> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Results> <http://www.w3.org/2000/01/rdf-schema#label> "results"@en <http://purl.org/spar/deo> .
+<http://purl.org/theatre#production_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/theatre#> .
+<http://purl.org/theatre#production_of> <http://www.w3.org/2002/07/owl#unionOf> _:B59fe0cb8aadf251966a1c4bdd416681e <http://purl.org/theatre#> .
+<http://purl.org/theatre#production_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/theatre#Production> <http://purl.org/theatre#> .
+<http://purl.org/theatre#production_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a Production is an expression of a given work or production." <http://purl.org/theatre#> .
+<http://purl.org/theatre#production_of> <http://www.w3.org/2000/01/rdf-schema#label> "production_of" <http://purl.org/theatre#> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/BrightnessTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "brightness temperature"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/BrightnessTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/BrightnessTemperature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontology-of-units-of-measure.org/resource/om-2/ThermodynamicTemperature> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/BrightnessTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "The temperature that a blackbody would need to have in order to emit radiation of the observed intensity at a given wavelength (mostly used in radio astronomy)."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/BrightnessTemperature> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/kelvin> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://purl.org/wf4ever/wfdesc#hasConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "This object property is used to specify the wfdesc:Configuration parameter of a given wfdesc:Process."@en <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "has configuration"@en <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasConfiguration> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/wf4ever/wfdesc#Configuration> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasConfiguration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/wf4ever/wfdesc#Process> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasConfiguration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/wf4ever/wfdesc> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSubProcess> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/wf4ever/wfdesc#Process> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSubProcess> <http://www.w3.org/2000/01/rdf-schema#label> "has sub-process"@en <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSubProcess> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/wf4ever/wfdesc> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSubProcess> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/wf4ever/wfdesc#Workflow> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSubProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSubProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "This object property is used to specify that the given workflow  contains the given process as part of its definition.\n\nAlthough not a requirement, such sub processes should have wfdesc:DataLink within the containing workflow connecting their parameters with parameters of the containing workflow, or with parameters other contained wfdesc:Process instances.\n\nA specialialisation of sub process is wfdesc:hasSubWorkflow where the sub process is a nested wfdesc:Workflow."@en <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSource> <http://www.w3.org/2000/01/rdf-schema#label> "has source"@en <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/wf4ever/wfdesc#Output> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/wf4ever/wfdesc#DataLink> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSource> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to specify the wfdesc:Output parameter that acts as a source to a given wfdesc:DataLink, providing data into the link."@en <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/wf4ever/wfdesc> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasInput> <http://www.w3.org/2000/01/rdf-schema#label> "has input"@en <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasInput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/wf4ever/wfdesc#Process> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasInput> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/wf4ever/wfdesc> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasInput> <http://www.w3.org/2000/01/rdf-schema#comment> "This object property is used to specify the wfdesc:Input parameter of a given wfdesc:Process."@en <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasInput> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/wf4ever/wfdesc#Input> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasOutput> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/wf4ever/wfdesc> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "This object property is used to specify the wfdesc:Output parameter of a given wfdesc:Process.\n"@en <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/wf4ever/wfdesc#Process> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasOutput> <http://www.w3.org/2000/01/rdf-schema#label> "has output"@en <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasOutput> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/wf4ever/wfdesc#Output> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSink> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/wf4ever/wfdesc#DataLink> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSink> <http://www.w3.org/2000/01/rdf-schema#label> "has sink"@en <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSink> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/wf4ever/wfdesc#Input> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSink> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to specify the wfdesc:Input parameter that acts as a sink from a given wfdesc:DataLink, consuming data from the link."@en <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSink> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/wf4ever/wfdesc> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasSink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasDataLink> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/wf4ever/wfdesc#DataLink> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasDataLink> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to specify the wfdesc:DataLink instances of a given wfdesc:Workflow."@en <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasDataLink> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/wf4ever/wfdesc> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasDataLink> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/wf4ever/wfdesc#Workflow> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasDataLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/wf4ever/wfdesc> .
+<http://purl.org/wf4ever/wfdesc#hasDataLink> <http://www.w3.org/2000/01/rdf-schema#label> "has datalink"@en <http://purl.org/wf4ever/wfdesc> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#AircraftFlowCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#AircraftFlowCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of interval-based data representing the maximum controllable number of aircraft flowing through an airspace region during some interval of time, given weather and other air traffic control constraints." <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#AircraftFlowCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Aircraft flow capacity" <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/data#FixCapacity> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of interval-based data representing the maximum controllable number of aircraft flowing through a fix per some interval of time, given weather and other air traffic control constraints." <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#FixCapacity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd2f4bbc07e0f92b78116b9382d79f1da <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#FixCapacity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#FixCapacity> <http://www.w3.org/2000/01/rdf-schema#label> "Fix capacity" <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#FixCapacity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://data.nasa.gov/ontologies/atmonto/ATM#AircraftCapacity> <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://w3id.org/GConsent#GivenConsent> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/GDPRov#GivenConsent> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GConsent#Consent> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#label> "Given Consent"@en <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#GivenConsent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7533c4810e75f4fe4b686af3fb40c655 <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#GivenConsent> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a consent entity that is considered given whether implicitly, explicitly, or by delegation."@en <https://w3id.org/GConsent> .
+<http://www.w3.org/ns/solid/terms#oidcIssuer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/solid/terms> <http://www.w3.org/ns/solid/terms> .
+<http://www.w3.org/ns/solid/terms#oidcIssuer> <http://www.w3.org/2000/01/rdf-schema#comment> "The preferred OpenID Connect issuer URI for a given Web ID."@en <http://www.w3.org/ns/solid/terms> .
+<http://www.w3.org/ns/solid/terms#oidcIssuer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://openid.net/specs/connect/1.0/issuer> <http://www.w3.org/ns/solid/terms> .
+<http://www.w3.org/ns/solid/terms#oidcIssuer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/solid/terms> .
+<http://www.w3.org/ns/solid/terms#oidcIssuer> <http://www.w3.org/2000/01/rdf-schema#label> "oidcIssuer"@en <http://www.w3.org/ns/solid/terms> .

@@ -1,0 +1,471 @@
+<http://purl.org/vocommons/voaf#generalizes> <http://www.w3.org/2000/01/rdf-schema#label> "généralise"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#generalizes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocommons/voaf#reliesOn> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#generalizes> <http://www.w3.org/2000/01/rdf-schema#label> "generalizes"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#generalizes> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#generalizes> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique que le vocabulaire sujet définit des super-classes ou super-propriétés du vocabulaire objet"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#generalizes> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#generalizes> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the subject vocabulary generalizes by some superclasses or superproperties the object vocabulary."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#generalizes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#generalizes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#generalizes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#generalizes> <http://purl.org/dc/terms/description> "PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n\t\tPREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n\t\tPREFIX owl:<http://www.w3.org/2002/07/owl#>\n\t\tPREFIX voaf:<http://purl.org/vocommons/voaf#>\n\t\tPREFIX skos:<http://www.w3.org/2004/02/skos/core#>\n\t\t\n\t\tCONSTRUCT{\n\t\t\t?vocab1 voaf:generalizes ?vocab2\n\t\t}\n\t\tWHERE{\n\t\t\t{?elem1 skos:narrowMatch ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\tUNION{?elem2 rdfs:subPropertyOf ?elem1.}\n\t\t\tUNION{?elem1 a owl:Class. ?elem1 owl:unionOf ?union. ?union rdf:first ?elem2.}\n\t\t\tUNION{?elem1 a owl:Class. ?elem1 owl:unionOf ?union. ?union rdf:rest ?union2. ?union2 rdf:first ?elem2.}\n\t\t\tUNION{?elem1 a owl:Class. ?elem1 owl:unionOf ?union. ?union rdf:rest ?union2. ?union2 rdf:rest ?union3. ?union3 rdf:first ?elem2.}\n\t\t\tUNION{?elem1 a owl:Class. ?elem1 owl:unionOf ?union. ?union rdf:rest ?union2. ?union2 rdf:rest ?union3. ?union3 rdf:rest ?union4. ?union4 rdf:first ?elem2.}\n\t\t\tUNION{?elem1 a owl:Class. ?elem1 owl:unionOf ?union. ?union rdf:rest ?union2. ?union2 rdf:rest ?union3. ?union3 rdf:rest ?union4. ?union4 rdf:rest ?union5. ?union5 rdf:first ?elem2.}\n\t\t\tFILTER(!isBlank(?elem2))\n\t\t\t?elem1 rdfs:isDefinedBy ?vocab1.\n\t\t\t?vocab1 a voaf:Vocabulary.\n\t\t\t?elem2 rdfs:isDefinedBy ?vocab2.\n\t\t\t?vocab2 a voaf:Vocabulary.\n\t\t\tFILTER(?vocab1!=?vocab2)\n\t\t}" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#usedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#usedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/vocommons/voaf#reliesOn> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#usedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#usedBy> <http://www.w3.org/2000/01/rdf-schema#label> "used by"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#usedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#usedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the subject vocabulary is used by the object vocabulary"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#usedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique que le vocabulaire sujet est utilisé par le vocabulaire objet"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#usedBy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#usedBy> <http://www.w3.org/2000/01/rdf-schema#label> "utilisé par"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#usedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reliesOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reliesOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdfs.org/ns/void#vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reliesOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/references> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reliesOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the subject vocabulary uses or extends some class or property of the object vocabulary"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reliesOn> <http://www.w3.org/2000/01/rdf-schema#label> "réutilise"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reliesOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique que le vocabulaire sujet utilise ou étend au moins une classe ou propriété du vocabulaire objet"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reliesOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reliesOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reliesOn> <http://www.w3.org/2000/01/rdf-schema#label> "relies on"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reliesOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reliesOn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#label> "a des disjonctions avec"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the subject vocabulary contains some declaration of disjoint classes with the object vocabulary."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://purl.org/dc/terms/description> "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n\t\tPREFIX owl:<http://www.w3.org/2002/07/owl#>\n\t\tPREFIX voaf:<http://purl.org/vocommons/voaf#>\n\t\t\n\t\tCONSTRUCT{\n\t\t\t?vocab1 voaf:hasDisjunctionsWith ?vocab2\n\t\t}\n\t\tWHERE{\n\t\t\t?elem1 owl:disjointWith ?elem2. FILTER(!isBlank(?elem2))\n\t\t\t?elem1 rdfs:isDefinedBy ?vocab1.\n\t\t\t?vocab1 a voaf:Vocabulary.\n\t\t\t?elem2 rdfs:isDefinedBy ?vocab2.\n\t\t\t?vocab2 a voaf:Vocabulary.\n\t\t\tFILTER(?vocab1!=?vocab2)\n\t\t}" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#label> "has disjunctions with"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique que le vocabulaire sujet contient des déclarations de classes disjointes avec le vocabulaire objet"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocommons/voaf#reliesOn> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://purl.org/dc/terms/description> "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n\t\tPREFIX owl:<http://www.w3.org/2002/07/owl#>\n\t\tPREFIX voaf:<http://purl.org/vocommons/voaf#>\n\n\t\tCONSTRUCT{\n\t\t\t?vocab1 voaf:metadataVoc ?vocab2\n\t\t}\n\t\tWHERE{\n\t\t\t?elem1 ?elem2 ?o.\n\t\t\t?elem1 rdfs:isDefinedBy ?vocab1.\n\t\t\t?vocab1 a voaf:Vocabulary.\n\t\t\t?elem2 rdfs:isDefinedBy ?vocab2.\n\t\t\t?vocab2 a voaf:Vocabulary.\n\t\t\tFILTER(?vocab1!=?vocab2)\n\t\t}" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocommons/voaf#reliesOn> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#label> "vocabulaire de métadonnées"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the subject vocabulary uses the object vocabulary in metadata at global vocabulary level or at element level"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique que le vocabulaire sujet utilise le vocabulaire objet pour décrire ses métadonnées, au niveau global du vocabulaire ou au niveau des éléments"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#label> "metadata vocabulary"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocommons/voaf#reliesOn> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#label> "extends"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#label> "étend"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique que le vocabulaire sujet étend l'expressivité du vocabulaire objet en déclarant des relations de subsomption avec ce dernier, ou en utilisant ses classes comme domaine ou co-domaine d'un propriété du vocabulaire sujet, ou en définissant des contraintes locales etc."@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the subject vocabulary extends the expressivity of the object vocabulary by declaring subsumption relationships, using object vocabulary class as domain or range of a subject vocabulary property, defining local restrictions etc ..."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://purl.org/dc/terms/description> "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n\t\tPREFIX owl:<http://www.w3.org/2002/07/owl#>\n\t\tPREFIX voaf:<http://purl.org/vocommons/voaf#>\n\n\t\tCONSTRUCT{\n\t\t\t?vocab1 voaf:extends ?vocab2\n\t\t}\n\t\tWHERE{\n\t\t\t{?elem1 owl:inverseOf ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\tUNION{?elem1 rdfs:domain ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\tUNION{?elem1 rdfs:range ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\tUNION{?elem2 rdfs:domain ?elem1. FILTER(!isBlank(?elem1))}\n\t\t\tUNION{?elem2 rdfs:range ?elem1. FILTER(!isBlank(?elem1))}\n\t\t\t?elem1 rdfs:isDefinedBy ?vocab1.\n\t\t\t?vocab1 a voaf:Vocabulary.\n\t\t\t?elem2 rdfs:isDefinedBy ?vocab2.\n\t\t\t?vocab2 a voaf:Vocabulary.\n\t\t\tFILTER(?vocab1!=?vocab2)\n\t\t}" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#label> "specializes"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#label> "spécialise"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocommons/voaf#reliesOn> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://purl.org/dc/terms/description> "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n\t\tPREFIX voaf:<http://purl.org/vocommons/voaf#>\n\t\tPREFIX skos:<http://www.w3.org/2004/02/skos/core#>\n\t\t\n\t\tCONSTRUCT{\n\t\t\t?vocab1 voaf:specializes ?vocab2\n\t\t}\n\t\tWHERE{\n\t\t\t{?elem1 rdfs:subPropertyOf ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\tUNION{?elem1 rdfs:subClassOf ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\tUNION{?elem1 skos:broadMatch ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\t?elem1 rdfs:isDefinedBy ?vocab1.\n\t\t\t?vocab1 a voaf:Vocabulary.\n\t\t\t?elem2 rdfs:isDefinedBy ?vocab2.\n\t\t\t?vocab2 a voaf:Vocabulary.\n\t\t\tFILTER(?vocab1!=?vocab2)\n\t\t}" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the subject vocabulary defines some subclasses or subproperties of the object vocabulary, or local restrictions on those."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique que le vocabulaire sujet définit des sous-classes ou sous-propriétés du vocabulaire objet"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vso/ns#meetsEmissionStandard> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vso/ns#EmissionStandardValue> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#meetsEmissionStandard> <http://www.w3.org/2000/01/rdf-schema#label> "meetsEmissionStandard (0..*)"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#meetsEmissionStandard> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#qualitativeProductOrServiceProperty> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#meetsEmissionStandard> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/Emissions_standard> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#meetsEmissionStandard> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#meetsEmissionStandard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#meetsEmissionStandard> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vso/ns> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#meetsEmissionStandard> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the vehicle meets the respective emission standard. \n\nUse DBPedia resources to indicate the standard, if possible. Popular identifiers are\n  http://dbpedia.org/resource/Super_Ultra_Low_Emission_Vehicle\n  http://dbpedia.org/resource/Partial_zero-emissions_vehicle\n\nSee also http://en.wikipedia.org/wiki/Emissions_standard.\n\nUnfortunately, there are no DBPedia identifiers for the popular Euro 1 - Euro 5 standards available.\nIf you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:EmissionStandardValue."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#bodyStyle> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#qualitativeProductOrServiceProperty> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#bodyStyle> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/Car_body_styles> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#bodyStyle> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vso/ns#BodyStyleValue> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#bodyStyle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vso/ns> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#bodyStyle> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the design and body style of the vehicle. \n\nUse DBPedia resources to indicate the features, if possible. Popular identifiers are\n  http://dbpedia.org/resource/Convertible\n  http://dbpedia.org/resource/Hatchback\n  http://dbpedia.org/resource/Station_wagon\n  http://dbpedia.org/resource/Sport_utility_vehicle\n  http://dbpedia.org/resource/Roadster\n\nSee also http://en.wikipedia.org/wiki/Car_body_styles.\n\nIf you cannot find a suitable identifier in DBPedia, define your own as an instance of vso:BodyStyleValue."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#bodyStyle> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#bodyStyle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#bodyStyle> <http://www.w3.org/2000/01/rdf-schema#label> "bodyStyle (0..1)"@en <http://purl.org/vso/ns> .
+<http://purl.org/vvo/ns#excessMileage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#excessMileage> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#excessMileage> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the rate for excess mileage"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#excessMileage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#excessMileage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#excessMileage> <http://www.w3.org/2000/01/rdf-schema#label> "excessMileage (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerCashPrice> <http://www.w3.org/2000/01/rdf-schema#label> "customerCashPrice (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerCashPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerCashPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerCashPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the customer cash price for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerCashPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerCashPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#advancedPayment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#advancedPayment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#advancedPayment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#advancedPayment> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#advancedPayment> <http://www.w3.org/2000/01/rdf-schema#label> "advancedPayment (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#advancedPayment> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the advanced payment for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#totalPayable> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#totalPayable> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the total payable for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#totalPayable> <http://www.w3.org/2000/01/rdf-schema#label> "totalPayable (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#totalPayable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#totalPayable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#totalPayable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#otrRetailPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#otrRetailPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#otrRetailPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#otrRetailPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the OTR retail price for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#otrRetailPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#otrRetailPrice> <http://www.w3.org/2000/01/rdf-schema#label> "otrRetailPrice (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#finalPayment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#finalPayment> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the final payment for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#finalPayment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#finalPayment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#finalPayment> <http://www.w3.org/2000/01/rdf-schema#label> "finalPayment (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#finalPayment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#firstMonthlyPaymentFee> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#firstMonthlyPaymentFee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#firstMonthlyPaymentFee> <http://www.w3.org/2000/01/rdf-schema#label> "firstMonthlyPaymentFee (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#firstMonthlyPaymentFee> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#firstMonthlyPaymentFee> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#firstMonthlyPaymentFee> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the first monthly payment fee for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#discount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#discount> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#discount> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the discount for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#discount> <http://www.w3.org/2000/01/rdf-schema#label> "discount (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#discount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#discount> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#refersToTrafficPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#refersToTrafficPattern> <http://www.w3.org/2000/01/rdf-schema#label> "refersToTrafficPattern  (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#refersToTrafficPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#refersToTrafficPattern> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#valueReference> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#refersToTrafficPattern> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vvo/ns#TrafficPattern> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#refersToTrafficPattern> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the traffic pattern to which the vso:fuelEconomy or vso:fuelConsumption value refers"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#refersToTrafficPattern> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerDeposit> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerDeposit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerDeposit> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the customer deposit for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerDeposit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerDeposit> <http://www.w3.org/2000/01/rdf-schema#label> "customerDeposit (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerDeposit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#monthlyPayment> <http://www.w3.org/2000/01/rdf-schema#label> "monthlyPayment (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#monthlyPayment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#monthlyPayment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#monthlyPayment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#monthlyPayment> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the monthly payment for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#monthlyPayment> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#depositContribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#depositContribution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#depositContribution> <http://www.w3.org/2000/01/rdf-schema#label> "depositContribution (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#depositContribution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#depositContribution> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the deposit contribution for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#depositContribution> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#finalPaymentFee> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#finalPaymentFee> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#finalPaymentFee> <http://www.w3.org/2000/01/rdf-schema#label> "finalPaymentFee (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#finalPaymentFee> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the final payment fee for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#finalPaymentFee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#finalPaymentFee> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#credit> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#credit> <http://www.w3.org/2000/01/rdf-schema#label> "credit (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#credit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#credit> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the credit for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#credit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#credit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#scrappageContribution> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#scrappageContribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#scrappageContribution> <http://www.w3.org/2000/01/rdf-schema#label> "scrappageContribution (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#scrappageContribution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#scrappageContribution> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the scrappage contribution for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#scrappageContribution> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.uniprot.org/core/Potential> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates that there is some logical or conclusive evidence that the given annotation could apply. This non-experimental qualifier is often used to present results from protein sequence analysis software tools, which are only annotated if the result makes sense in the biological context of a given protein. A typical example is the annotation of N-glycosylation sites in secreted proteins" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Potential> <http://www.w3.org/2000/01/rdf-schema#label> "Potential" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Potential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Potential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.uniprot.org/core/Status> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Evidence_at_Transcript_Level_Existence> <http://www.w3.org/2000/01/rdf-schema#label> "Evidence at transcript level" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Evidence_at_Transcript_Level_Existence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.uniprot.org/core/Protein_Existence> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Evidence_at_Transcript_Level_Existence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Evidence_at_Transcript_Level_Existence> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the existence of a protein has not been strictly proven but that expression data (such as existence of cDNA(s), RT-PCR or Northern blots) indicate the existence of a transcript." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Experimental> <http://www.w3.org/2000/01/rdf-schema#label> "Indicates that there is some experimental evidence that the given annotation could apply." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Experimental> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Experimental> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.uniprot.org/core/Status> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Initiator_Methionine_Annotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the initiator methionine has been cleaved off and is not shown in the sequence." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Initiator_Methionine_Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Molecule_Processing_Annotation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Initiator_Methionine_Annotation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.uniprot.org/manual/init_met"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Initiator_Methionine_Annotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Initiator_Methionine_Annotation> <http://www.w3.org/2000/01/rdf-schema#label> "Initiator Methionine" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Non-adjacent_Residues_Annotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that two residues in a sequence are not consecutive and that there are a number of unsequenced residues between them." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Non-adjacent_Residues_Annotation> <http://www.w3.org/2000/01/rdf-schema#label> "Non-consecutive Residues" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Non-adjacent_Residues_Annotation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.uniprot.org/manual/non_cons"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Non-adjacent_Residues_Annotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Non-adjacent_Residues_Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Experimental_Information_Annotation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Absorption_Annotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Absorption_Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Biophysicochemical_Annotation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Absorption_Annotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the wavelength in nm at which photoreactive proteins such as opsins and DNA photolyases show maximal absorption." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Absorption_Annotation> <http://www.w3.org/2000/01/rdf-schema#label> "Absorption" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Mass_Spectrometry_Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B20087d7a18f2d77bc246f5abf710c452 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Mass_Spectrometry_Annotation> <http://www.w3.org/2000/01/rdf-schema#label> "Mass" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Mass_Spectrometry_Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3dc5039fbe90b5cf5bc739035b507628 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Mass_Spectrometry_Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Experimental_Information_Annotation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Mass_Spectrometry_Annotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Mass_Spectrometry_Annotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the mass of a sequence determined by mass spectrometry." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Mass_Spectrometry_Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B716426417c0c088986b0b2aa72479b6a <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Mass_Spectrometry_Annotation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.uniprot.org/manual/mass_spectrometry"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Mass_Spectrometry_Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba32985fcf37d95bbb2457124a048f2a9 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Temperature_Dependence_Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Biophysicochemical_Annotation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Temperature_Dependence_Annotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Temperature_Dependence_Annotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the optimum temperature for enzyme activity and/or the variation of enzyme activity with temperature variation; the thermostability/thermolability of the enzyme is also mentioned when it is known." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Temperature_Dependence_Annotation> <http://www.w3.org/2000/01/rdf-schema#label> "Temperature Dependence" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Probable> <http://www.w3.org/2000/01/rdf-schema#comment> "The status ‘Probable’ indicates stronger evidence than the qualifier ‘Potential’. This qualifier implies that there must be at least some experimental evidence, which indicates, that the information is expected to be found in the natural environment of a protein." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Probable> <http://www.w3.org/2000/01/rdf-schema#label> "Probable" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Probable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.uniprot.org/core/Status> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Probable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> <http://purl.uniprot.org/core/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/wattPerMetreKelvin> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8a90ec70b7af522f469e8b43b0712fa1 <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity> <http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeSymbol> "k" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity> <http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeSymbol> "λ" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity> <http://www.w3.org/2000/01/rdf-schema#label> "thermal conductivity"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity> <http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeSymbol> "K" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity> <http://www.ontology-of-units-of-measure.org/resource/om-2/symbol> "κ" <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Termal conductivity indicates the ability of a material to conduct heat."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity> <http://www.w3.org/2000/01/rdf-schema#label> "thermische geleidbaarheid"@nl <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/ThermalConductivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9131794f84f8e0b89fb1c59388d67f53 <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Point> <http://www.w3.org/2000/01/rdf-schema#label> "point"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Point> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Point> <http://www.w3.org/2000/01/rdf-schema#comment> "A point is an element of an interval scale or a ratio scale, for example, 273.16 on the Kelvin scale indicates the triple point of water thermodynamic temperature."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://rdf-vocabulary.ddialliance.org/discovery#inputVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdf-vocabulary.ddialliance.org/discovery#Variable> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#inputVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/cube#DataSet> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#inputVariable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/discovery> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#inputVariable> <http://www.w3.org/2000/01/rdf-schema#label> "input variable"@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#inputVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#inputVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the original Variable of an aggregated qb:DataSet."@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#inputVariable> <http://www.w3.org/2000/01/rdf-schema#label> "variable en entrée"@fr <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#inputVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#instrument> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba08941d8e6fb7ed2121d60e02dcb3567 <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#instrument> <http://www.w3.org/2000/01/rdf-schema#label> "instrument"@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#instrument> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/discovery> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#instrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#instrument> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdf-vocabulary.ddialliance.org/discovery#Instrument> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#instrument> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the Instrument of a Study or a LogicalDataSet."@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#instrument> <http://www.w3.org/2000/01/rdf-schema#label> "a comme instrument"@fr <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#instrument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsVariable> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdf-vocabulary.ddialliance.org/discovery#Variable> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf-vocabulary.ddialliance.org/discovery#SummaryStatistics> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsVariable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/discovery> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsVariable> <http://www.w3.org/2000/01/rdf-schema#label> "statistics variable"@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the Variable of a specific SummaryStatistics individual."@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsVariable> <http://www.w3.org/2000/01/rdf-schema#label> "a pour variable statistique"@fr <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsDataFile> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdf-vocabulary.ddialliance.org/discovery#DataFile> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsDataFile> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the DataFile of a specific DesciptiveStatistics individual."@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsDataFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsDataFile> <http://www.w3.org/2000/01/rdf-schema#label> "a pour fichier statistique"@fr <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsDataFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsDataFile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/discovery> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsDataFile> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf-vocabulary.ddialliance.org/discovery#DescriptiveStatistics> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsDataFile> <http://www.w3.org/2000/01/rdf-schema#label> "statistics data file"@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsCategory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/discovery> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf-vocabulary.ddialliance.org/discovery#CategoryStatistics> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsCategory> <http://www.w3.org/2000/01/rdf-schema#label> "statistics category"@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the skos:Concept (representing codes and categories) of a specific CategoryStatistics individual."@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsCategory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2004/02/skos/core#Concept> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#statisticsCategory> <http://www.w3.org/2000/01/rdf-schema#label> "a pour concept statistique"@fr <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#universe> <http://www.w3.org/2000/01/rdf-schema#label> "a comme univers"@fr <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#universe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#universe> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the Universe(s) of Studies, StudyGrous, RepresentedVariables, Variables, Questions, and LogicalDataSets."@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#universe> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba270c6da5e62a47c35c3e677cafd6135 <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#universe> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdf-vocabulary.ddialliance.org/discovery#Universe> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#universe> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/discovery> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#universe> <http://www.w3.org/2000/01/rdf-schema#label> "universe"@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#universe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#question> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#question> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/discovery> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#question> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdf-vocabulary.ddialliance.org/discovery#Question> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#question> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#question> <http://www.w3.org/2000/01/rdf-schema#label> "a comme question"@fr <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#question> <http://www.w3.org/2000/01/rdf-schema#domain> _:B84ded21d64b1f178b7ef42ae936585a0 <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#question> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the Questions associated to Variables or contained in Questionnaires."@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#question> <http://www.w3.org/2000/01/rdf-schema#label> "question"@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#variable> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdf-vocabulary.ddialliance.org/discovery#Variable> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#variable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/discovery> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#variable> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the Variable of a Study."@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#variable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf-vocabulary.ddialliance.org/discovery#Study> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#variable> <http://www.w3.org/2000/01/rdf-schema#label> "Variable"@de <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#variable> <http://www.w3.org/2000/01/rdf-schema#label> "variable"@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#isPublic> <http://www.w3.org/2000/01/rdf-schema#label> "ist öffentlich"@de <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#isPublic> <http://www.w3.org/2000/01/rdf-schema#label> "is public"@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#isPublic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#isPublic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#isPublic> <http://www.w3.org/2000/01/rdf-schema#comment> "The value true indicates that the dataset can be accessed (usually downloaded) by anyone."@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#isPublic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#isPublic> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/discovery> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#isPublic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf-vocabulary.ddialliance.org/discovery#LogicalDataSet> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#product> <http://www.w3.org/2000/01/rdf-schema#label> "product"@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#product> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf-vocabulary.ddialliance.org/discovery#Study> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#product> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linked-data/cube#LogicalDataSet> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#product> <http://www.w3.org/2000/01/rdf-schema#label> "Produkt"@de <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#product> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/discovery> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#product> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the LogicalDataSets of a Studies."@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery#product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdfs.org/scot/ns#tag_of> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/scot/ns#> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#tag_of> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/scot/ns#Tag> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#tag_of> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#tag_of> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/sioc/ns#Item> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#tag_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#tag_of> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a tag is assigned to the sioc:Item."@en <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#tag_of> <http://www.w3.org/2000/01/rdf-schema#label> "tag of"@en <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#tag_of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#tag_of> <http://www.w3.org/2002/07/owl#inverseOf> <http://rdfs.org/scot/ns#has_tag> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#tag_of> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.holygoat.co.uk/owl/redwood/0.1/tags/isTagOf> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/scot/ns#> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/scot/ns#Tagcloud> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/2000/01/rdf-schema#label> "created by"@en <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/maker> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an agent as type of a foaf:Agent, who generates a Tagcloud."@en <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/scot/ns#created_by> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://rdfs.org/scot/ns#> .
+<http://rdfs.org/sioc/ns#follows> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/sioc/ns#UserAccount> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#follows> <http://www.w3.org/2000/01/rdf-schema#label> "follows"@en <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#follows> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that one UserAccount follows another UserAccount (e.g. for microblog posts or other content item updates)."@en <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#follows> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#follows> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdfs.org/sioc/ns#> <http://rdfs.org/sioc/ns#> .
+<http://rdfs.org/sioc/ns#follows> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/sioc/ns#UserAccount> <http://rdfs.org/sioc/ns#> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://reference.data.gov.uk/def/central-government/holdsPost> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the agent who holds the post."@en <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/org#hasMember> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://reference.data.gov.uk/def/central-government> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://reference.data.gov.uk/def/central-government/Post> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/2000/01/rdf-schema#label> "Postholder"@en <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/heldBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/postIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/postIn> <http://www.w3.org/2000/01/rdf-schema#label> "Organisation"@en <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/postIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://reference.data.gov.uk/def/central-government/Post> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/postIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://reference.data.gov.uk/def/central-government> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/postIn> <http://www.w3.org/2002/07/owl#inverseOf> <http://reference.data.gov.uk/def/central-government/hasPost> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/postIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the organisation that this is a post within."@en <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/postIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/postIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/org#Organization> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/postIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/org#memberOf> <http://reference.data.gov.uk/def/central-government> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/indicates+th.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+th.nt> <https://w3id.org/tree#relation> _:BindicatesX2Btha .
+_:BindicatesX2Btha <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Btha <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+tha.nt> .
+_:BindicatesX2Btha <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Btha <https://w3id.org/tree#value> "tha" .
+_:BindicatesX2Btha <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+tha.nt> <https://w3id.org/tree#remainingItems> "261"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+th.nt> <https://w3id.org/tree#relation> _:BindicatesX2Bthe .
+_:BindicatesX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+the.nt> .
+_:BindicatesX2Bthe <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Bthe <https://w3id.org/tree#value> "the" .
+_:BindicatesX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+the.nt> <https://w3id.org/tree#remainingItems> "407"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+th.nt> <https://w3id.org/tree#relation> _:BindicatesX2Bthi .
+_:BindicatesX2Bthi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Bthi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+thi.nt> .
+_:BindicatesX2Bthi <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Bthi <https://w3id.org/tree#value> "thi" .
+_:BindicatesX2Bthi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+thi.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+th.nt> <https://w3id.org/tree#relation> _:BindicatesX2Bthr .
+_:BindicatesX2Bthr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Bthr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+thr.nt> .
+_:BindicatesX2Bthr <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Bthr <https://w3id.org/tree#value> "thr" .
+_:BindicatesX2Bthr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+thr.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/indicates+th.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+th.nt> <https://w3id.org/tree#relation> _:BindicatesX2Btha .
+_:BindicatesX2Btha <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Btha <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+tha.nt> .
+_:BindicatesX2Btha <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Btha <https://w3id.org/tree#value> "tha" .
+_:BindicatesX2Btha <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+tha.nt> <https://w3id.org/tree#remainingItems> "261"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+th.nt> <https://w3id.org/tree#relation> _:BindicatesX2Bthe .
+_:BindicatesX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+the.nt> .
+_:BindicatesX2Bthe <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Bthe <https://w3id.org/tree#value> "the" .
+_:BindicatesX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+the.nt> <https://w3id.org/tree#remainingItems> "407"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+th.nt> <https://w3id.org/tree#relation> _:BindicatesX2Bthi .
+_:BindicatesX2Bthi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Bthi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+thi.nt> .
+_:BindicatesX2Bthi <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Bthi <https://w3id.org/tree#value> "thi" .
+_:BindicatesX2Bthi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+thi.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+th.nt> <https://w3id.org/tree#relation> _:BindicatesX2Bthr .
+_:BindicatesX2Bthr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Bthr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+thr.nt> .
+_:BindicatesX2Bthr <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Bthr <https://w3id.org/tree#value> "thr" .
+_:BindicatesX2Bthr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+thr.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/indicates+th.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+th.nt> <https://w3id.org/tree#relation> _:BindicatesX2Btha .
+_:BindicatesX2Btha <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Btha <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+tha.nt> .
+_:BindicatesX2Btha <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Btha <https://w3id.org/tree#value> "tha" .
+_:BindicatesX2Btha <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+tha.nt> <https://w3id.org/tree#remainingItems> "261"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+th.nt> <https://w3id.org/tree#relation> _:BindicatesX2Bthe .
+_:BindicatesX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+the.nt> .
+_:BindicatesX2Bthe <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Bthe <https://w3id.org/tree#value> "the" .
+_:BindicatesX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+the.nt> <https://w3id.org/tree#remainingItems> "407"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+th.nt> <https://w3id.org/tree#relation> _:BindicatesX2Bthi .
+_:BindicatesX2Bthi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Bthi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+thi.nt> .
+_:BindicatesX2Bthi <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Bthi <https://w3id.org/tree#value> "thi" .
+_:BindicatesX2Bthi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+thi.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+th.nt> <https://w3id.org/tree#relation> _:BindicatesX2Bthr .
+_:BindicatesX2Bthr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Bthr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+thr.nt> .
+_:BindicatesX2Bthr <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Bthr <https://w3id.org/tree#value> "thr" .
+_:BindicatesX2Bthr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+thr.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .

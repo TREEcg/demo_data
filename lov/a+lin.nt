@@ -1,0 +1,351 @@
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://www.w3.org/2000/01/rdf-schema#comment> "Recent changes to this namespace:\n$Log: wgs84_pos.rdf,v $\nRevision 1.22  2009/04/20 15:00:30  timbl\nRemove the time bits which have been deal with elsewhere eg in iCal.\n\nRevision 1.21  2009/04/20 12:52:47  timbl\ntry again\n\nRevision 1.20  2009/04/20 12:42:11  timbl\nAdd Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\n\nRevision 1.19  2009/04/20 12:36:31  timbl\nAdd Event (edited ages ago and never checked in), and location (following discussion http://chatlogs.planetrdf.com/swig/2009-04-20#T12-36-09)\n\nRevision 1.18  2006/02/01 22:01:04  danbri\nClarified that lat and long are decimal degrees, and that alt is decimal metres about local reference ellipsoid\n\nRevision 1.17  2004/02/06 17:38:12  danbri\nFixed a bad commit screwup\n\nRevision 1.15  2003/04/19 11:24:08  danbri\nFixed the typo even more.\n\nRevision 1.14  2003/04/19 11:16:56  danbri\nfixed a typo\n\nRevision 1.13  2003/02/19 22:27:27  connolly\nrelaxed domain constraints on lat/long/alt from Point to SpatialThing\n\nRevision 1.12  2003/01/12 01:41:41  danbri\nTrying local copy of XSLT doc.\n\nRevision 1.11  2003/01/12 01:20:18  danbri\nadded a link to morten's xslt rdfs viewer.\n\nRevision 1.10  2003/01/11 18:56:49  danbri\nRemoved datatype range from lat and long properties, since they would\nhave required each occurance of the property to mention the datatype.\n\nRevision 1.9  2003/01/11 11:41:31  danbri\nAnother typo; repaired rdfs:Property to rdf:Property x4\n\nRevision 1.8  2003/01/11 11:05:02  danbri\nAdded an rdfs:range for each lat/long/alt property,\nhttp://www.w3.org/2001/XMLSchema#float\n\nRevision 1.7  2003/01/10 20:25:16  danbri\nLonger rdfs:comment for Point, trying to be Earth-centric and neutral about\ncoordinate system(s) at the same time. Feedback welcomed.\n\nRevision 1.6  2003/01/10 20:18:30  danbri\nAdded CVS log comments into the RDF/XML as an rdfs:comment property of the\nvocabulary. Note that this is not common practice (but seems both harmless\nand potentially useful).\n\n\nrevision 1.5\ndate: 2003/01/10 20:14:31;  author: danbri;  state: Exp;  lines: +16 -5\nUpdated schema:\nAdded a dc:date, added url for more info. Changed the rdfs:label of the\nnamespace from gp to geo. Added a class Point, set as the rdfs:domain of\neach property. Added XML comment on the lat_long property suggesting that\nwe might not need it (based on #rdfig commentary from implementors).\n\nrevision 1.4\ndate: 2003/01/10 20:01:07;  author: danbri;  state: Exp;  lines: +6 -5\nFixed typo; several rdfs:about attributes are now rdf:about. Thanks to MortenF in\n#rdfig for catching this error.\n\nrevision 1.3\ndate: 2003/01/10 11:59:03;  author: danbri;  state: Exp;  lines: +4 -3\nfixed buglet in vocab, added more wgs links\n\nrevision 1.2\ndate: 2003/01/10 11:01:11;  author: danbri;  state: Exp;  lines: +4 -4\nRemoved alt from the as-a-flat-string property, and switched from\nspace separated to comma separated.\n\nrevision 1.1\ndate: 2003/01/10 10:53:23;  author: danbri;  state: Exp;\nbasic geo vocab" <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/date> "$Date: 2009/04/20 15:00:30 $" <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/description> "A vocabulary for representing latitude, longitude and \n altitude information in the WGS84 geodetic reference datum. \n Version $Id: wgs84_pos.rdf,v 1.22 2009/04/20 15:00:30 timbl Exp $. See http://www.w3.org/2003/01/geo/ for more details." <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://www.w3.org/2000/01/rdf-schema#label> "geo" <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#> <http://purl.org/dc/elements/1.1/title> "WGS84 Geo Positioning: an RDF vocabulary" <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataRight> <http://www.w3.org/2000/01/rdf-schema#comment> "Action legally granted as allowable to be exercised on a Linked Data resource"@en <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ldr/ns#Action> <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataResource> <http://www.w3.org/2000/01/rdf-schema#comment> "A Linked Data resource, object of some rights"@en <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataResource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataPolicy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "A policy applied over a Linked Data resource"@en <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#LinkedDataPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#hasPrivacyLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#hasPrivacyLevel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.oclc.org/NET/ldr/ns#hasclaim> <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#hasPrivacyLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "Declares the privacy level (e.g. personal data) for a Linked Data resource"@en <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#hasPrivacyLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/ldr/ns#LinkedDataResource> <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#hasPrivacyLevel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#Agent> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://xmlns.com/foaf/0.1/Agent> <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#Agent> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#Agent> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/ns/odrl/2/Party> <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "Agent related to a Linked Data resource" <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ldr/ns#Agent> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated in favour of the ODRL term"@en <http://purl.oclc.org/NET/ldr/ns#> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#LinearConversionUnit> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'LinearConversionUnit' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#LinearConversionUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/qu" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#LinearConversionUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2171273b01ca23589f3c482c08a4adbc <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#LinearConversionUnit> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.omgsysml.org/qudv#Unit" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#LinearConversionUnit> <http://www.w3.org/2000/01/rdf-schema#label> "LinearConversionUnit" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#LinearConversionUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/qu/qu#ConversionBasedUnit> <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#LinearConversionUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "A LinearConversionUnit is a ConversionBasedUnit that represents a measurement unit that is defined with respect to another\nmeasurement reference unit through a linear conversion relationship with a conversion factor.\nThe unit conversion relationship is defined by the following equation:\nvalueRU = factor · valueCU,\nwhere:\nvalueRU is the quantity value expressed in the referenceUnit, and,\nvalueCU is the quantity value expressed in the LinearConversionUnit." <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#LinearConversionUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7a50520fdb811b0d601f6b5a173f3419 <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#LinearConversionUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLine> <http://www.w3.org/2000/01/rdf-schema#label> "timeline" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLine> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLine> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a linear and coherent piece of time -- can be either abstract (such as the one behind a score) or concrete (such as the universal time line).\nTwo timelines can be mapped using timeline maps." <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/dsnotify/vocab/eventset/hasReason> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to a resource that further specifies the reason for the respective ResourceChangeEvent. For example one could attach a textual description or link to another event here. This property is under-specified in this version on purpose."@en-US <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasReason> <http://www.w3.org/2000/01/rdf-schema#label> "has reason"@en-US <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasReason> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasReason> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasAffectedTriples> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to a resource that further specifies the actual triples that were added/removed in consequence of the respective ResourceChangeEvent. For example one could attach a Talis changeset here. This property is under-specified in this version on purpose."@en-US <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasAffectedTriples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasAffectedTriples> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasAffectedTriples> <http://www.w3.org/2000/01/rdf-schema#label> "has affected triples"@en-US <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/eis/vocab/daq#> <http://purl.org/dc/terms/modified> "2015-04-01"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://purl.org/dc/terms/creator> _:Bd35ad032c4e949d817e8706116608a8c <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset Quality Vocabulary (daQ)" <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://purl.org/dc/terms/creator> _:Bd384462ef302f4a2ab271b7efb734902 <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://www.w3.org/2000/01/rdf-schema#comment> "The Dataset Quality Vocabulary (daQ) is a lightweight, extensible core vocabulary for attaching the result of quality benchmarking of a linked open dataset (usually an expensive process) to that dataset.  daQ is designed to be extended by custom quality metrics.  Use cases include filtering and ranking datasets by quality." <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/imbi/ru-meta.owl#UMLS_connect> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to a UMLS semantic Type CUI." <http://purl.org/imbi/ru-meta.owl> .
+<http://purl.org/imbi/ru-meta.owl#UMLS_connect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://purl.org/imbi/ru-meta.owl> .
+<http://purl.org/linguistics/gold/SyntacticUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "SyntacticUnit (also called constituent) is a 'term in grammatical analysis for a linguistic unit which is a functional component of a larger construction. Based on a combination of intuitive and formal (e.g. distributional) criteria, a sentence can be analysed into a series of constituents, such as subject + predicate, or NP+VP, etc. [Crystal 2003: 99]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticUnit> <http://www.w3.org/2000/01/rdf-schema#label> "SyntacticUnit"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/SyntacticUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/GrammarUnit> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Compound> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Compound> <http://www.w3.org/2000/01/rdf-schema#label> "Compound"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Compound> <http://www.w3.org/2000/01/rdf-schema#comment> "A term used widely in descriptive linguistic studies to refer to a linguistic unit which is composed of elements that function independently in other circumstances. [Crystal 2003: 92]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Compound> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Morpheme> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Compound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/inLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation that holds between a LinguisticSign and a Language. The sign is said to be a member or part of that language."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/inLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/inLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "inLanguage"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/inLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linguistics/gold/HumanLanguageVariety> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/inLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linguistics/gold/LinguisticUnit> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/inLanguage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "A LinguisticExpression is any physical form (sound, visual image or sequence thereof) used to represent a linguistic unit. A linguistic expression may be spoken, written, or signed. A linguistic expression is distinct form the actual process (speaking, writing, signing) that produces the expression."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Object> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#label> "LinguisticExpression"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/InterlinearGlossedText> <http://www.w3.org/2000/01/rdf-schema#comment> "Interlinear glossed text (IGT) is a linguistic data structure meant to display morphosyntactic structure: morphemes, morpheme boundaries, morpheme types (clitics, prefixes, reduplicated forms), morphosyntactic features/values and part of speech information. At a minimum, an instance of IGT includes a single line of source language followed by a translation line. Often, a second gloss line is included to show detailed morphosyntactic structure using both words and phrases from the target language and various labels, or 'grams', that indicate morphosyntactic features/values, etc. It is possible to include separate lines for the orthographic form, phonetic form, and phonological form. Standards for IGT include the Leipzig Glossing Rules."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/InterlinearGlossedText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/InterlinearGlossedText> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/LinguisticDataStructure> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/InterlinearGlossedText> <http://www.w3.org/2000/01/rdf-schema#label> "InterlinearGlossedText"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/InterlinearGlossedText> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSign> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSign> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Abstract> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSign> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSign> <http://www.w3.org/2000/01/rdf-schema#comment> "A linguistic sign is an abstract structure whose instances participate in a linguistic system, or language. By definition, a linguistic sign must have a form component (whose elements are phonological units), a grammatical component (whose elements are grammatical units), and a meaning component (whose elements are semantic units). The formal structure of a linguistic sign is determined by the grammar of a language. The information value of a linguistic sign, its meaning, is not fixed, but determined by the conventions of the language. The relation of form to meaning is largely arbitrary within a semiotic system. Signs are classified primarily according to what kinds of formal relations they participate in, and, secondly, according to their complexity (whether they are atomic or composed of other signs). Signs range from morphological and syntactic constructions to whole discourse segments [de Saussure 1983; Hervey 1979; Pollard and Sag 1994]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticSign> <http://www.w3.org/2000/01/rdf-schema#label> "LinguisticSign"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/orderingRelation> <http://www.w3.org/2000/01/rdf-schema#label> "orderingRelation"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/orderingRelation> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linguistics/gold/LinguisticUnit> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/orderingRelation> <http://www.w3.org/2000/01/rdf-schema#comment> "Any relation that establishes a linear ordering of linguistic units."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/orderingRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/orderingRelation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/orderingRelation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linguistics/gold/LinguisticUnit> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linguistics/gold/LinguisticProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linguistics/gold/LinguisticSign> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "hasProperty"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a linguistic unit and a linguistic property, e.g., (m1 hasProperty AllativeCase) where m1 is an instance of Morpheme."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/feature> <http://www.w3.org/2000/01/rdf-schema#label> "feature"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/feature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/feature> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linguistics/gold/LinguisticProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/feature> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a linguistic unit and a linguistic feature. A feature inheres in its host. NOTE: this relation is distinct from the hasFeature which pertains to data structures."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasSourceLine> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linguistics/gold/dataStructureRelation> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasSourceLine> <http://www.w3.org/2000/01/rdf-schema#label> "hasSourceLine"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasSourceLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasSourceLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasSourceLine> <http://www.w3.org/2000/01/rdf-schema#comment> "The binary relation holding between an instance of interlinear glossed text and a linguistic unit (clause, phrase, etc.) from the source language."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DescribedVariety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/HumanLanguageVariety> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DescribedVariety> <http://www.w3.org/2000/01/rdf-schema#label> "DescribedVariety"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DescribedVariety> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DescribedVariety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/DescribedVariety> <http://www.w3.org/2000/01/rdf-schema#comment> "DescribedVariety is the class of  distinct human languages or language varieties as recognized by a linguist or a particular linguistic community, but not necessarily recognized by the ISO 639-3 standard. This category allows a language to be described even though it is not (yet) included in ISO 639-3."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/LinguisticDataStructure> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A FeatureSpecification is a data structure that groups together a linguistic feature with a value [Maxwell, Simons and Hayashi 2000]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/FeatureSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "FeatureSpecification"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/realization> <http://www.w3.org/2000/01/rdf-schema#label> "realization"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/realization> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linguistics/gold/LinguisticExpression> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/realization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/realization> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/realization> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation holding between a linguistic unit and its physical form, either a spoken, written or signed expression."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/realization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linguistics/gold/LinguisticUnit> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasTranslationLine> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linguistics/gold/dataStructureRelation> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasTranslationLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasTranslationLine> <http://www.w3.org/2000/01/rdf-schema#label> "hasTranslationLine"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasTranslationLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasTranslationLine> <http://www.w3.org/2000/01/rdf-schema#comment> "The binary relation holding between an instance of interlinear glossed text and a linguistic unit (clause, phrase, etc.) acting as a free translation of the source text from the IGT instance."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticDataStructure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticDataStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Abstract> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticDataStructure> <http://www.w3.org/2000/01/rdf-schema#label> "LinguisticDataStructure"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticDataStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "A linguistic data structure is an abstract container for grouping together instances of linguistic data, usually to suit a particular theory or computational implementation. Examples include: feature structures, lexical entries, and paradigms."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LinguisticDataStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasGrammar> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasGrammar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linguistics/gold/LinguisticSign> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasGrammar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasGrammar> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linguistics/gold/GrammarUnit> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasGrammar> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation that holds between a LinguisticSign and a GrammaticalUnit."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/hasGrammar> <http://www.w3.org/2000/01/rdf-schema#label> "hasGrammar"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/constituents> <http://www.w3.org/2000/01/rdf-schema#label> "constituents"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/constituents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/constituents> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation holding between a linguistic unit and a list (rdf:Seq) of its constituents."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/constituents> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/constituents> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linguistics/gold/LinguisticUnit> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AttestedVariety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AttestedVariety> <http://www.w3.org/2000/01/rdf-schema#label> "AttestedVariety"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AttestedVariety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/HumanLanguageVariety> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AttestedVariety> <http://www.w3.org/2000/01/rdf-schema#comment> "A linguistic form for which there is evidence of present or past use. Attestation refers to something that is found in actual recorded usage, compared with the hypothetical predictions of grammar or the intuitive (but otherwise unsupported) observations of the linguist.[Crystal 2003: 41]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/AttestedVariety> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linkingyou/about-executive> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a group or organisation to a page about the senior staff, be it Microsoft's senior staff or the committee members of a university club. This was not a linkingyou term."@en <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/about-executive> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Document> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/about-executive> <http://purl.org/dc/terms/subject> <http://purl.org/linkingyou/extended> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/about-executive> <http://www.w3.org/2000/01/rdf-schema#label> "executive page"@en <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/about-executive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/about-executive> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linkingyou/> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/about-executive> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/about-executive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/depts> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a group or organisation to a document describing its parts. This is not a linkingyou term but was added as the existing terms were only applicable to academia."@en <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/depts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/depts> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Document> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/depts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/depts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/depts> <http://www.w3.org/2000/01/rdf-schema#label> "departments page"@en <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/depts> <http://purl.org/dc/terms/subject> <http://purl.org/linkingyou/core> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/depts> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linkingyou/> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/uk-ico-publication-scheme> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Document> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/uk-ico-publication-scheme> <http://www.w3.org/2000/01/rdf-schema#label> "ICO publication scheme"@en <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/uk-ico-publication-scheme> <http://www.w3.org/2000/01/rdf-schema#comment> "[Generally only for UK public sector] A link to the publication scheme for this organisation as described by the UK Information Commissioner's Office. See http://www.ico.org.uk/for_organisations/freedom_of_information/guide/publication_scheme for more information."@en <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/uk-ico-publication-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/uk-ico-publication-scheme> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linkingyou/> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/uk-ico-publication-scheme> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/uk-ico-publication-scheme> <http://purl.org/dc/terms/subject> <http://purl.org/linkingyou/uk> <http://purl.org/linkingyou/> .
+<http://purl.org/linkingyou/uk-ico-publication-scheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linkingyou/> .
+<http://purl.org/lobid/lv#fulltextOnline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#fulltextOnline> <http://www.w3.org/2000/01/rdf-schema#label> "Fulltext online"@en <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#fulltextOnline> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/lobid/lv> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#fulltextOnline> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Document> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#fulltextOnline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dc/terms/BibliographicResource> <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#fulltextOnline> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a bibliographic resource to an online resource (full text in HTML, PDFs or landing pages in OA repositories, on publishers' websites etc.) that represents the full text of the bibliographic resource or contains a link to a full text of the resource. "@en <http://purl.org/lobid/lv> .
+<http://purl.org/lobid/lv#fulltextOnline> <http://www.w3.org/2000/01/rdf-schema#label> "Online-Volltext"@de <http://purl.org/lobid/lv> .
+<http://purl.org/commerce#costs> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en <http://purl.org/media> .
+<http://purl.org/commerce#costs> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to a\n            method of paying for a full version of the media recording."@en <http://purl.org/media> .
+<http://purl.org/commerce#costs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/media> .
+<http://purl.org/media#sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/media> .
+<http://purl.org/media#sample> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to a\n            sample file or stream of the media recording."@en <http://purl.org/media> .
+<http://purl.org/media#sample> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en <http://purl.org/media> .
+<http://purl.org/commerce#payment> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to a\n            method of paying for a full version of the media recording."@en <http://purl.org/media> .
+<http://purl.org/commerce#payment> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en <http://purl.org/media> .
+<http://purl.org/commerce#payment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/media> .
+<http://purl.org/media#download> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en <http://purl.org/media> .
+<http://purl.org/media#download> <http://www.w3.org/2000/01/rdf-schema#comment> "A link to a\n            complete audio file representation of the media recording."@en <http://purl.org/media> .
+<http://purl.org/media#download> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/media> .
+<http://purl.org/muto/core#tagMeaning> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/muto/core#> <http://purl.org/muto/core> .
+<http://purl.org/muto/core#tagMeaning> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/muto/core#Tag> <http://purl.org/muto/core> .
+<http://purl.org/muto/core#tagMeaning> <http://www.w3.org/2000/01/rdf-schema#comment> "The meaning of a tag can be expressed by a link to a well-defined resource. This can be any resource that clarifies the meaning of the tag (e.g. some DBpedia resource)."@en <http://purl.org/muto/core> .
+<http://purl.org/muto/core#tagMeaning> <http://www.w3.org/2000/01/rdf-schema#label> "tag meaning"@en <http://purl.org/muto/core> .
+<http://purl.org/muto/core#tagMeaning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/muto/core> .
+<http://purl.org/net/lio#hasArtisticElement> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/lio#PictorialElement> <http://purl.org/net/lio> .
+<http://purl.org/net/lio#hasArtisticElement> <http://www.w3.org/2000/01/rdf-schema#label> "has artistic element"@en <http://purl.org/net/lio> .
+<http://purl.org/net/lio#hasArtisticElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between an image and a pictorial element in the image (a line, shape, form, texture) which is used for pictorial or artistic effect. "@en <http://purl.org/net/lio> .
+<http://purl.org/net/lio#hasArtisticElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/net/lio> .
+<http://purl.org/ontology/cco/core#habit> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/cco/core#CognitiveCharacteristic> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#habit> <http://www.w3.org/2000/01/rdf-schema#label> "has habit"@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#habit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#habit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#habit> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#habit> <http://www.w3.org/2000/01/rdf-schema#comment> "A link between an agent and a cognitive characteristic description"@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#habit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/cco/core#> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#habit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#agent> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#agent> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ontology/cco/core#habit> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#agent> <http://www.w3.org/2000/01/rdf-schema#comment> "A link from a mined cognitive characteristic to the related person"@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#agent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#agent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/cco/core#CognitiveCharacteristic> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#agent> <http://www.w3.org/2000/01/rdf-schema#label> "has agent"@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#agent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/cco/core#> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#agent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#evidence> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#evidence> <http://www.w3.org/2000/01/rdf-schema#domain> _:B42ce8370df53714538c728ca68fe19e1 <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#evidence> <http://www.w3.org/2000/01/rdf-schema#comment> "A link between a context and evidence supporting the interpretation of habits in a context"@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#evidence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/cco/core#> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#evidence> <http://www.w3.org/2000/01/rdf-schema#domain> _:B6042ab7264d7e0e750923067ef67617e <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#evidence> <http://www.w3.org/2000/01/rdf-schema#label> "has evidence"@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#evidence> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/event.owl#factor> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#evidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#statistical_item> <http://www.w3.org/2000/01/rdf-schema#label> "has statistical item"@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#statistical_item> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/NET/scovo#Item> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#statistical_item> <http://www.w3.org/2000/01/rdf-schema#comment> "A link from a cognitive characteristic to statistics about itself"@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#statistical_item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#statistical_item> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/cco/core#CognitiveCharacteristic> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#statistical_item> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing"@en <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#statistical_item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/ontology/cco/core#> .
+<http://purl.org/ontology/cco/core#statistical_item> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/cco/core#> <http://purl.org/ontology/cco/core#> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+lin.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+lin.nt> <https://w3id.org/tree#relation> _:BaX2Bline .
+_:BaX2Bline <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bline <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+line.nt> .
+_:BaX2Bline <https://w3id.org/tree#value> "a" .
+_:BaX2Bline <https://w3id.org/tree#value> "line" .
+_:BaX2Bline <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+line.nt> <https://w3id.org/tree#remainingItems> "75"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+lin.nt> <https://w3id.org/tree#relation> _:BaX2Bling .
+_:BaX2Bling <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bling <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+ling.nt> .
+_:BaX2Bling <https://w3id.org/tree#value> "a" .
+_:BaX2Bling <https://w3id.org/tree#value> "ling" .
+_:BaX2Bling <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+ling.nt> <https://w3id.org/tree#remainingItems> "49"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+lin.nt> <https://w3id.org/tree#relation> _:BaX2Blink .
+_:BaX2Blink <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Blink <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+link.nt> .
+_:BaX2Blink <https://w3id.org/tree#value> "a" .
+_:BaX2Blink <https://w3id.org/tree#value> "link" .
+_:BaX2Blink <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+link.nt> <https://w3id.org/tree#remainingItems> "211"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+lin.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+lin.nt> <https://w3id.org/tree#relation> _:BaX2Bline .
+_:BaX2Bline <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bline <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+line.nt> .
+_:BaX2Bline <https://w3id.org/tree#value> "a" .
+_:BaX2Bline <https://w3id.org/tree#value> "line" .
+_:BaX2Bline <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+line.nt> <https://w3id.org/tree#remainingItems> "75"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+lin.nt> <https://w3id.org/tree#relation> _:BaX2Bling .
+_:BaX2Bling <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bling <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+ling.nt> .
+_:BaX2Bling <https://w3id.org/tree#value> "a" .
+_:BaX2Bling <https://w3id.org/tree#value> "ling" .
+_:BaX2Bling <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+ling.nt> <https://w3id.org/tree#remainingItems> "49"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+lin.nt> <https://w3id.org/tree#relation> _:BaX2Blink .
+_:BaX2Blink <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Blink <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+link.nt> .
+_:BaX2Blink <https://w3id.org/tree#value> "a" .
+_:BaX2Blink <https://w3id.org/tree#value> "link" .
+_:BaX2Blink <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+link.nt> <https://w3id.org/tree#remainingItems> "211"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+lin.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+lin.nt> <https://w3id.org/tree#relation> _:BaX2Bline .
+_:BaX2Bline <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bline <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+line.nt> .
+_:BaX2Bline <https://w3id.org/tree#value> "a" .
+_:BaX2Bline <https://w3id.org/tree#value> "line" .
+_:BaX2Bline <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+line.nt> <https://w3id.org/tree#remainingItems> "75"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+lin.nt> <https://w3id.org/tree#relation> _:BaX2Bling .
+_:BaX2Bling <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bling <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+ling.nt> .
+_:BaX2Bling <https://w3id.org/tree#value> "a" .
+_:BaX2Bling <https://w3id.org/tree#value> "ling" .
+_:BaX2Bling <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+ling.nt> <https://w3id.org/tree#remainingItems> "49"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+lin.nt> <https://w3id.org/tree#relation> _:BaX2Blink .
+_:BaX2Blink <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Blink <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+link.nt> .
+_:BaX2Blink <https://w3id.org/tree#value> "a" .
+_:BaX2Blink <https://w3id.org/tree#value> "link" .
+_:BaX2Blink <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+link.nt> <https://w3id.org/tree#remainingItems> "211"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+lin.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+lin.nt> <https://w3id.org/tree#relation> _:BaX2Bline .
+_:BaX2Bline <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bline <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+line.nt> .
+_:BaX2Bline <https://w3id.org/tree#value> "a" .
+_:BaX2Bline <https://w3id.org/tree#value> "line" .
+_:BaX2Bline <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+line.nt> <https://w3id.org/tree#remainingItems> "75"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+lin.nt> <https://w3id.org/tree#relation> _:BaX2Bling .
+_:BaX2Bling <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bling <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+ling.nt> .
+_:BaX2Bling <https://w3id.org/tree#value> "a" .
+_:BaX2Bling <https://w3id.org/tree#value> "ling" .
+_:BaX2Bling <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+ling.nt> <https://w3id.org/tree#remainingItems> "49"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+lin.nt> <https://w3id.org/tree#relation> _:BaX2Blink .
+_:BaX2Blink <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Blink <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+link.nt> .
+_:BaX2Blink <https://w3id.org/tree#value> "a" .
+_:BaX2Blink <https://w3id.org/tree#value> "link" .
+_:BaX2Blink <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+link.nt> <https://w3id.org/tree#remainingItems> "211"^^<http://www.w3.org/2001/XMLSchema#int> .

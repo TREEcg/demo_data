@@ -1,0 +1,258 @@
+<http://data.europa.eu/eli/ontology#version_date> <http://www.w3.org/2000/01/rdf-schema#comment> "The point-in-time at which the provided description of the legislation is valid."@en <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#version_date> <http://www.w3.org/2002/07/owl#versionInfo> "created in v1.0" <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#version_date> <http://www.w3.org/2004/02/skos/core#historyNote> "v1.1 : improved definition"@en <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#version_date> <http://www.w3.org/2002/07/owl#versionInfo> "modified in v1.1"@en <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#version_date> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bc02ae1548b1500d48d587e96fe158a82 <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#version_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#version_date> <http://www.w3.org/2000/01/rdf-schema#label> "version date"@en <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#version_date> <http://data.europa.eu/eli/ontology#specificPropertyOf> <http://purl.org/dc/terms/date> <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#version_date> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#version_date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://data.europa.eu/eli/ontology> .
+<https://w3id.org/seas/connectsSystemAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a connection to one of the connection points at which it connects a system."@en <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsSystemAt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/SystemOntology> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsSystemAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/seas/Connection> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsSystemAt> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/seas/connectsSystemThrough> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsSystemAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsSystemAt> <http://www.w3.org/2000/01/rdf-schema#label> "connects system at"@en <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsSystemAt> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsSystemAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/seas/ConnectionPoint> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/seas/FeatureOfInterest> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Connection Point"@en <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of connection points of systems, at which they may be connected to other systems.\r\n\r\nThis class qualifies properties `seas:connectsSystem` and `seas:connectedThrough`.\r\n\r\nA connection point belongs to exactly one system.\r\n\r\n\r\nFor example, an electric vehicle service equipment may have three power connection points: two different kinds of plugs that enable to charge electric vehicles, and a three phase power bus connection point to the grid:\r\n\r\n```\r\n<electric_vehicle> seas:connectsAt <plug_high_voltage> , <normal_plug> , <three_phase_connection_point> .\r\n```\r\n\r\n\r\nAny system connected through a connection is connected at one of its connection points to the connection:\r\n  if:\r\n\r\n```\r\n<system> a seas:System .\r\n<system> seas:connectedThrough <connection> .\r\n<connection> a seas:Connection .\r\n```\r\n\r\n  then there exists `_:connectionPoint` such that:\r\n\r\n```\r\n<system> seas:connectsAt _:connectionPoint .\r\n\r\n_:connectionPoint seas:connectsSystemAt <connection> .\r\n```\r\n\r\n\r\nThe system of a connection point that is connected through a connection is itself connected through the connection:. If:\r\n\r\n```\r\n<connection> a seas:Connection .\r\n<system> a seas:System .\r\n<connectionPoint> a seas:ConnectionPoint ;\r\n<connectionPoint> seas:connectsSystemThrough <connection> .\r\n```\r\n\r\nthen it is true that:\r\n\r\n```\r\n<connectionPoint> seas:connectionPointOf <system> .\r\n```\r\n\r\nFigure below illustrates connection points of systems:\r\n\r\n[![Connection points of systems](https://w3id.org/seas/system3.png)](https://w3id.org/seas/system3.png)\r\n\r\n"@en <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/SystemOntology> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/seas/Connection> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/seas/System> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B44e9b9f7ca867b412837b7201018dd2d <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsAt> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/seas/connectionPointOf> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/seas/ConnectionPoint> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a system to one of the connection points at which it connects."@en <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsAt> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsAt> <http://www.w3.org/2000/01/rdf-schema#label> "connects at"@en <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsAt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/SystemOntology> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/seas/System> <https://w3id.org/seas/SystemOntology> .
+<http://purl.org/iot/vocab/m3-lite#Power> <http://www.w3.org/2000/01/rdf-schema#label> "Power"@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#Power> <http://www.w3.org/2000/01/rdf-schema#comment> "It is the rate, per unit time, at which electrical energy is transferred by an electric circuit."@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#Power> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#Power> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/ssnx/qu/qu#QuantityKind> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#Speed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#Speed> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://purl.oclc.org/NET/ssnx/qu/quantity#speed" <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#Speed> <http://www.w3.org/2000/01/rdf-schema#label> "Speed"@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#Speed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/ssnx/qu/qu#QuantityKind> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#Speed> <http://www.w3.org/2000/01/rdf-schema#comment> "The rate at which someone or something moves or operates or is able to move or operate."@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#DewPointTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "The temperature at which dew forms and is a measure of atmospheric moisture. It is the temperature to which air must be cooled at constant pressure and water content to reach saturation. A higher dew point indicates more moisture in the air; a dew point greater than 20 Degree C (68 Degree F) is considered uncomfortable and greater than 22 Degree C (72 Degree F) is considered to be extremely humid."@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#DewPointTemperature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/iot/vocab/m3-lite#DewPoint> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#DewPointTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#DewPointTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Dew Point Temperature"@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://promsns.org/def/agr#RequirementLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "An RequirementLevel is the level at which an Agreement complels the Agents it affects to action. The initial instances of Imperative are taken from RFC2119."@en <http://promsns.org/def/agr> .
+<http://promsns.org/def/agr#RequirementLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://promsns.org/def/agr> .
+<http://promsns.org/def/agr#RequirementLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> <http://promsns.org/def/agr> .
+<http://promsns.org/def/agr#RequirementLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Requirement Level"@en <http://promsns.org/def/agr> .
+<http://schema.mobivoc.org/fillRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/fillRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/fillRate> <http://www.w3.org/2000/01/rdf-schema#comment> "The rate at which vehicles are entering the parking facility." <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/fillRate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.mobivoc.org/ParkingFacility> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/fillRate> <http://purl.org/dc/terms/modified> "2018-01-12"^^<http://www.w3.org/2001/XMLSchema#date> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/fillRate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/fillRate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/fillRate> <http://purl.org/dc/terms/created> "2017-05-10"^^<http://www.w3.org/2001/XMLSchema#date> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/fillRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/fillRate> <http://www.w3.org/2000/01/rdf-schema#label> "fill rate"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/exitRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/exitRate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/exitRate> <http://purl.org/dc/terms/modified> "2018-01-12"^^<http://www.w3.org/2001/XMLSchema#date> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/exitRate> <http://www.w3.org/2000/01/rdf-schema#label> "exit rate"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/exitRate> <http://purl.org/dc/terms/created> "2017-06-07"^^<http://www.w3.org/2001/XMLSchema#date> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/exitRate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.mobivoc.org/ParkingFacility> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/exitRate> <http://www.w3.org/2000/01/rdf-schema#comment> "The rate at which vehicles are exiting the parking facility." <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/exitRate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/exitRate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/exitRate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.mobivoc.org/> .
+<http://purl.org/dc/terms/Frequency> <http://www.w3.org/2000/01/rdf-schema#comment> "A rate at which something recurs."@en <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/Frequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/Frequency> <http://www.w3.org/2000/01/rdf-schema#label> "Frequency"@en <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/Frequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/Frequency> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#Frequency-001> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/Frequency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/Frequency> <http://purl.org/dc/terms/issued> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/Frequency> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#Frequency-001> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/Frequency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/Frequency> <http://purl.org/dc/terms/issued> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/Frequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/Frequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/Frequency> <http://www.w3.org/2000/01/rdf-schema#label> "Frequency"@en <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/Frequency> <http://www.w3.org/2000/01/rdf-schema#comment> "A rate at which something recurs."@en <http://purl.org/SemSur/> .
+<http://cookingbigdata.com/linkeddata/ccinstances#cpu_max_frecuency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://cookingbigdata.com/linkeddata/ccinstances> .
+<http://cookingbigdata.com/linkeddata/ccinstances#cpu_max_frecuency> <http://www.w3.org/2000/01/rdf-schema#comment> "Max turbo frequency is the maximum single core frequency at which the processor is capable of operating using Intel® Turbo Boost Technology. Frequency is measured in gigahertz (GHz), or billion cycles per second."@en <http://cookingbigdata.com/linkeddata/ccinstances> .
+<http://cookingbigdata.com/linkeddata/ccinstances#cpu_max_frecuency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> <http://cookingbigdata.com/linkeddata/ccinstances> .
+<http://cookingbigdata.com/linkeddata/ccinstances#cpu_max_frecuency> <http://www.w3.org/2000/01/rdf-schema#label> "CPU Max Frecuency"@en <http://cookingbigdata.com/linkeddata/ccinstances> .
+<http://cookingbigdata.com/linkeddata/ccinstances#cpu_max_frecuency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://cookingbigdata.com/linkeddata/ccinstances#cpu> <http://cookingbigdata.com/linkeddata/ccinstances> .
+<http://cookingbigdata.com/linkeddata/ccinstances#cpu_frecuency> <http://www.w3.org/2000/01/rdf-schema#comment> "Processor Base Frequency describes the rate at which the processor's transistors open and close. The processor base frequency is the operating point where TDP is defined. Frequency is measured in gigahertz (GHz), or billion cycles per second."@en <http://cookingbigdata.com/linkeddata/ccinstances> .
+<http://cookingbigdata.com/linkeddata/ccinstances#cpu_frecuency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://cookingbigdata.com/linkeddata/ccinstances#cpu> <http://cookingbigdata.com/linkeddata/ccinstances> .
+<http://cookingbigdata.com/linkeddata/ccinstances#cpu_frecuency> <http://www.w3.org/2000/01/rdf-schema#label> "CPU Frecuency"@en <http://cookingbigdata.com/linkeddata/ccinstances> .
+<http://cookingbigdata.com/linkeddata/ccinstances#cpu_frecuency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://cookingbigdata.com/linkeddata/ccinstances> .
+<http://cookingbigdata.com/linkeddata/ccinstances#cpu_frecuency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> <http://cookingbigdata.com/linkeddata/ccinstances> .
+<https://w3id.org/GConsent#atTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2006/time#Instant> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#atTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/GConsent#Consent> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#atTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/GConsent#hasContext> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#atTime> <http://www.w3.org/2000/01/rdf-schema#label> "at time"@en <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#atTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#atTime> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the instant at which the consent was created/given/changed."@en <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#atLocation> <http://www.w3.org/2000/01/rdf-schema#label> "at location"@en <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#atLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#atLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/prov#Location> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#atLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#atLocation> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#atLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/GConsent#Consent> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#atLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/GConsent#hasContext> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#atLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the location at which the consent was given."@en <https://w3id.org/GConsent> .
+<https://w3id.org/opentrafficlights#maxEndTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <https://w3id.org/opentrafficlights> .
+<https://w3id.org/opentrafficlights#maxEndTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The latest time possible at which the event state could change, except when unpredictable events relating to a pre-emption or priority call disrupt a currently active timing plan."@en <https://w3id.org/opentrafficlights> .
+<https://w3id.org/opentrafficlights#maxEndTime> <http://www.w3.org/2000/01/rdf-schema#label> "Maximum end time"@en <https://w3id.org/opentrafficlights> .
+<https://w3id.org/opentrafficlights#maxEndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <https://w3id.org/opentrafficlights> .
+<https://w3id.org/opentrafficlights#maxEndTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/opentrafficlights#SignalState> <https://w3id.org/opentrafficlights> .
+<https://w3id.org/opentrafficlights#minEndTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <https://w3id.org/opentrafficlights> .
+<https://w3id.org/opentrafficlights#minEndTime> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/opentrafficlights#SignalState> <https://w3id.org/opentrafficlights> .
+<https://w3id.org/opentrafficlights#minEndTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The earliest time possible at which the event state could change, except when unpredictable events relating to a pre-emption or priority call disrupt a currently active timing plan."@en <https://w3id.org/opentrafficlights> .
+<https://w3id.org/opentrafficlights#minEndTime> <http://www.w3.org/2000/01/rdf-schema#label> "Minimum end time"@en <https://w3id.org/opentrafficlights> .
+<https://w3id.org/opentrafficlights#minEndTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <https://w3id.org/opentrafficlights> .
+<https://w3id.org/arco/ontology/context-description/address> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description/address> <http://www.w3.org/2000/01/rdf-schema#label> "indirizzo"@it <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description/address> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/arco/ontology/context-description> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description/address> <http://www.w3.org/2000/01/rdf-schema#label> "address"@en <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description/address> <https://w3id.org/arco/ontology/catalogue/iccdNormTag> "ICCD Normativa Trasversale 4.00: TU/CDG/CDGI" <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description/address> <http://www.w3.org/2002/07/owl#versionInfo> "stable"@en <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description/address> <http://www.w3.org/2002/07/owl#versionInfo> "stabile"@it <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description/address> <http://www.w3.org/2000/01/rdf-schema#comment> "This property represents a specific type of contact at which the agent is available."@en <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description/address> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/arco/ontology/context-description/contacts> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description/address> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/onto/l0/Agent> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description/address> <http://www.w3.org/2000/01/rdf-schema#comment> "Questa proprietà rappresenta l'indirizzo di riferimento di un agente (persona, organizzazione), inteso come un tipo specifico di contatto presso il quale l'agente è reperibile."@it <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/denotative-description/isTimeIntervalValidFor> <http://www.w3.org/2000/01/rdf-schema#comment> "This property relates the time interval, at which a cultural entity technical status is valid, to that technical status, with regard to the moment in which the characteristics are observed."@en <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description/isTimeIntervalValidFor> <http://www.w3.org/2000/01/rdf-schema#comment> "Questa proprietà collega un intervallo temporale entro il quale è valido uno stato tecnico di un'entità culturale allo stato tecnico stesso, relativamente al momento in cui quelle caratteristiche sono state rilevate."@it <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description/isTimeIntervalValidFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description/isTimeIntervalValidFor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/italia/onto/TI/TimeInterval> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description/isTimeIntervalValidFor> <http://www.w3.org/2000/01/rdf-schema#label> "is time interval valid for"@en <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description/isTimeIntervalValidFor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/arco/ontology/denotative-description/CulturalEntityTechnicalStatus> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description/isTimeIntervalValidFor> <http://www.w3.org/2002/07/owl#versionInfo> "stable"@en <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description/isTimeIntervalValidFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/arco/ontology/denotative-description> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description/isTimeIntervalValidFor> <http://www.w3.org/2002/07/owl#versionInfo> "stabile"@it <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description/isTimeIntervalValidFor> <http://www.w3.org/2000/01/rdf-schema#label> "è intervallo di tempo valido per"@it <https://w3id.org/arco/ontology/denotative-description> .
+<http://schema.org/installUrl> <http://schema.org/domainIncludes> <http://schema.org/SoftwareApplication> <http://schema.org/> .
+<http://schema.org/installUrl> <http://schema.org/rangeIncludes> <http://schema.org/URL> <http://schema.org/> .
+<http://schema.org/installUrl> <http://www.w3.org/2000/01/rdf-schema#comment> "URL at which the app may be installed, if different from the URL of the item." <http://schema.org/> .
+<http://schema.org/installUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/installUrl> <http://www.w3.org/2000/01/rdf-schema#label> "installUrl" <http://schema.org/> .
+<http://schema.org/Course> <http://www.w3.org/2000/01/rdf-schema#comment> "A description of an educational course which may be offered as distinct instances at which take place at different times or take place at different locations, or be offered through different media or modes of study. An educational course is a sequence of one or more educational events and/or creative works which aims to build knowledge, competence or ability of learners." <http://schema.org/> .
+<http://schema.org/Course> <http://www.w3.org/2000/01/rdf-schema#label> "Course" <http://schema.org/> .
+<http://schema.org/Course> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/Course> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> <http://schema.org/> .
+<http://schema.org/commentTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time at which the UserComment was made." <http://schema.org/> .
+<http://schema.org/commentTime> <http://schema.org/domainIncludes> <http://schema.org/UserComments> <http://schema.org/> .
+<http://schema.org/commentTime> <http://schema.org/rangeIncludes> <http://schema.org/DateTime> <http://schema.org/> .
+<http://schema.org/commentTime> <http://schema.org/rangeIncludes> <http://schema.org/Date> <http://schema.org/> .
+<http://schema.org/commentTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/commentTime> <http://www.w3.org/2000/01/rdf-schema#label> "commentTime" <http://schema.org/> .
+<http://schema.org/dateSent> <http://schema.org/rangeIncludes> <http://schema.org/DateTime> <http://schema.org/> .
+<http://schema.org/dateSent> <http://www.w3.org/2000/01/rdf-schema#comment> "The date/time at which the message was sent." <http://schema.org/> .
+<http://schema.org/dateSent> <http://schema.org/domainIncludes> <http://schema.org/Message> <http://schema.org/> .
+<http://schema.org/dateSent> <http://www.w3.org/2000/01/rdf-schema#label> "dateSent" <http://schema.org/> .
+<http://schema.org/dateSent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/replyToUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/replyToUrl> <http://www.w3.org/2000/01/rdf-schema#label> "replyToUrl" <http://schema.org/> .
+<http://schema.org/replyToUrl> <http://schema.org/rangeIncludes> <http://schema.org/URL> <http://schema.org/> .
+<http://schema.org/replyToUrl> <http://www.w3.org/2000/01/rdf-schema#comment> "The URL at which a reply may be posted to the specified UserComment." <http://schema.org/> .
+<http://schema.org/replyToUrl> <http://schema.org/domainIncludes> <http://schema.org/UserComments> <http://schema.org/> .
+<http://schema.org/dateRead> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/dateRead> <http://www.w3.org/2000/01/rdf-schema#label> "dateRead" <http://schema.org/> .
+<http://schema.org/dateRead> <http://schema.org/domainIncludes> <http://schema.org/Message> <http://schema.org/> .
+<http://schema.org/dateRead> <http://www.w3.org/2000/01/rdf-schema#comment> "The date/time at which the message has been read by the recipient if a single recipient exists." <http://schema.org/> .
+<http://schema.org/dateRead> <http://schema.org/rangeIncludes> <http://schema.org/Date> <http://schema.org/> .
+<http://schema.org/dateRead> <http://schema.org/rangeIncludes> <http://schema.org/DateTime> <http://schema.org/> .
+<http://schema.org/acceptsReservations> <http://schema.org/rangeIncludes> <http://schema.org/Boolean> <http://schema.org/> .
+<http://schema.org/acceptsReservations> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a FoodEstablishment accepts reservations. Values can be Boolean, an URL at which reservations can be made or (for backwards compatibility) the strings <code>Yes</code> or <code>No</code>." <http://schema.org/> .
+<http://schema.org/acceptsReservations> <http://schema.org/domainIncludes> <http://schema.org/FoodEstablishment> <http://schema.org/> .
+<http://schema.org/acceptsReservations> <http://schema.org/rangeIncludes> <http://schema.org/Text> <http://schema.org/> .
+<http://schema.org/acceptsReservations> <http://www.w3.org/2000/01/rdf-schema#label> "acceptsReservations" <http://schema.org/> .
+<http://schema.org/acceptsReservations> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/acceptsReservations> <http://schema.org/rangeIncludes> <http://schema.org/URL> <http://schema.org/> .
+<https://saref.etsi.org/saref4bldg/FlowTerminal> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://w3id.org/ifc/IFC4_ADD1#IfcFlowTerminal" <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/FlowTerminal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/FlowTerminal> <http://www.w3.org/2000/01/rdf-schema#comment> "The distribution flow element FlowTerminal defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment."@en <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/FlowTerminal> <http://www.w3.org/2000/01/rdf-schema#label> "Flow terminal"@en <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/FlowTerminal> <http://www.w3.org/ns/prov#hadPrimarySource> <http://www.buildingsmart-tech.org/ifc/IFC4/Add1/html/schema/ifcsharedbldgserviceelements/lexical/ifcflowterminal.htm> <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/FlowTerminal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/saref4bldg/DistributionFlowDevice> <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/thermalTransmittance> <http://www.w3.org/2000/01/rdf-schema#comment> "Rate at which energy is transmitted through a body. Usually measured in Watts/m2 Kelvin."@en <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/thermalTransmittance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/thermalTransmittance> <http://www.w3.org/2000/01/rdf-schema#label> "thermal transmittance"@en <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/teTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/teTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximum time (in s) at which the motor could run with locked rotor when the motor is used in an EX-environment. The time indicates that a protective device should trip before this time when the starting current of the motor is slowing through the device."@en <https://saref.etsi.org/saref4bldg/> .
+<https://saref.etsi.org/saref4bldg/teTime> <http://www.w3.org/2000/01/rdf-schema#label> "te time"@en <https://saref.etsi.org/saref4bldg/> .
+<https://w3id.org/idsa/core/Site> <http://www.w3.org/2000/01/rdf-schema#label> "Site"@en <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/Site> <http://www.w3.org/2000/01/rdf-schema#comment> "An office or other premise at which the organization is located"@en <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/Site> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Site> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/Site> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/path> <http://www.w3.org/2000/01/rdf-schema#comment> "Relative path, topic or queue at which the content is published by the related host."@en <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/path> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/idsa/core/Endpoint> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/path> <http://www.w3.org/2000/01/rdf-schema#label> "path"@en <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/path> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/path> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/idsa/core> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#DewPointTemperature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#DewPointTemperature> <http://www.w3.org/2000/01/rdf-schema#comment> "The temperature at which dew forms and is a measure of atmospheric moisture. It is the temperature to which air must be cooled at constant pressure and water content to reach saturation. A higher dew point indicates more moisture in the air; a dew point greater than 20 Degree C (68 Degree F) is considered uncomfortable and greater than 22 Degree C (72 Degree F) is considered to be extremely humid."@en <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#DewPointTemperature> <http://www.w3.org/2000/01/rdf-schema#label> "Dew Point Temperature"@en <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#DewPointTemperature> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/vocab/m3-lite#> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#DewPointTemperature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/iot/vocab/iot-taxonomy-lite#DewPoint> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Speed> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://purl.oclc.org/NET/ssnx/qu/quantity#speed" <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Speed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Speed> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Speed> <http://www.w3.org/2000/01/rdf-schema#label> "Speed"@en <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Speed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/vocab/m3-lite#> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Speed> <http://www.w3.org/2000/01/rdf-schema#comment> "The rate at which someone or something moves or operates or is able to move or operate."@en <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Power> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/iot/vocab/m3-lite#> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Power> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/sosa/ObservableProperty> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Power> <http://www.w3.org/2000/01/rdf-schema#comment> "It is the rate, per unit time, at which electrical energy is transferred by an electric circuit."@en <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Power> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://purl.org/iot/vocab/iot-taxonomy-lite#Power> <http://www.w3.org/2000/01/rdf-schema#label> "Power"@en <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<https://w3id.org/sbeo#TransitionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#TransitionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sbeo#RoutePoint> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#TransitionPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "A point at which person passes from one place to the next."@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#TransitionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Transition Point"@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#atTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time at which an activity or event occurred."@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#atTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#atTime> <http://www.w3.org/2000/01/rdf-schema#label> "At Time"@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#atTime> <http://www.w3.org/2000/01/rdf-schema#domain> _:B37604e35e229a03035653776a97c4c0c <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#atTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#endedAtTime> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <https://w3id.org/sbeo#startedAtTime> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#endedAtTime> <http://www.w3.org/2000/01/rdf-schema#domain> _:B893beb4819485375912a2d55905ea897 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#endedAtTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#endedAtTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time at which an activity ended."@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#endedAtTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#endedAtTime> <http://www.w3.org/2000/01/rdf-schema#label> "Ended At Time"@en <https://w3id.org/sbeo> .
+<http://purl.org/vocab/cpsv#physicallyAvailableAt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/cpsv#> <https://saref.etsi.org/saref4city/> .
+<http://purl.org/vocab/cpsv#physicallyAvailableAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://saref.etsi.org/saref4city/> .
+<http://purl.org/vocab/cpsv#physicallyAvailableAt> <http://www.w3.org/2000/01/rdf-schema#label> "physically available at"@en <https://saref.etsi.org/saref4city/> .
+<http://purl.org/vocab/cpsv#physicallyAvailableAt> <http://www.w3.org/2000/01/rdf-schema#comment> "A physical location at which a user may interact with the Public Service."@en <https://saref.etsi.org/saref4city/> .
+<https://saref.etsi.org/saref4watr/operatesAtRadioFrequency> <http://www.w3.org/2000/01/rdf-schema#comment> "The radio frequency at which a device operates."@en <https://saref.etsi.org/saref4watr/> .
+<https://saref.etsi.org/saref4watr/operatesAtRadioFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "operates at radio frequency"@en <https://saref.etsi.org/saref4watr/> .
+<https://saref.etsi.org/saref4watr/operatesAtRadioFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://saref.etsi.org/saref4watr/> .
+<https://saref.etsi.org/saref4syst/ConnectionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/ConnectionPoint> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4syst/Connection> <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/ConnectionPoint> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4syst/System> <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Connection Point"@en <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of connection points of systems, at which they may be connected to other systems. This class qualifies properties s4syst:connectsSystem and s4syst:connectedThrough. A connection point belongs to exactly one system. Any system connected through a connection is connected at one of its connection points to the connection. The system of a connection point that is connected through a connection is itself connected through the connection."@en <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf2238fafa28b0f5b4a09331ae93a5755 <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/connectsSystemAt> <http://www.w3.org/2000/01/rdf-schema#label> "connects system at"@en <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/connectsSystemAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4syst/Connection> <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/connectsSystemAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a connection to one of the connection points at which it connects a system."@en <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/connectsSystemAt> <http://www.w3.org/2002/07/owl#inverseOf> <https://saref.etsi.org/saref4syst/connectsSystemThrough> <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/connectsSystemAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/connectsSystemAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/saref4syst/ConnectionPoint> <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/connectsAt> <http://www.w3.org/2000/01/rdf-schema#label> "connects at"@en <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/connectsAt> <http://www.w3.org/2002/07/owl#inverseOf> <https://saref.etsi.org/saref4syst/connectionPointOf> <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/connectsAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://saref.etsi.org/saref4syst/ConnectionPoint> <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/connectsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/connectsAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/connectsAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a system to one of the connection points at which it connects."@en <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/connectsAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://saref.etsi.org/saref4syst/System> <https://saref.etsi.org/saref4syst/> .

@@ -1,0 +1,1184 @@
+<http://open-services.net/ns/asset#artifactFactory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open-services.net/ns/asset#> <http://open-services.net/ns/asset#> .
+<http://open-services.net/ns/asset#artifactFactory> <http://www.w3.org/2000/01/rdf-schema#label> "artifactFactory" <http://open-services.net/ns/asset#> .
+<http://open-services.net/ns/asset#artifactFactory> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://open-services.net/bin/view/Main/AssetMgSpecificationV2#Asset> <http://open-services.net/ns/asset#> .
+<http://open-services.net/ns/asset#artifactFactory> <http://www.w3.org/2000/01/rdf-schema#comment> "Resource URI used to post new artifacts to the asset." <http://open-services.net/ns/asset#> .
+<http://open-services.net/ns/asset#artifactFactory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open-services.net/ns/asset#> .
+<http://open-services.net/ns/asset#artifactFactory> <http://www.w3.org/2000/01/rdf-schema#range> <http://open-services.net/ns/asset#Asset> <http://open-services.net/ns/asset#> .
+<http://purl.org/imbi/ru-meta.owl#refact> <http://www.w3.org/2000/01/rdf-schema#comment> "When a class has been refactored into more atomic classes, then the original compound class is made obsolete and this deleted source class which gave birth to the new atomic child classes is mentioned here for all new atomic classes." <http://purl.org/imbi/ru-meta.owl> .
+<http://purl.org/imbi/ru-meta.owl#refact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://purl.org/imbi/ru-meta.owl> .
+<http://purl.org/net/opmv/ns#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "Process refers to an action or series of actions performed on or caused by artifacts, and resulting in new artifacts."@en <http://purl.org/net/opmv/ns#> .
+<http://purl.org/net/opmv/ns#Process> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/net/opmv/ns#Artifact> <http://purl.org/net/opmv/ns#> .
+<http://purl.org/net/opmv/ns#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/net/opmv/ns#> .
+<http://purl.org/net/opmv/ns#Process> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/net/opmv/ns> <http://purl.org/net/opmv/ns#> .
+<http://purl.org/net/opmv/ns#Process> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/net/opmv/ns#Agent> <http://purl.org/net/opmv/ns#> .
+<http://purl.org/net/opmv/ns#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process"@en <http://purl.org/net/opmv/ns#> .
+<http://purl.org/pav/previousVersion> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/hasVersion> <http://purl.org/pav/> .
+<http://purl.org/pav/previousVersion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/previousVersion> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/previousVersion> <http://purl.org/pav/> .
+<http://purl.org/pav/previousVersion> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/previousVersion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasRevisionOf> <http://purl.org/pav/> .
+<http://purl.org/pav/previousVersion> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/version> <http://purl.org/pav/> .
+<http://purl.org/pav/previousVersion> <http://www.w3.org/2000/01/rdf-schema#comment> "The previous version of a resource in a lineage. For instance a news article updated to correct factual information would point to the previous version of the article with pav:previousVersion. If however the content has significantly changed so that the two resources no longer share lineage (say a new article that talks about the same facts), they can instead be related using pav:derivedFrom.\n\nThis property is normally used in a functional way, although PAV does not formally restrict this. Earlier versions which are not direct ancestors of this resource may instead be provided using the superproperty pav:hasEarlierVersion.\n\nA version number of this resource can be provided using the data property pav:version.\n\nTo indicate that this version is a snapshot of a more general, non-versioned resource, e.g. \"Weather Today\" vs. \"Weather Today on 2013-12-07\", see pav:hasVersion.\n\nNote that it might be confusing to indicate pav:previousVersion from a resource that also has pav:hasVersion or pav:hasCurrentVersion relations, as such resources are intended to be a long-living and \"unversioned\", while pav:previousVersion is intended for use between permalink-like \"snapshots\" arranged in a linear history.  "@en <http://purl.org/pav/> .
+<http://purl.org/pav/previousVersion> <http://www.w3.org/2000/01/rdf-schema#label> "Previous version"@en <http://purl.org/pav/> .
+<http://purl.org/pav/previousVersion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/pav/hasEarlierVersion> <http://purl.org/pav/> .
+<http://purl.org/pav/previousVersion> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/derivedFrom> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdAt> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/creator> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent primary responsible for making the digital artifact or resource representation.\n\nThis property is distinct from forming the content, which is indicated with pav:contributedBy or its subproperties; pav:authoredBy, which identifies who authored the knowledge expressed by this resource; and pav:curatedBy, which identifies who curated the knowledge into its current form.\n\npav:createdBy is more specific than its superproperty dct:creator - which might or might not be interpreted to cover this creator.\n\nFor instance, the author wrote 'this species has bigger wings than normal' in his log book. The curator, going through the log book and identifying important knowledge, formalizes this as 'locus perculus has wingspan > 0.5m'. The creator enters this knowledge as a digital resource in the knowledge system, thus creating the digital artifact (say as JSON, RDF, XML or HTML).\n\nA different example is a news article. pav:authoredBy indicates the journalist who wrote the article. pav:contributedBy can indicate the artist who added an illustration. pav:curatedBy can indicate the editor who made the article conform to the news paper's style. pav:createdBy can indicate who put the article on the web site.\n\nThe software tool used by the creator to make the digital resource (say Protege, Wordpress or OpenOffice) can be indicated with pav:createdWith.\n\nThe date the digital resource was created can be indicated with pav:createdOn.\n\nThe location the agent was at when creating the digital resource can be made using pav:createdAt."@en <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/curatedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdOn> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/authoredBy> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/createdBy> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAttributedTo> <http://purl.org/pav/> .
+<http://purl.org/pav/createdBy> <http://www.w3.org/2000/01/rdf-schema#label> "Created by"@en <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The date of the last update of the resource. An update is a change which did not warrant making a new resource related using pav:previousVersion, for instance correcting a spelling mistake.\n\nThis property is normally used in a functional way, although PAV does not formally restrict this.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/createdOn> <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/lastUpdateOn> <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/2000/01/rdf-schema#label> "Last updated on"@en <http://purl.org/pav/> .
+<http://purl.org/pav/lastUpdateOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/previousVersion> <http://purl.org/pav/> .
+<http://purl.org/saws/ontology#isLooseRenderingOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://erlangen-crm.org/current/E33_Linguistic_Object> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isLooseRenderingOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "isCloseRenderingOf"@en <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isLooseRenderingOf> <http://www.w3.org/2000/01/rdf-schema#comment> "From one dialect or genre into another. This property specifies the source and target LinguisticObject involved (respectively) when rendering one LinguisticObject instance to express it in a related but different way (not necessarily in a different Language), resulting in a new LinguisticObject e.g. poetry into prose, or from one dialect to another, or a paraphrase being made. This property indicates that the new LinguisticObject is a loose rendering of the original LinguisticObject\n\nFor comparing between text of the same language, or comparing between different languages where the direction of translation is unknown or indirect"@en <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isLooseRenderingOf> <http://www.w3.org/2000/01/rdf-schema#label> "is loose rendering of"@en <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isLooseRenderingOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://erlangen-crm.org/current/E33_Linguistic_Object> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isLooseRenderingOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/saws/ontology#isVariantOf> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isLooseRenderingOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isCloseRenderingOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://erlangen-crm.org/current/E33_Linguistic_Object> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isCloseRenderingOf> <http://www.w3.org/2000/01/rdf-schema#comment> "From one dialect or genre into another. This property specifies the source and target LinguisticObject involved (respectively) when rendering one LinguisticObject instance to express it in a related but different way (not necessarily in a different Language), resulting in a new LinguisticObject e.g. poetry into prose, or from one dialect to another, or a paraphrase being made.  This property indicates that the new LinguisticObject is a close rendering of the original LinguisticObject.\n\nFor comparing between text of the same language, or comparing between different languages where the direction of translation is unknown or indirect"@en <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isCloseRenderingOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/saws/ontology#isVariantOf> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isCloseRenderingOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isCloseRenderingOf> <http://www.w3.org/2000/01/rdf-schema#label> "is close rendering of"@en <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isCloseRenderingOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://erlangen-crm.org/current/E33_Linguistic_Object> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#isCloseRenderingOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "isLooseRenderingOf"@en <http://purl.org/saws/ontology> .
+<http://purl.org/spar/doco/Paragraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Paragraph> <http://www.w3.org/2000/01/rdf-schema#comment> "A self-contained unit of discourse that deals with a particular point or idea. Paragraphs contains one or more sentences. The start of a paragraph is indicated by beginning on a new line, which may be indented or separated by a small vertical space by the preceding paragraph. "@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Paragraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbf3938bf9b29002d59fdc70c39a2de00 <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Paragraph> <http://www.w3.org/2000/01/rdf-schema#label> "paragraph"@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Title> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc55fd3bf1864afbdb07ee6b87dc67eeb <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Title> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B96be6206904dc12e4f5051f72db9c147 <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Title> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/DiscourseElement> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Title> <http://www.w3.org/2000/01/rdf-schema#comment> "A word, phrase or sentence that precedes and indicates the subject of a document or a document component - e.g., a book, a report, a news article, a chapter, a section or a table."@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Title> <http://www.w3.org/2000/01/rdf-schema#label> "title"@en <http://purl.org/spar/doco> .
+<http://prismstandard.org/namespaces/basic/2.0/section> <http://www.w3.org/2000/01/rdf-schema#comment> "The name or identifier of the section or part of a resource, for example Part 2 of Issue 6 of Volume 127 of the Journal of Cell Biology, or the Travel Section of a newspaper issue."@en <http://purl.org/spar/fabio> .
+<http://prismstandard.org/namespaces/basic/2.0/section> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/spar/fabio> .
+<http://prismstandard.org/namespaces/basic/2.0/section> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topDataProperty> <http://purl.org/spar/fabio> .
+<http://prismstandard.org/namespaces/basic/2.0/section> <http://www.w3.org/2000/01/rdf-schema#label> "section"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/JournalNewsItem> <http://www.w3.org/2000/01/rdf-schema#label> "journal news item"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/JournalNewsItem> <http://www.w3.org/2000/01/rdf-schema#comment> "A news report published in a journal issue."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/JournalNewsItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/NewsItem> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/JournalNewsItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B79682aa24cec95e892fb9320ecb45554 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/JournalNewsItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/CriticalEdition> <http://www.w3.org/2000/01/rdf-schema#label> "critical edition"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/CriticalEdition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/CriticalEdition> <http://www.w3.org/2000/01/rdf-schema#comment> "A new edition of a historical publication, edited by a scholar other than the original author, containing within the body text the supposedly best version of the original work, with footnotes detailing and commenting on textual variations between different versions, typically with an introduction to the original work written by the scholar, and with a bibliography listing related publications."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/CriticalEdition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Work> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MagazineNewsItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/NewsItem> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MagazineNewsItem> <http://www.w3.org/2000/01/rdf-schema#comment> "A news report published in a magazine issue."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MagazineNewsItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MagazineNewsItem> <http://www.w3.org/2000/01/rdf-schema#label> "magazine news item"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/MagazineNewsItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf8dd42b0f0485d4ebb2d36157c81d854 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Proposition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Proposition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Work> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Proposition> <http://www.w3.org/2000/01/rdf-schema#comment> "A proposal or proposition of a new conceptualization, hypothesis, idea, theory, activity or organisation."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Proposition> <http://www.w3.org/2000/01/rdf-schema#label> "proposition"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PatentApplication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PatentApplication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Specification> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PatentApplication> <http://www.w3.org/2000/01/rdf-schema#comment> "A formal disclosure of a new invention, made in application for a patent."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PatentApplication> <http://www.w3.org/2000/01/rdf-schema#label> "patent application"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Patent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Specification> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Patent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Patent> <http://www.w3.org/2000/01/rdf-schema#label> "patent"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Patent> <http://www.w3.org/2000/01/rdf-schema#comment> "A formal disclosure of a new invention approved by a governmental patent agency, made to register intellectual property rights, and to give exclusive rights to the inventor or assignee to manufacture, use, license or sell the invention for a certain number of years."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperNewsItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bad44e49db4b531330b4edbc30600521e <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperNewsItem> <http://www.w3.org/2000/01/rdf-schema#comment> "A news report published in a newspaper issue."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperNewsItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperNewsItem> <http://www.w3.org/2000/01/rdf-schema#label> "newspaper news item"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperNewsItem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/NewsItem> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PressRelease> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/NewsItem> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PressRelease> <http://www.w3.org/2000/01/rdf-schema#comment> "A news report published by an organization to provide information to journalists."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PressRelease> <http://www.w3.org/2000/01/rdf-schema#label> "press release"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/PressRelease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperArticle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperArticle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Article> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperArticle> <http://www.w3.org/2000/01/rdf-schema#label> "newspaper article"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperArticle> <http://www.w3.org/2000/01/rdf-schema#comment> "An article written by a journalist and published in a newspaper."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperArticle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be281cfacbd86d185cf7b7c6c55afd525 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperEditorial> <http://www.w3.org/2000/01/rdf-schema#label> "newspaper editorial"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperEditorial> <http://www.w3.org/2000/01/rdf-schema#comment> "An editorial published in an issue of a newspaper."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperEditorial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperEditorial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Editorial> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperEditorial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf345ffeb0e3279484ce3b2d995726c76 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Obituary> <http://www.w3.org/2000/01/rdf-schema#comment> "A news item reporting the death of a person, typically accompanied by an description of that person's life and contributions to his or her profession and to society at large."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Obituary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Obituary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/NewsReport> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Obituary> <http://www.w3.org/2000/01/rdf-schema#label> "obituary"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/DemoPaper> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/DemoPaper> <http://www.w3.org/2000/01/rdf-schema#comment> "A demonstration paper, typically describing a new product, service or system created as a result of research, usually presented during a conference or workshop."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/DemoPaper> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/DemoPaper> <http://www.w3.org/2000/01/rdf-schema#label> "demo paper"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperIssue> <http://www.w3.org/2000/01/rdf-schema#label> "newspaper issue"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperIssue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperIssue> <http://www.w3.org/2000/01/rdf-schema#comment> "A particular published  issue of a newspaper, identified by date, and sometimes also by place or time (e.g. 'Late London Edition')."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperIssue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B82a4c016f742b663ddf5b1b9bc3f8ddb <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/NewspaperIssue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/PeriodicalIssue> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/scoro/stakeholder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/stakeholder> <http://www.w3.org/2000/01/rdf-schema#comment> "The role held by an agent with an interest or concern in something, for example the creation of a new university."@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/stakeholder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/stakeholder> <http://www.w3.org/2000/01/rdf-schema#label> "stakeholder"@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/successor> <http://www.w3.org/2000/01/rdf-schema#comment> "The relationship held by an entity that succeeds another, for example a new electron microscope that replaces an out-dated one, a research project that follows on from a preceding project, or a faculty member who succeeds a colleague as head of department."@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/successor> <http://www.w3.org/2000/01/rdf-schema#label> "successor"@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/successor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/successor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/scoro/> .
+<http://purl.org/twc/vocab/conversion/ImplicitBundleEnhancement> <http://www.w3.org/2000/01/rdf-schema#comment> "Reasserts the property-value pair to belong to a new resource specified by the conversion:bundled_by property. An example of this enhancement would be the introduction of a geo:Point instance based on latitude and longitude properties." <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ImplicitBundleEnhancement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B64b2dcf075d821db1c0d9b7873c2734f <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ImplicitBundleEnhancement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/twc/vocab/conversion/SubjectEnhancement> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ImplicitBundleEnhancement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/twc/vocab/conversion/> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ImplicitBundleEnhancement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B08b4d14c053373d1649f1cae35f0cfb9 <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ImplicitBundleEnhancement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B402d45d13828b9a0c5a0c27281ed0c97 <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ImplicitBundleEnhancement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ImplicitBundleEnhancement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3f01ec63920809d9f02f1efc4a92fa64 <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ImplicitBundleEnhancement> <http://www.w3.org/2000/01/rdf-schema#label> "Implicit bundle enhancement" <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/uco/ns#ModificationOrMaintenance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#ModificationOrMaintenance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Event> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#ModificationOrMaintenance> <http://www.w3.org/2000/01/rdf-schema#label> "Modification or Maintenance"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#ModificationOrMaintenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#ModificationOrMaintenance> <http://www.w3.org/2000/01/rdf-schema#comment> "A modification or maintenance is an event in which a part of the vehicle is being replaced or removed, or a new part is being added.\nTypical examples are the replacement of the engine or the installation of a trailor-hitch."@en <http://purl.org/uco/ns#> .
+<http://purl.org/vocab/bio/0.1/Marriage> <http://www.w3.org/2004/02/skos/core#historyNote> _:B9a8579ccd444fc6bfaae233522aef6f4 <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/Marriage> <http://purl.org/vocab/vann/example> _:Bbaa457fe1d9654d5b5305c68246bb7c7 <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/Marriage> <http://www.w3.org/2002/07/owl#equivalentClass> <http://sw.opencyc.org/2009/04/07/concept/en/WeddingEvent_Generic> <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/Marriage> <http://www.w3.org/2000/01/rdf-schema#label> "Marriage"@en <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/Marriage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/Marriage> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/Marriage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/bio/0.1/GroupEvent> <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/Marriage> <http://www.w3.org/2000/01/rdf-schema#comment> "The event of creating uniting the participants into a new family unit, sometimes accompanied by a formal wedding ceremony. This is intended to cover a broad range of marriages including those given formal legal standing, common-law, or by convention. It is not restricted to marriages of two people of the opposite gender, but also includes polygamous and same-sex unions."@en <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/Marriage> <http://www.w3.org/2004/02/skos/core#changeNote> _:B7f24d04ddac9d5e65112beb7c2bc7560 <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/Marriage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/bio/0.1/> <http://purl.org/vocab/bio/0.1/> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://swrc.ontoware.org/ontology#url> <http://dx.doi.org/10.1111/j.1469-1809.1946.tb02354.x> <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://swrc.ontoware.org/ontology#publisher> <http://rdf.muninn-project.org/ontologies/appearances#blackwell_publishing_ltd> <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://swrc.ontoware.org/ontology#author> <http://rdf.muninn-project.org/ontologies/appearances#morant_g_m> <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://swrc.ontoware.org/ontology#date-added> "2012-11-29 11:44:48 -0500" <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://swrc.ontoware.org/ontology#author> <http://rdf.muninn-project.org/ontologies/appearances#grieve_j> <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://swrc.ontoware.org/ontology#volume> "13" <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://swrc.ontoware.org/ontology#number> "1" <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://swrc.ontoware.org/ontology#title> "RECORDS OF EYE COLOURS FOR BRITISH POPULATIONS AND A DESCRIPTION OF A NEW EYE-COLOUR SCALE" <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://swrc.ontoware.org/ontology#pages> "161-171" <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://www.w3.org/2000/01/rdf-schema#label> "GRIEVE, J., MORANT, G. M.. RECORDS OF EYE COLOURS FOR BRITISH POPULATIONS AND A DESCRIPTION OF A NEW EYE-COLOUR SCALE. Annals of Eugenics 13(1), Blackwell Publishing Ltd, 1946" <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#Publication> <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://www.cs.vu.nl/~mcaklein/onto/swrc-ext/2005/05#authorList> <http://www.cs.vu.nl/~mcaklein/bib2rdf//tempid#d53f411bfcf81f200c5c9f96b2a7464541af494c> <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://swrc.ontoware.org/ontology#issn> "2050-1439" <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://swrc.ontoware.org/ontology#date-modified> "2012-11-29 11:44:48 -0500" <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://swrc.ontoware.org/ontology#doi> "10.1111/j.1469-1809.1946.tb02354.x" <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://swrc.ontoware.org/ontology#Article> <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://swrc.ontoware.org/ontology#journal> "Annals of Eugenics" <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://rdf.muninn-project.org/ontologies/appearances#AHG_AHG2354> <http://swrc.ontoware.org/ontology#year> "1946" <http://rdf.muninn-project.org/ontologies/appearances> .
+<http://reference.data.gov.uk/def/central-government/Government> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://reference.data.gov.uk/def/central-government> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/Government> <http://www.w3.org/2000/01/rdf-schema#label> "Government"@en <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/Government> <http://www.w3.org/2000/01/rdf-schema#comment> "A group of ministers, headed by a Prime Minister or First Minister. In America, this would be called an Administration. Each general election brings about the creation of a new Government."@en <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/Government> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://reference.data.gov.uk/def/central-government> .
+<http://reference.data.gov.uk/def/central-government/Government> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/org#Organization> <http://reference.data.gov.uk/def/central-government> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#TransformationRight> <http://www.w3.org/2000/01/rdf-schema#comment> "It regulates actions that generate new works from previously existing ones. The results of this kind of actions are considered new works, and not mere reproductions, because they contribute something new, i.e. they are original as detailed in the Originality section. This right is concretised into the Adaptation Right and the Translation Right. The former creates a new work of a different type than the original one, e.g. a film from a novel. The latter generates a work of the same type but in a different language."@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#TransformationRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B02d7a4c227dfd74ce55dfd86175e1862 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#TransformationRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#TransformationRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#EconomicRights> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#TransformationRight> <http://www.w3.org/2000/01/rdf-schema#label> "Transformation Right"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#BroadcastersRights> <http://www.w3.org/2000/01/rdf-schema#comment> "Broadcasters have exclusive Broadcasting, Fixation and Reproduction Rights over their broadcasts. Here broadcasting of a broadcast is understood as re-broadcasting. Re-broadcasting is either simultaneous transmission of a broadcast of a program being received from another source or a new deferred broadcast of a formerly recorded program transmitted or received earlier. These rights must be considered in addition to the rights of copyright owners when applicable."@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#BroadcastersRights> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#RelatedRights> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#BroadcastersRights> <http://www.w3.org/2000/01/rdf-schema#label> "Broadcasters Rights"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#BroadcastersRights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Derive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb0bc900116007990e781f70223435933 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Derive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5531e3ce3295a45d9bdefcf4835aa15c <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Derive> <http://www.w3.org/2000/01/rdf-schema#label> "Derive"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Derive> <http://www.w3.org/2000/01/rdf-schema#comment> "RULE:\n(∀v:Derive)\n((∃mr:MoralRights)(∃er:EconomicRights)\n((∀p:Person)(∀w:Work)(∀w':Work)(∀m:Manifestation)(∀t:Time)\n(w≠w')∧agent(v,p)∧theme(v,w)∧result(v,m)∧aim(v,w')∧pointInTime(v,t)∧location(v,l)\n→\nagent(mr,p)∧agent(er,p)∧essence(mr,w')∧essence(er,m)∧start(mr,t)∧start(er,t)∧\nlocation(mr,l)∧location(er,l)∧isManifestationOf(m,w')∧isDerivationOf(w',w)))" <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Derive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B50f556fb5b5217cb8fa6f986004d3384 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Derive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bba178526e1b4bb075083c4e713ebf547 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Derive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1f5394c81ad12c36c55948d69bd41e17 <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Derive> <http://www.w3.org/2000/01/rdf-schema#comment> "This correspond to the act changing a work protected by copyright in order to generate a new work. The resulting derivations are themselves works protected by copyright. Derive is thus also a rights generation action, i.e. it causes new rights to arise as a new Work and its first Manifestation are generated as results of the Derive action. \nThe action is required to produce also the first Manifestation of the Work in order to have legal implications. If there is not a Manifestation, the derivation takes part just in the field of ideas, which are not regulated by copyright."@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Derive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#TransformationRight> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Derive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#Ambient> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Derive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B425931f30c08fe15dcaba004569506fa <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Derive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://securitytoolbox.appspot.com/stac#MandatoryAccessControl> <http://www.w3.org/2000/01/rdf-schema#comment> "Only an administrator is authorized to add a new access right to the system."@en <http://securitytoolbox.appspot.com/stac> .
+<http://securitytoolbox.appspot.com/stac#MandatoryAccessControl> <http://www.w3.org/2000/01/rdf-schema#label> "Mandatory Access Control (MAC)"@en <http://securitytoolbox.appspot.com/stac> .
+<http://securitytoolbox.appspot.com/stac#MandatoryAccessControl> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://securitytoolbox.appspot.com/stac#AccessControlMethod> <http://securitytoolbox.appspot.com/stac> .
+<http://securitytoolbox.appspot.com/stac#MandatoryAccessControl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://securitytoolbox.appspot.com/stac> .
+<http://spinrdf.org/sp#Create> <http://www.w3.org/2000/01/rdf-schema#comment> "An Update operation that creates a new empty graph with a name specified by sp:graphIRI. May have sp:silent set to true." <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#Create> <http://www.w3.org/2000/01/rdf-schema#label> "Create" <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#Create> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/sp#Update> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#Create> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/sp> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#command> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#label> "constructor" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be used to attach a \"constructor\" to a class. A constructor is a SPARQL CONSTRUCT query or INSERT/DELETE Update operation that can add initial values to the current instance. At execution time, the variable ?this is bound to the current instance. Tools can call constructors of a class and its superclasses when an instance of a class has been created. Constructors will also be used to initialize resources that have received a new rdf:type triple as a result of spin:rules firing." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#range> <http://spinrdf.org/spin#Rule> <http://spinrdf.org/spin> .
+<http://purl.org/ontology/bibo/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0cfa001964d077d182471845c09c16a5 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Article> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfc315824d174656b4fd66227c7eff9e0 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Article> <http://purl.obolibrary.org/obo/IAO_0000112> "A specific journal article" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Article> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0bbe145283312c0285c458111c208f10 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Article> <http://purl.obolibrary.org/obo/IAO_0000115> "A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a periodical or book" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf178028de1cc1268fd3b2ddc0d7ce934 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Article> <http://purl.obolibrary.org/obo/IAO_0000112> "Short Definition modified from the bibo ontology." <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Article> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/ontology/bibo/"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Article> <http://www.w3.org/2000/01/rdf-schema#label> "Article" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B499e07e469a783a2c1dc6b540ea5fbd3 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ontology/bibo/Document> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Article> <http://www.w3.org/2000/01/rdf-schema#comment> "A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a book or other publication, as a newspaper or magazine."@en <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B83c8fbcee5b97326786144c4d3300b92 <http://vivoweb.org/ontology/core> .
+<http://vocab.deri.ie/cogs#DestructiveMerge> <http://www.w3.org/2000/01/rdf-schema#comment> "Inputs the incoming data to the target data if the primary key of an incoming record matches with the key of an existing record, updating the matching target record. If the incoming record is a new record without a match with any existing record, it adds the incoming record to the target table. @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#DestructiveMerge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#Loading> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#DestructiveMerge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#DestructiveMerge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#DestructiveMerge> <http://www.w3.org/2000/01/rdf-schema#label> "DestructiveMerge" <http://vocab.deri.ie/cogs> .
+<http://vocab.gtfs.org/terms#NoTransfersAllowed> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#NoTransfersAllowed> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate that a passenger should buy a new ticket when transferring"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#NoTransfersAllowed> <http://www.w3.org/2000/01/rdf-schema#label> "No transfers allowed"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#NoTransfersAllowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.gtfs.org/terms#TransfersAllowedType> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#TwoTransfersAllowed> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#TwoTransfersAllowed> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate that a passenger should buy a new ticket when transferring for the third time"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#TwoTransfersAllowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.gtfs.org/terms#TransfersAllowedType> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#TwoTransfersAllowed> <http://www.w3.org/2000/01/rdf-schema#label> "Two transfers allowed"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#OneTransfersAllowed> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#OneTransfersAllowed> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate that a passenger should buy a new ticket when transferring a second time"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#OneTransfersAllowed> <http://www.w3.org/2000/01/rdf-schema#label> "No transfers allowed"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#OneTransfersAllowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.gtfs.org/terms#TransfersAllowedType> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#UnlimitedTransfersAllowed> <http://www.w3.org/2000/01/rdf-schema#label> "Unlimited transfers allowed"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#UnlimitedTransfersAllowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.gtfs.org/terms#TransfersAllowedType> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#UnlimitedTransfersAllowed> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#UnlimitedTransfersAllowed> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicate that a passenger should buy a new ticket when transferring for the third time"@en <http://vocab.gtfs.org/terms#> .
+<http://www.bbc.co.uk/ontologies/bbc/primaryContent> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.bbc.co.uk/ontologies/bbc/primaryContentOf> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/primaryContent> <http://www.w3.org/2000/01/rdf-schema#label> "primaryContent"@en-gb <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/primaryContent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.bbc.co.uk/ontologies/creativework/CreativeWork> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/primaryContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the fact that a web document has as primary content the creative work (e.g., a news story about Tom Daley is the primary content of a webpage)."@en-gb <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/primaryContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/primaryContent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.bbc.co.uk/ontologies/bbc/WebDocument> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/primaryContent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/bbc> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/hasOutput> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/bbc> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/hasOutput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.bbc.co.uk/ontologies/bbc/NewsService> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/hasOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/hasOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a regional BBC service with an audience facing output such as a News website."@en-gb <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/hasOutput> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.bbc.co.uk/ontologies/bbc/WebDocument> <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/bbc/hasOutput> <http://www.w3.org/2000/01/rdf-schema#label> "hasOutput"@en-gb <http://www.bbc.co.uk/ontologies/bbc> .
+<http://www.bbc.co.uk/ontologies/provenance/CreativeWorkGraph> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/provenance> <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.bbc.co.uk/ontologies/provenance/CreativeWorkGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.bbc.co.uk/ontologies/provenance/CreativeWorkGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of named graphs which contain the metadata for the CreativeWorks. For example all the metadata for a news story provided by a CMS will be contained in a single CreativeWorkGraph instance."@en-gb <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.bbc.co.uk/ontologies/provenance/CreativeWorkGraph> <http://www.w3.org/2000/01/rdf-schema#label> "CreativeWorkGraph"@en-gb <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.bbc.co.uk/ontologies/provenance/CreativeWorkGraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.bbc.co.uk/ontologies/provenance/Graph> <http://www.bbc.co.uk/ontologies/provenance> .
+<http://www.biopax.org/release/biopax-level3.owl#BindingFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.biopax.org/release/biopax-level3.owl#EntityFeature> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#BindingFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#BindingFeature> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#FragmentFeature> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#BindingFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition : An entity feature that represent the bound state of a physical entity. A pair of binding features represents a bond. \n\nRationale: A physical entity in a molecular complex is considered as a new state of an entity as it is structurally and functionally different. Binding features provide facilities for describing these states. Similar to other features, a molecule can have bound and not-bound states. \n\nUsage: Typically, binding features are present in pairs, each describing the binding characteristic for one of the interacting physical entities. One exception is using a binding feature with no paired feature to describe any potential binding. For example, an unbound receptor can be described by using a \"not-feature\" property with an unpaired binding feature as its value.  BindingSiteType and featureLocation allows annotating the binding location.\n\nIntraMolecular property should be set to \"true\" if the bond links two parts of the same molecule. A pair of binding features are still used where they are owned by the same physical entity. \n\nIf the binding is due to the covalent interactions, for example in the case of lipoproteins, CovalentBindingFeature subclass should be used instead of this class." <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.cidoc-crm.org/cidoc-crm/P38_deassigned> <http://www.w3.org/2000/01/rdf-schema#label> "ακύρωσε"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P38_deassigned> <http://www.w3.org/2000/01/rdf-schema#label> " hob Zuweisung auf von"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P38_deassigned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P38_deassigned> <http://www.w3.org/2000/01/rdf-schema#label> "отменил назначение"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P38_deassigned> <http://www.w3.org/2000/01/rdf-schema#label> "a désattribué"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P38_deassigned> <http://www.w3.org/2000/01/rdf-schema#label> "retirou a atribuição do"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P38_deassigned> <http://www.w3.org/2000/01/rdf-schema#label> "deassigned"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P38_deassigned> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E15_Identifier_Assignment> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P38_deassigned> <http://www.w3.org/2000/01/rdf-schema#comment> "This property records the identifier that was deassigned from an instance of E1 CRM Entity.\nDeassignment of an identifier may be necessary when an item is taken out of an inventory, a new numbering system is introduced or items are merged or split up. \nThe same identifier may be deassigned on more than one occasion.\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P38_deassigned> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.cidoc-crm.org/cidoc-crm/P141_assigned> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P38_deassigned> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E42_Identifier> <http://www.cidoc-crm.org/cidoc-crm/> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+new.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaeX2Bnew .
+_:BaeX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaeX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ae+new.nt> .
+_:BaeX2Bnew <https://w3id.org/tree#value> "ae" .
+_:BaeX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaeX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ae+new.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BagX2Bnew .
+_:BagX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BagX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ag+new.nt> .
+_:BagX2Bnew <https://w3id.org/tree#value> "ag" .
+_:BagX2Bnew <https://w3id.org/tree#value> "new" .
+_:BagX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ag+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BanX2Bnew .
+_:BanX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BanX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/an+new.nt> .
+_:BanX2Bnew <https://w3id.org/tree#value> "an" .
+_:BanX2Bnew <https://w3id.org/tree#value> "new" .
+_:BanX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/an+new.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BapX2Bnew .
+_:BapX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BapX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ap+new.nt> .
+_:BapX2Bnew <https://w3id.org/tree#value> "ap" .
+_:BapX2Bnew <https://w3id.org/tree#value> "new" .
+_:BapX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ap+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BarX2Bnew .
+_:BarX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BarX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ar+new.nt> .
+_:BarX2Bnew <https://w3id.org/tree#value> "ar" .
+_:BarX2Bnew <https://w3id.org/tree#value> "new" .
+_:BarX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ar+new.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BasX2Bnew .
+_:BasX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BasX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/as+new.nt> .
+_:BasX2Bnew <https://w3id.org/tree#value> "as" .
+_:BasX2Bnew <https://w3id.org/tree#value> "new" .
+_:BasX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/as+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2Bnewe .
+_:BaX2Bnewe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bnewe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+newe.nt> .
+_:BaX2Bnewe <https://w3id.org/tree#value> "a" .
+_:BaX2Bnewe <https://w3id.org/tree#value> "newe" .
+_:BaX2Bnewe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+newe.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2Bnews .
+_:BaX2Bnews <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bnews <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+news.nt> .
+_:BaX2Bnews <https://w3id.org/tree#value> "a" .
+_:BaX2Bnews <https://w3id.org/tree#value> "news" .
+_:BaX2Bnews <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+news.nt> <https://w3id.org/tree#remainingItems> "25"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BaX2Bnew .
+_:BaX2BaX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BaX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+a+new.nt> .
+_:BaX2BaX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BaX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BaX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BaX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+a+new.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BbX2Bnew .
+_:BaX2BbX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BbX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+b+new.nt> .
+_:BaX2BbX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BbX2Bnew <https://w3id.org/tree#value> "b" .
+_:BaX2BbX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BbX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+b+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BcX2Bnew .
+_:BaX2BcX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BcX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+c+new.nt> .
+_:BaX2BcX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BcX2Bnew <https://w3id.org/tree#value> "c" .
+_:BaX2BcX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BcX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+c+new.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BdX2Bnew .
+_:BaX2BdX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BdX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+d+new.nt> .
+_:BaX2BdX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BdX2Bnew <https://w3id.org/tree#value> "d" .
+_:BaX2BdX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BdX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+d+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BeX2Bnew .
+_:BaX2BeX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BeX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+e+new.nt> .
+_:BaX2BeX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BeX2Bnew <https://w3id.org/tree#value> "e" .
+_:BaX2BeX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BeX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+e+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BfX2Bnew .
+_:BaX2BfX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BfX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+f+new.nt> .
+_:BaX2BfX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BfX2Bnew <https://w3id.org/tree#value> "f" .
+_:BaX2BfX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BfX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+f+new.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BgX2Bnew .
+_:BaX2BgX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BgX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+g+new.nt> .
+_:BaX2BgX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BgX2Bnew <https://w3id.org/tree#value> "g" .
+_:BaX2BgX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BgX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+g+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BiX2Bnew .
+_:BaX2BiX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BiX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+i+new.nt> .
+_:BaX2BiX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BiX2Bnew <https://w3id.org/tree#value> "i" .
+_:BaX2BiX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BiX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+i+new.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BkX2Bnew .
+_:BaX2BkX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BkX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+k+new.nt> .
+_:BaX2BkX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BkX2Bnew <https://w3id.org/tree#value> "k" .
+_:BaX2BkX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BkX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+k+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BlX2Bnew .
+_:BaX2BlX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BlX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+l+new.nt> .
+_:BaX2BlX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BlX2Bnew <https://w3id.org/tree#value> "l" .
+_:BaX2BlX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BlX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+l+new.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BmX2Bnew .
+_:BaX2BmX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BmX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+m+new.nt> .
+_:BaX2BmX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BmX2Bnew <https://w3id.org/tree#value> "m" .
+_:BaX2BmX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BmX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+m+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnX2Bnew .
+_:BaX2BnX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+n+new.nt> .
+_:BaX2BnX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BnX2Bnew <https://w3id.org/tree#value> "n" .
+_:BaX2BnX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BnX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+n+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bo .
+_:BaX2BnewX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+o.nt> .
+_:BaX2BnewX2Bo <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bo <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bo <https://w3id.org/tree#value> "o" .
+_:BaX2BnewX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+o.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bp .
+_:BaX2BnewX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+p.nt> .
+_:BaX2BnewX2Bp <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bp <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bp <https://w3id.org/tree#value> "p" .
+_:BaX2BnewX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+p.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Br .
+_:BaX2BnewX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+r.nt> .
+_:BaX2BnewX2Br <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Br <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Br <https://w3id.org/tree#value> "r" .
+_:BaX2BnewX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+r.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bs .
+_:BaX2BnewX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+s.nt> .
+_:BaX2BnewX2Bs <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bs <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bs <https://w3id.org/tree#value> "s" .
+_:BaX2BnewX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+s.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bt .
+_:BaX2BnewX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+t.nt> .
+_:BaX2BnewX2Bt <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bt <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bt <https://w3id.org/tree#value> "t" .
+_:BaX2BnewX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+t.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bu .
+_:BaX2BnewX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+u.nt> .
+_:BaX2BnewX2Bu <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bu <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bu <https://w3id.org/tree#value> "u" .
+_:BaX2BnewX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+u.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bv .
+_:BaX2BnewX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+v.nt> .
+_:BaX2BnewX2Bv <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bv <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bv <https://w3id.org/tree#value> "v" .
+_:BaX2BnewX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+v.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bw .
+_:BaX2BnewX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+w.nt> .
+_:BaX2BnewX2Bw <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bw <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bw <https://w3id.org/tree#value> "w" .
+_:BaX2BnewX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+w.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+new.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaeX2Bnew .
+_:BaeX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaeX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ae+new.nt> .
+_:BaeX2Bnew <https://w3id.org/tree#value> "ae" .
+_:BaeX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaeX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ae+new.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BagX2Bnew .
+_:BagX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BagX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ag+new.nt> .
+_:BagX2Bnew <https://w3id.org/tree#value> "ag" .
+_:BagX2Bnew <https://w3id.org/tree#value> "new" .
+_:BagX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ag+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BanX2Bnew .
+_:BanX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BanX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/an+new.nt> .
+_:BanX2Bnew <https://w3id.org/tree#value> "an" .
+_:BanX2Bnew <https://w3id.org/tree#value> "new" .
+_:BanX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/an+new.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BapX2Bnew .
+_:BapX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BapX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ap+new.nt> .
+_:BapX2Bnew <https://w3id.org/tree#value> "ap" .
+_:BapX2Bnew <https://w3id.org/tree#value> "new" .
+_:BapX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ap+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BarX2Bnew .
+_:BarX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BarX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ar+new.nt> .
+_:BarX2Bnew <https://w3id.org/tree#value> "ar" .
+_:BarX2Bnew <https://w3id.org/tree#value> "new" .
+_:BarX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ar+new.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BasX2Bnew .
+_:BasX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BasX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/as+new.nt> .
+_:BasX2Bnew <https://w3id.org/tree#value> "as" .
+_:BasX2Bnew <https://w3id.org/tree#value> "new" .
+_:BasX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/as+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2Bnewe .
+_:BaX2Bnewe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bnewe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+newe.nt> .
+_:BaX2Bnewe <https://w3id.org/tree#value> "a" .
+_:BaX2Bnewe <https://w3id.org/tree#value> "newe" .
+_:BaX2Bnewe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+newe.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2Bnews .
+_:BaX2Bnews <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bnews <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+news.nt> .
+_:BaX2Bnews <https://w3id.org/tree#value> "a" .
+_:BaX2Bnews <https://w3id.org/tree#value> "news" .
+_:BaX2Bnews <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+news.nt> <https://w3id.org/tree#remainingItems> "25"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BaX2Bnew .
+_:BaX2BaX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BaX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+a+new.nt> .
+_:BaX2BaX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BaX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BaX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BaX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+a+new.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BbX2Bnew .
+_:BaX2BbX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BbX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+b+new.nt> .
+_:BaX2BbX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BbX2Bnew <https://w3id.org/tree#value> "b" .
+_:BaX2BbX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BbX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+b+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BcX2Bnew .
+_:BaX2BcX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BcX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+c+new.nt> .
+_:BaX2BcX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BcX2Bnew <https://w3id.org/tree#value> "c" .
+_:BaX2BcX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BcX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+c+new.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BdX2Bnew .
+_:BaX2BdX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BdX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+d+new.nt> .
+_:BaX2BdX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BdX2Bnew <https://w3id.org/tree#value> "d" .
+_:BaX2BdX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BdX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+d+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BeX2Bnew .
+_:BaX2BeX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BeX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+e+new.nt> .
+_:BaX2BeX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BeX2Bnew <https://w3id.org/tree#value> "e" .
+_:BaX2BeX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BeX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+e+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BfX2Bnew .
+_:BaX2BfX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BfX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+f+new.nt> .
+_:BaX2BfX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BfX2Bnew <https://w3id.org/tree#value> "f" .
+_:BaX2BfX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BfX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+f+new.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BgX2Bnew .
+_:BaX2BgX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BgX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+g+new.nt> .
+_:BaX2BgX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BgX2Bnew <https://w3id.org/tree#value> "g" .
+_:BaX2BgX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BgX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+g+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BiX2Bnew .
+_:BaX2BiX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BiX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+i+new.nt> .
+_:BaX2BiX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BiX2Bnew <https://w3id.org/tree#value> "i" .
+_:BaX2BiX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BiX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+i+new.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BkX2Bnew .
+_:BaX2BkX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BkX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+k+new.nt> .
+_:BaX2BkX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BkX2Bnew <https://w3id.org/tree#value> "k" .
+_:BaX2BkX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BkX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+k+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BlX2Bnew .
+_:BaX2BlX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BlX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+l+new.nt> .
+_:BaX2BlX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BlX2Bnew <https://w3id.org/tree#value> "l" .
+_:BaX2BlX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BlX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+l+new.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BmX2Bnew .
+_:BaX2BmX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BmX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+m+new.nt> .
+_:BaX2BmX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BmX2Bnew <https://w3id.org/tree#value> "m" .
+_:BaX2BmX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BmX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+m+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnX2Bnew .
+_:BaX2BnX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+n+new.nt> .
+_:BaX2BnX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BnX2Bnew <https://w3id.org/tree#value> "n" .
+_:BaX2BnX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BnX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+n+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bo .
+_:BaX2BnewX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+o.nt> .
+_:BaX2BnewX2Bo <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bo <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bo <https://w3id.org/tree#value> "o" .
+_:BaX2BnewX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+o.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bp .
+_:BaX2BnewX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+p.nt> .
+_:BaX2BnewX2Bp <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bp <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bp <https://w3id.org/tree#value> "p" .
+_:BaX2BnewX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+p.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Br .
+_:BaX2BnewX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+r.nt> .
+_:BaX2BnewX2Br <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Br <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Br <https://w3id.org/tree#value> "r" .
+_:BaX2BnewX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+r.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bs .
+_:BaX2BnewX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+s.nt> .
+_:BaX2BnewX2Bs <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bs <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bs <https://w3id.org/tree#value> "s" .
+_:BaX2BnewX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+s.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bt .
+_:BaX2BnewX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+t.nt> .
+_:BaX2BnewX2Bt <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bt <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bt <https://w3id.org/tree#value> "t" .
+_:BaX2BnewX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+t.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bu .
+_:BaX2BnewX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+u.nt> .
+_:BaX2BnewX2Bu <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bu <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bu <https://w3id.org/tree#value> "u" .
+_:BaX2BnewX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+u.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bv .
+_:BaX2BnewX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+v.nt> .
+_:BaX2BnewX2Bv <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bv <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bv <https://w3id.org/tree#value> "v" .
+_:BaX2BnewX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+v.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bw .
+_:BaX2BnewX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+w.nt> .
+_:BaX2BnewX2Bw <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bw <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bw <https://w3id.org/tree#value> "w" .
+_:BaX2BnewX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+w.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+new.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaeX2Bnew .
+_:BaeX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaeX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ae+new.nt> .
+_:BaeX2Bnew <https://w3id.org/tree#value> "ae" .
+_:BaeX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaeX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ae+new.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BagX2Bnew .
+_:BagX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BagX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ag+new.nt> .
+_:BagX2Bnew <https://w3id.org/tree#value> "ag" .
+_:BagX2Bnew <https://w3id.org/tree#value> "new" .
+_:BagX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ag+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BanX2Bnew .
+_:BanX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BanX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/an+new.nt> .
+_:BanX2Bnew <https://w3id.org/tree#value> "an" .
+_:BanX2Bnew <https://w3id.org/tree#value> "new" .
+_:BanX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/an+new.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BapX2Bnew .
+_:BapX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BapX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ap+new.nt> .
+_:BapX2Bnew <https://w3id.org/tree#value> "ap" .
+_:BapX2Bnew <https://w3id.org/tree#value> "new" .
+_:BapX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ap+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BarX2Bnew .
+_:BarX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BarX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ar+new.nt> .
+_:BarX2Bnew <https://w3id.org/tree#value> "ar" .
+_:BarX2Bnew <https://w3id.org/tree#value> "new" .
+_:BarX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ar+new.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BasX2Bnew .
+_:BasX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BasX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/as+new.nt> .
+_:BasX2Bnew <https://w3id.org/tree#value> "as" .
+_:BasX2Bnew <https://w3id.org/tree#value> "new" .
+_:BasX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/as+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2Bnewe .
+_:BaX2Bnewe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bnewe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+newe.nt> .
+_:BaX2Bnewe <https://w3id.org/tree#value> "a" .
+_:BaX2Bnewe <https://w3id.org/tree#value> "newe" .
+_:BaX2Bnewe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+newe.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2Bnews .
+_:BaX2Bnews <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bnews <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+news.nt> .
+_:BaX2Bnews <https://w3id.org/tree#value> "a" .
+_:BaX2Bnews <https://w3id.org/tree#value> "news" .
+_:BaX2Bnews <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+news.nt> <https://w3id.org/tree#remainingItems> "25"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BaX2Bnew .
+_:BaX2BaX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BaX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+a+new.nt> .
+_:BaX2BaX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BaX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BaX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BaX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+a+new.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BbX2Bnew .
+_:BaX2BbX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BbX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+b+new.nt> .
+_:BaX2BbX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BbX2Bnew <https://w3id.org/tree#value> "b" .
+_:BaX2BbX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BbX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+b+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BcX2Bnew .
+_:BaX2BcX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BcX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+c+new.nt> .
+_:BaX2BcX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BcX2Bnew <https://w3id.org/tree#value> "c" .
+_:BaX2BcX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BcX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+c+new.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BdX2Bnew .
+_:BaX2BdX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BdX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+d+new.nt> .
+_:BaX2BdX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BdX2Bnew <https://w3id.org/tree#value> "d" .
+_:BaX2BdX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BdX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+d+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BeX2Bnew .
+_:BaX2BeX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BeX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+e+new.nt> .
+_:BaX2BeX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BeX2Bnew <https://w3id.org/tree#value> "e" .
+_:BaX2BeX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BeX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+e+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BfX2Bnew .
+_:BaX2BfX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BfX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+f+new.nt> .
+_:BaX2BfX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BfX2Bnew <https://w3id.org/tree#value> "f" .
+_:BaX2BfX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BfX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+f+new.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BgX2Bnew .
+_:BaX2BgX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BgX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+g+new.nt> .
+_:BaX2BgX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BgX2Bnew <https://w3id.org/tree#value> "g" .
+_:BaX2BgX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BgX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+g+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BiX2Bnew .
+_:BaX2BiX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BiX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+i+new.nt> .
+_:BaX2BiX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BiX2Bnew <https://w3id.org/tree#value> "i" .
+_:BaX2BiX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BiX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+i+new.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BkX2Bnew .
+_:BaX2BkX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BkX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+k+new.nt> .
+_:BaX2BkX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BkX2Bnew <https://w3id.org/tree#value> "k" .
+_:BaX2BkX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BkX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+k+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BlX2Bnew .
+_:BaX2BlX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BlX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+l+new.nt> .
+_:BaX2BlX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BlX2Bnew <https://w3id.org/tree#value> "l" .
+_:BaX2BlX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BlX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+l+new.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BmX2Bnew .
+_:BaX2BmX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BmX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+m+new.nt> .
+_:BaX2BmX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BmX2Bnew <https://w3id.org/tree#value> "m" .
+_:BaX2BmX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BmX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+m+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnX2Bnew .
+_:BaX2BnX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+n+new.nt> .
+_:BaX2BnX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BnX2Bnew <https://w3id.org/tree#value> "n" .
+_:BaX2BnX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BnX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+n+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bo .
+_:BaX2BnewX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+o.nt> .
+_:BaX2BnewX2Bo <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bo <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bo <https://w3id.org/tree#value> "o" .
+_:BaX2BnewX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+o.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bp .
+_:BaX2BnewX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+p.nt> .
+_:BaX2BnewX2Bp <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bp <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bp <https://w3id.org/tree#value> "p" .
+_:BaX2BnewX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+p.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Br .
+_:BaX2BnewX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+r.nt> .
+_:BaX2BnewX2Br <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Br <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Br <https://w3id.org/tree#value> "r" .
+_:BaX2BnewX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+r.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bs .
+_:BaX2BnewX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+s.nt> .
+_:BaX2BnewX2Bs <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bs <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bs <https://w3id.org/tree#value> "s" .
+_:BaX2BnewX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+s.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bt .
+_:BaX2BnewX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+t.nt> .
+_:BaX2BnewX2Bt <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bt <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bt <https://w3id.org/tree#value> "t" .
+_:BaX2BnewX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+t.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bu .
+_:BaX2BnewX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+u.nt> .
+_:BaX2BnewX2Bu <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bu <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bu <https://w3id.org/tree#value> "u" .
+_:BaX2BnewX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+u.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bv .
+_:BaX2BnewX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+v.nt> .
+_:BaX2BnewX2Bv <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bv <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bv <https://w3id.org/tree#value> "v" .
+_:BaX2BnewX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+v.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bw .
+_:BaX2BnewX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+w.nt> .
+_:BaX2BnewX2Bw <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bw <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bw <https://w3id.org/tree#value> "w" .
+_:BaX2BnewX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+w.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/a+new.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaeX2Bnew .
+_:BaeX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaeX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ae+new.nt> .
+_:BaeX2Bnew <https://w3id.org/tree#value> "ae" .
+_:BaeX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaeX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ae+new.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BagX2Bnew .
+_:BagX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BagX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ag+new.nt> .
+_:BagX2Bnew <https://w3id.org/tree#value> "ag" .
+_:BagX2Bnew <https://w3id.org/tree#value> "new" .
+_:BagX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ag+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BanX2Bnew .
+_:BanX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BanX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/an+new.nt> .
+_:BanX2Bnew <https://w3id.org/tree#value> "an" .
+_:BanX2Bnew <https://w3id.org/tree#value> "new" .
+_:BanX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/an+new.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BapX2Bnew .
+_:BapX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BapX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ap+new.nt> .
+_:BapX2Bnew <https://w3id.org/tree#value> "ap" .
+_:BapX2Bnew <https://w3id.org/tree#value> "new" .
+_:BapX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ap+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BarX2Bnew .
+_:BarX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BarX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ar+new.nt> .
+_:BarX2Bnew <https://w3id.org/tree#value> "ar" .
+_:BarX2Bnew <https://w3id.org/tree#value> "new" .
+_:BarX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ar+new.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BasX2Bnew .
+_:BasX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BasX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/as+new.nt> .
+_:BasX2Bnew <https://w3id.org/tree#value> "as" .
+_:BasX2Bnew <https://w3id.org/tree#value> "new" .
+_:BasX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/as+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2Bnewe .
+_:BaX2Bnewe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bnewe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+newe.nt> .
+_:BaX2Bnewe <https://w3id.org/tree#value> "a" .
+_:BaX2Bnewe <https://w3id.org/tree#value> "newe" .
+_:BaX2Bnewe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+newe.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2Bnews .
+_:BaX2Bnews <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bnews <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+news.nt> .
+_:BaX2Bnews <https://w3id.org/tree#value> "a" .
+_:BaX2Bnews <https://w3id.org/tree#value> "news" .
+_:BaX2Bnews <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+news.nt> <https://w3id.org/tree#remainingItems> "25"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BaX2Bnew .
+_:BaX2BaX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BaX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+a+new.nt> .
+_:BaX2BaX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BaX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BaX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BaX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+a+new.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BbX2Bnew .
+_:BaX2BbX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BbX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+b+new.nt> .
+_:BaX2BbX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BbX2Bnew <https://w3id.org/tree#value> "b" .
+_:BaX2BbX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BbX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+b+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BcX2Bnew .
+_:BaX2BcX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BcX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+c+new.nt> .
+_:BaX2BcX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BcX2Bnew <https://w3id.org/tree#value> "c" .
+_:BaX2BcX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BcX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+c+new.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BdX2Bnew .
+_:BaX2BdX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BdX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+d+new.nt> .
+_:BaX2BdX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BdX2Bnew <https://w3id.org/tree#value> "d" .
+_:BaX2BdX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BdX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+d+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BeX2Bnew .
+_:BaX2BeX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BeX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+e+new.nt> .
+_:BaX2BeX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BeX2Bnew <https://w3id.org/tree#value> "e" .
+_:BaX2BeX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BeX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+e+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BfX2Bnew .
+_:BaX2BfX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BfX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+f+new.nt> .
+_:BaX2BfX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BfX2Bnew <https://w3id.org/tree#value> "f" .
+_:BaX2BfX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BfX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+f+new.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BgX2Bnew .
+_:BaX2BgX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BgX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+g+new.nt> .
+_:BaX2BgX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BgX2Bnew <https://w3id.org/tree#value> "g" .
+_:BaX2BgX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BgX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+g+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BiX2Bnew .
+_:BaX2BiX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BiX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+i+new.nt> .
+_:BaX2BiX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BiX2Bnew <https://w3id.org/tree#value> "i" .
+_:BaX2BiX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BiX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+i+new.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BkX2Bnew .
+_:BaX2BkX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BkX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+k+new.nt> .
+_:BaX2BkX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BkX2Bnew <https://w3id.org/tree#value> "k" .
+_:BaX2BkX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BkX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+k+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BlX2Bnew .
+_:BaX2BlX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BlX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+l+new.nt> .
+_:BaX2BlX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BlX2Bnew <https://w3id.org/tree#value> "l" .
+_:BaX2BlX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BlX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+l+new.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BmX2Bnew .
+_:BaX2BmX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BmX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+m+new.nt> .
+_:BaX2BmX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BmX2Bnew <https://w3id.org/tree#value> "m" .
+_:BaX2BmX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BmX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+m+new.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnX2Bnew .
+_:BaX2BnX2Bnew <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnX2Bnew <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+n+new.nt> .
+_:BaX2BnX2Bnew <https://w3id.org/tree#value> "a" .
+_:BaX2BnX2Bnew <https://w3id.org/tree#value> "n" .
+_:BaX2BnX2Bnew <https://w3id.org/tree#value> "new" .
+_:BaX2BnX2Bnew <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+n+new.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bo .
+_:BaX2BnewX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+o.nt> .
+_:BaX2BnewX2Bo <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bo <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bo <https://w3id.org/tree#value> "o" .
+_:BaX2BnewX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+o.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bp .
+_:BaX2BnewX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+p.nt> .
+_:BaX2BnewX2Bp <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bp <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bp <https://w3id.org/tree#value> "p" .
+_:BaX2BnewX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+p.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Br .
+_:BaX2BnewX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+r.nt> .
+_:BaX2BnewX2Br <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Br <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Br <https://w3id.org/tree#value> "r" .
+_:BaX2BnewX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+r.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bs .
+_:BaX2BnewX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+s.nt> .
+_:BaX2BnewX2Bs <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bs <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bs <https://w3id.org/tree#value> "s" .
+_:BaX2BnewX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+s.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bt .
+_:BaX2BnewX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+t.nt> .
+_:BaX2BnewX2Bt <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bt <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bt <https://w3id.org/tree#value> "t" .
+_:BaX2BnewX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+t.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bu .
+_:BaX2BnewX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+u.nt> .
+_:BaX2BnewX2Bu <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bu <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bu <https://w3id.org/tree#value> "u" .
+_:BaX2BnewX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+u.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bv .
+_:BaX2BnewX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+v.nt> .
+_:BaX2BnewX2Bv <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bv <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bv <https://w3id.org/tree#value> "v" .
+_:BaX2BnewX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+v.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/a+new.nt> <https://w3id.org/tree#relation> _:BaX2BnewX2Bw .
+_:BaX2BnewX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BnewX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+new+w.nt> .
+_:BaX2BnewX2Bw <https://w3id.org/tree#value> "a" .
+_:BaX2BnewX2Bw <https://w3id.org/tree#value> "new" .
+_:BaX2BnewX2Bw <https://w3id.org/tree#value> "w" .
+_:BaX2BnewX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+new+w.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .

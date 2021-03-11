@@ -1,0 +1,530 @@
+<https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "A concept representing an activity that was not executed in full, for example, due to constraint violation. Such an activity usually marks the point when the plan execution was interrupted due to some problem." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Activity> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Failed Activity" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPermittedAgent> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bfa76e30a8936967a65c40755c144ff7a <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPermittedAgent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ep-plan#ResponsibleAgent> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPermittedAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPermittedAgent> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ep-plan#isPermittedAgentFor> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPermittedAgent> <http://www.w3.org/2000/01/rdf-schema#label> "hasPermittedAgent" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasPermittedAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "ep-plan:hasPermittedAgent links ep-plan:Step or the overall ep-plan:Plan to an ep-plan:ResponsibleAgent denoting that  the agent is allowed to assume some form of responsibility during the execution. Please note that not all linked ep-plan:ResponsibleAgent(s) must also appear in the execution trace as ep-plan:Agent. ep-plan:hasPermittedAgent relationship merely indicates that it is possible for this agent to asssume some responsibility during the execution." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ResponsibleAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent that can bear some responsibility for execution of activities corresponding to the planned steps." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ResponsibleAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ResponsibleAgent> <http://www.w3.org/2000/01/rdf-schema#label> "ResponsibleAgent" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ResponsibleAgent> <http://www.w3.org/2002/07/owl#disjointWith> _:B52be0c18f29c7e241351fe42ac62eeb8 <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasRationale> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bef747b71c45bde26618c8ccb6fb161a8 <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasRationale> <http://www.w3.org/2000/01/rdf-schema#comment> "A property linking a plan element to the description of a rationale which provides some information on why such element was included in a plan." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasRationale> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ep-plan#Rationale> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasRationale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasRationale> <http://www.w3.org/2000/01/rdf-schema#label> "hasRationale" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasRationale> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ep-plan#isRationaleOf> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Communication> <http://www.w3.org/2000/01/rdf-schema#label> "Communication" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Communication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Communication> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Communication> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Communication> <http://www.w3.org/2000/01/rdf-schema#comment> "ep-plan:Communication is a type of prov:Communication representing a transfer of an entity between two activities according to some planned specification expressed as ep-plan:CommunicationSpecification." <https://w3id.org/ep-plan> .
+<http://data.ign.fr/def/ignf#axis> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/ignf#CoordinateSystem> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#axis> <http://www.w3.org/2000/01/rdf-schema#comment> "An axis used by some ellipsoidal or cartesian coordinate system. Cf. ISO 19111:2007:2007-07, table 17, association role axis."@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#axis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#axis> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/ignf> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#axis> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.ign.fr/def/ignf#AxesList> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#axis> <http://www.w3.org/2000/01/rdf-schema#label> "uses axis"@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#axis> <http://www.w3.org/2000/01/rdf-schema#comment> "Désigne un axe utilisé par un système de coordonnées ellipsoïdal ou cartésien. Cf. ISO 19111:2007:2007-07, tableau 17, rôle d'association axis."@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#axis> <http://www.w3.org/2000/01/rdf-schema#label> "utilise l'axe"@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#OperationParameter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/ignf> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#OperationParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#OperationParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#OperationParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Operation parameter"@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#OperationParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Paramètre"@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#OperationParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Parameter used by a method to perform some coordinate operation. Cf. ISO 19111:2007:2007-07, table 52 and annex B.4.5."@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#OperationParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Paramètre utilisé par une méthode pour faire une opération sur des coordonnées. Cf. ISO 19111:2007:2007-07, tableau 52 et annexe B.4.5."@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#includesSingleCRS> <http://www.w3.org/2000/01/rdf-schema#comment> "Désigne les systèmes de coordonnées de référence simples qui composent un système de coordonnées de référence composé. Cf. ISO 19111:2007:2007-07, tableau 6, rôle d'association componentReferenceSystem."@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#includesSingleCRS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#includesSingleCRS> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the single coordinate reference systems used by a compound coordinate reference system. Cf. ISO 19111:2007:2007-07, table 6, association role componentReferenceSystem."@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#includesSingleCRS> <http://www.w3.org/2000/01/rdf-schema#label> "inclut des systèmes de coordonnées de référence simples"@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#includesSingleCRS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/ignf> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#includesSingleCRS> <http://www.w3.org/2000/01/rdf-schema#label> "includes some single coordinate reference systems"@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#includesSingleCRS> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.ign.fr/def/ignf#SingleCRSList> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#includesSingleCRS> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.ign.fr/def/ignf#CompoundCRS> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#OperationParameterValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/ignf> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#OperationParameterValue> <http://www.w3.org/2000/01/rdf-schema#label> "Operation parameter value"@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#OperationParameterValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#OperationParameterValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#OperationParameterValue> <http://www.w3.org/2000/01/rdf-schema#label> "Valeur de paramètre"@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#OperationParameterValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Value of a parameter used by a method to perform some coordinate operation. Cf. ISO 19111:2007:2007-07, table 55."@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#OperationParameterValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Valeur d'un paramètre utilisé par une méthode pour faire une opération sur des coordonnées. Cf. ISO 19111:2007:2007-07, tableau 55."@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#cartesianCS> <http://www.w3.org/2000/01/rdf-schema#comment> "Désigne le système de coordonnées cartésien utilisé par un système de coordonnées de référence géodésique ou projeté. Cf. ISO 19111:2007:2007-07, tableaux 10 et 11, association nommée CoordinateSystem."@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#cartesianCS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#cartesianCS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/ignf> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#cartesianCS> <http://www.w3.org/2000/01/rdf-schema#comment> "The cartesian coordinate system used by some geodetic or projected coordinate reference system. Cf. ISO 19111:2007:2007-07, tables 10 et 11, association roles coordinateSystem."@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#cartesianCS> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://data.ign.fr/def/ignf#coordinateSystem> <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#cartesianCS> <http://www.w3.org/2000/01/rdf-schema#label> "uses cartesian coordinate system"@en <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#cartesianCS> <http://www.w3.org/2000/01/rdf-schema#label> "utilise le système de coordonnées cartesien"@fr <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#cartesianCS> <http://www.w3.org/2000/01/rdf-schema#domain> _:B540bb71c0fc0c70699210d64f107f631 <http://data.ign.fr/def/ignf> .
+<http://data.ign.fr/def/ignf#cartesianCS> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.ign.fr/def/ignf#CartesianCS> <http://data.ign.fr/def/ignf> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ordnancesurvey.co.uk/ontology/admingeo.owl> <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Office for National Statistics (ONS) have reconfigured their GSS coding structure \n(providing a unique system of referencing for administrative units) to a new 9 character\nalpha numeric format,replacing the current alpha numeric format (up to 6 characters).This\nchange has now been implemented in this October 2010 release of Boundary-Line. \n\nHowever,the new GSS Coding and Naming policy for some statistical geographies will be implemented \non 1 January 2011. From this date, where new codes have been allocated they should be used in all\nexchanges of statistics and published outputs that normally include codes.\n\nThe following types of unit are coded where they have been made available by ONS: \nCounties, Districts, Wards/Electoral Divisions, London Boroughs, Unitary Authorities, GLA's,\nParish/Communities, Euro Regions, Welsh Assembly Const and Electoral Regions, \nScottish Parliamentary Const and Electoral Regions, Westminster Const." <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/admingeo/gssCode> <http://www.w3.org/2000/01/rdf-schema#label> "GSS" <http://data.ordnancesurvey.co.uk/ontology/admingeo/> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/AbstractGeometry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.ordnancesurvey.co.uk/ontology/geometry/> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/AbstractGeometry> <http://www.w3.org/2000/01/rdf-schema#comment> "A superclass of all geometry types such as points, lines and polygons. This is currently a place holder class and likely to change when some standard way of representing geometries in RDF is agreed." <http://data.ordnancesurvey.co.uk/ontology/geometry/> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/AbstractGeometry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6d2baae315cdf6a10dc6596c0f1b6893 <http://data.ordnancesurvey.co.uk/ontology/geometry/> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/AbstractGeometry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ordnancesurvey.co.uk/ontology/geometry.owl> <http://data.ordnancesurvey.co.uk/ontology/geometry/> .
+<http://data.ordnancesurvey.co.uk/ontology/geometry/AbstractGeometry> <http://www.w3.org/2000/01/rdf-schema#label> "Abstract Geometry" <http://data.ordnancesurvey.co.uk/ontology/geometry/> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/PostcodeUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ordnancesurvey.co.uk/ontology/postcode.owl> <http://data.ordnancesurvey.co.uk/ontology/postcode/> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/PostcodeUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba187c48255187cbfe6624b6dda3135d0 <http://data.ordnancesurvey.co.uk/ontology/postcode/> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/PostcodeUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Postcode Unit" <http://data.ordnancesurvey.co.uk/ontology/postcode/> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/PostcodeUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.ordnancesurvey.co.uk/ontology/postcode/> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/PostcodeUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "An area covered by a particular postcode. Postcodes are an alphanumeric abbreviated form of address. Postcode units are unique references and identify an average of 15 addresses. In some cases, where an address receives a substantial amount of mail, a postcode will apply to only one address (a large-user postcode). The maximum number of addresses in a postcode is 100.\n\nA sub-area of a postcode sector, indicated by the two letters of the inward postcode, which identifies one or more small-user postcode delivery points or an individual large-user postcode. There are approximately 1.7 million postcode units in the UK." <http://data.ordnancesurvey.co.uk/ontology/postcode/> .
+<http://data.press.net/ontology/classification/isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Property that associates Classifications with Classifiables.  e.g. <MyAsset> isClassifiedBy <SomeClassification>"@en <http://data.press.net/ontology/classification/> .
+<http://data.press.net/ontology/classification/isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#label> "Property that associates Classifications with Classifiables. A subPropertyOf dcterms:subject"@en <http://data.press.net/ontology/classification/> .
+<http://data.press.net/ontology/classification/isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/classification/> <http://data.press.net/ontology/classification/> .
+<http://data.press.net/ontology/classification/isClassifiedBy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.press.net/ontology/classification/> .
+<http://data.press.net/ontology/classification/isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.press.net/ontology/classification/Classifiable> <http://data.press.net/ontology/classification/> .
+<http://data.press.net/ontology/classification/isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/subject> <http://data.press.net/ontology/classification/> .
+<http://data.press.net/ontology/classification/isClassifiedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.press.net/ontology/classification/Classification> <http://data.press.net/ontology/classification/> .
+<http://data.press.net/ontology/classification/isClassifiedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.press.net/ontology/classification/> .
+<http://data.press.net/ontology/classification/isClassifiedBy> <http://proton.semanticweb.org/protonsys#transitiveOver> <http://data.press.net/ontology/classification/subClassificationOf> <http://data.press.net/ontology/classification/> .
+<http://data.press.net/ontology/stuff/label> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://data.press.net/ontology/stuff/> .
+<http://data.press.net/ontology/stuff/label> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.press.net/ontology/stuff/Stuff> <http://data.press.net/ontology/stuff/> .
+<http://data.press.net/ontology/stuff/label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.press.net/ontology/stuff/> .
+<http://data.press.net/ontology/stuff/label> <http://www.w3.org/2000/01/rdf-schema#label> "The definitive label of a Stuff instance"@en <http://data.press.net/ontology/stuff/> .
+<http://data.press.net/ontology/stuff/label> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.press.net/ontology/stuff/> .
+<http://data.press.net/ontology/stuff/label> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2000/01/rdf-schema#label> <http://data.press.net/ontology/stuff/> .
+<http://data.press.net/ontology/stuff/label> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.press.net/ontology/stuff/> <http://data.press.net/ontology/stuff/> .
+<http://data.press.net/ontology/stuff/label> <http://www.w3.org/2000/01/rdf-schema#comment> "String property that indicates the definitive label of a Stuff instance. This might be the full name of a Person, Organization or something Intangible"@en <http://data.press.net/ontology/stuff/> .
+<http://data.semanticweb.org/ns/swc/ontology#01_introduction> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>\n\t\t\t\tThe Semantic Web Conference ontology (SWC) is an ontology for describing academic conferences. \n\t\t\t\tIt was initially designed to support the European Semantic Web Conference,\n\t\t\t\tESWC2007, and later extended for both the following conferences in the ESWC series,\n\t\t\t\tas well as in the ISWC series.\n\t\t\t\tHistorically, the SWC ontology also draws heavily on ontologies developed for\n\t\t\t\tESWC2006 and ISWC2006.\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t\tSWC is mainly a convention of how to use classes and properties from other ontologies, most prominently \n\t\t\t\t<a href=\"http://xmlns.com/foaf/0.1\">FOAF</a> (for people) and <a href=\"http://ontoware.org/projects/swrc/\">SWRC</a> \n\t\t\t\t(their BibTeX elements, for the papers). We are also throwing in some <a href=\"http://sioc-project.org/\">SIOC</a>, \n\t\t\t\t<a href=\"http://dublincore.org/documents/dc-rdf/index.shtml\">Dublin Core</a> and \n\t\t\t\t<a href=\"http://www.w3.org/TR/rdfcal/\">iCal/RDF Calendar</a>. Our own \n\t\t\t\t<a href=\"http://data.semanticweb.org/ns/swc/ontology\">swc namespace</a> provides the glue for all this, as well as \n\t\t\t\tspecialised classes for things that have to do with conferences.\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t\tThis version of SWC has been slimmed down significantly (hence the revision name). A total of 59 classes and 19 properties have been deprecated (deprecated terms can be found at the bottom of this document). This was mostly done with the intention to remove the countless sub-classes of generic classes such as <a href=\"#Chair\">Chair</a> or <a href=\"#SessionEvent\">SessionEvent</a>, which were deemed to be too specific for a general-purpose conference ontology such as SWC. Elsewhere, classes and properties which had never been used and seemed to fall under the heading of \"over-engineering\" were removed. Finally, all CfP related terms were removed. Instead, we suggest to use a dedicated ontology such as the <a href=\"http://sw.deri.org/2005/08/conf/cfp\">CfP ontology</a>.\n\t\t\t</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#01_introduction> <http://www.w3.org/2000/01/rdf-schema#label> "Introduction" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#OrganisedEvent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#OrganisedEvent> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Event> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#OrganisedEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t\n\t\t\t<p>An event in time and space which is planned and organised, as opposed to something which 'just happens', such as a car accident or sunset.</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#OrganisedEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/12/cal/ical#Vevent> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#OrganisedEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Organised Event" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#OrganisedEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/wordnet/1.6/Event-1> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#OrganisedEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Presenter> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Presenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.semanticweb.org/ns/swc/ontology#Role> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Presenter> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Role> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Presenter> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>\n\t\t\t\tA presenter is someone who presents matter in front of an audience. Examples of events to which this role applies are paper presentations, tutorials, or talks. A keynote speaker could also be modelled as an instance of this class.\n\t\t\t</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Presenter> <http://www.w3.org/2000/01/rdf-schema#label> "Presenter" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Presenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#TutorialEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Tutorial Event" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#TutorialEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.semanticweb.org/ns/swc/ontology#AcademicEvent> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#TutorialEvent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#TutorialEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#TutorialEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t\n\t\t\t<p>\n\t\t\t\tA tutorial is a special session at a conference or workshop, somewhat like a long lecture on a specific topic.\n\t\t\t</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#TutorialEvent> <http://purl.org/dc/terms/subject> <http://data.semanticweb.org/ns/swc/ontology#AcademicEvent> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Delegate> <http://www.w3.org/2000/01/rdf-schema#label> "Delegate" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Delegate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Delegate> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>\n\t\t\t\tA delegate is someone who attends a conference or conference-like event.\n\t\t\t</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Delegate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.semanticweb.org/ns/swc/ontology#Role> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Delegate> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Role> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Delegate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Call> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://xmlns.com/wordnet/1.6/Announcement> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Call> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Call> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>The call classes have been deprecated in SWC. Instead, we suggest to use the <a href=\"http://sw.deri.org/2005/08/conf/cfp\">CfP ontology</a>.</p>\n\t\t\t<p>A <emph>call</emph> is a public announcement, asking for contribution of some kind to events such as conferences or workshops, or to a publication such as a journal or book.</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Call> <http://purl.org/dc/terms/subject> <http://dbpedia.org/resource/Call> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Call> <http://www.w3.org/2000/01/rdf-schema#label> "Call" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#Call> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DeprecatedClass> <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.totl.net/game/ofLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/LocationState> <http://data.totl.net/game/> .
+<http://data.totl.net/game/ofLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/ofLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "The location of something such as a move or a location state." <http://data.totl.net/game/> .
+<http://data.totl.net/game/ofLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Location> <http://data.totl.net/game/> .
+<http://data.totl.net/game/ofLocation> <http://www.w3.org/2000/01/rdf-schema#label> "of location" <http://data.totl.net/game/> .
+<http://dbpedia.org/ontology/Game> <http://www.w3.org/2000/01/rdf-schema#label> "ゲーム"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Game> <http://www.w3.org/2000/01/rdf-schema#label> "jogo"@pt <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Game> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q11410> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Game> <http://www.w3.org/2000/01/rdf-schema#label> "Πληροφορίες παιχνιδιού"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Game> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Game> <http://www.w3.org/2000/01/rdf-schema#comment> "a structured activity, usually undertaken for enjoyment and sometimes used as an educational tool"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Game> <http://www.w3.org/2000/01/rdf-schema#label> "cluiche"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Game> <http://www.w3.org/2000/01/rdf-schema#label> "juego"@es <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Game> <http://www.w3.org/2000/01/rdf-schema#label> "Spiel"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Game> <http://www.w3.org/2000/01/rdf-schema#label> "spel"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Game> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Activity> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Game> <http://www.w3.org/2000/01/rdf-schema#label> "jeu"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Game> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Game> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Game> <http://www.w3.org/2000/01/rdf-schema#label> "game"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterTower> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Tower> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterTower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterTower> <http://www.w3.org/2000/01/rdf-schema#comment> "a construction designed to store larger quantities of water at a place of some elevation in order to keep pressure on the water provision system"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterTower> <http://www.w3.org/2000/01/rdf-schema#label> "Watertoren"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterTower> <http://www.w3.org/2000/01/rdf-schema#label> "Serbatoio idrico a torre"@it <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterTower> <http://www.w3.org/2000/01/rdf-schema#label> "Wasserturm"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterTower> <http://www.w3.org/2000/01/rdf-schema#label> "Château d'eau"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterTower> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q274153> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterTower> <http://www.w3.org/2000/01/rdf-schema#comment> "μια κατασκευή σχεδιασμένη για αποθήκευση μεγάλων ποσοτήτων νερού σε μέρος με κάποια ανύψωση, ώστε να διατηρήσει πίεση στο σύστημα παροχής νερού"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterTower> <http://www.w3.org/2000/01/rdf-schema#label> "Water tower"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterTower> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:WaterTower> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterTower> <http://www.w3.org/2000/01/rdf-schema#label> "πύργος νερού"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/WaterTower> <http://www.w3.org/2000/01/rdf-schema#comment> "une construction destinée à entreposer l'eau, et placée en général sur un sommet géographique pour permettre de la distribuer sous pression"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/2000/01/rdf-schema#label> "tunnel"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/2000/01/rdf-schema#label> "tunnel"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/2000/01/rdf-schema#label> "tunnel"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Tunnel> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q44377> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/2000/01/rdf-schema#label> "τούνελ"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/2000/01/rdf-schema#label> "トンネル"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/2000/01/rdf-schema#comment> "Ένα τούνελ μπορεί να είναι για πεζούς ή για αυτοκινητόδρομους,για σιδηρόδρομους,ή για κανάλια στο νερό.Μερικά τούνελ είναι υδραγωγεία για να παρέχουν νερό προς κατανάλωση ή για υδροηλεκτικούς σταθμούς ή είναι υπόνομοι."@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/2000/01/rdf-schema#comment> "Un tunnel est une galerie souterraine livrant passage à une voie de communication (chemin de fer, canal, route, chemin piétonnier). Sont apparentés aux tunnels par leur mode de construction les grands ouvrages hydrauliques souterrains, tels que les aqueducs, collecteurs et émissaires destinés soit à l'amenée, soit à l'évacuation des eaux des grands centres et certaines conduites établies en liaison avec les barrages et usines hydro-électriques.  (http://fr.wikipedia.org/wiki/Tunnel)."@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/2000/01/rdf-schema#label> "터널"@ko <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/2000/01/rdf-schema#comment> "Ein Tunnel (auch Tunell) ist eine künstliche Passage, die Berge, Gewässer oder andere Hindernisse (in der Regel als Verkehrsweg) unterquert (http://de.wikipedia.org/wiki/Tunnel)."@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/2000/01/rdf-schema#comment> "A tunnel may be for foot or vehicular road traffic, for rail traffic, or for a canal. Some tunnels are aqueducts to supply water for consumption or for hydroelectric stations or are sewers (http://en.wikipedia.org/wiki/Tunnel)."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/2000/01/rdf-schema#label> "tollán"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/ArchitecturalStructure> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/2000/01/rdf-schema#label> "Tunnel"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Tunnel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/daylightSavingTimeZone> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/daylightSavingTimeZone> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Place> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/daylightSavingTimeZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/daylightSavingTimeZone> <http://www.w3.org/2000/01/rdf-schema#label> "daylight saving time zone"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/daylightSavingTimeZone> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:daylightSavingTimeZone> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/daylightSavingTimeZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/daylightSavingTimeZone> <http://www.w3.org/2000/01/rdf-schema#label> "Sommerzeitzone"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Death> <http://www.w3.org/2000/01/rdf-schema#label> "θάνατος"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Death> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Death> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Death> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Death> <http://www.w3.org/2000/01/rdf-schema#label> "dood"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Death> <http://www.w3.org/2000/01/rdf-schema#label> "death"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Death> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/PersonalEvent> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Death> <http://www.w3.org/2000/01/rdf-schema#label> "bás"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Death> <http://www.w3.org/2000/01/rdf-schema#label> "死"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Death> <http://www.w3.org/2000/01/rdf-schema#label> "mort"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Death> <http://www.w3.org/2000/01/rdf-schema#label> "Tod"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Death> <http://www.w3.org/2000/01/rdf-schema#comment> "someone's death as a type of personal event"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Area> <http://www.w3.org/2000/01/rdf-schema#comment> "Area of something. Use \"value\" for the value, \"min\" & \"max\" for a range (if uncertain) and \"rank\" (integer) for the rank of that thing amongst its siblings (eg regions ordered by area)"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Area> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Area> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Area> <http://www.w3.org/2000/01/rdf-schema#label> "gebied"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Area> <http://www.w3.org/2000/01/rdf-schema#label> "ceantar"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Area> <http://www.w3.org/2000/01/rdf-schema#comment> "Εμβαδόν ή έκταση είναι το μέγεθος μέτρησης των επιφανειών."@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Area> <http://www.w3.org/2000/01/rdf-schema#label> "area"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Area> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Area> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Area> <http://www.w3.org/2000/01/rdf-schema#label> "εμβαδόν"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Area> <http://www.w3.org/2000/01/rdf-schema#label> "面積"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Area> <http://www.w3.org/2000/01/rdf-schema#label> "Bereich"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/RoadJunction> <http://www.w3.org/2000/01/rdf-schema#label> "wegkruising"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/RoadJunction> <http://www.w3.org/2000/01/rdf-schema#label> "acomhal bóithre"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/RoadJunction> <http://www.w3.org/2000/01/rdf-schema#label> "road junction"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/RoadJunction> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:RoadJunction> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/RoadJunction> <http://www.w3.org/2000/01/rdf-schema#comment> "Eine Straßenkreuzung ist eine Stelle, an der sich zwei oder mehrere Straßen kreuzen (http://de.wikipedia.org/wiki/Stra%C3%9Fenkreuzung)."@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/RoadJunction> <http://www.w3.org/2000/01/rdf-schema#label> "Straßenkreuzung"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/RoadJunction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/RouteOfTransportation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/RoadJunction> <http://www.w3.org/2000/01/rdf-schema#comment> "A road junction is a location where vehicular traffic going in different directions can proceed in a controlled manner designed to minimize accidents. In some cases, vehicles can change between different routes or directions of travel (http://en.wikipedia.org/wiki/Junction_%28road%29)."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/RoadJunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/datatype/somaliShilling> <http://www.w3.org/2000/01/rdf-schema#label> "somaliShilling"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/datatype/somaliShilling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/variantOf> <http://www.w3.org/2000/01/rdf-schema#label> "варијанта"@sr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/variantOf> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:variantOf> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/variantOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/variantOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#sameSettingAs> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/variantOf> <http://www.w3.org/2000/01/rdf-schema#label> "Variante oder Variation"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/variantOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/variantOf> <http://www.w3.org/2000/01/rdf-schema#comment> "variant or variation of something, for example the variant of a car"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/variantOf> <http://www.w3.org/2000/01/rdf-schema#label> "variant"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/variantOf> <http://www.w3.org/2000/01/rdf-schema#label> "variant or variation"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/address> <http://www.w3.org/2000/01/rdf-schema#label> "adresse"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/address> <http://www.w3.org/2000/01/rdf-schema#label> "adres"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/address> <http://www.w3.org/2000/01/rdf-schema#label> "адрес"@ru <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/address> <http://www.w3.org/2000/01/rdf-schema#label> "адреса"@sr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/address> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/address> <http://www.w3.org/2000/01/rdf-schema#label> "Adresse"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/address> <http://www.w3.org/2000/01/rdf-schema#label> "address"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/address> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:address> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/address> <http://www.w3.org/2000/01/rdf-schema#comment> "Address of something as literal. Usually Building, but we also use it for the address of a Region's or Settlement's government"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/address> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.wikidata.org/entity/P969> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/address> <http://www.w3.org/2000/01/rdf-schema#label> "διεύθυνση"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ClericalAdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#label> "région administrative dans une église"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ClericalAdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#label> "kerkelijk bestuurlijk gebied"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ClericalAdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#label> "klerikale Verwaltungsregion"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ClericalAdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#label> "사무 관리 지역"@ko <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ClericalAdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "An administrative body governing some territorial unity, in this case a clerical administrative body"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ClericalAdministrativeRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ClericalAdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/AdministrativeRegion> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ClericalAdministrativeRegion> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:ClericalAdministrativeRegion> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ClericalAdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#label> "clerical administrative region"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rank> <http://www.w3.org/2000/01/rdf-schema#comment> "Rank of something among other things of the same kind, eg Constellations by Area; MusicalAlbums by popularity, etc"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rank> <http://www.w3.org/2000/01/rdf-schema#label> "rank"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rank> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:rank> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rank> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/rank> <http://www.w3.org/2000/01/rdf-schema#label> "Platzierung"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/soundRecording> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/soundRecording> <http://www.w3.org/2000/01/rdf-schema#label> "sound recording"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/soundRecording> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Sound> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/soundRecording> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:soundRecording> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/soundRecording> <http://www.w3.org/2000/01/rdf-schema#comment> "Sound recording somehow related to the subject"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/soundRecording> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/price> <http://www.w3.org/2000/01/rdf-schema#comment> "The price of something, eg a journal. For \"total money earned by an Athlete\" use gross"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/price> <http://www.w3.org/2000/01/rdf-schema#label> "price ($)"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/price> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:price> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/price> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/price> <http://www.w3.org/2000/01/rdf-schema#label> "Preis ($)"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Marriage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/PersonalEvent> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Marriage> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q8445> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Marriage> <http://www.w3.org/2000/01/rdf-schema#label> "pósadh"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Marriage> <http://www.w3.org/2000/01/rdf-schema#comment> "someone's marriage as a type of personal event"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Marriage> <http://www.w3.org/2000/01/rdf-schema#comment> "O γάμος είναι μια κοινωνική, θρησκευτική και νομική σύζευξη ή ένωση δύο ατόμων, διαφορετικού ή σε ορισμένες χώρες κατά τα τελευταία χρόνια και ίδιου φύλου."@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Marriage> <http://www.w3.org/2000/01/rdf-schema#label> "huwelijk"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Marriage> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Marriage> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Marriage> <http://www.w3.org/2000/01/rdf-schema#label> "marriage"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Marriage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Marriage> <http://www.w3.org/2000/01/rdf-schema#label> "Heirat"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Marriage> <http://www.w3.org/2000/01/rdf-schema#label> "γάμος"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Marriage> <http://www.w3.org/2000/01/rdf-schema#label> "mariage"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Marriage> <http://www.w3.org/2000/01/rdf-schema#label> "結婚"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/sourceText> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:sourceText> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/sourceText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#langString> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/sourceText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/sourceText> <http://www.w3.org/2000/01/rdf-schema#comment> "Source of something (eg an image) as text. Use dct:source if the source is described using a resource"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/sourceText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/sourceText> <http://www.w3.org/2000/01/rdf-schema#label> "sourceText"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Mosque> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#label> "mosque"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#comment> "Το τζαμί είναι ο τόπος λατρείας των Μουσουλμάνων."@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#label> "mosc"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#label> "τζαμί"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#comment> "Une mosquée est un lieu de culte où se rassemblent les musulmans pour les prières communes."@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#label> "mezquita"@es <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#label> "meczet"@pl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#comment> "Is áit adhartha na Moslamach, lucht leanúna an reiligiúin Ioslam, é mosc"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#label> "モスク"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#label> "mosquée"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q32815> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/ReligiousBuilding> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#label> "moskee"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#comment> "A mosque, sometimes spelt mosk, is a place of worship for followers of Islam."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#comment> "Meczet – miejsce kultu muzułmańskiego"@pl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Mosque> <http://www.w3.org/2000/01/rdf-schema#label> "Moschee"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PersonalEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PersonalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "évènement dans la vie privée"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PersonalEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "ένα συμβάν που αφορά την προσωπική ζωή κάποιου"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PersonalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "personal event"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PersonalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Ereignis im persönlichen Leben"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PersonalEvent> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:PersonalEvent> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PersonalEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "an event that occurs in someone's personal life"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PersonalEvent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/LifeCycleEvent> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PersonalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "προσωπικό συμβάν"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/PersonalEvent> <http://www.w3.org/2000/01/rdf-schema#label> "levensloopgebeurtenis"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Birth> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Birth> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Birth> <http://www.w3.org/2000/01/rdf-schema#label> "naissance"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Birth> <http://www.w3.org/2000/01/rdf-schema#label> "geboorte"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Birth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Birth> <http://www.w3.org/2000/01/rdf-schema#label> "γέννηση"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Birth> <http://www.w3.org/2000/01/rdf-schema#label> "Geburt"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Birth> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/PersonalEvent> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Birth> <http://www.w3.org/2000/01/rdf-schema#label> "breith"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Birth> <http://www.w3.org/2000/01/rdf-schema#label> "誕生"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Birth> <http://www.w3.org/2000/01/rdf-schema#comment> "someone's birth as a type of personal event"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Birth> <http://www.w3.org/2000/01/rdf-schema#label> "birth"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/footedness> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:footedness> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/footedness> <http://www.w3.org/2000/01/rdf-schema#label> "habilidade com o pé"@pt <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/footedness> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Sport> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/footedness> <http://www.w3.org/2000/01/rdf-schema#label> "Footedness"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/footedness> <http://www.w3.org/2000/01/rdf-schema#comment> "a preference to put one's left or right foot forward in surfing, wakeboarding, skateboarding, wakeskating, snowboarding and mountainboarding. The term is sometimes applied to the foot a footballer uses to kick."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/footedness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/footedness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/footedness> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Person> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Canton> <http://www.w3.org/2000/01/rdf-schema#label> "kanton"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Canton> <http://www.w3.org/2000/01/rdf-schema#label> "Kanton"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Canton> <http://www.w3.org/2000/01/rdf-schema#label> "スイス連邦の州またはフランスの群"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Canton> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Canton> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Canton> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Canton> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Canton> <http://www.w3.org/2000/01/rdf-schema#comment> "Das Wort Kanton dient zur Bezeichnung verschiedener (niederen) Verwaltungsbezirke in Frankreich, Belgien, Kanada und anderen Ländern"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Canton> <http://www.w3.org/2000/01/rdf-schema#comment> "An administrative (France) or lawcourts (Netherlands) body governing a territorial unity on the municipal level or somewhat above"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Canton> <http://www.w3.org/2000/01/rdf-schema#label> "canton"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Canton> <http://www.w3.org/2000/01/rdf-schema#label> "canton"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#label> "gebied onder overheidsbestuur"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#label> "région administrative d'état"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/AdministrativeRegion> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#label> "governmental administrative region"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:GovernmentalAdministrativeRegion> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "An administrative body governing some territorial unity, in this case a governmental administrative body"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> <http://www.w3.org/2000/01/rdf-schema#label> "staatliche Verwaltungsregion"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/computingPlatform> <http://www.w3.org/2000/01/rdf-schema#label> "computing platform"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/computingPlatform> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Software> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/computingPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/computingPlatform> <http://www.w3.org/2000/01/rdf-schema#comment> "some sort of hardware architecture or software framework, that allows this software to run"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/computingPlatform> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.wikidata.org/entity/P400> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/computingPlatform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/computingPlatform> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:computingPlatform> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/computingPlatform> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#coparticipatesWith> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/mascot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/mascot> <http://www.w3.org/2000/01/rdf-schema#comment> "Animal, poupée, objets divers servant de porte-bonheur ou d’emblème."@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/mascot> <http://www.w3.org/2000/01/rdf-schema#label> "mascotte"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/mascot> <http://www.w3.org/2000/01/rdf-schema#comment> "something, especially a person or animal, used to symbolize a sports team, company, organization or other group."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/mascot> <http://www.w3.org/2000/01/rdf-schema#label> "Maskottchen"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/mascot> <http://www.w3.org/2000/01/rdf-schema#label> "mascote"@pt <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/mascot> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:mascot> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/mascot> <http://www.w3.org/2000/01/rdf-schema#label> "mascot"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/mascot> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/mascot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/epoch> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/epoch> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Planet> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/epoch> <http://www.w3.org/2000/01/rdf-schema#comment> "moment in time used as a referrence point for some time-vaying astronomical quantity"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/epoch> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:epoch> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/epoch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/epoch> <http://www.w3.org/2000/01/rdf-schema#label> "epoch"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/epoch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Synagogue> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q34627> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/2000/01/rdf-schema#label> "シナゴーグ"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/2000/01/rdf-schema#comment> "A synagogue, sometimes spelt synagog, is a Jewish or Samaritan house of prayer."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/ReligiousBuilding> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/2000/01/rdf-schema#comment> "Une synagogue est un lieu de culte juif."@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/2000/01/rdf-schema#label> "Synagoge"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/2000/01/rdf-schema#label> "synagoge"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/2000/01/rdf-schema#label> "synagoga"@pl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/2000/01/rdf-schema#label> "sionagóg"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/2000/01/rdf-schema#label> "συναγωγή"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/2000/01/rdf-schema#label> "synagogue"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/2000/01/rdf-schema#label> "synagogue"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Synagogue> <http://www.w3.org/2000/01/rdf-schema#label> "sinagoga"@es <http://dbpedia.org/ontology/> .
+<http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#LocalName> <http://www.w3.org/2000/01/rdf-schema#comment> "Name in some local context" <http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic> .
+<http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#LocalName> <http://www.w3.org/2000/01/rdf-schema#label> "localName" <http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic> .
+<http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#LocalName> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/2001/XMLSchema#NCName> <http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic> .
+<http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#LocalName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic> <http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic> .
+<http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic#LocalName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/som.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:Bsoma .
+_:Bsoma <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsoma <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/soma.nt> .
+_:Bsoma <https://w3id.org/tree#value> "soma" .
+_:Bsoma <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/soma.nt> <https://w3id.org/tree#remainingItems> "33"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:Bsome .
+_:Bsome <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsome <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/some.nt> .
+_:Bsome <https://w3id.org/tree#value> "some" .
+_:Bsome <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/some.nt> <https://w3id.org/tree#remainingItems> "2161"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:Bsomi .
+_:Bsomi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsomi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/somi.nt> .
+_:Bsomi <https://w3id.org/tree#value> "somi" .
+_:Bsomi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/somi.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:Bsoml .
+_:Bsoml <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsoml <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/soml.nt> .
+_:Bsoml <https://w3id.org/tree#value> "soml" .
+_:Bsoml <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/soml.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:Bsomm .
+_:Bsomm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsomm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/somm.nt> .
+_:Bsomm <https://w3id.org/tree#value> "somm" .
+_:Bsomm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/somm.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:Bsomo .
+_:Bsomo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsomo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/somo.nt> .
+_:Bsomo <https://w3id.org/tree#value> "somo" .
+_:Bsomo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/somo.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:Bsomt .
+_:Bsomt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsomt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/somt.nt> .
+_:Bsomt <https://w3id.org/tree#value> "somt" .
+_:Bsomt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/somt.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:BaX2Bsom .
+_:BaX2Bsom <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsom <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+som.nt> .
+_:BaX2Bsom <https://w3id.org/tree#value> "a" .
+_:BaX2Bsom <https://w3id.org/tree#value> "som" .
+_:BaX2Bsom <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+som.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:BbX2Bsom .
+_:BbX2Bsom <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bsom <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+som.nt> .
+_:BbX2Bsom <https://w3id.org/tree#value> "b" .
+_:BbX2Bsom <https://w3id.org/tree#value> "som" .
+_:BbX2Bsom <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+som.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:BdX2Bsom .
+_:BdX2Bsom <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2Bsom <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+som.nt> .
+_:BdX2Bsom <https://w3id.org/tree#value> "d" .
+_:BdX2Bsom <https://w3id.org/tree#value> "som" .
+_:BdX2Bsom <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+som.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:BeX2Bsom .
+_:BeX2Bsom <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2Bsom <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+som.nt> .
+_:BeX2Bsom <https://w3id.org/tree#value> "e" .
+_:BeX2Bsom <https://w3id.org/tree#value> "som" .
+_:BeX2Bsom <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+som.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:BfX2Bsom .
+_:BfX2Bsom <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2Bsom <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+som.nt> .
+_:BfX2Bsom <https://w3id.org/tree#value> "f" .
+_:BfX2Bsom <https://w3id.org/tree#value> "som" .
+_:BfX2Bsom <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+som.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:BhX2Bsom .
+_:BhX2Bsom <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2Bsom <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+som.nt> .
+_:BhX2Bsom <https://w3id.org/tree#value> "h" .
+_:BhX2Bsom <https://w3id.org/tree#value> "som" .
+_:BhX2Bsom <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+som.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:BiX2Bsom .
+_:BiX2Bsom <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2Bsom <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+som.nt> .
+_:BiX2Bsom <https://w3id.org/tree#value> "i" .
+_:BiX2Bsom <https://w3id.org/tree#value> "som" .
+_:BiX2Bsom <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+som.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:BkX2Bsom .
+_:BkX2Bsom <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BkX2Bsom <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/k+som.nt> .
+_:BkX2Bsom <https://w3id.org/tree#value> "k" .
+_:BkX2Bsom <https://w3id.org/tree#value> "som" .
+_:BkX2Bsom <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/k+som.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:BsX2Bsom .
+_:BsX2Bsom <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsX2Bsom <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/s+som.nt> .
+_:BsX2Bsom <https://w3id.org/tree#value> "s" .
+_:BsX2Bsom <https://w3id.org/tree#value> "som" .
+_:BsX2Bsom <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/s+som.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:BsomX2Bt .
+_:BsomX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsomX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/som+t.nt> .
+_:BsomX2Bt <https://w3id.org/tree#value> "som" .
+_:BsomX2Bt <https://w3id.org/tree#value> "t" .
+_:BsomX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/som+t.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:BsomX2Bu .
+_:BsomX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsomX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/som+u.nt> .
+_:BsomX2Bu <https://w3id.org/tree#value> "som" .
+_:BsomX2Bu <https://w3id.org/tree#value> "u" .
+_:BsomX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/som+u.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/som.nt> <https://w3id.org/tree#relation> _:BsomX2By .
+_:BsomX2By <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsomX2By <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/som+y.nt> .
+_:BsomX2By <https://w3id.org/tree#value> "som" .
+_:BsomX2By <https://w3id.org/tree#value> "y" .
+_:BsomX2By <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/som+y.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

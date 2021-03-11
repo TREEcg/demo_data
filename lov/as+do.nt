@@ -1,0 +1,193 @@
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocommons/voaf#reliesOn> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#label> "extends"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#label> "étend"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique que le vocabulaire sujet étend l'expressivité du vocabulaire objet en déclarant des relations de subsomption avec ce dernier, ou en utilisant ses classes comme domaine ou co-domaine d'un propriété du vocabulaire sujet, ou en définissant des contraintes locales etc."@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the subject vocabulary extends the expressivity of the object vocabulary by declaring subsumption relationships, using object vocabulary class as domain or range of a subject vocabulary property, defining local restrictions etc ..."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://purl.org/dc/terms/description> "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n\t\tPREFIX owl:<http://www.w3.org/2002/07/owl#>\n\t\tPREFIX voaf:<http://purl.org/vocommons/voaf#>\n\n\t\tCONSTRUCT{\n\t\t\t?vocab1 voaf:extends ?vocab2\n\t\t}\n\t\tWHERE{\n\t\t\t{?elem1 owl:inverseOf ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\tUNION{?elem1 rdfs:domain ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\tUNION{?elem1 rdfs:range ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\tUNION{?elem2 rdfs:domain ?elem1. FILTER(!isBlank(?elem1))}\n\t\t\tUNION{?elem2 rdfs:range ?elem1. FILTER(!isBlank(?elem1))}\n\t\t\t?elem1 rdfs:isDefinedBy ?vocab1.\n\t\t\t?vocab1 a voaf:Vocabulary.\n\t\t\t?elem2 rdfs:isDefinedBy ?vocab2.\n\t\t\t?vocab2 a voaf:Vocabulary.\n\t\t\tFILTER(?vocab1!=?vocab2)\n\t\t}" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://www.w3.org/1999/xhtml/vocab#document> <http://www.w3.org/2000/01/rdf-schema#comment> "A region\n      containing related information that is declared as document content, as\n      opposed to a web application." <http://www.w3.org/1999/xhtml/vocab> .
+<http://www.w3.org/1999/xhtml/vocab#document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/1999/xhtml/vocab> .
+<http://ns.inria.fr/ludo/v1/xapi#Actor> <http://www.w3.org/2000/01/rdf-schema#comment> "An identity or persona of an individual or group tracked using Statements as doing an action (Verb) within an Activity."@en <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#Actor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#Actor> <http://www.w3.org/2000/01/rdf-schema#label> "Actor"@en <http://ns.inria.fr/ludo/v1/xapi> .
+<http://softeng.polito.it/rsctx#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://dbpedia.org/ontology/purpose" <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "https://schema.org/purpose" <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#hasPurpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates the purpose of a user.\n\nWARNING schema:purpose has different domain (three possible classes) and different ranges (2 possible classes). Although one range is Thing, which would enable to consider this porperty as subproperty of schema.org we should add a class in domain, while for the scopes of this ontology only Environment as domain is proper. "@en <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#range> <http://softeng.polito.it/rsctx#Purpose> <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#label> "has purpose"@en <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#hasPurpose> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/prissma/v2#Environment> <http://softeng.polito.it/rsctx> .
+<https://w3id.org/fog#asIfc> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q979630> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC format"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format as documented by buildingSMART and in its ISO 16739 standard. The format consists of a single .ifc or .ifcxml file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asIfc_v2x4-icfxml)."@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.iso.org/standard/70303.html> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/Industry_Foundation_Classes> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 TC1 as documented by buildingSMART and in its ISO 16739 standard"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc2x3-tc1-release> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x3 TC1"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifc> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc_v2x3tc1> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifc> <http://dbpedia.org/property/extension> ".ifc" <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifc> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x3 TC1 file (.ifc)"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifc> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 TC1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1-ifcxml> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1-ifcxml> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc_v2x4add1> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1-ifcxml> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 Add1 file (.ifcxml)"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1-ifcxml> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1-ifcxml> <http://dbpedia.org/property/extension> ".ifcxml" <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifcxml> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc_v2x3tc1> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifcxml> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x3 TC1 file (.ifcxml)"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifcxml> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 TC1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifcxml> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifcxml> <http://dbpedia.org/property/extension> ".ifcxml" <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 as documented by buildingSMART and in its ISO 16739 standard"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc4-release> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2-ifcxml> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2-ifcxml> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc_v2x4add2> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2-ifcxml> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 Add 2 file (.ifcxml)"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2-ifcxml> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add2 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2-ifcxml> <http://dbpedia.org/property/extension> ".ifcxml" <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3-ifcxml> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3-ifcxml> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x3 file (.ifcxml)"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3-ifcxml> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3-ifcxml> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc_v2x3> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3-ifcxml> <http://dbpedia.org/property/extension> ".ifcxml" <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc4-add2> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 Add2"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add2 as documented by buildingSMART and in its ISO 16739 standard"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x3"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 as documented by buildingSMART and in its ISO 16739 standard"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc2x3-release> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc4-add1-release> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 Add1"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add1 as documented by buildingSMART and in its ISO 16739 standard"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4-ifcxml> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 file (.ifcxml)"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4-ifcxml> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4-ifcxml> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4-ifcxml> <http://dbpedia.org/property/extension> ".ifcxml" <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4-ifcxml> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc_v2x4> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the IGES format as documented in its ANSI standard. The format consists of a single .iges/.igs file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asIges_v5.3)."@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/IGES> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges> <http://dbpedia.org/property/extension> ".iges" <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges> <http://dbpedia.org/property/extension> ".igs" <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges> <http://www.w3.org/2000/01/rdf-schema#label> "as IGES format"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.iana.org/assignments/media-types/model/iges> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q616714> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3-ifc> <http://dbpedia.org/property/extension> ".ifc" <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3-ifc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3-ifc> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc_v2x3> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3-ifc> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3-ifc> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x3 file (.ifc)"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x3-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1-ifc> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 Add1 file (.ifc)"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1-ifc> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc_v2x4add1> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1-ifc> <http://dbpedia.org/property/extension> ".ifc" <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1-ifc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1-ifc> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add1-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4-ifc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4-ifc> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 file (.ifc)"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4-ifc> <http://dbpedia.org/property/extension> ".ifc" <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4-ifc> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4-ifc> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc_v2x4> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2-ifc> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 Add2 file (.ifc)"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2-ifc> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add2 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2-ifc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2-ifc> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc_v2x4add2> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2-ifc> <http://dbpedia.org/property/extension> ".ifc" <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIfc_v2x4add2-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges_v5.3> <http://dbpedia.org/property/extension> ".igs" <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges_v5.3> <http://dbpedia.org/property/extension> ".iges" <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges_v5.3> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges_v5.3> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the IGES format v5.6 as documented in its ANSI standard."@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges_v5.3> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIges> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges_v5.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges_v5.3> <http://www.w3.org/2000/01/rdf-schema#label> "as IGES v5.3 (.igs)"@en <https://w3id.org/fog> .
+<https://w3id.org/fog#asIges_v5.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/fog> .
+<http://www.purl.org/drammar#intends> <http://www.w3.org/2000/01/rdf-schema#label> "intends" <http://www.purl.org/drammar> .
+<http://www.purl.org/drammar#intends> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.purl.org/drammar#isIntendedBy> <http://www.purl.org/drammar> .
+<http://www.purl.org/drammar#intends> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.purl.org/drammar> .
+<http://www.purl.org/drammar#intends> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.purl.org/drammar#Plan> <http://www.purl.org/drammar> .
+<http://www.purl.org/drammar#intends> <http://www.w3.org/2000/01/rdf-schema#comment> "Intends has as domain an Agent and as range a Plan." <http://www.purl.org/drammar> .
+<http://www.purl.org/drammar#intends> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.purl.org/drammar#Agent> <http://www.purl.org/drammar> .
+<http://www.purl.org/drammar#intends> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> <http://www.purl.org/drammar> .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "All these properties are data associated with classes. Labels are\n            self-explaining (e.g., isIntentional) or have Thing as domain. In\n            non-obvious names, the domain class is in the prefix of the name (e.g. Goal_type)." <http://www.purl.org/drammar> .
+<http://www.w3.org/2002/07/owl#topDataProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.purl.org/drammar> .
+<https://w3id.org/timebank#SpecificPhobia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/timebank#MentalDisorder> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#SpecificPhobia> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://purl.bioontology.org/ontology/ICD10/F40.2> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#SpecificPhobia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#SpecificPhobia> <http://www.w3.org/2000/01/rdf-schema#label> "Specific Phobia" <https://w3id.org/timebank> .
+<https://w3id.org/timebank#SpecificPhobia> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/timebank> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#SpecificPhobia> <http://www.w3.org/2000/01/rdf-schema#comment> "Fear of specific objects such as dogs, cats, heights, dark places, and so on." <https://w3id.org/timebank> .
+<https://w3id.org/timebank#SpecificPhobia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#SpecificPhobia> <http://www.w3.org/2004/02/skos/core#relatedMatch> <http://snomed.info/id/386808001> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#SpecificPhobia> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://dbpedia.org/resource/Specific_phobia> <https://w3id.org/timebank> .
+<https://w3id.org/timebank#SpecificPhobia> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <https://w3id.org/timebank#MentalDisorder> <https://w3id.org/timebank> .
+<https://w3id.org/dot#StructuralDamage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/dot#> .
+<https://w3id.org/dot#StructuralDamage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/dot#> <https://w3id.org/dot#> .
+<https://w3id.org/dot#StructuralDamage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dot#Damage> <https://w3id.org/dot#> .
+<https://w3id.org/dot#StructuralDamage> <http://www.w3.org/2000/01/rdf-schema#label> "Structural Damage"@en <https://w3id.org/dot#> .
+<https://w3id.org/dot#StructuralDamage> <http://www.w3.org/2000/01/rdf-schema#comment> "Should be used on nodes that are already classified as dot:DamageArea or dot:DamageElement.\r\nDamage that impairs the structural integrity of the structure."@en <https://w3id.org/dot#> .
+<https://w3id.org/dot#Defect> <http://www.w3.org/2000/01/rdf-schema#label> "Defect"@en <https://w3id.org/dot#> .
+<https://w3id.org/dot#Defect> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/dot#StructuralDamage> <https://w3id.org/dot#> .
+<https://w3id.org/dot#Defect> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dot#Damage> <https://w3id.org/dot#> .
+<https://w3id.org/dot#Defect> <http://www.w3.org/2000/01/rdf-schema#comment> "Should be used on nodes that are already classified as dot:DamageArea or dot:DamageElement.\r\nDamage that does not impair the structural integrity of the structure, but can still have influence on the durability, usability and / or value."@en <https://w3id.org/dot#> .
+<https://w3id.org/dot#Defect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/dot#> .
+<https://w3id.org/dot#Defect> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/dot#> <https://w3id.org/dot#> .
+<https://w3id.org/idsa/core/ServiceIsolationGuarantee> <http://www.w3.org/2002/07/owl#equivalentClass> _:B4965cfaa9f695fde23761a5d14089e2c <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/ServiceIsolationGuarantee> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/idsa/core/SecurityGuarantee> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/ServiceIsolationGuarantee> <http://www.w3.org/2000/01/rdf-schema#comment> "Service isolation mechanism supported by the Connector. Examples are process group (Docker) or by least privilege with clear separation and support for additional security modules as done by trustme."@en <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/ServiceIsolationGuarantee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/ServiceIsolationGuarantee> <http://www.w3.org/2000/01/rdf-schema#label> "Service isolation"@en <https://w3id.org/idsa/core> .

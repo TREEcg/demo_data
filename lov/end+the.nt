@@ -1,0 +1,416 @@
+<http://ontology.it/itsmo/v1#agreementValidThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#agreementValidThrough> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.it/itsmo/v1#Agreement> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#agreementValidThrough> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#agreementValidThrough> <http://www.w3.org/2000/01/rdf-schema#label> "agreementValidThrough"@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#agreementValidThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the end of the validity of an agreement."@en <http://ontology.it/itsmo/v1> .
+<http://open.vocab.org/terms/DOMRange> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/DOMRange> <http://purl.org/net/vocab/2004/03/label#plural> "DOMRanges"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/DOMRange> <http://www.w3.org/2000/01/rdf-schema#comment> "A DOM Range consists of two boundary-points corresponding to the start and the end of the Range.\nhttp://www.w3.org/TR/2000/REC-DOM-Level-2-Traversal-Range-20001113/ranges.html#Level-2-Range-Definitions"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/DOMRange> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/terms/DOMRange.html> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/DOMRange> <http://schemas.talis.com/2005/dir/schema#etag> "\"c5ec7935-1f5f-44c7-b957-8989b185f1ac\"" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/DOMRange> <http://www.w3.org/2000/01/rdf-schema#label> "DOMRange"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/DOMRange> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/DOMRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://open.vocab.org/terms> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#CString> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> <http://www.w3.org/2000/01/rdf-schema#label> "RFC 5147 String"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#RFC5147String> <http://www.w3.org/2000/01/rdf-schema#comment> "cf. http://tools.ietf.org/html/rfc5147 URIs of this class have to conform with the syntax of RFC 5147 in a way that the end on a valid identifier, if you remove the prefix. Note that unlike RFC 5147 NIF does not requrire '#' URIs. So valid URIs are http://example.org#char=0,28 , http://example.org/whatever/char=0,28 , http://example.org/nif?char=0,28\n    Changelog:\n    * 1.1.0 changed subclass to CString .\n    * 1.1.1 typo in rdfs:label and extension of comment\n    " <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#endIndex> <http://www.w3.org/2000/01/rdf-schema#comment> "The end index of a character range as defined in http://tools.ietf.org/html/rfc5147#section-2.2.1 and http://tools.ietf.org/html/rfc5147#section-2.2.2, measured as the gap between two characters, starting to count from 0 (the position before the first character of a text). \n    Example: Index \"2\" is the postion between \"Mr\" and \".\"  in \"Mr. Sandman\".\n    Note: RFC 5147 is re-used for the definition of character ranges. RFC 5147 is assuming a text/plain MIME type. NIF builds upon Unicode and is content agnostic. \n    Requirement (1): This property has the same value the \"Character position\" of RFC 5147 and it must therefore be an xsd:nonNegativeInteger .  \n    Requirement (2): The index of the subject string MUST be calculated relative to the nif:referenceContext of the subject. If available, this is the rdf:Literal of the nif:isString property." <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#endIndex> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#endIndex> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.2" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#endIndex> <http://www.w3.org/2000/01/rdf-schema#label> "end index"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#endIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#endIndex> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#endIndex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://purl.org/NET/c4dm/timeline.owl#end> <http://www.w3.org/2000/01/rdf-schema#comment> "refers to the end of a time interval, through an explicit datatype. time:hasEnd can be used as well, if you want to associate the end of the interval to an explicit time point resource" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#end> <http://www.w3.org/2000/01/rdf-schema#label> "ends at" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#end> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#end> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/NET/c4dm/timeline.owl#Interval> <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#end> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDateTime> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDateTime> <http://www.w3.org/2000/01/rdf-schema#label> "ends at (date/time)" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A subproperty of :endsAt, allowing to address the end of an interval as a date/time" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDateTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/NET/c4dm/timeline.owl#end> <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#endsAtDateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/archival/vocab/arch#bulkEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "The end of a collection's bulk dates" <http://purl.org/archival/vocab/arch> .
+<http://purl.org/archival/vocab/arch#bulkEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/archival/vocab/arch> .
+<http://purl.org/archival/vocab/arch#bulkEnd> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/created> <http://purl.org/archival/vocab/arch> .
+<http://purl.org/archival/vocab/arch#inclusiveEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "The end of a collection's inclusive dates" <http://purl.org/archival/vocab/arch> .
+<http://purl.org/archival/vocab/arch#inclusiveEnd> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/created> <http://purl.org/archival/vocab/arch> .
+<http://purl.org/archival/vocab/arch#inclusiveEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/archival/vocab/arch> .
+<http://purl.org/cerif/frapo/Investigation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/Investigation> <http://purl.org/dc/elements/1.1/description> "Equivalent class in ISA-RDF: 'Investigation'."@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/Investigation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/cerif/frapo/Endeavour> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/Investigation> <http://www.w3.org/2000/01/rdf-schema#label> "investigation"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/Investigation> <http://www.w3.org/2000/01/rdf-schema#comment> "An investigation is an endeavour that involves research, enabled by a project.  \n\nThe investigation relate to the scholarly and practical aspects of conducting the research itself, including the hypotheses being investigated, the experiments being undertaken, the data being gathered and analysed, the interpretations being drawn from the data, and the results obtained.  \n\nIn contrast, the project that enables it encompasses the administrative aspects of undertaking the endeavour, including the funding obtained, the people employed, and the management of the project in terms of deadlines and deliverables."@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/dqm-vocabulary/v1/dqm#WhitespaceRemoval> <http://www.w3.org/2000/01/rdf-schema#comment> "A white space removal rule states that whitespaces at the beginning of a string and at the end of a string shall be removed for the specified property."@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#WhitespaceRemoval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dqm-vocabulary/v1/dqm#LiteralCleansingRule> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#WhitespaceRemoval> <http://www.w3.org/2000/01/rdf-schema#label> "White Space Removal Rule"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#WhitespaceRemoval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#endsWith> <http://www.w3.org/2000/01/rdf-schema#domain> _:B8cb8a9b3089816f6fc582eb30cba377a <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#endsWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#endsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#endsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#endsWith> <http://www.w3.org/2000/01/rdf-schema#label> "Ends With"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#endsWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dqm-vocabulary/v1/dqm#operatedValue> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#endsWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Holds one or more consecutive characters that are supposed to be found at the end of strings of another property."@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/goodrelations/v1#availabilityEnds> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#availabilityEnds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#availabilityEnds> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the end of the availability of the gr:ProductOrService included in the gr:Offering.\nThe difference to the properties gr:validFrom and gr:validThrough is that those specify the period of time during which the offer is valid and can be accepted.\n\nExample: I offer to lease my boat for the period of August 1 - August 31, 2010, but you must accept by offer no later than July 15.\n\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2008-05-30T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2008-05-30T09:30:10-09:00\n\nor\n\n2008-05-30T09:30:10+09:00.\n\nNote: There is another property gr:availableAtOrFrom, which is used to indicate the gr:Location (e.g. store or shop) from which the goods would be available."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#availabilityEnds> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba433343e4090b3e40c1aebc9a9223333 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#availabilityEnds> <http://www.w3.org/2000/01/rdf-schema#label> "availability ends (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#availabilityEnds> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#domain> _:Be458e2f400874d122f010385eff6760a <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the end of the validity of the gr:Offering, gr:PriceSpecification, gr:License, or gr:OpeningHoursSpecification.\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2008-05-30T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2008-05-30T09:30:10-09:00\n\nor\n2008-05-30T09:30:10+09:00.\n\nNote 1: If multiple contradicting instances of a gr:Offering, gr:PriceSpecification, or gr:OpeningHoursSpecification exist, it is a good heuristics to assume that\n1. Information with validity information for the respective period of time ranks higher than information without validity information.\n2. Among conflicting nodes both having validity information, the one with the shorter validity span ranks higher.\nNote 2: For Google, attaching a gr:validThrough statement to a gr:UnitPriceSpecification is mandatory. \n"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#label> "valid through (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/linguistics/gold/Enclitic> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Enclitic> <http://www.w3.org/2000/01/rdf-schema#comment> "An enclitic is a clitic that is phonologically joined at the end of a preceding lexical unit to form a single phonological unit [Crystal 1980: 64; Pei and Gaynor 1954: 65]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Enclitic> <http://www.w3.org/2000/01/rdf-schema#label> "Enclitic"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Enclitic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Enclitic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Clitic> <http://purl.org/linguistics/gold> .
+<http://purl.org/linked-data/api/vocab#base> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#base> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/api/vocab#API> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#base> <http://www.w3.org/2000/01/rdf-schema#label> "Base URI"@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#base> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/api/vocab#> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#base> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#base> <http://www.w3.org/2000/01/rdf-schema#comment> "The base URI of the API, which is distinct from the URI of the SPARQL endpoint that it queries or the base URI of the instances that it returns. This base URI is stripped from the request URI before any matching is done against the endpoints defined for the API."@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#sparqlEndpoint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/api/vocab#API> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#sparqlEndpoint> <http://www.w3.org/2000/01/rdf-schema#label> "SPARQL endpoint"@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#sparqlEndpoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#sparqlEndpoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#sparqlEndpoint> <http://www.w3.org/2000/01/rdf-schema#comment> "The endpoint used to serve up the results that are exposed by the API. This should not include the query parameters within the URI."@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#sparqlEndpoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/api/vocab#> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#formatter> <http://www.w3.org/2000/01/rdf-schema#comment> "A formatter that can be used with the endpoint."@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#formatter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#formatter> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linked-data/api/vocab#Formatter> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#formatter> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/api/vocab#Endpoint> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#formatter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/api/vocab#> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#formatter> <http://www.w3.org/2000/01/rdf-schema#label> "Formatter"@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#viewer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/api/vocab#> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#viewer> <http://www.w3.org/2000/01/rdf-schema#comment> "A viewer that can be used with the endpoint."@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#viewer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#viewer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/api/vocab#Endpoint> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#viewer> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/linked-data/api/vocab#Viewer> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#viewer> <http://www.w3.org/2000/01/rdf-schema#label> "Viewer"@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#List> <http://www.w3.org/2000/01/rdf-schema#comment> "a List represents the full set of resources that match the request against the Endpoint; a Page lists a subset of the List."@en <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#List> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#List> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/api/vocab#> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/linked-data/api/vocab#List> <http://www.w3.org/2000/01/rdf-schema#label> "List"@en <http://purl.org/linked-data/api/vocab#> .
+<http://www.w3.org/ns/locn#geographicName> <http://www.w3.org/2000/01/rdf-schema#label> "geographic name"@en <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#geographicName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Literal> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#geographicName> <http://purl.org/dc/terms/identifier> "locn:geographicName" <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#geographicName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#geographicName> <http://www.w3.org/2000/01/rdf-schema#comment> "<p xmlns=\"http://purl.org/oslo/ns/localgov#\">A geographic name is a proper noun applied to a spatial object. Taking the example used in the <a =\"http://inspire.jrc.ec.europa.eu/documents/Data_Specifications/INSPIRE_DataSpecification_GN_v3.0.1.pdf\">INSPIRE document</a> (page 18), the following are all valid geographic names for the Greek capital:</p>\n    <ul><li>A?n?a (the Greek endonym written in the Greek script)</li><li>Athina (the standard Romanisation of the endonym)</li><li>Athens (the English language exonym)</li></ul>\n    <p>For INSPIRE-conformant data, provide the metadata for the geographic name using a skos:Concept as a datatype.</p>" <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#geographicName> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/locn#> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#geographicName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dc/terms/Location> <http://purl.org/oslo/ns/localgov> .
+<http://www.w3.org/ns/locn#geographicName> <http://www.w3.org/2007/05/powder-s#describedby> <https://joinup.ec.europa.eu/system/files/project/Core_Vocabularies-Business_Location_Person-Specification-v0.3_0.zip> <http://purl.org/oslo/ns/localgov> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/2000/01/rdf-schema#label> "in-text reference pointer"@en <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://purl.org/dc/elements/1.1/description> "An in-text reference pointer is a textual device denoting a single bibliographic reference that is embedded in the text of a document within the context of a particular sentence."@en <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbff2705292ac13096c32325d13d9f745 <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B04397527cd46f00516dfa464f2108061 <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://purl.org/dc/elements/1.1/description> <https://svn.code.sf.net/p/sempublishing/code/C4O/InTextReferencePointer%20module.png> <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba9b35abc7c8f9e855e85102d05bd7fcd <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B553deb45cefa064414708d1f05ed2363 <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/2000/01/rdf-schema#comment> "The in-text reference pointer is a textual element, usually embedded at the end of a phrase or sentence within the text of a document, that denotes a specific bibliographic reference present in the reference list of that document. For example, if the item in the reference list is: \n\n4.  Ko AI, Reis MG, Ribeiro Dourado CM, Johnson WD Jr, Riley LW (1999). Urban epidemic of severe leptospirosis in Brazil. Salvador Leptospirosis Study Group. Lancet 354: 820-825.\n\nthe in-text reference pointer to this paper in a journal article may be manifested in a number of ways:\t\n\nNumerically, for example by using the numeral 4 in superscript or between square brackets, thus: [4].  Such numerical in-text \nreference pointers are frequently aggregated, e.g. [4, 5, 6-9].  In such cases, the missing pointers to references 7 and 8 are inferred (and should be added explicitly to the XML mark-up at this point in the text!). \n\nOr by use of the author names (or the first author's name plus et al.) and the publication year in parentheses, thus: (Ko et al., 1999). \n\nOr, less commonly, by the use of a code, e.g. by specifying the first surname letter of the first three author of the cited work followed by the last two digits of the year of publication, this string of characters being enclosed within square brackets, thus: [KRR99]."@en <http://purl.org/spar/c4o> .
+<http://purl.org/spar/c4o/InTextReferencePointer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Expression> <http://purl.org/spar/c4o> .
+<http://purl.org/spar/cito/isCitedAsRecommendedReadingBy> <http://www.w3.org/2000/01/rdf-schema#label> "is cited as recommended reading by"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsRecommendedReadingBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/isCitedBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsRecommendedReadingBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity is cited by the citing entity as an item of recommended reading.  This property can be used, for example, to describe references in a lecture reading list, where the cited references are relevant to the general topic of the lecture, but might not be individually cited within the text of the lecture.  Similarly, it could be used to describe items in a 'Suggested further reading' list at the end of a book chapter."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/isCitedAsRecommendedReadingBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/cito/cites> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2000/01/rdf-schema#label> "cites as recommended reading"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://purl.org/dc/elements/1.1/description> "Example: To our knowledge, [X] is the best source of exercises about UML, making it a valuable proposal for beginners."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/spar/cito/isCitedAsRecommendedReadingBy> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/citesAsRecommendedReading> <http://www.w3.org/2000/01/rdf-schema#comment> "The citing entity cites the cited entity as an item of recommended reading.  This property can be used, for example, to describe references in a lecture reading list, where the cited references are relevant to the general topic of the lecture, but might not be individually cited within the text of the lecture.  Similarly, it could be used to describe items in a 'Suggested further reading' list at the end of a book chapter."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/deo/Epilogue> <http://www.w3.org/2000/01/rdf-schema#label> "epilogue"@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Epilogue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/DiscourseElement> <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Epilogue> <http://www.w3.org/2000/01/rdf-schema#comment> "A piece of writing at the end of a work of literature or drama, usually used to bring closure to the work."@en <http://purl.org/spar/deo> .
+<http://purl.org/spar/deo/Epilogue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/deo> .
+<http://purl.org/spar/doco/Afterword> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B13f998211d9ac89765e51aa50c9378ab <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Afterword> <http://www.w3.org/2000/01/rdf-schema#comment> "A literary device that is often found at the end of a piece of literature. It generally covers the story of how the book came into being, or how the idea for the book was developed. Alternatively, it may be written by someone other than the author of the book, and may discuss the work's historical or cultural context, if the work is being reissued many years after its original publication."@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Afterword> <http://www.w3.org/2000/01/rdf-schema#label> "afterword"@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Afterword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Footnote> <http://www.w3.org/2000/01/rdf-schema#comment> "A structure within a sentence that permits the author to make a comment or to cite another publication in support of the text, or both. A footnote is normally flagged by a superscript number immediately following that portion of the text to which it relates. For convenience of reading, the text of the footnote is usually printed at the bottom of the page or at the end of a text."@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Footnote> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B04fdbe5e10fd70d2d10d3e7018403941 <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Footnote> <http://www.w3.org/2000/01/rdf-schema#label> "footnote"@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Footnote> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/deo/DiscourseElement> <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/Footnote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/doco> .
+<http://purl.org/spar/fabio/hasEmbargoDuration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/date> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/hasEmbargoDuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/hasEmbargoDuration> <http://www.w3.org/2000/01/rdf-schema#comment> "The time period for which an entity is embargoed.  During this period, the entity should not be published or, in the case of a press release, should not be reported on.  For open-access journal articles, the embargo duration specifies that period of time during which availability of the open-access version of the article is delayed by the publisher, following subscription-access availability of the published work.  The end of the embargo period can be specified by fabio:hasEmbargoDate."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/hasEmbargoDuration> <http://www.w3.org/2000/01/rdf-schema#label> "has embargo period"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/2000/01/rdf-schema#label> "archival record"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "An archival record connotes a material created or received by a person, family, or organization, public or private, in the conduct of their affairs that is preserved because of the enduring value contained in the information it contains or as evidence of the function and the responsibilities of its creator."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbcec970458f3c79b52ba21e2bedcc959 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Work> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Addendum> <http://www.w3.org/2000/01/rdf-schema#comment> "An item of material added at the end of a book or other publication, typically to include omitted or late-arriving material. "@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Addendum> <http://www.w3.org/2000/01/rdf-schema#label> "addendum"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Addendum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/Addendum> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/hasPrimarySubjectTerm> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/spar/fabio/hasSubjectTerm> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/hasPrimarySubjectTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/hasPrimarySubjectTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is used to associate a frbr:Endeavour to a term in a particular classification system - and the term is considered one of the main topics for the endeavour in consideration."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/hasPrimarySubjectTerm> <http://www.w3.org/2000/01/rdf-schema#label> "has primary subject term"@en <http://purl.org/spar/fabio> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#label> "validThrough (0..1)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bee530f1e715011ef1c8838a98bea38bd <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the ending of the validity of the access or right that the ticket grants. \nIt can be attached to the tio:Ticket (if meant for the ticket as a whole) and to individual tio:ScopeOfAccess entities (if meant for just a particular part of the access rights).\n\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2010-11-15T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2010-11-15T09:30:10-09:00\n\nor\n\n2010-11-15T09:30:10+09:00."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/uco/ns#to> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#to> <http://www.w3.org/2000/01/rdf-schema#label> "to (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#to> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates the end of the period of ownership represented by this uco:OwnershipInfo node."@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#to> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#to> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/uco/ns#OwnershipInfo> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/uco/ns#Check> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#validThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#label> "valid to (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates the end of the validity of the inspection represented by the uco:Check node. This is typically the day of the inspection plus one (UK MOT) or two years (e.g. German TÜV)."@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#mileageEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/uco/ns#OwnershipInfo> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#mileageEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#mileageEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#mileageEnd> <http://www.w3.org/2000/01/rdf-schema#label> "mileage end (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#mileageEnd> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#mileageEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "The mileage of the vehicle at the end of the period of ownership. \n\nTypical unit code(s): KMT for kilometers, SMI for statute miles"@en <http://purl.org/uco/ns#> .
+<http://purl.org/vocab/bio/0.1/concludingEvent> <http://purl.org/dc/terms/issued> "2010-05-06" <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/concludingEvent> <http://purl.org/net/vocab/2004/03/label#plural> "Concluding Event"@en <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/concludingEvent> <http://www.w3.org/2000/01/rdf-schema#comment> "An event that marks the end of an interval and/or relationship. The event changes of the state of affairs that held during the interval. For example a period of study may be concluded by a Graduation event."@en <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/concludingEvent> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/bio/0.1/Event> <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/concludingEvent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocab/bio/0.1/> <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/concludingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/concludingEvent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#differentFrom> <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/concludingEvent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocab/bio/0.1/> .
+<http://purl.org/vocab/bio/0.1/concludingEvent> <http://www.w3.org/2000/01/rdf-schema#label> "Concluding Event"@en <http://purl.org/vocab/bio/0.1/> .
+<http://purl.uniprot.org/core/Disulfide_Bond_Annotation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.uniprot.org/manual/disulfid"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Disulfide_Bond_Annotation> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes residues which are linked by an intra-chain disulfide bond. If the endpoints are identical, the disulfide bond is an interchain one." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Disulfide_Bond_Annotation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Disulfide_Bond_Annotation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Modification_Annotation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Disulfide_Bond_Annotation> <http://www.w3.org/2000/01/rdf-schema#label> "Disulfide Bond" <http://purl.uniprot.org/core/> .
+<http://rdf-vocabulary.ddialliance.org/phdd#newLine> <http://www.w3.org/2000/01/rdf-schema#label> "New line"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#newLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#newLine> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\tSpecifies the end-of-line (EOL) marker used in the file as produced. If no value is provided assume the use of a CRLF (carriage return and line feed)\n\n\tEquivalent element in DDI 3.2: p:EndOfLineMarker\n\tDDI 3.2 Documentation: http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/physicaldataproduct_xsd/elements/EndOfLineMarker.html\n\t"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#newLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/phdd> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#newLine> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/physicaldataproduct_xsd/elements/EndOfLineMarker.html> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#newLine> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf-vocabulary.ddialliance.org/phdd#TableStructure> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#newLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#newLine> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://reference.data.gov.uk/def/intervals/ordinalWeekOfYearYear> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba7e85f8999ec0cadd7dad943fb4448d6 <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/ordinalWeekOfYearYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/ordinalWeekOfYearYear> <http://www.w3.org/2004/02/skos/core#prefLabel> "ordinal week of year year"@en <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/ordinalWeekOfYearYear> <http://www.w3.org/2000/01/rdf-schema#comment> "The ordinal number of the week of year year in which an instant or interval (of duration one week or less) occurs. The first year of the AD era has ordinal number 1.  The Week Of Year is the year to which a week of year pertains, which is usually the same as the calendar year except aorund the end of year where some days of the week may be deemed to be in the yearr following or the year previous depending on the alignment of the year boundary with the weekly cycle."@en <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/ordinalWeekOfYearYear> <http://www.w3.org/2000/01/rdf-schema#label> "ordinal week of year year"@en <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/ordinalWeekOfYearYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/previousAnnualReferenceDate> <http://www.w3.org/2004/02/skos/core#prefLabel> "Previous Annual Reference Date."@en <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/previousAnnualReferenceDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/previousAnnualReferenceDate> <http://www.w3.org/2000/01/rdf-schema#comment> "A reference to the companies house annual reference date at the end of the previous reporting year. Annual reporting periods are required to end with 7 days of this date. Success annual reference dates normally advance by 1 whole year each year. However, companies can always apply for an earlier reference date and under restricted circumstance request a later reference date (upto 6 months later) see http://www.companieshouse.gov.uk/about/gbhtml/gp2.shtml#ch2."@en <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/previousAnnualReferenceDate> <http://www.w3.org/2000/01/rdf-schema#label> "Previous Annual Reference Date."@en <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/previousAnnualReferenceDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://reference.data.gov.uk/def/intervals/BusinessInterval> <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/previousAnnualReferenceDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://reference.data.gov.uk/def/intervals/CalendarDay> <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/Year> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1f3563513dd6f00928ba50391725a143 <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/Year> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3545749bd061a1d88d53feafb9e9eec5 <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/Year> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0bd6362fc1da9e2a00f4a21c98f10036 <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/Year> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic superclass for all manner of Year like intervals. The the cardinality of days in a year is set to between 351 and 380 because in the UK the end of a business reporting year must be within 7 days of an annual reference date. In the worst cases this allows a reporting interval to be shortened or extended by up to two weeks."@en <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/Year> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B861e7b47588008979d6cda3eb629155a <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/Year> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://reference.data.gov.uk/def/intervals/Interval> <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/Year> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb010b6a84e6dd85cc72b63c5128db996 <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/Year> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3d20d11ecbac90e14b6be15762aaf5a3 <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/Year> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0eab7dea6dfb68f38b75bfc46f852419 <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/Year> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/Year> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B18144f586b1c9a8b6b88f0548a493e5e <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/Year> <http://www.w3.org/2000/01/rdf-schema#label> "Generic Year (Class)"@en <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/nextAnnualReferenceDate> <http://www.w3.org/2000/01/rdf-schema#comment> "A reference to the companies house annual reference date at the end of the previous reporting year. Annual reporting periods are required to end with 7 days of this date. Success annual reference dates normally advance by 1 whole year each year. However, companies can always apply for an earlier reference date and under restricted circumstance request a later reference date (upto 6 months later) see http://www.companieshouse.gov.uk/about/gbhtml/gp2.shtml#ch2"@en <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/nextAnnualReferenceDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/nextAnnualReferenceDate> <http://www.w3.org/2000/01/rdf-schema#label> "Next Annual Reference Date."@en <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/nextAnnualReferenceDate> <http://www.w3.org/2004/02/skos/core#prefLabel> "Next Annual Reference Date."@en <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/nextAnnualReferenceDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://reference.data.gov.uk/def/intervals/BusinessInterval> <http://reference.data.gov.uk/def/intervals> .
+<http://reference.data.gov.uk/def/intervals/nextAnnualReferenceDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://reference.data.gov.uk/def/intervals/CalendarDay> <http://reference.data.gov.uk/def/intervals> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://semanticweb.cs.vu.nl/2009/11/sem/hasTimeStamp> <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp> <http://www.w3.org/2000/01/rdf-schema#label> "has end timestamp" <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/hasEndTimeStamp> <http://www.w3.org/2000/01/rdf-schema#comment> "Has end timestamp is used to indicate the end of a time interval. Omitting the hasEndTimeStamp while stating a hasBeginTimeStamp is interpreted as an open ended interval." <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://spinrdf.org/sp#values> <http://www.w3.org/2000/01/rdf-schema#range> <http://spinrdf.org/sp#Values> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#values> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/sp#systemProperty> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#values> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#values> <http://www.w3.org/2000/01/rdf-schema#comment> "The VALUES block at the end of a query. The object may just be an untyped blank node, i.e. the sp:Values type triple is optional." <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#values> <http://www.w3.org/2000/01/rdf-schema#label> "values" <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#values> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spinrdf.org/sp#Query> <http://spinrdf.org/sp> .
+<http://spitfire-project.eu/ontology/ns/activityEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/activityEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spitfire-project.eu/ontology/ns/LinkActivity> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/activityEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/activityEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship among a LinkActivity and the end datetime of the time range which it refers to." <http://spitfire-project.eu/ontology/ns> .
+<http://spitfire-project.eu/ontology/ns/activityEnd> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://spitfire-project.eu/ontology/ns> <http://spitfire-project.eu/ontology/ns> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEnddate> <http://purl.org/dc/elements/1.1/publisher> "DERI International" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEnddate> <http://purl.org/dc/elements/1.1/coverage> "world" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEnddate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEnddate> <http://www.w3.org/2000/01/rdf-schema#label> "Enddate"@en <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEnddate> <http://purl.org/dc/elements/1.1/creator> "DERI International" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEnddate> <http://purl.org/dc/elements/1.1/type> "http://www.w3.org/2002/07/owl#ObjectProperty" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEnddate> <http://purl.org/dc/elements/1.1/date> "2004-10-20" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEnddate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.wsmo.org/ontologies/dateTime#date> <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEnddate> <http://purl.org/dc/elements/1.1/rights> "http://www.deri.org/privacy.html" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEnddate> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bc152d88240a4d2a623513c0e5db72be8 <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEnddate> <http://www.w3.org/2000/01/rdf-schema#comment> "The ending date some event. " <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEnddate> <http://purl.org/dc/elements/1.1/description> "The ending date some event. "@EN <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEnddate> <http://purl.org/dc/elements/1.1/title> "Enddate"@EN <http://sw-portal.deri.org/ontologies/swportal> .
+<http://sw-portal.deri.org/ontologies/swportal#hasEnddate> <http://purl.org/dc/elements/1.1/format> "application/rdf+xml" <http://sw-portal.deri.org/ontologies/swportal> .
+<http://vocab.deri.ie/cogs#Loading> <http://www.w3.org/2000/01/rdf-schema#comment> "Stage that is responsible for loading data into the end target. @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#Loading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#Loading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#Loading> <http://www.w3.org/2000/01/rdf-schema#label> "Loading" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#StagingAreaArtifact> <http://www.w3.org/2000/01/rdf-schema#comment> "The final product; what the end users see. @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#StagingAreaArtifact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#StagingAreaArtifact> <http://www.w3.org/2000/01/rdf-schema#label> "StagingAreaArtifact" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#StagingAreaArtifact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#TransformationProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#TransformationProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#TransformationProcess> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#Transformation> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#TransformationProcess> <http://www.w3.org/2000/01/rdf-schema#label> "TransformationProcess" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#TransformationProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Process that applies a series of rules or functions to the extracted data from the source to derive the data for loading into the end target. @en-us" <http://vocab.deri.ie/cogs> .
+<http://www.biopax.org/release/biopax-level3.owl#SequenceInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#SequenceInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition: An interval on a sequence. \nUsage: Interval is defined as an ordered pair of SequenceSites. All of the sequence from the begin site to the end site (inclusive) is described, not any subset." <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#SequenceInterval> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#SequenceSite> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#SequenceInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.biopax.org/release/biopax-level3.owl#SequenceLocation> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#sequenceIntervalEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.biopax.org/release/biopax-level3.owl#SequenceInterval> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#sequenceIntervalEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#sequenceIntervalEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#sequenceIntervalEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.biopax.org/release/biopax-level3.owl#SequenceSite> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#sequenceIntervalEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "The end position of a sequence interval." <http://www.biopax.org/release/biopax-level3.owl> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/end+the.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BenddX2Bthe .
+_:BenddX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BenddX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/endd+the.nt> .
+_:BenddX2Bthe <https://w3id.org/tree#value> "endd" .
+_:BenddX2Bthe <https://w3id.org/tree#value> "the" .
+_:BenddX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/endd+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BendiX2Bthe .
+_:BendiX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BendiX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/endi+the.nt> .
+_:BendiX2Bthe <https://w3id.org/tree#value> "endi" .
+_:BendiX2Bthe <https://w3id.org/tree#value> "the" .
+_:BendiX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/endi+the.nt> <https://w3id.org/tree#remainingItems> "26"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BendnX2Bthe .
+_:BendnX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BendnX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/endn+the.nt> .
+_:BendnX2Bthe <https://w3id.org/tree#value> "endn" .
+_:BendnX2Bthe <https://w3id.org/tree#value> "the" .
+_:BendnX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/endn+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BendoX2Bthe .
+_:BendoX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BendoX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/endo+the.nt> .
+_:BendoX2Bthe <https://w3id.org/tree#value> "endo" .
+_:BendoX2Bthe <https://w3id.org/tree#value> "the" .
+_:BendoX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/endo+the.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BendpX2Bthe .
+_:BendpX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BendpX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/endp+the.nt> .
+_:BendpX2Bthe <https://w3id.org/tree#value> "endp" .
+_:BendpX2Bthe <https://w3id.org/tree#value> "the" .
+_:BendpX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/endp+the.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BendsX2Bthe .
+_:BendsX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BendsX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ends+the.nt> .
+_:BendsX2Bthe <https://w3id.org/tree#value> "ends" .
+_:BendsX2Bthe <https://w3id.org/tree#value> "the" .
+_:BendsX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ends+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BendtX2Bthe .
+_:BendtX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BendtX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/endt+the.nt> .
+_:BendtX2Bthe <https://w3id.org/tree#value> "endt" .
+_:BendtX2Bthe <https://w3id.org/tree#value> "the" .
+_:BendtX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/endt+the.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BenduX2Bthe .
+_:BenduX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BenduX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/endu+the.nt> .
+_:BenduX2Bthe <https://w3id.org/tree#value> "endu" .
+_:BenduX2Bthe <https://w3id.org/tree#value> "the" .
+_:BenduX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/endu+the.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BbX2BendX2Bthe .
+_:BbX2BendX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2BendX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+end+the.nt> .
+_:BbX2BendX2Bthe <https://w3id.org/tree#value> "b" .
+_:BbX2BendX2Bthe <https://w3id.org/tree#value> "end" .
+_:BbX2BendX2Bthe <https://w3id.org/tree#value> "the" .
+_:BbX2BendX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+end+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BdX2BendX2Bthe .
+_:BdX2BendX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2BendX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+end+the.nt> .
+_:BdX2BendX2Bthe <https://w3id.org/tree#value> "d" .
+_:BdX2BendX2Bthe <https://w3id.org/tree#value> "end" .
+_:BdX2BendX2Bthe <https://w3id.org/tree#value> "the" .
+_:BdX2BendX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+end+the.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BendX2BiX2Bthe .
+_:BendX2BiX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BendX2BiX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/end+i+the.nt> .
+_:BendX2BiX2Bthe <https://w3id.org/tree#value> "end" .
+_:BendX2BiX2Bthe <https://w3id.org/tree#value> "i" .
+_:BendX2BiX2Bthe <https://w3id.org/tree#value> "the" .
+_:BendX2BiX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/end+i+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BendX2BoX2Bthe .
+_:BendX2BoX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BendX2BoX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/end+o+the.nt> .
+_:BendX2BoX2Bthe <https://w3id.org/tree#value> "end" .
+_:BendX2BoX2Bthe <https://w3id.org/tree#value> "o" .
+_:BendX2BoX2Bthe <https://w3id.org/tree#value> "the" .
+_:BendX2BoX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/end+o+the.nt> <https://w3id.org/tree#remainingItems> "105"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BendX2BpX2Bthe .
+_:BendX2BpX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BendX2BpX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/end+p+the.nt> .
+_:BendX2BpX2Bthe <https://w3id.org/tree#value> "end" .
+_:BendX2BpX2Bthe <https://w3id.org/tree#value> "p" .
+_:BendX2BpX2Bthe <https://w3id.org/tree#value> "the" .
+_:BendX2BpX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/end+p+the.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BendX2BtX2Bthe .
+_:BendX2BtX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BendX2BtX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/end+t+the.nt> .
+_:BendX2BtX2Bthe <https://w3id.org/tree#value> "end" .
+_:BendX2BtX2Bthe <https://w3id.org/tree#value> "t" .
+_:BendX2BtX2Bthe <https://w3id.org/tree#value> "the" .
+_:BendX2BtX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/end+t+the.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BendX2BtheX2Bu .
+_:BendX2BtheX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BendX2BtheX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/end+the+u.nt> .
+_:BendX2BtheX2Bu <https://w3id.org/tree#value> "end" .
+_:BendX2BtheX2Bu <https://w3id.org/tree#value> "the" .
+_:BendX2BtheX2Bu <https://w3id.org/tree#value> "u" .
+_:BendX2BtheX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/end+the+u.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/end+the.nt> <https://w3id.org/tree#relation> _:BendX2BtheX2Bv .
+_:BendX2BtheX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BendX2BtheX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/end+the+v.nt> .
+_:BendX2BtheX2Bv <https://w3id.org/tree#value> "end" .
+_:BendX2BtheX2Bv <https://w3id.org/tree#value> "the" .
+_:BendX2BtheX2Bv <https://w3id.org/tree#value> "v" .
+_:BendX2BtheX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/end+the+v.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

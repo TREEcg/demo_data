@@ -1,0 +1,532 @@
+<http://www.bbc.co.uk/ontologies/creativework/category> <http://www.w3.org/2000/01/rdf-schema#label> "category"@en-gb <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/category> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/creativework> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/category> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.bbc.co.uk/ontologies/creativework/CreativeWork> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/category> <http://www.w3.org/2000/01/rdf-schema#comment> "The category property is another mid term solution for maintaining the functionality supporting individual clients. For example, the type of gossip is something that the sports pal use for the moment. The values of the property are decided by the client teams in collaboration with LDP"@en-gb <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/category> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.bbc.co.uk/ontologies/creativework/Category> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/Category> <http://www.w3.org/2000/01/rdf-schema#comment> "A class to represent different categorisations of creative works from different clients. This class is instantiated in the clients' application logic models."@en-gb <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/Category> <http://www.w3.org/2000/01/rdf-schema#label> "Category"@en-gb <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/Category> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/creativework> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.bbc.co.uk/ontologies/creativework/Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.bbc.co.uk/ontologies/creativework> .
+<http://www.biopax.org/release/biopax-level3.owl#TransportWithBiochemicalReaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#TransportWithBiochemicalReaction> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition: A conversion interaction that is both a biochemicalReaction and a transport. In transportWithBiochemicalReaction interactions, one or more of the substrates changes both their location and their physical structure. Active transport reactions that use ATP as an energy source fall under this category, even if the only covalent change is the hydrolysis of ATP to ADP.\n\nRationale: This class was added to support a large number of transport events in pathway databases that have a biochemical reaction during the transport process. It is not expected that other double inheritance subclasses will be added to the ontology at the same level as this class.\n\nExamples: In the PEP-dependent phosphotransferase system, transportation of sugar into an E. coli cell is accompanied by the sugar's phosphorylation as it crosses the plasma membrane." <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#TransportWithBiochemicalReaction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.biopax.org/release/biopax-level3.owl#BiochemicalReaction> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#TransportWithBiochemicalReaction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.biopax.org/release/biopax-level3.owl#Transport> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#controlType> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the nature of the control relationship between the controller and the controlled entities.\n\nThe following terms are possible values:\n\nACTIVATION: General activation. Compounds that activate the specified enzyme activity by an unknown mechanism. The mechanism is defined as unknown, because either the mechanism has yet to be elucidated in the experimental literature, or the paper(s) curated thus far do not define the mechanism, and a full literature search has yet to be performed.\n\nThe following term can not be used in the catalysis class:\nINHIBITION: General inhibition. Compounds that inhibit the specified enzyme activity by an unknown mechanism. The mechanism is defined as unknown, because either the mechanism has yet to be elucidated in the experimental literature, or the paper(s) curated thus far do not define the mechanism, and a full literature search has yet to be performed.\n\nThe following terms can only be used in the modulation class (these definitions from EcoCyc):\nINHIBITION-ALLOSTERIC\nAllosteric inhibitors decrease the specified enzyme activity by binding reversibly to the enzyme and inducing a conformational change that decreases the affinity of the enzyme to its substrates without affecting its VMAX. Allosteric inhibitors can be competitive or noncompetitive inhibitors, therefore, those inhibition categories can be used in conjunction with this category.\n\nINHIBITION-COMPETITIVE\nCompetitive inhibitors are compounds that competitively inhibit the specified enzyme activity by binding reversibly to the enzyme and preventing the substrate from binding. Binding of the inhibitor and substrate are mutually exclusive because it is assumed that the inhibitor and substrate can both bind only to the free enzyme. A competitive inhibitor can either bind to the active site of the enzyme, directly excluding the substrate from binding there, or it can bind to another site on the enzyme, altering the conformation of the enzyme such that the substrate can not bind to the active site.\n\nINHIBITION-IRREVERSIBLE\nIrreversible inhibitors are compounds that irreversibly inhibit the specified enzyme activity by binding to the enzyme and dissociating so slowly that it is considered irreversible. For example, alkylating agents, such as iodoacetamide, irreversibly inhibit the catalytic activity of some enzymes by modifying cysteine side chains.\n\nINHIBITION-NONCOMPETITIVE\nNoncompetitive inhibitors are compounds that noncompetitively inhibit the specified enzyme by binding reversibly to both the free enzyme and to the enzyme-substrate complex. The inhibitor and substrate may be bound to the enzyme simultaneously and do not exclude each other. However, only the enzyme-substrate complex (not the enzyme-substrate-inhibitor complex) is catalytically active.\n\nINHIBITION-OTHER\nCompounds that inhibit the specified enzyme activity by a mechanism that has been characterized, but that cannot be clearly classified as irreversible, competitive, noncompetitive, uncompetitive, or allosteric.\n\nINHIBITION-UNCOMPETITIVE\nUncompetitive inhibitors are compounds that uncompetitively inhibit the specified enzyme activity by binding reversibly to the enzyme-substrate complex but not to the enzyme alone.\n\nACTIVATION-NONALLOSTERIC\nNonallosteric activators increase the specified enzyme activity by means other than allosteric.\n\nACTIVATION-ALLOSTERIC\nAllosteric activators increase the specified enzyme activity by binding reversibly to the enzyme and inducing a conformational change that increases the affinity of the enzyme to its substrates without affecting its VMAX." <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#controlType> <http://www.w3.org/2000/01/rdf-schema#range> _:B6a7f6f6d5a855de3ee38df5e748d2572 <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#controlType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#controlType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#controlType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.biopax.org/release/biopax-level3.owl#Control> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#audienceLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Type> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#audienceLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "The target audience (target region, target\n            audience category but also parental guidance recommendation) for which the media\n            resource is intended."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#audienceLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "This is provided as free text in an annotation\n            label or as an identifier pointing to a term in a classification scheme."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#audienceLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Target audience"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#audienceLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#title> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/ns/ma-ont#title> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#title> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the title or name given to the\n            resource.  A root for the definition of subproperties defining ebucore titles of different types. The ebucore title type can be used to define sub-properties to optionally refine the category of\n            the title."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/title> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#title> <http://www.w3.org/2000/01/rdf-schema#label> "Title"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#title> <http://www.w3.org/2000/01/rdf-schema#comment> "All value of the EBU title status\n            classification scheme\n            (http://www.ebu.ch/metadata/cs/web/ebu_TitleStatusCodeCS_p.xml.htm) are candidates\n            subproperties of the title property as implemented for an example with\n            alternativeTitle."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#HDTV_1080p> <http://www.w3.org/2000/01/rdf-schema#label> "HDTV 1080p"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#HDTV_1080p> <http://www.w3.org/2000/01/rdf-schema#label> "HDTV 1080p"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#HDTV_1080p> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "TV"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#HDTV_1080p> <http://www.w3.org/2000/01/rdf-schema#comment> "1080p is the shorthand name for a category of HDTV video modes. The number \"1080\" represents 1,080 lines of vertical resolution (1080 horizontal scan lines), while the letter p stands for progressive scan (meaning the image is not interlaced). 1080p can be referred to as full HD or full high definition to differentiate it from other HDTV video modes.\n\n(This description is partly based on or reuses content from the Wikipedia article \"1080p\" (http://en.wikipedia.org/wiki/1080p) and is licensed under the GNU Free Documentation License (http://www.gnu.org/copyleft/fdl.html).)"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#HDTV_1080p> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#TVDisplayResolution> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#HDTV_720p> <http://www.w3.org/2000/01/rdf-schema#comment> "720p is the shorthand name for a category of HDTV video modes. The number 720 stands for the 720 vertical scan lines of display resolution (also known as 720 pixels of vertical resolution), while the letter p stands for progressive scan or non-interlaced.\n\n(This description is partly based on or reuses content from the Wikipedia article \"720p\" (http://en.wikipedia.org/wiki/720p) and is licensed under the GNU Free Documentation License (http://www.gnu.org/copyleft/fdl.html).)"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#HDTV_720p> <http://www.w3.org/2000/01/rdf-schema#label> "HDTV 720p"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#HDTV_720p> <http://www.w3.org/2000/01/rdf-schema#label> "HDTV 720p"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#HDTV_720p> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "TV"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#HDTV_720p> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#TVDisplayResolution> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.geonames.org/ontology#featureClass> <http://www.w3.org/2000/01/rdf-schema#comment> "The main category of the feature, as defined in geonames taxonomy."@en <http://www.geonames.org/ontology> .
+<http://www.geonames.org/ontology#featureClass> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B390086e7b64d809e0851dceccb790059 <http://www.geonames.org/ontology> .
+<http://www.geonames.org/ontology#featureClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.geonames.org/ontology> .
+<http://www.geonames.org/ontology#featureClass> <http://www.w3.org/2000/01/rdf-schema#label> "feature class"@en <http://www.geonames.org/ontology> .
+<http://www.geonames.org/ontology#featureClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.geonames.org/ontology#Feature> <http://www.geonames.org/ontology> .
+<http://www.geonames.org/ontology#featureClass> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B51de8d7f31176a05461579f78a3f6bdc <http://www.geonames.org/ontology> .
+<http://www.geonames.org/ontology#featureClass> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> <http://www.geonames.org/ontology> .
+<http://www.geonames.org/ontology#featureClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.geonames.org/ontology#Class> <http://www.geonames.org/ontology> .
+<http://www.gsi.dit.upm.es/ontologies/onyx/ns#EmotionCategory> <http://www.w3.org/2000/01/rdf-schema#label> "EmotionCategory" <http://www.gsi.dit.upm.es/ontologies/onyx/ns> .
+<http://www.gsi.dit.upm.es/ontologies/onyx/ns#EmotionCategory> <http://www.w3.org/2000/01/rdf-schema#comment> "Class that represents an emotion category (anger, happiness, etc.)" <http://www.gsi.dit.upm.es/ontologies/onyx/ns> .
+<http://www.gsi.dit.upm.es/ontologies/onyx/ns#EmotionCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.gsi.dit.upm.es/ontologies/onyx/ns> .
+<http://www.gsi.dit.upm.es/ontologies/onyx/ns#EmotionCategory> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.gsi.dit.upm.es/ontologies/onyx/ns" <http://www.gsi.dit.upm.es/ontologies/onyx/ns> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises signs, either meaningful or not, or arrangements of signs following a specific syntax, that are used or can be used to refer to and identify a specific instance of some class or category within a certain context.\n[Scope Note for E77 Persistent Item CIDOC CRM version 5.1.2]"@en <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC17_Conceptual_Object> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#aspect> <http://www.w3.org/2000/01/rdf-schema#label> "aspect" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#aspect> <http://purl.org/dc/elements/1.1/#creator> "Francopoulo, Gil" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#aspect> <http://www.w3.org/2000/01/rdf-schema#comment> "Category associated to verbs and referring to the way the grammar marks the duration or type of temporal activity." <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#aspect> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1242> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#aspect> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#aspect> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lexinfo.net/ontology/2.0/lexinfo#Aspect> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#aspect> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#aspect> <http://www.w3.org/2002/07/owl#versionInfo> "1:0" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#aspect> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.w3.org/2000/01/rdf-schema#label> "grammatical gender" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.w3.org/2000/01/rdf-schema#comment> "A grammatical category that indicates grammatical relationships between words in sentences." <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1297> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lexinfo.net/ontology/2.0/lexinfo#Gender> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-245> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/2000/01/rdf-schema#comment> "Grammatical category for the variation in form of nouns, pronouns, and any words agreeing with them, depending on how many persons or things are referred to." <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lexinfo.net/ontology/2.0/lexinfo#Number> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://purl.org/dc/elements/1.1/#creator> "Francopoulo, Gil" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-251> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/2002/07/owl#versionInfo> "1:0" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/2000/01/rdf-schema#label> "grammatical number" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1298> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://www.w3.org/2000/01/rdf-schema#comment> "In many languages, the grammatical distinction that indicates the number of objects referred to by the term or word." <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#number> <http://purl.org/dc/elements/1.1/#creator> "Wright, Sue Ellen" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#otherGender> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#otherGender> <http://www.w3.org/2002/07/owl#versionInfo> "1:0" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#otherGender> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-249> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#otherGender> <http://www.w3.org/2000/01/rdf-schema#label> "otherGender" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#otherGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.lexinfo.net/ontology/2.0/lexinfo#Gender> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#otherGender> <http://www.w3.org/2000/01/rdf-schema#comment> "A grammatical category that indicates grammatical relationships between words in sentences." <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#otherGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#otherGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#otherGender> <http://purl.org/dc/elements/1.1/#creator> "Wright, Sue Ellen" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lexinfo.net/ontology/2.0/lexinfo#PartOfSpeech> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.w3.org/2000/01/rdf-schema#comment> "A category assigned to a word based on its grammatical and semantic properties." <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.w3.org/2000/01/rdf-schema#comment> "Term used to describe how a particular word is used in a sentence." <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1345> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://purl.org/dc/elements/1.1/#creator> "Wright, Sue Ellen" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://purl.org/dc/elements/1.1/#creator> "Francopoulo, Gil" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-396> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.w3.org/2000/01/rdf-schema#label> "part of speech" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.w3.org/2002/07/owl#versionInfo> "1:0" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#partOfSpeech> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://observedchange.com/moac/ns#category> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#category> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://observedchange.com/moac/ns> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#category> <http://www.w3.org/2000/01/rdf-schema#domain> <http://observedchange.com/moac/ns#Incident> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#category> <http://www.w3.org/2000/01/rdf-schema#comment> "category is about the sort of an incident."@en <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#category> <http://www.w3.org/2000/01/rdf-schema#label> "title"@en <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DataProperty> <http://www.observedchange.com/moac/ns#> .
+<http://www.oegov.org/core/owl/gc#subCategory> <http://www.w3.org/2000/01/rdf-schema#label> "sub category" <http://www.oegov.org/core/owl/gc> .
+<http://www.oegov.org/core/owl/gc#subCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.oegov.org/core/owl/gc> .
+<http://www.oegov.org/core/owl/gc#Category> <http://www.w3.org/2000/01/rdf-schema#label> "Category" <http://www.oegov.org/core/owl/gc> .
+<http://www.oegov.org/core/owl/gc#Category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://www.oegov.org/core/owl/gc> .
+<http://www.oegov.org/core/owl/gc#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.oegov.org/core/owl/gc> .
+<http://www.oegov.org/core/owl/gc#Category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B15a975218deac50fc1b7f66b9395d197 <http://www.oegov.org/core/owl/gc> .
+<http://www.oegov.org/core/owl/gc#category> <http://www.w3.org/2000/01/rdf-schema#label> "category" <http://www.oegov.org/core/owl/gc> .
+<http://www.oegov.org/core/owl/gc#category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.oegov.org/core/owl/gc> .
+<http://www.ontotext.com/proton/protonext#OilField> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#OilField> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#Facility> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#OilField> <http://www.w3.org/2000/01/rdf-schema#label> "Oil Field"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#OilField> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Areas with reserves of recoverable petroleum or where petroleum has been removed from the Earth. ... We use this category for gas fields; for gasfields; for oilfields; for petroleum fields; and for storage fields (petroleum). NIMA GNS designator CMPO, OILF, OILQ, OILW, PMPO, GASF."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#PerformanceSite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#RecreationalFacility> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#PerformanceSite> <http://www.w3.org/2000/01/rdf-schema#comment> "Buildings where cultural events are presented before an audience. We use this category for amphitheaters; for amphitheatres; for auditoriums; for bowls (performance); for coliseums; for concert halls; for opera houses; for playhouses; for recital halls; for stages (performance); for symphony halls; for theaters; and for theatres. NIMA GNS designator AMTH."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#PerformanceSite> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#PerformanceSite> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#Building> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#PerformanceSite> <http://www.w3.org/2000/01/rdf-schema#label> "Performance Site"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Pipeline> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Tubular conduits of substantial length, with pumps, valves, and control devices, for conveying fluids, gases, or finely divided solids. [USGS Circ 1048] We use this category for compressor stations; for gas pipelines; for oil pipeline junctions; for oil pipeline terminals; for oil pipelines; for oil pumping stations; for pump houses; for pumphouses; for pumping stations; and for water pumping stations. NIMA GNS designators OILP, OILJ, TRMO, PMPO, PMPW."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Pipeline> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#TransportFacility> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Pipeline> <http://www.w3.org/2000/01/rdf-schema#label> "Pipeline"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Pipeline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Forest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#BiogeographicRegion> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Forest> <http://www.w3.org/2000/01/rdf-schema#label> "Forest"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Forest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Forest> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Dense growths of trees, plants, and underbrush covering a large area. [American Heritage Dic. of the English Language, 4th ed.] We use this category for forest reserves; and for national forests. Omitted ADL sub-classes: Petrified forests, Rain forests, Woods (the sub-classes collapsed here). NIMA GNS designator FRST, FRSTF, GDVC, GRVO, GRVP, GRVPN, TREE."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#MountainRange> <http://www.w3.org/2000/01/rdf-schema#label> "Mountain Range"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#MountainRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#Mountain> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#MountainRange> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) (a) Chains of hills or mountains; (b) somewhat linear, complex mountainous or hilly areas. ... We use this category for ranges (physiographic); and for sierra. NIMA GNS designator RNGU."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#MountainRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Permanent constructions that are roofed and usually walled. [USGS Circ 1048] We use this category for administrative facilities; for administrative facilities; for animal pounds; for animal shelters; for aquariums; for barns; for border posts; for cabins; for castles; for city halls; for civic centers; for civil buildings; for club houses; for coast guard stations; for commissaries; for community centers; for community houses; for conference facilities; for consulates; for convention centers; for customs houses; for customs posts; for depots; for embassy buildings; for exhibition buildings; for facilities; for facility centers; for fire stations; for firehouses; for forest stations; for government buildings; for guard stations; for halls; for headquarters; for hostels; for hotels; for houses; for inns; for inspection stations; for legation buildings; for lodges; for missions; for motels; for neighborhood centers; for offices; for park headquarters; for patrol posts; for pavilions; for planetariums; for plazas; for police posts; for public buildings; for ranger stations; for restaurants; for shelters; for shops; for stations; for structures; for student unions; for studios; for substations; for taverns; for town halls; for trading posts; for treatment plants; for United States Government establishments; for visitor centers; for walls; and for warehouses NIMA GNS designator BLDG."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#Facility> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#PopulatedPlace> <http://www.w3.org/2000/01/rdf-schema#label> "Populated Place"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#PopulatedPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#PopulatedPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Places or areas with clustered or scattered buildings and a permanent human population. ... We use this category for agricultural colonies; for communes; for communities; for hamlets; for homesteads; for locales; for localities; for metropolitan areas; for populated localities; for ppl; for pueblos; for settlements; for suburbs; for villages; and with religious facilities for religious populated places. NIMA GNS designator PPL, PPL(x)"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#PopulatedPlace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protontop#Location> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#RailroadFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#TransportFacility> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#RailroadFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Railroad Facility"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#RailroadFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT: Railroad Features) We use this category for metro rail stations; for railroad junctions; for railroad sidings; for railroad spurs; for railroad stations; for railroad stops; for railroad switches; for railroad yards; for railways; for subway stations; for switches (railroad); and for tramways. NIMA GNS designator RJCT, RR, RRQ, RSD, RSGNL, RSTN, RSTNQ, RSTP, RSTPQ, RYD."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#RailroadFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Reservoir> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Artificially impounded bodies of water. We use this category for covered reservoirs; and for intermittent reservoirs. (incl. dams) NIMA GNS designator RSV, RSVI."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Reservoir> <http://www.w3.org/2000/01/rdf-schema#label> "Reservoir"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Reservoir> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Reservoir> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#Lake> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Reservoir> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#HydrographicStructure> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#MilitaryAreas> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#PoliticalRegion> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#MilitaryAreas> <http://www.w3.org/2000/01/rdf-schema#label> "Military Areas"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#MilitaryAreas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#MilitaryAreas> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FTT) We use this category for air force bases; for army facilities; for arsenals; for artillery ranges; for barracks; for bases (military); for camps (military); for forts; for infantry camps; for maneuver areas; for military bases; for military installations; for national guard facilities; and for naval bases. The following NIMA designators fit here: MILB, INSM, SCHM. The following ADL types are skipped as irrelevant: Cadastral areas,"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#HydrographicStructure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#Facility> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#HydrographicStructure> <http://www.w3.org/2000/01/rdf-schema#label> "Hydrographic Structure"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#HydrographicStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) For constructed bodies of water. For natural water bodies, use 'hydrographic features'. We use this category for boat landings; for boat launches; for boat ramps; for sluices; and for water mills. Many sub-classes omitted; those considered are also made sub-classes of WaterRegion. NIMA GNS ... no direct equivalent."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#HydrographicStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Capital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Capital> <http://www.w3.org/2000/01/rdf-schema#label> "Capital"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Capital> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Towns or cities that are the official seats of government in a political entity, such as a state or nation. [American Heritage Dic. of the English Language, 4th ed.] We use this category for county seats; for national capitals; and for state capitals. NIMA GNS designators PPLC, PPLA"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Capital> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#City> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Coast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#LandRegion> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Coast> <http://www.w3.org/2000/01/rdf-schema#label> "Coast"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Coast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Coast> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT: Coastal Zones) Strips of land (of indefinite width) that extend from the low-tide line inland to the first major change in landform features. [Adapted from Glossary of Geology, 4th ed.] We use this category for coastal plains; for coasts; for intertidal zones; for offshore areas; for shorelines; and for shores. NIMA GNS designators CST, SHOR."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Waterfalls> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#LandRegion> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Waterfalls> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Perpendicular or very steep falls of water in the course of a stream. ... We use this category for cascades; for cataracts; and for falls. NIMA GNS designator FLLS, FLLSX"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Waterfalls> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Waterfalls> <http://www.w3.org/2000/01/rdf-schema#label> "Waterfalls"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#TransportFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Transport Facility"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#TransportFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#Facility> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#TransportFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT: Transportation Features) We use this category for air routes; for caravan routes; for corridors; for crossings; for depots; for ferries; for fords (crossings); for fuel depots; for gates (manmade); for halting places (transportation); for highway maintenance sites; for portages; for rest houses; for routes; for ship tracks; for stock routes; for terminals (transportation); and for transit facilities. Omitted sub-classes: Aqueducts, Cableways, Parking Sites. NIMA GNS designator - no direct equivalents."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#TransportFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Cave> <http://www.w3.org/2000/01/rdf-schema#label> "Cave"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Cave> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Cave> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Natural underground passageways or chambers, or hollowed out cavities in the side of a cliff. ... We use this category for cave entrances; for caverns; for grottoes; for natural tunnels; and for underground lakes. NIMA GNS designator CAVE."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Cave> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#LandRegion> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#WaterRegion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protontop#Location> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#WaterRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT: Hydrographic Features) For natural bodies of water. For constructed waterways, reservoirs, and such, use 'hydrographic structures'. We use this category for bodies of water; for eddies; for fluvial features; for marine features; for overfalls; for upwellings; for water bodies; for waterholes; and for whirlpools. Many of the ADL hydrographic features ignored. NIMA GNS class H."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#WaterRegion> <http://www.w3.org/2000/01/rdf-schema#label> "Water Region"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#WaterRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#LaunchFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#TransportFacility> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#LaunchFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#LaunchFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Areas from which rockets/missiles may be housed and projected, usually equipped with associated buildings and facilities. [USGS Circ 1048] We use this category for missile sites. NIMA GNS designator - no equivalent."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#LaunchFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Launch Facility"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Camp> <http://www.w3.org/2000/01/rdf-schema#label> "Camp"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Camp> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Designated areas on which primitive structure(s) are erected for temporary shelter or where recreational vehicles are temporarily parked. [USGS Circ 1048] We use this category for campgrounds; for camping sites; for logging camps; for oil camps; for refugee camps; for RV parks; and for trailer parks (recreational). NIMA GNS designators CMP, CMPL, CMPLA, CMPO, CMPQ, CMPRF."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Camp> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#RecreationalFacility> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Camp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Genre> <http://www.w3.org/2000/01/rdf-schema#comment> "Any Genre. Denotes any category of literature as well as various other forms of art or culture, e.g., music, based on some loose set of stylistic criteria. Genres are formed by conventions that change over time as new genres are invented and the use of old ones are discontinued. (Wikipedia)"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Genre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Genre> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protontop#Abstract> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Genre> <http://www.w3.org/2000/01/rdf-schema#label> "Genre"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Desert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Desert> <http://www.w3.org/2000/01/rdf-schema#label> "Desert"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Desert> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Regions rendered barren or partially barren by environmental extremes, especially by low rainfall. [USGS Circ 1048] We use this category for arid regions; for bajadas; for rock deserts; for sandy areas; for sandy deserts; and for stony deserts. NIMA GNS designators DSRT, ERG, HMDA, REG."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Desert> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#BiogeographicRegion> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#MountainSummit> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Peaks of mountains. [USGS Circ 1048] We use this category for ahus; for mountain crests; for nunataks; for peaks; and for summits. NIMA GNS designators PK, PKS, PKSU, PKU."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#MountainSummit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#Mountain> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#MountainSummit> <http://www.w3.org/2000/01/rdf-schema#label> "Mountain Summit"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#MountainSummit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#PoliticalRegion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protontop#Location> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#PoliticalRegion> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL, Political Entity) We use this category for commonwealths; for dependent political entities; for freely associated states; for independent political entities; for oblasts; for political entities; and for semi-independent political entities. Sub-classes omitted: Countries, 4th order divisions. NIMA GNS class: A, Administrative Boundary Features."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#PoliticalRegion> <http://www.w3.org/2000/01/rdf-schema#label> "Political Region"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#PoliticalRegion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#RecreationalFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#RecreationalFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) We use this category for access areas; for access sites; for boardwalks; for casinos; for clubs (recreational); for country clubs; for fairgrounds; for fishing areas; for fishing lodges; for fitness centers; for gun clubs; for hunt posts; for hunting lodges; for ice skating rinks; for playgrounds; for recreation sites; for resorts; for riding stables; for spas; for sportsman lodges; for stables; for yacht clubs; for youth centers; and for youth facilities. NIMA GNS designators - no direct equivalents."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#RecreationalFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#Facility> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#RecreationalFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Recreational Facility"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Mountain> <http://www.w3.org/2000/01/rdf-schema#label> "Mountain"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Mountain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Mountain> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Landmasses that project conspicuously above their surroundings. [USGS Circ 1048] We use this category for cerros; for cordilleras; for foothills; for hills; for knolls; for mounds; and for mounts. Omitted ADL sub-classes: Continental divides. NIMA GNS designator MT, MTS, MTSU, MTU, MND, KNLU, KNSU, CDAU, HLL, HLLS, HLLU, HLSU."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Mountain> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#LandRegion> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Reserve> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Reserve> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Areas set aside for the preservation of fauna, flora, and their natural habitats. [Macmillan Encyc., 2001] We use this category for agricultural reserves; for conservation areas; for demonstration areas; for environmental areas; for forest reserves; for game management areas; for hunting reserves; for management areas (reserves); for natural areas; for nature reserves; for palm tree reserves; for preserves; for primitive areas; for protected areas; for reservations (nature sites); for road less areas; for sanctuaries (wildlife); for wildlife areas; for wildlife refuges; and for wildlife reserves. NIMA GNS designators RES, RESA, RESF, RESH, RESN, RESP, RESV, RESW."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Reserve> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#Facility> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Reserve> <http://www.w3.org/2000/01/rdf-schema#label> "Reserve"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Roadway> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Roadway> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT) Open ways for passage of vehicles. [USGS Circ 1048] We use this category for caravan routes; for causeways; for drives; for highways; for intersections; for parkways; for road bends; for road cuts; for road junctions; for roads; for streets; and for traffic circles. NIMA GNS designators CSWY, CSWYQ, RD, RDA, RDB, RDCUT, RDJCT, RDST, RTE, STKR."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Roadway> <http://www.w3.org/2000/01/rdf-schema#label> "Roadway"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Roadway> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#TransportFacility> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#UrbanDistrict> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#PopulatedPlace> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#UrbanDistrict> <http://www.w3.org/2000/01/rdf-schema#label> "Urban District"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#UrbanDistrict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#UrbanDistrict> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT: Countries, 3rd order divisions) Minor civil units. [USGS Circ 1048] We use this category for barrios; for precincts; for third-order administrative divisions; and for townships. NIMA GNS designator ADM3."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#UrbanDistrict> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#PoliticalRegion> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#TelecomFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#Facility> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#TelecomFacility> <http://www.w3.org/2000/01/rdf-schema#label> "Telecom Facility"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#TelecomFacility> <http://www.w3.org/2000/01/rdf-schema#comment> "(ADL FT: Telecommunication Features) We use this category for antenna field sites; for communication centers; for radio stations; for television stations; and for transmission lines. NIMA GNS designators COMC, STNR, STNS."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#TelecomFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.w3.org/2006/vcard/ns#category> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/2006/vcard/ns> .
+<http://www.w3.org/2006/vcard/ns#category> <http://www.w3.org/2000/01/rdf-schema#label> "category"@en <http://www.w3.org/2006/vcard/ns> .
+<http://www.w3.org/2006/vcard/ns#category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.w3.org/2006/vcard/ns> .
+<http://www.w3.org/2006/vcard/ns#category> <http://www.w3.org/2000/01/rdf-schema#comment> "The category information about the object, also known as tags"@en <http://www.w3.org/2006/vcard/ns> .
+<http://www.w3.org/2006/vcard/ns#category> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2006/vcard/ns> <http://www.w3.org/2006/vcard/ns> .
+<http://purl.org/dita/ns#category> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dita/ns#element> <http://purl.org/dita/ns#> .
+<http://purl.org/dita/ns#category> <http://www.w3.org/2000/01/rdf-schema#comment> "The category element represents any category by which a topic might be classified for retrieval or navigation."@en-US <http://purl.org/dita/ns#> .
+<http://purl.org/dita/ns#category> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/dita/ns#> .
+<http://purl.org/dita/ns#category> <http://www.w3.org/2000/01/rdf-schema#label> "category" <http://purl.org/dita/ns#> .
+<http://purl.org/dita/ns#category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/dita/ns#> .
+<http://purl.org/dita/ns#category> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://docs.oasis-open.org/dita/v1.2/os/spec/langref/category.html> <http://purl.org/dita/ns#> .
+<http://www.ics.forth.gr/isl/oncm/core#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ics.forth.gr/isl/oncm/core> .
+<http://www.ics.forth.gr/isl/oncm/core#Category> <http://www.w3.org/2000/01/rdf-schema#label> "category"@en <http://www.ics.forth.gr/isl/oncm/core> .
+<http://www.ics.forth.gr/isl/oncm/core#Category> <http://purl.org/dc/terms/description> "A category/class of entities supported by a configuration."@en <http://www.ics.forth.gr/isl/oncm/core> .
+<http://www.ics.forth.gr/isl/oncm/core#Category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> <http://www.ics.forth.gr/isl/oncm/core> .
+<http://ns.inria.fr/ludo/v1/xapi#Category> <http://www.w3.org/2000/01/rdf-schema#comment> "An Activity used to categorize the Statement. \"Tags” would be a synonym. Category SHOULD be used to indicate a “profile” of xAPI behaviors, as well as other categorizations. For example: Anna attempts a biology exam, and the Statement is tracked using the CMI–5 profile. The Statement’s Activity refers to the exam, and the category is the CMI–5 profile."@en <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#Category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#Category> <http://www.w3.org/2000/01/rdf-schema#label> "Category"@en <http://ns.inria.fr/ludo/v1/xapi> .
+<http://www.w3.org/ns/dqv#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#Category> <http://www.w3.org/2000/01/rdf-schema#label> "Category"@en <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#Category> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/eis/vocab/daq#Category> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#Category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#Category> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a group of quality dimensions in which a common type of information is used as quality indicator."@en <http://www.w3.org/ns/dqv> .
+<http://www.agls.gov.au/agls/terms/category> <http://www.w3.org/2000/01/rdf-schema#comment> "The generic type of the resource being described."@en-au <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/category> <http://purl.org/dc/terms/description> "There are only three valid values for this property, 'service', 'document' or 'agency'."@en-au <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/category> <http://purl.org/dc/terms/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/category> <http://purl.org/dc/terms/issued> "2002-04-18" <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/category> <http://www.w3.org/2000/01/rdf-schema#label> "Category"@en-au <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/category> <http://purl.org/dc/terms/modified> "2009-02-02" <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/category> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/category> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/type> <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/category> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/type> <http://reference.data.gov.au/def/ont/dataset> .
+<http://elite.polito.it/ontologies/eupont.owl#Category> <http://www.w3.org/2000/01/rdf-schema#label> "Category"@en <http://elite.polito.it/ontologies/eupont.owl> .
+<http://elite.polito.it/ontologies/eupont.owl#Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://elite.polito.it/ontologies/eupont.owl> .
+<https://w3id.org/arco/ontology/core/Category> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/arco/ontology/core/Concept> <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core/Category> <http://www.w3.org/2000/01/rdf-schema#label> "Categoria"@it <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core/Category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core/Category> <http://www.w3.org/2000/01/rdf-schema#label> "Category"@en <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core/Category> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe che rappresenta una categoria."@it <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core/Category> <http://www.w3.org/2002/07/owl#versionInfo> "stable"@en <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core/Category> <http://www.w3.org/2002/07/owl#versionInfo> "stabile"@it <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core/Category> <http://www.w3.org/2000/01/rdf-schema#comment> "The class representing a category."@en <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core/Category> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/arco/ontology/core> <https://w3id.org/arco/ontology/core> .
+<http://schema.org/category> <http://schema.org/domainIncludes> <http://schema.org/PhysicalActivity> <http://schema.org/> .
+<http://schema.org/category> <http://schema.org/rangeIncludes> <http://schema.org/PhysicalActivityCategory> <http://schema.org/> .
+<http://schema.org/category> <http://schema.org/domainIncludes> <http://schema.org/Product> <http://schema.org/> .
+<http://schema.org/category> <http://schema.org/category> "issue-1741" <http://schema.org/> .
+<http://schema.org/category> <http://schema.org/domainIncludes> <http://schema.org/Recommendation> <http://schema.org/> .
+<http://schema.org/category> <http://purl.org/dc/terms/source> <https://github.com/schemaorg/schemaorg/issues/2490> <http://schema.org/> .
+<http://schema.org/category> <http://purl.org/dc/terms/source> <https://github.com/schemaorg/schemaorg/issues/1741> <http://schema.org/> .
+<http://schema.org/category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/category> <http://schema.org/domainIncludes> <http://schema.org/Invoice> <http://schema.org/> .
+<http://schema.org/category> <http://schema.org/domainIncludes> <http://schema.org/URL> <http://schema.org/> .
+<http://schema.org/category> <http://schema.org/domainIncludes> <http://schema.org/Offer> <http://schema.org/> .
+<http://schema.org/category> <http://schema.org/rangeIncludes> <http://schema.org/Thing> <http://schema.org/> .
+<http://schema.org/category> <http://schema.org/domainIncludes> <http://schema.org/SpecialAnnouncement> <http://schema.org/> .
+<http://schema.org/category> <http://www.w3.org/2000/01/rdf-schema#comment> "A category for the item. Greater signs or slashes can be used to informally indicate a category hierarchy." <http://schema.org/> .
+<http://schema.org/category> <http://www.w3.org/2000/01/rdf-schema#label> "category" <http://schema.org/> .
+<http://schema.org/category> <http://schema.org/domainIncludes> <http://schema.org/ActionAccessSpecification> <http://schema.org/> .
+<http://schema.org/category> <http://schema.org/domainIncludes> <http://schema.org/Service> <http://schema.org/> .
+<http://schema.org/category> <http://schema.org/rangeIncludes> <http://schema.org/Text> <http://schema.org/> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialProfile> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ifc/IFC4_ADD1#IfcMaterialProfile> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialProfile> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ifc/IFC4_ADD1#IfcLabel> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialProfile> <http://www.w3.org/2000/01/rdf-schema#label> "Category" <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialLayer> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ifc/IFC4_ADD1#IfcLabel> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialLayer> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ifc/IFC4_ADD1#IfcMaterialLayer> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialLayer> <http://www.w3.org/2000/01/rdf-schema#label> "Category" <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialConstituent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialConstituent> <http://www.w3.org/2000/01/rdf-schema#label> "Category" <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialConstituent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialConstituent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ifc/IFC4_ADD1#IfcLabel> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterialConstituent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ifc/IFC4_ADD1#IfcMaterialConstituent> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcAppliedValue> <http://www.w3.org/2000/01/rdf-schema#label> "Category" <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcAppliedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcAppliedValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ifc/IFC4_ADD1#IfcAppliedValue> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcAppliedValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcAppliedValue> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ifc/IFC4_ADD1#IfcLabel> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ifc/IFC4_ADD1#IfcMaterial> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ifc/IFC4_ADD1#IfcLabel> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Category" <https://w3id.org/ifc/IFC4_ADD1> .
+<https://w3id.org/ifc/IFC4_ADD1#category_IfcMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ifc/IFC4_ADD1> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/category.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategorya .
+_:Bcategorya <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategorya <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categorya.nt> .
+_:Bcategorya <https://w3id.org/tree#value> "categorya" .
+_:Bcategorya <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categorya.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategoryb .
+_:Bcategoryb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategoryb <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categoryb.nt> .
+_:Bcategoryb <https://w3id.org/tree#value> "categoryb" .
+_:Bcategoryb <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categoryb.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategoryc .
+_:Bcategoryc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategoryc <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categoryc.nt> .
+_:Bcategoryc <https://w3id.org/tree#value> "categoryc" .
+_:Bcategoryc <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categoryc.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategoryd .
+_:Bcategoryd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategoryd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categoryd.nt> .
+_:Bcategoryd <https://w3id.org/tree#value> "categoryd" .
+_:Bcategoryd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categoryd.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategorye .
+_:Bcategorye <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategorye <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categorye.nt> .
+_:Bcategorye <https://w3id.org/tree#value> "categorye" .
+_:Bcategorye <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categorye.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategoryg .
+_:Bcategoryg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategoryg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categoryg.nt> .
+_:Bcategoryg <https://w3id.org/tree#value> "categoryg" .
+_:Bcategoryg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categoryg.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategoryh .
+_:Bcategoryh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategoryh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categoryh.nt> .
+_:Bcategoryh <https://w3id.org/tree#value> "categoryh" .
+_:Bcategoryh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categoryh.nt> <https://w3id.org/tree#remainingItems> "14"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategoryi .
+_:Bcategoryi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategoryi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categoryi.nt> .
+_:Bcategoryi <https://w3id.org/tree#value> "categoryi" .
+_:Bcategoryi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categoryi.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategoryl .
+_:Bcategoryl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategoryl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categoryl.nt> .
+_:Bcategoryl <https://w3id.org/tree#value> "categoryl" .
+_:Bcategoryl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categoryl.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategorym .
+_:Bcategorym <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategorym <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categorym.nt> .
+_:Bcategorym <https://w3id.org/tree#value> "categorym" .
+_:Bcategorym <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categorym.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategoryo .
+_:Bcategoryo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategoryo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categoryo.nt> .
+_:Bcategoryo <https://w3id.org/tree#value> "categoryo" .
+_:Bcategoryo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categoryo.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategoryp .
+_:Bcategoryp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategoryp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categoryp.nt> .
+_:Bcategoryp <https://w3id.org/tree#value> "categoryp" .
+_:Bcategoryp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categoryp.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategoryr .
+_:Bcategoryr <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategoryr <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categoryr.nt> .
+_:Bcategoryr <https://w3id.org/tree#value> "categoryr" .
+_:Bcategoryr <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categoryr.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategorys .
+_:Bcategorys <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategorys <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categorys.nt> .
+_:Bcategorys <https://w3id.org/tree#value> "categorys" .
+_:Bcategorys <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categorys.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategoryt .
+_:Bcategoryt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategoryt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categoryt.nt> .
+_:Bcategoryt <https://w3id.org/tree#value> "categoryt" .
+_:Bcategoryt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categoryt.nt> <https://w3id.org/tree#remainingItems> "15"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategoryu .
+_:Bcategoryu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategoryu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categoryu.nt> .
+_:Bcategoryu <https://w3id.org/tree#value> "categoryu" .
+_:Bcategoryu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categoryu.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:Bcategoryy .
+_:Bcategoryy <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcategoryy <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/categoryy.nt> .
+_:Bcategoryy <https://w3id.org/tree#value> "categoryy" .
+_:Bcategoryy <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/categoryy.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:BaX2Bcategory .
+_:BaX2Bcategory <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bcategory <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+category.nt> .
+_:BaX2Bcategory <https://w3id.org/tree#value> "a" .
+_:BaX2Bcategory <https://w3id.org/tree#value> "category" .
+_:BaX2Bcategory <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+category.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:BbX2Bcategory .
+_:BbX2Bcategory <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bcategory <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+category.nt> .
+_:BbX2Bcategory <https://w3id.org/tree#value> "b" .
+_:BbX2Bcategory <https://w3id.org/tree#value> "category" .
+_:BbX2Bcategory <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+category.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:BcategoryX2Bd .
+_:BcategoryX2Bd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcategoryX2Bd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/category+d.nt> .
+_:BcategoryX2Bd <https://w3id.org/tree#value> "category" .
+_:BcategoryX2Bd <https://w3id.org/tree#value> "d" .
+_:BcategoryX2Bd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/category+d.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:BcategoryX2Be .
+_:BcategoryX2Be <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcategoryX2Be <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/category+e.nt> .
+_:BcategoryX2Be <https://w3id.org/tree#value> "category" .
+_:BcategoryX2Be <https://w3id.org/tree#value> "e" .
+_:BcategoryX2Be <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/category+e.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:BcategoryX2Bf .
+_:BcategoryX2Bf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcategoryX2Bf <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/category+f.nt> .
+_:BcategoryX2Bf <https://w3id.org/tree#value> "category" .
+_:BcategoryX2Bf <https://w3id.org/tree#value> "f" .
+_:BcategoryX2Bf <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/category+f.nt> <https://w3id.org/tree#remainingItems> "36"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:BcategoryX2Bh .
+_:BcategoryX2Bh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcategoryX2Bh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/category+h.nt> .
+_:BcategoryX2Bh <https://w3id.org/tree#value> "category" .
+_:BcategoryX2Bh <https://w3id.org/tree#value> "h" .
+_:BcategoryX2Bh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/category+h.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:BcategoryX2Bi .
+_:BcategoryX2Bi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcategoryX2Bi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/category+i.nt> .
+_:BcategoryX2Bi <https://w3id.org/tree#value> "category" .
+_:BcategoryX2Bi <https://w3id.org/tree#value> "i" .
+_:BcategoryX2Bi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/category+i.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:BcategoryX2Bl .
+_:BcategoryX2Bl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcategoryX2Bl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/category+l.nt> .
+_:BcategoryX2Bl <https://w3id.org/tree#value> "category" .
+_:BcategoryX2Bl <https://w3id.org/tree#value> "l" .
+_:BcategoryX2Bl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/category+l.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:BcategoryX2Bo .
+_:BcategoryX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcategoryX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/category+o.nt> .
+_:BcategoryX2Bo <https://w3id.org/tree#value> "category" .
+_:BcategoryX2Bo <https://w3id.org/tree#value> "o" .
+_:BcategoryX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/category+o.nt> <https://w3id.org/tree#remainingItems> "36"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:BcategoryX2Bs .
+_:BcategoryX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcategoryX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/category+s.nt> .
+_:BcategoryX2Bs <https://w3id.org/tree#value> "category" .
+_:BcategoryX2Bs <https://w3id.org/tree#value> "s" .
+_:BcategoryX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/category+s.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:BcategoryX2Bt .
+_:BcategoryX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcategoryX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/category+t.nt> .
+_:BcategoryX2Bt <https://w3id.org/tree#value> "category" .
+_:BcategoryX2Bt <https://w3id.org/tree#value> "t" .
+_:BcategoryX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/category+t.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:BcategoryX2Bu .
+_:BcategoryX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcategoryX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/category+u.nt> .
+_:BcategoryX2Bu <https://w3id.org/tree#value> "category" .
+_:BcategoryX2Bu <https://w3id.org/tree#value> "u" .
+_:BcategoryX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/category+u.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/category.nt> <https://w3id.org/tree#relation> _:BcategoryX2Bw .
+_:BcategoryX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcategoryX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/category+w.nt> .
+_:BcategoryX2Bw <https://w3id.org/tree#value> "category" .
+_:BcategoryX2Bw <https://w3id.org/tree#value> "w" .
+_:BcategoryX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/category+w.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

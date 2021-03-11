@@ -1,0 +1,307 @@
+<http://decision-ontology.googlecode.com/svn/trunk/decision.owl#Problem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://decision-ontology.googlecode.com/svn/trunk/decision.owl> .
+<http://decision-ontology.googlecode.com/svn/trunk/decision.owl#Problem> <http://www.w3.org/2000/01/rdf-schema#label> "Problem"@en <https://decision-ontology.googlecode.com/svn/trunk/decision.owl> .
+<http://decision-ontology.googlecode.com/svn/trunk/decision.owl#Problem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://decision-ontology.googlecode.com/svn/trunk/decision.owl#Situation> <https://decision-ontology.googlecode.com/svn/trunk/decision.owl> .
+<http://purl.org/hpi/patchr#PatchGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A patch group is a collection of patches that apply to a common problem."@en <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#PatchGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/hpi/patchr#> <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#PatchGroup> <http://www.w3.org/2000/01/rdf-schema#label> "PatchGroup"@en <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#PatchGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#DisjunctivePatchGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/hpi/patchr#> <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#DisjunctivePatchGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/hpi/patchr#PatchGroup> <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#DisjunctivePatchGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A disjunctive patch group is collection (alternative list) of patches where one member patch need to be applied to resolve the problem."@en <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#DisjunctivePatchGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#DisjunctivePatchGroup> <http://www.w3.org/2000/01/rdf-schema#label> "DisjunctivePatchGroup"@en <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#ConjunctivePatchGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#ConjunctivePatchGroup> <http://www.w3.org/2000/01/rdf-schema#label> "ConjunctivePatchGroup"@en <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#ConjunctivePatchGroup> <http://www.w3.org/2000/01/rdf-schema#comment> "A conjunctive patch group is collection (list) of patches where all member patches need to be applied to the dataset to resolve the problem."@en <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#ConjunctivePatchGroup> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/hpi/patchr#> <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#ConjunctivePatchGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/hpi/patchr#PatchGroup> <http://purl.org/hpi/patchr#> .
+<http://purl.org/ipo/core> <http://purl.org/dc/elements/1.1/description> "The conceptual model of the Issue Procedure Ontology can be seen below, where their classes and properties are presented by means of a UML class diagram.\nFor better understanding, the ontology can be divided into four modules:\nIssueEntity\nClasses: IssueEntity, Asset, Image, skos:Concept.\n\nProperties: directCategoryOf, hasDirectCategory, categoryOf, hasCategory, hasMaker, makerOf, hasAsset, assetOf, hasDepiction, depictionOf, title, description.\n\nPersons and Organizations\nClasses: Party, Person e Organization\n\nProperties: hasMember, memberOf, name.\n\nProblems and Symptoms\nClasses: Symptom, Issue.\n\nProperties: directlyCauses, directlyCausedBy, causes, causedBy, dependenceOf, dependsOn, directDependenceOf, directlyDependsOn, canDirectlyCause, canBeDirectlyCausedBy, canCause, canBeCausedBy, canBeDependenceOf, canDependOn, canBeDirectDependenceOf, canDirectlyDependOn, indicatedBy, indicates, hasCausativeAsset, causativeAssetOf, hasHostAsset, hostAssetOf.\n\nProblems and Solutions\nClasses: Action, Task, CompoundAction, Procedure, Activity, Step, Transition, BooleanExpression.\n\nProperties: solves, solvedBy, hasFirstStep, hasStep, activates, hasSource, hasTarget, hasIncoming, hasOutcoming, hasGuardCondition, hasPostCondition, hasPreCondition, goal.\n\nClassifying a IssueEntity\nThere are two ways of classifying a IssueEntity:\n1 - A non-intrinsic classification, ie, a classification aiming a simple grouping of IssueEntities, where the IPO ontology provides ipo use of the property \"ipo:hasCategory\" linking to \"skos:Concept\", enabling the creation of schemes of categories and subcategories.\n2 - A classification that is intrinsic to a IssueEntity, so that classification implies the creation of subclasses of IssueEntity with specific restrictions. For example, the \"Hard Disk Problem\" class being defined by a specific restriction that is being linked to at least one of the symptoms \"Error Reading File\" or \"Error Writing File\" (instances of Symptom class). Thus, resources can be classified based on the description of their symptoms, as an instance of the new class of \"Hard Disk Problem\" (HD)." <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://purl.org/dc/terms/issued> "2014-11-21"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://purl.org/dc/elements/1.1/creator> "Mark Douglas de Azevedo Jacyntho" <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://www.w3.org/2000/01/rdf-schema#label> "IPO - Issue Procedure Ontology" <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ipo" <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://purl.org/dc/elements/1.1/creator> "Matheus Dimas de Morais" <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://www.w3.org/2002/07/owl#versionInfo> "1.2.0" <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/ipo/core#" <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://www.w3.org/2000/01/rdf-schema#comment> "Vocabulary for describing issues (or problems) and corresponding symptoms and solutions to a broad variety of contexts. It is intended to provide a generic, reusable core ontology that can be extended or specialized for use in domain-specific situations, aimed at supporting linked data publishing. The solutions are represented by procedures, which are possible workflows for solving corresponding issues." <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://www.w3.org/2002/07/owl#versionIRI> <http://purl.org/ipo/core/1.2.0> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://purl.org/dc/elements/1.1/modified> "2015-07-30"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://purl.org/dc/elements/1.1/language> "en" <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://purl.org/dc/terms/rights> "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by/3.0/)."@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://purl.org/dc/elements/1.1/description> <http://ipocore.sourceforge.net/1.2.0/ipo.png> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://purl.org/dc/elements/1.1/title> "IPO - Issue Procedure Ontology" <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Issue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Issue> <http://www.w3.org/2000/01/rdf-schema#comment> "A problem or issue to be resolved. For example, something that is not operating normally or a hindrance to performing some task.\nA Issue can be cause and/or caused, directly or indirectly, by another Issue, the same that the Issue A can depend on the Issue B, needing that the Issue B be solved before solving Issue A.\nThe Issue can have a set of Actions (Procedures) that will fix it and also a Issue can be indicated by several Symptoms, where a set of Symptoms can identify a Issue."@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Issue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb3fca0b5ad52bdc50051b47ce493059a <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Issue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ipo/core#IssueEntity> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Issue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ipo/core> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Issue> <http://www.w3.org/2000/01/rdf-schema#label> "Issue"@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Symptom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ipo/core#IssueEntity> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Symptom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ipo/core> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Symptom> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a sign or indication of one or more Issues. Something that is perceived when a problem occurs.\n"@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Symptom> <http://www.w3.org/2000/01/rdf-schema#label> "Symptom"@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Symptom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba1faa8433576d915fc193d403ae23f1a <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Symptom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#assetOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#assetOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/ipo/core#hasAsset> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#assetOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ipo/core> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#assetOf> <http://www.w3.org/2000/01/rdf-schema#label> "assetOf"@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#assetOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a IssueEntity that is related to the Asset.\nThis property can be used to facilitate retrieval records of problems related to the Asset."@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Asset> <http://www.w3.org/2000/01/rdf-schema#label> "Asset"@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Asset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be09aa770095107da5466859954c22e1b <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Asset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ipo/core> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Asset> <http://www.w3.org/2000/01/rdf-schema#comment> "Any \"thing\" that a IssueEntity is related. \nFor example, a problem (disease) diagnosed in a patient, can have a virus and the patient as Asset, since the virus is the causative agent of the problem and the patient is the host in which the problem manifests itself.\nAn Asset can be a person, an object, a report, a document, etc."@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasDepiction> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ipo/core#Image> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasDepiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasDepiction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ipo/core#IssueEntity> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasDepiction> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates an image that illustrates the IssueEntity.\nSeeking a better description of IssueEntity, one can make use of this property to relate an illustrative image. For example, an image of a software screen containing an error occurred can help describe the problem."@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasDepiction> <http://www.w3.org/2000/01/rdf-schema#label> "hasDepiction"@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasDepiction> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://xmlns.com/foaf/0.1/depiction> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasDepiction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#InverseFunctionalProperty> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#hasDepiction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ipo/core> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#IssueEntity> <http://www.w3.org/2000/01/rdf-schema#label> "IssueEntity"@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#IssueEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic class representing the three main concepts within the domain of ontology: Symptom, Problem and Action."@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#IssueEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4edb67bf9eac345108549e0a7f9c025c <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#IssueEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6327768915628410ce3ab712634d4228 <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#IssueEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ipo/core> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#IssueEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ipo/core> .
+<http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#Templates> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://spinrdf.org/spin#abstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint templates are generalized SPARQL query templates based on the SPARQL Inferencing Framework (SPIN). The query templates represent generic data quality rules that may be used to identify data quality problems, i.e. violations of previously defined constraints."@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://www.w3.org/2000/01/rdf-schema#label> "data quality constraint templates" <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#Template> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://www.w3.org/2002/07/owl#versionInfo> "V 1.1 Release 2011-03-28" <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://www.w3.org/2000/01/rdf-schema#label> "The Data Quality Constraints Library"@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://www.w3.org/2002/07/owl#imports> <http://spinrdf.org/spin> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://www.w3.org/2000/01/rdf-schema#comment> "This RDF document contains a library of data quality constraints represented as SPARQL query templates based on the SPARQL Inferencing Framework (SPIN). The data quality constraint templates are especially useful for the identification of data quality problems during data entry and for periodic quality checks during data usage."@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://purl.org/dc/elements/1.1/subject> "Semantic Data Quality Management"@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://purl.org/dc/elements/1.1/date> "2011-03-28" <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://purl.org/dc/elements/1.1/title> "The Data Quality Constraints Library"@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://purl.org/dc/elements/1.1/creator> "Christian Fuerber, Martin Hepp, and Markus Wischnewski"@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://purl.org/dc/terms/license> <http://www.gnu.org/licenses/lgpl.html> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://mex.aksw.org/mex-algo#NaiveBayes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://mex.aksw.org/mex-algo#NamedIndividual> <http://mex.aksw.org/mex-algo> .
+<http://mex.aksw.org/mex-algo#NaiveBayes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4b9ede7d4ebfa1f7f708cf4b2a3302f4 <http://mex.aksw.org/mex-algo> .
+<http://mex.aksw.org/mex-algo#NaiveBayes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3c6d9b5160aab31ab9127b8dd8bc8949 <http://mex.aksw.org/mex-algo> .
+<http://mex.aksw.org/mex-algo#NaiveBayes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://mex.aksw.org/mex-algo> .
+<http://mex.aksw.org/mex-algo#NaiveBayes> <http://www.w3.org/2000/01/rdf-schema#comment> "In machine learning, naive Bayes classifiers are a family of simple probabilistic classifiers based on applying Bayes' theorem with strong (naive) independence assumptions between the features.\n\nNaive Bayes has been studied extensively since the 1950s. It was introduced under a different name into the text retrieval community in the early 1960s:488 and remains a popular (baseline) method for text categorization, the problem of judging documents as belonging to one category or the other (such as spam or legitimate, sports or politics, etc.) with word frequencies as the features. With appropriate preprocessing, it is competitive in this domain with more advanced methods including support vector machines.It also finds application in automatic medical diagnosis.\n\nNaive Bayes classifiers are highly scalable, requiring a number of parameters linear in the number of variables (features/predictors) in a learning problem. Maximum-likelihood training can be done by evaluating a closed-form expression, which takes linear time, rather than by expensive iterative approximation as used for many other types of classifiers.\n\nIn the statistics and computer science literature, Naive Bayes models are known under a variety of names, including simple Bayes and independence Bayes.[4] All these names reference the use of Bayes' theorem in the classifier's decision rule, but naive Bayes is not (necessarily) a Bayesian method Russell and Norvig note that \"[naive Bayes] is sometimes called a Bayesian classifier, a somewhat careless usage that has prompted true Bayesians to call it the idiot Bayes model."@en <http://mex.aksw.org/mex-algo> .
+<http://mex.aksw.org/mex-algo#NaiveBayes> <http://www.w3.org/2002/07/owl#disjointWith> <http://mex.aksw.org/mex-algo#RegressionAnalysis> <http://mex.aksw.org/mex-algo> .
+<http://mex.aksw.org/mex-algo#NaiveBayes> <http://www.w3.org/2002/07/owl#disjointWith> <http://mex.aksw.org/mex-algo#SupportVectorMachines> <http://mex.aksw.org/mex-algo> .
+<http://mex.aksw.org/mex-algo#NaiveBayes> <http://www.w3.org/2002/07/owl#disjointWith> <http://mex.aksw.org/mex-algo#RandomForest> <http://mex.aksw.org/mex-algo> .
+<http://mex.aksw.org/mex-algo#NaiveBayes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://mex.aksw.org/mex-algo#NamedAlgorithm> <http://mex.aksw.org/mex-algo> .
+<http://mex.aksw.org/mex-algo#NaiveBayes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B741f86c62a034288e36b9e6649413cef <http://mex.aksw.org/mex-algo> .
+<http://mex.aksw.org/mex-core> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2000/01/rdf-schema#> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://purl.org/dc/terms/created> "2014-02-02"^^<http://www.w3.org/2001/XMLSchema#date> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://purl.org/dc/terms/contributor> <http://mex.aksw.org/mex-core#hellmann> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://www.w3.org/2000/01/rdf-schema#comment> "MEX e um vocabulario modelado para facilitar a interoperabilidade entre resultados de experimentos de aprendizado de maquinas publicados na Web. A camada mex-core representa a principal informacao obtida de um experimento de aprendizado de maquina."@pt <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://www.w3.org/2000/01/rdf-schema#label> "The MEX Vocabulary (mex-core)"@en <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://www.w3.org/2000/01/rdf-schema#label> "Vocabulario MEX (mex-core)"@pt <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://purl.org/dc/elements/1.1/publisher> "AKSW Grupo de Pesquisa - Universidade de Leipzig"@pt <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://purl.org/dc/terms/title> "MEX Core (mex-core) is an ontology with the goal of describing the core process for machine learning problems (MEX Platform)"@en <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://mex.aksw.org/mex-core#> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://purl.org/dc/terms/contributor> <http://mex.aksw.org/mex-core#lehmann> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/prov#> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://www.w3.org/2000/01/rdf-schema#comment> "MEX is an RDF vocabulary designed to facilitate interoperability between published machine learning experiments results on the Web. The mex-core layer represents the core information gathered from a basic machine learning experiment design."@en <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#about> "http://mex.aksw.org/mex-doc-core#" <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://purl.org/dc/elements/1.1/publisher> "AKSW Research Group - Leipzig University"@en <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://www.w3.org/2002/07/owl#imports> <http://usefulinc.com/ns/doap#> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://purl.org/dc/terms/contributor> <http://mex.aksw.org/mex-core#moussallem> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://purl.org/dc/terms/contributor> <http://mex.aksw.org/mex-core#ackermann> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://purl.org/dc/terms/contributor> <http://mex.aksw.org/mex-core#usbeck> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://purl.org/dc/terms/contributor> <http://mex.aksw.org/mex-core#yoko> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://purl.org/dc/terms/modified> "2014-04-05"^^<http://www.w3.org/2001/XMLSchema#date> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://purl.org/dc/terms/contributor> <http://mex.aksw.org/mex-core#duarte> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-core> <http://purl.org/dc/terms/creator> <http://mex.aksw.org/mex-core#esteves> <http://mex.aksw.org/mex-core> .
+<http://mex.aksw.org/mex-perf> <http://purl.org/dc/terms/contributor> <http://mex.aksw.org/mex-core#lehmann> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://purl.org/dc/elements/1.1/publisher> "AKSW Grupo de Pesquisa - Universidade de Leipzig"@pt <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://purl.org/dc/terms/created> "2014-02-02"^^<http://www.w3.org/2001/XMLSchema#date> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://purl.org/dc/terms/title> "MEX Performance (mex-perf) is an ontology with the goal of describing performance values for machine learning problems (MEX Platform)"@en <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2000/01/rdf-schema#> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://purl.org/dc/terms/contributor> <http://mex.aksw.org/mex-core#hellmann> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://www.w3.org/2000/01/rdf-schema#label> "Vocabulario MEX (mex-perf)"@pt <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#about> "http://mex.aksw.org/mex-doc-perf#" <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://purl.org/dc/terms/contributor> <http://mex.aksw.org/mex-core#usbeck> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://www.w3.org/2000/01/rdf-schema#label> "The MEX Vocabulary (mex-perf)"@en <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://purl.org/dc/terms/creator> <http://mex.aksw.org/mex-core#esteves> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://mex.aksw.org/mex-perf#> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://purl.org/dc/terms/contributor> <http://mex.aksw.org/mex-core#duarte> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://purl.org/dc/terms/modified> "2014-04-05"^^<http://www.w3.org/2001/XMLSchema#date> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://purl.org/dc/terms/contributor> <http://mex.aksw.org/mex-core#yoko> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://purl.org/dc/elements/1.1/publisher> "AKSW Research Group - Leipzig University"@en <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/prov#> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://purl.org/dc/terms/contributor> <http://mex.aksw.org/mex-core#ackermann> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://www.w3.org/2000/01/rdf-schema#comment> "MEX e um vocabulario modelado para facilitar a interoperabilidade entre resultados de experimentos de aprendizado de maquinas publicados na Web. A camada mex-perf e o 3o. nivel na abordagem MEX para representar performances de algoritmos de aprendizado de maquinas"@pt <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://purl.org/dc/terms/contributor> <http://mex.aksw.org/mex-core#moussallem> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://www.w3.org/2002/07/owl#imports> <http://usefulinc.com/ns/doap#> <http://mex.aksw.org/mex-perf> .
+<http://mex.aksw.org/mex-perf> <http://www.w3.org/2000/01/rdf-schema#comment> "MEX is an RDF vocabulary designed to facilitate interoperability between published machine learning experiments results on the Web. The mex-perf layer is the 3rd level of the MEX for representing the machine learning algorithm's performances."@en <http://mex.aksw.org/mex-perf> .
+<http://purl.org/cwmo/#isFormalizing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizing> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/cwmo/#Problem> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizing> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/cwmo/#DecisionMaker> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizing> <http://www.w3.org/2000/01/rdf-schema#comment> "The decision maker define the problem that will be solved during the creative workshop."@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Ideator> <http://www.w3.org/2002/07/owl#disjointWith> _:Bee9f17a03ec0f5eafc71a274895e5358 <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Ideator> <http://www.w3.org/2000/01/rdf-schema#label> "Ideator"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Ideator> <http://www.w3.org/2000/01/rdf-schema#comment> "Ideator is one of the role assumed by a person during the creative workshop. He is the person who solve the problem and produce ideas by applying creative techniques"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Ideator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Ideation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Ideation> <http://www.w3.org/2000/01/rdf-schema#comment> "The ideation class is a phase of the creative process where ideas to respond to the problematic are generated."@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Ideation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/cwmo/#IdeaEvaluation> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Ideation> <http://www.w3.org/2000/01/rdf-schema#label> "Ideation"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Ideation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/cwmo/#CreativePhase> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Ideation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/cwmo/#Implementation> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Ideation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/cwmo/#ProblemAnalysis> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#CreativeTeam> <http://www.w3.org/2000/01/rdf-schema#comment> "The creative team class is a group of ideator who attempt to generated ideas to respond a problematic"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#CreativeTeam> <http://www.w3.org/2000/01/rdf-schema#label> "Creative Team"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#CreativeTeam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#CreativeWorkshop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#CreativeWorkshop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Event> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#CreativeWorkshop> <http://www.w3.org/2000/01/rdf-schema#label> "CreativeWorkshop"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#CreativeWorkshop> <http://www.w3.org/2000/01/rdf-schema#comment> "The CreativeWorkshop class  represent an event organized by an organizer to solve a problem formulated into a subject and provided by a decision-maker, and solved by a creative team."@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizedInto> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/cwmo/#Subject> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizedInto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizedInto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizedInto> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/cwmo/#Problem> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizedInto> <http://www.w3.org/2000/01/rdf-schema#comment> "A problem is formalized into a subject in order to be adapted for a creative workshop."@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Exploration> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/cwmo/#Evaluation> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Exploration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/cwmo/#TechniqueFunction> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Exploration> <http://www.w3.org/2000/01/rdf-schema#label> "Exploration"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Exploration> <http://www.w3.org/2000/01/rdf-schema#comment> "The exploration class is a creativ technic which has the porpose to explore the problem, to redefine the scope or the focus of the problem, or to collect further information"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Exploration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Exploration> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/cwmo/#Generation> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#function> <http://www.w3.org/2000/01/rdf-schema#comment> "creative technqiue has different function: exploration of the subject/ domain of the problem, generation of idea, and evluation of idea"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#function> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/cwmo/#CreativeTechnique> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#function> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Expert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Expert> <http://www.w3.org/2000/01/rdf-schema#comment> "Expert is one of the role assumed by a person during the creative workshop. He share his knowledge about the problem or the domain to helps the ideator or the evaluation."@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Expert> <http://www.w3.org/2000/01/rdf-schema#label> "Expert"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Problem> <http://www.w3.org/2000/01/rdf-schema#comment> "The problem class is the description of the elements that leads the organization to initiate a creative workshop."@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Problem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Problem> <http://www.w3.org/2000/01/rdf-schema#label> "Problem"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#ProblemAnalysis> <http://www.w3.org/2000/01/rdf-schema#comment> "The problem analysis class is a phase of the creative process where the problem is formalized and the information seeked and organized."@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#ProblemAnalysis> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/cwmo/#IdeaEvaluation> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#ProblemAnalysis> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/cwmo/#Ideation> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#ProblemAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/cwmo/#CreativePhase> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#ProblemAnalysis> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/cwmo/#Implementation> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#ProblemAnalysis> <http://www.w3.org/2000/01/rdf-schema#label> "Problem Analysis"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#ProblemAnalysis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "A subject is formalized from a problem."@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/cwmo/#Subject> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizedFrom> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/cwmo/#isFormalizedInto> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isFormalizedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/cwmo/#Problem> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Idea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Idea> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.w3.org/2004/02/skos/core#Concept> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Idea> <http://www.w3.org/2000/01/rdf-schema#label> "Idea"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Idea> <http://www.w3.org/2000/01/rdf-schema#comment> "The idea class is a beginning of response to the problem. An idea can be from a Creative technic"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#problematic> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#problematic> <http://www.w3.org/2000/01/rdf-schema#comment> "the subject is summerized into an open question that pose the problem."@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#problematic> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/cwmo/#Subject> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#problematic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Subject> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject class is the description of the problerm to solve by the creative group during the creative workshop. It is a transformation/reformulation of the problem."@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Subject> <http://www.w3.org/2000/01/rdf-schema#label> "Subject"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Context> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Context> <http://www.w3.org/2000/01/rdf-schema#label> "Context"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#Context> <http://www.w3.org/2000/01/rdf-schema#comment> "organizational condition in wich the problem is defined (Stratégique, Nouveau produit, processus ou service, Améliorations produit, processus ou service, publicité/marketing, Ressources humaines)"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#DecisionMaker> <http://www.w3.org/2000/01/rdf-schema#comment> "Decision Maker is one of the role assumed by a person during the creative workshop. He provides the problem to solve during the workshop and has the decision ability concerning the future of the idea generated."@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#DecisionMaker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#DecisionMaker> <http://www.w3.org/2000/01/rdf-schema#label> "Decision Maker"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#hasContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#hasContext> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/cwmo/#Context> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#hasContext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/cwmo/#Problem> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#hasContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#hasContext> <http://www.w3.org/2000/01/rdf-schema#comment> "A problem is defined according to a context."@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#KnowledgeDomain> <http://www.w3.org/2000/01/rdf-schema#comment> "The Knowledge domain class is the overall knowledge that a person posses or which is associated to an idea or a problem"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#KnowledgeDomain> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge Domain"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#KnowledgeDomain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#hasInput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#hasInput> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/cwmo/#CreativeTechnique> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#hasInput> <http://www.w3.org/2000/01/rdf-schema#comment> "A creative method requires some parametrs to be applied properly. these inputs can be a problematic, aditional information, ..."@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isConstraintedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/cwmo/#Constraint> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isConstraintedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isConstraintedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isConstraintedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/cwmo/#Problem> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#isConstraintedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Properety indicating that a problem is constrainted by constraint of different nature ( the problem itself, the domain, the context, the actor of the domain…)"@en <http://purl.org/cwmo/#> .
+<https://bmake.th-brandenburg.de/spv#ResMethActionResearch> <https://schema.org/url> "http://doi.org/10.1007/s11576-007-0064-z" <https://bmake.th-brandenburg.de/spv> .
+<https://bmake.th-brandenburg.de/spv#ResMethActionResearch> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <https://bmake.th-brandenburg.de/spv> .
+<https://bmake.th-brandenburg.de/spv#ResMethActionResearch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <https://bmake.th-brandenburg.de/spv> .
+<https://bmake.th-brandenburg.de/spv#ResMethActionResearch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://bmake.th-brandenburg.de/spv#> <https://bmake.th-brandenburg.de/spv> .
+<https://bmake.th-brandenburg.de/spv#ResMethActionResearch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://bmake.th-brandenburg.de/spv#ResearchMethod> <https://bmake.th-brandenburg.de/spv> .
+<https://bmake.th-brandenburg.de/spv#ResMethActionResearch> <http://www.w3.org/2000/01/rdf-schema#comment> "Solving a practice problem by a mixed group of scientists and practical experts. Several cycles of analysis, action and evaluation steps, each with a low level of structured instruments such as group discussions or planning games, are conducted."@en <https://bmake.th-brandenburg.de/spv> .
+<https://bmake.th-brandenburg.de/spv#ResMethActionResearch> <http://www.w3.org/2000/01/rdf-schema#label> "Action Research (Wilde/Hess)"@en <https://bmake.th-brandenburg.de/spv> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Method> <http://www.w3.org/2000/01/rdf-schema#comment> "A method is a Description that defines or uses concepts in order to guide carrying out actions aimed at a solution with respect to a problem. It is different from a Plan, because plans could be carried out in order to follow a method, but a method can be followed by executing alternative plans." <https://w3id.org/eepsa> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Method> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/eepsa> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Method> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> <https://w3id.org/eepsa> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5b933d831b5ec6d39afeeca499e88696 <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://data.nasa.gov/ontologies/atmonto/ATM#TrafficManagementInitiative> <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7f9e1801ce745771191445910573992e <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9d6f2881af135a031e7e69ab4d37a222 <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb41c281164cb405bf002e6182fc7c51d <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI> <http://www.w3.org/2000/01/rdf-schema#comment> "A ReRoute is a traffic management initiative (TMI) that mandates a change in the filed flight plan for a set of specified flights. There are multiple factors that might justify a reroute, including weather, traffic congestion, unusual airspace activity, etc. The substitute flight plans route air traffic around the airspace problem area." <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI> <http://www.w3.org/2000/01/rdf-schema#label> "ReRoute" <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0ca2dc733ce5ecb457bfb21e625fff61 <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B36d582cb3bd91a17e7e500281e737af9 <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf8f25975698ec7b23c4d041c44c4b300 <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9e3ce1b6c1c68d7d38d83bb5485d4e66 <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf1bcb9c2c0bd13b55563cf2ea019d03b <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<https://data.nasa.gov/ontologies/atmonto/ATM#ReRouteTMI> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B17d20b83133127329581ac4339d4eb4b <https://data.nasa.gov/ontologies/atmonto/ATM#> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/Loi> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/Section> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/Chapitre> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/SousSection> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/Mandat> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2000/01/rdf-schema#label> "Rapport" <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/QuestionEcrite> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/TexteLoi> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/Amendement> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/PositionArticle> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/Intervention> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/PreuvePresence> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2000/01/rdf-schema#comment> "La classe \"Rapport\" sert à représenter la notion de rapport écrit par les députés lors de commission ou d'hémicycle. Un rapport est établi dans le but de proposer des solutions à un problème." <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/Depute> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/Reponse> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/Presence> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/Alinea> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/Seance> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/Organisme> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan/Rapport> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.lirmm.fr/ontologies/oan/Article> <http://data.lirmm.fr/ontologies/oan> .
+<https://w3id.org/squap/ProcessMaturity/ProblemResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/squap/ProcessMaturity> <https://w3id.org/squap/> .
+<https://w3id.org/squap/ProcessMaturity/ProblemResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/squap/> .
+<https://w3id.org/squap/ProcessMaturity/ProblemResolution> <https://w3id.org/squap/specializes> <https://w3id.org/squap/ProcessMaturity/Supporting> <https://w3id.org/squap/> .
+<https://w3id.org/squap/ProcessMaturity/ProblemResolution> <http://www.w3.org/2000/01/rdf-schema#label> "Problem resolution" <https://w3id.org/squap/> .
+<https://w3id.org/squap/ProcessMaturity/ProblemResolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <https://w3id.org/squap/> .
+<https://w3id.org/squap/ProcessMaturity/ProblemResolution> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/squap/ProcessMaturity/Supporting> <https://w3id.org/squap/> .
+<http://caressesrobot.org/ontology#HavingHealthProblems> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://caressesrobot.org/ontology#PhysicalAndMentalCondition> <http://caressesrobot.org/ontology> .
+<http://caressesrobot.org/ontology#HavingHealthProblems> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://caressesrobot.org/ontology> .
+<http://caressesrobot.org/ontology#HavingHealthProblems> <http://www.w3.org/2000/01/rdf-schema#comment> "The condition of having health problems can be related to medicines taken by the user"@en <http://caressesrobot.org/ontology> .
+<http://caressesrobot.org/ontology#HavingHealthProblems> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B480d531583bb8659e7a300abe8b7c08c <http://caressesrobot.org/ontology> .
+<http://caressesrobot.org/ontology#HavingHealthProblems> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable"@en <http://caressesrobot.org/ontology> .
+<http://caressesrobot.org/ontology#HavingHealthProblems> <http://www.w3.org/2000/01/rdf-schema#label> "HavingHealthProblems"@en <http://caressesrobot.org/ontology> .
+<http://caressesrobot.org/ontology#HavingHealthProblems> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://caressesrobot.org/ontology> <http://caressesrobot.org/ontology> .
+<https://w3id.org/skgo/modsci#AutomataTheory> <http://www.w3.org/2000/01/rdf-schema#label> "Automata Theory" <https://w3id.org/skgo/modsci#> .
+<https://w3id.org/skgo/modsci#AutomataTheory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/skgo/modsci#> .
+<https://w3id.org/skgo/modsci#AutomataTheory> <http://www.w3.org/2000/01/rdf-schema#comment> "Automata theory is the study of abstract machines and automata, as well as the computational problems that can be solved using them." <https://w3id.org/skgo/modsci#> .
+<https://w3id.org/skgo/modsci#AutomataTheory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/skgo/modsci#TheoryOfComputation> <https://w3id.org/skgo/modsci#> .
+<https://w3id.org/skgo/modsci#ArtificialIntelligence> <http://www.w3.org/2000/01/rdf-schema#label> "Artificial Intelligence" <https://w3id.org/skgo/modsci#> .
+<https://w3id.org/skgo/modsci#ArtificialIntelligence> <http://www.w3.org/2000/01/rdf-schema#comment> "In computer science, artificial intelligence (AI), sometimes called machine intelligence, is intelligence demonstrated by machines, in contrast to the natural intelligence displayed by humans. Colloquially, the term \"artificial intelligence\" is often used to describe machines (or computers) that mimic \"cognitive\" functions that humans associate with the human mind, such as \"learning\" and \"problem solving\"." <https://w3id.org/skgo/modsci#> .
+<https://w3id.org/skgo/modsci#ArtificialIntelligence> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/skgo/modsci#InterdisciplinaryStudies> <https://w3id.org/skgo/modsci#> .
+<https://w3id.org/skgo/modsci#ArtificialIntelligence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/skgo/modsci#> .
+<https://w3id.org/skgo/modsci#ComputerConcurrency> <http://www.w3.org/2000/01/rdf-schema#label> "Computer Concurrency" <https://w3id.org/skgo/modsci#> .
+<https://w3id.org/skgo/modsci#ComputerConcurrency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/skgo/modsci#DistributedSystems> <https://w3id.org/skgo/modsci#> .
+<https://w3id.org/skgo/modsci#ComputerConcurrency> <http://www.w3.org/2000/01/rdf-schema#comment> "In computer science, concurrency is the ability of different parts or units of a program, algorithm, or problem to be executed out-of-order or in partial order, without affecting the final outcome. This allows for parallel execution of the concurrent units, which can significantly improve overall speed of the execution in multi-processor and multi-core systems." <https://w3id.org/skgo/modsci#> .
+<https://w3id.org/skgo/modsci#ComputerConcurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/skgo/modsci#> .

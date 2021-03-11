@@ -1,0 +1,639 @@
+<http://purl.org/procurement/public-contracts#onBehalfOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/procurement/public-contracts#> <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://purl.org/procurement/public-contracts#onBehalfOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://purl.org/procurement/public-contracts#onBehalfOf> <http://www.w3.org/2000/01/rdf-schema#label> "On behalf of"@en <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://purl.org/procurement/public-contracts#onBehalfOf> <http://www.w3.org/2000/01/rdf-schema#label> "En nombre de"@es <http://contsem.unizar.es/def/sector-publico/pproc> .
+<http://data.semanticweb.org/ns/swc/ontology#01_introduction> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t\t\t<p>\n\t\t\t\tThe Semantic Web Conference ontology (SWC) is an ontology for describing academic conferences. \n\t\t\t\tIt was initially designed to support the European Semantic Web Conference,\n\t\t\t\tESWC2007, and later extended for both the following conferences in the ESWC series,\n\t\t\t\tas well as in the ISWC series.\n\t\t\t\tHistorically, the SWC ontology also draws heavily on ontologies developed for\n\t\t\t\tESWC2006 and ISWC2006.\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t\tSWC is mainly a convention of how to use classes and properties from other ontologies, most prominently \n\t\t\t\t<a href=\"http://xmlns.com/foaf/0.1\">FOAF</a> (for people) and <a href=\"http://ontoware.org/projects/swrc/\">SWRC</a> \n\t\t\t\t(their BibTeX elements, for the papers). We are also throwing in some <a href=\"http://sioc-project.org/\">SIOC</a>, \n\t\t\t\t<a href=\"http://dublincore.org/documents/dc-rdf/index.shtml\">Dublin Core</a> and \n\t\t\t\t<a href=\"http://www.w3.org/TR/rdfcal/\">iCal/RDF Calendar</a>. Our own \n\t\t\t\t<a href=\"http://data.semanticweb.org/ns/swc/ontology\">swc namespace</a> provides the glue for all this, as well as \n\t\t\t\tspecialised classes for things that have to do with conferences.\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t\tThis version of SWC has been slimmed down significantly (hence the revision name). A total of 59 classes and 19 properties have been deprecated (deprecated terms can be found at the bottom of this document). This was mostly done with the intention to remove the countless sub-classes of generic classes such as <a href=\"#Chair\">Chair</a> or <a href=\"#SessionEvent\">SessionEvent</a>, which were deemed to be too specific for a general-purpose conference ontology such as SWC. Elsewhere, classes and properties which had never been used and seemed to fall under the heading of \"over-engineering\" were removed. Finally, all CfP related terms were removed. Instead, we suggest to use a dedicated ontology such as the <a href=\"http://sw.deri.org/2005/08/conf/cfp\">CfP ontology</a>.\n\t\t\t</p>\n\t\t\t\n\t\t" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://data.semanticweb.org/ns/swc/ontology#01_introduction> <http://www.w3.org/2000/01/rdf-schema#label> "Introduction" <http://data.semanticweb.org/ns/swc/ontology> .
+<http://dbpedia.org/ontology/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "is part of"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "fait partie de"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "es parte de"@es <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/isPartOf> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.wikidata.org/entity/P361> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "ist ein Teil von"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/isPartOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isPartOf> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "jest częścią"@pl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/isPartOf> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:isPartOf> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/heritageRegister> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:heritageRegister> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/heritageRegister> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Place> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/heritageRegister> <http://www.w3.org/2000/01/rdf-schema#comment> "inscrit à un inventaires dédiés à la conservation du patrimoine, naturel ou culturel, existants dans le monde."@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/heritageRegister> <http://www.w3.org/2000/01/rdf-schema#label> "heritage register"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/heritageRegister> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/heritageRegister> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isMemberOf> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/heritageRegister> <http://www.w3.org/2000/01/rdf-schema#label> "inventaire du patrimoine"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/heritageRegister> <http://www.w3.org/2000/01/rdf-schema#comment> "registered in a heritage register : inventory of cultural properties, natural and man-made, tangible and intangible, movable and immovable, that are deemed to be of sufficient heritage value to be separately identified and recorded."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/heritageRegister> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeNationalMonument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeNationalMonument> <http://www.w3.org/2000/01/rdf-schema#comment> "Code assigned to (Dutch) monuments at the national level, deemed to be of national value"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeNationalMonument> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeNationalMonument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeNationalMonument> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://dbpedia.org/ontology/code> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeNationalMonument> <http://www.w3.org/2000/01/rdf-schema#label> "monumentcode rijksmonumenten"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeNationalMonument> <http://www.w3.org/2000/01/rdf-schema#comment> "Code toegewezen aan (Nederlandse) monumenten, vallend onder bescherming op rijksniveau"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeNationalMonument> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Place> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeNationalMonument> <http://www.w3.org/2000/01/rdf-schema#label> "monument code (national)"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeNationalMonument> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:codeNationalMonument> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/NobleFamily> <http://www.w3.org/2000/01/rdf-schema#label> "Noble family"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/NobleFamily> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q13417114> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/NobleFamily> <http://www.w3.org/2000/01/rdf-schema#label> "adelijk geslacht"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/NobleFamily> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Family> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/NobleFamily> <http://www.w3.org/2000/01/rdf-schema#label> "Adelsfamilie"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/NobleFamily> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/NobleFamily> <http://www.w3.org/2000/01/rdf-schema#comment> "Family deemed to be of noble descent"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/NobleFamily> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:NobleFamily> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participatingIn> <http://www.w3.org/2000/01/rdf-schema#label> "neemt deel aan"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participatingIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participatingIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/SocietalEvent> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participatingIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participatingIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#sameSettingAs> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participatingIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/MemberResistanceMovement> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participatingIn> <http://www.w3.org/2000/01/rdf-schema#label> "nimmt Teil an"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participatingIn> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:participatingIn> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participatingIn> <http://www.w3.org/2000/01/rdf-schema#label> "participates/participated in"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participant> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Event> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participant> <http://www.w3.org/2000/01/rdf-schema#label> "Teilnehmer"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participant> <http://www.w3.org/2000/01/rdf-schema#label> "deelnemer"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participant> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:participant> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participant> <http://www.w3.org/2000/01/rdf-schema#label> "participant"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participant> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/participant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SubMunicipality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SubMunicipality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/GovernmentalAdministrativeRegion> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SubMunicipality> <http://www.w3.org/2000/01/rdf-schema#comment> "An administrative body governing a territorial unity on the lowest level, administering part of a municipality"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SubMunicipality> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:SubMunicipality> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SubMunicipality> <http://www.w3.org/2000/01/rdf-schema#label> "deelgemeente"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SubMunicipality> <http://www.w3.org/2000/01/rdf-schema#label> "borough"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SubMunicipality> <http://www.w3.org/2000/01/rdf-schema#label> "Teilgemeinde"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/SubMunicipality> <http://www.w3.org/2000/01/rdf-schema#label> "parroquia"@gl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMunicipalMonument> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Place> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMunicipalMonument> <http://www.w3.org/2000/01/rdf-schema#comment> "Code assigned to (Dutch) monuments at the municipal level, deemed to be of local value"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMunicipalMonument> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://dbpedia.org/ontology/code> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMunicipalMonument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMunicipalMonument> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMunicipalMonument> <http://www.w3.org/2000/01/rdf-schema#comment> "Code toegewezen aan monumenten die op gemeenteniveau onder bescherming geplaatst zijn"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMunicipalMonument> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMunicipalMonument> <http://www.w3.org/2000/01/rdf-schema#label> "monumentcode gemeentelijke monumenten"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMunicipalMonument> <http://www.w3.org/2000/01/rdf-schema#label> "monument code (municipal)"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMunicipalMonument> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:codeMunicipalMonument> <http://dbpedia.org/ontology/> .
+<http://dev.poderopedia.com/vocab/subsidiaryCompanyOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between companies where one is the subsidiary of the second"@en <http://dev.poderopedia.com/vocab/schema> .
+<http://dev.poderopedia.com/vocab/subsidiaryCompanyOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dev.poderopedia.com/vocab/Company> <http://dev.poderopedia.com/vocab/schema> .
+<http://dev.poderopedia.com/vocab/subsidiaryCompanyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dev.poderopedia.com/vocab/schema> .
+<http://dev.poderopedia.com/vocab/subsidiaryCompanyOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre empresas donde la primera es la filial de la segunda"@es <http://dev.poderopedia.com/vocab/schema> .
+<http://dev.poderopedia.com/vocab/subsidiaryCompanyOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://dev.poderopedia.com/vocab/Company> <http://dev.poderopedia.com/vocab/schema> .
+<http://dev.poderopedia.com/vocab/subsidiaryCompanyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dev.poderopedia.com/vocab/schema> .
+<http://dev.poderopedia.com/vocab/subsidiaryCompanyOf> <http://www.w3.org/2000/01/rdf-schema#label> "Empresa filial de"@es <http://dev.poderopedia.com/vocab/schema> .
+<http://dev.poderopedia.com/vocab/subsidiaryCompanyOf> <http://www.w3.org/2000/01/rdf-schema#label> "Subsidiary company of"@en <http://dev.poderopedia.com/vocab/schema> .
+<http://elite.polito.it/ontologies/dogont.owl#DeepFreezer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc37290e8492e32e038b10d7cd6fbd48e <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#DeepFreezer> <http://www.w3.org/2002/07/owl#disjointWith> <http://elite.polito.it/ontologies/dogont.owl#Oven> <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#DeepFreezer> <http://www.w3.org/2002/07/owl#disjointWith> <http://elite.polito.it/ontologies/dogont.owl#WashingMachine> <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#DeepFreezer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://elite.polito.it/ontologies/dogont.owl#WhiteGoods> <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#DeepFreezer> <http://www.w3.org/2002/07/owl#disjointWith> <http://elite.polito.it/ontologies/dogont.owl#Dishwasher> <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#DeepFreezer> <http://www.w3.org/2002/07/owl#disjointWith> <http://elite.polito.it/ontologies/dogont.owl#Fridge> <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#DeepFreezer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B457337555df466ff023354e04d62669c <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#DeepFreezer> <http://www.w3.org/2002/07/owl#disjointWith> <http://elite.polito.it/ontologies/dogont.owl#Stove> <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#DeepFreezer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#DeepFreezer> <http://www.w3.org/2000/01/rdf-schema#comment> "Electric refrigerator in which food is frozen and stored for long periods of time" <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#DeepFreezer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbe08df10c303abf8a77f3c1aa521bfa2 <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#DeepFreezer> <http://www.w3.org/2000/01/rdf-schema#label> "DeepFreezer" <http://elite.polito.it/ontologies/dogont.owl> .
+<http://d-nb.info/standards/elementset/agrelon#isChiefOf> <http://d-nb.info/standards/elementset/agrelon#correspondsToInverse> <http://d-nb.info/standards/elementset/agrelon#HasIsChief> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChiefOf> <http://www.w3.org/2000/01/rdf-schema#label> "es jefe de"@es <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChiefOf> <http://www.w3.org/2000/01/rdf-schema#label> "is chief of"@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChiefOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChiefOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://d-nb.info/standards/elementset/agrelon#hasAssociate> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChiefOf> <http://www.w3.org/2000/01/rdf-schema#label> "ist Chef von"@de <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChiefOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://d-nb.info/standards/elementset/agrelon#> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChiefOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChiefOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A person (subject) ist chief of a group (object)."@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChiefOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChiefOf> <http://www.w3.org/2000/01/rdf-schema#label> "è capo di"@it <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPhysicianOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://d-nb.info/standards/elementset/agrelon#> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPhysicianOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://d-nb.info/standards/elementset/agrelon#hasPhysician> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPhysicianOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPhysicianOf> <http://d-nb.info/standards/elementset/agrelon#correspondsTo> <http://d-nb.info/standards/elementset/agrelon#IsHasPhysician> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPhysicianOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPhysicianOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://d-nb.info/standards/elementset/agrelon#hasVitalLethalContact> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPhysicianOf> <http://www.w3.org/2000/01/rdf-schema#label> "ist Arzt von"@de <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPhysicianOf> <http://www.w3.org/2000/01/rdf-schema#label> "is physician of"@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPhysicianOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A person or corporate body (subject) is physician of a person or corporate body (object)."@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPhysicianOf> <http://www.w3.org/2000/01/rdf-schema#label> "es médico de"@es <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPhysicianOf> <http://www.w3.org/2000/01/rdf-schema#label> "è medico di"@it <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPhysicianOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isFounderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isFounderOf> <http://www.w3.org/2000/01/rdf-schema#label> "è fondatore o fondatrice di"@it <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isFounderOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://d-nb.info/standards/elementset/agrelon#> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isFounderOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A person (subject) ist founder of a group (object)."@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isFounderOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isFounderOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isFounderOf> <http://www.w3.org/2000/01/rdf-schema#label> "is founder of"@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isFounderOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://d-nb.info/standards/elementset/agrelon#hasAssociate> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isFounderOf> <http://www.w3.org/2000/01/rdf-schema#label> "es fundador(a) de"@es <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isFounderOf> <http://www.w3.org/2000/01/rdf-schema#label> "ist Gründer von"@de <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isFounderOf> <http://d-nb.info/standards/elementset/agrelon#correspondsToInverse> <http://d-nb.info/standards/elementset/agrelon#HasIsFounder> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMemberOf> <http://www.w3.org/2000/01/rdf-schema#label> "es miembro de"@es <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMemberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A person (subject) ist member of a group (object)."@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMemberOf> <http://d-nb.info/standards/elementset/agrelon#correspondsToInverse> <http://d-nb.info/standards/elementset/agrelon#HasIsMember> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMemberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMemberOf> <http://www.w3.org/2000/01/rdf-schema#label> "è membro di"@it <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMemberOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://d-nb.info/standards/elementset/agrelon#hasAssociate> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMemberOf> <http://www.w3.org/2000/01/rdf-schema#label> "ist Mitglied von"@de <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMemberOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMemberOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://d-nb.info/standards/elementset/agrelon#> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMemberOf> <http://www.w3.org/2000/01/rdf-schema#label> "is member of"@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMemberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPatronOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPatronOf> <http://d-nb.info/standards/elementset/agrelon#correspondsTo> <http://d-nb.info/standards/elementset/agrelon#IsHasPatron> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPatronOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A person or corporation (subject) sponsors/favours a person or corporation (object; e.g. an artist or group of artists)."@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPatronOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://d-nb.info/standards/elementset/agrelon#hasProfessionalContact> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPatronOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPatronOf> <http://www.w3.org/2000/01/rdf-schema#label> "ist Mäzen von"@de <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPatronOf> <http://www.w3.org/2000/01/rdf-schema#label> "es mecenas de"@es <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPatronOf> <http://www.w3.org/2000/01/rdf-schema#label> "is patron of"@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPatronOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://d-nb.info/standards/elementset/agrelon#> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPatronOf> <http://www.w3.org/2000/01/rdf-schema#label> "è mecenate di"@it <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isPatronOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChannelOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChannelOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://d-nb.info/standards/elementset/agrelon#> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChannelOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://d-nb.info/standards/elementset/agrelon#hasSpiritualContact> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChannelOf> <http://www.w3.org/2000/01/rdf-schema#label> "ist Medium von"@de <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChannelOf> <http://www.w3.org/2000/01/rdf-schema#label> "is channel of"@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChannelOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChannelOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A person or spiritual entity (subject) is a channel or medium of a person or spiritual entity (object), e.g. a dead person, spirit, angel etc. I.e. the subject receives messages from the object."@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChannelOf> <http://www.w3.org/2000/01/rdf-schema#label> "è sensitivo(a) di"@it <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChannelOf> <http://d-nb.info/standards/elementset/agrelon#correspondsToInverse> <http://d-nb.info/standards/elementset/agrelon#HasIsChannel> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChannelOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://d-nb.info/standards/elementset/agrelon#hasChannel> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChannelOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isChannelOf> <http://www.w3.org/2000/01/rdf-schema#label> "es médium de"@es <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMuseOf> <http://www.w3.org/2000/01/rdf-schema#label> "is muse of"@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMuseOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://d-nb.info/standards/elementset/agrelon#hasProfessionalContact> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMuseOf> <http://www.w3.org/2000/01/rdf-schema#label> "es musa de"@es <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMuseOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMuseOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://d-nb.info/standards/elementset/agrelon#> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMuseOf> <http://d-nb.info/standards/elementset/agrelon#correspondsToInverse> <http://d-nb.info/standards/elementset/agrelon#HasIsMuse> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMuseOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMuseOf> <http://www.w3.org/2000/01/rdf-schema#label> "ist Muse von"@de <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMuseOf> <http://www.w3.org/2000/01/rdf-schema#label> "è musa di"@it <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMuseOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#isMuseOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A person (subject) inspires a person or corporation (object)."@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://iflastandards.info/ns/fr/frad/P2021> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2021> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frad/C1002> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2021> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frad/> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2021> <http://metadataregistry.org/uri/profile/RegAp/name> "isCreatorFamilyOf"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2021> <http://www.w3.org/2000/01/rdf-schema#label> "is creator (family) of"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2021> <http://www.w3.org/2004/02/skos/core#definition> "Relates a family to a work of which it is responsible for the creation of the intellectual or artistic content."@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2021> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2021> <http://www.w3.org/2000/01/rdf-schema#label> "es creadora (familia) de"@es <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2018> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2018> <http://www.w3.org/2000/01/rdf-schema#label> "is derivative of"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2018> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2018> <http://metadataregistry.org/uri/profile/RegAp/name> "isDerivativeOf"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2018> <http://www.w3.org/2000/01/rdf-schema#label> "es derivativa de"@es <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2018> <http://www.w3.org/2004/02/skos/core#scopeNote> "Includes relationships between an original work and a broad range of modifications from the original, including variations or versions of that work, such as editions, revisions, translations, summaries, abstracts, and digests. Includes new works that are adaptations or modifications that become new works but are based on an earlier work (improvisations, etc.); new works that are changes of genre (transformations, dramatizations, novelizations, etc.); and, new works based on the style or thematic content of other works (free translations, paraphrases, imitations, parodies, etc.)."@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2018> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frad/> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2018> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frad/P2017> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2018> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2018> <http://www.w3.org/2004/02/skos/core#definition> "Relates a work to another work of which it is an adaptation or modification."@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2025> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frad/> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2025> <http://www.w3.org/2000/01/rdf-schema#label> "es productora (familia) de"@es <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2025> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frad/C1002> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2025> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1003> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2025> <http://www.w3.org/2004/02/skos/core#definition> "Relates a family to a manifestation of which it is responsible for publishing, distributing, fabricating or manufacturing."@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2025> <http://metadataregistry.org/uri/profile/RegAp/name> "isProducerFamilyOf"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2025> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2025> <http://www.w3.org/2000/01/rdf-schema#label> "is producer (family) of"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2025> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4012> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frad/> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4012> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frad/C1002> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4012> <http://www.w3.org/2000/01/rdf-schema#label> "es propietario de"@es <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4012> <http://metadataregistry.org/uri/profile/RegAp/name> "isOwnerOf"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4012> <http://www.w3.org/2004/02/skos/core#definition> "Related a family to a corporate body which the family owns."@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4012> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4012> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frad/C1003> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4012> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frad/P4013> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4012> <http://www.w3.org/2000/01/rdf-schema#label> "is owner of"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4017> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frad/> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4017> <http://www.w3.org/2004/02/skos/core#definition> "Relates a corporate body to another corporate body of which it is a successor."@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4017> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frad/P4016> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4017> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frad/C1003> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4017> <http://www.w3.org/2000/01/rdf-schema#label> "is successor of"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4017> <http://www.w3.org/2000/01/rdf-schema#label> "es sucesora de"@es <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4017> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4017> <http://metadataregistry.org/uri/profile/RegAp/name> "isSuccessorOf"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4017> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frad/C1003> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4016> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frad/> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4016> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frad/C1003> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4016> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frad/P4017> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4016> <http://metadataregistry.org/uri/profile/RegAp/name> "isPredecessorOf"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4016> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4016> <http://www.w3.org/2000/01/rdf-schema#label> "es predecesora de"@es <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4016> <http://www.w3.org/2000/01/rdf-schema#label> "is predecessor of"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4016> <http://www.w3.org/2004/02/skos/core#definition> "Relates a corporate body to another corporate body of which it is a predecessor."@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4016> <http://www.w3.org/2004/02/skos/core#scopeNote> "Includes splits, mergers, subsequent meetings or conferences."@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4016> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frad/1003> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2023> <http://www.w3.org/2000/01/rdf-schema#label> "is owner (family) of"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2023> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frad/> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2023> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frad/C1002> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2023> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1004> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2023> <http://metadataregistry.org/uri/profile/RegAp/name> "isOwnerFamilyOf"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2023> <http://www.w3.org/2004/02/skos/core#definition> "Relates a family to an item of which it is the owner or custodian."@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2023> <http://www.w3.org/2000/01/rdf-schema#label> "es propietaria (familia) de"@es <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2023> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2023> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4010> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frad/> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4010> <http://www.w3.org/2000/01/rdf-schema#label> "is founder of"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4010> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frad/C1002> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4010> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frad/P4011> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4010> <http://www.w3.org/2004/02/skos/core#definition> "Relates a family to a corporate body which the family created."@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4010> <http://metadataregistry.org/uri/profile/RegAp/name> "isFounderOf"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4010> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4010> <http://www.w3.org/2000/01/rdf-schema#label> "es fundador de"@es <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4010> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frad/C1003> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4030> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frad/C1014> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4030> <http://metadataregistry.org/uri/profile/RegAp/name> "isConventionalNameOf"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4030> <http://www.w3.org/2004/02/skos/core#definition> "Relates a conventional name by which a work is known to a name of the same work."@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4030> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frad/> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4030> <http://www.w3.org/2000/01/rdf-schema#label> "es nombre convencional de"@es <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4030> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frad/C1014> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4030> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4030> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4030> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frad/P4029> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4030> <http://www.w3.org/2000/01/rdf-schema#label> "is conventional name of"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4015> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frad/P4014> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4015> <http://www.w3.org/2004/02/skos/core#definition> "Relates a corporate body to another corporate body to which it is subordinate."@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4015> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frad/> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4015> <http://www.w3.org/2000/01/rdf-schema#label> "es subordinado de"@es <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4015> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frad/C1003> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4015> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4015> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4015> <http://www.w3.org/2000/01/rdf-schema#label> "is subordinate of"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4015> <http://metadataregistry.org/uri/profile/RegAp/name> "isSubordinateOf"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P4015> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frad/C1003> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2027> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2027> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2027> <http://metadataregistry.org/uri/profile/RegAp/name> "isRealizerFamilyOf"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2027> <http://www.w3.org/2004/02/skos/core#definition> "Relates a family to an expression of which it is responsible for the specifics of the intellectual or artistic realization or execution."@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2027> <http://www.w3.org/2000/01/rdf-schema#label> "es realizadora (familia) de"@es <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2027> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frad/C1002> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2027> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1002> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2027> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frad/> <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frad/P2027> <http://www.w3.org/2000/01/rdf-schema#label> "is realizer (family) of"@en <http://iflastandards.info/ns/fr/frad/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2030> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2030> <http://www.w3.org/2000/01/rdf-schema#label> "is subject (place) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2030> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2030> <http://www.w3.org/2004/02/skos/core#definition> "Relates a place to a work of which it is the subject."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2030> <http://www.w3.org/2000/01/rdf-schema#label> "es materia (lugar) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2030> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1010> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2030> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2029> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2030> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2030> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2030> <http://metadataregistry.org/uri/profile/RegAp/name> "isSubjectPlaceOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2038> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2038> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2037> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2038> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2038> <http://www.w3.org/2000/01/rdf-schema#label> "es materia (expresiÃ³n) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2038> <http://metadataregistry.org/uri/profile/RegAp/name> "isSubjectExpressionOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2038> <http://www.w3.org/2004/02/skos/core#definition> "Relates an expression to a work of which it is the subject."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2038> <http://www.w3.org/2000/01/rdf-schema#label> "is subject (expression) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2038> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2038> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2038> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1002> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2088> <http://metadataregistry.org/uri/profile/RegAp/name> "isAReconfigurationOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2088> <http://www.w3.org/2004/02/skos/core#definition> "Relates an item to another item to which it is the result of a change. The reconfiguration item may be the result of changes to more than one prior item."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2088> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2088> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2088> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1004> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2088> <http://www.w3.org/2000/01/rdf-schema#label> "is a reconfiguration of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2088> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2087> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2088> <http://www.w3.org/2000/01/rdf-schema#label> "es reconfiguraciÃ³n de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2088> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1004> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2088> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2088> <http://www.w3.org/2004/02/skos/core#scopeNote> "Most commonly, an item of one manifestation is bound with an item of a different manifestation to make a new item."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2004> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2004> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to an expression that is embodied in the manifestation."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2004> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1002> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2004> <http://www.w3.org/2000/01/rdf-schema#label> "es materializaciÃ³n de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2004> <http://metadataregistry.org/uri/profile/RegAp/name> "isEmbodimentOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2004> <http://www.w3.org/2000/01/rdf-schema#label> "is embodiment of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2004> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2004> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1003> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2004> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2004> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2003> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2012> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2012> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2012> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2011> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2012> <http://www.w3.org/2000/01/rdf-schema#label> "es realizador (entidad corporativa) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2012> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1002> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2012> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1006> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2012> <http://www.w3.org/2000/01/rdf-schema#label> "is realizer (corporate body) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2012> <http://metadataregistry.org/uri/profile/RegAp/name> "isRealizerCorporateBodyOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2012> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2012> <http://www.w3.org/2004/02/skos/core#definition> "Relates a corporate body to an expression of which it is responsible for the specifics of the intellectual or artistic realization or execution."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2062> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2062> <http://metadataregistry.org/uri/profile/RegAp/name> "isARevisionExpressionOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2062> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2062> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2061> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2062> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1002> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2062> <http://www.w3.org/2000/01/rdf-schema#label> "is a revision (expression) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2062> <http://www.w3.org/2004/02/skos/core#definition> "Relates an expression to a prior expression of the same work of which it represents a revision, in which the intent is to alter or update the content of the prior expression, but without changing the content so much that it becomes a new work."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2062> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1002> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2062> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2062> <http://www.w3.org/2000/01/rdf-schema#label> "es revisiÃ³n (expresiÃ³n) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2020> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2020> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2019> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2020> <http://www.w3.org/2004/02/skos/core#definition> "Relates a corporate body to an item of which it is the owner or custodian."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2020> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1004> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2020> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1006> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2020> <http://www.w3.org/2000/01/rdf-schema#label> "is owner (corporate body) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2020> <http://www.w3.org/2000/01/rdf-schema#label> "es propietario (entidad corporativa) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2020> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2020> <http://metadataregistry.org/uri/profile/RegAp/name> "isOwnerCorporateBodyOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2028> <http://www.w3.org/2000/01/rdf-schema#label> "es materia (acontecimiento) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2028> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2028> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2028> <http://www.w3.org/2000/01/rdf-schema#label> "is subject (event) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2028> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2027> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2028> <http://metadataregistry.org/uri/profile/RegAp/name> "isSubjectEventOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2028> <http://www.w3.org/2004/02/skos/core#definition> "Relates an event to a work of which it is the subject."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2028> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1009> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2028> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2028> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P2044> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P2045> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P2057> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://metadataregistry.org/uri/profile/RegAp/name> "isSubjectWorkOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P2046> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P2035> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P2047> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P2058> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P2052> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P2053> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P2043> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P2054> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P2098> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2000/01/rdf-schema#label> "es materia (obra) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P2050> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P3007> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2000/01/rdf-schema#label> "is subject (work) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P3005> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P3006> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P3003> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2004/02/skos/core#definition> "Relates a prior work to another work of which it is the subject."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P3004> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2035> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P3001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P3002> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2036> <http://www.w3.org/2002/07/owl#propertyDisjointWith> <http://iflastandards.info/ns/fr/frbr/frbrer/P2049> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2002> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1002> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2002> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2002> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2002> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2002> <http://www.w3.org/2004/02/skos/core#definition> "Relates an expression to the work that is realized through the expression."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2002> <http://metadataregistry.org/uri/profile/RegAp/name> "isRealizationOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2002> <http://www.w3.org/2000/01/rdf-schema#label> "es realizaciÃ³n de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2002> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2002> <http://www.w3.org/2000/01/rdf-schema#label> "is realization of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2002> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2010> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2010> <http://www.w3.org/2004/02/skos/core#definition> "Relates a person to a work of which they are responsible for the creation of the intellectual or artistic content."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2010> <http://www.w3.org/2000/01/rdf-schema#label> "is creator (person) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2010> <http://metadataregistry.org/uri/profile/RegAp/name> "isCreatorPersonOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2010> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2009> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2010> <http://www.w3.org/2000/01/rdf-schema#label> "es creador (persona) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2010> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1005> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2010> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2010> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2060> <http://www.w3.org/2000/01/rdf-schema#label> "es compendio (expresiÃ³n) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2060> <http://www.w3.org/2000/01/rdf-schema#label> "is an abridgement (expression) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2060> <http://www.w3.org/2004/02/skos/core#definition> "Relates an expression to a prior expression of the same work of which it represents an abridgement, in which some content of the prior expression is removed, but the result does not alter the content to the extent that it becomes a new work."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2060> <http://metadataregistry.org/uri/profile/RegAp/name> "isAnAbridgementExpressionOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2060> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1002> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2060> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2060> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2060> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2060> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2059> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2060> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1002> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2018> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1005> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2018> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2018> <http://www.w3.org/2000/01/rdf-schema#label> "is producer (person) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2018> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1003> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2018> <http://metadataregistry.org/uri/profile/RegAp/name> "isProducerPersonOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2018> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2017> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2018> <http://www.w3.org/2000/01/rdf-schema#label> "es productor (persona) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2018> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2018> <http://www.w3.org/2004/02/skos/core#definition> "Relates a person to a manifestation of which they are responsible for publishing, distributing, fabricating or manufacturing."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2026> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2026> <http://www.w3.org/2000/01/rdf-schema#label> "is subject (object) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2026> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2026> <http://www.w3.org/2000/01/rdf-schema#label> "es materia (objeto) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2026> <http://www.w3.org/2004/02/skos/core#definition> "Relates an object to a work of which it is the subject."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2026> <http://metadataregistry.org/uri/profile/RegAp/name> "isSubjectObjectOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2026> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1008> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2026> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2026> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2026> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2025> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2034> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2034> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2034> <http://www.w3.org/2000/01/rdf-schema#label> "es materia (persona) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2034> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2033> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2034> <http://www.w3.org/2000/01/rdf-schema#label> "is subject (person) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2034> <http://metadataregistry.org/uri/profile/RegAp/name> "isSubjectPersonOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2034> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2034> <http://www.w3.org/2004/02/skos/core#definition> "Relates a person to a work of which it is the subject."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2034> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2034> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1005> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2042> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2042> <http://www.w3.org/2000/01/rdf-schema#label> "es materia (ejemplar) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2042> <http://metadataregistry.org/uri/profile/RegAp/name> "isSubjectItemOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2042> <http://www.w3.org/2000/01/rdf-schema#label> "is subject (item) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2042> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2042> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2042> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1004> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2042> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2041> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2042> <http://www.w3.org/2004/02/skos/core#definition> "Relates an item to a work of which it is the subject."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2008> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2008> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2008> <http://www.w3.org/2000/01/rdf-schema#label> "es creador (entidad corporativa) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2008> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2007> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2008> <http://www.w3.org/2004/02/skos/core#definition> "Relates a corporate body to a work of which it is responsible for the creation of the intellectual or artistic content."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2008> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1006> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2008> <http://www.w3.org/2000/01/rdf-schema#label> "is creator (corporate body) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2008> <http://metadataregistry.org/uri/profile/RegAp/name> "isCreatorCorporateBodyOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2008> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2016> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2016> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2015> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2016> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1003> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2016> <http://www.w3.org/2000/01/rdf-schema#label> "is producer (corporate body) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2016> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1006> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2016> <http://metadataregistry.org/uri/profile/RegAp/name> "isProducerCorporateBodyOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2016> <http://www.w3.org/2000/01/rdf-schema#label> "es productor (entidad corporativa) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2016> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2016> <http://www.w3.org/2004/02/skos/core#definition> "Relates a corporate body to a manifestation of which it is responsible for publishing, distributing, fabricating or manufacturing."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2066> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1002> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2066> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2066> <http://metadataregistry.org/uri/profile/RegAp/name> "isAnArrangementExpressionOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2066> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2066> <http://www.w3.org/2000/01/rdf-schema#label> "es arreglo (expresiÃ³n) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2066> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2065> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2066> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1002> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2066> <http://www.w3.org/2004/02/skos/core#definition> "Relates an expression to a prior expression of which it represents an arrangement of the same musical composition work."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2066> <http://www.w3.org/2000/01/rdf-schema#label> "is an arrangement (expression) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2066> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2024> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2024> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2024> <http://www.w3.org/2000/01/rdf-schema#label> "is subject (concept) of"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2024> <http://www.w3.org/2002/07/owl#inverseOf> <http://iflastandards.info/ns/fr/frbr/frbrer/P2023> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2024> <http://www.w3.org/2000/01/rdf-schema#label> "es materia (concepto) de"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2024> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1007> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2024> <http://metadataregistry.org/uri/profile/RegAp/name> "isSubjectConceptOf"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2024> <http://www.w3.org/2004/02/skos/core#definition> "Relates a concept to a work of which it is the subject."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2024> <http://www.w3.org/2000/01/rdf-schema#range> <http://iflastandards.info/ns/fr/frbr/frbrer/C1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P2024> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/dee.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:Bdeed .
+_:Bdeed <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdeed <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/deed.nt> .
+_:Bdeed <https://w3id.org/tree#value> "deed" .
+_:Bdeed <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/deed.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:Bdeel .
+_:Bdeel <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdeel <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/deel.nt> .
+_:Bdeel <https://w3id.org/tree#value> "deel" .
+_:Bdeel <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/deel.nt> <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:Bdeem .
+_:Bdeem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdeem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/deem.nt> .
+_:Bdeem <https://w3id.org/tree#value> "deem" .
+_:Bdeem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/deem.nt> <https://w3id.org/tree#remainingItems> "14"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:Bdeen .
+_:Bdeen <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdeen <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/deen.nt> .
+_:Bdeen <https://w3id.org/tree#value> "deen" .
+_:Bdeen <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/deen.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:Bdeep .
+_:Bdeep <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdeep <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/deep.nt> .
+_:Bdeep <https://w3id.org/tree#value> "deep" .
+_:Bdeep <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/deep.nt> <https://w3id.org/tree#remainingItems> "23"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:Bdeer .
+_:Bdeer <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdeer <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/deer.nt> .
+_:Bdeer <https://w3id.org/tree#value> "deer" .
+_:Bdeer <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/deer.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:Bdees .
+_:Bdees <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdees <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/dees.nt> .
+_:Bdees <https://w3id.org/tree#value> "dees" .
+_:Bdees <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/dees.nt> <https://w3id.org/tree#remainingItems> "51"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:Bdeet .
+_:Bdeet <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdeet <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/deet.nt> .
+_:Bdeet <https://w3id.org/tree#value> "deet" .
+_:Bdeet <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/deet.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:Bdeex .
+_:Bdeex <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bdeex <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/deex.nt> .
+_:Bdeex <https://w3id.org/tree#value> "deex" .
+_:Bdeex <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/deex.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:BaX2Bdee .
+_:BaX2Bdee <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bdee <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+dee.nt> .
+_:BaX2Bdee <https://w3id.org/tree#value> "a" .
+_:BaX2Bdee <https://w3id.org/tree#value> "dee" .
+_:BaX2Bdee <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+dee.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:BcX2Bdee .
+_:BcX2Bdee <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Bdee <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+dee.nt> .
+_:BcX2Bdee <https://w3id.org/tree#value> "c" .
+_:BcX2Bdee <https://w3id.org/tree#value> "dee" .
+_:BcX2Bdee <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+dee.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:BdX2Bdee .
+_:BdX2Bdee <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2Bdee <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+dee.nt> .
+_:BdX2Bdee <https://w3id.org/tree#value> "d" .
+_:BdX2Bdee <https://w3id.org/tree#value> "dee" .
+_:BdX2Bdee <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+dee.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:BdeeX2Bg .
+_:BdeeX2Bg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdeeX2Bg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/dee+g.nt> .
+_:BdeeX2Bg <https://w3id.org/tree#value> "dee" .
+_:BdeeX2Bg <https://w3id.org/tree#value> "g" .
+_:BdeeX2Bg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/dee+g.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:BdeeX2Bl .
+_:BdeeX2Bl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdeeX2Bl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/dee+l.nt> .
+_:BdeeX2Bl <https://w3id.org/tree#value> "dee" .
+_:BdeeX2Bl <https://w3id.org/tree#value> "l" .
+_:BdeeX2Bl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/dee+l.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:BdeeX2Bo .
+_:BdeeX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdeeX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/dee+o.nt> .
+_:BdeeX2Bo <https://w3id.org/tree#value> "dee" .
+_:BdeeX2Bo <https://w3id.org/tree#value> "o" .
+_:BdeeX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/dee+o.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:BdeeX2Bp .
+_:BdeeX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdeeX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/dee+p.nt> .
+_:BdeeX2Bp <https://w3id.org/tree#value> "dee" .
+_:BdeeX2Bp <https://w3id.org/tree#value> "p" .
+_:BdeeX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/dee+p.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:BdeeX2Bs .
+_:BdeeX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdeeX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/dee+s.nt> .
+_:BdeeX2Bs <https://w3id.org/tree#value> "dee" .
+_:BdeeX2Bs <https://w3id.org/tree#value> "s" .
+_:BdeeX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/dee+s.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:BdeeX2Bt .
+_:BdeeX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdeeX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/dee+t.nt> .
+_:BdeeX2Bt <https://w3id.org/tree#value> "dee" .
+_:BdeeX2Bt <https://w3id.org/tree#value> "t" .
+_:BdeeX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/dee+t.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/dee.nt> <https://w3id.org/tree#relation> _:BdeeX2Bu .
+_:BdeeX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdeeX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/dee+u.nt> .
+_:BdeeX2Bu <https://w3id.org/tree#value> "dee" .
+_:BdeeX2Bu <https://w3id.org/tree#value> "u" .
+_:BdeeX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/dee+u.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

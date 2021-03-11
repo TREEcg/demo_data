@@ -1,0 +1,122 @@
+<http://www.w3.org/ns/mls#HyperParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#HyperParameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#InformationEntity> <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#HyperParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "Hyperparameter is a prior parameter of an implementation, i.e., a parameter which is set before its execution (e.g. C, the complexity parameter, in weka.SMO)." <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#HyperParameter> <http://purl.org/dc/terms/description> "Hyperparameter is a prior parameter of an implementation, i.e., a parameter which is set before its execution (e.g. C, the complexity parameter, in weka.SMO)." <http://www.w3.org/ns/mls> .
+<http://www.loa.istc.cnr.it/ontologies/DUL.owl#hasDataValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://www.loa.istc.cnr.it/ontologies/DUL.owl#hasDataValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://www.loa.istc.cnr.it/ontologies/DUL.owl#hasDataValue> <http://www.w3.org/2000/01/rdf-schema#label> "Has Data Value"@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://www.loa.istc.cnr.it/ontologies/DUL.owl#hasDataValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://www.loa.istc.cnr.it/ontologies/DUL.owl#hasDataValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/ssnx/ssn#ObservationValue> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://www.loa.istc.cnr.it/ontologies/DUL.owl#hasDataValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A datatype property that encodes values from a datatype for an Entity. \nThere are several ways to encode values in DOLCE (Ultralite):\n\n1) Directly assert an xsd:_ value to an Entity by using hasDataValue\n2) Assert a Region for an Entity by using hasRegion, and then assert an xsd:_ value to that Region, by using hasRegionDataValue\n3) Assert a Quality for an Entity by using hasQuality, then assert a Region for that Quality, and assert an xsd:_ value to that Region, by using hasRegionDataValue\n4) When the value is required, but not directly observed, assert a Parameter for an xsd:_ value by using hasParameterDataValue, and then associate the Parameter to an Entity by using isConstraintFor\n5) When the value is required, but not directly observed, you can also assert a Parameter for a Region by using parametrizes, and then assert an xsd:_ value to that Region, by using hasRegionDataValue\n\nThe five approaches obey different requirements. \nFor example, a simple value can be easily asserted by using pattern (1), but if one needs to assert an interval between two values, a Region should be introduced to materialize that interval, as pattern (2) suggests. \nFurthermore, if one needs to distinguish the individual Quality of a value, e.g. the particular nature of the density of a substance, pattern (3) can be used. \nPatterns (4) and (5) should be used instead when a constraint or a selection is modeled, independently from the actual observation of values in the real world." <http://purl.org/iot/ontology/fiesta-iot> .
+<http://www.w3.org/ns/shacl#optional> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#optional> <http://www.w3.org/2000/01/rdf-schema#label> "optional"@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#optional> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/shacl#Parameter> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#optional> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a parameter is optional."@en <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#optional> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/shacl#> <http://www.w3.org/ns/shacl#> .
+<http://www.w3.org/ns/shacl#optional> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/shacl#> .
+<https://data.nasa.gov/ontologies/atmonto/general#parameterValue> <http://www.w3.org/2000/01/rdf-schema#label> "parameter value" <https://data.nasa.gov/ontologies/atmonto/general#> .
+<https://data.nasa.gov/ontologies/atmonto/general#parameterValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The numeric value of a parameter." <https://data.nasa.gov/ontologies/atmonto/general#> .
+<https://data.nasa.gov/ontologies/atmonto/general#parameterValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://data.nasa.gov/ontologies/atmonto/general#> .
+<https://data.nasa.gov/ontologies/atmonto/general#parameterValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://data.nasa.gov/ontologies/atmonto/general#NumericParameter> <https://data.nasa.gov/ontologies/atmonto/general#> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> <http://www.w3.org/2000/01/rdf-schema#label> "has data value"@en <https://opendata.aragon.es/def/ei2a/ei2a.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://opendata.aragon.es/def/ei2a/ei2a.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> <http://www.w3.org/2000/01/rdf-schema#label> "ha valore"@it <https://opendata.aragon.es/def/ei2a/ei2a.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.semanticwater.com/WISDOM#hasValue> <https://opendata.aragon.es/def/ei2a/ei2a.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> <https://opendata.aragon.es/def/ei2a/ei2a.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasDataValue> <http://www.w3.org/2000/01/rdf-schema#comment> "A datatype property that encodes values from a datatype for an Entity. \nThere are several ways to encode values in DOLCE (Ultralite):\n\n1) Directly assert an xsd:_ value to an Entity by using hasDataValue\n2) Assert a Region for an Entity by using hasRegion, and then assert an xsd:_ value to that Region, by using hasRegionDataValue\n3) Assert a Quality for an Entity by using hasQuality, then assert a Region for that Quality, and assert an xsd:_ value to that Region, by using hasRegionDataValue\n4) When the value is required, but not directly observed, assert a Parameter for an xsd:_ value by using hasParameterDataValue, and then associate the Parameter to an Entity by using isConstraintFor\n5) When the value is required, but not directly observed, you can also assert a Parameter for a Region by using parametrizes, and then assert an xsd:_ value to that Region, by using hasRegionDataValue\n\nThe five approaches obey different requirements. \nFor example, a simple value can be easily asserted by using pattern (1), but if one needs to assert an interval between two values, a Region should be introduced to materialize that interval, as pattern (2) suggests. \nFurthermore, if one needs to distinguish the individual Quality of a value, e.g. the particular nature of the density of a substance, pattern (3) can be used. \nPatterns (4) and (5) should be used instead when a constraint or a selection is modeled, independently from the actual observation of values in the real world." <https://opendata.aragon.es/def/ei2a/ei2a.owl> .
+<https://w3id.org/squap/isParameterOf> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/squap/Parameter> <https://w3id.org/squap/> .
+<https://w3id.org/squap/isParameterOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a parameter and a metric." <https://w3id.org/squap/> .
+<https://w3id.org/squap/isParameterOf> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/squap/Metric> <https://w3id.org/squap/> .
+<https://w3id.org/squap/isParameterOf> <http://www.w3.org/2000/01/rdf-schema#label> "is parameter of" <https://w3id.org/squap/> .
+<https://w3id.org/squap/isParameterOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/squap/> .
+<https://w3id.org/squap/Parameter> <http://www.w3.org/2000/01/rdf-schema#comment> "A Concept that classifies something having a certain value, e.g. 'High' can be said of people taller than 185 cm.\nHowever, in order to formally represent this constraint, we need to add an anonymous type to a parameter instance, using a property that convey the semantics of the parameter, e.g.:\nHigh rdf:type Person and (some hasHeight (Height and (oneOf isTallerThan 185) and (oneOf hasUnitOfMeasure centimeter)))" <https://w3id.org/squap/> .
+<https://w3id.org/squap/Parameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/squap/> .
+<https://w3id.org/squap/Parameter> <http://www.w3.org/2000/01/rdf-schema#label> "Parameter" <https://w3id.org/squap/> .
+<https://w3id.org/squap/Parameter> <http://ontologydesignpatterns.org/opla/isNativeTo> <http://ontologydesignpatterns.org/cp/owl/parameterregion.owl> <https://w3id.org/squap/> .
+<https://w3id.org/squap/Parameter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/squap/Concept> <https://w3id.org/squap/> .
+<https://w3id.org/squap/hasParameter> <http://www.w3.org/2000/01/rdf-schema#label> "has parameter" <https://w3id.org/squap/> .
+<https://w3id.org/squap/hasParameter> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/squap/Metric> <https://w3id.org/squap/> .
+<https://w3id.org/squap/hasParameter> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/squap/Parameter> <https://w3id.org/squap/> .
+<https://w3id.org/squap/hasParameter> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/squap/isParameterOf> <https://w3id.org/squap/> .
+<https://w3id.org/squap/hasParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/squap/> .
+<https://w3id.org/squap/hasParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "The relation between a metric and a parameter." <https://w3id.org/squap/> .
+<https://w3id.org/nno/ontology#adagrad> <http://www.w3.org/2000/01/rdf-schema#label> "Adagrad Optimizer" <https://w3id.org/nno/ontology> .
+<https://w3id.org/nno/ontology#adagrad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/nno/ontology#Optimizer> <https://w3id.org/nno/ontology> .
+<https://w3id.org/nno/ontology#adagrad> <http://www.w3.org/2000/01/rdf-schema#comment> "Adagrad is an optimizer with parameter-specific learning rates, which are adapted relative to how frequently a parameter gets updated during training. The more updates a parameter receives, the smaller the learning rate." <https://w3id.org/nno/ontology> .
+<https://w3id.org/nno/ontology#adagrad> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <https://w3id.org/nno/ontology> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue> <http://www.w3.org/2000/01/rdf-schema#label> "max range value"@en <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Upper boundary of a parameter range description."@en <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#maxRangeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Lower boundary of a parameter range description."@en <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue> <http://www.w3.org/2000/01/rdf-schema#label> "min range value"@en <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
+<http://bimerr.iot.linkeddata.es/def/occupancy-profile#minRangeValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://bimerr.iot.linkeddata.es/def/occupancy-profile#> .
+<https://w3id.org/mdo/calculation/ComputationalMethodParameter> <http://www.w3.org/2000/01/rdf-schema#label> "Computational Method Parameter"@en <https://w3id.org/mdo/calculation/> .
+<https://w3id.org/mdo/calculation/ComputationalMethodParameter> <http://www.w3.org/2000/01/rdf-schema#comment> "A computational method parameter is a parameter used in a computational method."@en <https://w3id.org/mdo/calculation/> .
+<https://w3id.org/mdo/calculation/ComputationalMethodParameter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/mdo/calculation/> .
+<https://w3id.org/sbeo#ActivityImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivityImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B45c15b082b262f60db930c3794e201af <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivityImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bdadccf2dd7905fcc1be71c7dca30bca9 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivityImpact> <http://www.w3.org/2000/01/rdf-schema#label> "Activity Impact"@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivityImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sbeo#Parameter> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivityImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B501213024add41a373c7b8cab45c1826 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivityImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd17b0ad8c006546ba8cfd135ffed5a64 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivityImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be1fb7e65faadcc9194af341077d4d8bc <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivityImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "A parameter to express the impact of an activity on a specific person (or type of persons) in terms of any specific value or a type."@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivitySeverity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8c0dce9cd01c165524eaecf3ca0c336b <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivitySeverity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf635d833ff62848a5fc4ba15ea946514 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivitySeverity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7e2f28d6ecbe7bc4dc1f406f8a906f31 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivitySeverity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B17795481ea6fc694cf8c76e7cd3a15d2 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivitySeverity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sbeo#Parameter> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivitySeverity> <http://www.w3.org/2000/01/rdf-schema#comment> "A parameter to express the severity of an activity for a specific person (or type of persons) in terms of  potential severity levels."@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivitySeverity> <http://www.w3.org/2000/01/rdf-schema#label> "Activity Severity"@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivitySeverity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0bd107a6d3b2a47bbe606daf72804930 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#ActivitySeverity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAccessibility> <http://www.w3.org/2000/01/rdf-schema#label> "Person Accessibility"@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAccessibility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sbeo#Parameter> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAccessibility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbabc21e773963216a44caefcd50c2bd6 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAccessibility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc3fc4df603b55324d32813d2b1208ecf <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAccessibility> <http://www.w3.org/2000/01/rdf-schema#comment> "A parameter to express the accessibility of any space for a specific person (or type of persons) in terms of some value."@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAccessibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAccessibility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be5531975604a571d18a8ab9fb6174c31 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAccessibility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B49507af9bf29ee6b6a8be502d72c3862 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAccessibility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B202589741049bc78fab6f814575f92db <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventSeverity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventSeverity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9bf71092a8bc6273bb037cf129ab9cdd <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventSeverity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sbeo#Parameter> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventSeverity> <http://www.w3.org/2000/01/rdf-schema#label> "Event Severity"@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventSeverity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7a5a39c50352f840f437ed4836dd059c <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventSeverity> <http://www.w3.org/2000/01/rdf-schema#comment> "A parameter to express the severity of an event for a specific person (or type of persons) in terms of  potential severity levels."@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventSeverity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B046e8e152e74edb6df70cb148915e0c3 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventSeverity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bea81a175b4b0387be39dcce2f49cd088 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventSeverity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7a15122f7b575babe8113217d0a202d0 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8e52821a784000df5047892e54cd4d25 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventImpact> <http://www.w3.org/2000/01/rdf-schema#label> "Event Impact"@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B78c1524eb4343bf83243432f687a263b <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sbeo#Parameter> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventImpact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bdd9ab6700504f34e424f481d042ae0a5 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd6a22f36f387f470e9fb2d78c464b33f <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventImpact> <http://www.w3.org/2000/01/rdf-schema#comment> "A parameter to express the impact of an event on a specific person (or type of persons) in terms of any specific value or a type."@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#EventImpact> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B81e5ee119d2d54af67f8b03e00b25040 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#SpaceSafety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sbeo#Parameter> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#SpaceSafety> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#SpaceSafety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7741cddcfded8f4a19e7f30c9a837f95 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#SpaceSafety> <http://www.w3.org/2000/01/rdf-schema#comment> "A parameter to express the safety of any space for a specific person (or type of persons) in terms of some value."@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#SpaceSafety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd2d69b3e61d6cc8d2f776ed8db66e45c <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#SpaceSafety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bab49ec598fba2559db83ff951f8c9cfd <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#SpaceSafety> <http://www.w3.org/2000/01/rdf-schema#label> "Space Saftey"@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#SpaceSafety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2e5bf19da3716e813e575d75713ee035 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#SpaceSafety> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bba1f1698b466e7f6c44d7605a32ce9de <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAbility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbd764167d1a39568d2e26a6ccdb84e09 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAbility> <http://www.w3.org/2000/01/rdf-schema#comment> "A parameter to express the quality of an ability a specific person (or type of persons) own."@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAbility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba470a9a4730f6e2873b74d003e444d6b <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAbility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B386274ef01308ca420155c0ab933ded0 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAbility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb022ec97b1e5dca2b176e9b8a82bd630 <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAbility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B024f90f17ab168a0e0955d061ec3be6a <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAbility> <http://www.w3.org/2000/01/rdf-schema#label> "Person Ability"@en <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAbility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/sbeo> .
+<https://w3id.org/sbeo#PersonAbility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/sbeo#Parameter> <https://w3id.org/sbeo> .

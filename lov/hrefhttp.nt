@@ -1,0 +1,248 @@
+<http://schema.org/discountCurrency> <http://www.w3.org/2000/01/rdf-schema#comment> "The currency of the discount.<br/><br/>\n\nUse standard formats: <a href=\"http://en.wikipedia.org/wiki/ISO_4217\">ISO 4217 currency format</a> e.g. \"USD\"; <a href=\"https://en.wikipedia.org/wiki/List_of_cryptocurrencies\">Ticker symbol</a> for cryptocurrencies e.g. \"BTC\"; well known names for <a href=\"https://en.wikipedia.org/wiki/Local_exchange_trading_system\">Local Exchange Tradings Systems</a> (LETS) and other currency types e.g. \"Ithaca HOUR\"." <http://schema.org/> .
+<http://schema.org/discountCurrency> <http://www.w3.org/2000/01/rdf-schema#label> "discountCurrency" <http://schema.org/> .
+<http://schema.org/discountCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/discountCurrency> <http://schema.org/domainIncludes> <http://schema.org/Order> <http://schema.org/> .
+<http://schema.org/discountCurrency> <http://schema.org/rangeIncludes> <http://schema.org/Text> <http://schema.org/> .
+<http://schema.org/regionsAllowed> <http://schema.org/domainIncludes> <http://schema.org/MediaObject> <http://schema.org/> .
+<http://schema.org/regionsAllowed> <http://www.w3.org/2000/01/rdf-schema#comment> "The regions where the media is allowed. If not specified, then it's assumed to be allowed everywhere. Specify the countries in <a href=\"http://en.wikipedia.org/wiki/ISO_3166\">ISO 3166 format</a>." <http://schema.org/> .
+<http://schema.org/regionsAllowed> <http://www.w3.org/2000/01/rdf-schema#label> "regionsAllowed" <http://schema.org/> .
+<http://schema.org/regionsAllowed> <http://schema.org/rangeIncludes> <http://schema.org/Place> <http://schema.org/> .
+<http://schema.org/regionsAllowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/publicAccess> <http://schema.org/domainIncludes> <http://schema.org/Place> <http://schema.org/> .
+<http://schema.org/publicAccess> <http://www.w3.org/2000/01/rdf-schema#label> "publicAccess" <http://schema.org/> .
+<http://schema.org/publicAccess> <http://www.w3.org/2000/01/rdf-schema#comment> "A flag to signal that the <a class=\"localLink\" href=\"http://schema.org/Place\">Place</a> is open to public visitors.  If this property is omitted there is no assumed default boolean value" <http://schema.org/> .
+<http://schema.org/publicAccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/publicAccess> <http://schema.org/rangeIncludes> <http://schema.org/Boolean> <http://schema.org/> .
+<http://schema.org/reviewRating> <http://schema.org/domainIncludes> <http://schema.org/Review> <http://schema.org/> .
+<http://schema.org/reviewRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/reviewRating> <http://schema.org/rangeIncludes> <http://schema.org/Rating> <http://schema.org/> .
+<http://schema.org/reviewRating> <http://www.w3.org/2000/01/rdf-schema#comment> "The rating given in this review. Note that reviews can themselves be rated. The <code>reviewRating</code> applies to rating given by the review. The <a class=\"localLink\" href=\"http://schema.org/aggregateRating\">aggregateRating</a> property applies to the review itself, as a creative work." <http://schema.org/> .
+<http://schema.org/reviewRating> <http://www.w3.org/2000/01/rdf-schema#label> "reviewRating" <http://schema.org/> .
+<http://schema.org/ReceiveAction> <http://www.w3.org/2000/01/rdf-schema#label> "ReceiveAction" <http://schema.org/> .
+<http://schema.org/ReceiveAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/TransferAction> <http://schema.org/> .
+<http://schema.org/ReceiveAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/ReceiveAction> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of physically/electronically taking delivery of an object thathas been transferred from an origin to a destination. Reciprocal of SendAction.<br/><br/>\n\nRelated actions:<br/><br/>\n\n<ul>\n<li><a class=\"localLink\" href=\"http://schema.org/SendAction\">SendAction</a>: The reciprocal of ReceiveAction.</li>\n<li><a class=\"localLink\" href=\"http://schema.org/TakeAction\">TakeAction</a>: Unlike TakeAction, ReceiveAction does not imply that the ownership has been transfered (e.g. I can receive a package, but it does not mean the package is now mine).</li>\n</ul>\n" <http://schema.org/> .
+<http://schema.org/currency> <http://schema.org/domainIncludes> <http://schema.org/MonetaryAmountDistribution> <http://schema.org/> .
+<http://schema.org/currency> <http://schema.org/category> "issue-1253" <http://schema.org/> .
+<http://schema.org/currency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/currency> <http://schema.org/domainIncludes> <http://schema.org/ExchangeRateSpecification> <http://schema.org/> .
+<http://schema.org/currency> <http://purl.org/dc/terms/source> <https://github.com/schemaorg/schemaorg/issues/1253> <http://schema.org/> .
+<http://schema.org/currency> <http://schema.org/domainIncludes> <http://schema.org/MonetaryAmount> <http://schema.org/> .
+<http://schema.org/currency> <http://schema.org/domainIncludes> <http://schema.org/DatedMoneySpecification> <http://schema.org/> .
+<http://schema.org/currency> <http://schema.org/rangeIncludes> <http://schema.org/Text> <http://schema.org/> .
+<http://schema.org/currency> <http://www.w3.org/2000/01/rdf-schema#comment> "The currency in which the monetary amount is expressed.<br/><br/>\n\nUse standard formats: <a href=\"http://en.wikipedia.org/wiki/ISO_4217\">ISO 4217 currency format</a> e.g. \"USD\"; <a href=\"https://en.wikipedia.org/wiki/List_of_cryptocurrencies\">Ticker symbol</a> for cryptocurrencies e.g. \"BTC\"; well known names for <a href=\"https://en.wikipedia.org/wiki/Local_exchange_trading_system\">Local Exchange Tradings Systems</a> (LETS) and other currency types e.g. \"Ithaca HOUR\"." <http://schema.org/> .
+<http://schema.org/currency> <http://schema.org/domainIncludes> <http://schema.org/LoanOrCredit> <http://schema.org/> .
+<http://schema.org/currency> <http://www.w3.org/2000/01/rdf-schema#label> "currency" <http://schema.org/> .
+<http://schema.org/PriceSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/PriceSpecification> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsClass> <http://schema.org/> .
+<http://schema.org/PriceSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/StructuredValue> <http://schema.org/> .
+<http://schema.org/PriceSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A structured value representing a price or price range. Typically, only the subclasses of this type are used for markup. It is recommended to use <a class=\"localLink\" href=\"http://schema.org/MonetaryAmount\">MonetaryAmount</a> to describe independent amounts of money such as a salary, credit card limits, etc." <http://schema.org/> .
+<http://schema.org/PriceSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "PriceSpecification" <http://schema.org/> .
+<http://schema.org/gtin8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/gtin8> <http://www.w3.org/2000/01/rdf-schema#comment> "The <a href=\"http://apps.gs1.org/GDD/glossary/Pages/GTIN-8.aspx\">GTIN-8</a> code of the product, or the product to which the offer refers. This code is also known as EAN/UCC-8 or 8-digit EAN. See <a href=\"http://www.gs1.org/barcodes/technical/idkeys/gtin\">GS1 GTIN Summary</a> for more details." <http://schema.org/> .
+<http://schema.org/gtin8> <http://schema.org/domainIncludes> <http://schema.org/Product> <http://schema.org/> .
+<http://schema.org/gtin8> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> <http://schema.org/> .
+<http://schema.org/gtin8> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> <http://schema.org/> .
+<http://schema.org/gtin8> <http://schema.org/domainIncludes> <http://schema.org/Offer> <http://schema.org/> .
+<http://schema.org/gtin8> <http://www.w3.org/2000/01/rdf-schema#label> "gtin8" <http://schema.org/> .
+<http://schema.org/gtin8> <http://schema.org/domainIncludes> <http://schema.org/Demand> <http://schema.org/> .
+<http://schema.org/gtin8> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/gtin> <http://schema.org/> .
+<http://schema.org/gtin8> <http://schema.org/rangeIncludes> <http://schema.org/Text> <http://schema.org/> .
+<http://schema.org/DatedMoneySpecification> <http://www.w3.org/2000/01/rdf-schema#label> "DatedMoneySpecification" <http://schema.org/> .
+<http://schema.org/DatedMoneySpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/DatedMoneySpecification> <http://schema.org/supersededBy> <http://schema.org/MonetaryAmount> <http://schema.org/> .
+<http://schema.org/DatedMoneySpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/StructuredValue> <http://schema.org/> .
+<http://schema.org/DatedMoneySpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A DatedMoneySpecification represents monetary values with optional start and end dates. For example, this could represent an employee's salary over a specific period of time. <strong>Note:</strong> This type has been superseded by <a class=\"localLink\" href=\"http://schema.org/MonetaryAmount\">MonetaryAmount</a> use of that type is recommended" <http://schema.org/> .
+<http://schema.org/Article> <http://www.w3.org/2000/01/rdf-schema#comment> "An article, such as a news article or piece of investigative report. Newspapers and magazines have articles of many different types and this is intended to cover them all.<br/><br/>\n\nSee also <a href=\"http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html\">blog post</a>." <http://schema.org/> .
+<http://schema.org/Article> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> <http://schema.org/> .
+<http://schema.org/Article> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/Article> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> <http://schema.org/> .
+<http://schema.org/Article> <http://www.w3.org/2000/01/rdf-schema#label> "Article" <http://schema.org/> .
+<http://schema.org/accessibilityFeature> <http://www.w3.org/2000/01/rdf-schema#label> "accessibilityFeature" <http://schema.org/> .
+<http://schema.org/accessibilityFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/accessibilityFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "Content features of the resource, such as accessible media, alternatives and supported enhancements for accessibility (<a href=\"http://www.w3.org/wiki/WebSchemas/Accessibility\">WebSchemas wiki lists possible values</a>)." <http://schema.org/> .
+<http://schema.org/accessibilityFeature> <http://schema.org/rangeIncludes> <http://schema.org/Text> <http://schema.org/> .
+<http://schema.org/accessibilityFeature> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> <http://schema.org/> .
+<http://schema.org/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Thing> <http://schema.org/> .
+<http://schema.org/Action> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_ActionCollabClass> <http://schema.org/> .
+<http://schema.org/Action> <http://www.w3.org/2000/01/rdf-schema#comment> "An action performed by a direct agent and indirect participants upon a direct object. Optionally happens at a location with the help of an inanimate instrument. The execution of the action may produce a result. Specific action sub-type documentation specifies the exact expectation of each argument/role.<br/><br/>\n\nSee also <a href=\"http://blog.schema.org/2014/04/announcing-schemaorg-actions.html\">blog post</a> and <a href=\"http://schema.org/docs/actions.html\">Actions overview document</a>." <http://schema.org/> .
+<http://schema.org/Action> <http://www.w3.org/2000/01/rdf-schema#label> "Action" <http://schema.org/> .
+<http://schema.org/cargoVolume> <http://www.w3.org/2000/01/rdf-schema#label> "cargoVolume" <http://schema.org/> .
+<http://schema.org/cargoVolume> <http://schema.org/domainIncludes> <http://schema.org/Vehicle> <http://schema.org/> .
+<http://schema.org/cargoVolume> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#Automotive_Ontology_Working_Group> <http://schema.org/> .
+<http://schema.org/cargoVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/cargoVolume> <http://schema.org/rangeIncludes> <http://schema.org/QuantitativeValue> <http://schema.org/> .
+<http://schema.org/cargoVolume> <http://www.w3.org/2000/01/rdf-schema#comment> "The available volume for cargo or luggage. For automobiles, this is usually the trunk volume.<br/><br/>\n\nTypical unit code(s): LTR for liters, FTQ for cubic foot/feet<br/><br/>\n\nNote: You can use <a class=\"localLink\" href=\"http://schema.org/minValue\">minValue</a> and <a class=\"localLink\" href=\"http://schema.org/maxValue\">maxValue</a> to indicate ranges." <http://schema.org/> .
+<http://schema.org/SubscribeAction> <http://www.w3.org/2000/01/rdf-schema#label> "SubscribeAction" <http://schema.org/> .
+<http://schema.org/SubscribeAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/SubscribeAction> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of forming a personal connection with someone/something (object) unidirectionally/asymmetrically to get updates pushed to.<br/><br/>\n\nRelated actions:<br/><br/>\n\n<ul>\n<li><a class=\"localLink\" href=\"http://schema.org/FollowAction\">FollowAction</a>: Unlike FollowAction, SubscribeAction implies that the subscriber acts as a passive agent being constantly/actively pushed for updates.</li>\n<li><a class=\"localLink\" href=\"http://schema.org/RegisterAction\">RegisterAction</a>: Unlike RegisterAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.</li>\n<li><a class=\"localLink\" href=\"http://schema.org/JoinAction\">JoinAction</a>: Unlike JoinAction, SubscribeAction implies that the agent is interested in continuing receiving updates from the object.</li>\n</ul>\n" <http://schema.org/> .
+<http://schema.org/SubscribeAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/InteractAction> <http://schema.org/> .
+<http://schema.org/geoCrosses> <http://www.w3.org/2000/01/rdf-schema#label> "geoCrosses" <http://schema.org/> .
+<http://schema.org/geoCrosses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/geoCrosses> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a relationship between two geometries (or the places they represent), relating a geometry to another that crosses it: \"a crosses b: they have some but not all interior points in common, and the dimension of the intersection is less than that of at least one of them\". As defined in <a href=\"https://en.wikipedia.org/wiki/DE-9IM\">DE-9IM</a>." <http://schema.org/> .
+<http://schema.org/geoCrosses> <http://schema.org/domainIncludes> <http://schema.org/Place> <http://schema.org/> .
+<http://schema.org/geoCrosses> <http://schema.org/rangeIncludes> <http://schema.org/GeospatialGeometry> <http://schema.org/> .
+<http://schema.org/geoCrosses> <http://schema.org/rangeIncludes> <http://schema.org/Place> <http://schema.org/> .
+<http://schema.org/geoCrosses> <http://schema.org/domainIncludes> <http://schema.org/GeospatialGeometry> <http://schema.org/> .
+<http://schema.org/gtin12> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/gtin12> <http://www.w3.org/2000/01/rdf-schema#label> "gtin12" <http://schema.org/> .
+<http://schema.org/gtin12> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/identifier> <http://schema.org/> .
+<http://schema.org/gtin12> <http://schema.org/domainIncludes> <http://schema.org/Product> <http://schema.org/> .
+<http://schema.org/gtin12> <http://schema.org/domainIncludes> <http://schema.org/Demand> <http://schema.org/> .
+<http://schema.org/gtin12> <http://schema.org/domainIncludes> <http://schema.org/Offer> <http://schema.org/> .
+<http://schema.org/gtin12> <http://schema.org/rangeIncludes> <http://schema.org/Text> <http://schema.org/> .
+<http://schema.org/gtin12> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/gtin> <http://schema.org/> .
+<http://schema.org/gtin12> <http://www.w3.org/2000/01/rdf-schema#comment> "The GTIN-12 code of the product, or the product to which the offer refers. The GTIN-12 is the 12-digit GS1 Identification Key composed of a U.P.C. Company Prefix, Item Reference, and Check Digit used to identify trade items. See <a href=\"http://www.gs1.org/barcodes/technical/idkeys/gtin\">GS1 GTIN Summary</a> for more details." <http://schema.org/> .
+<http://schema.org/PublicationVolume> <http://www.w3.org/2000/01/rdf-schema#comment> "A part of a successively published publication such as a periodical or multi-volume work, often numbered. It may represent a time span, such as a year.<br/><br/>\n\nSee also <a href=\"http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html\">blog post</a>." <http://schema.org/> .
+<http://schema.org/PublicationVolume> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex> <http://schema.org/> .
+<http://schema.org/PublicationVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/PublicationVolume> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> <http://schema.org/> .
+<http://schema.org/PublicationVolume> <http://www.w3.org/2000/01/rdf-schema#label> "PublicationVolume" <http://schema.org/> .
+<http://schema.org/fileFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "Media type, typically MIME format (see <a href=\"http://www.iana.org/assignments/media-types/media-types.xhtml\">IANA site</a>) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, 'encoding' can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry." <http://schema.org/> .
+<http://schema.org/fileFormat> <http://www.w3.org/2000/01/rdf-schema#label> "fileFormat" <http://schema.org/> .
+<http://schema.org/fileFormat> <http://schema.org/rangeIncludes> <http://schema.org/Text> <http://schema.org/> .
+<http://schema.org/fileFormat> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> <http://schema.org/> .
+<http://schema.org/fileFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/fileFormat> <http://schema.org/supersededBy> <http://schema.org/encodingFormat> <http://schema.org/> .
+<http://schema.org/fileFormat> <http://schema.org/rangeIncludes> <http://schema.org/URL> <http://schema.org/> .
+<http://schema.org/ApplyAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/ApplyAction> <http://www.w3.org/2000/01/rdf-schema#label> "ApplyAction" <http://schema.org/> .
+<http://schema.org/ApplyAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/OrganizeAction> <http://schema.org/> .
+<http://schema.org/ApplyAction> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of registering to an organization/service without the guarantee to receive it.<br/><br/>\n\nRelated actions:<br/><br/>\n\n<ul>\n<li><a class=\"localLink\" href=\"http://schema.org/RegisterAction\">RegisterAction</a>: Unlike RegisterAction, ApplyAction has no guarantees that the application will be accepted.</li>\n</ul>\n" <http://schema.org/> .
+<http://schema.org/priceComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/priceComponent> <http://schema.org/domainIncludes> <http://schema.org/CompoundPriceSpecification> <http://schema.org/> .
+<http://schema.org/priceComponent> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_GoodRelationsTerms> <http://schema.org/> .
+<http://schema.org/priceComponent> <http://schema.org/rangeIncludes> <http://schema.org/UnitPriceSpecification> <http://schema.org/> .
+<http://schema.org/priceComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "This property links to all <a class=\"localLink\" href=\"http://schema.org/UnitPriceSpecification\">UnitPriceSpecification</a> nodes that apply in parallel for the <a class=\"localLink\" href=\"http://schema.org/CompoundPriceSpecification\">CompoundPriceSpecification</a> node." <http://schema.org/> .
+<http://schema.org/priceComponent> <http://www.w3.org/2000/01/rdf-schema#label> "priceComponent" <http://schema.org/> .
+<http://schema.org/UserComments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/UserComments> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_rNews> <http://schema.org/> .
+<http://schema.org/UserComments> <http://www.w3.org/2000/01/rdf-schema#comment> "UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use <a class=\"localLink\" href=\"http://schema.org/Action\">Action</a>-based vocabulary, alongside types such as <a class=\"localLink\" href=\"http://schema.org/Comment\">Comment</a>." <http://schema.org/> .
+<http://schema.org/UserComments> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/UserInteraction> <http://schema.org/> .
+<http://schema.org/UserComments> <http://schema.org/supersededBy> <http://schema.org/InteractionCounter> <http://schema.org/> .
+<http://schema.org/UserComments> <http://www.w3.org/2000/01/rdf-schema#label> "UserComments" <http://schema.org/> .
+<http://schema.org/PublicationIssue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/PublicationIssue> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/ontology/bibo/Issue> <http://schema.org/> .
+<http://schema.org/PublicationIssue> <http://purl.org/dc/terms/source> <http://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#source_bibex> <http://schema.org/> .
+<http://schema.org/PublicationIssue> <http://www.w3.org/2000/01/rdf-schema#label> "PublicationIssue" <http://schema.org/> .
+<http://schema.org/PublicationIssue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CreativeWork> <http://schema.org/> .
+<http://schema.org/PublicationIssue> <http://www.w3.org/2000/01/rdf-schema#comment> "A part of a successively published publication such as a periodical or publication volume, often numbered, usually containing a grouping of works such as articles.<br/><br/>\n\nSee also <a href=\"http://blog.schema.org/2014/09/schemaorg-support-for-bibliographic_2.html\">blog post</a>." <http://schema.org/> .
+<http://schema.org/publishingPrinciples> <http://schema.org/rangeIncludes> <http://schema.org/CreativeWork> <http://schema.org/> .
+<http://schema.org/publishingPrinciples> <http://schema.org/domainIncludes> <http://schema.org/Person> <http://schema.org/> .
+<http://schema.org/publishingPrinciples> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> <http://schema.org/> .
+<http://schema.org/publishingPrinciples> <http://schema.org/domainIncludes> <http://schema.org/Organization> <http://schema.org/> .
+<http://schema.org/publishingPrinciples> <http://schema.org/rangeIncludes> <http://schema.org/URL> <http://schema.org/> .
+<http://schema.org/publishingPrinciples> <http://www.w3.org/2000/01/rdf-schema#label> "publishingPrinciples" <http://schema.org/> .
+<http://schema.org/publishingPrinciples> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/publishingPrinciples> <http://www.w3.org/2000/01/rdf-schema#comment> "The publishingPrinciples property indicates (typically via <a class=\"localLink\" href=\"http://schema.org/URL\">URL</a>) a document describing the editorial principles of an <a class=\"localLink\" href=\"http://schema.org/Organization\">Organization</a> (or individual e.g. a <a class=\"localLink\" href=\"http://schema.org/Person\">Person</a> writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a> (e.g. <a class=\"localLink\" href=\"http://schema.org/NewsArticle\">NewsArticle</a>) the principles are those of the party primarily responsible for the creation of the <a class=\"localLink\" href=\"http://schema.org/CreativeWork\">CreativeWork</a>.<br/><br/>\n\nWhile such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a <a class=\"localLink\" href=\"http://schema.org/funder\">funder</a>) can be expressed using schema.org terminology." <http://schema.org/> .
+<http://schema.org/AcceptAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/AcceptAction> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of committing to/adopting an object.<br/><br/>\n\nRelated actions:<br/><br/>\n\n<ul>\n<li><a class=\"localLink\" href=\"http://schema.org/RejectAction\">RejectAction</a>: The antonym of AcceptAction.</li>\n</ul>\n" <http://schema.org/> .
+<http://schema.org/AcceptAction> <http://www.w3.org/2000/01/rdf-schema#label> "AcceptAction" <http://schema.org/> .
+<http://schema.org/AcceptAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/AllocateAction> <http://schema.org/> .
+<http://schema.org/geoIntersects> <http://schema.org/domainIncludes> <http://schema.org/GeospatialGeometry> <http://schema.org/> .
+<http://schema.org/geoIntersects> <http://schema.org/rangeIncludes> <http://schema.org/Place> <http://schema.org/> .
+<http://schema.org/geoIntersects> <http://schema.org/rangeIncludes> <http://schema.org/GeospatialGeometry> <http://schema.org/> .
+<http://schema.org/geoIntersects> <http://schema.org/domainIncludes> <http://schema.org/Place> <http://schema.org/> .
+<http://schema.org/geoIntersects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/geoIntersects> <http://www.w3.org/2000/01/rdf-schema#label> "geoIntersects" <http://schema.org/> .
+<http://schema.org/geoIntersects> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents spatial relations in which two geometries (or the places they represent) have at least one point in common. As defined in <a href=\"https://en.wikipedia.org/wiki/DE-9IM\">DE-9IM</a>." <http://schema.org/> .
+<http://schema.org/UserPlusOnes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/UserPlusOnes> <http://www.w3.org/2000/01/rdf-schema#label> "UserPlusOnes" <http://schema.org/> .
+<http://schema.org/UserPlusOnes> <http://www.w3.org/2000/01/rdf-schema#comment> "UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use <a class=\"localLink\" href=\"http://schema.org/Action\">Action</a>-based vocabulary, alongside types such as <a class=\"localLink\" href=\"http://schema.org/Comment\">Comment</a>." <http://schema.org/> .
+<http://schema.org/UserPlusOnes> <http://schema.org/supersededBy> <http://schema.org/InteractionCounter> <http://schema.org/> .
+<http://schema.org/UserPlusOnes> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/UserInteraction> <http://schema.org/> .
+<http://schema.org/RejectAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/AllocateAction> <http://schema.org/> .
+<http://schema.org/RejectAction> <http://www.w3.org/2000/01/rdf-schema#label> "RejectAction" <http://schema.org/> .
+<http://schema.org/RejectAction> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of rejecting to/adopting an object.<br/><br/>\n\nRelated actions:<br/><br/>\n\n<ul>\n<li><a class=\"localLink\" href=\"http://schema.org/AcceptAction\">AcceptAction</a>: The antonym of RejectAction.</li>\n</ul>\n" <http://schema.org/> .
+<http://schema.org/RejectAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/Attorney> <http://www.w3.org/2000/01/rdf-schema#comment> "Professional service: Attorney. <br/><br/>\n\nThis type is deprecated - <a class=\"localLink\" href=\"http://schema.org/LegalService\">LegalService</a> is more inclusive and less ambiguous." <http://schema.org/> .
+<http://schema.org/Attorney> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/LegalService> <http://schema.org/> .
+<http://schema.org/Attorney> <http://www.w3.org/2000/01/rdf-schema#label> "Attorney" <http://schema.org/> .
+<http://schema.org/Attorney> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/FollowAction> <http://www.w3.org/2000/01/rdf-schema#label> "FollowAction" <http://schema.org/> .
+<http://schema.org/FollowAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/InteractAction> <http://schema.org/> .
+<http://schema.org/FollowAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/FollowAction> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of forming a personal connection with someone/something (object) unidirectionally/asymmetrically to get updates polled from.<br/><br/>\n\nRelated actions:<br/><br/>\n\n<ul>\n<li><a class=\"localLink\" href=\"http://schema.org/BefriendAction\">BefriendAction</a>: Unlike BefriendAction, FollowAction implies that the connection is <em>not</em> necessarily reciprocal.</li>\n<li><a class=\"localLink\" href=\"http://schema.org/SubscribeAction\">SubscribeAction</a>: Unlike SubscribeAction, FollowAction implies that the follower acts as an active agent constantly/actively polling for updates.</li>\n<li><a class=\"localLink\" href=\"http://schema.org/RegisterAction\">RegisterAction</a>: Unlike RegisterAction, FollowAction implies that the agent is interested in continuing receiving updates from the object.</li>\n<li><a class=\"localLink\" href=\"http://schema.org/JoinAction\">JoinAction</a>: Unlike JoinAction, FollowAction implies that the agent is interested in getting updates from the object.</li>\n<li><a class=\"localLink\" href=\"http://schema.org/TrackAction\">TrackAction</a>: Unlike TrackAction, FollowAction refers to the polling of updates of all aspects of animate objects rather than the location of inanimate objects (e.g. you track a package, but you don't follow it).</li>\n</ul>\n" <http://schema.org/> .
+<http://schema.org/speakable> <http://schema.org/domainIncludes> <http://schema.org/WebPage> <http://schema.org/> .
+<http://schema.org/speakable> <http://www.w3.org/2000/01/rdf-schema#label> "speakable" <http://schema.org/> .
+<http://schema.org/speakable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/speakable> <http://schema.org/category> "issue-1389" <http://schema.org/> .
+<http://schema.org/speakable> <http://schema.org/rangeIncludes> <http://schema.org/URL> <http://schema.org/> .
+<http://schema.org/speakable> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates sections of a Web page that are particularly 'speakable' in the sense of being highlighted as being especially appropriate for text-to-speech conversion. Other sections of a page may also be usefully spoken in particular circumstances; the 'speakable' property serves to indicate the parts most likely to be generally useful for speech.<br/><br/>\n\nThe <em>speakable</em> property can be repeated an arbitrary number of times, with three kinds of possible 'content-locator' values:<br/><br/>\n\n1.) <em>id-value</em> URL references - uses <em>id-value</em> of an element in the page being annotated. The simplest use of <em>speakable</em> has (potentially relative) URL values, referencing identified sections of the document concerned.<br/><br/>\n\n2.) CSS Selectors - addresses content in the annotated page, eg. via class attribute. Use the <a class=\"localLink\" href=\"http://schema.org/cssSelector\">cssSelector</a> property.<br/><br/>\n\n3.)  XPaths - addresses content via XPaths (assuming an XML view of the content). Use the <a class=\"localLink\" href=\"http://schema.org/xpath\">xpath</a> property.<br/><br/>\n\nFor more sophisticated markup of speakable sections beyond simple ID references, either CSS selectors or XPath expressions to pick out document section(s) as speakable. For this\nwe define a supporting type, <a class=\"localLink\" href=\"http://schema.org/SpeakableSpecification\">SpeakableSpecification</a>  which is defined to be a possible value of the <em>speakable</em> property." <http://schema.org/> .
+<http://schema.org/speakable> <http://schema.org/domainIncludes> <http://schema.org/Article> <http://schema.org/> .
+<http://schema.org/speakable> <http://schema.org/rangeIncludes> <http://schema.org/SpeakableSpecification> <http://schema.org/> .
+<http://schema.org/speakable> <http://purl.org/dc/terms/source> <https://github.com/schemaorg/schemaorg/issues/1389> <http://schema.org/> .
+<http://schema.org/UserTweets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/UserTweets> <http://www.w3.org/2000/01/rdf-schema#label> "UserTweets" <http://schema.org/> .
+<http://schema.org/UserTweets> <http://www.w3.org/2000/01/rdf-schema#comment> "UserInteraction and its subtypes is an old way of talking about users interacting with pages. It is generally better to use <a class=\"localLink\" href=\"http://schema.org/Action\">Action</a>-based vocabulary, alongside types such as <a class=\"localLink\" href=\"http://schema.org/Comment\">Comment</a>." <http://schema.org/> .
+<http://schema.org/UserTweets> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/UserInteraction> <http://schema.org/> .
+<http://schema.org/UserTweets> <http://schema.org/supersededBy> <http://schema.org/InteractionCounter> <http://schema.org/> .
+<http://schema.org/Campground> <http://www.w3.org/2000/01/rdf-schema#comment> "A camping site, campsite, or <a class=\"localLink\" href=\"http://schema.org/Campground\">Campground</a> is a place used for overnight stay in the outdoors, typically containing individual <a class=\"localLink\" href=\"http://schema.org/CampingPitch\">CampingPitch</a> locations. <br/><br/>\n\nIn British English a campsite is an area, usually divided into a number of pitches, where people can camp overnight using tents or camper vans or caravans; this British English use of the word is synonymous with the American English expression campground. In American English the term campsite generally means an area where an individual, family, group, or military unit can pitch a tent or park a camper; a campground may contain many campsites (Source: Wikipedia see <a href=\"https://en.wikipedia.org/wiki/Campsite\">https://en.wikipedia.org/wiki/Campsite</a>).<br/><br/>\n\nSee also the dedicated <a href=\"/docs/hotels.html\">document on the use of schema.org for marking up hotels and other forms of accommodations</a>." <http://schema.org/> .
+<http://schema.org/Campground> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/Campground> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/LodgingBusiness> <http://schema.org/> .
+<http://schema.org/Campground> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/CivicStructure> <http://schema.org/> .
+<http://schema.org/Campground> <http://www.w3.org/2000/01/rdf-schema#label> "Campground" <http://schema.org/> .
+<http://schema.org/Campground> <http://purl.org/dc/terms/source> <https://www.w3.org/wiki/WebSchemas/SchemaDotOrgSources#STI_Accommodation_Ontology> <http://schema.org/> .
+<http://schema.org/availableLanguage> <http://schema.org/rangeIncludes> <http://schema.org/Text> <http://schema.org/> .
+<http://schema.org/availableLanguage> <http://schema.org/domainIncludes> <http://schema.org/ServiceChannel> <http://schema.org/> .
+<http://schema.org/availableLanguage> <http://schema.org/domainIncludes> <http://schema.org/ContactPoint> <http://schema.org/> .
+<http://schema.org/availableLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "A language someone may use with or at the item, service or place. Please use one of the language codes from the <a href=\"http://tools.ietf.org/html/bcp47\">IETF BCP 47 standard</a>. See also <a class=\"localLink\" href=\"http://schema.org/inLanguage\">inLanguage</a>" <http://schema.org/> .
+<http://schema.org/availableLanguage> <http://schema.org/domainIncludes> <http://schema.org/TouristAttraction> <http://schema.org/> .
+<http://schema.org/availableLanguage> <http://schema.org/domainIncludes> <http://schema.org/LodgingBusiness> <http://schema.org/> .
+<http://schema.org/availableLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "availableLanguage" <http://schema.org/> .
+<http://schema.org/availableLanguage> <http://schema.org/rangeIncludes> <http://schema.org/Language> <http://schema.org/> .
+<http://schema.org/availableLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/accessibilityAPI> <http://www.w3.org/2000/01/rdf-schema#label> "accessibilityAPI" <http://schema.org/> .
+<http://schema.org/accessibilityAPI> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/accessibilityAPI> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the resource is compatible with the referenced accessibility API (<a href=\"http://www.w3.org/wiki/WebSchemas/Accessibility\">WebSchemas wiki lists possible values</a>)." <http://schema.org/> .
+<http://schema.org/accessibilityAPI> <http://schema.org/rangeIncludes> <http://schema.org/Text> <http://schema.org/> .
+<http://schema.org/accessibilityAPI> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> <http://schema.org/> .
+<http://schema.org/cookTime> <http://www.w3.org/2000/01/rdf-schema#label> "cookTime" <http://schema.org/> .
+<http://schema.org/cookTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time it takes to actually cook the dish, in <a href=\"http://en.wikipedia.org/wiki/ISO_8601\">ISO 8601 duration format</a>." <http://schema.org/> .
+<http://schema.org/cookTime> <http://schema.org/rangeIncludes> <http://schema.org/Duration> <http://schema.org/> .
+<http://schema.org/cookTime> <http://schema.org/domainIncludes> <http://schema.org/Recipe> <http://schema.org/> .
+<http://schema.org/cookTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/performTime> <http://schema.org/> .
+<http://schema.org/cookTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/LeaveAction> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent leaves an event / group with participants/friends at a location.<br/><br/>\n\nRelated actions:<br/><br/>\n\n<ul>\n<li><a class=\"localLink\" href=\"http://schema.org/JoinAction\">JoinAction</a>: The antonym of LeaveAction.</li>\n<li><a class=\"localLink\" href=\"http://schema.org/UnRegisterAction\">UnRegisterAction</a>: Unlike UnRegisterAction, LeaveAction implies leaving a group/team of people rather than a service.</li>\n</ul>\n" <http://schema.org/> .
+<http://schema.org/LeaveAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://schema.org/> .
+<http://schema.org/LeaveAction> <http://www.w3.org/2000/01/rdf-schema#label> "LeaveAction" <http://schema.org/> .
+<http://schema.org/LeaveAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/InteractAction> <http://schema.org/> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/hrefhttp.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/hrefhttp.nt> <https://w3id.org/tree#relation> _:Bhrefhttpb .
+_:Bhrefhttpb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bhrefhttpb <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/hrefhttpb.nt> .
+_:Bhrefhttpb <https://w3id.org/tree#value> "hrefhttpb" .
+_:Bhrefhttpb <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/hrefhttpb.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/hrefhttp.nt> <https://w3id.org/tree#relation> _:Bhrefhttpe .
+_:Bhrefhttpe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bhrefhttpe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/hrefhttpe.nt> .
+_:Bhrefhttpe <https://w3id.org/tree#value> "hrefhttpe" .
+_:Bhrefhttpe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/hrefhttpe.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/hrefhttp.nt> <https://w3id.org/tree#relation> _:Bhrefhttpp .
+_:Bhrefhttpp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bhrefhttpp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/hrefhttpp.nt> .
+_:Bhrefhttpp <https://w3id.org/tree#value> "hrefhttpp" .
+_:Bhrefhttpp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/hrefhttpp.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/hrefhttp.nt> <https://w3id.org/tree#relation> _:Bhrefhttps .
+_:Bhrefhttps <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bhrefhttps <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/hrefhttps.nt> .
+_:Bhrefhttps <https://w3id.org/tree#value> "hrefhttps" .
+_:Bhrefhttps <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/hrefhttps.nt> <https://w3id.org/tree#remainingItems> "61"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/hrefhttp.nt> <https://w3id.org/tree#relation> _:Bhrefhttpt .
+_:Bhrefhttpt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bhrefhttpt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/hrefhttpt.nt> .
+_:Bhrefhttpt <https://w3id.org/tree#value> "hrefhttpt" .
+_:Bhrefhttpt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/hrefhttpt.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

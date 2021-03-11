@@ -1,0 +1,906 @@
+<http://eprints.org/ontology/EPrint> <http://www.w3.org/2000/01/rdf-schema#comment> "A single record in an EPrints Repository. Generally this will be described as BIBO and Dublin Core, and may have a number of associated ep:Documents. Resolving a URI of class ep:EPrint will direct to the HTML summary page for the record, in an HTML browser, or to an RDF (XML or N3) document in an RDF client. The RDF document will contain all available RDF information about the record including all attached ep:Document records and their metadata and links from the document to the files via ep:hasFile. Not all files may be available without authentication. If the files themselves contain semantic information of interest these will need to be resolved separately. References to people, organisations, publications and locations may be given URIs of the form /id/<typeofthing>/ext-<somevalue> -- in this case the URI will be resolvable as RDF+XML or N3 and may yield additional records in the repository referencing the same thing, although this is usually based on the hashing of metadata strings and may not be complete or perfect. The ext- indicates that this concept is not something the repository actually stores information about, it is just referenced by one or more records. For example, the RDF for an EPrint about a paper given at a conference may reference that conference with a URI of the form /id/event/ext-a43de4454. That URI will be resolvable but the repository does not contain full information about that event, just information derived from EPrint record metadata. It is hoped that the community may develop systems to link such URIs to the more definitive URI for an event, person, location etc."@en <http://eprints.org/ontology/> .
+<http://eprints.org/ontology/EPrint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://eprints.org/ontology/> .
+<http://eprints.org/ontology/EPrint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://eprints.org/ontology/> .
+<http://eprints.org/ontology/EPrint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://eprints.org/ontology/> <http://eprints.org/ontology/> .
+<http://eprints.org/ontology/EPrint> <http://www.w3.org/2000/01/rdf-schema#label> "EPrint Record"@en <http://eprints.org/ontology/> .
+<http://eprints.org/ontology/Document> <http://www.w3.org/2002/07/owl#equivalentClass> <http://xmlns.com/foaf/0.1/Document> <http://eprints.org/ontology/> .
+<http://eprints.org/ontology/Document> <http://www.w3.org/2000/01/rdf-schema#label> "Document"@en <http://eprints.org/ontology/> .
+<http://eprints.org/ontology/Document> <http://www.w3.org/2000/01/rdf-schema#comment> "A single document that is part of an ep:EPrint record. It may be a machine generated version of another document,  eg. a thumbnail, in which case this will be expressed with relations from the http://eprints.org/relation/ namespace. It will have one or more files associated. Some documents can have multilple files, such as an HTML page plus image files. Resolving a document URI will redirect you to the primary file of the document."@en <http://eprints.org/ontology/> .
+<http://eprints.org/ontology/Document> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://eprints.org/ontology/> <http://eprints.org/ontology/> .
+<http://eprints.org/ontology/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://eprints.org/ontology/> .
+<http://eprints.org/ontology/Document> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://eprints.org/ontology/> .
+<http://d-nb.info/standards/elementset/agrelon#hasMultipleBirthSibling> <http://www.w3.org/2000/01/rdf-schema#label> "tiene hermano(a) gemelo(a)"@es <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#hasMultipleBirthSibling> <http://www.w3.org/2000/01/rdf-schema#label> "ha fratello o sorella plurigemellare"@it <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#hasMultipleBirthSibling> <http://www.w3.org/2000/01/rdf-schema#label> "has multiple birth sibling"@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#hasMultipleBirthSibling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#hasMultipleBirthSibling> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#hasMultipleBirthSibling> <http://www.w3.org/2000/01/rdf-schema#label> "hat Mehrlingsgeschwister"@de <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#hasMultipleBirthSibling> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://d-nb.info/standards/elementset/agrelon#> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#hasMultipleBirthSibling> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://d-nb.info/standards/elementset/agrelon#hasSibling> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#hasMultipleBirthSibling> <http://www.w3.org/2000/01/rdf-schema#comment> "A person (subject) has as sibling a person (object), where both siblings where carried together in a joint pregnancy. This denotes not only twins, but also triplets etc.. Mostly, multiple birth siblings are biolological siblings, i.e. share both biological parents, but this doesn't have to be the case."@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#hasMultipleBirthSibling> <http://d-nb.info/standards/elementset/agrelon#correspondsTo> <http://d-nb.info/standards/elementset/agrelon#HasMultipleBirthSibling> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#hasMultipleBirthSibling> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://d-nb.info/standards/elementset/agrelon> .
+<http://inference-web.org/2.0/pml-provenance.owl#EmptyInformation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://inference-web.org/2.0/pml-provenance.owl#Information> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#EmptyInformation> <http://www.w3.org/2000/01/rdf-schema#label> "Empty Information"@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#EmptyInformation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#EmptyInformation> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of information indicating no conclusion has been derived, i.e. empty set of statements. In this case, the rawstring may contain some english message indicating no answer. "@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines concepts and properties specific for the Philips use case (cooking domain)." <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl> .
+<http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl> .
+<http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl> <http://www.w3.org/2002/07/owl#imports> <http://kmi.open.ac.uk/projects/smartproducts/ontologies/product.owl> <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl> .
+<http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl> <http://purl.org/dc/terms/title> "SmartProducts Food Domain Model"@en <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl> .
+<http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl> <http://www.w3.org/2002/07/owl#imports> <http://kmi.open.ac.uk/projects/smartproducts/ontologies/process.owl> <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl> .
+<http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl> <http://purl.org/dc/terms/description> "Defines concepts and properties specific for the Philips use case (cooking domain)."@en <http://kmi.open.ac.uk/projects/smartproducts/ontologies/food.owl> .
+<http://lemon-model.net/lemon#SynRoleMarker> <http://www.w3.org/2000/01/rdf-schema#label> "Маркер синтаксической роли"@ru <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#SynRoleMarker> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LemonElement> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#SynRoleMarker> <http://www.w3.org/2000/01/rdf-schema#label> "Syntactic role marker"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#SynRoleMarker> <http://www.w3.org/2000/01/rdf-schema#label> "Marcador de la función sintáctica"@es <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#SynRoleMarker> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B342efa1da1c7b3820c2d21a88fa1eb8c <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#SynRoleMarker> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#UsageExample> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#SynRoleMarker> <http://www.w3.org/2000/01/rdf-schema#label> "Syntactische Rolle-Marker"@de <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#SynRoleMarker> <http://www.w3.org/2000/01/rdf-schema#comment> "The indicator of a given syntactic argument, normally a preposition or other particle marker or a linguistic property such as case"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#SynRoleMarker> <http://www.w3.org/2000/01/rdf-schema#label> "Syntactisch rol merker"@nl <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#SynRoleMarker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#SynRoleMarker> <http://www.w3.org/2000/01/rdf-schema#label> "Marqueur du rôle syntaxique"@fr <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#SynRoleMarker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#marker> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes the marker of a semantic argument. This should generally either be a semantic property i.e., case or another lexical entry e.g., a preposition or particle"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#marker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#marker> <http://www.w3.org/2000/01/rdf-schema#range> <http://lemon-model.net/lemon#SynRoleMarker> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#marker> <http://www.w3.org/2000/01/rdf-schema#label> "Marcador"@es <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#marker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#marker> <http://www.w3.org/2000/01/rdf-schema#label> "Marker"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#marker> <http://www.w3.org/2000/01/rdf-schema#label> "Marker"@de <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#marker> <http://www.w3.org/2000/01/rdf-schema#label> "маркер"@ru <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#marker> <http://www.w3.org/2000/01/rdf-schema#label> "Marqueur"@fr <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#marker> <http://www.w3.org/2000/01/rdf-schema#label> "Merker"@nl <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#marker> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#Argument> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#property> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes a lexical property of a lexical entry, form, component or MWE node. For the lexical entry this is assumed to be static properties e.g., part of speech and gender and for the others this is assumed to be specific properties e.g., case, number"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#property> <http://www.w3.org/2000/01/rdf-schema#label> "Propiedad léxica"@es <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#property> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#LemonElement> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#property> <http://www.w3.org/2000/01/rdf-schema#label> "Lexikaal predikaat"@nl <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#property> <http://www.w3.org/2000/01/rdf-schema#label> "Lexikalische Prädikat"@de <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#property> <http://www.w3.org/2000/01/rdf-schema#range> <http://lemon-model.net/lemon#PropertyValue> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#property> <http://www.w3.org/2000/01/rdf-schema#label> "Propiété lexicale"@fr <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#property> <http://www.w3.org/2000/01/rdf-schema#label> "Lexical property"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bda2251ed25541ce0b80f1f941fa296f9 <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#SenseDefinition> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#Lexicon> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#UsageExample> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Lexikonsinn"@de <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Lexical sense"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Lexikaal zin"@nl <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#Node> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#PropertyValue> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#SynRoleMarker> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LemonElement> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the intersection in meaning between the lexical entry and the ontology entity. This is used as the ontology entity and lexical entry may not be in one-to-one correspondence as such the existence of a sense between them states meerly that there are some cases when this lexical entry refer to the ontology entity and vica versa. Mapping elements can be used to further specify this relation"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Acepción léxica"@es <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Signification lexicale"@fr <http://lemon-model.net/lemon> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????"@ka <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Plaas"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Boerderij"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Saimniec??ba"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????????"@el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Zone agricole"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Landuse> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Sveitab??rinn"@is <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??kis"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Ferm??"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "????????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "????????"@ps <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Ladang"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??iftlik"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "talu"@et <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Maatila"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@mzn <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/Farm/key/landuse/value/farm> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Granja"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Granja"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Granxa"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Tr???i"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "????????????"@myv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Farma"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Farma"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Farma"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Farma"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Farma"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Farma"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Farma"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??ywnos??"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Bondg??rd"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Bukid"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Baserria"@eu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Bauernhof"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Ferma"@sq <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Ferma"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Ferma"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Place> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/Farm/key/amenity/value/farm> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Farm"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Ferme"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Bauerenhaff"@lb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Tarla"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Caser??a"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@fa <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Fazenda"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Fazenda"@pt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/Farm/key/place/value/farm> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "G??rd"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "G??rd"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Area agricola"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Geh??ft"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Amenity> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Kmetija"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Atant"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Tanya"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Buurhoff"@nds <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Farm> <http://www.w3.org/2000/01/rdf-schema#label> "Fattoria"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Plaasgebou"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Bauernhof"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Ekonomibyggnad"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Agrarisch gebouw"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Farma (zgrada)"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????????? ????????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Caser??a"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Hospod??rska budova"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "B??timent de ferme"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Edificio rurale"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "???????????? ??????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Kmetija"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Saimniec??bas ??ka"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ??????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ??????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Hospod????sk?? budova"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Landbrugsbygning"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "??iftlik Binas??"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Farm Nd??rtimi"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "C??ng tr??nh N??ng tr???i"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Bangunan Ladang"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Building> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Budynek gospodarczy"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Burski dom"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Farm Building"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "G??rdsbygg"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Hospodarske twarjenje"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/BuildingFarm/key/building/value/farm> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Gusaling Pambukid"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????"@ka <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Paiol"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Instal??lacions agr??coles"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Maatilan rakennus"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "????????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "??kio pastatas"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Talumaja"@et <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Zgrada farme"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Granja"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Edificio agricole"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Tanya??p??let"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Buuree-Bowark"@nds <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Ti feurm"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingFarm> <http://www.w3.org/2000/01/rdf-schema#label> "Granxa"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Wohnjostra??a"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Po??iarna stanica"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Gaisrin??"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Brandstation"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Brandstation"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Sl??kkvist????"@is <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Corpo de bombeiros"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????????? ??????????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Brannstasjon"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "?????? ??????????"@fa <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "?????? ??????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "?????? ??????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Balai Bomba"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Tr???m C???u h???a"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Himpilan ng Bumbero"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Parque de bomberos"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Tulet??rjedepoo"@et <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????? ????????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Paloasema"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????? ????????????????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Brandweer"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Zjarr??fiksat"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Zjarr??fiksat"@sq <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????????????? ?????????????????????????????????"@ka <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Parc de bombers"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Fire Station"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/FireStation/key/amenity/value/fire_station> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Brandweerstasie"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "T??zolt??s??g"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Stazion dai pomp??rs"@fur <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Gasilska postaja"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Caserna de pumperos"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Bomberos"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????? ??????????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Kazarn pomperien"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Wognjarnja"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Amenity> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Feuerwehr"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Suhiltzaileak"@eu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Ugunsdz??s??ju depo"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Hasi??sk?? stanice"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ?????????? ????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Vigili del fuoco"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "?????????"@zh-hant <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "?????????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "?????????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "F????rwehr"@nds <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Vatrogasna stanica"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Parque de bombeiros"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Pompjee??n"@lb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Remiza stra??acka"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Vatrogasna postaja"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Itfaiye"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FireStation> <http://www.w3.org/2000/01/rdf-schema#label> "Caserne des pompiers"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Frazion"@fur <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????????????? ????????"@myv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Gehucht"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "???"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Gruppo di case"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "X??m"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Zaseok"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Ciems"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Weiler"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Wjaska"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Hameau"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Wjeska"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Vico"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Grend"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Hamlet"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Aldea"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Aldea"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Aldea"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Aldea"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Drubbel"@nds <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Mezra"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Kaimelis (Vienkiemis)"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Pennk??r"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Bebyggelse"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Herrixka"@eu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Pieni kyl??"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "K??zs??g"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Osada"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Osada"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/Hamlet/key/place/value/hamlet> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "By"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Katundth"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Aldeia"@pt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Aldeia"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Place> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Maliit na Nayon"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Gehug"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Zaselek"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????????"@el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Zaselak"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Hamlet> <http://www.w3.org/2000/01/rdf-schema#label> "Osada do 200"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Ti-menez"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "????????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Trobel??"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Chalet"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Chalet"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Chalet"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Chalet"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Chalet"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Chalet"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Chalet"@lb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Xal??"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "???????????? ????????"@rue <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Alppimaja"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Chata"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Apartma"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/TourismThing> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Shpi"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ????????????"@fa <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Almh??tte"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????? ????????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Schronisko"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "??????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Txalet"@eu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Vakantiehuisje"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Planinska ku??a"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Fjellhytte"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Prozninski domcyk"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Chalupa"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Stuga"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Nyaral??h??z"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Nh?? v??n"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Planinska koliba"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Chal??"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Chal??"@pt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Chal??"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Xalet"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Yayla evi"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Ve??k?? chata"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Kubo ng Pastol"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "Casetta (chalet)"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/Chalet/key/tourism/value/chalet> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Chalet> <http://www.w3.org/2000/01/rdf-schema#label> "??????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "?????????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/FarmShop/key/shop/value/farm> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "????????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "????????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Kme??ka trgovina"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Boerenwinkel"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "??ywnos??owy wobchod"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "G??rdsbutikk"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Tienda de productos agr??colas"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Agrobotiga"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Prodej zem??d??lsk??ch v??robk??"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Shop> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "G??rdbutik"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Magazin agricole"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Parafarmacia"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Poljo-apoteka"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Po??non??kup"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????????? ??????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Loja de produtos agr??colas"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Ti???m N??ng c???"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Kert??szbolt"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Magasin de produits agricoles"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????? ??????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "??kio parduotuv??"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ?????????????? ????????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ?????????????? ????????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Poljoprivredna apoteka"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Wobchod na statoku"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Stal evit al labour-douar"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Plaaswinkel"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Hofladen"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Tindahang Pambukid"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Tienda de caser??a"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Tenda de produtos agr??colas"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Tar??m ??r??nleri D??kkan??"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "ferm?? dyqan"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Kedai Ladang"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/FarmShop/key/shop/value/farm_shop> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Sklep gospodarski"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "Farm Shop"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/FarmShop> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????????????? ??????????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#ReadingType.measuringPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "measuringPeriod" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#ReadingType.measuringPeriod> <http://langdale.com.au/2005/UML#hasStereotype> <http://langdale.com.au/2005/UML#attribute> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#ReadingType.measuringPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "Time attribute inherent or fundamental to the reading value (as opposed to 'macroPeriod' that supplies an \"adjective\" to describe aspects of a time period with regard to the measurement). It refers to the way the value was originally measured and not to the frequency at which it is reported or presented. For example, an hourly interval of consumption data would have value 'hourly' as an attribute. However in the case of an hourly sampled voltage value, the meterReadings schema would carry the 'hourly' interval size information.\r\nIt is common for meters to report demand in a form that is measured over the course of a portion of an hour, while enterprise applications however commonly assume the demand (in kW or kVAr) normalised to 1 hour. The sytem that receives readings directly from the meter therefore must perform this transformation before publishing readings for use by the other enterprise systems. The scalar used is chosen based on the block size (not any sub-interval size)." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#ReadingType.measuringPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B85e8892bf3c2c287f9b4e8d740768576 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Beabaa3925b4538192fd4ee7e1aa3e302 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B951d1d6b2ebd64a8cc36be9dfb1b7d04 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb04d1fab7aa8bbef7874e69f50c6beb5 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8e3bd7fc7db52ae571670190509404ac <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B92fd940be943a069978147909b5a75cc <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B52c9a4642ab56cbc8758a00866d0fe9d <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6bad21f5ed065e86b9d8d28cc3e1a85d <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bef88bed68d176ba7a7c768f5682cc454 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "PositionPoint" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B42c4eca10ff2c8b9fd8f40639c13b4cb <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B79649a6b8b02f79cb7c562c448915d8c <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B08d82e4210cf47fa1708945d3ece7c98 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#Package_Common> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of spatial coordinates that determine a point, defined in coordinate system specified in 'Location.CoordinateSystem'. Use a single position point instance to desribe a point-oriented location. Use a sequence of position points to describe a line-oriented object (physical location of non-point oriented objects like cables or lines), or area of an object (like a substation or a geographical zone - in this case, have first and last position point with the same values)." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf9d5f7724dae240db0cd6849a4da7e12 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4c0f59ab9f837f105ec070badbc76fba <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc539b8e2934aa448ffd22421576effa4 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bba7d569360289f4e1f81eddc51c1cf7e <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be089fd941c5493c88bb5234779a6303e <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B669a357a69695221414a6c20525b280f <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbd68f8754ea161cd9ba85874f8c0f219 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#PositionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B966f9d807980f3c1415f71eadf5c8c3b <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#StreetDetail.buildingName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#StreetDetail.buildingName> <http://www.w3.org/2000/01/rdf-schema#comment> "(if applicable) In certain cases the physical location of the place of interest does not have a direct point of entry from the street, but may be located inside a larger structure such as a building, complex, office block, apartment, etc." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#StreetDetail.buildingName> <http://www.w3.org/2000/01/rdf-schema#label> "buildingName" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#StreetDetail.buildingName> <http://langdale.com.au/2005/UML#hasStereotype> <http://langdale.com.au/2005/UML#attribute> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.inria.fr/ast/sql#CaseExpression> <http://www.w3.org/2000/01/rdf-schema#label> "Case Expression"@en <http://ns.inria.fr/ast/sql#> .
+<http://ns.inria.fr/ast/sql#CaseExpression> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.inria.fr/ast/sql#> <http://ns.inria.fr/ast/sql#> .
+<http://ns.inria.fr/ast/sql#CaseExpression> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ast/sql#Expression> <http://ns.inria.fr/ast/sql#> .
+<http://ns.inria.fr/ast/sql#CaseExpression> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://ns.inria.fr/ast/sql#> .
+<http://ns.inria.fr/ast/sql#CaseExpression> <http://www.w3.org/2000/01/rdf-schema#comment> "A SQL case expression enables the use of the IF <condition> THEN <consequent> ELSE <alternative> logic within SQL statements."@en <http://ns.inria.fr/ast/sql#> .
+<http://ontology.it/itsmo/v1#links> <http://www.w3.org/2000/01/rdf-schema#comment> "This object property is a shortcut for the original itsmo:hasDirectDependency property for the common case of  having a runtime  (itsmo:runtimeDependency) dependency with weak strength (itsmo:strongDependency) with another resource (totally or partially).\nNote that this property is NOT transitive because states a DIRECT dependency.\nIt is an uses properties but with a weak dependency strenght becouse the link can be broken without risk of destruction for describing resource."@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#links> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://ontology.it/itsmo/v1#uses> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#links> <http://www.w3.org/2000/01/rdf-schema#label> "links" <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#links> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#uses> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.it/itsmo/v1#ConfigurationItem> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#uses> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontology.it/itsmo/v1/userguide#dependency_relations> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#uses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#uses> <http://www.w3.org/2000/01/rdf-schema#label> "uses" <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#uses> <http://www.w3.org/2000/01/rdf-schema#comment> "This object property is a shortcut for the original itsmo:hasDirectDependency property for the common case of  having a runtime  (itsmo:runtimeDependency) dependency with strong strength (itsmo:strongDependency) with another resource (totally or partially).\nNote that this property is NOT transitive because states a DIRECT dependency."@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#uses> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.it/itsmo/v1#ConfigurationItem> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#uses> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://ontology.it/itsmo/v1#qualitativeServiceProperty> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#requires> <http://www.w3.org/2000/01/rdf-schema#range> <http://ontology.it/itsmo/v1#ConfigurationItem> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#requires> <http://www.w3.org/2000/01/rdf-schema#label> "requires" <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#requires> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontology.it/itsmo/v1/userguide#dependency_relations> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#requires> <http://www.w3.org/2000/01/rdf-schema#comment> "A related resource that is directly totally or partially  included either physically or logically in the described resource. This property implies dcterms:hasPart\nThis object property is a shortcut for the original itsmo:hasDirectDependency property for the common case of having a static structural (itsmo:structuralDependency) dependency with strong strength (itsmo:strongDependency).\nNote that this property is NOT transitive becouse it states a DIRECT dependency.\nSee  http://ontology.it/itsmo/v1/itsmo.html#dependency_relations for more info.\nN.B. The study of part-whole relations is a large field in its own right - \"mereology\" and \"mereotopology\" and has been the topic of many papers.\nNote that this property is quite different form gr:includes one (that has a more restricted domains). gr:includes could be thinked as a subclass of itsmo:includes"@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#requires> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#requires> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://ontology.it/itsmo/v1#qualitativeServiceProperty> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#requires> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.it/itsmo/v1#ConfigurationItem> <http://ontology.it/itsmo/v1> .
+<http://open-services.net/ns/core#domain> <http://www.w3.org/2000/01/rdf-schema#label> "domain" <http://open-services.net/ns/core#> .
+<http://open-services.net/ns/core#domain> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open-services.net/ns/core#> <http://open-services.net/ns/core#> .
+<http://open-services.net/ns/core#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open-services.net/ns/core#> .
+<http://open-services.net/ns/core#domain> <http://www.w3.org/2000/01/rdf-schema#comment> "Namespace URI of the specification that is implemented by this service. In most cases this namespace URI will be for an OSLC domain, but other URIs MAY be used." <http://open-services.net/ns/core#> .
+<http://open-services.net/ns/core#domain> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://open-services.net/bin/view/Main/OslcCoreSpecification#Resource_Service> <http://open-services.net/ns/core#> .
+<http://open.vocab.org/terms/resultFrom> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/resultFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "The result of the test case obtained from the target specified. For example, the target could be a script that is executed."@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/resultFrom> <http://www.w3.org/2004/02/skos/core#note> <http://open.vocab.org/changes/f4577e13c365ef3467af73a58351b6bf> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/resultFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/resultFrom> <http://www.w3.org/2000/01/rdf-schema#label> "result from"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/resultFrom> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/docs/resultFrom> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/resultFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/resultFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/03/test-description#TestCase> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/resultFrom> <http://purl.org/dc/elements/1.1/created> "2010-07-03T09:13:15Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> <http://open.vocab.org/terms> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#hadPrimarySource> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl> <http://www.w3.org/2000/01/rdf-schema#label> "source URL"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl> <http://www.w3.org/2000/01/rdf-schema#comment> "The URL the context was extracted from, e.g. the blog or news article url. Doesn't matter whether it is HTML or XML or plain text. rdfs:range is foaf:Document.  Subproperty of prov:hadPrimarySource. In case the string comes from another NIF String and gives the exact provenance, please use nif:wasConvertedFrom or a subProperty thereof.\n    Changelog:\n    * 0.2.0 added subPropertyOf prov:hadPrimarySource\n    * 0.2.1 clarification\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#sourceUrl> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word> <http://www.w3.org/2000/01/rdf-schema#label> "Word"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    The Word class represents strings that are tokens or words. A string is a Word, if it is a word. We don't nitpic about whether it is a a pronoun, a name, a punctuation mark or an apostrophe or whether it is separated by white space from another Word or something else. The string 'He enters the room.' for example has 5 words. Words are assigned by a tokenizer NIF Implementation. Single word phrases might be tagged as nif:Word and nif:Phrase. \n    \n    Example 1: \"The White House\" are three Words separated by whitespace\n        \n    Comment 1: We adopted the definition style from foaf:Person, see here: http://xmlns.com/foaf/spec/#term_Person We are well aware that the world out there is much more complicated, but we are ignorant about it, for the following reasons:\n    Comment 2:  \n    \n    1. NIF has a client-server and the client has the ability to dictate the tokenization to the server (i.e. the NIF Implementation) by sending properly tokenized NIF annotated with nif:Word. All NIF Implementations are supposed to honor and respect the current assignment of the Word class. Thus the client should decide which NIF Implementation should create the tokenization. Therefore this class is not descriptive, but prescriptive.\n    2. The client may choose to send an existing tokenization to a NIF Implementation, with the capability to change (for better or for worse) the tokenization. \n    \n    \n   \n    The class has not been named 'Token' as the NLP definition of 'token' is descriptive (and not well-defined), while the assignment of what is a Word and what not is prescriptive, e.g. \"can't\" could be described as one, two or three tokens or defined as being one, two or three words. For further reading, we refer the reader to: By all these lovely tokens... Merging conflicting tokenizations by Christian Chiarcos, Julia Ritz, and Manfred Stede. Language Resources and Evaluation 46(1):53-74 (2012) or the short form: http://www.aclweb.org/anthology/W09-3005\n    There the task at hand is to merge two tokenization T_1 and T_2 which is normally not the case in the NIF world as tokenization is prescribed, i.e. given as a baseline (Note that this ideal state might not be achieved by all implementations.)\n    \n    Changelog:\n    * 0.1.1 fixed spelling\n    * 0.2.1 added a proper definition.\n    * 0.2.3 added examples and clarifications\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Word> <http://www.w3.org/2002/07/owl#versionInfo> "0.2.2" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> <http://www.w3.org/2000/01/rdf-schema#label> "anchor of"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#String> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The string, which the URI is representing as an RDF Literal. Some use cases require this property, as it is necessary for certain sparql queries. " <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://purl.oclc.org/NET/mvco.owl#Copy> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#Product> <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#Copy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#Copy> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#Work> <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#Copy> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#Copy> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#Instance> <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#Copy> <http://www.w3.org/2000/01/rdf-schema#comment> "A mechanical reproduction of analogue or digital representations of a given IP Entity. In the case of digital Copies the result is virtually identical  while in the case of analogue Copies the results can vary considerably in quality."@en <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#Copy> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.oclc.org/NET/mvco.owl#Manifestation> <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#Copy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/mvco.owl#IPEntity> <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/mvco.owl#Copy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf42a8f3e24353143abf83e833fc9b658 <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.org/acco/ns#BedDetails> <http://www.w3.org/2000/01/rdf-schema#label> "Bed Details"@en <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#BedDetails> <http://www.w3.org/2000/01/rdf-schema#comment> "A node holding detailed information about the available bed types, e.g. the quantity of twin beds for a hotel room. For the single case of just one bed of a certain type, you can use acco:bed directly with acco:BedType instances."@en <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#BedDetails> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#BedDetails> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/acco/ns#> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#referenceQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#referenceQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "reference quantity (0..*)"@en <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#referenceQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/acco/ns#> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#referenceQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "The reference quantity for which a certain price applies, e.g. 1 EUR per 4 kWh of electricity. This property is a replacement for gr:hasUnitOfMeasurement for the advanced cases where the price does not relate to a standard unit."@en <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#referenceQuantity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#referenceQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#bed> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#qualitativeProductOrServiceProperty> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#bed> <http://www.w3.org/2000/01/rdf-schema#domain> _:Be5334351d5fed4da8f73f5d80ebfdfa7 <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#bed> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of bed or beds included in the accommodation. For the single case of just one bed of a certain type, you use acco:bed directly with acco:BedType instances. If you want to indicate the quantity of a certain acco:BedType, use an instance of acco:BedDetails. For more detailed information, use acco:feature."@en <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#bed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#bed> <http://www.w3.org/2000/01/rdf-schema#range> _:Ba2fa5af523918c992846614056be0dc9 <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#bed> <http://www.w3.org/2000/01/rdf-schema#label> "bed (0..*)"@en <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#bed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/acco/ns#> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#unit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#unit> <http://www.w3.org/2000/01/rdf-schema#label> "unit (0..1)"@en <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#unit> <http://www.w3.org/2000/01/rdf-schema#comment> "A textual representation of the unit of measurement, e.g. global identifier, e.g. \"m\" or \"meter\". When you have the UN/CEFACT Common Code for the unit available, it is better to use acco:unitCode. This property is for the cases where a standardized unit code is not available from the data source."@en <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#unit> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bba7bed6e368b3c5f67d5b46a8bc6fc70 <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#unit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#unit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/acco/ns#> <http://purl.org/acco/ns> .
+<http://purl.org/acco/ns#unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/acco/ns> .
+<http://purl.org/biotop/biotop.owl#StaticProcessualEntity> <http://www.w3.org/2002/07/owl#priorVersion> "State" <http://purl.org/biotop/biotop.owl> .
+<http://purl.org/biotop/biotop.owl#StaticProcessualEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/biotop/biotop.owl> .
+<http://purl.org/biotop/biotop.owl#StaticProcessualEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "Static condition as a special case of process in which temporal parts are neglected.  " <http://purl.org/biotop/biotop.owl> .
+<http://purl.org/biotop/biotop.owl#StaticProcessualEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc941aa5e63bed4eca913f32101852f8b <http://purl.org/biotop/biotop.owl> .
+<http://purl.org/biotop/biotop.owl#StaticProcessualEntity> <http://www.w3.org/2000/01/rdf-schema#label> "static processual entity" <http://purl.org/biotop/biotop.owl> .
+<http://purl.org/biotop/biotop.owl#StaticProcessualEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/biotop/biotop.owl#Process> <http://purl.org/biotop/biotop.owl> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#label> "Configuration"@fr <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#label> "Configuration"@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#comment> "A state of the configuration process, assumed to correspond to a valid partially defined product - valid in the sense that it can be completed into an existing fully specified product, one that can be ordered, without changing any of the current selections.\n\nA configuration is defined by a Lexicon (the set of the descriptive attributes of the configured product, cf. the \"lexicon\" property), and by the set of choices that have been made so far (typically  selected specifications), cf. the \"definingChoice\" property.\n\nNote: A configurator application may conceivably have to handle “invalid configurations”, that is, combinations of specifications that are impossible. This can happen, for instance, if the user is allowed to begin the configuration process by choosing features without any control of their compatibility; or if she is allowed to choose a feature incompatible with her previous selections. In this case, it is the responsibility of the configurator application to restore the consistency of the configuration, necessarily by excluding some of the previous user selections. This Configuration class excludes such invalid combinations. \n\nRelation with GoodRelations and schema.org vocabularies :\nbecause a configuration mainly describes a Partially Defined Product, it can be seen as a GoodRelations \"ProductOrServiceModel\" (or a schema.org \"ProductModel): \"an intangible entity that specifies some characteristics of a group of similar, usually mass-produced products, in the sense of a prototype\". The suffix \"Model\" may seem misleading when used for a Configuration, as it suggests something such as \"Ford T\", and not \"Ford T with sunroof and climat control (itself not a completely defined product -  you still can choose, well, the color: it is a \"prototype of similar products\").\n\nOn the other hand, a Configuration has a price (more precisely, a \"from price\" - the minimum of the \"suggested retail prices\" of all the matching completely defined products). As such, a Configuration may be seen as a commercial offer. It can also be used to represent a customer's wish list, constrained by the definition of the range. It could therefore be considered as a gr:Offering (or a schema:Offer) as well.\n\nBut gr:ProductOrService and gr:Offering are disjoint classes: a given Configuration cannot be both. Depending on the use case, a publisher of configuration data may want to type her Configurations with either of these classes."@en <http://purl.org/configurationontology> .
+<http://purl.org/eis/vocab/daq#> <http://purl.org/dc/terms/modified> "2015-04-01"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://purl.org/dc/terms/creator> _:Bd35ad032c4e949d817e8706116608a8c <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset Quality Vocabulary (daQ)" <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://purl.org/dc/terms/creator> _:Bd384462ef302f4a2ab271b7efb734902 <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://www.w3.org/2000/01/rdf-schema#comment> "The Dataset Quality Vocabulary (daQ) is a lightweight, extensible core vocabulary for attaching the result of quality benchmarking of a linked open dataset (usually an expensive process) to that dataset.  daQ is designed to be extended by custom quality metrics.  Use cases include filtering and ranking datasets by quality." <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntity> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyPromise> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#TypeAndQuantityNode> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2000/01/rdf-schema#comment> "The warranty scope represents types of services that will be provided free of charge by the vendor or manufacturer in the case of a defect (e.g. labor and parts, just parts), as part of the warranty included in an gr:Offering. The actual services may be provided by the gr:BusinessEntity making the offering, by the manufacturer of the product, or by a third party. \n\nExamples: Parts and Labor, Parts"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Brand> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Location> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2000/01/rdf-schema#label> "Warranty scope"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyScope> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Offering> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit price specification is a conceptual entity that specifies the price asked for a given gr:Offering by the respective gr:Business Entity. An offering may be linked to multiple unit price specifications that specify alternative prices for non-overlapping sets of conditions (e.g. quantities or sales regions) or with differing validity periods. \n\nA unit price specification is characterized by (1) the lower and upper limits and the unit of measurement of the eligible quantity, (2) by a monetary amount per unit of the product or service, and (3)  whether this prices includes local sales taxes, namely VAT.\n\t\nExample: The price, including VAT, for 1 kg of a given material is 5 Euros per kg for 0 - 5 kg and 4 Euros for quantities above 5 kg.\n\nThe eligible quantity interval for a given price is specified using the object property gr:hasEligibleQuantity, which points to an instance of gr:QuantitativeValue. The currency is specified using the gr:hasCurrency property, which points to an ISO 4217 currency code. The unit of measurement for the eligible quantity is specified using the gr:hasUnitOfMeasurement datatype property, which points to an UN/CEFACT Common Code (3 characters).\n\t\nIn most cases, the appropriate unit of measurement is the UN/CEFACT Common Code \"C62\" for \"Unit or piece\", since a gr:Offering is defined by the quantity and unit of measurement of all items included (e.g. \"1 kg of bananas plus a 2 kg of apples\"). As long at the offering consists of only one item, it is also possible to use an unit of measurement of choice for specifying the price per unit. For bundles, however, only  \"C62\" for \"Unit or piece\" is a valid unit of measurement.\n\nYou can assume that the price is given per unit or piece if there is no gr:hasUnitOfMeasurement property attached to the price.\n\t\nWhether VAT and sales taxes are included in this price is specified using the property gr:valueAddedTaxIncluded (xsd:boolean).\n\t\nThe price per unit of measurement is specified as a float value of the gr:hasCurrencyValue property. The currency is specified via the gr:hasCurrency datatype property. Whether the price includes VAT or not is indicated by the gr:valueAddedTaxIncluded datatype property.\n\nThe property priceType can be used to indicate that the price is a retail price recommendation only (i.e. a list price). \n\nIf the price can only be given as a range, use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue for the upper and lower bounds.\n\nImportant: When querying for the price, always use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue.\n\nNote 1: Due to the complexity of pricing scenarios in various industries, it may be necessary to create extensions of this fundamental model of price specifications. Such can be done easily by importing and refining the GoodRelations ontology.\n\nNote 2: For Google, attaching a gr:validThrough statement to a gr:UnitPriceSpecification is mandatory. \n"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Unit price specification"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Brand> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2000/01/rdf-schema#label> "Warranty promise"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2000/01/rdf-schema#comment> "This is a conceptual entity that holds together all aspects of the n-ary relation gr:hasWarrantyPromise.\n\nA Warranty promise is an entity representing the duration and scope of services that will be provided to a customer free of charge in case of a defect or malfunction of the gr:ProductOrService. A warranty promise is characterized by its temporal duration (usually starting with the date of purchase) and its gr:WarrantyScope. The warranty scope represents the types of services provided (e.g. labor and parts, just parts) of the warranty included in an gr:Offering. The actual services may be provided by the gr:BusinessEntity making the offering, by the manufacturer of the product, or by a third party. There may be multiple warranty promises associated with a particular offering, which differ in duration and scope (e.g. pick-up service during the first 12 months, just parts and labor for 36 months).\n\nExamples: 12 months parts and labor, 36 months parts"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyScope> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Offering> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Location> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntity> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#WarrantyPromise> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#TypeAndQuantityNode> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Individual> <http://www.w3.org/2000/01/rdf-schema#label> "Individual"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Individual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Individual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Product> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Individual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Individual> <http://www.w3.org/2000/01/rdf-schema#comment> "A gr:Individual is an actual product or service instance, i.e., a single identifiable object or action that creates some increase in utility (in the economic sense) for the individual possessing or using this very object (product) or for the individual in whose favor this very action is being taken (service). Products or services are types of goods in the economic sense. For an overview of goods and commodities in economics, see Milgate (1987).\n\nExamples: MyThinkpad T60, the pint of beer standing in front of me, my Volkswagen Golf, the haircut that I received or will be receiving at a given date and time.\n\nNote 1: In many cases, product or service instances are not explicitly exposed on the Web but only claimed to exist (i.e. existentially quantified). In this case, use gr:SomeItems.\nNote 2: This class is the new, shorter form of the former gr:ActualProductOrServiceInstance.\n\nCompatibility with schema.org: This class is a subclass of http://schema.org/Product."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Individual> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#SomeItems> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Individual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Individual> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#ProductOrServiceModel> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Individual> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/goodrelations/v1#ActualProductOrServiceInstance> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PartsAndLabor-PickUp> <http://www.w3.org/2000/01/rdf-schema#label> "Parts and labor / pick up (warranty scope)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PartsAndLabor-PickUp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PartsAndLabor-PickUp> <http://www.w3.org/2000/01/rdf-schema#comment> "In case of a defect or malfunction, the buying party has the right to request from the selling gr:Business Entity to pick-up the good from its current location to a suitable service location, where the functionality of the good will be restored. All transportation, labor, parts, and materials needed to fix the problem will be covered by the selling business entity or one of its partnering business entities.\n  \nNote: This is just a rough classification for filtering offers. It is up to the buying party to check the exact scope and terms and conditions of the gr:WarrantyPromise."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PartsAndLabor-PickUp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#WarrantyScope> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PartsAndLabor-BringIn> <http://www.w3.org/2000/01/rdf-schema#comment> "In case of a defect or malfunction, the buying party has the right to transport the good to a service location determined by the the selling gr:BusinessEntity and will not be be charged for labor, parts, and materials needed to fix the problem. All those costs will be covered by the selling business entity or one of its partnering business entities.\n\nNote: This is just a rough classification for filtering offers. It is up to the buying party to check the exact scope and terms and conditions of the gr:WarrantyPromise."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PartsAndLabor-BringIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#WarrantyScope> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PartsAndLabor-BringIn> <http://www.w3.org/2000/01/rdf-schema#label> "Parts and labor / bring-in (warranty scope)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#PartsAndLabor-BringIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#includes> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#includes> <http://www.w3.org/2000/01/rdf-schema#label> "includes (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#includes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#includes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#Offering> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#includes> <http://www.w3.org/2000/01/rdf-schema#comment> "This object property is a shortcut for the original gr:includesObject property for the common case of having exactly one single gr:ProductOrService instance included in an Offering. \n\nWhen linking to an instance of gr:SomeItems or gr:Individual, it is equivalent to using a gr:TypeAndQuantityNode with gr:hasUnitOfMeasurement=\"C62\"^^xsd:string and gr:amountOfThisGood=\"1.0\"^^xsd:float for that good.\n\nWhen linking to a gr:ProductOrServiceModel, it is equivalent to \n1. defining an blank node for a gr:SomeItems\n2. linking that blank node via gr:hasMakeAndModel to the gr:ProductOrServiceModel, and\n3. linking from the gr:Offering to that blank node using another blank node of type gr:TypeAndQuantityNode with gr:hasUnitOfMeasurement=\"C62\"^^xsd:string and gr:amountOfThisGood=\"1.0\"^^xsd:float for that good."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#includes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "This specifies the business function of the gr:Offering, i.e. whether the gr:BusinessEntity is offering to sell, to lease, or to repair the particular type of product. In the case of bundles, it is also possible to attach individual business functions to each gr:TypeAndQuantityNode. The business function of the main gr:Offering determines the business function for all included objects or services, unless a business function attached to a gr:TypeAndQuantityNode overrides it.\n\t\nNote: While it is possible that an entity is offering multiple types of business functions for the same set of objects (e.g. rental and sales), this should usually not be stated by attaching multiple business functions to the same gr:Offering, since the gr:UnitPriceSpecification for the varying business functions will typically be very different."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#label> "has business function (1..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/2000/01/rdf-schema#domain> _:B40462f78bf0e86cb61ec3902c16712c7 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasBusinessFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/2000/01/rdf-schema#comment> "This subproperty specifies that the upper and lower limit of the given gr:QuantitativeValueFloat are identical and have the respective float value. It is a shortcut for such cases where a quantitative property is (at least practically) a single point value and not an interval."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/2000/01/rdf-schema#label> "has value float (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#hasMaxValueFloat> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#hasMinValueFloat> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QuantitativeValueFloat> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasInventoryLevel> <http://www.w3.org/2000/01/rdf-schema#label> "has inventory level (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasInventoryLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValueFloat> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasInventoryLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasInventoryLevel> <http://www.w3.org/2000/01/rdf-schema#domain> _:B49c42e610034e8eb4ed9dd330f8b0ecd <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasInventoryLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the current approximate inventory level for gr:SomeItems. The unit of measurement and the point value or interval are indicated using the attached gr:QuantitativeValueFloat instance.\n\nThis property can also be attached to a gr:Offering in cases where the included products are not modeled in more detail."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasInventoryLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#label> "serial number (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba5b4ce436c1b1986edfe1868ec450a03 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The serial number or any alphanumeric identifier of a particular product. Note that serial number are unique only for the same brand or the same model, so you cannot infer from two occurrences of the same serial number that the objects to which they are attached are identical.\n\nThis property can also be attached to a gr:Offering in cases where the included products are not modeled in more detail."@en <http://purl.org/goodrelations/v1> .
+<http://www.agls.gov.au/agls/terms/case> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/case> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.agls.gov.au/agls/1.2/mandate> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/case> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/case> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/case> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific piece of case law which requires or drives the creation or provision of the resource."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/case> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.agls.gov.au/agls/terms/mandate> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/case> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/case> <http://www.w3.org/2000/01/rdf-schema#label> "Case"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/case> <http://purl.org/dc/terms/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.agls.gov.au/agls/terms> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#case> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#morphosyntacticProperty> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#case> <http://www.w3.org/2000/01/rdf-schema#comment> "In a given sentence, the way in which the form of a word changes in order to express a relationship with one or several words of the sentence. The morphological modification may apply to nouns, pronouns noun phrase constituents, such as adjectives or numerals." <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#case> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#case> <http://www.w3.org/2002/07/owl#versionInfo> "1:0" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#case> <http://www.w3.org/2000/01/rdf-schema#label> "case" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#case> <http://purl.org/dc/elements/1.1/#creator> "Francopoulo, Gil" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#case> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#case> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.lexinfo.net/ontology/2.0/lexinfo#Case> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#case> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1840> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://purl.org/olia/ubyCat.owl#Case> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/olia/ubyCat.owl#WordFormAttribute> <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#Case> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#Case> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.isocat.org/datcat/DC-2720" <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#Case> <http://www.w3.org/2000/01/rdf-schema#label> "case" <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#has_case> <http://www.w3.org/2000/01/rdf-schema#label> "case" <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#has_case> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/olia/ubyCat.owl#Case> <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#has_case> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#has_case> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/olia/ubyCat.owl#has_WordFormAttribute> <http://purl.org/olia/ubyCat.owl> .
+<http://www.agls.gov.au/agls/terms/case> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.agls.gov.au/agls/terms/mandate> <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/case> <http://www.w3.org/2000/01/rdf-schema#label> "Case"@en-au <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/case> <http://purl.org/dc/terms/issued> "2002-04-18" <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/case> <http://purl.org/dc/terms/type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/case> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/case> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.agls.gov.au/agls/1.2/mandate> <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/case> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/case> <http://purl.org/dc/terms/modified> "2009-02-02" <http://reference.data.gov.au/def/ont/dataset> .
+<http://www.agls.gov.au/agls/terms/case> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific piece of case law which requires or drives the creation or provision of the resource."@en-au <http://reference.data.gov.au/def/ont/dataset> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/case.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcasea .
+_:Bcasea <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcasea <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/casea.nt> .
+_:Bcasea <https://w3id.org/tree#value> "casea" .
+_:Bcasea <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/casea.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcaseb .
+_:Bcaseb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcaseb <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/caseb.nt> .
+_:Bcaseb <https://w3id.org/tree#value> "caseb" .
+_:Bcaseb <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/caseb.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcasec .
+_:Bcasec <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcasec <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/casec.nt> .
+_:Bcasec <https://w3id.org/tree#value> "casec" .
+_:Bcasec <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/casec.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcased .
+_:Bcased <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcased <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/cased.nt> .
+_:Bcased <https://w3id.org/tree#value> "cased" .
+_:Bcased <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/cased.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcasee .
+_:Bcasee <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcasee <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/casee.nt> .
+_:Bcasee <https://w3id.org/tree#value> "casee" .
+_:Bcasee <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/casee.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcaseg .
+_:Bcaseg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcaseg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/caseg.nt> .
+_:Bcaseg <https://w3id.org/tree#value> "caseg" .
+_:Bcaseg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/caseg.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcasei .
+_:Bcasei <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcasei <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/casei.nt> .
+_:Bcasei <https://w3id.org/tree#value> "casei" .
+_:Bcasei <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/casei.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcasel .
+_:Bcasel <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcasel <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/casel.nt> .
+_:Bcasel <https://w3id.org/tree#value> "casel" .
+_:Bcasel <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/casel.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcasem .
+_:Bcasem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcasem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/casem.nt> .
+_:Bcasem <https://w3id.org/tree#value> "casem" .
+_:Bcasem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/casem.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcasen .
+_:Bcasen <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcasen <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/casen.nt> .
+_:Bcasen <https://w3id.org/tree#value> "casen" .
+_:Bcasen <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/casen.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcaseo .
+_:Bcaseo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcaseo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/caseo.nt> .
+_:Bcaseo <https://w3id.org/tree#value> "caseo" .
+_:Bcaseo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/caseo.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcasep .
+_:Bcasep <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcasep <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/casep.nt> .
+_:Bcasep <https://w3id.org/tree#value> "casep" .
+_:Bcasep <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/casep.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcaser .
+_:Bcaser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcaser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/caser.nt> .
+_:Bcaser <https://w3id.org/tree#value> "caser" .
+_:Bcaser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/caser.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcases .
+_:Bcases <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcases <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/cases.nt> .
+_:Bcases <https://w3id.org/tree#value> "cases" .
+_:Bcases <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/cases.nt> <https://w3id.org/tree#remainingItems> "198"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcaset .
+_:Bcaset <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcaset <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/caset.nt> .
+_:Bcaset <https://w3id.org/tree#value> "caset" .
+_:Bcaset <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/caset.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:Bcasev .
+_:Bcasev <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bcasev <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/casev.nt> .
+_:Bcasev <https://w3id.org/tree#value> "casev" .
+_:Bcasev <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/casev.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:B4X2Bcase .
+_:B4X2Bcase <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:B4X2Bcase <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/4+case.nt> .
+_:B4X2Bcase <https://w3id.org/tree#value> "4" .
+_:B4X2Bcase <https://w3id.org/tree#value> "case" .
+_:B4X2Bcase <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/4+case.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BaX2Bcase .
+_:BaX2Bcase <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bcase <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+case.nt> .
+_:BaX2Bcase <https://w3id.org/tree#value> "a" .
+_:BaX2Bcase <https://w3id.org/tree#value> "case" .
+_:BaX2Bcase <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+case.nt> <https://w3id.org/tree#remainingItems> "34"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BbX2Bcase .
+_:BbX2Bcase <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bcase <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+case.nt> .
+_:BbX2Bcase <https://w3id.org/tree#value> "b" .
+_:BbX2Bcase <https://w3id.org/tree#value> "case" .
+_:BbX2Bcase <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+case.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcX2Bcase .
+_:BcX2Bcase <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Bcase <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+case.nt> .
+_:BcX2Bcase <https://w3id.org/tree#value> "c" .
+_:BcX2Bcase <https://w3id.org/tree#value> "case" .
+_:BcX2Bcase <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+case.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Bd .
+_:BcaseX2Bd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Bd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+d.nt> .
+_:BcaseX2Bd <https://w3id.org/tree#value> "case" .
+_:BcaseX2Bd <https://w3id.org/tree#value> "d" .
+_:BcaseX2Bd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+d.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Be .
+_:BcaseX2Be <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Be <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+e.nt> .
+_:BcaseX2Be <https://w3id.org/tree#value> "case" .
+_:BcaseX2Be <https://w3id.org/tree#value> "e" .
+_:BcaseX2Be <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+e.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Bf .
+_:BcaseX2Bf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Bf <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+f.nt> .
+_:BcaseX2Bf <https://w3id.org/tree#value> "case" .
+_:BcaseX2Bf <https://w3id.org/tree#value> "f" .
+_:BcaseX2Bf <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+f.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Bh .
+_:BcaseX2Bh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Bh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+h.nt> .
+_:BcaseX2Bh <https://w3id.org/tree#value> "case" .
+_:BcaseX2Bh <https://w3id.org/tree#value> "h" .
+_:BcaseX2Bh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+h.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Bi .
+_:BcaseX2Bi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Bi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+i.nt> .
+_:BcaseX2Bi <https://w3id.org/tree#value> "case" .
+_:BcaseX2Bi <https://w3id.org/tree#value> "i" .
+_:BcaseX2Bi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+i.nt> <https://w3id.org/tree#remainingItems> "32"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Bl .
+_:BcaseX2Bl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Bl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+l.nt> .
+_:BcaseX2Bl <https://w3id.org/tree#value> "case" .
+_:BcaseX2Bl <https://w3id.org/tree#value> "l" .
+_:BcaseX2Bl <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+l.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Bm .
+_:BcaseX2Bm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Bm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+m.nt> .
+_:BcaseX2Bm <https://w3id.org/tree#value> "case" .
+_:BcaseX2Bm <https://w3id.org/tree#value> "m" .
+_:BcaseX2Bm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+m.nt> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Bn .
+_:BcaseX2Bn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Bn <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+n.nt> .
+_:BcaseX2Bn <https://w3id.org/tree#value> "case" .
+_:BcaseX2Bn <https://w3id.org/tree#value> "n" .
+_:BcaseX2Bn <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+n.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Bo .
+_:BcaseX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+o.nt> .
+_:BcaseX2Bo <https://w3id.org/tree#value> "case" .
+_:BcaseX2Bo <https://w3id.org/tree#value> "o" .
+_:BcaseX2Bo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+o.nt> <https://w3id.org/tree#remainingItems> "132"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Bp .
+_:BcaseX2Bp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Bp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+p.nt> .
+_:BcaseX2Bp <https://w3id.org/tree#value> "case" .
+_:BcaseX2Bp <https://w3id.org/tree#value> "p" .
+_:BcaseX2Bp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+p.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Bq .
+_:BcaseX2Bq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Bq <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+q.nt> .
+_:BcaseX2Bq <https://w3id.org/tree#value> "case" .
+_:BcaseX2Bq <https://w3id.org/tree#value> "q" .
+_:BcaseX2Bq <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+q.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Br .
+_:BcaseX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+r.nt> .
+_:BcaseX2Br <https://w3id.org/tree#value> "case" .
+_:BcaseX2Br <https://w3id.org/tree#value> "r" .
+_:BcaseX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+r.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Bs .
+_:BcaseX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+s.nt> .
+_:BcaseX2Bs <https://w3id.org/tree#value> "case" .
+_:BcaseX2Bs <https://w3id.org/tree#value> "s" .
+_:BcaseX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+s.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Bt .
+_:BcaseX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+t.nt> .
+_:BcaseX2Bt <https://w3id.org/tree#value> "case" .
+_:BcaseX2Bt <https://w3id.org/tree#value> "t" .
+_:BcaseX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+t.nt> <https://w3id.org/tree#remainingItems> "94"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Bu .
+_:BcaseX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+u.nt> .
+_:BcaseX2Bu <https://w3id.org/tree#value> "case" .
+_:BcaseX2Bu <https://w3id.org/tree#value> "u" .
+_:BcaseX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+u.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/case.nt> <https://w3id.org/tree#relation> _:BcaseX2Bw .
+_:BcaseX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcaseX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/case+w.nt> .
+_:BcaseX2Bw <https://w3id.org/tree#value> "case" .
+_:BcaseX2Bw <https://w3id.org/tree#value> "w" .
+_:BcaseX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/case+w.nt> <https://w3id.org/tree#remainingItems> "29"^^<http://www.w3.org/2001/XMLSchema#int> .

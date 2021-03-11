@@ -1,0 +1,361 @@
+<http://linked.earth/ontology#hasUnits> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bab4aaabb96987fa2a23d329c98c9403d <http://linked.earth/ontology#> .
+<http://linked.earth/ontology#hasUnits> <http://www.w3.org/2000/01/rdf-schema#label> "hasUnits"@en <http://linked.earth/ontology#> .
+<http://linked.earth/ontology#hasUnits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://linked.earth/ontology#> .
+<http://linked.earth/ontology#hasUnits> <http://www.w3.org/2000/01/rdf-schema#comment> "units in which a resource is measured The resource can be a Variable, an Observation, a Resolution, or an Uncertainty"@en <http://linked.earth/ontology#> .
+<http://linked.earth/ontology#hasUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://linked.earth/ontology#> .
+<http://linked.earth/ontology#hasUnits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://linked.earth/ontology#> .
+<https://w3id.org/seas/Property> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <https://w3id.org/seas/FeatureOfInterestOntology> .
+<https://w3id.org/seas/Property> <http://www.w3.org/2000/01/rdf-schema#comment> "An observable or operable Quality of an Event or Object. That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor, or operable by an actuator. \r\n\r\nOn the other hand, a property may also itself be a feature of interest. For example if a fridge uses alternative current energy, then several aspects of its energy consumption property may be quantified. Examples of such aspects include:\r\n\r\n- the active power consumption;\r\n- the reactive power consumption;\r\n- the phase of voltage relative to current;\r\n- the frequency;\r\n- the minimal operating value of the frequency;\r\n- the number of occurences of unusual values.\r\n\r\nThese are different properties of the same property:\r\n\r\n```\r\nex:activePower a owl:ObjectProperty ;\r\n  rdfs:subPropertyOf seas:hasProperty ;\r\n  rdfs:domain seas:PowerProperty ;\r\n  rdfs:range seas:PowerProperty .\r\n\r\n<fridge/1/consumption> a seas:FeatureOfInterest ;\r\n  ex:activePower <fridge/1/consumption/activePower> .\r\n```\r\n\r\n"@en <https://w3id.org/seas/FeatureOfInterestOntology> .
+<https://w3id.org/seas/Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be8f69e6191b71e3c36c4d19c13f53f03 <https://w3id.org/seas/FeatureOfInterestOntology> .
+<https://w3id.org/seas/Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/seas/FeatureOfInterestOntology> .
+<https://w3id.org/seas/Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en <https://w3id.org/seas/FeatureOfInterestOntology> .
+<https://w3id.org/seas/Property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/FeatureOfInterestOntology> <https://w3id.org/seas/FeatureOfInterestOntology> .
+<https://www.w3.org/ns/ssn/Precision> <http://www.w3.org/2000/01/rdf-schema#comment> "The closeness of agreement between replicate observations on an unchanged or similar quality value: i.e., a measure of a sensor's ability to consitently reproduce an observation." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Precision> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Precision> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'measurement precision/precision' [VIM 2.15]\n                                   http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Precision> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/ssn/MeasurementProperty> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Precision> <http://www.w3.org/2000/01/rdf-schema#label> "Precision" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9f00b7930744f2729f80153db9368a5f <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3910019ebe22f5900015b1557846f7d9 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "An Observation is a Situation in which a Sensing method has been used to estimate or calculate a value of a Property of a FeatureOfInterest.  Links to Sensing and Sensor describe what made the Observation and how; links to Property and Feature detail what was sensed; the result is the output of a Sensor; other metadata details times etc." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1815d6d77fb272086e6286c7380ade0c <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9e767021f7fdabf63d04fc2a5535bdc3 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B39c0eca3a2f93decfb240aac124f946c <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B77ef5467393d15e4f6898476311eae57 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Baa3889f13ff7bf5c1f3b3f873dda0f46 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Observation> <http://purl.org/dc/elements/1.1/source> "skos:closeMatch 'observation' [O&M] \n\t\t                    http://www.opengeospatial.org/standards/om \n\nObservation in this ontology and O&M are described differently (O&M records an observation as an act/event), but they record the same thing and are essentially interchangeable.  The difference is in the ontological structure of the two, not the data or use.\n\nObservation here records a Situation (the estimation of the value of a Property) and a description of the method that was used (along with the participants), while O&M interprets an Observation as the event itself; there must, however, have been an event that lead to our situation, so both are records of events.  The distinction is between the event itself and the record of what happened in that event.\n\n\nskos:closeMatch 'measurement result' [VIM 2.9] http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf\n\nMeasurement result in VIM is the measured value plus any other relevant information, which means that measurement result and observation will often be associated to the same data (a value, a time, a property, etc.)." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf24c9660e473fde0b09fa803ce23f4cd <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0fd77e3aa9695759fb4930389507d946 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B503a3fe8d963f2150d382c3f19d76476 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/observedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/observedProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation to the Property that was observed.  The observedProperty should be a Property (hasProperty) of the FeatureOfInterest (linked by featureOfInterest) of this observation." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/observedProperty> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'observedProperty' [O&M - ISO/DIS 19156] \n\t\t                    http://portal.opengeospatial.org/files/?artifact_id=41579" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/observedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "observed property" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/featureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an observation and the entity whose quality was observed.   For example, in an observation of the weight of a person, the feature of interest is the person and the quality is weight." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/featureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "feature of interest" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/featureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/featureOfInterest> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'featureOfInterest' [O&M - ISO/DIS 19156] \n\t\t                    http://portal.opengeospatial.org/files/?artifact_id=41579" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/produces> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B8d58c67fd0c5f999b5a2700cf272414c <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/produces> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/produces> <http://www.w3.org/2002/07/owl#inverseOf> <https://www.w3.org/ns/ssn/isProducedBy> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/produces> <http://www.w3.org/2000/01/rdf-schema#comment> "The chain here means that if a sensor made an observation and that observation has a result, then the result is the one produced by the sensor.  Just ensures that the sensor and the resulting observation agree on the result." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/produces> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/SensorOutput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0801fe80b762a61a2efe456530b09b05 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/SensorOutput> <http://purl.org/dc/elements/1.1/source> "http://www.w3.org/2005/Incubator/ssn/\n\n                                  skos:closeMatch 'observation result' [O&M] \n                                  http://www.opengeospatial.org/standards/om \n\nSee comments at ObservationValue." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/SensorOutput> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor Output" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/SensorOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/SensorOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensor outputs a piece of information (an observed value), the value itself being represented by an ObservationValue." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/SensorOutput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfdb2eab6428276e1d236afb98fec5d6b <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/ResponseTime> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'step response time' [VIM 4.23]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/ResponseTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time between a (step) change inthe value of an observed quality and a sensor (possibly with specified error) 'settling' on an observed value." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/ResponseTime> <http://www.w3.org/2000/01/rdf-schema#label> "Response time" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/ResponseTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/ResponseTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/ssn/MeasurementProperty> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Accuracy> <http://www.w3.org/2000/01/rdf-schema#label> "Accuracy" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Accuracy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/ssn/MeasurementProperty> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Accuracy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Accuracy> <http://www.w3.org/2000/01/rdf-schema#comment> "The closeness of agreement between the value of an observation and the true value of the observed quality." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Accuracy> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'measurement accuracy/accuracy' [VIM 2.13] \n\t\t                    http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/MeasurementRange> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/MeasurementRange> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/ssn/MeasurementProperty> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/MeasurementRange> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement Range" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/MeasurementRange> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'measuring interval/measurement range' [VIM 4.7]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/MeasurementRange> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of values that the sensor can return as the result of an observation under the defined conditions with the defined measurement properties.  (If no conditions are specified or the conditions do not specify a range for the observed qualities, the measurement range is to be taken as the condition for the observed qualities.)" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <https://www.w3.org/ns/ssn/isPropertyOf> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The chain here ensures that the observed property of an observation is a property of the feature of interest.  This restriction is written in O&M; here we can enforce it formally.\n\nThe more obvious formulation:\n\nfeatureOfInterest o hasProperty SubPropertyOf observedProperty\n\ncan't be used, because (by the OWL2 decidability restrictions) that would mean cardinality restrictions couldn't be applied to observedProperty (see definition of Observation)." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a FeatureOfInterest and a Property of that feature." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:Baedbdcc1ae976498912109add53c5ff8 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/DetectionLimit> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'detection limit' [VIM 4.18] \n                                 http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/DetectionLimit> <http://www.w3.org/2000/01/rdf-schema#label> "detection limit" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/DetectionLimit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/ssn/MeasurementProperty> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/DetectionLimit> <http://www.w3.org/2000/01/rdf-schema#comment> "An observed value for which the probability of falsely claiming the absence of a component in a material is Î², given a probability Î± of falsely claiming its presence." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/DetectionLimit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd63a31c26ba00e9ca86fba60af5c5653 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Property> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'property' [O&M] \n\t\t                    http://www.opengeospatial.org/standards/om" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Property> <http://www.w3.org/2000/01/rdf-schema#comment> "An observable Quality of an Event or Object.  That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Deployment> <http://purl.org/dc/elements/1.1/source> "skos:closeMatch 'Deployment' [MMI Dev]\n                                 http://marinemetadata.org/community/teams/ontdevices" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Deployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bded6bf5176869fbc5784397af50a245c <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Deployment> <http://www.w3.org/2000/01/rdf-schema#comment> "The ongoing Process of Entities (for the purposes of this ontology, mainly sensors) deployed for a particular purpose.  For example, a particular Sensor deployed on a Platform, or a whole network of Sensors deployed for an observation campaign.  The deployment may have sub processes, such as installation, maintenance, addition, and decomissioning and removal." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Deployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/ssn/DeploymentRelatedProcess> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Deployment> <http://www.w3.org/2000/01/rdf-schema#label> "Deployment" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Deployment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bed1f6b7d079d6e8677b59abd7b3c6d90 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/Deployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/ObservationValue> <http://www.w3.org/2000/01/rdf-schema#label> "Observation Value" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/ObservationValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of the result of an Observation.  An Observation has a result which is the output of some sensor, the result is an information object that encodes some value for a Feature." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/ObservationValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcbeeee51f3f5dc06da9c9d1af962e484 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/ObservationValue> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'measured quantity value' [VIM 2.10]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf\n\nskos:exactMatch 'observed value' [SensorML OGC-0700]\nhttp://www.opengeospatial.org/standards/sensorml \n\nskos:closeMatch 'observation result' [O&M]\nhttp://www.opengeospatial.org/standards/om \n\nO&M conflates what we have as SensorOutput and ObservationValue into observation result, though the OGC standard does say \"result contains a value\" and \"a result which has a value\", which fits naturally with the model here." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/ObservationValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/observationResult> <http://www.w3.org/2000/01/rdf-schema#label> "observation result" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/observationResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation (i.e., a description of the context, the Situation, in which the observatioin was made) and a Result, which contains a value representing the value associated with the observed Property." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/observationResult> <http://purl.org/dc/elements/1.1/source> "skos:closeMatch 'result' [O&M - ISO/DIS 19156] \n\t\t                    http://portal.opengeospatial.org/files/?artifact_id=41579" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/observationResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/MeasurementLatency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/MeasurementLatency> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.w3.org/ns/ssn/MeasurementProperty> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/MeasurementLatency> <http://www.w3.org/2000/01/rdf-schema#label> "MeasurementLatency" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/MeasurementLatency> <http://www.w3.org/2000/01/rdf-schema#comment> "The time between a request for an observation and the sensor producing a result (not including network latency to retrieve the result, just time from request to measurement.)." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://www.w3.org/ns/ssn/hasProperty> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/qualityOfObservation> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'resultQuality' [O&M - ISO/DIS 19156] \n\t\t                    http://portal.opengeospatial.org/files/?artifact_id=41579" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation to the adjudged quality of the result.  This is of course complimentary to the MeasurementCapability information recorded for the Sensor that made the Observation." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/qualityOfObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Observation#Observation" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/qualityOfObservation> <http://www.w3.org/2000/01/rdf-schema#label> "quality of observation" <https://www.w3.org/ns/ssn> .
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a standard to measure a quality dimension. An observation (instance of dqv:QualityMeasurement) assigns a value in a given unit to a Metric."@en <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/2000/01/rdf-schema#label> "Metric"@en <http://www.w3.org/ns/dqv> .
+<http://www.w3.org/ns/dqv#Metric> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/eis/vocab/daq#Metric> <http://www.w3.org/ns/dqv> .
+<http://purl.oclc.org/NET/ssnx/ssn#observationResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation (i.e., a description of the context, the Situation, in which the observatioin was made) and a Result, which contains a value representing the value associated with the observed Property." <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#observationResult> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#observationResult> <http://www.w3.org/2000/01/rdf-schema#label> "Observation Result"@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#observationResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#observationResult> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#observationResult> <http://purl.org/dc/elements/1.1/source> "skos:closeMatch 'result' [O&M - ISO/DIS 19156] \n\t\t                    http://portal.opengeospatial.org/files/?artifact_id=41579" <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.onem2m.org/ontology/Base_Ontology/base_ontology#Service> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton" <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B075394dfb6cc2a73623beb18d0271228 <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5a6d063ea6bafe1fd01b7f341017962b <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3649946564eaf306b8dd01ab5b2b27c2 <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0818399a8b26bc8a81136b53e719030a <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "An Observation is a Situation in which a Sensing method has been used to estimate or calculate a value of a Property of a FeatureOfInterest.  Links to Sensing and Sensor describe what made the Observation and how; links to Property and Feature detail what was sensed; the result is the output of a Sensor; other metadata details times etc." <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B393bda84ba67291e3af9cce7a8f70b24 <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://purl.org/dc/elements/1.1/source> "skos:closeMatch 'observation' [O&M] \n\t\t                    http://www.opengeospatial.org/standards/om \n\nObservation in this ontology and O&M are described differently (O&M records an observation as an act/event), but they record the same thing and are essentially interchangeable.  The difference is in the ontological structure of the two, not the data or use.\n\nObservation here records a Situation (the estimation of the value of a Property) and a description of the method that was used (along with the participants), while O&M interprets an Observation as the event itself; there must, however, have been an event that lead to our situation, so both are records of events.  The distinction is between the event itself and the record of what happened in that event.\n\n\nskos:closeMatch 'measurement result' [VIM 2.9] http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf\n\nMeasurement result in VIM is the measured value plus any other relevant information, which means that measurement result and observation will often be associated to the same data (a value, a time, a property, etc.)." <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#ObservationValue> <http://www.w3.org/2000/01/rdf-schema#label> "Observation Value" <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#ObservationValue> <http://www.w3.org/2000/01/rdf-schema#comment> "The value of the result of an Observation.  An Observation has a result which is the output of some sensor, the result is an information object that encodes some value for a Feature." <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#ObservationValue> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'measured quantity value' [VIM 2.10]\n                                  http://www.bipm.org/utils/common/documents/jcgm/JCGM_200_2008.pdf\n\nskos:exactMatch 'observed value' [SensorML OGC-0700]\nhttp://www.opengeospatial.org/standards/sensorml \n\nskos:closeMatch 'observation result' [O&M]\nhttp://www.opengeospatial.org/standards/om \n\nO&M conflates what we have as SensorOutput and ObservationValue into observation result, though the OGC standard does say \"result contains a value\" and \"a result which has a value\", which fits naturally with the model here." <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#ObservationValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#ObservationValue> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Base#Data" <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#ObservationValue> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd58b96f2ca89fba1047be3b89cfc5ad4 <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#ObservationValue> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.onem2m.org/ontology/Base_Ontology/base_ontology#OperationOutput> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#observedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Observed Property" <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#observedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#observedProperty> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'observedProperty' [O&M - ISO/DIS 19156] \n\t\t                    http://portal.opengeospatial.org/files/?artifact_id=41579" <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#observedProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation to the Property that was observed.  The observedProperty should be a Property (hasProperty) of the FeatureOfInterest (linked by featureOfInterest) of this observation." <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#observedProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/NET/ssnx/qu/qu#QuantityKind> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#observedProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.oclc.org/NET/ssnx/ssn#Observation> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> <http://www.w3.org/2000/01/rdf-schema#comment> "A sensor outputs a piece of information (an observed value), the value itself being represented by an ObservationValue." <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> <http://www.w3.org/2000/01/rdf-schema#label> "Sensor Output"@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Skeleton#Skeleton" <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#SensorOutput> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bdc5403962c734857a05756a87ecce513 <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Deployment> <http://purl.org/dc/elements/1.1/source> "skos:closeMatch 'Deployment' [MMI Dev]\n                                 http://marinemetadata.org/community/teams/ontdevices" <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Deployment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Deploy#Deployment" <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Deployment> <http://www.w3.org/2000/01/rdf-schema#comment> "The ongoing Process of Entities (for the purposes of this ontology, mainly sensors) deployed for a particular purpose.  For example, a particular Sensor deployed on a Platform, or a whole network of Sensors deployed for an observation campaign.  The deployment may have sub processes, such as installation, maintenance, addition, and decomissioning and removal." <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Deployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#Deployment> <http://www.w3.org/2000/01/rdf-schema#label> "Deployment"@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2004/02/skos/core#definition> "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "observed property"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation to the property that was observed. The ObservableProperty should be a property of the FeatureOfInterest (linked by hasFeatureOfInterest) of this Observation."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an Observation and the Sensor which made the Observation."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2004/02/skos/core#definition> "Relation between an Observation and the Sensor which made the Observation."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/2000/01/rdf-schema#label> "made by sensor"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/observes> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is observed by"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://www.w3.org/2004/02/skos/core#definition> "Relation between an ObservableProperty and the Sensor able to observe it."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an ObservableProperty and the Sensor able to observe it."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isObservedBy> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://schema.org/rangeIncludes> <http://www.w3.org/2006/time#TemporalEntity> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2004/02/skos/core#definition> "The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#label> "phenomenon time"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time that the Result of an Observation, Actuation or Sampling applies to the FeatureOfInterest. Not necessarily the same as the resultTime. May be an Interval or an Instant, or some other compound TemporalEntity."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/phenomenonTime> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#comment> "Samples are artifacts of an observational strategy, and have no significant function outside of their role in the observation process. The characteristics of the samples themselves are of little interest, except perhaps to the manager of a sampling campaign.\n\nA Sample is intended to sample some FatureOfInterest, so there is an expectation of at least one isSampleOf property. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2004/02/skos/core#example> "A statistical sample is often designed to be characteristic of an entire population, so that observations can be made regarding the sample that provide a good estimate of the properties of the population."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2004/02/skos/core#example> "A 'station' is essentially an identifiable locality where a sensor system or Procedure may be deployed and an observation made. In the context of the observation model, it connotes the 'world in the vicinity of the station', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#label> "Sample"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2004/02/skos/core#definition> "Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2004/02/skos/core#note> "A transient sample, such as a ships-track or flight-line, might be identified and described, but is unlikely to be revisited exactly."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#comment> "Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical samples are sometimes known as 'specimens'."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/isResultOf> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#label> "has result"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation linking an Observation and a Sensor or Actuator and a Result, which contains a value representing the value associated with the observed Property."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasResult> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Result> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasResult> <http://www.w3.org/2004/02/skos/core#definition> "Relation linking an Observation and a Sensor or Actuator and a Result, which contains a value representing the value associated with the observed Property."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2004/02/skos/core#definition> "A relation between an Observation and the entity whose quality was observed, or between an Actuation and the entity whose property was modified, or between an act of Sampling and the entity that was sampled."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2004/02/skos/core#example> "For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "has feature of interest"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2004/02/skos/core#note> "Many observations may be created via the same Procedure, the same way as many tables are assembled using the same instructions (as information objects, not their concrete realization)."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#comment> "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2004/02/skos/core#example> "The measured wind speed differs depending on the height of the sensor above the surface, e.g., due to friction. Consequently, procedures for measuring wind speed define a standard height for anemometers above ground, typically 10m for meteorological measures and 2m in Agrometeorology. This definition of height, sensor placement, and so forth are defined by the Procedure."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2004/02/skos/core#definition> "A workflow, protocol, plan, algorithm, or computational method specifying how to make an Observation, create a Sample, or make a change to the state of the world (via an Actuator). A Procedure is re-usable, and might be involved in many Observations, Samplings, or Actuations. It explains the steps to be carried out to arrive at reproducible results."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#label> "Procedure"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2004/02/skos/core#example> "For instance, the values 23 or true."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#comment> "The simple value of an Observation or Actuation."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2004/02/skos/core#definition> "The simple value of an Observation or Actuation."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#label> "has simple result"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/hasSimpleResult> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/madeBySensor> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeObservation> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeObservation> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/2000/01/rdf-schema#label> "made observation"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Sensor and an Observation it has made."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/madeObservation> <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Sensor and an Observation it has made."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observes> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#label> "observes"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observes> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sensor> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Sensor and an ObservableProperty that it is capable of sensing."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/isObservedBy> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/observes> <http://www.w3.org/2004/02/skos/core#definition> "Relation between a Sensor and an ObservableProperty that it is capable of sensing."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2004/02/skos/core#definition> "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/2000/01/rdf-schema#label> "used procedure"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/usedProcedure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2004/02/skos/core#example> "The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2004/02/skos/core#definition> "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "Act of carrying out an (Observation) Procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.w3.org/ns/sosa/hasFeatureOfInterest> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Observation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Actuation> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://schema.org/rangeIncludes> <http://www.w3.org/ns/sosa/Sampling> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/2004/02/skos/core#definition> "A relation between a FeatureOfInterest and an Observation about it, an Actuation acting on it, or an act of Sampling that sampled it."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/2000/01/rdf-schema#label> "is feature of interest of"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://schema.org/domainIncludes> <http://www.w3.org/ns/sosa/Sample> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/isFeatureOfInterestOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#comment> "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2004/02/skos/core#definition> "The thing whose property is being estimated or calculated in the course of an Observation to arrive at a Result or whose property is being manipulated by an Actuator, or which is being sampled or transformed in an act of Sampling."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Feature Of Interest"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2004/02/skos/core#example> "When measuring the height of a tree, the height is the observed ObservableProperty, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuator."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#label> "Result"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2004/02/skos/core#example> "The value 20 as the height of a certain tree together with the unit, e.g., Meter."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2000/01/rdf-schema#comment> "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/Result> <http://www.w3.org/2004/02/skos/core#definition> "The Result of an Observation, Actuation, or act of Sampling. To store an observation's simple result value one can use the hasSimpleResult property."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "An observable quality (property, characteristic) of a FeatureOfInterest."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/sosa/> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2004/02/skos/core#example> "The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2004/02/skos/core#definition> "An observable quality (property, characteristic) of a FeatureOfInterest."@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Observable Property"@en <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/sosa/ObservableProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/sosa/> .
+<http://www.w3.org/ns/ssn/wasOriginatedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/wasOriginatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "was originated by"@en <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/wasOriginatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/wasOriginatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an Observation and the Stimulus that originated it."@en <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/wasOriginatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/wasOriginatedBy> <http://www.w3.org/2004/02/skos/core#definition> "Relation between an Observation and the Stimulus that originated it."@en <http://www.w3.org/ns/ssn/> .
+<https://w3id.org/seas/Observation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/seas/DeviceOntology> .
+<https://w3id.org/seas/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf0abade8212c314baa442de6849a8dc8 <https://w3id.org/seas/DeviceOntology> .
+<https://w3id.org/seas/Observation> <http://www.w3.org/2000/01/rdf-schema#comment> "An observation is the execution of some sensing procedure by some sensor."@en <https://w3id.org/seas/DeviceOntology> .
+<https://w3id.org/seas/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pep/ProcedureExecution> <https://w3id.org/seas/DeviceOntology> .
+<https://w3id.org/seas/Observation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation"@en <https://w3id.org/seas/DeviceOntology> .
+<https://w3id.org/seas/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0a587526d880e2f53e6f56d29b95ab92 <https://w3id.org/seas/DeviceOntology> .
+<https://w3id.org/seas/Observation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/DeviceOntology> <https://w3id.org/seas/DeviceOntology> .
+<https://w3id.org/seas/Observation> <http://www.w3.org/2002/07/owl#equivalentClass> _:B8c464371098099523ebd5f54a2a07176 <https://w3id.org/seas/DeviceOntology> .
+<https://w3id.org/seas/Observation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4da0f46541b89ba92146383efddbffcb <https://w3id.org/seas/DeviceOntology> .
+<https://w3id.org/seas/Observation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <https://w3id.org/seas/DeviceOntology> .
+<https://w3id.org/eepsa#obsDate> <http://www.w3.org/2000/01/rdf-schema#label> "observation date"@en <https://w3id.org/eepsa> .
+<https://w3id.org/eepsa#obsDate> <http://www.w3.org/2004/02/skos/core#example> "Example:\nmyOnto:obs1 eepsa:observationDate \"2017-02-15\"."@en <https://w3id.org/eepsa> .
+<https://w3id.org/eepsa#obsDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/eepsa> .
+<https://w3id.org/eepsa#obsDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Determines the Date (e.g. yyyy-MM-dd) of an observation." <https://w3id.org/eepsa> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/an+obse.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/an+obse.nt> <https://w3id.org/tree#relation> _:BanX2Bobser .
+_:BanX2Bobser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BanX2Bobser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/an+obser.nt> .
+_:BanX2Bobser <https://w3id.org/tree#value> "an" .
+_:BanX2Bobser <https://w3id.org/tree#value> "obser" .
+_:BanX2Bobser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/an+obser.nt> <https://w3id.org/tree#remainingItems> "53"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/an+obse.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/an+obse.nt> <https://w3id.org/tree#relation> _:BanX2Bobser .
+_:BanX2Bobser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BanX2Bobser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/an+obser.nt> .
+_:BanX2Bobser <https://w3id.org/tree#value> "an" .
+_:BanX2Bobser <https://w3id.org/tree#value> "obser" .
+_:BanX2Bobser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/an+obser.nt> <https://w3id.org/tree#remainingItems> "53"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/an+obse.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/an+obse.nt> <https://w3id.org/tree#relation> _:BanX2Bobser .
+_:BanX2Bobser <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BanX2Bobser <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/an+obser.nt> .
+_:BanX2Bobser <https://w3id.org/tree#value> "an" .
+_:BanX2Bobser <https://w3id.org/tree#value> "obser" .
+_:BanX2Bobser <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/an+obser.nt> <https://w3id.org/tree#remainingItems> "53"^^<http://www.w3.org/2001/XMLSchema#int> .

@@ -1,0 +1,558 @@
+<http://purl.org/cerif/frapo/enables> <http://purl.org/dc/elements/1.1/description> "Domain and range constraints have been removed from this object property to permit it to be used in unforeseen ways."@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/enables> <http://www.w3.org/2000/01/rdf-schema#comment> "An object property relating an entity to another entity that it enables, e.g. linking a project to an endeavour that the project enables."@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/enables> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/enables> <http://www.w3.org/2000/01/rdf-schema#label> "enables"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/configurationontology#definingChoice> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/configurationontology#Specification> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/configurationontology#Configuration> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#comment> "A SubProperty of co:definingChoice listing the specifications selected by the user: \nIf two or more of the cold:chosenSpec of a Configuration correspond to the same cold:ConfigurationVariable, by convention they are to be interpreted as ORed (even XORed, by the way, as such specifications are alternative). \nSo:\nex:AConf coold:chosenSpec ex:SimpleRadio, ex:RadioMP3.\nmeans that the car has either a ex:SimpleRadio, or a ex:RadioMP3, not both. "@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#chosenSpec> <http://www.w3.org/2000/01/rdf-schema#label> "chosen specification"@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/configurationontology#ConfigurationVariable> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Used in a Lexicon to list the values (specifications) of a ConfigurationVariable. Alternatively, we could say that these specifications have rdf:type the ConfigurationVariable in question."@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/configurationontology#Specification> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#hasValue> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://purl.org/configurationontology> .
+<http://purl.org/coo/ns#includesChoices> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/coo/ns#ConfigurationInfo> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#includesChoices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#includesChoices> <http://www.w3.org/2000/01/rdf-schema#label> "includesChoices (1..*)"@en <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#includesChoices> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/coo/ns#ChoiceOrComponent> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#includesChoices> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the set of Choices Or Components to which the Configuration Info node refers\n\nNote 1: Complementing compatibility information can be attached to the components directly via coo:compatibleWith, coo:incompatibleWith, coo:dependsOn, and coo:includes.\nNote 2: The coo:ConfigurationInfo node makes only a valid statement for a configuration that includes ALL of the Choices or Components attached via this property. \nNote 3: If you want to know whether further components can be added, check that there are no coo:incompatibleWith relationships with any Choice or Component. This check must also be extended to all Choices or Components implicitly included via coo:includes.\nNote 4: If you want to know whether some components may be omitted without invalidating the configuration, check that there are no coo:dependsOn relationships with any Choice or Component. This check must also be extended to all Choices Or Components implicitly included via coo:includes.\nNote 5: Under an Open World Assumption (OWA), only an explicit compatibility statement for your configuration is really reliable. A weaker guarantee may be sufficient for your application, though."@en <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#includesChoices> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/coo/ns#> <http://purl.org/coo/ns#> .
+<http://purl.org/dc/dcam/memberOf> <http://purl.org/dc/terms/issued> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/dcam/> .
+<http://purl.org/dc/dcam/memberOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A relationship between a resource and a vocabulary encoding scheme which indicates that the resource is a member of a set."@en <http://purl.org/dc/dcam/> .
+<http://purl.org/dc/dcam/memberOf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dublincore.org/documents/2007/06/04/abstract-model/> <http://purl.org/dc/dcam/> .
+<http://purl.org/dc/dcam/memberOf> <http://purl.org/dc/terms/modified> "2010-10-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/dcam/> .
+<http://purl.org/dc/dcam/memberOf> <http://www.w3.org/2000/01/rdf-schema#label> "Member Of"@en <http://purl.org/dc/dcam/> .
+<http://purl.org/dc/dcam/memberOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://purl.org/dc/dcam/> .
+<http://purl.org/dc/dcam/memberOf> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#memberOf-002> <http://purl.org/dc/dcam/> .
+<http://purl.org/dc/dcam/memberOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/dcam/> <http://purl.org/dc/dcam/> .
+<http://purl.org/dc/dcam/memberOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/dc/dcam/> .
+<http://purl.org/dc/terms/available> <http://www.w3.org/2000/01/rdf-schema#label> "Date Available"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/available> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/available> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/available> <http://www.w3.org/2000/01/rdf-schema#comment> "Date (often a range) that the resource became or will become available."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/available> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/available> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#available-003> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/available> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/available> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/available> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/available> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/instructionalMethod> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#instructionalMethod-002> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/instructionalMethod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/instructionalMethod> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/instructionalMethod> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dc/terms/MethodOfInstruction> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/instructionalMethod> <http://www.w3.org/2000/01/rdf-schema#label> "Instructional Method"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/instructionalMethod> <http://purl.org/dc/terms/issued> "2005-06-13"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/instructionalMethod> <http://purl.org/dc/terms/description> "Instructional Method will typically include ways of presenting instructional materials or conducting instructional activities, patterns of learner-to-learner and learner-to-instructor interactions, and mechanisms by which group and individual levels of learning are measured.  Instructional methods include all aspects of the instruction and learning processes from planning and implementation through evaluation and feedback."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/instructionalMethod> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/instructionalMethod> <http://www.w3.org/2000/01/rdf-schema#comment> "A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dqm-vocabulary/v1/dqm#ConditionalSyntaxRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dqm-vocabulary/v1/dqm#ConditionalRule> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#ConditionalSyntaxRule> <http://www.w3.org/2000/01/rdf-schema#label> "Conditional Syntax Rule"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#ConditionalSyntaxRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#ConditionalSyntaxRule> <http://www.w3.org/2000/01/rdf-schema#comment> "Conditional syntax rules define that the literal values of a tested property must follow a certain syntax when the value of another property obtains a certain state. E.g. the property foo:state must have a value with two capital letters when the property foo:country obtains the value \"USA\"."@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#FuncDepValueRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#FuncDepValueRule> <http://www.w3.org/2000/01/rdf-schema#comment> "A functionally dependent value rule defines that the value of a tested property must have a certain value when the values of other properties obtain certain states (conditions). E.g. the property foo:inStock must have value \"true\" when the property foo:availableAmount is greater than zero."@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#FuncDepValueRule> <http://www.w3.org/2000/01/rdf-schema#label> "Functionally Dependent Value Rule"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#FuncDepValueRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/dqm-vocabulary/v1/dqm#ConditionalRule> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dsnotify/vocab/eventset/hasConfidence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasConfidence> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasConfidence> <http://www.w3.org/2000/01/rdf-schema#label> "has confidence"@en-US <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasConfidence> <http://www.w3.org/2000/01/rdf-schema#comment> "Optional property for capturing the confidence (a float value between 0 and 1) the event detecting actor has that the corresponding event really took place. If omited, applications should assume a confidence of 1.0."@en-US <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/dsnotify/vocab/eventset/hasConfidence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dsnotify/vocab/eventset/ResourceChangeEvent> <http://purl.org/dsnotify/vocab/eventset/> .
+<http://purl.org/goodrelations/v1#hasNext> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNext> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for gr:DayOfWeek indicates that the subject is directly followed by the object.\n\nExample: Monday hasNext Tuesday\n\nSince days of the week are a cycle, this property is not transitive."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNext> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNext> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#hasPrevious> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNext> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNext> <http://www.w3.org/2000/01/rdf-schema#label> "has next (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasNext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPrevious> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for gr:DayOfWeek indicates that the subject is directly preceeded by the object.\n\nExample: Tuesday hasPrevious Monday\n\nSince days of the week are a cycle, this property is not transitive."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPrevious> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPrevious> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPrevious> <http://www.w3.org/2000/01/rdf-schema#label> "has previous (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPrevious> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPrevious> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#hasNext> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPrevious> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/2000/01/rdf-schema#label> "greater (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#lesser> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greater> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for qualitative values indicates that the subject is greater than the object."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/2000/01/rdf-schema#label> "lesser or equal (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for gr:QualitativeValue pairs indicates that the subject is lesser than or equal to the object."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesserOrEqual> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#greaterOrEqual> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#ConstructionInstallation> <http://www.w3.org/2000/01/rdf-schema#label> "Construction / installation (business function)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#ConstructionInstallation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#ConstructionInstallation> <http://www.w3.org/2000/01/rdf-schema#comment> "This gr:BusinessFunction indicates that the gr:BusinessEntity offers (or seeks) the construction and/or installation of the specified gr:ProductOrService at the customer's location."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#ConstructionInstallation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Maintain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Maintain> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Maintain> <http://www.w3.org/2000/01/rdf-schema#label> "Maintain (business function)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Maintain> <http://www.w3.org/2000/01/rdf-schema#comment> "This gr:BusinessFunction indicates that the gr:BusinessEntity offers (or seeks) typical maintenance tasks for the specified gr:ProductOrService. Maintenance tasks are actions that undo or compensate for wear or other deterioriation caused by regular usage, in order to restore the originally intended function of the product, or to prevent outage or malfunction."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#successorOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#predecessorOf> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#successorOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#successorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#ProductOrServiceModel> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#successorOf> <http://www.w3.org/2000/01/rdf-schema#label> "successor of (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#successorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#successorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#successorOf> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that the subject is a newer, often updated or improved variant of the gr:ProductOrServiceModel used as the object.\n\nExample: Golf III successorOf Golf II\n\nThis relation is transitive."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#successorOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#ProductOrServiceModel> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/2000/01/rdf-schema#label> "greater or equal (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for qualitative values indicates that the subject is greater than or equal to the object."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#lesserOrEqual> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#greaterOrEqual> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPOS> <http://www.w3.org/2000/01/rdf-schema#comment> "This property states that the respective gr:Location is a point of sale for the respective gr:BusinessEntity. It allows linking those two types of entities without the need for a particular gr:Offering."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPOS> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bc9091fdb171bb251968aefe66a3afc29 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPOS> <http://www.w3.org/2000/01/rdf-schema#label> "has POS (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPOS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPOS> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#Location> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasPOS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has Stock Keeping Unit (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "The Stock Keeping Unit, or SKU is a unique identifier for a product, service, or bundle from the perspective of a particular supplier, i.e. SKUs are mostly assigned and serialized at the merchant level. \nExamples of SKUs are the ordering or parts numbers used by a particular Web shop or catalog.\n\nConsequently, the domain of gr:hasStockKeepingUnit is the union of the classes gr:Offering and gr:ProductOrService. \nIf attached to a gr:Offering, the SKU will usually reflect a merchant-specific identifier, i.e. one valid only for that particular retailer or shop. \nIf attached to a gr:ProductOrServiceModel, the SKU can reflect either the identifier used by the merchant or the part number used by the official manufacturer of that part. For the latter, gr:hasMPN is a better choice.\n\nImportant: Be careful when assuming two products or services instances or offering instances to be identical based on the SKU. Since SKUs are unique only for the same gr:BusinessEntity, this can be assumed only when you are sure that the two SKU values refer to the same business entity. Such can be done by taking into account the provenance of the data. As long as instances of gr:Offering are concerned, you can also check that the offerings are being offered by the same gr:Business Entity.\n\nUsually, the properties gr:hasEAN_UCC-13 and gr:hasGTIN-14 are much more reliable identifiers, because they are globally unique.\n\nSee also http://en.wikipedia.org/wiki/Stock_Keeping_Unit."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#domain> _:B81924e8aa2011604c6349ad36091f109 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/productID> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A unit price specification is a conceptual entity that specifies the price asked for a given gr:Offering by the respective gr:Business Entity. An offering may be linked to multiple unit price specifications that specify alternative prices for non-overlapping sets of conditions (e.g. quantities or sales regions) or with differing validity periods. \n\nA unit price specification is characterized by (1) the lower and upper limits and the unit of measurement of the eligible quantity, (2) by a monetary amount per unit of the product or service, and (3)  whether this prices includes local sales taxes, namely VAT.\n\t\nExample: The price, including VAT, for 1 kg of a given material is 5 Euros per kg for 0 - 5 kg and 4 Euros for quantities above 5 kg.\n\nThe eligible quantity interval for a given price is specified using the object property gr:hasEligibleQuantity, which points to an instance of gr:QuantitativeValue. The currency is specified using the gr:hasCurrency property, which points to an ISO 4217 currency code. The unit of measurement for the eligible quantity is specified using the gr:hasUnitOfMeasurement datatype property, which points to an UN/CEFACT Common Code (3 characters).\n\t\nIn most cases, the appropriate unit of measurement is the UN/CEFACT Common Code \"C62\" for \"Unit or piece\", since a gr:Offering is defined by the quantity and unit of measurement of all items included (e.g. \"1 kg of bananas plus a 2 kg of apples\"). As long at the offering consists of only one item, it is also possible to use an unit of measurement of choice for specifying the price per unit. For bundles, however, only  \"C62\" for \"Unit or piece\" is a valid unit of measurement.\n\nYou can assume that the price is given per unit or piece if there is no gr:hasUnitOfMeasurement property attached to the price.\n\t\nWhether VAT and sales taxes are included in this price is specified using the property gr:valueAddedTaxIncluded (xsd:boolean).\n\t\nThe price per unit of measurement is specified as a float value of the gr:hasCurrencyValue property. The currency is specified via the gr:hasCurrency datatype property. Whether the price includes VAT or not is indicated by the gr:valueAddedTaxIncluded datatype property.\n\nThe property priceType can be used to indicate that the price is a retail price recommendation only (i.e. a list price). \n\nIf the price can only be given as a range, use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue for the upper and lower bounds.\n\nImportant: When querying for the price, always use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue.\n\nNote 1: Due to the complexity of pricing scenarios in various industries, it may be necessary to create extensions of this fundamental model of price specifications. Such can be done easily by importing and refining the GoodRelations ontology.\n\nNote 2: For Google, attaching a gr:validThrough statement to a gr:UnitPriceSpecification is mandatory. \n"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Unit price specification"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#LeaseOut> <http://www.w3.org/2000/01/rdf-schema#comment> "This gr:BusinessFunction indicates that the gr:BusinessEntity offers (or seeks) the temporary right to use the specified gr:ProductOrService."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#LeaseOut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#LeaseOut> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#LeaseOut> <http://www.w3.org/2000/01/rdf-schema#label> "Lease Out (business function)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Dispose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Dispose> <http://www.w3.org/2000/01/rdf-schema#label> "Dispose (business function)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Dispose> <http://www.w3.org/2000/01/rdf-schema#comment> "This gr:BusinessFunction indicates that the gr:BusinessEntity offers (or seeks) the acceptance of the specified gr:ProductOrService for proper disposal, recycling, or any other kind of allowed usages, freeing the current owner from all rights and obligations of ownership."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Dispose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntity> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#TypeAndQuantityNode> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyPromise> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "The business function specifies the type of activity or access (i.e., the bundle of rights) offered by the gr:BusinessEntity on the gr:ProductOrService through the gr:Offering. Typical are sell, rental or lease, maintenance or repair, manufacture / produce, recycle / dispose, engineering / construction, or installation.\n\nLicenses and other proprietary specifications of access rights are also instances of this class.\n\nExamples: A particular offering made by Miller Rentals Ltd. says that they (1) sell Volkswagen Golf convertibles, (2) lease out a particular Ford pick-up truck, and (3) dispose car wrecks of any make and model."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Brand> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Location> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Offering> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyScope> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2000/01/rdf-schema#label> "Business function"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Repair> <http://www.w3.org/2000/01/rdf-schema#comment> "This gr:BusinessFunction indicates that the gr:BusinessEntity offers (or seeks) the evaluation of the chances for repairing, and, if positive, repair of the specified gr:ProductOrService. Repairing means actions that restore the originally intended function of a product that suffers from outage or malfunction."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Repair> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Repair> <http://www.w3.org/2000/01/rdf-schema#label> "Repair (business function)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Repair> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for gr:QualitativeValue pairs indicates that the subject is lesser than the object."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#greater> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#lesser> <http://www.w3.org/2000/01/rdf-schema#label> "lesser (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Sell> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Sell> <http://www.w3.org/2000/01/rdf-schema#comment> "This gr:BusinessFunction indicates that the gr:BusinessEntity offers to permanently transfer all property rights on the specified gr:ProductOrService."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Sell> <http://www.w3.org/2000/01/rdf-schema#label> "Sell (business function)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Sell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#typeOfGood> <http://www.w3.org/2000/01/rdf-schema#range> _:B2d84e7ec87dd40e2cee29a8c4410dc6f <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#typeOfGood> <http://www.w3.org/2000/01/rdf-schema#label> "type of good (1..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#typeOfGood> <http://www.w3.org/2000/01/rdf-schema#comment> "This specifies the gr:ProductOrService that the gr:TypeAndQuantityNode is referring to."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#typeOfGood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#typeOfGood> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#typeOfGood> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#TypeAndQuantityNode> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/goodrelations/v1#LocationOfSalesOrServiceProvisioning> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "A location is a point or area of interest from which a particular product or service is available, e.g. a store, a bus stop, a gas station, or a ticket booth. The difference to gr:BusinessEntity is that the gr:BusinessEntity is the legal entity (e.g. a person or corporation) making the offer, while gr:Location is the store, office, or place. A chain restaurant will e.g. have one legal entity but multiple restaurant locations. Locations are characterized by an address or geographical position and a set of opening hour specifications for various days of the week.\n\t\t\nExample: A rental car company may offer the Business Function Lease Out of cars from two locations, one in Fort Myers, Florida, and one in Boston, Massachussetts. Both stations are open 7:00 - 23:00 Mondays through Saturdays.\n\nNote: Typical address standards (vcard) and location data (geo, WGC84) should be attached to a gr:Location node. Since there already exist established vocabularies for this, the GoodRelations ontology does not provide respective attributes. Instead, the use of respective vocabularies is recommended. However, the gr:hasGlobalLocationNumber property is  provided for linking to public identifiers for business locations.\n\t\t\nCompatibility with schema.org: This class is equivalent to http://schema.org/Place."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntity> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyPromise> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#TypeAndQuantityNode> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Brand> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Offering> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Location> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyScope> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#nonEqual> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for gr:QualitativeValue pairs indicates that the subject is not equal to the object."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#nonEqual> <http://www.w3.org/2000/01/rdf-schema#label> "non equal (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/2000/01/rdf-schema#comment> "This subproperty specifies that the upper and lower limit of the given gr:QuantitativeValueFloat are identical and have the respective float value. It is a shortcut for such cases where a quantitative property is (at least practically) a single point value and not an interval."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/2000/01/rdf-schema#label> "has value float (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#hasMaxValueFloat> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#hasMinValueFloat> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueFloat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QuantitativeValueFloat> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Buy> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Buy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Buy> <http://www.w3.org/2000/01/rdf-schema#comment> "This gr:BusinessFunction indicates that the gr:BusinessEntity is in general interested in purchasing the specified gr:ProductOrService.\nDEPRECATED. Use gr:seeks instead."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Buy> <http://www.w3.org/2000/01/rdf-schema#label> "Buy (business function, DEPRECATED)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Buy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#label> "serial number (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba5b4ce436c1b1986edfe1868ec450a03 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The serial number or any alphanumeric identifier of a particular product. Note that serial number are unique only for the same brand or the same model, so you cannot infer from two occurrences of the same serial number that the objects to which they are attached are identical.\n\nThis property can also be attached to a gr:Offering in cases where the included products are not modeled in more detail."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Business> <http://www.w3.org/2000/01/rdf-schema#label> "Business (business entity type)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Business> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Business> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Business> <http://www.w3.org/2000/01/rdf-schema#comment> "The gr:BusinessEntityType representing such agents that are themselves offering commercial services or products on the market. Usually, businesses are characterized by the fact that they are officially registered with the public administration and strive for profits by their activities."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueInteger> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#hasMinValueInteger> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueInteger> <http://www.w3.org/2000/01/rdf-schema#comment> "This subproperty specifies that the upper and lower limit of the given gr:QuantitativeValueInteger are identical and have the respective integer value. It is a shortcut for such cases where a quantitative property is (at least practically) a single point value and not an interval."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueInteger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueInteger> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QuantitativeValueInteger> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueInteger> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#hasMaxValueInteger> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueInteger> <http://www.w3.org/2000/01/rdf-schema#label> "has value integer (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueInteger> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValueInteger> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#int> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#ProvideService> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#ProvideService> <http://www.w3.org/2000/01/rdf-schema#label> "Provide service (business function)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#ProvideService> <http://www.w3.org/2000/01/rdf-schema#comment> "This gr:BusinessFunction indicates that the gr:BusinessEntity offers (or seeks) the respective type of service.\n\nNote: Maintain and Repair are also types of Services. However, products and services ontologies often provide classes for tangible products as well as for types of services. The business function gr:ProvideService is to be used with such goods that are services, while gr:Maintain and gr:Repair can be used with goods for which only the class of product exists in the ontology, but not the respective type of service.\n\nExample: Car maintenance could be expressed both as \"provide the service car maintenance\" or \"maintain cars\"."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#ProvideService> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#predecessorOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#predecessorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#ProductOrServiceModel> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#predecessorOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#successorOf> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#predecessorOf> <http://www.w3.org/2000/01/rdf-schema#label> "predecessor of (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#predecessorOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#ProductOrServiceModel> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#predecessorOf> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that the subject is a previous, often discontinued variant of the gr:ProductOrServiceModel used as the object.\n\nExample: Golf III predecessorOf Golf IV\n\nThis relation is transitive."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#predecessorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#predecessorOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#owns> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#owns> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates that a particular person or business owns a particular product. It can be used to expose the products in one's posession in order to empower recommender systems to suggest matching offers.\n\nNote that the product must be an instance of the class gr:Individual.\n\nThis property can also be safely applied to foaf:Agent instances."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#owns> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bd84511bb7272a37672ed8ab7265fb97a <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#owns> <http://www.w3.org/2000/01/rdf-schema#label> "owns (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#owns> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#Individual> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#owns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/2000/01/rdf-schema#label> "equal (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/2000/01/rdf-schema#comment> "This ordering relation for qualitative values indicates that the subject is equal to the object."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/goodrelations/v1#equal> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#equal> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#TypeAndQuantityNode> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyPromise> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bdf6fa41cd8b2343f97a9c7b05b15e2f6 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of this class represents the legal agent making (or seeking) a particular offering. This can be a legal body or a person. A business entity has at least a primary mailing address and contact details. For this, typical address standards (vCard) and location data (geo, WGS84) can be attached. Note that the location of the business entity is not necessarily the location from which the product or service is being available (e.g. the branch or store). Use gr:Location for stores and branches.\n\t\t\nExample: Siemens Austria AG, Volkswagen Ltd., Peter Miller's Cell phone Shop LLC\n\nCompatibility with schema.org: This class is equivalent to the union of http://schema.org/Person and http://schema.org/Organization.\t\t\n"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Business entity"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Offering> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyScope> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Location> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Brand> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#isVariantOf> <http://www.w3.org/2000/01/rdf-schema#label> "is variant of (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#isVariantOf> <http://www.w3.org/2000/01/rdf-schema#comment> "This states that a particular gr:ProductOrServiceModel is a variant of another product or service model. It is pretty safe to infer that the variant inherits all gr:quantitativeProductOrServiceProperty, gr:qualitativeProductOrServiceProperty, and gr:datatypeProductOrServiceProperty values that are defined for the first gr:ProductOrServiceModel.\n\nExample:\nfoo:Red_Ford_T_Model gr:isVariantOf foo:Ford_T_Model"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#isVariantOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#isVariantOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#ProductOrServiceModel> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#isVariantOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#isVariantOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#ProductOrServiceModel> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#hasMinValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#hasMaxValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "This subproperty specifies that the upper and lower limit of the given gr:QuantitativeValue are identical and have the respective value. It is a shortcut for such cases where a quantitative property is (at least practically) a single point value and not an interval."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValueInteger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValueInteger> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValueInteger> <http://www.w3.org/2000/01/rdf-schema#label> "Quantitative value integer"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValueInteger> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValueInteger> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QuantitativeValueFloat> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#QuantitativeValueInteger> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of this class is an actual integer value for a quantitative property of a product. This instance is usually characterized by a minimal value, a maximal value, and a unit of measurement. \n\nExample: A seating capacity between 1 and 8 persons.\n\nNote: Users must keep in mind that ranges in here mean that ALL possible values in this interval are covered. (Sometimes, the actual commitment may be less than that: \"We sell cars from 2 - 12 seats\" does often not really mean that they have cars with 2,3,4,...12 seats.). Someone renting out two types of rowing boats, one that fits for 1 or 2 people, and another that must be operated by 4 people cannot claim to rent boats with a seating capacity between 1 and 4 people. He or she is offering two boat types for 1-2 and 4 persons.\n\t\t\nCompatibility with schema.org: This class is a subclass of http://schema.org/Quantity."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/innovation/ns#isDeveloping> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/innovation/ns#Innovator> <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#isDeveloping> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an innovator to a current innovation that they are developing."@en <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#isDeveloping> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/innovation/ns#Innovation> <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#isDeveloping> <http://www.w3.org/2000/01/rdf-schema#label> "isDeveloping"@en <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#isDeveloping> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#buildsOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#buildsOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/innovation/ns#Innovation> <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#buildsOn> <http://www.w3.org/2000/01/rdf-schema#label> "buildsOn"@en <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#buildsOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/innovation/ns#Innovation> <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#buildsOn> <http://www.w3.org/2000/01/rdf-schema#comment> "It is common for one innovation to build upon others. It doesn't neccessarily denote or infer that the subject has improvements on the object or is enabled by the object."@en <http://purl.org/innovation/ns> .
+<http://purl.org/limo-ontology/limo#outcome> <http://www.w3.org/2000/01/rdf-schema#comment> "The actual value that the evaluation method produces." <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#outcome> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/limo-ontology/limo#Power> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#outcome> <http://www.w3.org/2000/01/rdf-schema#comment> "" <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#outcome> <http://www.w3.org/2000/01/rdf-schema#label> "limo:outcome" <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#outcome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#baseline> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/limo-ontology/limo#Model> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#baseline> <http://www.w3.org/2000/01/rdf-schema#label> "limo:baseline" <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#baseline> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/limo-ontology/limo#Model> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#baseline> <http://www.w3.org/2000/01/rdf-schema#comment> "Explicitly denotes that the predictive power of a model has been evaluated against the power of another model." <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#baseline> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/dc/terms#issued> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the actual date that the model has been created." <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/dc/terms#issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/dc/terms#issued> <http://www.w3.org/2000/01/rdf-schema#label> "dct:issued" <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/dc/terms#issued> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/limo-ontology/limo#Model> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#accessURL> <http://www.w3.org/2000/01/rdf-schema#comment> "The URL that the file can be accessed from." <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#accessURL> <http://www.w3.org/2000/01/rdf-schema#label> "limo:accessURL" <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#accessURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/limo-ontology/limo/> .
+<http://purl.org/limo-ontology/limo#accessURL> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/limo-ontology/limo#File> <http://purl.org/limo-ontology/limo/> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/that+the.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BthatX2Bthei .
+_:BthatX2Bthei <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BthatX2Bthei <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/that+thei.nt> .
+_:BthatX2Bthei <https://w3id.org/tree#value> "that" .
+_:BthatX2Bthei <https://w3id.org/tree#value> "thei" .
+_:BthatX2Bthei <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/that+thei.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BthatX2Bther .
+_:BthatX2Bther <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BthatX2Bther <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/that+ther.nt> .
+_:BthatX2Bther <https://w3id.org/tree#value> "that" .
+_:BthatX2Bther <https://w3id.org/tree#value> "ther" .
+_:BthatX2Bther <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/that+ther.nt> <https://w3id.org/tree#remainingItems> "44"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BthatX2Bthes .
+_:BthatX2Bthes <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BthatX2Bthes <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/that+thes.nt> .
+_:BthatX2Bthes <https://w3id.org/tree#value> "that" .
+_:BthatX2Bthes <https://w3id.org/tree#value> "thes" .
+_:BthatX2Bthes <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/that+thes.nt> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BthatX2Bthey .
+_:BthatX2Bthey <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BthatX2Bthey <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/that+they.nt> .
+_:BthatX2Bthey <https://w3id.org/tree#value> "that" .
+_:BthatX2Bthey <https://w3id.org/tree#value> "they" .
+_:BthatX2Bthey <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/that+they.nt> <https://w3id.org/tree#remainingItems> "29"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BaX2BthatX2Bthe .
+_:BaX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+that+the.nt> .
+_:BaX2BthatX2Bthe <https://w3id.org/tree#value> "a" .
+_:BaX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BaX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BaX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+that+the.nt> <https://w3id.org/tree#remainingItems> "59"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BbX2BthatX2Bthe .
+_:BbX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+that+the.nt> .
+_:BbX2BthatX2Bthe <https://w3id.org/tree#value> "b" .
+_:BbX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BbX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BbX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+that+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BcX2BthatX2Bthe .
+_:BcX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+that+the.nt> .
+_:BcX2BthatX2Bthe <https://w3id.org/tree#value> "c" .
+_:BcX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BcX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BcX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+that+the.nt> <https://w3id.org/tree#remainingItems> "54"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BdX2BthatX2Bthe .
+_:BdX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+that+the.nt> .
+_:BdX2BthatX2Bthe <https://w3id.org/tree#value> "d" .
+_:BdX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BdX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BdX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+that+the.nt> <https://w3id.org/tree#remainingItems> "43"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BeX2BthatX2Bthe .
+_:BeX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+that+the.nt> .
+_:BeX2BthatX2Bthe <https://w3id.org/tree#value> "e" .
+_:BeX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BeX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BeX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+that+the.nt> <https://w3id.org/tree#remainingItems> "31"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BfX2BthatX2Bthe .
+_:BfX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+that+the.nt> .
+_:BfX2BthatX2Bthe <https://w3id.org/tree#value> "f" .
+_:BfX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BfX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BfX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+that+the.nt> <https://w3id.org/tree#remainingItems> "42"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BgX2BthatX2Bthe .
+_:BgX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BgX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/g+that+the.nt> .
+_:BgX2BthatX2Bthe <https://w3id.org/tree#value> "g" .
+_:BgX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BgX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BgX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/g+that+the.nt> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BhX2BthatX2Bthe .
+_:BhX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+that+the.nt> .
+_:BhX2BthatX2Bthe <https://w3id.org/tree#value> "h" .
+_:BhX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BhX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BhX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+that+the.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BiX2BthatX2Bthe .
+_:BiX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+that+the.nt> .
+_:BiX2BthatX2Bthe <https://w3id.org/tree#value> "i" .
+_:BiX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BiX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BiX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+that+the.nt> <https://w3id.org/tree#remainingItems> "39"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BjX2BthatX2Bthe .
+_:BjX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BjX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/j+that+the.nt> .
+_:BjX2BthatX2Bthe <https://w3id.org/tree#value> "j" .
+_:BjX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BjX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BjX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/j+that+the.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BkX2BthatX2Bthe .
+_:BkX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BkX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/k+that+the.nt> .
+_:BkX2BthatX2Bthe <https://w3id.org/tree#value> "k" .
+_:BkX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BkX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BkX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/k+that+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BlX2BthatX2Bthe .
+_:BlX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+that+the.nt> .
+_:BlX2BthatX2Bthe <https://w3id.org/tree#value> "l" .
+_:BlX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BlX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BlX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+that+the.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BmX2BthatX2Bthe .
+_:BmX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+that+the.nt> .
+_:BmX2BthatX2Bthe <https://w3id.org/tree#value> "m" .
+_:BmX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BmX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+that+the.nt> <https://w3id.org/tree#remainingItems> "23"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BnX2BthatX2Bthe .
+_:BnX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/n+that+the.nt> .
+_:BnX2BthatX2Bthe <https://w3id.org/tree#value> "n" .
+_:BnX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BnX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BnX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/n+that+the.nt> <https://w3id.org/tree#remainingItems> "41"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BoX2BthatX2Bthe .
+_:BoX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+that+the.nt> .
+_:BoX2BthatX2Bthe <https://w3id.org/tree#value> "o" .
+_:BoX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BoX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BoX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+that+the.nt> <https://w3id.org/tree#remainingItems> "39"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BpX2BthatX2Bthe .
+_:BpX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BpX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/p+that+the.nt> .
+_:BpX2BthatX2Bthe <https://w3id.org/tree#value> "p" .
+_:BpX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BpX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BpX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/p+that+the.nt> <https://w3id.org/tree#remainingItems> "49"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BqX2BthatX2Bthe .
+_:BqX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BqX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/q+that+the.nt> .
+_:BqX2BthatX2Bthe <https://w3id.org/tree#value> "q" .
+_:BqX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BqX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BqX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/q+that+the.nt> <https://w3id.org/tree#remainingItems> "378"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BrX2BthatX2Bthe .
+_:BrX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/r+that+the.nt> .
+_:BrX2BthatX2Bthe <https://w3id.org/tree#value> "r" .
+_:BrX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BrX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BrX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/r+that+the.nt> <https://w3id.org/tree#remainingItems> "72"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BsX2BthatX2Bthe .
+_:BsX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/s+that+the.nt> .
+_:BsX2BthatX2Bthe <https://w3id.org/tree#value> "s" .
+_:BsX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BsX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BsX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/s+that+the.nt> <https://w3id.org/tree#remainingItems> "130"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BtX2BthatX2Bthe .
+_:BtX2BthatX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BtX2BthatX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/t+that+the.nt> .
+_:BtX2BthatX2Bthe <https://w3id.org/tree#value> "t" .
+_:BtX2BthatX2Bthe <https://w3id.org/tree#value> "that" .
+_:BtX2BthatX2Bthe <https://w3id.org/tree#value> "the" .
+_:BtX2BthatX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/t+that+the.nt> <https://w3id.org/tree#remainingItems> "29"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BthatX2BtheX2Bu .
+_:BthatX2BtheX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BthatX2BtheX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/that+the+u.nt> .
+_:BthatX2BtheX2Bu <https://w3id.org/tree#value> "that" .
+_:BthatX2BtheX2Bu <https://w3id.org/tree#value> "the" .
+_:BthatX2BtheX2Bu <https://w3id.org/tree#value> "u" .
+_:BthatX2BtheX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/that+the+u.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BthatX2BtheX2Bv .
+_:BthatX2BtheX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BthatX2BtheX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/that+the+v.nt> .
+_:BthatX2BtheX2Bv <https://w3id.org/tree#value> "that" .
+_:BthatX2BtheX2Bv <https://w3id.org/tree#value> "the" .
+_:BthatX2BtheX2Bv <https://w3id.org/tree#value> "v" .
+_:BthatX2BtheX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/that+the+v.nt> <https://w3id.org/tree#remainingItems> "23"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/that+the.nt> <https://w3id.org/tree#relation> _:BthatX2BtheX2Bw .
+_:BthatX2BtheX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BthatX2BtheX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/that+the+w.nt> .
+_:BthatX2BtheX2Bw <https://w3id.org/tree#value> "that" .
+_:BthatX2BtheX2Bw <https://w3id.org/tree#value> "the" .
+_:BthatX2BtheX2Bw <https://w3id.org/tree#value> "w" .
+_:BthatX2BtheX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/that+the+w.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .

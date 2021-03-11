@@ -1,0 +1,424 @@
+<http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#label> "has currency value (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the amount of money for a price per unit, shipping charges, or payment charges. The currency and other relevant details are attached to the respective gr:PriceSpecification etc.\n\nFor a gr:UnitPriceSpecification, this is the price for one unit or bundle (as specified in the unit of measurement of the unit price specification) of the respective gr:ProductOrService. For a gr:DeliveryChargeSpecification or a gr:PaymentChargeSpecification, it is the price per delivery or payment.\n\nGoodRelations also supports giving price information as intervals only. If this is needed, use gr:hasMaxCurrencyValue for the upper bound and gr:hasMinCurrencyValue for the lower bound. \n\nUsing gr:hasCurrencyValue sets the upper and lower bounds to the same given value, i.e., x gr:hasCurrencyValue y implies x gr:hasMinCurrencyValue y, x gr:hasMaxCurrencyValue y."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#hasMinCurrencyValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#hasMaxCurrencyValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#comment> "The currency for all prices in the gr:PriceSpecification given using the ISO 4217 standard (3 characters)."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#label> "has currency (1..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasCurrency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasCurrency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMinCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMinCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMinCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the LOWER BOUND of the amount of money for a price RANGE per unit, shipping charges, or payment charges. The currency and other relevant details are attached to the respective gr:PriceSpecification etc.\nFor a gr:UnitPriceSpecification, this is the LOWER BOUND for the price for one unit or bundle (as specified in the unit of measurement of the unit price specification) of the respective gr:ProductOrService. For a gr:DeliveryChargeSpecification or a gr:PaymentChargeSpecification, it is the LOWER BOUND of the price per delivery or payment.\n\nUsing gr:hasCurrencyValue sets the upper and lower bounds to the same given value, i.e., x gr:hasCurrencyValue y implies x gr:hasMinCurrencyValue y, x gr:hasMaxCurrencyValue y."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMinCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMinCurrencyValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMinCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#label> "has min currency value (1..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentChargeSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A delivery charge specification is a conceptual entity that specifies the additional costs asked for the delivery of a given gr:Offering using a particular gr:DeliveryMethod by the respective gr:BusinessEntity. A delivery charge specification is characterized by (1) a monetary amount per order, specified as a literal value of type float in combination with a currency, (2) the delivery method, (3) the target country or region, and (4)  whether this charge includes local sales taxes, namely VAT.\nA gr:Offering may be linked to multiple gr:DeliveryChargeSpecification nodes that specify alternative charges for disjoint combinations of target countries or regions, and delivery methods.\n\nExamples: Delivery by direct download is free of charge worldwide, delivery by UPS to Germany is 10 Euros per order, delivery by mail within the US is 5 Euros per order.\n\nThe total amount of this charge is specified as a float value of the gr:hasCurrencyValue property. The currency is specified via the gr:hasCurrency datatype property. Whether the price includes VAT or not is indicated by the gr:valueAddedTaxIncluded property. The gr:DeliveryMethod to which this charge applies is specified using the gr:appliesToDeliveryMethod object property. The region or regions to which this charge applies is specified using the gr:eligibleRegions property, which uses ISO 3166-1 and ISO 3166-2 codes.\n\nIf the price can only be given as a range, use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue for the upper and lower bounds.\n\nImportant: When querying for the price, always use gr:hasMaxCurrencyValue and gr:hasMinCurrencyValue."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "Delivery charge specification"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#DeliveryChargeSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1> <http://purl.org/dc/elements/1.1/title> "The GoodRelations Vocabulary for Semantic Web-based E-Commerce"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1> <http://purl.org/dc/elements/1.1/contributor> "Work on the GoodRelations ontology and related research and development has been partly supported by the Austrian BMVIT/FFG under the FIT-IT Semantic Systems project myOntology (grant no. 812515/9284), by a Young Researcher's Grant (Nachwuchsfoerderung 2005-2006) from the Leopold-Franzens-Universitaet Innsbruck, by the European Commission under the project SUPER (FP6-026850), and by the German Federal Ministry of Research (BMBF) by a grant under the KMU Innovativ program as part of the Intelligent Match project (FKZ 01IS10022B). The"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1> <http://purl.org/dc/elements/1.1/rights> "The GoodRelations ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. In a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), as long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work). Proper Attribution: Simply include the statement \"This work is based on the GoodRelations ontology, developed by Martin Hepp\" and link back to http://purl.org/goodrelations/"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1> <http://www.w3.org/2000/01/rdf-schema#comment> "The GoodRelations ontology provides the vocabulary for annotating e-commerce offerings (1) to sell, lease, repair, dispose, or maintain commodity products and (2) to provide commodity services.\n\nGoodRelations allows describing the relationship between (1) Web resources, (2) offerings made by those Web resources, (3) legal entities, (4) prices, (5) terms and conditions, and the aforementioned ontologies for products and services (6).\n \nFor more information, see http://purl.org/goodrelations/\n\nNote: The base URI of GoodRelations is http://purl.org/goodrelations/v1. Please make sure you are only using element identifiers in this namespace, e.g. http://purl.org/goodrelations/v1#BusinessEntity. There may be copies of the ontology file on the Web which can be retrieved from other locations, BUT THOSE LOCATIONS MUST NOT BE USED AS THE BASIS OF IDENTIFIERS.\n\nIf you use GoodRelations for scientific purposes, please cite our paper:\n\nHepp, Martin: GoodRelations: An Ontology for Describing Products and Services Offers on the Web, Proceedings of the 16th International Conference on Knowledge Engineering and Knowledge Management (EKAW2008), September 29 - October 3, 2008, Acitrezza, Italy, Springer LNCS, Vol. 5268, pp. 332-347.\n\nPDF at http://www.heppnetz.de/publications/"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1> <http://www.w3.org/2002/07/owl#versionInfo> "V 1.0, Release 2011-10-01"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1> <http://xmlns.com/foaf/0.1/homepage> <http://purl.org/goodrelations/> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1> <http://purl.org/dc/elements/1.1/creator> "Martin Hepp"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1> <http://purl.org/dc/elements/1.1/subject> "E-Commerce, E-Business, GoodRelations, Microdata, Ontology, Semantic SEO, RDFa, Linked Data, RDF, Semantic Web, Recommender Systems"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1> <http://www.w3.org/2000/01/rdf-schema#label> "GoodRelations Ontology"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/net/nknouf/ns/bibtex#hasPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The price of the document."@en <http://purl.org/net/nknouf/ns/bibtex> .
+<http://purl.org/net/nknouf/ns/bibtex#hasPrice> <http://www.w3.org/2000/01/rdf-schema#label> "has price"@en <http://purl.org/net/nknouf/ns/bibtex> .
+<http://purl.org/net/nknouf/ns/bibtex#hasPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/net/nknouf/ns/bibtex> .
+<http://purl.org/net/nknouf/ns/bibtex#hasPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/nknouf/ns/bibtex#Entry> <http://purl.org/net/nknouf/ns/bibtex> .
+<http://purl.org/net/nknouf/ns/bibtex#hasPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/net/nknouf/ns/bibtex> .
+<http://purl.org/procurement/public-contracts#offeredPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Property for price offered by supplier. Cardinality 0..1"@en <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#offeredPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#offeredPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/procurement/public-contracts> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#offeredPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#offeredPrice> <http://www.w3.org/2000/01/rdf-schema#label> "Nabídnutá cena v nabídce"@cs <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#offeredPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/procurement/public-contracts#Tender> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#offeredPrice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#hasPriceSpecification> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#offeredPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Vlastnost pro cenu nabídnutou zájemcem o zakázku. Kardinalita 0..1"@cs <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#offeredPrice> <http://www.w3.org/2000/01/rdf-schema#label> "Offered price in tender"@en <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#documentationPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/procurement/public-contracts> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#documentationPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#documentationPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Property for price of documentation for public contract. Cardinality 0..1"@en <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#documentationPrice> <http://www.w3.org/2000/01/rdf-schema#label> "Cena zadávací dokumentace k zakázce"@cs <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#documentationPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/procurement/public-contracts#Contract> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#documentationPrice> <http://www.w3.org/2000/01/rdf-schema#label> "Price of documentation for public contract"@en <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#documentationPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#documentationPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Vlastnost pro cenu zadávací dokumentace k zakázce. Kardinalita 0..1"@cs <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#contractPrice> <http://www.w3.org/2000/01/rdf-schema#label> "Price"@en <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#contractPrice> <http://www.w3.org/2000/01/rdf-schema#label> "Cena"@cs <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#contractPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstract property for price of public contract"@en <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#contractPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Abstraktní vlastnost pro cenu přiřazené k veřejné zakázce"@cs <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#contractPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/procurement/public-contracts> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#contractPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#contractPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#contractPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/procurement/public-contracts#Contract> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#actualPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/procurement/public-contracts> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#actualPrice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/procurement/public-contracts#contractPrice> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#actualPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#actualPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#actualPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Vlastnost pro skutečnou cenu zaplacenou za zakázku. Kardinalita 0..1"@cs <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#actualPrice> <http://www.w3.org/2000/01/rdf-schema#label> "Actual price after contract realization"@en <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#actualPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Property for actual price of the public contract. Cardinality 0..1"@en <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#actualPrice> <http://www.w3.org/2000/01/rdf-schema#label> "Skutečná cena po realizaci zakázky"@cs <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#estimatedPrice> <http://www.w3.org/2000/01/rdf-schema#label> "Exact estimated price"@en <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#estimatedPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/procurement/public-contracts> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#estimatedPrice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/procurement/public-contracts#contractPrice> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#estimatedPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#estimatedPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Property for estimated price of public contract. It can be an exact estimation or an interval. Cardinality 0..1"@en <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#estimatedPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Vlastnost pro odhadovanou cenu veřejné zakázky. Může jít o přesně odhadovanou částku nebo interval. Kardinalita 0..1"@cs <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#estimatedPrice> <http://www.w3.org/2000/01/rdf-schema#label> "Odhadovaná cena zakázky"@cs <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#agreedPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#agreedPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#agreedPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/procurement/public-contracts> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#agreedPrice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/procurement/public-contracts#contractPrice> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#agreedPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Vlastnost pro cenu napsanou na smlouvě s dodavatelem. Kardinalita 0..1"@cs <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#agreedPrice> <http://www.w3.org/2000/01/rdf-schema#label> "Smluvní cena"@cs <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#agreedPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Property for a price stated on the contract with the supplier. Cardinality 0..1"@en <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#agreedPrice> <http://www.w3.org/2000/01/rdf-schema#label> "Agreed price"@en <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#Contract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/procurement/public-contracts> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#Contract> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of this class is an abstract information entity about a public contract. It consists of all currently known information about a contract, e.g., a contracting authority, services or supplies which shall be purchased, and contract conditions (e.g., important dates, expected price, etc.). It also informs about tenders received from particular bidders and about an accepted tender. If the contract has already been realized it also informs about an actual price of realization, etc."@en <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#Contract> <http://www.w3.org/2000/01/rdf-schema#label> "Public contract"@en <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#Contract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#Contract> <http://www.w3.org/2000/01/rdf-schema#comment> "Instance této třídy je abstraktní informační entitou o veřejné zakázce. Obsahuje všechny aktuálně známé informace o zakázce, tj. např. o zadavateli veřejné zakázky, službách či dodávkách, které ve veřejné zakázce nakupuje, a o podmínkách nákupu (termíny, očekávané ceny, atd.). Dále obsahuje informace o nabídkách od zájemců o zakázku a o vybrané nabídce. Pokud již byla zakázka realizována, obsahuje i informace o skutečné ceně za realizaci apod."@cs <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#Contract> <http://www.w3.org/2000/01/rdf-schema#label> "Veřejná zakázka"@cs <http://purl.org/procurement/public-contracts> .
+<http://purl.org/procurement/public-contracts#Contract> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.loted.eu/ontology#Tender> <http://purl.org/procurement/public-contracts> .
+<http://purl.org/spar/pso/gratis-open-access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/gratis-open-access> <http://www.w3.org/2000/01/rdf-schema#label> "gratis open access"@en <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/gratis-open-access> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of a published work which is free to read on-line, in contrast to subscription-access works, but to which licensing restrictions apply, limiting the possibilities for downloading, text mining, modification, re-publication or re-use of the published work.  The term Gratis Open Access thus signifies absence of a price barrier to view.  While both imply ‘free’ (a potentially ambiguous word), Gratis Open Access equates to ‘free as in beer’ while Libre Open Access (q.v.) equates to ‘free as in speech’.  Gratis Open Access is thus a necessary but not a sufficient condition for true Libre Open Access.   Many ‘open access’ publications by commercial scholarly publishers are only Gratis Open Access, while almost all publications by ‘pure’ Open Access scholarly publishers are Libre Open Access. [See also: pso:open-access, pso:libre-open-access, pso:gold-open-access, pso:green-open-access, pso:embargoed and pso:subscription-access.]"@en <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/gratis-open-access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pso/PublicationStatus> <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/published> <http://www.w3.org/2000/01/rdf-schema#label> "published"@en <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/published> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pso/PublicationStatus> <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/published> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/pso> .
+<http://purl.org/spar/pso/published> <http://www.w3.org/2000/01/rdf-schema#comment> "The status of material (for example a document or a dataset) that has been published, i.e. made available for people to access, read or use, either freely or for a purchase price or an access fee."@en <http://purl.org/spar/pso> .
+<http://purl.org/uco/ns#valuation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vso/ns#Vehicle> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#valuation> <http://www.w3.org/2000/01/rdf-schema#comment> "The market price assessment gained by the respective valuation. Use gr:name to indicate the name of the valuation service."@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#valuation> <http://www.w3.org/2000/01/rdf-schema#label> "valuation (0..*)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#valuation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#valuation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#valuation> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#listPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vso/ns#Vehicle> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#listPrice> <http://www.w3.org/2000/01/rdf-schema#label> "listPrice (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#listPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The original list price of the new car at the time of production"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#listPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#listPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#listPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/uco/ns#> .
+<http://purl.org/vvo/ns#customerCashPrice> <http://www.w3.org/2000/01/rdf-schema#label> "customerCashPrice (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerCashPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerCashPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerCashPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the customer cash price for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerCashPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#customerCashPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#otrRetailPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#otrRetailPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vvo/ns#Financing> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#otrRetailPrice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#otrRetailPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the OTR retail price for the financing"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#otrRetailPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#otrRetailPrice> <http://www.w3.org/2000/01/rdf-schema#label> "otrRetailPrice (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://aims.fao.org/aos/geopolitical.owl#GDPTotalInCurrentPrices> <http://www.w3.org/2000/01/rdf-schema#label> "GDP total in current prices" <http://vivoweb.org/ontology/core> .
+<http://aims.fao.org/aos/geopolitical.owl#GDPTotalInCurrentPrices> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://vivoweb.org/ontology/core> .
+<http://vocab.deri.ie/odapp#price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://vocab.deri.ie/odapp> .
+<http://vocab.deri.ie/odapp#price> <http://www.w3.org/2000/01/rdf-schema#range> <http://vocab.deri.ie/odapp#Price> <http://vocab.deri.ie/odapp> .
+<http://vocab.deri.ie/odapp#price> <http://www.w3.org/2000/01/rdf-schema#comment> "relationship between the admssw:SoftwareRelease and odap:Price" <http://vocab.deri.ie/odapp> .
+<http://vocab.deri.ie/odapp#price> <http://www.w3.org/2000/01/rdf-schema#label> "application price" <http://vocab.deri.ie/odapp> .
+<http://vocab.deri.ie/odapp#price> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.deri.ie/odapp#PaidApp> <http://vocab.deri.ie/odapp> .
+<http://vocab.deri.ie/odapp#Price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/odapp> .
+<http://vocab.deri.ie/odapp#Price> <http://www.w3.org/2000/01/rdf-schema#comment> "An application price" <http://vocab.deri.ie/odapp> .
+<http://vocab.deri.ie/odapp#Price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/odapp> .
+<http://vocab.deri.ie/odapp#Price> <http://www.w3.org/2000/01/rdf-schema#label> "application price" <http://vocab.deri.ie/odapp> .
+<http://vocab.org/transit/terms/price> <http://www.w3.org/2000/01/rdf-schema#label> "Price"@en <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/price> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/transit/terms/Fare> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/price> <http://www.w3.org/2000/01/rdf-schema#comment> "The price of the fare."@en <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/price> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/transit/terms/> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/price> <http://purl.org/dc/terms/issued> "2011-03-28"^^<http://www.w3.org/2001/XMLSchema#date> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/currency> <http://purl.org/dc/terms/issued> "2011-03-28"^^<http://www.w3.org/2001/XMLSchema#date> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/currency> <http://www.w3.org/2000/01/rdf-schema#label> "Currency"@en <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/currency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.org/transit/terms/> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/currency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/currency> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.org/transit/terms/Fare> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/currency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://vocab.org/transit/terms/> .
+<http://vocab.org/transit/terms/currency> <http://www.w3.org/2000/01/rdf-schema#comment> "The currency of the fare price."@en <http://vocab.org/transit/terms/> .
+<http://observedchange.com/moac/ns#PriceGouging> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#PriceGouging> <http://www.w3.org/2000/01/rdf-schema#label> "PriceGouging"@en <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#PriceGouging> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://observedchange.com/moac/ns> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#PriceGouging> <http://www.w3.org/2000/01/rdf-schema#comment> "PriceGouging is a pejorative term referring to a situation in which a seller prices goods or commodities much higher than is considered reasonable or fair."@en <http://www.observedchange.com/moac/ns#> .
+<http://www.ontotext.com/proton/protonext#Market> <http://www.w3.org/2000/01/rdf-schema#comment> "In contrast to IndustrySector, the market is determined by the customers instead of the business or the manifacturers. The market can be defined in terms of types of goods/services, geographic region, price levels and typical customer behaviours. Corresponding to the third sense in WordNet 1.7.1 \"the customers for a particular product or service\"."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Market> <http://www.w3.org/2000/01/rdf-schema#label> "Market"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Market> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#Market> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#BusinessAbstraction> <http://www.ontotext.com/proton/protonext> .
+<http://comicmeta.org/cbo/purchasePrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://comicmeta.org/cbo/Item> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/purchasePrice> <http://www.w3.org/2000/01/rdf-schema#label> "purchase price"@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/purchasePrice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://comicmeta.org/cbo/price> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/purchasePrice> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/purchasePrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The purchase price of a comic item."@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/purchasePrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/purchasePrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/coverPrice> <http://www.w3.org/2000/01/rdf-schema#label> "coverPrice"@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/coverPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://comicmeta.org/cbo/Issue> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/coverPrice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://comicmeta.org/cbo/price> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/coverPrice> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/coverPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/coverPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The cover price of a comic issue."@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/coverPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/price> <http://www.w3.org/2000/01/rdf-schema#comment> "A general price."@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/price> <http://www.w3.org/2000/01/rdf-schema#label> "price"@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/price> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/salePrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/salePrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/salePrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://comicmeta.org/cbo/Item> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/salePrice> <http://www.w3.org/2000/01/rdf-schema#comment> "The sale price of a comic item."@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/salePrice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://comicmeta.org/cbo/price> <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/salePrice> <http://www.w3.org/2000/01/rdf-schema#label> "sale price"@en <http://comicmeta.org/cbo/> .
+<http://comicmeta.org/cbo/salePrice> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://comicmeta.org/cbo/> .
+<http://www.eurocris.org/ontologies/cerif/1.3#priceCurrencyCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#priceCurrencyCode> <http://www.w3.org/2000/01/rdf-schema#label> "Price Currency Code" <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#priceCurrencyCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#currencyCode> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#priceCurrencyCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#price> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#money> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#price> <http://www.w3.org/2000/01/rdf-schema#label> "Price" <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#price> <http://www.w3.org/2000/01/rdf-schema#comment> "Quantity of payment or compensation given by one party to another in return for goods or service (measured in a specific currency)" <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#price> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#currency> <http://www.w3.org/2000/01/rdf-schema#label> "Currency" <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#currency> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#currency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#currency> <http://www.w3.org/2000/01/rdf-schema#comment> "Specific currency used for denote amounts, prices and turnovers. Linking with http://dbpedia.org/ontology/Language" <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#currencyCode> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.eurocris.org/ontologies/cerif/1.3#code> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#currencyCode> <http://www.w3.org/2000/01/rdf-schema#comment> "Code of a specific currency used for denote amounts, prices and turnovers." <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#currencyCode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#currencyCode> <http://www.w3.org/2000/01/rdf-schema#label> "Currency Code" <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#currencyCode> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#PriceAward> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.eurocris.org/ontologies/cerif/1.3> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#PriceAward> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eurocris.org/ontologies/cerif/1.3#SecondLevelEntity> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#PriceAward> <http://www.w3.org/2000/01/rdf-schema#label> "Price Award" <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#PriceAward> <http://www.w3.org/2000/01/rdf-schema#comment> "Price Award" <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#PriceAward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://www.eurocris.org/ontologies/cerif/1.3#PriceAward> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.eurocris.org/ontologies/cerif/1.3> .
+<http://purl.org/net/VideoGameOntology#GameProduct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/net/VideoGameOntology> .
+<http://purl.org/net/VideoGameOntology#GameProduct> <http://www.w3.org/2000/01/rdf-schema#comment> "A vgo:GameProduct is anything that is for sale inside a game. These can be either normal game items purchased with in-game currency or with real world money. An example of vgo:GameProduct could be a consumable health potion bought with real money, a better weapon or some visual improvement (e.g. Hats in Steam). Basically a game product can be anything, a character, an item or an achievement.\nGameProduct is a subclass of Good Relations: ProductOrService & schema:Product. Since vgo:GameProduct is a type of buyable product, it reuses the properties available in the schema and Good Relations, such as currency price, validity of the offer and so on."@en <http://purl.org/net/VideoGameOntology> .
+<http://purl.org/net/VideoGameOntology#GameProduct> <http://www.w3.org/2000/01/rdf-schema#label> "game product"@en <http://purl.org/net/VideoGameOntology> .
+<http://purl.org/net/VideoGameOntology#GameProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Product> <http://purl.org/net/VideoGameOntology> .
+<http://purl.org/net/VideoGameOntology#GameProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B54484479084387527394fa2946c2cfbf <http://purl.org/net/VideoGameOntology> .
+<http://purl.org/net/VideoGameOntology#GameProduct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/net/VideoGameOntology> .
+<http://ns.inria.fr/provoc> <http://purl.org/dc/elements/1.1/contributor> <http://www.viseo.com/en/research/Cedric-Lopez> <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://purl.org/dc/elements/1.1/rights> "Copyright © 2016 INRIA and VISEO" <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://purl.org/dc/elements/1.1/contributor> <http://www-sop.inria.fr/members/Elena.Cabrio/> <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://purl.org/dc/elements/1.1/contributor> <http://www-sop.inria.fr/members/Fabien.Gandon/> <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://www.w3.org/2000/01/rdf-schema#comment> "ProVoc (Product Vocabulary) est un vocabulaire qui peut être utilisé pour représenter des informations et les manipuler à travers le Web. L'ontologie permet de représenter : 1) La hiérarchie d'une société : Groupe (Entreprise), Divisions d'un groupe, Marques d'une division ou d'un groupe, 2) La production d'une société : Gammes de produits (attachées à une marque), produits d'une gamme, packages de produits (un panier alimentaire par exemple), composition des produits...\n\nQuels apports ? \n\n- pv:Range\nDans ProVoc, nous introduisons les gammes de produits pv:Range.\nGoodRelations défini des variantes de produits  (http://wiki.goodrelations-vocabulary.org/Documentation/Product_variants, http://www.heppnetz.de/ontologies/goodrelations/v1.html#isVariantOf) : \"A variant is a specialization of a product model and inherits all of its product properties, unless they are defined locally. This allows a very compact modeling of product models that vary only in  a few properties.\"\nD'après GoodRelations, une variante d'un MacBook est par exemple un MacBook13Inch ou un MacBook15Inch qui varient par leur taille d'écran  et la quantité de ports USB disponibles. Il s'agit d'héritage entre un produit « parent » et ses dérivés qui doivent respecter les normes imposées par le produit « parent » (à moins de redéfinir les valeurs). Dans la version actuelle de GoodRelations, il existe une relation gr:isVariantOf nécessairement entre deux modèles de produits ou service. Or, les gammes de produits peuvent difficilement être traitées comme un ensemble de dérivés d'un produit/modèle commun. Par exemple, Elsève est une gamme proposant des shampooings avec des dérivés, mais Elsève propose aussi des Colorations avec des dérivés,  des Huiles avec des dérivés etc etc, donc à part qu'il s'agit de traitement pour les cheveux, ces  produits n'ont pas grand-chose en commun. En utilisant gr:isVariantOf entre certains produits « proches », on aurait plusieurs clusters de produits apparentés, au détriment d'une gamme unique. L'utilisation de pv:Range permet de respecter la structure fournie par l'expert, non subjective.\nEn conclusion, les variantes semblent pertinentes pour identifier des produits similaires (voir également http://www.heppnetz.de/ontologies/goodrelations/v1#isSimilarTo qui ne se différencie de isVariantOf que par le fait que le domain et le range de isSimilarTo sont plus large), mais les gammes de produits ont une toute autre vocation.\ngr:isVariantOf a une sémantique très large et subjective (comme pour isSimilarTo, d’ailleurs M. Hepp le dit clairement ici http://www.heppnetz.de/ontologies/goodrelations/v1#isSimilarTo). Par exemple, rien n’empêche d’exprimer qu’une Renault Clio 4 est une variante d’une Ford Fiesta (http://www.autonews.fr/nouveautes/nouveaute/104216-renault-clio-fiesta-prix/ pourtant elles ne sont pas de la même marque.  \nEnfin, notons qu'une pv:Range ne représente ni un produit ni un modèle de produit. pv:Range permet de lier une marque à ses produits de façon non subjective (fournie par l’expert). \nIl serait pertinent de limiter l’utilisation de gr:isVariantOf aux produits appartenant à une pv:Range.\n\n- pv:Package\nDans ProVoc nous introduisons la classe pv:Package qui permet de représenter des ensembles de produits vendus comme un unique produit. Par exemple un coffret de cosmétique contenant une BB crème, un gloss, et le parfum La vie est Belle de Lancôme. Un autre exemple est un panier alimentaire contenant différents produits.\n\n- pv:Provider\nDans ProVoc nous introduisons pv:Provider qui représente les fournisseurs de produits (par exemple Carrefour est fournisseur des produits Nutella).\n\n- pv:Component\nDans ProVoc nous introduisons pv:Component qui permet de décrire la composiiton d'un produit (par exemple, un parfum peut contenir du linalool).\n\nD'autres classes et propriétés sont introduites dans ProVoc dans le but de raffiner le modèle. Par exemple, pv:Model, pv:Designer, et pv:Ambassador sont des sous-classes de foaf:Person. ProVoc permet aussi de lier les composants d'un produit avec leur impact sur la santé (pv:healthImpact).\n\nConcernant les propriétés classiques liées directement au produit, telles que la couleur, le prix, la référence, la description, etc, voir Good Relations.\n"@fr <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://purl.org/dc/elements/1.1/publisher> <http://wimmics.inria.fr/> <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://www.w3.org/2000/01/rdf-schema#comment> "ProVoc (Product Vocabulary) is a vocabulary that can be used to represent information and manipulate them through the Web. This ontology reflects: 1) The basic hierarchy of a company: Group (Company), Divisions of a Group, Brand names attached to a Division or a Group, and 2) The production of a company: products, ranges of products (attached to a Brand), the composition of a product, packages of products...\n\n\nWhat contributions ? \n\n- pv:Range\nIn ProVoc we introduce pv:Range.\nGoodRelations defined \"variants\" ( http://wiki.goodrelations-vocabulary.org/Documentation/Product_variants , http://www.heppnetz.de/ontologies/goodrelations/v1.html#isVariantOf ) as following: \"\"A variant is a specialization of a product model and inherits all of its product properties, unless they are defined locally. This allows a very compact modeling of product models that vary only in  a few properties. \"\nAccording to GoodRelations, a variant of a MacBook is for example a MacBook13Inch or MacBook15Inch which vary in screen size and in available USB ports. This is inheritage between a product model and its derivatives, which must meet the standards imposed by the product model (obviously values can be redefined locally). According to the current version of GoodRelations,gr:isVariantOf necessarily exists between two models of product or service. However, ranges of products can hardly be considered as a set of derivatives of a product (or model of product). For example, Elsève is a range of products offering shampoos with some derivatives, but Elsève also offers creams with derivatives, oils with derivatives etc., so apart that such products are related to treatment for hair, they have not much in common. Using gr:isVariantOf between certain 'close' products, we would obtain multiple clusters of related products, to the detriment of a unique range of products. Using pv:Range allows to respect the structure provided by the expert.\nIn conclusion, variants seem to identify similar products (see also http://www.heppnetz.de/ontologies/goodrelations/v1#isSimilarTo which differs from gr:isVariantOf by the fact that the domain and ranks of isSimilarTo are larger), but pv:range has a different vocation.\ngr:isVariantOf has a very broad and subjective semantics (such as gr:isSimilarTo, as Mr. Hepp said clearly here http://www.heppnetz.de/ontologies/goodrelations/v1#isSimilarTo ). For example , with gr:isVariantOf it would be possible to express that a Renault Clio 4 is a variant of a Ford Fiesta ( http://www.autonews.fr/nouveautes/nouveaute/104216-renault-clio-fiesta-prix/ yet they are not of the same brand) whilst they are not of the same brand name.\nFinally, note that a pv:Range does not represent a set of products nor product models. pv:range is used to objectively link a brand to its products (provided by the expert).\nIt would be appropriate to limit the use of gr:isVariantOf to products belonging to a pv:Range.\n\n- pv:Package\nIn ProVoc we introduce the pv:Package class that is used to represent sets of products sold as a single product. For example a cosmetic box containing a BB cream, a lip gloss, and a perfume byl Lancôme. Another example is a food package that contains different products.\n\n- pv:Provider\nIn ProVoc we introduce the pv:Provider that makes a product available in the e-commerce.\n\n- pv:Component\nIn ProVoc we introduce the pv:Component which enables to describe the composition of a product (for instance, a perfume can contain linalool).\n\nWe  introduce more properties and classes in order to refine the model. For instance, pv:Model, pv:Designer, and pv:Ambassador appear as a subclass of foaf:Person.  ProVoc can also be used in order to link products and their components with their impact on health ( see pv:healthImpact).\n\nConcerning classic properties related to the product, such as color, price, reference, description, etc., see Good Relations (http://www.heppnetz.de/projects/goodrelations/).\n"@en <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://purl.org/dc/elements/1.1/description> "ProVoc (Product Vocabulary) is a vocabulary that can be used to represent information and manipulate them through the Web. This ontology reflects: 1) The basic hierarchy of a company: Group (Company), Divisions of a Group, Brand names attached to a Division or a Group, and 2) The production of a company: products, ranges of products (attached to a Brand), the composition of a product, packages of products..."@en <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://purl.org/dc/elements/1.1/contributor> <http://www.viseo.com/en/research/Frederique-Segond> <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://purl.org/dc/elements/1.1/title> "Product Vocabulary"@en <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://purl.org/dc/elements/1.1/issued> "2016-01-01"^^<http://www.w3.org/2001/XMLSchema#date> <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://www.w3.org/2002/07/owl#versionInfo> "1.0"^^<http://www.w3.org/2001/XMLSchema#decimal> <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://purl.org/vocommons/voaf#preferredNamespaceUri> "http://ns.inria.fr/provoc#" <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://purl.org/dc/elements/1.1/publisher> <http://www.viseo.com/> <http://ns.inria.fr/provoc> .
+<http://ns.inria.fr/provoc> <http://purl.org/vocommons/voaf#preferredNamespacePrefix> "pv" <http://ns.inria.fr/provoc> .
+<http://linkeddata.center/kees/v1#ruleText> <http://www.w3.org/2000/01/rdf-schema#comment> "The rule text body in the form:\nprefixes declaration\nIF { sparql where clause }\nTHEN { sparql insert(delete clause }.\n\nExample:\nPREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\nPREFIX gr: <http://purl.org/goodrelations/v1#>\nPREFIX :<urn:test:>\nIF {\n           ?offering gr:hasPriceSpecification ?ps .\n           ?ps gr:hasCurrencyValue ?price .\n           FILTER (?price >= 200.00).\n}\nTHEN {\n           ?offering a :ExpensiveProduct .\n}\n\n"@en <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#ruleText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#ruleText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#ruleText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#ruleText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linkeddata.center/kees/v1#ReasoningPolicy> <http://linkeddata.center/kees/v1> .
+<http://schema.mobivoc.org/price> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CivicStructure> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/price> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/PriceSpecification> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/price> <http://purl.org/dc/terms/created> "2017-06-07"^^<http://www.w3.org/2001/XMLSchema#date> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/price> <http://purl.org/dc/terms/modified> "2018-01-12"^^<http://www.w3.org/2001/XMLSchema#date> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/price> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a civic structure can be used for a specific price."@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/price> <http://www.w3.org/2000/01/rdf-schema#label> "Preis"@de <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/price> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/price> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/price> <http://www.w3.org/2000/01/rdf-schema#label> "price"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.mobivoc.org/> .
+<https://saref.etsi.org/core/Price> <http://www.w3.org/2000/01/rdf-schema#comment> "A saref:Property crelated to some measurements that are characterized by a certain value that is measured using saref:Currency"@en <https://saref.etsi.org/core/> .
+<https://saref.etsi.org/core/Price> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Property> <https://saref.etsi.org/core/> .
+<https://saref.etsi.org/core/Price> <http://www.w3.org/2000/01/rdf-schema#label> "Price"@en <https://saref.etsi.org/core/> .
+<https://saref.etsi.org/core/Price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/core/> .
+<http://schema.org/price> <http://schema.org/rangeIncludes> <http://schema.org/Text> <http://schema.org/> .
+<http://schema.org/price> <http://schema.org/domainIncludes> <http://schema.org/PriceSpecification> <http://schema.org/> .
+<http://schema.org/price> <http://schema.org/rangeIncludes> <http://schema.org/Number> <http://schema.org/> .
+<http://schema.org/price> <http://schema.org/domainIncludes> <http://schema.org/Offer> <http://schema.org/> .
+<http://schema.org/price> <http://www.w3.org/2000/01/rdf-schema#comment> "The offer price of a product, or of a price component when attached to PriceSpecification and its subtypes.<br/><br/>\n\nUsage guidelines:<br/><br/>\n\n<ul>\n<li>Use the <a class=\"localLink\" href=\"http://schema.org/priceCurrency\">priceCurrency</a> property (with standard formats: <a href=\"http://en.wikipedia.org/wiki/ISO_4217\">ISO 4217 currency format</a> e.g. \"USD\"; <a href=\"https://en.wikipedia.org/wiki/List_of_cryptocurrencies\">Ticker symbol</a> for cryptocurrencies e.g. \"BTC\"; well known names for <a href=\"https://en.wikipedia.org/wiki/Local_exchange_trading_system\">Local Exchange Tradings Systems</a> (LETS) and other currency types e.g. \"Ithaca HOUR\") instead of including <a href=\"http://en.wikipedia.org/wiki/Dollar_sign#Currencies_that_use_the_dollar_or_peso_sign\">ambiguous symbols</a> such as '$' in the value.</li>\n<li>Use '.' (Unicode 'FULL STOP' (U+002E)) rather than ',' to indicate a decimal point. Avoid using these symbols as a readability separator.</li>\n<li>Note that both <a href=\"http://www.w3.org/TR/xhtml-rdfa-primer/#using-the-content-attribute\">RDFa</a> and Microdata syntax allow the use of a \"content=\" attribute for publishing simple machine-readable values alongside more human-friendly formatting.</li>\n<li>Use values from 0123456789 (Unicode 'DIGIT ZERO' (U+0030) to 'DIGIT NINE' (U+0039)) rather than superficially similiar Unicode symbols.</li>\n</ul>\n" <http://schema.org/> .
+<http://schema.org/price> <http://www.w3.org/2000/01/rdf-schema#label> "price" <http://schema.org/> .
+<http://schema.org/price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/price> <http://schema.org/domainIncludes> <http://schema.org/TradeAction> <http://schema.org/> .
+<http://schema.org/price> <http://www.w3.org/2000/01/rdf-schema#label> "price"@en <http://www.w3id.org/urban-iot/core> .
+<http://schema.org/price> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.w3id.org/urban-iot/core> .
+<http://schema.org/price> <http://www.w3.org/2000/01/rdf-schema#label> "prezzo"@it <http://www.w3id.org/urban-iot/core> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/price.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:Bpricea .
+_:Bpricea <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bpricea <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/pricea.nt> .
+_:Bpricea <https://w3id.org/tree#value> "pricea" .
+_:Bpricea <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/pricea.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:Bpricec .
+_:Bpricec <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bpricec <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/pricec.nt> .
+_:Bpricec <https://w3id.org/tree#value> "pricec" .
+_:Bpricec <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/pricec.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:Bpriced .
+_:Bpriced <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bpriced <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/priced.nt> .
+_:Bpriced <https://w3id.org/tree#value> "priced" .
+_:Bpriced <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/priced.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:Bpriceh .
+_:Bpriceh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bpriceh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/priceh.nt> .
+_:Bpriceh <https://w3id.org/tree#value> "priceh" .
+_:Bpriceh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/priceh.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:Bpricei .
+_:Bpricei <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bpricei <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/pricei.nt> .
+_:Bpricei <https://w3id.org/tree#value> "pricei" .
+_:Bpricei <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/pricei.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:Bpricem .
+_:Bpricem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bpricem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/pricem.nt> .
+_:Bpricem <https://w3id.org/tree#value> "pricem" .
+_:Bpricem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/pricem.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:Bpriceo .
+_:Bpriceo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bpriceo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/priceo.nt> .
+_:Bpriceo <https://w3id.org/tree#value> "priceo" .
+_:Bpriceo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/priceo.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:Bpricer .
+_:Bpricer <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bpricer <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/pricer.nt> .
+_:Bpricer <https://w3id.org/tree#value> "pricer" .
+_:Bpricer <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/pricer.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:Bprices .
+_:Bprices <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bprices <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/prices.nt> .
+_:Bprices <https://w3id.org/tree#value> "prices" .
+_:Bprices <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/prices.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:Bpricet .
+_:Bpricet <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bpricet <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/pricet.nt> .
+_:Bpricet <https://w3id.org/tree#value> "pricet" .
+_:Bpricet <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/pricet.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:Bpricev .
+_:Bpricev <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bpricev <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/pricev.nt> .
+_:Bpricev <https://w3id.org/tree#value> "pricev" .
+_:Bpricev <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/pricev.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:BaX2Bprice .
+_:BaX2Bprice <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bprice <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+price.nt> .
+_:BaX2Bprice <https://w3id.org/tree#value> "a" .
+_:BaX2Bprice <https://w3id.org/tree#value> "price" .
+_:BaX2Bprice <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+price.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:BcX2Bprice .
+_:BcX2Bprice <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Bprice <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+price.nt> .
+_:BcX2Bprice <https://w3id.org/tree#value> "c" .
+_:BcX2Bprice <https://w3id.org/tree#value> "price" .
+_:BcX2Bprice <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+price.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:BdX2Bprice .
+_:BdX2Bprice <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2Bprice <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+price.nt> .
+_:BdX2Bprice <https://w3id.org/tree#value> "d" .
+_:BdX2Bprice <https://w3id.org/tree#value> "price" .
+_:BdX2Bprice <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+price.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:BeX2Bprice .
+_:BeX2Bprice <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2Bprice <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+price.nt> .
+_:BeX2Bprice <https://w3id.org/tree#value> "e" .
+_:BeX2Bprice <https://w3id.org/tree#value> "price" .
+_:BeX2Bprice <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+price.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:BfX2Bprice .
+_:BfX2Bprice <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2Bprice <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+price.nt> .
+_:BfX2Bprice <https://w3id.org/tree#value> "f" .
+_:BfX2Bprice <https://w3id.org/tree#value> "price" .
+_:BfX2Bprice <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+price.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:BiX2Bprice .
+_:BiX2Bprice <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2Bprice <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+price.nt> .
+_:BiX2Bprice <https://w3id.org/tree#value> "i" .
+_:BiX2Bprice <https://w3id.org/tree#value> "price" .
+_:BiX2Bprice <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+price.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:BmX2Bprice .
+_:BmX2Bprice <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2Bprice <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+price.nt> .
+_:BmX2Bprice <https://w3id.org/tree#value> "m" .
+_:BmX2Bprice <https://w3id.org/tree#value> "price" .
+_:BmX2Bprice <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+price.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:BoX2Bprice .
+_:BoX2Bprice <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2Bprice <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+price.nt> .
+_:BoX2Bprice <https://w3id.org/tree#value> "o" .
+_:BoX2Bprice <https://w3id.org/tree#value> "price" .
+_:BoX2Bprice <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+price.nt> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:BpX2Bprice .
+_:BpX2Bprice <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BpX2Bprice <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/p+price.nt> .
+_:BpX2Bprice <https://w3id.org/tree#value> "p" .
+_:BpX2Bprice <https://w3id.org/tree#value> "price" .
+_:BpX2Bprice <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/p+price.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:BpriceX2Br .
+_:BpriceX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BpriceX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/price+r.nt> .
+_:BpriceX2Br <https://w3id.org/tree#value> "price" .
+_:BpriceX2Br <https://w3id.org/tree#value> "r" .
+_:BpriceX2Br <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/price+r.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:BpriceX2Bs .
+_:BpriceX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BpriceX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/price+s.nt> .
+_:BpriceX2Bs <https://w3id.org/tree#value> "price" .
+_:BpriceX2Bs <https://w3id.org/tree#value> "s" .
+_:BpriceX2Bs <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/price+s.nt> <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/price.nt> <https://w3id.org/tree#relation> _:BpriceX2Bt .
+_:BpriceX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BpriceX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/price+t.nt> .
+_:BpriceX2Bt <https://w3id.org/tree#value> "price" .
+_:BpriceX2Bt <https://w3id.org/tree#value> "t" .
+_:BpriceX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/price+t.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .

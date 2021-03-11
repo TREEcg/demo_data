@@ -1,0 +1,369 @@
+<http://data.europa.eu/eli/ontology#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "eli" <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#> <http://www.w3.org/2000/01/rdf-schema#label> "ELI Metadata Ontology"@en <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology to describe legislation, based on the FRBR model, that encodes the ELI metadata fields.\nSee the classes \"LegalResource\", \"LegalExpression\" and \"Format\" as entry points."@en <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://data.europa.eu/eli/ontology#LegalResource> <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#> <http://www.w3.org/2002/07/owl#versionInfo> "1.1"^^<http://www.w3.org/2001/XMLSchema#decimal> <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#> <http://purl.org/dc/terms/creator> "ELI task force"@en <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#> <http://www.w3.org/2004/02/skos/core#historyNote> "* 1.1 *\n\n  - added the following properties :\n    - is_member_of / has_member\n    - number\n    - jurisdiction\n    - date_applicability\n    - applies / applied_by\n    - commences / commenced_by\n    - repeals / repealed_by\n    - corrects / corrected_by\n    - amends / amended_by\n    - is_another_publication_of / has_another_publication\n\n  - additionnal properties were also added to accomodate with situations where a property value can be either a literal or a URI :\n    - responsibility_of_agent vs. responsibility_of\n    - published_in_format vs. published_in\n    - publisher_agent vs. publisher\n    - rightsholder_agent vs. rightsholder\n\n  - the relations with DublinCore properties is now declared with a custom annotation property \"eli:isSpecificPropertyOf\" instead of rdfs:subPropertyOf to be able to relate both eli:publisher/eli:publisher_agent to dcterms:publisher, and eli:rightsholder/eli:rightsholder_agent to dcterms:rightsholder.\n\n  - added the class LegalResourceSubdivision\n\n  - the propery implements / implemented_by was deprecated in favor of applies / applied_by\n\n  - numerous definitions were improved and clarified\n\n  - all ontology items are documented with :\n    - their version of creation;\n    - their version of latest modification;\n    - an history note documenting the changes on the item;\n\nV1.1 is backward compatible with v1.0, with 1 following exception :\n  - starting from v1.1, is_member_of / has_member should be used instead of is_part_of / has_part for conceptual inclusions;\n\nAdditionnally, ELI implementers are strongly encouraged to use applies / applied_by instead of implements / implemented_by; note however that implements/implemented_by currently remain in the ontology so publishers can take the time to transition smoothly.\n\n* 1.0 *\n\n  - added a set of values for the InForce table\n  - added definitions to tables\n  - minor fixes in definitions\n  - added rdfs:seeAlso from properties to corresponding tables\n  - cleaned the \"whyThisIsNeeded\" annotation\n\n* 0.6.1 *\n\n  - fixed typos in definitions\n\n* 0.6 *\n\n  - imported skos rather than redeclaring skos classes and properties\n  - changed domain of in_force, first_date_entry_into_force, date_no_longer_in_force to [LegalResource or LegalExpression] instead of LegalResource\n  - changed domain of language, title, title_short, title_alternative to LegalExpression instead of [LegalResource or LegalExpression]\n  - reworked the tables : don't use country and resource type tables from MDR, but declare local tables.\n  - integrated new definitions for all classes and properties\n\n* 0.5 *\n\n  - Renamed \"Interpretation\" into \"LegalExpression\" (and modified comments accordingly)\n  - Renamed the structural FRBR relations in accordance with Metalex ontology :\n    - is_legal_resource_of becomes \"is_relaized_by\"\n    - has_legalresource becomes \"realizes\"\n    - is_interpretation_of becomes \"is_embodied_by\"\n    - has_interpretation becomes \"embodies\"\n    - file becomes \"is_exemplified_by\"\n  - file has been made a subproperty of \"has exemplar of manifestation\" instead of \"dc:hasPart\"\n  - relevant_for is no more considered mandatory. Deleted comment that stated \"we are seeking a way to express that relevant_for must have at least one value for LegalResource or one of its LegalInterpretation\".\n\n* 0.4.1 *\n\n  - Added \"publishes\" property\n  - Enriched the note on \"transposes\" and \"transposed by\" to indicate they must point to / be expressed on LegalResource"@en <http://data.europa.eu/eli/ontology> .
+<http://data.europa.eu/eli/ontology#> <http://www.w3.org/2004/02/skos/core#editorialNote> "- The ELI ontology reuses the property names from the Metalex ontology (http://www.metalex.eu/) to express the FRBR skeleton hierarchy : is_realized_by/realizes, is_embodied_by/embodies, is_exemplified_by. This wording is also the one used in the original FRBR specifications. However, the decision has been made _not_ to align to the Metalex class names (BibliographicWork, BibliographicExpression, BibliographicManifestation), because ELI is specifically about publishing legal metadata on the web, and not structuring legal content in any document.\n\n- first_date_entry_in_force and date_no_longer_in_force could be aligned with dcterms:date\n\n- a class could be introduced for URI schemas to implement the URI schema registry\n\n- ELI does not use rdfs:subPropertyOf to relate its properties with DublinCore Terms, but instead a custom annotation properties \"eli:isSpecificPropertyOf\". ELI 1.1 chose to have 2 separate properties in certain situations to accomodate with cases where the value can be either a String or a reference to an identified object; this is the case for eli:publisher / eli:publisher_agent, or eli:rightsholder and eli:rightsholder_agent. This entails that this pair of properties cannot be both aligned with their respective DCTerms equivalent (dcterms:publisher and dcterms:rightsholder), since relating a property using rdfs:subPropertyOf necessary implies to declare the DCterms property as either a datatype property _or_ an objectProperty, but not both."@en <http://data.europa.eu/eli/ontology> .
+<http://dataid.dbpedia.org/ns/core#> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://dataid.dbpedia.org/ns/core#> <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.0" <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://dataid.dbpedia.org/ns/core#> <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/dcat> <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#> <http://www.w3.org/2000/01/rdf-schema#comment> "DBpedia Data ID is an ontology with the goal of describing LOD datasets via RDF files in a uniform way. Established vocabularies like DCAT, VoID, Prov-O and SPARQL Service Description are used for maximum compatibility."@en <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/prov> <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#> <http://www.w3.org/2002/07/owl#imports> <http://vocab.deri.ie/void> <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#> <http://www.w3.org/2000/01/rdf-schema#label> "DataID"@en <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://dataid.dbpedia.org/ns/core#> .
+<http://dataid.dbpedia.org/ns/core#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "dataid" <http://dataid.dbpedia.org/ns/core#> .
+<https://w3id.org/GDPRtEXT> <http://www.w3.org/2002/07/owl#priorVersion> <https://openscience.adaptcentre.ie/ontologies/v/GDPRtEXT/gdpr_v0.1.owl> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://www.w3.org/2002/07/owl#versionInfo> "0.6"^^<http://www.w3.org/2001/XMLSchema#decimal> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://purl.org/dc/elements/1.1/description> "The General Data Protection Regulation (GDPR) is comprised of several articles, each with points that refer to specific concepts. The general convention of referring to these points and concepts is to quote the specific article or point using a human-readable reference. This ontology provides a way to refer to the points within the GDPR using the EurLex ontology published by the European Publication Office. It also defines the concepts defined, mentioned, and requried by the GDPR using the Simple Knowledge Organization System (SKOS) ontology." <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://www.w3.org/2000/01/rdf-schema#label> "GDPR text EXTensions" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/GDPRov> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://purl.org/dc/terms/source> <http://eur_lex.europa.eu/legal_content/EN/ALL/?uri=CELEX:32016R0679> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "Bartolini, C., Muthuri, R., & Santos, C. (2015, November). Using ontologies to model data protection requirements in workflows. In JSAI International Symposium on Artificial Intelligence (pp. 233-248). Springer, Cham."^^<http://www.w3.org/2000/01/rdf-schema#Literal> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/GDPRtEXT" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://www.w3.org/2000/01/rdf-schema#comment> "This is an ontology to represent GDPR text as a set of RDF resources" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://raw.githubusercontent.com/guerret/lu.uni.eclipse.bpmn2/master/resources/dataprotection.owl> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://purl.org/dc/terms/abstract> "The General Data Protection Regulation (GDPR) defines legal obligations over the use of personal data by organisations. This ontology aims to identify and model such terms and obligations as an OWL vocabulary and to directly link the terms to their occurence, usage, and influence in the GDPR text." <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://purl.org/dc/terms/created> "2017-08-15"^^<http://www.w3.org/2001/XMLSchema#date> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://purl.org/dc/terms/publisher> <http://purl.org/adaptcentre/people/ADAPT> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://xmlns.com/foaf/0.1/homepage> "https://openscience.adaptcentre.ie/projects/GDPRtEXT/" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://purl.org/vocab/vann/preferredNamespacePrefix> "gdprtext" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://purl.org/dc/terms/description> "This ontology extends the canonical (official) GDPR text with additional annotations" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://www.w3.org/2002/07/owl#versionIRI> <https://openscience.adaptcentre.ie/ontologies/GDPRtEXT/v/gdpr_v0.7.owl> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://purl.org/dc/terms/license> "http://creativecommons.org/licenses/by/4.0/"^^<https://w3.org/2001/XMLSchema#anyURI> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://purl.org/dc/terms/creator> "http://purl.org/adaptcentre/people/HJP"^^<http://www.w3.org/2001/XMLSchema#anyURI> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://purl.org/ontology/bibo/status> <http://purl.org/ontology/bibo/status/draft> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://purl.org/dc/elements/1.1/creator> "Harshvardhan J. Pandit" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://www.w3.org/2002/07/owl#backwardCompatibleWith> <https://openscience.adaptcentre.ie/ontologies/v/GDPRtEXT/gdpr_v0.1.owl> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://purl.org/dc/terms/modified> "2018-07-31" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT> <http://purl.org/dc/elements/1.1/title> "GDPRtEXT" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRov> <http://purl.org/dc/terms/title> "The GDPR Provenance ontology" <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://www.w3.org/2002/07/owl#versionIRI> "https://openscience.adaptcentre.ie/ontologies/gdprov/v/gdprov.0.7.owl" <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://purl.org/dc/terms/created> "2017-08-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/GDPRov#"^^<http://www.w3.org/2001/XMLSchema#anyURI> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://purl.org/dc/terms/abstract> "The General Data Protection Regulation (GDPR) is an European law governing the use of consent and personal data. Some of its obligations involve concepts related to the lifecycles of consent and personal data. Such obligations are concerned with how the collection, use, processing, sharing, and storing of consent and personal data takes place and provides the motivation for a form of documentation that can demonstrate the required information towards compliance. GDPRov is an OWL2 ontology for representing this information as provenance metadata using terms relevant to the GDPR. It extends PROV-O and P-Plan to represent the lifecyles as an abstract model of how things should happen or will happen (future) as well as instance of what has happened (past). The ontology is being developed as part of contributions towards PhD research by its primary author." <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://www.w3.org/2000/01/rdf-schema#comment> "GDPRov is an ontology for expressing provenance metadata in the context of the General Data Protection Regulation (GDPR) and its compliance. It extends PROV-O and P-Plan. PROV-O is the ontology based on the PROV model, a W3C recommendation, while P-Plan is an extension of PROV-O. PROV is used to define terms or 'instances' of what has happened in the past, while P-Plan is used to define the abstract model or 'Plan' of things to happen. GDPRov uses P-Plan to create a template/model/plan as an abstract or model representation of a system which is then recorded using PROV-O instances to show something has happened. The aim of the ontology is to enable representation of consent and personal data lifecycles using terms relevant to GDPR and to facilitate expression of this information towards documentation related to compliance." <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://purl.org/dc/terms/creator> "http://purl.org/adaptcentre/people/dave_lewis"^^<http://www.w3.org/2001/XMLSchema#anyURI> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/prov-o-20130430> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/net/p-plan#> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://purl.org/dc/terms/modified> "2018-04-06" <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://purl.org/dc/terms/description> "GDPRov is an OWL2 ontology to express provenance metadata of consent and data lifecycles towards documenting compliance for GDPR." <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://purl.org/vocab/vann/preferredNamespacePrefix> "gdprov" <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://www.w3.org/2002/07/owl#versionInfo> "0.7" <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://purl.org/dc/terms/creator> "http://purl.org/adaptcentre/people/harshvardhan_pandit"^^<http://www.w3.org/2001/XMLSchema#anyURI> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://www.w3.org/2002/07/owl#versionIRI> <https://openscience.adaptcentre.ie/ontologies/gdprov/v/gdprov_v0.7.owl> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <https://w3id.org/GDPRov> .
+<https://w3id.org/ibp/CTRLont> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/ibp/CTRLont-0.2.0> <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://www.w3.org/2002/07/owl#versionInfo> "v0.2.0" <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://purl.org/dc/terms/creator> "Georg Ferdinand Schneider" <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://purl.org/dc/terms/title> "CTRLont - An ontology to formally specify the control domain."@en <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/ibp/CTRLont#> <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://purl.org/dc/terms/publisher> <https://www.ibp.fraunhofer.de> <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ctrl" <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://www.w3.org/2000/01/rdf-schema#label> "CTRLont"@en <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://purl.org/dc/terms/issued> "2016-11-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by-sa/4.0> <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://purl.org/dc/terms/identifier> "https://w3id.org/ibp/CTRLont#" <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://purl.org/dc/terms/rights> "Copyright (c) 2017/ 2018, Fraunhofer Institute for Building Physics,\nNuremberg, Germany. This ontology is distributed under a Creative Commons Attribution \nShare Alike License (CC BY-SA 4.0) http://creativecommons.org/licenses/by-sa/4.0"@en <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://purl.org/dc/terms/description> "The ontology and its use are described in [1]. The ontology is implemented using the free protege tool (protege.stanford.edu) [2].\n\n[1] Schneider, G.F., Pauwels, P. and Steiger, S. (2017): \"Ontology-based Modelling of Control Logic in Building Automation Systems\" in IEEE Transactions on Industrial Informatics, vol. 13, no. 6, pp. 3350-3360, DOI: 10.1109/TII.2017.2743221.\n\n[2] M. A. Musen (2015): The protege project: a look back and a look forward. AI matters, 1(4):4-12, doi: 10.1145/2757001.2757003."@en <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Georg_Schneider3> <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://purl.org/dc/terms/rights> "Copyright (c) 2019 Georg Ferdinand Schneider/ Fraunhofer Institute for Building Physics IBP" <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://purl.org/dc/terms/creator> <https://orcid.org/0000-0002-2033-859X> <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/ibp/CTRLont-0.0.1> <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://www.w3.org/2000/01/rdf-schema#comment> "CTRLont specifies concepts and relationships of control actors on a high level."@en <https://w3id.org/ibp/CTRLont> .
+<https://w3id.org/ibp/CTRLont> <http://purl.org/dc/terms/modified> "2018-03-12"^^<http://www.w3.org/2001/XMLSchema#date> <https://w3id.org/ibp/CTRLont> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/vocab/vann/preferredNamespacePrefix> "eupont" <http://elite.polito.it/ontologies/eupont.owl> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://www.w3.org/2002/07/owl#versionInfo> "2.0"^^<http://www.w3.org/2001/XMLSchema#decimal> <http://elite.polito.it/ontologies/eupont.owl> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/dc/terms/modified> "2018-02-09"^^<http://www.w3.org/2001/XMLSchema#date> <http://elite.polito.it/ontologies/eupont.owl> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/dc/terms/contributor> "Luigi De Russis (luigi.derussis@polito.it)" <http://elite.polito.it/ontologies/eupont.owl> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/dc/terms/title> "EUPont: an ontology for End User Programming of the IoT"@en <http://elite.polito.it/ontologies/eupont.owl> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://creativecommons.org/ns#license> "Copyright (c) 2016-2018 Monge Roffarello Alberto\n\n        Licensed under the Apache License, Version 2.0 (the \"License\");\n        you may not use this file except in compliance with the License.\n        You may obtain a copy of the License at\n\n         http://www.apache.org/licenses/LICENSE-2.0\n\n        Unless required by applicable law or agreed to in writing, software\n        distributed under the License is distributed on an \"AS IS\" BASIS,\n        WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n        See the License for the specific language governing permissions and\n        limitations under the License" <http://elite.polito.it/ontologies/eupont.owl> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/dc/terms/description> "EUPont is an ontology to model high level rules for Internet of Things End User Programming (IoT-EUP)."@en <http://elite.polito.it/ontologies/eupont.owl> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/dc/terms/rights> "Copyright(c) 2016-2018 Monge Roffarello Alberto" <http://elite.polito.it/ontologies/eupont.owl> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/dc/terms/issued> "2016-12-01"^^<http://www.w3.org/2001/XMLSchema#date> <http://elite.polito.it/ontologies/eupont.owl> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://www.w3.org/2002/07/owl#imports> <http://xmlns.com/foaf/0.1/> <http://elite.polito.it/ontologies/eupont.owl> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://elite.polito.it/ontologies/eupont.owl#" <http://elite.polito.it/ontologies/eupont.owl> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://xmlns.com/foaf/0.1/primaryTopic> "End User Programming in the Internet of Thing" <http://elite.polito.it/ontologies/eupont.owl> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://elite.polito.it/ontologies/eupont.owl> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/dc/terms/creator> "Monge Roffarello Alberto (alberto.monge@polito.it)" <http://elite.polito.it/ontologies/eupont.owl> .
+<http://www.purl.org/drammar#ExternalRefEntity> <http://www.w3.org/2000/01/rdf-schema#label> "ExternalRefEntity" <http://www.purl.org/drammar> .
+<http://www.purl.org/drammar#ExternalRefEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "The ExternalRefEntity class has the function of bridging the description of a\n            DramaEntity (not an entity in general) to some external linguistic or semantic resource\n            such a dictionary or an ontology. An entity can be linked to its ExternalReference by\n            the hasExtRef object property, which has the ExternalReference as its range. The\n            ExternalRefEntity iherits the \"quale\" data property from its direct ancestor,\n            ExternalReference class." <http://www.purl.org/drammar> .
+<http://www.purl.org/drammar#ExternalRefEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.purl.org/drammar> .
+<http://www.purl.org/drammar#ExternalRefEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.purl.org/drammar#ExternalReference> <http://www.purl.org/drammar> .
+<http://www.isibang.ac.in/ns/mod#accessibility> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#accessibility> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#accessibility> <http://www.w3.org/2000/01/rdf-schema#comment> "Information on access (i.e., read, download) to an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#accessibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#properties> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#properties> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of properties in an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#properties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#properties> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologySyntax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologySyntax> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology Syntax" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologySyntax> <http://www.w3.org/2000/01/rdf-schema#comment> "A syntax that is used to implement an ontology. Example includes RDF/XML, Notation3, n-triples, RDFa and Turtle. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#competencyQuestion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#competencyQuestion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#competencyQuestion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#competencyQuestion> <http://www.w3.org/2000/01/rdf-schema#comment> "A set of questions made to build an ontology at the design time. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologyDesignLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologyDesignLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "A knowledge representation language using which an ontology is written. For example, RDFS, OWL, Ontolingua and Loom. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologyDesignLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology Design Language" <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#comment> "A license under which an ontology is published. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/license> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.isibang.ac.in/ns/mod#License> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#methodologyUsed> <http://www.w3.org/2000/01/rdf-schema#label> "methodology used" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#methodologyUsed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#methodologyUsed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#methodologyUsed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.isibang.ac.in/ns/mod#OntologyDesignMethodology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#methodologyUsed> <http://www.w3.org/2000/01/rdf-schema#comment> "A methodolgy follwoing which an ontology is created. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/elements/1.1/language> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/elements/1.1/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/elements/1.1/language> <http://www.w3.org/2000/01/rdf-schema#comment> "The natural language of an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/elements/1.1/language> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#classes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#classes> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of classes in an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#classes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#classes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#keyword> <http://www.w3.org/2000/01/rdf-schema#comment> "A keyword(s) is used to describe the content of an ontology. Keywords are basically uncontrolled and author defined words. Multiple entries in a keywords list are typically delimited by commas. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#keyword> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#keyword> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#keyword> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#endorsedBy> <http://www.w3.org/2000/01/rdf-schema#label> "endorsed by" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#endorsedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#endorsedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#endorsedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology endorsed by an agent. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#endorsedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#evaluatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology that is evaluated by an agent. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#evaluatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#evaluatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#evaluatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#evaluatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "evaluated by"@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#Domain> <http://www.w3.org/2000/01/rdf-schema#comment> "An area of knowledge or a field of study that an ontology deals with. For example, Gene ontology, Movie onotology, Fishery ontology and Food ontology."@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#Domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#Domain> <http://www.w3.org/2000/01/rdf-schema#label> "Domain" <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/format> <http://www.w3.org/2000/01/rdf-schema#comment> "The file format of an ontological resource. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/format> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.isibang.ac.in/ns/mod#FileFormat> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/format> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#LevelOfFormality> <http://www.w3.org/2000/01/rdf-schema#label> "Level Of Formality" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#LevelOfFormality> <http://www.w3.org/2000/01/rdf-schema#comment> "The degree or level of formality of an ontology. The level of formality varies from Rigorously formal, Semiformal, Informal, and Semiinformal. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#LevelOfFormality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#FileFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "A file format of an ontology. For example .rdf, .owl, .xml, etc.  "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#FileFormat> <http://www.w3.org/2000/01/rdf-schema#label> "File Format" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#FileFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologyType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologyType> <http://www.w3.org/2000/01/rdf-schema#comment> "The kind of an ontology. Example includes Upper ontology, Domain Ontology, Application Ontology and Task ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologyType> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology Type" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#creationDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#creationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The release date of an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#creationDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#creationDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologyDesignTool> <http://www.w3.org/2000/01/rdf-schema#comment> "A tool that is used to create an ontology. Example includes Protege, OntoEdit, TopBraid, etc. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologyDesignTool> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology Design Tool" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologyDesignTool> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#sponseredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#sponseredBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#sponseredBy> <http://www.w3.org/2000/01/rdf-schema#label> "sponsered by" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#sponseredBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Project> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#sponseredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology that is sponsored by and developed under a project. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#numberOfAxioms> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#numberOfAxioms> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#numberOfAxioms> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of axioms in an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#numberOfAxioms> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#numberOfAxioms> <http://www.w3.org/2000/01/rdf-schema#label> "number of axioms"@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#knowledgeRepresentationFormalism> <http://www.w3.org/2000/01/rdf-schema#label> "knowledge representation formalism"@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#knowledgeRepresentationFormalism> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.isibang.ac.in/ns/mod#KnowledgeRepresentationFormalism> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#knowledgeRepresentationFormalism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#knowledgeRepresentationFormalism> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#knowledgeRepresentationFormalism> <http://www.w3.org/2000/01/rdf-schema#comment> "A knowledge representation formalism (e.g., description logics, first order logic) followed to create an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/subject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.isibang.ac.in/ns/mod#Domain> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/subject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/subject> <http://www.w3.org/2000/01/rdf-schema#comment> "The subject or the topic of an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#toolUsed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#toolUsed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#toolUsed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.isibang.ac.in/ns/mod#OntologyDesignTool> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#toolUsed> <http://www.w3.org/2000/01/rdf-schema#label> "tool used" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#toolUsed> <http://www.w3.org/2000/01/rdf-schema#comment> "The tool used for the creation of an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#comment> "The creator of an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/creator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologyDesignMethodology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologyDesignMethodology> <http://www.w3.org/2000/01/rdf-schema#label> "Ontology Design Methodology" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#OntologyDesignMethodology> <http://www.w3.org/2000/01/rdf-schema#comment> "A method(s) by which an ontology is created. Example includes Methontology, Tove, Cyc and YAMO. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#syntax> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#syntax> <http://www.w3.org/2000/01/rdf-schema#label> "syntax " <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#syntax> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#syntax> <http://www.w3.org/2000/01/rdf-schema#comment> "The syntax followed in the creation of an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#syntax> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.isibang.ac.in/ns/mod#OntologySyntax> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#KnowledgeRepresentationFormalism> <http://www.w3.org/2000/01/rdf-schema#comment> "A representation formalism that is followed to describe knowledge in an ontology. Example includes description logics, first order logic, etc. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#KnowledgeRepresentationFormalism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#KnowledgeRepresentationFormalism> <http://www.w3.org/2000/01/rdf-schema#label> "Knowledge Representation Formalism" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#ontologyLanguage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.isibang.ac.in/ns/mod#OntologyDesignLanguage> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#ontologyLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "ontology design language" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#ontologyLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#ontologyLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#ontologyLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "A language that is used to create an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/contributer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/contributer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/contributer> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent who has contributed in making an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://purl.org/dc/terms/contributer> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#formalityLevel> <http://www.w3.org/2000/01/rdf-schema#label> "formality level" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#formalityLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "The level of formality of an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#formalityLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#formalityLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#formalityLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.isibang.ac.in/ns/mod#LevelOfFormality> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#License> <http://www.w3.org/2000/01/rdf-schema#comment> "A legal document giving official permission to do something with an ontology. Example includes Apache license, Creative Commons Attribution License, GNU General Public License and GPL. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#License> <http://www.w3.org/2000/01/rdf-schema#label> "License" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#License> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#ontologyInUse> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology that is used in a project. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#ontologyInUse> <http://www.w3.org/2000/01/rdf-schema#label> "ontology in use" <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#ontologyInUse> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#ontologyInUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#ontologyInUse> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Project> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#individuals> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.isibang.ac.in/ns/mod#Ontology> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#individuals> <http://www.w3.org/2000/01/rdf-schema#comment> "The total number of individuals in an ontology. "@en <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#individuals> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.isibang.ac.in/ns/mod> .
+<http://www.isibang.ac.in/ns/mod#individuals> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> <http://www.isibang.ac.in/ns/mod> .
+<https://w3id.org/timebank> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core#> <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://www.w3.org/2000/01/rdf-schema#comment> "An ontology to describe poeple and requests for timebanks. This includes the poeple's skills, limitations, and environment." <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://purl.org/dc/terms/creator> "Tobias Grubenmann" <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://purl.org/dc/terms/rights> "Copyright © 2020 The University of Hong Kong" <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/timebank" <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://purl.org/dc/terms/creator> "Ankit Tibrewal" <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://purl.org/vocab/vann/preferredNamespacePrefix> "tb" <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://purl.org/dc/terms/creator> "Subhayan Roy" <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/timebank/0.2> <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://purl.org/dc/terms/creator> "Xueer Li" <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2006/time#> <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://www.w3.org/2002/07/owl#versionInfo> "0.2"^^<http://www.w3.org/2001/XMLSchema#decimal> <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://purl.org/dc/terms/created> "2020-04-01" <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://www.w3.org/2002/07/owl#imports> <http://xmlns.com/foaf/0.1/> <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <http://purl.org/dc/elements/1.1/title> "Timebank Ontology" <https://w3id.org/timebank> .
+<https://w3id.org/timebank> <https://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> <https://w3id.org/timebank> .
+<https://w3id.org/idsa/metamodel/ModelView> <http://www.w3.org/2000/01/rdf-schema#comment> "Tailored view defined upon and generated from an ontology for a particular purpose."@en <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/metamodel/ModelView> <http://www.w3.org/2000/01/rdf-schema#label> "Model view"@en <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/metamodel/ModelView> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/idsa/core> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/vcard> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.w3.org/2006/vcard/ns> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/vcard> <http://purl.org/dc/terms/title> "An Ontology for vCards"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/vcard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/vcard> <http://purl.org/dc/terms/issued> "2013-05-14"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/vcard> <http://purl.org/dc/terms/modified> "2016-07-08"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://purl.org/stuff/rev#hasReview> _:Baf4a6d42ecf5fd4ae9c9af94bac47042 <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://www.w3.org/ns/dcat#keyword> "Society" <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://ontology.eil.utoronto.ca/open311#" <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://purl.org/dc/terms/title> "Open 311 Ontology: An Ontology for publishing a city's non-emergency events."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://purl.org/dc/terms/creator> <soroosh@cs.toronto.edu> <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://www.w3.org/ns/dcat#keyword> "Events" <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://purl.org/stuff/rev#hasReview> _:Bea42318cc91be6408e4a48551615005b <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://purl.org/dc/terms/issued> "2014-08-03"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://purl.org/dc/terms/creator> <http://eil.utoronto.ca/profiles/foxpro.html> <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://purl.org/dc/terms/description> "Open 311 Ontology\n\nThis ontology generalizes the concepts that appear in 311 open data files published by several cities (Toronto, New York, Chicago, Vancouver) across North America.  It provides a generis representation of 311 data that other cities can map their data onto and be used as a means of achieving interoperability."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://purl.org/vocab/vann/preferredNamespacePrefix> "open311" <https://lov.linkeddata.es/dataset/lov> .
+<http://ontology.eil.utoronto.ca/open311.owl> <http://www.w3.org/ns/dcat#distribution> _:B6246ca5290e488dbc8d56c1b95f6376e <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/stuff/rev#hasReview> _:B30cb7e8775e0af64ffe024a4eea27672 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#usageInDataset> _:Ba08aa2fa24476927c38a0f8c8c29fe12 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.w3.org/2006/vcard/ns#" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#usageInDataset> _:B4c2d0e4a0b64c6ac8cc52aa882659e87 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/stuff/rev#hasReview> _:Bc779a412837f69d0e45a3af7c97d89a5 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#reusedByDatasets> "13"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#usageInDataset> _:B18c14c01174afb963d9d9f3220fdb84b <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#usageInDataset> _:B06786ba59c12313968d77e45812d46f6 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/vcard/versions/2013-05-25.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/dc/terms/creator> <http://google.com/+NormanWalsh> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/vcard/versions/2013-05-03.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/vcard/versions/2013-09-24.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#usageInDataset> _:B69dc4e8d9e2791ac97018565630017df <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocab/vann/preferredNamespacePrefix> "vcard" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/dc/terms/creator> <http://viaf.org/viaf/4700567> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#usageInDataset> _:B861496067b4c1ca35dd95002b8cda177 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/dc/terms/description> "This ontology models and represents vCards in RDF using current best practices"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/vcard/versions/2014-05-22.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/stuff/rev#hasReview> _:B80a37bdea27636362f9cd5d1133bab8e <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#usageInDataset> _:Bb83eade452b6f2d2c1b9f6fe8829fceb <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/stuff/rev#hasReview> _:B7ffa37ae247e44550fed87407e4f8ec6 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/vcard/versions/2001-02-22.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/dc/terms/issued> "2001-02-22"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/dc/terms/creator> <https://plus.google.com/110896655318036448455> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/stuff/rev#hasReview> _:Be339b527de478cf973162b9d1e177930 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://www.w3.org/ns/dcat#keyword> "People" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/stuff/rev#hasReview> _:Bb8de2b35ccf4ac9a25ab9d354ab49207 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/dc/terms/publisher> <http://www.w3.org/data#W3C> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://xmlns.com/foaf/0.1/homepage> "http://www.w3.org/TR/vcard-rdf/" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/dc/terms/creator> <https://au.linkedin.com/in/riannella> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/stuff/rev#hasReview> _:Bb860960ab8d966af4e357d83a3a41b3c <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/dc/terms/title> "An Ontology for vCards"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/dc/terms/modified> "2014-05-22"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "1049334"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#reusedByVocabularies> "6"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#usageInDataset> _:B1cda307945c4858b150d393a3e9d459c <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#usageInDataset> _:Baeaa3a271481d30fa6a4debcbb026069 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#usageInDataset> _:Beaa80d528b1b8599691c9908ae09cf5c <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#usageInDataset> _:B77f1fb5e59c375a25eb7809395089dbb <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/vcard/versions/2010-01-20.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#usageInDataset> _:B3cfe6efdc2cb4ef7c6afd017a7f4310e <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3.org/2006/vcard/ns> <http://purl.org/vocommons/voaf#usageInDataset> _:B0f3b39ff3bb4921089acec8768437333 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/title> "An ontology for describing territory elements an infrastructure at French Mapping Agency."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/contributor> <https://fr.linkedin.com/in/gatemezing> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/description> "This ontology reuses the legacy schema of BDTOPO(IGN) and aims at covering the topographic entities and administrative boundaries of the French national territory. The themes covered are: railway, transport, roads, energy, hydrography, POI, communes, etc."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/topo/versions/2014-04-12.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://www.w3.org/ns/dcat#keyword> "Geography" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/vocab/vann/preferredNamespacePrefix> "topo" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/stuff/rev#hasReview> _:Bef9139f3d26077f7815aa42af771e3bf <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/issued> "2014-04-16"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/fra> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/creator> <http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&nom=Abadie> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/description> "Ontologie décrivant les éléments du territoire et ses infrastructures. Elle repend l'essentiel du vocabulaire de la BDTOPO(IGN) et vise à couvrir l'ensemble des entités topographiques et administratives du territoire national. Les thèmes couverts sont: le réseau routier, le réseau ferroviaire, le réseau de transport d'énergie, le réseau hydrographique, les bâtiments, la végétation arborée, l'orographie, les communes, les points d'activité ou d'intérêt."@fr <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/publisher> <http://fr.dbpedia.org/resource/Institut_national_de_l%27information_g%C3%A9ographique_et_foresti%C3%A8re> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.ign.fr/def/topo#" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/stuff/rev#hasReview> _:Ba10a937886dcdafb8287353cb3ecd58a <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/modified> "2014-04-12"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/title> "Ontologie des éléments du territoire et de ses infrastructures de l'IGN"@fr <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/stuff/rev#hasReview> _:B5ece1d3a759b8b29d7787343c45f38f0 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/topo> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ctrl> <http://xmlns.com/foaf/0.1/primaryTopic> <https://w3id.org/ibp/CTRLont> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ctrl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ctrl> <http://purl.org/dc/terms/title> "CTRLont - An ontology to formally specify the control domain"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ctrl> <http://purl.org/dc/terms/issued> "2019-04-30"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ctrl> <http://purl.org/dc/terms/modified> "2019-04-30"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://www.w3.org/ns/dcat#keyword> "IoT" <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/dc/terms/modified> "2018-02-09"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/vocab/vann/preferredNamespacePrefix> "eupont" <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/dc/terms/title> "EUPont: an ontology for End User Programming of the IoT"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/dc/terms/creator> <https://plus.google.com/101401771644776702833> <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/dc/terms/description> "EUPont is an ontology to model high level rules for Internet of Things End User Programming (IoT-EUP)."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/stuff/rev#hasReview> _:B4839494b330400aabf11526527c4d66e <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/dc/terms/contributor> <https://plus.google.com/100885533740935760856> <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/eupont/versions/2018-02-09.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://elite.polito.it/ontologies/eupont.owl> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://elite.polito.it/ontologies/eupont.owl#" <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/open311> <http://purl.org/dc/terms/modified> "2018-04-13"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/open311> <http://purl.org/dc/terms/title> "Open 311 Ontology: An Ontology for publishing a city's non-emergency events."@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/open311> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/open311> <http://xmlns.com/foaf/0.1/primaryTopic> <http://ontology.eil.utoronto.ca/open311.owl> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/open311> <http://purl.org/dc/terms/issued> "2015-04-16"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .

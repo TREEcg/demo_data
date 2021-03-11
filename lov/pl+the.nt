@@ -1,0 +1,424 @@
+<https://w3id.org/ep-plan#MultiActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Activity> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#MultiActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#MultiActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "An activity that typically corresponds to a MultiStep which is decomposed as a Plan or the main execution activity that executed the plan. ep-plan:MultiActivity typically generates ep-plan:ExecutionTraceBundle." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#MultiActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Multi Activity" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "A concept representing an activity that was not executed in full, for example, due to constraint violation. Such an activity usually marks the point when the plan execution was interrupted due to some problem." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Activity> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Failed Activity" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ResponsibleAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "An agent that can bear some responsibility for execution of activities corresponding to the planned steps." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ResponsibleAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ResponsibleAgent> <http://www.w3.org/2000/01/rdf-schema#label> "ResponsibleAgent" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#ResponsibleAgent> <http://www.w3.org/2002/07/owl#disjointWith> _:B52be0c18f29c7e241351fe42ac62eeb8 <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Policy> <http://www.w3.org/2002/07/owl#disjointWith> _:Bc4ebf7ee555d1f21202d4c7ca055035a <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Policy> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic representation of a collection of rules that may be applicable in the context of a specific plan. A policy can provide a rationale for constraints being applied to steps as well as explain reasons including other plan elements. For example, a data protection policy might require that steps are executed by specific agents and that a data anonymisation step is included in the plan." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Policy> <http://www.w3.org/2000/01/rdf-schema#label> "Policy" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Variable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Variable> <http://www.w3.org/2000/01/rdf-schema#label> "Variable" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Variable> <http://www.w3.org/2000/01/rdf-schema#comment> "An ep-plan:Variable represents a description of the input of the planned Activity (ep-plan:Step)" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Step> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Step> <http://www.w3.org/2000/01/rdf-schema#comment> "An ep-plan:Step represents the planned execution activity." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Step> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/ep-plan#Variable> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Step> <http://www.w3.org/2000/01/rdf-schema#label> "Step" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isDecomposedAsPlan> <http://www.w3.org/2000/01/rdf-schema#label> "isDecomposedAsPlan" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isDecomposedAsPlan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isDecomposedAsPlan> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ep-plan#Plan> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isDecomposedAsPlan> <http://www.w3.org/2000/01/rdf-schema#comment> "The ep-plan:isDecomposedAsPlan relationship binds a ep-plan:MultiStep to the ep-plan:Plan holding the definition of that step. That is, ep-plan:isDecomposedAsPlan links the MultiStep to the Plan sptecification where it is decomposed." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#isDecomposedAsPlan> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ep-plan#MultiStep> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasInputVariable> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ep-plan#Step> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasInputVariable> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ep-plan#isInputVariableOf> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasInputVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "ep-plan:hasInputVariable binds a ep-plan:Step to the ep-plan:Variable that takes as input for the planned execution." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasInputVariable> <http://www.w3.org/2000/01/rdf-schema#label> "hasInputVariable" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasInputVariable> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ep-plan#Variable> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasInputVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#evaluatedTraceElement> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ep-plan#wasEvaluatedtraceElement> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#evaluatedTraceElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ep-plan#ConstraintEvaluation> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#evaluatedTraceElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#evaluatedTraceElement> <http://www.w3.org/2000/01/rdf-schema#range> _:Bb71e780edbe06929c819a16fc935bb0d <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#evaluatedTraceElement> <http://www.w3.org/2000/01/rdf-schema#comment> "ep-plan:evaluatedTraceElement links ep-plan:ConstriantEvaluation to a ep-plan:Activity or ep-plan:Communication that were evaluated against a ep-plan:Constraint defined in the plan." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#evaluatedTraceElement> <http://www.w3.org/2000/01/rdf-schema#label> "evaluatedTraceElement" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Rationale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Rationale> <http://www.w3.org/2000/01/rdf-schema#label> "Rationale" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#Rationale> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic concept describing a specific justification of a plan or an individual plan element. For example, a  data anonymisation step might be included in the plan to protect personal information as a result of a data protection policy associated with a plan (i.e. the reason for including such a step in a plan). Similarly, a data protection policy associated with a plan can be linked to a description of the General Data Protection Regulation (GDPR) which provides the reason why such policy was implemented." <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "hasConstraint" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0796b9357a8f23f8a316a946ddc144a1 <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ep-plan#Constraint> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "ep-plan:hasConstraint links ep-plan:Step, ep-plan:CommunicationSpec or ep-plan:Plan to a ep-plan:Constraint. Please note, that we do not stipulate that this constriant must be strictly satisfied before the plan can continue. This is to enable inclusions of constraints defined by policies which can be violated under certain conditions and to also enable capture of incorrect behaviour of a system (e.g. a plan ignored a constriant)." <https://w3id.org/ep-plan> .
+<http://data.totl.net/game/belongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The player this type of piece belongs to." <http://data.totl.net/game/> .
+<http://data.totl.net/game/belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/PieceType> <http://data.totl.net/game/> .
+<http://data.totl.net/game/belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "piece belongs to" <http://data.totl.net/game/> .
+<http://data.totl.net/game/belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Player> <http://data.totl.net/game/> .
+<http://data.totl.net/game/belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/winner> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Player> <http://data.totl.net/game/> .
+<http://data.totl.net/game/winner> <http://www.w3.org/2000/01/rdf-schema#label> "game won by" <http://data.totl.net/game/> .
+<http://data.totl.net/game/winner> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/State> <http://data.totl.net/game/> .
+<http://data.totl.net/game/winner> <http://www.w3.org/2000/01/rdf-schema#comment> "The player who has won." <http://data.totl.net/game/> .
+<http://data.totl.net/game/winner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/turn> <http://www.w3.org/2000/01/rdf-schema#label> "player turn" <http://data.totl.net/game/> .
+<http://data.totl.net/game/turn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/turn> <http://www.w3.org/2000/01/rdf-schema#comment> "The player who's turn it is in a given state." <http://data.totl.net/game/> .
+<http://data.totl.net/game/turn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/State> <http://data.totl.net/game/> .
+<http://data.totl.net/game/turn> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Player> <http://data.totl.net/game/> .
+<http://data.totl.net/game/madeBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The player making a move." <http://data.totl.net/game/> .
+<http://data.totl.net/game/madeBy> <http://www.w3.org/2000/01/rdf-schema#label> "made by" <http://data.totl.net/game/> .
+<http://data.totl.net/game/madeBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/madeBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Player> <http://data.totl.net/game/> .
+<http://data.totl.net/game/madeBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/Move> <http://data.totl.net/game/> .
+<http://data.totl.net/game/converts> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://data.totl.net/game/captures> <http://data.totl.net/game/> .
+<http://data.totl.net/game/converts> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/Move> <http://data.totl.net/game/> .
+<http://data.totl.net/game/converts> <http://www.w3.org/2000/01/rdf-schema#label> "pieces converted" <http://data.totl.net/game/> .
+<http://data.totl.net/game/converts> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Pieces> <http://data.totl.net/game/> .
+<http://data.totl.net/game/converts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/converts> <http://www.w3.org/2000/01/rdf-schema#comment> "The pieces converted to the players own side, in a move." <http://data.totl.net/game/> .
+<http://data.totl.net/game/Location> <http://www.w3.org/2000/01/rdf-schema#comment> "A location in a game, such as a square or the players hand." <http://data.totl.net/game/> .
+<http://data.totl.net/game/Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.totl.net/game/> .
+<http://data.totl.net/game/Location> <http://www.w3.org/2000/01/rdf-schema#label> "Game Location" <http://data.totl.net/game/> .
+<http://data.totl.net/game/capturesLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://data.totl.net/game/moveLocation> <http://data.totl.net/game/> .
+<http://data.totl.net/game/capturesLocation> <http://www.w3.org/2000/01/rdf-schema#label> "move captures location" <http://data.totl.net/game/> .
+<http://data.totl.net/game/capturesLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://data.totl.net/game/> .
+<http://data.totl.net/game/capturesLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.totl.net/game/Location> <http://data.totl.net/game/> .
+<http://data.totl.net/game/capturesLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "A location which is captured by the player making the move. For example in reversi all pieces which change to their colour." <http://data.totl.net/game/> .
+<http://data.totl.net/game/capturesLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.totl.net/game/Move> <http://data.totl.net/game/> .
+<http://dbpedia.org/ontology/museumType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/museumType> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:museumType> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/museumType> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/museumType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Museum> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/museumType> <http://www.w3.org/2000/01/rdf-schema#comment> "Nieuw type is nodig omdat Museum eigenlijk geen subklasse van Building is, maar meer te maken heeft met de functie van het gebouw. 'Museumtype' is dan ook meer thema- en collectiegerelateerd"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/museumType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/museumType> <http://www.w3.org/2000/01/rdf-schema#label> "soort museum"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/museumType> <http://www.w3.org/2000/01/rdf-schema#comment> "This property has been added  because 'buildingType' is much more about the place, whereas 'museumType' is about the way the place is being (or:was) used"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/museumType> <http://www.w3.org/2000/01/rdf-schema#label> "museumType"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/subjectOfPlay> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Play> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/subjectOfPlay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/subjectOfPlay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/subjectOfPlay> <http://www.w3.org/2000/01/rdf-schema#label> "subject of play"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/subjectOfPlay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/subjectOfPlay> <http://www.w3.org/2000/01/rdf-schema#comment> "The overall subject matter dealt with by the play."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/subjectOfPlay> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:subjectOfPlay> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Play> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:premiereDate> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/2000/01/rdf-schema#comment> "Date the play was first performed."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/2000/01/rdf-schema#label> "premiere date"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://dbpedia.org/ontology/releaseDate> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premierePlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premierePlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Play> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premierePlace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#coparticipatesWith> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premierePlace> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:premierePlace> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premierePlace> <http://www.w3.org/2000/01/rdf-schema#label> "premiere place"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premierePlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premierePlace> <http://www.w3.org/2000/01/rdf-schema#comment> "The theatre and/or city the play was first performed in."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/2000/01/rdf-schema#label> "premiere year"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:premiereYear> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://dbpedia.org/ontology/releaseYear> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Play> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYear> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/2000/01/rdf-schema#comment> "Year the play was first performed."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/premiereYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/deathPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/deathPlace> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Person> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/deathPlace> <http://www.w3.org/2000/01/rdf-schema#label> "death place"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/deathPlace> <http://www.w3.org/2000/01/rdf-schema#label> "plaats van overlijden"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/deathPlace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/deathPlace> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:deathPlace> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/deathPlace> <http://www.w3.org/2000/01/rdf-schema#label> "lieu de décès"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/deathPlace> <http://www.w3.org/2000/01/rdf-schema#comment> "The place where the person died."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/deathPlace> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.wikidata.org/entity/P20> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/deathPlace> <http://www.w3.org/2000/01/rdf-schema#label> "死没地"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/deathPlace> <http://www.w3.org/2000/01/rdf-schema#label> "τόπος_θανάτου"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/deathPlace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/deathPlace> <http://www.w3.org/2000/01/rdf-schema#label> "Sterbeort"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/deathPlace> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Place> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/2000/01/rdf-schema#label> "kaart"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/2000/01/rdf-schema#label> "χάρτης"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/2000/01/rdf-schema#comment> "Eine Landkarte des Ortes."@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/2000/01/rdf-schema#label> "Landkarte"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/2000/01/rdf-schema#comment> "A map of the place."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Place> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://schema.org/maps> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/2000/01/rdf-schema#label> "map"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/2000/01/rdf-schema#label> "carte"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/2000/01/rdf-schema#comment> "Χάρτης μιας περιοχής."@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/2000/01/rdf-schema#label> "mapa"@pt <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/map> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:map> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/settingOfPlay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/settingOfPlay> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Play> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/settingOfPlay> <http://www.w3.org/2000/01/rdf-schema#comment> "The places and time where the play takes place."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/settingOfPlay> <http://www.w3.org/2000/01/rdf-schema#label> "setting of play"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/settingOfPlay> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:settingOfPlay> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/settingOfPlay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/settingOfPlay> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:placeOfBurial> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/2000/01/rdf-schema#comment> "De plaats waar een persoon is begraven."@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/2000/01/rdf-schema#comment> "Ο τόπος όπου το πρόσωπο έχει θαφτεί."@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/2000/01/rdf-schema#label> "miejsce pochówku"@pl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/2000/01/rdf-schema#label> "τόπος θαψίματος"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/2000/01/rdf-schema#label> "Ort der Bestattung"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Person> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/2000/01/rdf-schema#label> "begraafplaats"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/2000/01/rdf-schema#comment> "The place where the person has been buried."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Place> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/2000/01/rdf-schema#label> "place of burial"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/2000/01/rdf-schema#label> "lloc d'enterrament"@ca <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/placeOfBurial> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.wikidata.org/entity/P119> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/yearOfConstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/yearOfConstruction> <http://www.w3.org/2000/01/rdf-schema#comment> "The year in which construction of the Place was finished."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/yearOfConstruction> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYear> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/yearOfConstruction> <http://www.w3.org/2000/01/rdf-schema#label> "year of construction"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/yearOfConstruction> <http://www.w3.org/2000/01/rdf-schema#label> "Baujahr"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/yearOfConstruction> <http://www.w3.org/2000/01/rdf-schema#label> "bouwjaar"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/yearOfConstruction> <http://www.w3.org/2000/01/rdf-schema#comment> "Година када је изградња нечега завршена."@sr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/yearOfConstruction> <http://www.w3.org/2000/01/rdf-schema#comment> "Το έτος στο οποίο ολοκληρώθηκε η κατασκευή ενός μέρους."@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/yearOfConstruction> <http://www.w3.org/2000/01/rdf-schema#label> "έτος κατασκευής"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/yearOfConstruction> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Place> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/yearOfConstruction> <http://www.w3.org/2000/01/rdf-schema#label> "година изградње"@sr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/yearOfConstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/yearOfConstruction> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:yearOfConstruction> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/governingBody> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#coparticipatesWith> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/governingBody> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Place> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/governingBody> <http://www.w3.org/2000/01/rdf-schema#label> "governing body"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/governingBody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/governingBody> <http://www.w3.org/2000/01/rdf-schema#label> "bestuursorgaan"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/governingBody> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Organisation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/governingBody> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:governingBody> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/governingBody> <http://www.w3.org/2000/01/rdf-schema#label> "Verwaltungsgremium"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/governingBody> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/governingBody> <http://www.w3.org/2000/01/rdf-schema#comment> "Body that owns/operates the Place."@en <http://dbpedia.org/ontology/> .
+<http://purl.org/vocab/bio/0.1/place> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/bio/0.1/Event> <http://dev.poderopedia.com/vocab/schema> .
+<http://purl.org/vocab/bio/0.1/place> <http://www.w3.org/2000/01/rdf-schema#comment> "Lugar donde ocurre un evento"@es <http://dev.poderopedia.com/vocab/schema> .
+<http://purl.org/vocab/bio/0.1/place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dev.poderopedia.com/vocab/schema> .
+<http://purl.org/vocab/bio/0.1/place> <http://www.w3.org/2000/01/rdf-schema#label> "Lugar" <http://dev.poderopedia.com/vocab/schema> .
+<http://purl.org/vocab/bio/0.1/place> <http://www.w3.org/2000/01/rdf-schema#comment> "The place at which an event occurred."@en <http://dev.poderopedia.com/vocab/schema> .
+<http://purl.org/vocab/bio/0.1/place> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://dev.poderopedia.com/vocab/schema> .
+<http://purl.org/vocab/bio/0.1/place> <http://www.w3.org/2000/01/rdf-schema#label> "Place"@en <http://dev.poderopedia.com/vocab/schema> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3051> <http://www.w3.org/2000/01/rdf-schema#label> "tiene tÃ©rmino del lugar"@es <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3051> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://iflastandards.info/ns/fr/frbr/frbrer/> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3051> <http://www.w3.org/2004/02/skos/core#scopeNote> "E.g., London, St. Lawrence River, etc. A place may be designated by more than one term, or by more than one form of the term. A bibliographic agency normally selects one of those terms as the uniform heading for purposes of consistency in naming and referencing the place. The other terms or forms of term may be treated as variant terms for the place."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3051> <http://www.w3.org/2000/01/rdf-schema#domain> <http://iflastandards.info/ns/fr/frbr/frbrer/C1010> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3051> <http://www.w3.org/2004/02/skos/core#definition> "Relates a place to the word, phrase, or group of characters used to name or designate the place."@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3051> <http://www.w3.org/2000/01/rdf-schema#label> "has term for the place"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3051> <http://metadataregistry.org/uri/profile/RegAp/name> "hasTermForThePlace"@en <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3051> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://iflastandards.info/ns/fr/frbr/frbrer/P3051> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://iflastandards.info/ns/fr/frbr/frbrer/> .
+<http://inference-web.org/2.0/pml-provenance.owl#Source> <http://www.w3.org/2000/01/rdf-schema#comment> "A source refers to the source of information. It is the place where we obtain information."@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#Source> <http://www.w3.org/2000/01/rdf-schema#label> "Source"@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#Source> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://inference-web.org/2.0/pml-provenance.owl#IdentifiedThing> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#Source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://lawd.info/ontology/origin> <http://www.w3.org/2000/01/rdf-schema#range> <http://lawd.info/ontology/Place> <http://lawd.info/ontology/> .
+<http://lawd.info/ontology/origin> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lawd.info/ontology/where> <http://lawd.info/ontology/> .
+<http://lawd.info/ontology/origin> <http://www.w3.org/2000/01/rdf-schema#comment> "The place where an artifact originated."@en <http://lawd.info/ontology/> .
+<http://lawd.info/ontology/origin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://lawd.info/ontology/> .
+<http://lawd.info/ontology/foundAt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lawd.info/ontology/where> <http://lawd.info/ontology/> .
+<http://lawd.info/ontology/foundAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://lawd.info/ontology/Place> <http://lawd.info/ontology/> .
+<http://lawd.info/ontology/foundAt> <http://www.w3.org/2000/01/rdf-schema#comment> "The place where an artifact was discovered."@en <http://lawd.info/ontology/> .
+<http://lawd.info/ontology/foundAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://lawd.info/ontology/> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#Package_Metering> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8a5ae616f3bb32fa7aaa0ea5a604b804 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bff54dae1b802b13fd4ff1483d7585263 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B52127a07f9b96f71f1b78480acf67657 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7249054f846547b28433d807c70dd1db <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4fbb0b17d33299e1512bf013dae3f11e <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7e8216b481fe3d93326888050e6aed67 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#IdentifiedObject> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B59b6372ba71973a46404ef6d7379e79a <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#label> "UsagePoint" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be116f7e1d51639f9222ee47c8a4eb52b <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B50e30e757a982f2a78f12acadf29c0d3 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B728e1d090030c689d594fbd4383c1093 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc3dfad6450c2f298a559675fd9c8c0a0 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B73a0d15556444153a864dd737fb3779a <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf3ccc80d894d8d5983301b79d476cd4c <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfced3043fa10e2c94a6b8e5bf7e17b56 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5e8f079ab5090bf3d02d4d1820d01fd7 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bac58e6118797c27469467533c012fd0f <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B817f522a7e8757d497927ad9ed233076 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd8c6df84afe587492930ecb7f2f6ccf1 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B21a05acb4e4660e4c34d606adf4d23d6 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Logical or physical point in the network to which readings or events may be attributed. Used at the place where a physical or virtual meter may be located; however, it is not required that a meter be present." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B22d39bf17b541f528ba78ab8544b83f0 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B476c44955c5dfb7f485d97f9896144e9 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9455ba3888a565caff915034a07a3ccf <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bdc5b78d422bac8b8041e0e97dc707c0f <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B97e693b862eb636b7240e4f8af2dbc26 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8b3a8254cda8f4266d066b22f68ec6d7 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B16f2ae9f603130579bf2c5dd8712c363 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be9beae39a0a5270f06ce9eb57e2c0074 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2929f75cf887af57430188bf23f41133 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbad4043b7b1cf3818839348c831c9c7b <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf11f8043f3b280277b5408e62c01cb93 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0a50aa4d9446e064c1fd4020f0c10ab4 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B67d5486f25037a75ce7baeaf63a6f017 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#StreetDetail.buildingName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#StreetDetail.buildingName> <http://www.w3.org/2000/01/rdf-schema#comment> "(if applicable) In certain cases the physical location of the place of interest does not have a direct point of entry from the street, but may be located inside a larger structure such as a building, complex, office block, apartment, etc." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#StreetDetail.buildingName> <http://www.w3.org/2000/01/rdf-schema#label> "buildingName" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#StreetDetail.buildingName> <http://langdale.com.au/2005/UML#hasStereotype> <http://langdale.com.au/2005/UML#attribute> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5b272e4425bb117889a94a213330a3b5 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#label> "Location" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc6136ede51478663d5254e4370492b81 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "The place, scene, or point of something where someone or something has been, is, and/or will be at a given moment in time. It can be defined with one or more postition points (coordinates) in a given coordinate system." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bca0f83bb9dbbd21c4c32b9530df18b64 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf90db4273af8a8deaf315bd6a24b576b <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4b92691970583692c61ee2cc8c08e8c0 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba940a978d2e9f774f9ac1ad2d10f8722 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4b6c812a32676fdef1f3fd02707ab58d <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be0845adbcbf7cec060b5130651a2333a <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bde7748471d20f3ddce297365ce805c33 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf7e85c7f2292f04d031b7e8656e05da0 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb2da671e5db892aaa9b9c7ce7a7f82fb <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd2fcb59e49280277c69f0565f2bc6629 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B53ee3402eec52c73b71200f0f8a08d49 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3f42565b6ed69585d5f90693233dfa02 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#Package_Common> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf0a8f33d3496229fdc056135023c76f4 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd374ebfaecf15befaf69bbefd1779301 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9b26abe875c2522328cf57dd4be54f01 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bdf285181d0b8fd5a57f2c332c4e9f85e <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B921889bf872749706563661f432c4a6b <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1d1bbf963c394a4b8a52bdf10c8d0ab5 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcde78a2c40981c5845b977a35995397a <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd8b0de71dffb57928ecc801a1a6d97f1 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3bc4b12ffad77d415f3a803c379713fc <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B177a48844fc25bd27c7346e43158f514 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7df1b8699b2c1cda8f4d7c972dfb694b <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba08084ec05a95c6624f640a0680ad738 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9b5f77e4c4274ba1f906bb0d5ff612b5 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be127689fa43ea26058d31c237117b188 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bff34ed4bbfcba19d2d9a110848e31ba7 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#IdentifiedObject> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbe322d7e31e25c4fafdff86af24c268a <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B39aca99a5900711d5669cff7262a1159 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8810c8d07670acaf0339ffd19a732c9a <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B292b4cd56779c1534ba61acdb33fffc0 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb9f825a4f7c533bfcf296e4fe5978c5d <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B511a1279e401ad635e641e61b8cc25e8 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B060bf5b3eab91f995d784c01d97b86bd <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B501a35a65135dc058ea3cd98a2a65075 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba5fc0fa8b1568480dce0b90ae0c66182 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B32c25c6f2de0706fcbf867f8101864b6 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb00b20bfc5b1107d5792a80be208b5b9 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://open.vocab.org/terms/findspot> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/terms/findspot.html> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/findspot> <http://www.w3.org/2000/01/rdf-schema#label> "Findspot"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/findspot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/findspot> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/findspot> <http://www.w3.org/2000/01/rdf-schema#comment> "The place at which a thing is found."@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/findspot> <http://purl.org/net/vocab/2004/03/label#plural> "Findspots"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/findspot> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/findspot> <http://schemas.talis.com/2005/dir/schema#etag> "\"4a451a70-cf10-41d0-af79-5153a339e112\"" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/madeIn> <http://purl.org/dc/elements/1.1/created> "2011-03-10T16:56:41Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/madeIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/madeIn> <http://purl.org/net/vocab/2004/03/label#plural> "places where made"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/madeIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/madeIn> <http://www.w3.org/2000/01/rdf-schema#label> "place where made"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/madeIn> <http://www.w3.org/2004/02/skos/core#note> <http://open.vocab.org/changes/43f0f8a7bab5ea2662277a47c5bc4893> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/madeIn> <http://www.w3.org/2000/01/rdf-schema#comment> "The place where a particular object was made. (Made is left intentionally vague and follows the same semantics as foaf:maker, foaf:made etc.)"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/madeIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/docs/madeIn> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/madeIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open.vocab.org/terms> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/2002/07/owl#versionInfo> "1.0.2" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/2000/01/rdf-schema#label> "is string"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#anchorOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/2000/01/rdf-schema#domain> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Context> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#isString> <http://www.w3.org/2000/01/rdf-schema#comment> "The reference text as rdf:Literal for this nif:Context resource.  \n    NIF requires that the reference text (i.e. the context) is always included in the RDF as an rdf:Literal.\n    Note, that the isString property is *the* place to keep the string itself in RDF.\n    All other nif:Strings and nif:URISchemes relate to the text of this property to calculate character position and indices. \n    \n    Changelog\n    * 1.0.0: Introduced stable version.\n    * 1.0.1 improved documentation\n    * 1.0.2: merged val+inf\n    "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://purl.org/dqm-vocabulary/v1/dqm#plainScore> <http://www.w3.org/2000/01/rdf-schema#comment> "The plain score represents a data quality dimension score that was assessed by using a certain formula that accounts for the violations of data quality rules related to the size of the relevant data set."@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#plainScore> <http://www.w3.org/2000/01/rdf-schema#label> "Plain Score"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#plainScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dqm-vocabulary/v1/dqm#DataQualityScore> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#plainScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#plainScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#plainScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/library/placeOfPublication> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/library/> .
+<http://purl.org/library/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#comment> "This is the place where the schema:CreativeWork was published."@en <http://purl.org/library/> .
+<http://purl.org/library/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/library/> <http://purl.org/library/> .
+<http://purl.org/library/placeOfPublication> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://purl.org/library/> .
+<http://purl.org/library/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.org/Place> <http://purl.org/library/> .
+<http://purl.org/library/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#domain> <http://schema.org/CreativeWork> <http://purl.org/library/> .
+<http://purl.org/library/placeOfPublication> <http://www.w3.org/2000/01/rdf-schema#label> "place of publication"@en <http://purl.org/library/> .
+<http://purl.org/linguistics/gold/Process> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Thing> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Process> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of things that happen and have temporal parts or stages. Examples include extended events like a football match or a race, actions like pursuing and reading, and biological processes. The formal definition is: anything that occurs in time but is not an object. Note that a process may have participants 'inside' it which are objects, such as the players in a football match. In a 4D ontology, a process is something whose spatiotemporal extent is thought of as dividing into temporal stages roughly perpendicular to the time-axis. [SUMO 2010]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LabialProperty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/PlaceProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LabialProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LabialProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Gestures involving the lips are said to be Labial. From the linguistic point of view the places of articulation can usefully be classified into a smaller number of groups based on the articulators they share. If consonants in which either the upper or lower lip is involved as an articulator are classified as Labials then there are three place classes among Labial sounds: the lower lip can articulate with the upper lip (bilabial), or the upper teeth (labiodentals)l and,  the upper lip can also be the target for the tongue (linguo-labial). [Ladefoged and Maddieson 1996: 10; 15-15]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LabialProperty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/LabialProperty> <http://www.w3.org/2000/01/rdf-schema#label> "LabialProperty"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PastInPastTense> <http://www.w3.org/2000/01/rdf-schema#label> "PastInPastTense"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PastInPastTense> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PastInPastTense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/TenseProperty> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PastInPastTense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/PastInPastTense> <http://www.w3.org/2000/01/rdf-schema#comment> "Locates the situation in question prior to a reference time in the past before the time of the speaking event. This is also known as the PluperfectTense [Comrie 1985: 125]."@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/net/po#Playlist> <http://www.w3.org/2000/01/rdf-schema#comment> "A class for representing a playlist. One Playlist instance is connected to one or more PlaylistEntry instances. It contains the name of the playlist and the name of the radio station."@en <http://purl.org/net/po#> .
+<http://purl.org/net/po#Playlist> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/net/po#> .
+<http://purl.org/net/po#Playlist> <http://www.w3.org/2000/01/rdf-schema#label> "Playlist"@en <http://purl.org/net/po#> .
+<http://purl.org/net/po#PlaylistEntry> <http://www.w3.org/2000/01/rdf-schema#label> "Playlist Entry"@en <http://purl.org/net/po#> .
+<http://purl.org/net/po#PlaylistEntry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/net/po#> .
+<http://purl.org/net/po#PlaylistEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4b0cac9e30d18ea8a266b8015639b88a <http://purl.org/net/po#> .
+<http://purl.org/net/po#PlaylistEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B76c90cde1ff4741fad2d0a837474e5f4 <http://purl.org/net/po#> .
+<http://purl.org/net/po#PlaylistEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbda9cabe0d34793c56234b768e1548b1 <http://purl.org/net/po#> .
+<http://purl.org/net/po#PlaylistEntry> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8c35843500e7ece812146e7aea93bc39 <http://purl.org/net/po#> .
+<http://purl.org/net/po#PlaylistEntry> <http://www.w3.org/2000/01/rdf-schema#comment> "A class for representing an entry from a playlist. One PlaylistEntry instance is connected to one Song instance and one Playlist instance. It contains information about the 'position' of the Song in the Playlist, for the specific 'week' of the 'year'. It also contains an URL of a 'photo' for the playlist entry."@en <http://purl.org/net/po#> .
+<http://purl.org/ontology/bibo/content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/content> <http://www.w3.org/2004/02/skos/core#historyNote> "bibo:content has been deprecated; we recommend to use \"rdf:value\" for this purpose. Here is the rational behind this choice: http://www.w3.org/TR/2004/REC-rdf-primer-20040210/#rdfvalue"@en <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/content> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/content> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is for a plain-text rendering of the content of a Document. While the plain-text content of an entire document could be described by this property."@en <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/content> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/content> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/content> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/bibo/Document> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/content> <http://www.w3.org/2000/01/rdf-schema#label> "content"@en <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/bibo/content> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/ontology/bibo/"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/ontology/bibo/> .
+<http://purl.org/ontology/dvia#Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Platform"@en <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#Platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#Platform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#Platform> <http://www.w3.org/2000/01/rdf-schema#comment> "The platform where to host or use the application, could be on the web (firefox, chrome, IE, etc..) or mobile (android, etc..) or event desktop"@en <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#Platform> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/dvia> <http://purl.org/ontology/dvia> .
+<http://purl.org/ontology/dvia#Platform> <http://www.w3.org/2000/01/rdf-schema#label> "Plate forme"@fr <http://purl.org/ontology/dvia> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/pl+the.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/pl+the.nt> <https://w3id.org/tree#relation> _:BplaX2Bthe .
+_:BplaX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BplaX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/pla+the.nt> .
+_:BplaX2Bthe <https://w3id.org/tree#value> "pla" .
+_:BplaX2Bthe <https://w3id.org/tree#value> "the" .
+_:BplaX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/pla+the.nt> <https://w3id.org/tree#remainingItems> "193"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/pl+the.nt> <https://w3id.org/tree#relation> _:BploX2Bthe .
+_:BploX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BploX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/plo+the.nt> .
+_:BploX2Bthe <https://w3id.org/tree#value> "plo" .
+_:BploX2Bthe <https://w3id.org/tree#value> "the" .
+_:BploX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/plo+the.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/pl+the.nt> <https://w3id.org/tree#relation> _:BpluX2Bthe .
+_:BpluX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BpluX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/plu+the.nt> .
+_:BpluX2Bthe <https://w3id.org/tree#value> "plu" .
+_:BpluX2Bthe <https://w3id.org/tree#value> "the" .
+_:BpluX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/plu+the.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/pl+the.nt> <https://w3id.org/tree#relation> _:BplyX2Bthe .
+_:BplyX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BplyX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ply+the.nt> .
+_:BplyX2Bthe <https://w3id.org/tree#value> "ply" .
+_:BplyX2Bthe <https://w3id.org/tree#value> "the" .
+_:BplyX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ply+the.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .

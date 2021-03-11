@@ -1,0 +1,36 @@
+<http://purl.org/tio/ns#scope> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#scope> <http://www.w3.org/2000/01/rdf-schema#comment> "This links a tio:Ticket to the tio:ScopeOfAccess node or nodes that are included in the ticket. \n\nNote: For simple scenarios, you can also directly use tio:accessTo."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#scope> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/tio/ns#ScopeOfAccess> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#scope> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/tio/ns#Ticket> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#scope> <http://www.w3.org/2000/01/rdf-schema#label> "scope (0..*)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#scope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the beginning of the validity of the access or right that the ticket grants. \nIt can be attached to the tio:Ticket (if meant for the ticket as a whole) and to individual tio:ScopeOfAccess entities (if meant for just a particular part of the access rights).\n\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2010-11-15T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2010-11-15T09:30:10-09:00\n\nor\n\n2010-11-15T09:30:10+09:00."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0c61d629129a8c065605b91e013afd06 <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#label> "validFrom (0..1)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#accessTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#accessTo> <http://www.w3.org/2000/01/rdf-schema#label> "accessTo (0..*)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#accessTo> <http://www.w3.org/2000/01/rdf-schema#range> _:B7da7b8e1034232a3dd6c25406fcc63af <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#accessTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#accessTo> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0214f548f9c82a83e928158d593cd9dd <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#accessTo> <http://www.w3.org/2000/01/rdf-schema#comment> "This links a tio:Ticket or a tio:ScopeOfAccess node to the tio:POI, tio:Event, or tio:TransportationService for which the tio:Ticket grants access.\n\nNote: When used to link a tio:Ticket directly to a tio:POI, tio:Event, or tio:TransportationService, you cannot specify the various details of a tio:ScopeOfAccess node."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#label> "validThrough (0..1)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bee530f1e715011ef1c8838a98bea38bd <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the ending of the validity of the access or right that the ticket grants. \nIt can be attached to the tio:Ticket (if meant for the ticket as a whole) and to individual tio:ScopeOfAccess entities (if meant for just a particular part of the access rights).\n\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2010-11-15T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2010-11-15T09:30:10-09:00\n\nor\n\n2010-11-15T09:30:10+09:00."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleAudience> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleAudience> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/tio/ns#DiscountType> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleAudience> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleAudience> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/tio/ns#ScopeOfAccess> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleAudience> <http://www.w3.org/2000/01/rdf-schema#label> "eligibleAudience (0..*)"@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleAudience> <http://www.w3.org/2000/01/rdf-schema#comment> "This links a tio:ScopeOfAccess node to the tio:DiscountType for which the specified access is granted."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleServiceLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/tio/ns#ServiceLevel> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleServiceLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleServiceLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/tio/ns#ScopeOfAccess> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleServiceLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "This indicates the service level(s) or fare class(es) to which the tio:Ticket entitles."@en <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleServiceLevel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#eligibleServiceLevel> <http://www.w3.org/2000/01/rdf-schema#label> "eligibleServiceLevel (0..*)"@en <http://purl.org/tio/ns#> .

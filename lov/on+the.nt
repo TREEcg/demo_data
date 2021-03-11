@@ -1,0 +1,1015 @@
+<http://dbpedia.org/ontology/legislativePeriodName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/legislativePeriodName> <http://www.w3.org/2000/01/rdf-schema#label> "Name in der Legislaturperiode"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/legislativePeriodName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/legislativePeriodName> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:legislativePeriodName> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/legislativePeriodName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Legislature> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/legislativePeriodName> <http://www.w3.org/2000/01/rdf-schema#comment> "The term of the on-going session (e.g.: \"40th Canadian Parliament\")."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/legislativePeriodName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/legislativePeriodName> <http://www.w3.org/2000/01/rdf-schema#label> "legislative period name"@en <http://dbpedia.org/ontology/> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Object> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2002/07/owl#disjointWith> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Complex> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#isAbstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#comment> "GM_Primitive (Figure 8) is the abstract root class of the geometric primitives. Its main purpose is to define the basic \"boundary\" operation that ties the primitives in each dimension together. A geometric primitive (GM_Primitive) is a geometric object that is not decomposed further into other primitives in the system. This includes curves and surfaces, even though they are composed of curve segments and surface patches, respectively. This composition is a strong aggregation: curve segments and surface patches cannot exist outside the context of a primitive.\nNOTE Most geometric primitives are decomposable infinitely many times. Adding a centre point to a line may split that line into two separate lines. A new curve drawn across a surface may divide that surface into two parts, each of which is a surface. This is the reason that the normal definition of primitive as \"non-decomposable\" is not plausible in a geometry model - the only non-decomposable object in geometry is a point.\nAny geometric object that is used to describe a feature is a collection of geometric primitives. A collection of geometric primitives may or may not be a geometric complex. Geometric complexes have additional properties such as closure by boundary operations and mutually exclusive component parts.\nGM_Primitive and GM_Complex share most semantics, in the meaning of operations, attributes and associations. There is an exception in that a GM_Primitive shall not contain its boundary (except in the trivial case of GM_Point where the boundary is empty), while a GM_Complex shall contain its boundary in all cases. This means that if an instantiated object implements GM_Object operations both as GM_Primitive and as a GM_Complex, the semantics of each set theoretic operation is determined by the its name resolution. Specifically, for a particular object such as GM_CompositeCurve, GM_Primitive::contains (returns FALSE for end points) is different from GM_Complex::contains (returns TRUE for end points). Further, if that object is cast as a GM_Primitive value and as a GM_Complex value, then the two values need not be equal as GM_Objects." <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2002/07/owl#disjointWith> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Aggregate> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2004/02/skos/core#notation> "GM_Primitive"^^<http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#ISOClassName> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry Primitive" <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.opengis.net/ont/gml#AbstractGeometricPrimitive> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://www.w3.org/2002/07/owl#priorVersion> <https://www.seegrid.csiro.au/subversion/xmml/ontologies/tags/201210/ISOTC211/HM/dataquality.rdf> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#CompletenessCommission> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#lineage> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#CompletenessOmission> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://www.w3.org/2002/07/owl#imports> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/code/EvaluationMethodType> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#levelDescription> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://www.w3.org/2002/07/owl#imports> <http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#Completeness> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#TopologicalConsistency> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#NonQuantitativeAttributeAccuracy> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#extent> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#specification> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#AccuracyOfATimeMeasurement> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#FormatConsistency> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#pass> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#valueUnit> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/created> "2012-05-18T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#Scope> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#DataQuality> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://www.w3.org/2002/07/owl#versionIRI> <https://www.seegrid.csiro.au/subversion/xmml/ontologies/tags/201305/ISOTC211/HM/dataquality.rdf> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#ConformanceResult> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#Element> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#ThematicAccuracy> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#Result> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#scope> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/elements/1.1/date> "2012-05-25T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#level> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#AbsoluteExternalPositionalAccuracy> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#errorStatistic> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/modified> "2012-10-26T00:00:00"^^<http://www.w3.org/2001/XMLSchema#dateTime> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://www.w3.org/2000/01/rdf-schema#comment> "This version of the ontology uses # and /code/ patterns as agreed in ISO 19150-2 meeting in Toulouse, June 2012." <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#evaluationMethodDescription> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#GriddedDataPositionalAccuracy> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/elements/1.1/title> "OWL representation of ISO 19115 (Geographic Information - Metadata - Data quality package)" <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#EvaluationMethodTypeCode> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#explanation> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#TemporalValidity> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#RelativeInternalPositionalAccuracy> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#valueType> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/elements/1.1/source> "ISO 19115:2003\r\nISO 19115:2006 Corrigendum" <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#report> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#measureDescription> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#measureIdentification> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/elements/1.1/creator> "Simon Jonathan David COX\r\nCSIRO" <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#nameOfMeasure> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/elements/1.1/description> "An OWL representation of parts of the Geographic Metadata model described in ISO 19115:2003 with Corrigendum 2006 - DQ Package" <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#value> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://www.w3.org/2002/07/owl#imports> <http://def.seegrid.csiro.au/isotc211/iso19103/2005/basic> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#PositionalAccuracy> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#DomainConsistency> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#TemporalConsistency> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#dateTime> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#ConceptualConsistency> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#evaluationProcedure> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#LogicalConsistency> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#evaluationMethodType> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#QuantitativeResult> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#ThematicClassificationCorrectness> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#result> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#TemporalAccuracy> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> <http://purl.org/dc/terms/hasPart> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality#QuantitativeAttributeAccuracy> <http://def.seegrid.csiro.au/isotc211/iso19115/2003/dataquality> .
+<https://saref.etsi.org/core/UnitOfMeasure> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4envi/CommunicationProtocol> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#label> "Unit of measure"@en <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/UnitOfMeasure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/UnitOfMeasure> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4envi/Geometry> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/UnitOfMeasure> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4envi/CompassDirection> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/UnitOfMeasure> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4envi/CommunicationInterface> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://saref.etsi.org/core/> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/UnitOfMeasure> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4envi/Color> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/UnitOfMeasure> <http://www.w3.org/2000/01/rdf-schema#comment> "The unit of measure is a standard for measurement of a quantity, such as a Property. For example,  Power is a property and Watt is a unit of power that represents a definite predetermined power: when we say 10 Watt, we actually mean 10 times the definite predetermined power called \"watt\". Our definition is based on the definition of unit of measure in the Ontology of units of Measure (OM). We propose here a list of some units of measure that are relevant for the purpose of the Smart Appliances ontology, but this list can be extended."@en <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/UnitOfMeasure> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4envi/Light> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/UnitOfMeasure> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4envi/DigitalRepresentation> <https://saref.etsi.org/saref4envi/> .
+<http://lemon-model.net/lemon#UsageExample> <http://www.w3.org/2000/01/rdf-schema#comment> "An example of the usage of a lexical entry when refering to the ontology entity given by the sememe's reference. This should in effect be an example of the form used in context. E.g., \"this is a *usage example*\""@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#UsageExample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#UsageExample> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#UsageExample> <http://www.w3.org/2000/01/rdf-schema#label> "Voorbeeld van het gebruik"@nl <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#UsageExample> <http://www.w3.org/2000/01/rdf-schema#label> "Anwendungsbeispiel"@de <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#UsageExample> <http://www.w3.org/2000/01/rdf-schema#label> "Usage Example"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#UsageExample> <http://www.w3.org/2000/01/rdf-schema#label> "Exemple d'utilisation"@fr <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#UsageExample> <http://www.w3.org/2000/01/rdf-schema#label> "Ejemplo de uso"@es <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#UsageExample> <http://www.w3.org/2000/01/rdf-schema#label> "Пример использования"@ru <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#UsageExample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4bac0b0b4e6d8ee3f86a73ccaf3fee06 <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#UsageExample> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LemonElement> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bda2251ed25541ce0b80f1f941fa296f9 <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#SenseDefinition> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#Lexicon> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#UsageExample> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Lexikonsinn"@de <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Lexical sense"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Lexikaal zin"@nl <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#Node> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#PropertyValue> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2002/07/owl#disjointWith> <http://lemon-model.net/lemon#SynRoleMarker> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lemon-model.net/lemon#LemonElement> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the intersection in meaning between the lexical entry and the ontology entity. This is used as the ontology entity and lexical entry may not be in one-to-one correspondence as such the existence of a sense between them states meerly that there are some cases when this lexical entry refer to the ontology entity and vica versa. Mapping elements can be used to further specify this relation"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Acepción léxica"@es <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#LexicalSense> <http://www.w3.org/2000/01/rdf-schema#label> "Signification lexicale"@fr <http://lemon-model.net/lemon> .
+<http://online-presence.net/opo/ns#declaredBy> <http://www.w3.org/2000/01/rdf-schema#label> "declaredBy"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaredBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://online-presence.net/opo/ns#OnlinePresence> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaredBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The Agent that declared the OnlinePresence"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaredBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://online-presence.net/opo/ns#> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaredBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaredBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://online-presence.net/opo/ns#declaresOnlinePresence> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaredBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaredOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://online-presence.net/opo/ns#OnlinePresence> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaredOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The sioc:UserAccount account where the OnlinePresence was declared."@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaredOn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdfs.org/sioc/ns#has_creator> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaredOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaredOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://online-presence.net/opo/ns#> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaredOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/sioc/ns#UserAccount> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaredOn> <http://www.w3.org/2000/01/rdf-schema#label> "declaredOn"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaredOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#publishedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#publishedFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#publishedFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://online-presence.net/opo/ns#> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#publishedFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://online-presence.net/opo/ns#OnlinePresence> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#publishedFrom> <http://www.w3.org/2000/01/rdf-schema#label> "publishedFrom"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#publishedFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "The source from which the OnlinePresence is declared (e.g., a mobile device)"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#publishedFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://online-presence.net/opo/ns#SourceOfPublishing> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Notifiability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Notifiability> <http://www.w3.org/2000/01/rdf-schema#label> "Notifiability"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Notifiability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://online-presence.net/opo/ns#> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Notifiability> <http://www.w3.org/2002/07/owl#disjointWith> <http://online-presence.net/opo/ns#OnlineStatus> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Notifiability> <http://www.w3.org/2000/01/rdf-schema#comment> "The OnlinePresenceComponent used to represent the attitude\n\t\t\tof an Agent towards interaction with applications i.e., the\n\t\t\tpossibility of applications to show notifications."@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Notifiability> <http://www.w3.org/2002/07/owl#disjointWith> <http://online-presence.net/opo/ns#Findability> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Notifiability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://online-presence.net/opo/ns#OnlinePresenceComponent> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaresOnlinePresence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://online-presence.net/opo/ns#> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaresOnlinePresence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaresOnlinePresence> <http://www.w3.org/2000/01/rdf-schema#range> <http://online-presence.net/opo/ns#OnlinePresence> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaresOnlinePresence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Agent> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaresOnlinePresence> <http://www.w3.org/2000/01/rdf-schema#label> "declaresOnlinePresence"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaresOnlinePresence> <http://www.w3.org/2000/01/rdf-schema#comment> "The OnlinePresence declared by the Agent"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#declaresOnlinePresence> <http://www.w3.org/2002/07/owl#inverseOf> <http://online-presence.net/opo/ns#declaredBy> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6cc91145ab95905b9b44a3e148bf62ed <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The OnlinePresenceComponent used to represent the attitude\n\t\t\tof an Agent towards the possibility of communication with\n\t\t\tother Agents. The OnlineStatus is defined by its components."@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://online-presence.net/opo/ns#> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatus> <http://www.w3.org/2002/07/owl#disjointWith> <http://online-presence.net/opo/ns#OnlineStatusComponent> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatus> <http://www.w3.org/2000/01/rdf-schema#label> "OnlineStatus"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatus> <http://www.w3.org/2002/07/owl#disjointWith> <http://online-presence.net/opo/ns#Findability> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B21ebaea6b2a6a597816590568bd4ef42 <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://online-presence.net/opo/ns#OnlinePresenceComponent> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2b776ac35238e04e36c2ab474fba87bc <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatus> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B95f6d1d5716767c8831aef12ff49b114 <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatus> <http://www.w3.org/2002/07/owl#disjointWith> <http://online-presence.net/opo/ns#Notifiability> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Findability> <http://www.w3.org/2002/07/owl#disjointWith> <http://online-presence.net/opo/ns#Notifiability> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Findability> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://online-presence.net/opo/ns#OnlinePresenceComponent> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Findability> <http://www.w3.org/2000/01/rdf-schema#label> "Findability"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Findability> <http://www.w3.org/2002/07/owl#disjointWith> <http://online-presence.net/opo/ns#OnlineStatus> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Findability> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://online-presence.net/opo/ns#> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Findability> <http://www.w3.org/2000/01/rdf-schema#comment> "The OnlinePresenceComponent used to represent the\n\t\t\tpossibility to find contact details of an Agent in a public\n\t\t\tlisting"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Findability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#isStatusComponentOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://online-presence.net/opo/ns#hasStatusComponent> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#isStatusComponentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The OnlineStatus that includes this OnlineStatusComponent."@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#isStatusComponentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#isStatusComponentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://online-presence.net/opo/ns#OnlineStatusComponent> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#isStatusComponentOf> <http://www.w3.org/2000/01/rdf-schema#label> "isStatusComponentOf"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#isStatusComponentOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://online-presence.net/opo/ns#OnlineStatus> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#isStatusComponentOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://online-presence.net/opo/ns#> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#customMessage> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/sioc/ns#Item> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#customMessage> <http://www.w3.org/2000/01/rdf-schema#comment> "A message associated with the OnlinePresence, often used in\n\t\t\tchat programs and social networks as custom title as well as in microblogging as status message."@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#customMessage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://online-presence.net/opo/ns#OnlinePresence> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#customMessage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://online-presence.net/opo/ns#> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#customMessage> <http://www.w3.org/2000/01/rdf-schema#label> "customMessage"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#customMessage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#startTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#startTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://online-presence.net/opo/ns#> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#startTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#startTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#startTime> <http://www.w3.org/2000/01/rdf-schema#label> "startTime"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#startTime> <http://www.w3.org/2000/01/rdf-schema#domain> <http://online-presence.net/opo/ns#OnlinePresence> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#startTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The time when the OnlinePresence started"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Visibility> <http://www.w3.org/2000/01/rdf-schema#comment> "OnlineStatusComponent used to represent the possiblity of\n\t\t\tothers to see the OnlineStatus of the Agent"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Visibility> <http://www.w3.org/2000/01/rdf-schema#label> "Visibility"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Visibility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://online-presence.net/opo/ns#OnlineStatusComponent> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Visibility> <http://www.w3.org/2002/07/owl#disjointWith> <http://online-presence.net/opo/ns#Activity> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Visibility> <http://www.w3.org/2002/07/owl#disjointWith> <http://online-presence.net/opo/ns#Disturbability> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Visibility> <http://www.w3.org/2002/07/owl#disjointWith> <http://online-presence.net/opo/ns#Contactability> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Visibility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#Visibility> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://online-presence.net/opo/ns#> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatusComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "The component of the OnlineStatus representing one of its\n\t\t\tdimensions."@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatusComponent> <http://www.w3.org/2002/07/owl#disjointWith> <http://online-presence.net/opo/ns#OnlineStatus> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatusComponent> <http://www.w3.org/2000/01/rdf-schema#label> "OnlineStatusComponent"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatusComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatusComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#OnlineStatusComponent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://online-presence.net/opo/ns#> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#duration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://online-presence.net/opo/ns#> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#duration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#duration> <http://www.w3.org/2000/01/rdf-schema#domain> <http://online-presence.net/opo/ns#OnlinePresence> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#duration> <http://www.w3.org/2000/01/rdf-schema#comment> "The estimated duration of the OnlinePresence after the\n\t\t\tstartTime"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#duration> <http://www.w3.org/2000/01/rdf-schema#label> "duration"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#duration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#duration> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#isPresenceComponentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#isPresenceComponentOf> <http://www.w3.org/2000/01/rdf-schema#label> "isPresenceComponentOf"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#isPresenceComponentOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://online-presence.net/opo/ns#OnlinePresence> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#isPresenceComponentOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://online-presence.net/opo/ns#OnlinePresenceComponent> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#isPresenceComponentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "The OnlinePresence that has this OnlinePresenceComponent"@en <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#isPresenceComponentOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://online-presence.net/opo/ns#> <http://online-presence.net/opo/ns#> .
+<http://online-presence.net/opo/ns#isPresenceComponentOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://online-presence.net/opo/ns#hasPresenceComponent> <http://online-presence.net/opo/ns#> .
+<http://ontology.it/itsmo/v1> <http://www.w3.org/2000/01/rdf-schema#label> "IT Service Management Ontology" <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1> <http://purl.org/dc/elements/1.1/creator> "Enrico Fagnoni" <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://ontology.it/itsmo/v1/userguide#Overview> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1> <http://purl.org/dc/elements/1.1/title> "A dictionary for some IT service management subjects."@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1> <http://www.w3.org/2000/01/rdf-schema#comment> "IT Service Management Ontology (ITSMO) provides the vocabulary for \n    annotating  resources related to IT Service Management. ITSMO try to be \n    consistent with 2011 ITIL glossary. ITIL&#174; is a Registered Trade Mark, and \n    a Registered Community Trade Mark of the Office of Government Commerce, \n    and is Registered in the U.S. Patent and Trademark Office. Please make \n    sure you are only using element identifiers in this namespace, \n    e.g.http://ontology.it/itsmo/v1#ITService. There may be copies of the \n    ontology file on the Web which can be retrieved from other locations, BUT \n    THOSE LOCATIONS MUST NOT BE USED AS REFERENCES."@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1> <http://purl.org/dc/elements/1.1/subject> "ITSM, ITIL, IT Service Management"@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1> <http://purl.org/dc/elements/1.1/rights> "IT Service Management Ontology is available under the Creative Commons \n    Attribution 3.0 Unported license; see \n    http://creativecommons.org/licenses/by/3.0/. In a nutshell, you are free \n    to copy, distribute and transmit the work; to remix/adapt the work (e.g. \n    to import the ontology and create specializations of its elements), as \n    long as you attribute the work in the manner specified by the author or \n    licensor (but not in any way that suggests that they endorse you or your \n    use of the work). You may not use this work for commercial purposes \n    without written permission of the author. Proper Attribution: Simply \n    include the statement \"This work is based on the IT Service Management \n    Ontology, developed by Enrico Fagnoni\" and link back to \n    http://ontology.it/itsmo/."@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1> <http://purl.org/dc/elements/1.1/contributor> "ITSMO Ontology is a project sponsored by E-Artspace Labs (http://www.e-artspace.com)" <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1> <http://www.w3.org/2002/07/owl#versionInfo> "$Id: itsmo.owl 204 2012-10-29 17:33:14Z e-artspace $" <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#hasAccountable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#hasAccountable> <http://www.w3.org/2000/01/rdf-schema#comment> "The one ultimately accountable for the correct and thorough completion of the process, and the one to whom Responsible is accountable. In other words, an Accountable must sign off (Approve) on work that Responsible provides. There must be only one Accountable specified for each process."@en <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#hasAccountable> <http://www.w3.org/2000/01/rdf-schema#label> "hasAccountable" <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#hasAccountable> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ontology.it/itsmo/v1> <http://ontology.it/itsmo/v1> .
+<http://ontology.it/itsmo/v1#hasAccountable> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontology.it/itsmo/v1#Process> <http://ontology.it/itsmo/v1> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#taMsClassRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#taMsClassRef> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.0" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#taMsClassRef> <http://www.w3.org/2000/01/rdf-schema#comment> "This property marks the most specific class from itsrdf:taClassRef. The rule is: from the set S of itsrdf:taClassRef attached to this resource taMscRef points to the one that does not have any subclasses in the set S except itself. So if taClassRef is owl:Thing, dbo:Agent, dbo:Person, dbp:Actor taMsClassRef is dbo:Actor "@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#taMsClassRef> <http://www.w3.org/2000/01/rdf-schema#label> "most specific class reference"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://www.w3.org/2000/01/rdf-schema#comment> "The NLP Interchange Format (NIF) is an RDF/OWL-based format that aims to achieve interoperability between Natural Language Processing (NLP) tools, language resources and annotations. NIF consists of specifications, ontologies and software, which are combined under the version identifier \"2.0\", but are versioned individually. This ontology is developed by the NLP2RDF project (http://nlp2rdf.org) and provided as part of NIF 2.0 under CC-BY license as well as Apache 2.0. The ontology contains seven core URIs (String, RFC5147String, Context, isString, referenceContext, beginIndex, endIndex) that provide the foundation  to express NLP annotations effectively in RDF."@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://purl.org/dc/elements/1.1/contributor> "Martin Brümmer" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://purl.org/dc/elements/1.1/contributor> "Navid Nourbakhsh" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/nif-core-val.ttl> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://purl.org/vocab/vann/changes> <https://github.com/NLP2RDF/persistence.uni-leipzig.org/commits/master/ontologies/nif-core> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://purl.org/dc/terms/title> "NIF 2.0 Core Ontology"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://purl.org/dc/elements/1.1/rights> "This ontology is licensed under Apache 2.0 (http://www.apache.org/licenses/LICENSE-2.0) and CC-BY (http://creativecommons.org/licenses/by/3.0/)"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://purl.org/dc/elements/1.1/description> "For a more concise description about NIF, we refer the reader to the ISWC 2013 in Use paper: Integrating NLP using Linked Data by Sebastian Hellmann, Jens Lehmann, Sören Auer, and Martin Brümmer available at: http://svn.aksw.org/papers/2013/ISWC_NIF/public.pdf Also the NLP2RDF project page (http://nlp2rdf.org) provides more general documentation and pointers.\n    The NIF 2.0 Core Ontology (http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#) provides classes and properties to describe the relations between substrings, text, documents by assigning URIs to strings. These URIs can then be used as subjects in RDF triples and therefore they can be annotated easily. The NIF 2.0 Core Specification defines how such URIs are created and used: http://persistence.uni-leipzig.org/nlp2rdf/specification/core.html and it makes sense to read this document first, so you can understand the definitions in this ontology better. \n    \n    The main class in this ontology is nif:String, which is the class of all words over the alphabet of Unicode characters (sometimes called Σ∗). We built NIF upon the Unicode Normalization Form C, as this follows the recommendation of the RDF standard for rdf:Literal. Indices are to be counted in code units as is common in most programming language and SPARQL engines ( see 17.4.3.2 STRLEN and 17.4.3.3 SUBSTR on http://www.w3.org/TR/sparql11-query/). \n    \n    Each URI Scheme (nif:URIScheme) used to address strings is a subclass of nif:String and puts further restrictions over the syntax of the URIs.  For example, instances of type nif:RFC5147String have to adhere to the Syntax and Semantics of RFC 5147 (http://tools.ietf.org/html/rfc5147). Users of NIF can create their own URI schemes by subclassing nif:String and providing documentation on the Web in the rdfs:comment field.\n    \n    Another important  subclass of nif:String is the nif:Context OWL class. This class is assigned to the whole string of the text (i.e. all characters). The purpose of an individual of this class is special, because the string of this individual is used to calculate the indices for all substrings. Therefore, all substrings have to have a relation nif:referenceContext pointing to an instance of nif:Context. Furthermore, the datatype property nif:isString can be used to include the reference text as a literal within the RDF as is required for the web service scenario. An example of NIF Core can be seen on the top left of the example Figure.  \n\t\n\tOntology models\n\tThis ontology is split in different complimentary parts:\n\t* a terminological model (containing rdfs:comment, rdfs:label, rdfs:subClassOf, rdfs:subPropertyOf, rdfs:range and rdfs:domain statements)\n\t* an inference model (containing owl:TransitiveProperty, owl:hasKey), see nif-core-inf.ttl\n\t* a validation model (containing owl:FunctionalProperty, owl:DisjointWith), see nif-core-val.ttl\n\t* a Stanford profile model (containing a more complex structure)\n\tAn overview is given at the bottom of: http://persistence.uni-leipzig.org/nlp2rdf/ \n\n\tFeedback\n\tIf you'd like to leave feedback, please open an issue on GitHub (https://github.com/NLP2RDF/ontologies/issues) and read the README (https://github.com/NLP2RDF/ontologies#readme) or write an email to the mailing list: http://lists.informatik.uni-leipzig.de/mailman/listinfo/nlp2rdf\n\n\tVersioning process is explained here: http://persistence.uni-leipzig.org/nlp2rdf/specification/version.html Changelog is written to rdfs:comment (resource level versioning).\n"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://purl.org/dc/terms/license> <http://www.apache.org/licenses/LICENSE-2.0> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://purl.org/dc/elements/1.1/publisher> "AKSW, University Leipzig" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://www.w3.org/2002/07/owl#versionInfo> "Versioning done on resource level. See https://github.com/NLP2RDF/ontologies/blob/master/nif-core/nif-core.ttl" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://www.w3.org/2000/01/rdf-schema#label> "NIF 2.0 Core Ontology"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "nif" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://purl.org/dc/elements/1.1/creator> "Sebastian Hellmann" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/nif-core-inf.ttl> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/nif-core.ttl> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> <http://purl.org/dc/elements/1.1/description> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core/nif-core-ontology_web.png> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/2000/01/rdf-schema#comment> "Title of the ontology" <http://purl.oclc.org/NET/mvco.owl> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://purl.org/dc/elements/1.1/rights> "Copyright 2010 - 2011 CSIRO. All rights reserved." <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://www.w3.org/2002/07/owl#imports> <http://purl.oclc.org/NET/ssnx/qu/qu-rec20> <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://www.w3.org/2002/07/owl#imports> <http://purl.oclc.org/NET/ssnx/ssn> <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://www.w3.org/2000/01/rdf-schema#comment> "Please report any errors to the Semantic Sensor Network Incubator Activity via the public W3C list public-xg-ssn@w3.org" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://purl.org/dc/elements/1.1/creator> "Laurent Lefort (CSIRO, Australia and W3C Semantic Sensor Network Incubator Group)" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://purl.org/dc/elements/1.1/title> "Ontology for Meteorological sensors" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://www.w3.org/2002/07/owl#imports> <http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://www.w3.org/2002/07/owl#imports> <http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://purl.org/dc/terms/modified> "2011-06-20" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://purl.org/dc/elements/1.1/identifier> "http://purl.oclc.org/NET/ssnx/meteo/aws" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://www.w3.org/2002/07/owl#imports> <http://purl.oclc.org/NET/ssnx/qu/qu> <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://purl.org/dc/elements/1.1/description> "Meteorological sensor ontology (sensor types)" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology is is part of the Agriculture Meteorology example showcasing the ontology developed by the W3C Semantic Sensor Networks incubator group (SSN-XG). It is published here in order to generalize the potential usage and the alignment with other standardization efforts of the SSN ontology.\n\nFor more information on the group's activities see: http://www.w3.org/2005/Incubator/ssn/ .\n\nDISCLAIMER: This ontology includes information that has been automatically generated from data sourced from third parties but has not been fully manually checked. It is provided AS-IS, for information only, with no warranties or guarantees and confers no rights." <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws> <http://purl.org/dc/terms/created> "2010-09-21" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://purl.org/dc/elements/1.1/creator> "Hans Peter de Koning (ESA, Netherlands and QUDV working group of the SysML 1.2 Revision Task Force (RTF))" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://purl.org/dc/terms/modified> "2011-06-20" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://purl.org/dc/elements/1.1/creator> "Nicolas Rouquette (NASA-JPL, USA and QUDV working group of the SysML 1.2 Revision Task Force (RTF))" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://www.w3.org/2000/01/rdf-schema#comment> "In order to generalize its potential usage and alignment with other standardization efforts concerning quantities and units, the QU  ontology has been further developed as a complement to the Agriculture Meteorology example showcasing the ontology developed by the W3C Semantic Sensor Networks incubator group (SSN-XG). The Agriculture Meteorology example also includes an application of the QU schema to the UN/CEFACT Recommendation 20 code list. For more information on the group's activities see: http://www.w3.org/2005/Incubator/ssn/ ." <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://www.w3.org/2000/01/rdf-schema#comment> "The QUDV copyright holders have agreed for the QU ontology to be published by the W3C Semantic Sensor Incubator Group but this does not constitute an endorsement or recommendation by the QUDV working group of the SysML 1.2 Revision Task Force. All other rights reserved." <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://www.w3.org/2000/01/rdf-schema#comment> "This Model Library for Quantities, Units, Dimensions and Values (QUDV)  (Note: in the ontology, the SYSML-QUDV definitions are flagged with a rdfs:seeAlso annotation equal to http://www.omgsysml.org/qudv)." <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://purl.org/dc/elements/1.1/rights> "qu.owl  Copyright 2010 - 2011 CSIRO" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://purl.org/dc/elements/1.1/creator> "Roger Burkhart (John Deere, USA and QUDV working group of the SysML 1.2 Revision Task Force (RTF))" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://www.w3.org/2000/01/rdf-schema#comment> "" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://www.w3.org/2000/01/rdf-schema#comment> "Please report any errors to the Semantic Sensor Network Incubator Activity via the public W3C list public-xg-ssn@w3.org or alternatively, for enquiries about the QUDV model,  to the QUDV mailing list: http://www.omg.org/publicarchives/qudv/" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://purl.org/dc/elements/1.1/rights> "sysml-qudv:qudv_owl  Copyright 2009 - 2011 The QUDV authors" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://purl.org/dc/elements/1.1/creator> "Huascar Espinoza (CEA, France and QUDV working group of the SysML 1.2 Revision Task Force (RTF))" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://purl.org/dc/elements/1.1/title> "Library for Quantity Kinds and Units: schema, based on QUDV model OMG SysML(TM), Version 1.2" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://www.w3.org/2000/01/rdf-schema#comment> "This ontology is partially based on the SysML QUDV (Quantities, Units, Dimensions and Values) proposed by a working group of the SysML 1.2 Revision Task Force (RTF), working in close coordination with the OMG MARTE specification group. This model library is specified in a UML/SysML class/block diagram in the OMG SysML, Version 1.2 specification (http://www.omg.org/spec/SysML/1.2/). This model is described in OMG  SysML, Version 1.2 Appendix C.4 Model Library for Quantity Kinds and Units (http://ontolog.cim3.net/file/resource/reference/UoM_Ontology_Standard/available-UoM-references/QUDV-Annex-C4-C5--OMG-SysML-v1-2_Oct-2009.pdf).\t\t\n\t\nThe QUDV model has also been represented in the form of an ontology using a formal ontology definition language. The resulting OWL ontology, called the QUDV ontology http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:qudv_owl has been published by members of the QUDV working group of the SysML 1.2 Revision Task Force (RTF). \n\n\t\tOMG SysML is a trademark of OMG (see http://www.omg.org/spec/SysML/1.2/PDF/ for the conditions of use of the  OMG  SysML, Version 1.2  specification)." <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://purl.org/dc/terms/created> "2009-08-26" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://purl.org/dc/elements/1.1/creator> "Laurent Lefort (CSIRO, Australia and W3C Semantic Sensor Network Incubator Group)" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu> <http://purl.org/dc/elements/1.1/identifier> "http://purl.oclc.org/NET/ssnx/qu/qu" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLine> <http://www.w3.org/2000/01/rdf-schema#label> "timeline" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLine> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#TimeLine> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents a linear and coherent piece of time -- can be either abstract (such as the one behind a score) or concrete (such as the universal time line).\nTwo timelines can be mapped using timeline maps." <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInterval> <http://www.w3.org/2002/07/owl#equivalentClass> _:B15b662171fbd6728ed5a07c2bbc10061 <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInterval> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B672d9f4e87665d0e8fe465ea6096f9a8 <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInterval> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInterval> <http://www.w3.org/2000/01/rdf-schema#label> "discrete interval" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#DiscreteInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "An interval defined on a discrete timeline, like the one backing a digital signal" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> <http://www.w3.org/2000/01/rdf-schema#comment> "A continuous timeline, like the universal one, or the one backing an analog signal" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/c4dm/timeline.owl#TimeLine> <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> <http://www.w3.org/2002/07/owl#equivalentClass> _:B4b9e966e48450ae682e95e4c6ca4d621 <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> <http://www.w3.org/2000/01/rdf-schema#label> "continuous timeline" <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/NET/c4dm/timeline.owl#DiscreteTimeLine> <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/NET/c4dm/timeline.owl#ContinuousTimeLine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/NET/c4dm/timeline.owl> .
+<http://purl.org/cerif/frapo/Grant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/cerif/frapo/Funding> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/Grant> <http://www.w3.org/2000/01/rdf-schema#comment> "A financial award by a funding agency for a particular project or purpose, usually awarded on the basis of a competitive application."@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/Grant> <http://www.w3.org/2000/01/rdf-schema#label> "grant"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/Grant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/directly-allocated-costs> <http://www.w3.org/2000/01/rdf-schema#label> "directly allocated costs"@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/directly-allocated-costs> <http://www.w3.org/2000/01/rdf-schema#comment> "A budget category to cover those costs normally borne by an institution, that are assigned to the budget of an externally funded project to cover the value of contributions to that project, for example to pay for the salary of a permanent member of staff seconded to work on the project, to compensate the employing organization for the loss of that person's efforts on other activities that he or she would otherwise be undertaking were it not for that secondment."@en <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/directly-allocated-costs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/cerif/frapo/> .
+<http://purl.org/cerif/frapo/directly-allocated-costs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/cerif/frapo/BudgetCategory> <http://purl.org/cerif/frapo/> .
+<http://purl.org/configurationontology#maxPrice> <http://www.w3.org/2000/01/rdf-schema#label> "max price"@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#maxPrice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#maxPrice> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#maxPrice> <http://www.w3.org/2000/01/rdf-schema#comment> "An upper limit set on the price of the configuration."@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#maxPrice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/configurationontology#definingChoice> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#maxPrice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/configurationontology#Configuration> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#label> "Configuration"@fr <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#label> "Configuration"@en <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#Configuration> <http://www.w3.org/2000/01/rdf-schema#comment> "A state of the configuration process, assumed to correspond to a valid partially defined product - valid in the sense that it can be completed into an existing fully specified product, one that can be ordered, without changing any of the current selections.\n\nA configuration is defined by a Lexicon (the set of the descriptive attributes of the configured product, cf. the \"lexicon\" property), and by the set of choices that have been made so far (typically  selected specifications), cf. the \"definingChoice\" property.\n\nNote: A configurator application may conceivably have to handle “invalid configurations”, that is, combinations of specifications that are impossible. This can happen, for instance, if the user is allowed to begin the configuration process by choosing features without any control of their compatibility; or if she is allowed to choose a feature incompatible with her previous selections. In this case, it is the responsibility of the configurator application to restore the consistency of the configuration, necessarily by excluding some of the previous user selections. This Configuration class excludes such invalid combinations. \n\nRelation with GoodRelations and schema.org vocabularies :\nbecause a configuration mainly describes a Partially Defined Product, it can be seen as a GoodRelations \"ProductOrServiceModel\" (or a schema.org \"ProductModel): \"an intangible entity that specifies some characteristics of a group of similar, usually mass-produced products, in the sense of a prototype\". The suffix \"Model\" may seem misleading when used for a Configuration, as it suggests something such as \"Ford T\", and not \"Ford T with sunroof and climat control (itself not a completely defined product -  you still can choose, well, the color: it is a \"prototype of similar products\").\n\nOn the other hand, a Configuration has a price (more precisely, a \"from price\" - the minimum of the \"suggested retail prices\" of all the matching completely defined products). As such, a Configuration may be seen as a commercial offer. It can also be used to represent a customer's wish list, constrained by the definition of the range. It could therefore be considered as a gr:Offering (or a schema:Offer) as well.\n\nBut gr:ProductOrService and gr:Offering are disjoint classes: a given Configuration cannot be both. Depending on the use case, a publisher of configuration data may want to type her Configurations with either of these classes."@en <http://purl.org/configurationontology> .
+<http://purl.org/coo/ns#> <http://purl.org/dc/elements/1.1/title> "COO: The Car Options Ontology for Semantic Web-based E-Commerce"@en <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#> <http://purl.org/dc/elements/1.1/creator> "Martin Hepp, Hepp Research GmbH"@en <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#> <http://www.w3.org/2002/07/owl#versionInfo> "V 1.1, Release 2010-10-12" <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#> <http://www.w3.org/2000/01/rdf-schema#comment> "COO: The Car Options Ontology\n    \nThe COO provides a vocabulary for exposing available configuration options for car models. It allows indicating choices that can be made as well as compatibility, dependency, and inclusion information. \n\nThe ontology imports and extends the GoodRelations ontology for e-commerce, which provides an abstract framework for product model information via gr:ProductOrServiceModel and ist associated properies.\n\nThe main difference between COO and the default patterns for model data in GoodRelations is that GoodRelations requires the materialization of all choices for features, which can quickly lead to very large amounts of data if features can be combines rather freely, due to the combinatorial effects.\n\nVocabulary:    http://purl.org/coo/ns\nNamespace:     http://purl.org/coo/ns#\n\nThe Car Options Ontology is designed to be used in combination with GoodRelations, a standard vocabulary for the commercial aspects of offers for sale or rental, and the Vehicle Sales Ontology.\n\nSee http://purl.org/goodrelations/  and http://purl.org/vso/ns for more information."@en <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#> <http://purl.org/dc/elements/1.1/rights> "The Car Options Ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. \nIn a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), \nas long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work)."@en <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#> <http://purl.org/dc/elements/1.1/subject> "E-Commerce, E-Business, GoodRelations, Ontology, Cars, Automobiles"@en <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#> <http://purl.org/dc/elements/1.1/contributor> "Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK;"@en <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/goodrelations/> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/goodrelations/v1> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#> <http://www.w3.org/2000/01/rdf-schema#label> "Car Options Ontology"@en <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#ConfigurationInfo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/coo/ns#> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#ConfigurationInfo> <http://www.w3.org/2000/01/rdf-schema#comment> "A Configuration Info is an abstract entity that gives information on whether a set of Choices Or Components results in a valid configuration. \nUsing coo:compatible, it is possible to indicate either compatibility (true) and incompatibility (false) so that modeling remains efficient, no matter whether most combinations are valid or whether most configurations are invalid.\nIf no such statement is found, the validity of a configuration is unknown.\n\nNote: The two properties coo:includes and coo:dependsOn, attached to coo:ChoiceOrComponent, may contain additional information on the validity of configuration."@en <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#ConfigurationInfo> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#Derivative> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#ConfigurationInfo> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#PropertySpecification> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#ConfigurationInfo> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#CompleteCarModel> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#ConfigurationInfo> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#RelativePriceSpecification> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#ConfigurationInfo> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#SpecItemCollection> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#ConfigurationInfo> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#Trim> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#ConfigurationInfo> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#BaseModel> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#ConfigurationInfo> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#ChoiceOrComponent> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#ConfigurationInfo> <http://www.w3.org/2000/01/rdf-schema#label> "ConfigurationInfo"@en <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#ConfigurationInfo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#RelativePriceSpecification> <http://www.w3.org/2000/01/rdf-schema#label> "RelativePriceSpeciﬁcation"@en <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#RelativePriceSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#ChoiceOrComponent> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#RelativePriceSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#BaseModel> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#RelativePriceSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#Trim> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#RelativePriceSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#SpecItemCollection> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#RelativePriceSpecification> <http://www.w3.org/2000/01/rdf-schema#comment> "A shortcut for indicating the effect of a choice or set of choices on the unit price. Use positive values for a surcharge and negative values for a deduction.\n\nNote: Price information should in general be attached to a gr:Offering node, not to a Base Model, Trim, Derivative, or Complete Car Model. Use this shortcut with care."@en <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#RelativePriceSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#Derivative> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#RelativePriceSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#RelativePriceSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/coo/ns#> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#RelativePriceSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#CompleteCarModel> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#RelativePriceSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#ConfigurationInfo> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#RelativePriceSpecification> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/coo/ns#> .
+<http://purl.org/coo/ns#RelativePriceSpecification> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/coo/ns#PropertySpecification> <http://purl.org/coo/ns#> .
+<http://purl.org/dqm-vocabulary/v1/dqm#hasScore> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects data requirements with the data quality score which was calculated based on the requirement."@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#hasScore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#hasScore> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dqm-vocabulary/v1/dqm#dataRequirementsRelationship> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#hasScore> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dqm-vocabulary/v1/dqm#DataQualityScore> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#hasScore> <http://www.w3.org/2000/01/rdf-schema#label> "Has Score"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#hasScore> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dqm-vocabulary/v1/dqm#DataRequirement> <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/eis/vocab/daq#QualityGraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B24008eaea35111a70fc3f19940eaa99d <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#QualityGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#QualityGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#QualityGraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linked-data/cube#DataSet> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#QualityGraph> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/03/trix/rdfg-1/Graph> <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#QualityGraph> <http://www.w3.org/2000/01/rdf-schema#label> "Quality Graph Statistics" <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/eis/vocab/daq#QualityGraph> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines a quality graph which will contain all metadata about quality metrics on the dataset." <http://purl.org/eis/vocab/daq#> .
+<http://purl.org/goodrelations/v1#closes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#closes> <http://www.w3.org/2000/01/rdf-schema#label> "closes (1..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#closes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#closes> <http://www.w3.org/2000/01/rdf-schema#comment> "The closing  hour of the gr:Location on the given gr:DayOfWeek.\nIf no time-zone suffix is included, the time is given in the local time valid at the gr:Location.\n\nFor a time in GMT/UTC, simply add a \"Z\" following the time:\n\n09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n09:30:10-09:00\n\n09:30:10+09:00.\n\nNote 1: Use 00:00:00 for the first second of the respective day and 23:59:59 for the last second of that day.\nNote 2: If a store opens at 17:00 on Saturdays and closes at 03:00:00 a.m. next morning, use two instances of this class, one with 17:00:00 - 23:59:59 for Saturday and another one with 00:00:00 - 03:00:00 for Sunday.\nNote 3: If the shop re-opens on the same day of the week or set of days of the week, you must create a second instance of gr:OpeningHoursSpecification."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#closes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#time> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#closes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Reseller> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Reseller> <http://www.w3.org/2000/01/rdf-schema#comment> "The gr:BusinessEntityType representing such agents that are purchasing the scope of products included in the gr:Offering for resale on the market. Resellers are also businesses, i.e., they are officially registered with the public administration and strive for profits by their activities."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Reseller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#Reseller> <http://www.w3.org/2000/01/rdf-schema#label> "Reseller (business entity type)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#label> "has MPN (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#domain> _:B6e0778f1bbcc279fa827e93d2e116f7a <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/productID> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#comment> "The Manufacturer Part Number or MPN is a unique identifier for a product, service, or bundle from the perspective of a particular manufacturer. MPNs can be assigned to products or product datasheets, or bundles. Accordingly, the domain of this property is the union of gr:ProductOrService (the common superclass of goods and datasheets), and gr:Offering.\n\nImportant: Be careful when assuming two products or services instances or offering instances to be identical based on the MPN. Since MPNs are unique only for the same gr:BusinessEntity, this holds only when the two MPN values refer to the same gr:BusinessEntity. Such can be done by taking into account the provenance of the data. \n\nUsually, the properties gr:hasEAN_UCC-13 and gr:hasGTIN-14 are much more reliable identifiers, because they are globally unique.\n\nSee also http://en.wikipedia.org/wiki/Part_number"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has Stock Keeping Unit (0..*)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "The Stock Keeping Unit, or SKU is a unique identifier for a product, service, or bundle from the perspective of a particular supplier, i.e. SKUs are mostly assigned and serialized at the merchant level. \nExamples of SKUs are the ordering or parts numbers used by a particular Web shop or catalog.\n\nConsequently, the domain of gr:hasStockKeepingUnit is the union of the classes gr:Offering and gr:ProductOrService. \nIf attached to a gr:Offering, the SKU will usually reflect a merchant-specific identifier, i.e. one valid only for that particular retailer or shop. \nIf attached to a gr:ProductOrServiceModel, the SKU can reflect either the identifier used by the merchant or the part number used by the official manufacturer of that part. For the latter, gr:hasMPN is a better choice.\n\nImportant: Be careful when assuming two products or services instances or offering instances to be identical based on the SKU. Since SKUs are unique only for the same gr:BusinessEntity, this can be assumed only when you are sure that the two SKU values refer to the same business entity. Such can be done by taking into account the provenance of the data. As long as instances of gr:Offering are concerned, you can also check that the offerings are being offered by the same gr:Business Entity.\n\nUsually, the properties gr:hasEAN_UCC-13 and gr:hasGTIN-14 are much more reliable identifiers, because they are globally unique.\n\nSee also http://en.wikipedia.org/wiki/Stock_Keeping_Unit."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#domain> _:B81924e8aa2011604c6349ad36091f109 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/productID> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#License> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#BusinessFunction> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#License> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#License> <http://www.w3.org/2000/01/rdf-schema#comment> "A license is the specification of a bundle of rights that determines the type of activity or access offered by the gr:BusinessEntity on the gr:ProductOrService through the gr:Offering.\n\t\nLicenses can be standardized (e.g. LPGL, Creative Commons, ...), vendor-specific, or individually defined for a single offer or product. Whether there is a fee for obtaining the license is specified using the gr:UnitPriceSpecification attached to the gr:Offering. Use foaf:page for linking to a document containing the license, e.g. in PDF or HTML."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#License> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#License> <http://www.w3.org/2000/01/rdf-schema#label> "License"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#SomeItems> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#SomeItems> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#SomeItems> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://schema.org/Product> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#SomeItems> <http://www.w3.org/2000/01/rdf-schema#comment> "A placeholder instance for unknown instances of a mass-produced commodity. This is used as a computationally cheap work-around for such instances that are not individually exposed on the Web but just stated to exist (i.e., which are existentially quantified).\n\nExample: An instance of this class can represent an anonymous set of green Siemens1234 phones. It is different from the gr:ProductOrServiceModel Siemens1234, since this refers to the make and model, and it is different from a particular instance of this make and model (e.g. my individual phone) since the latter can be sold only once.\n\nNote: This class is the new, shorter form of the former gr:ProductOrServicesSomeInstancesPlaceholder.\n\t\t\nCompatibility with schema.org: This class is (approximately) a subclass of http://schema.org/Product."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#SomeItems> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/goodrelations/v1#ProductOrServicesSomeInstancesPlaceholder> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#SomeItems> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Individual> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#SomeItems> <http://www.w3.org/2000/01/rdf-schema#label> "Some items"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#SomeItems> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#SomeItems> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#ProductOrServiceModel> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntity> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#TypeAndQuantityNode> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentMethod> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyPromise> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "The business function specifies the type of activity or access (i.e., the bundle of rights) offered by the gr:BusinessEntity on the gr:ProductOrService through the gr:Offering. Typical are sell, rental or lease, maintenance or repair, manufacture / produce, recycle / dispose, engineering / construction, or installation.\n\nLicenses and other proprietary specifications of access rights are also instances of this class.\n\nExamples: A particular offering made by Miller Rentals Ltd. says that they (1) sell Volkswagen Golf convertibles, (2) lease out a particular Ford pick-up truck, and (3) dispose car wrecks of any make and model."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Brand> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Location> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#Offering> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyScope> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessFunction> <http://www.w3.org/2000/01/rdf-schema#label> "Business function"@en <http://purl.org/goodrelations/v1> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/on+the.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BoneX2Bthe .
+_:BoneX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoneX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/one+the.nt> .
+_:BoneX2Bthe <https://w3id.org/tree#value> "one" .
+_:BoneX2Bthe <https://w3id.org/tree#value> "the" .
+_:BoneX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/one+the.nt> <https://w3id.org/tree#remainingItems> "43"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BongX2Bthe .
+_:BongX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BongX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ong+the.nt> .
+_:BongX2Bthe <https://w3id.org/tree#value> "ong" .
+_:BongX2Bthe <https://w3id.org/tree#value> "the" .
+_:BongX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ong+the.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonlX2Bthe .
+_:BonlX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonlX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/onl+the.nt> .
+_:BonlX2Bthe <https://w3id.org/tree#value> "onl" .
+_:BonlX2Bthe <https://w3id.org/tree#value> "the" .
+_:BonlX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/onl+the.nt> <https://w3id.org/tree#remainingItems> "23"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonoX2Bthe .
+_:BonoX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonoX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ono+the.nt> .
+_:BonoX2Bthe <https://w3id.org/tree#value> "ono" .
+_:BonoX2Bthe <https://w3id.org/tree#value> "the" .
+_:BonoX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ono+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BontX2Bthe .
+_:BontX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BontX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ont+the.nt> .
+_:BontX2Bthe <https://w3id.org/tree#value> "ont" .
+_:BontX2Bthe <https://w3id.org/tree#value> "the" .
+_:BontX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ont+the.nt> <https://w3id.org/tree#remainingItems> "202"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2Bthei .
+_:BonX2Bthei <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bthei <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+thei.nt> .
+_:BonX2Bthei <https://w3id.org/tree#value> "on" .
+_:BonX2Bthei <https://w3id.org/tree#value> "thei" .
+_:BonX2Bthei <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+thei.nt> <https://w3id.org/tree#remainingItems> "17"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2Bthem .
+_:BonX2Bthem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bthem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+them.nt> .
+_:BonX2Bthem <https://w3id.org/tree#value> "on" .
+_:BonX2Bthem <https://w3id.org/tree#value> "them" .
+_:BonX2Bthem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+them.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2Bthen .
+_:BonX2Bthen <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bthen <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+then.nt> .
+_:BonX2Bthen <https://w3id.org/tree#value> "on" .
+_:BonX2Bthen <https://w3id.org/tree#value> "then" .
+_:BonX2Bthen <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+then.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2Bther .
+_:BonX2Bther <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bther <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+ther.nt> .
+_:BonX2Bther <https://w3id.org/tree#value> "on" .
+_:BonX2Bther <https://w3id.org/tree#value> "ther" .
+_:BonX2Bther <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+ther.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2Bthes .
+_:BonX2Bthes <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bthes <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+thes.nt> .
+_:BonX2Bthes <https://w3id.org/tree#value> "on" .
+_:BonX2Bthes <https://w3id.org/tree#value> "thes" .
+_:BonX2Bthes <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+thes.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:B3X2BonX2Bthe .
+_:B3X2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:B3X2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/3+on+the.nt> .
+_:B3X2BonX2Bthe <https://w3id.org/tree#value> "3" .
+_:B3X2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:B3X2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:B3X2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/3+on+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BaX2BonX2Bthe .
+_:BaX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+on+the.nt> .
+_:BaX2BonX2Bthe <https://w3id.org/tree#value> "a" .
+_:BaX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BaX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BaX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+on+the.nt> <https://w3id.org/tree#remainingItems> "31"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BbX2BonX2Bthe .
+_:BbX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+on+the.nt> .
+_:BbX2BonX2Bthe <https://w3id.org/tree#value> "b" .
+_:BbX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BbX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BbX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+on+the.nt> <https://w3id.org/tree#remainingItems> "50"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BcX2BonX2Bthe .
+_:BcX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+on+the.nt> .
+_:BcX2BonX2Bthe <https://w3id.org/tree#value> "c" .
+_:BcX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BcX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BcX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+on+the.nt> <https://w3id.org/tree#remainingItems> "98"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BdX2BonX2Bthe .
+_:BdX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+on+the.nt> .
+_:BdX2BonX2Bthe <https://w3id.org/tree#value> "d" .
+_:BdX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BdX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BdX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+on+the.nt> <https://w3id.org/tree#remainingItems> "54"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BeX2BonX2Bthe .
+_:BeX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+on+the.nt> .
+_:BeX2BonX2Bthe <https://w3id.org/tree#value> "e" .
+_:BeX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BeX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BeX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+on+the.nt> <https://w3id.org/tree#remainingItems> "29"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BfX2BonX2Bthe .
+_:BfX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+on+the.nt> .
+_:BfX2BonX2Bthe <https://w3id.org/tree#value> "f" .
+_:BfX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BfX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BfX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+on+the.nt> <https://w3id.org/tree#remainingItems> "28"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BgX2BonX2Bthe .
+_:BgX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BgX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/g+on+the.nt> .
+_:BgX2BonX2Bthe <https://w3id.org/tree#value> "g" .
+_:BgX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BgX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BgX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/g+on+the.nt> <https://w3id.org/tree#remainingItems> "52"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BhX2BonX2Bthe .
+_:BhX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+on+the.nt> .
+_:BhX2BonX2Bthe <https://w3id.org/tree#value> "h" .
+_:BhX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BhX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BhX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+on+the.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BiX2BonX2Bthe .
+_:BiX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+on+the.nt> .
+_:BiX2BonX2Bthe <https://w3id.org/tree#value> "i" .
+_:BiX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BiX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BiX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+on+the.nt> <https://w3id.org/tree#remainingItems> "41"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BjX2BonX2Bthe .
+_:BjX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BjX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/j+on+the.nt> .
+_:BjX2BonX2Bthe <https://w3id.org/tree#value> "j" .
+_:BjX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BjX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BjX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/j+on+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BkX2BonX2Bthe .
+_:BkX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BkX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/k+on+the.nt> .
+_:BkX2BonX2Bthe <https://w3id.org/tree#value> "k" .
+_:BkX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BkX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BkX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/k+on+the.nt> <https://w3id.org/tree#remainingItems> "20"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BlX2BonX2Bthe .
+_:BlX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+on+the.nt> .
+_:BlX2BonX2Bthe <https://w3id.org/tree#value> "l" .
+_:BlX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BlX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BlX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+on+the.nt> <https://w3id.org/tree#remainingItems> "44"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BmX2BonX2Bthe .
+_:BmX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+on+the.nt> .
+_:BmX2BonX2Bthe <https://w3id.org/tree#value> "m" .
+_:BmX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BmX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+on+the.nt> <https://w3id.org/tree#remainingItems> "26"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BnX2BonX2Bthe .
+_:BnX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/n+on+the.nt> .
+_:BnX2BonX2Bthe <https://w3id.org/tree#value> "n" .
+_:BnX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BnX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BnX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/n+on+the.nt> <https://w3id.org/tree#remainingItems> "21"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BoX2BonX2Bthe .
+_:BoX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+on+the.nt> .
+_:BoX2BonX2Bthe <https://w3id.org/tree#value> "o" .
+_:BoX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BoX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BoX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+on+the.nt> <https://w3id.org/tree#remainingItems> "59"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BpX2Bthe .
+_:BonX2BpX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BpX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+p+the.nt> .
+_:BonX2BpX2Bthe <https://w3id.org/tree#value> "on" .
+_:BonX2BpX2Bthe <https://w3id.org/tree#value> "p" .
+_:BonX2BpX2Bthe <https://w3id.org/tree#value> "the" .
+_:BonX2BpX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+p+the.nt> <https://w3id.org/tree#remainingItems> "74"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BqX2Bthe .
+_:BonX2BqX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BqX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+q+the.nt> .
+_:BonX2BqX2Bthe <https://w3id.org/tree#value> "on" .
+_:BonX2BqX2Bthe <https://w3id.org/tree#value> "q" .
+_:BonX2BqX2Bthe <https://w3id.org/tree#value> "the" .
+_:BonX2BqX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+q+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BrX2Bthe .
+_:BonX2BrX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BrX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+r+the.nt> .
+_:BonX2BrX2Bthe <https://w3id.org/tree#value> "on" .
+_:BonX2BrX2Bthe <https://w3id.org/tree#value> "r" .
+_:BonX2BrX2Bthe <https://w3id.org/tree#value> "the" .
+_:BonX2BrX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+r+the.nt> <https://w3id.org/tree#remainingItems> "179"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BsX2Bthe .
+_:BonX2BsX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BsX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+s+the.nt> .
+_:BonX2BsX2Bthe <https://w3id.org/tree#value> "on" .
+_:BonX2BsX2Bthe <https://w3id.org/tree#value> "s" .
+_:BonX2BsX2Bthe <https://w3id.org/tree#value> "the" .
+_:BonX2BsX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+s+the.nt> <https://w3id.org/tree#remainingItems> "126"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BtX2Bthe .
+_:BonX2BtX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BtX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+t+the.nt> .
+_:BonX2BtX2Bthe <https://w3id.org/tree#value> "on" .
+_:BonX2BtX2Bthe <https://w3id.org/tree#value> "t" .
+_:BonX2BtX2Bthe <https://w3id.org/tree#value> "the" .
+_:BonX2BtX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+t+the.nt> <https://w3id.org/tree#remainingItems> "44"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BtheX2Bu .
+_:BonX2BtheX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BtheX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+the+u.nt> .
+_:BonX2BtheX2Bu <https://w3id.org/tree#value> "on" .
+_:BonX2BtheX2Bu <https://w3id.org/tree#value> "the" .
+_:BonX2BtheX2Bu <https://w3id.org/tree#value> "u" .
+_:BonX2BtheX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+the+u.nt> <https://w3id.org/tree#remainingItems> "27"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BtheX2Bv .
+_:BonX2BtheX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BtheX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+the+v.nt> .
+_:BonX2BtheX2Bv <https://w3id.org/tree#value> "on" .
+_:BonX2BtheX2Bv <https://w3id.org/tree#value> "the" .
+_:BonX2BtheX2Bv <https://w3id.org/tree#value> "v" .
+_:BonX2BtheX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+the+v.nt> <https://w3id.org/tree#remainingItems> "24"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BtheX2Bw .
+_:BonX2BtheX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BtheX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+the+w.nt> .
+_:BonX2BtheX2Bw <https://w3id.org/tree#value> "on" .
+_:BonX2BtheX2Bw <https://w3id.org/tree#value> "the" .
+_:BonX2BtheX2Bw <https://w3id.org/tree#value> "w" .
+_:BonX2BtheX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+the+w.nt> <https://w3id.org/tree#remainingItems> "59"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BtheX2Bx .
+_:BonX2BtheX2Bx <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BtheX2Bx <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+the+x.nt> .
+_:BonX2BtheX2Bx <https://w3id.org/tree#value> "on" .
+_:BonX2BtheX2Bx <https://w3id.org/tree#value> "the" .
+_:BonX2BtheX2Bx <https://w3id.org/tree#value> "x" .
+_:BonX2BtheX2Bx <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+the+x.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BtheX2By .
+_:BonX2BtheX2By <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BtheX2By <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+the+y.nt> .
+_:BonX2BtheX2By <https://w3id.org/tree#value> "on" .
+_:BonX2BtheX2By <https://w3id.org/tree#value> "the" .
+_:BonX2BtheX2By <https://w3id.org/tree#value> "y" .
+_:BonX2BtheX2By <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+the+y.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/on+the.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BoneX2Bthe .
+_:BoneX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoneX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/one+the.nt> .
+_:BoneX2Bthe <https://w3id.org/tree#value> "one" .
+_:BoneX2Bthe <https://w3id.org/tree#value> "the" .
+_:BoneX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/one+the.nt> <https://w3id.org/tree#remainingItems> "43"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BongX2Bthe .
+_:BongX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BongX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ong+the.nt> .
+_:BongX2Bthe <https://w3id.org/tree#value> "ong" .
+_:BongX2Bthe <https://w3id.org/tree#value> "the" .
+_:BongX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ong+the.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonlX2Bthe .
+_:BonlX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonlX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/onl+the.nt> .
+_:BonlX2Bthe <https://w3id.org/tree#value> "onl" .
+_:BonlX2Bthe <https://w3id.org/tree#value> "the" .
+_:BonlX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/onl+the.nt> <https://w3id.org/tree#remainingItems> "23"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonoX2Bthe .
+_:BonoX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonoX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ono+the.nt> .
+_:BonoX2Bthe <https://w3id.org/tree#value> "ono" .
+_:BonoX2Bthe <https://w3id.org/tree#value> "the" .
+_:BonoX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ono+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BontX2Bthe .
+_:BontX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BontX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/ont+the.nt> .
+_:BontX2Bthe <https://w3id.org/tree#value> "ont" .
+_:BontX2Bthe <https://w3id.org/tree#value> "the" .
+_:BontX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/ont+the.nt> <https://w3id.org/tree#remainingItems> "202"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2Bthei .
+_:BonX2Bthei <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bthei <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+thei.nt> .
+_:BonX2Bthei <https://w3id.org/tree#value> "on" .
+_:BonX2Bthei <https://w3id.org/tree#value> "thei" .
+_:BonX2Bthei <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+thei.nt> <https://w3id.org/tree#remainingItems> "17"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2Bthem .
+_:BonX2Bthem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bthem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+them.nt> .
+_:BonX2Bthem <https://w3id.org/tree#value> "on" .
+_:BonX2Bthem <https://w3id.org/tree#value> "them" .
+_:BonX2Bthem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+them.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2Bthen .
+_:BonX2Bthen <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bthen <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+then.nt> .
+_:BonX2Bthen <https://w3id.org/tree#value> "on" .
+_:BonX2Bthen <https://w3id.org/tree#value> "then" .
+_:BonX2Bthen <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+then.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2Bther .
+_:BonX2Bther <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bther <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+ther.nt> .
+_:BonX2Bther <https://w3id.org/tree#value> "on" .
+_:BonX2Bther <https://w3id.org/tree#value> "ther" .
+_:BonX2Bther <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+ther.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2Bthes .
+_:BonX2Bthes <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2Bthes <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+thes.nt> .
+_:BonX2Bthes <https://w3id.org/tree#value> "on" .
+_:BonX2Bthes <https://w3id.org/tree#value> "thes" .
+_:BonX2Bthes <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+thes.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:B3X2BonX2Bthe .
+_:B3X2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:B3X2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/3+on+the.nt> .
+_:B3X2BonX2Bthe <https://w3id.org/tree#value> "3" .
+_:B3X2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:B3X2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:B3X2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/3+on+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BaX2BonX2Bthe .
+_:BaX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+on+the.nt> .
+_:BaX2BonX2Bthe <https://w3id.org/tree#value> "a" .
+_:BaX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BaX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BaX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+on+the.nt> <https://w3id.org/tree#remainingItems> "31"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BbX2BonX2Bthe .
+_:BbX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+on+the.nt> .
+_:BbX2BonX2Bthe <https://w3id.org/tree#value> "b" .
+_:BbX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BbX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BbX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+on+the.nt> <https://w3id.org/tree#remainingItems> "50"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BcX2BonX2Bthe .
+_:BcX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+on+the.nt> .
+_:BcX2BonX2Bthe <https://w3id.org/tree#value> "c" .
+_:BcX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BcX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BcX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+on+the.nt> <https://w3id.org/tree#remainingItems> "98"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BdX2BonX2Bthe .
+_:BdX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+on+the.nt> .
+_:BdX2BonX2Bthe <https://w3id.org/tree#value> "d" .
+_:BdX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BdX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BdX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+on+the.nt> <https://w3id.org/tree#remainingItems> "54"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BeX2BonX2Bthe .
+_:BeX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BeX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/e+on+the.nt> .
+_:BeX2BonX2Bthe <https://w3id.org/tree#value> "e" .
+_:BeX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BeX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BeX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/e+on+the.nt> <https://w3id.org/tree#remainingItems> "29"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BfX2BonX2Bthe .
+_:BfX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+on+the.nt> .
+_:BfX2BonX2Bthe <https://w3id.org/tree#value> "f" .
+_:BfX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BfX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BfX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+on+the.nt> <https://w3id.org/tree#remainingItems> "28"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BgX2BonX2Bthe .
+_:BgX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BgX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/g+on+the.nt> .
+_:BgX2BonX2Bthe <https://w3id.org/tree#value> "g" .
+_:BgX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BgX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BgX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/g+on+the.nt> <https://w3id.org/tree#remainingItems> "52"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BhX2BonX2Bthe .
+_:BhX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+on+the.nt> .
+_:BhX2BonX2Bthe <https://w3id.org/tree#value> "h" .
+_:BhX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BhX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BhX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+on+the.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BiX2BonX2Bthe .
+_:BiX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+on+the.nt> .
+_:BiX2BonX2Bthe <https://w3id.org/tree#value> "i" .
+_:BiX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BiX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BiX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+on+the.nt> <https://w3id.org/tree#remainingItems> "41"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BjX2BonX2Bthe .
+_:BjX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BjX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/j+on+the.nt> .
+_:BjX2BonX2Bthe <https://w3id.org/tree#value> "j" .
+_:BjX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BjX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BjX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/j+on+the.nt> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BkX2BonX2Bthe .
+_:BkX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BkX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/k+on+the.nt> .
+_:BkX2BonX2Bthe <https://w3id.org/tree#value> "k" .
+_:BkX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BkX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BkX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/k+on+the.nt> <https://w3id.org/tree#remainingItems> "20"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BlX2BonX2Bthe .
+_:BlX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+on+the.nt> .
+_:BlX2BonX2Bthe <https://w3id.org/tree#value> "l" .
+_:BlX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BlX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BlX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+on+the.nt> <https://w3id.org/tree#remainingItems> "44"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BmX2BonX2Bthe .
+_:BmX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+on+the.nt> .
+_:BmX2BonX2Bthe <https://w3id.org/tree#value> "m" .
+_:BmX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BmX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+on+the.nt> <https://w3id.org/tree#remainingItems> "26"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BnX2BonX2Bthe .
+_:BnX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/n+on+the.nt> .
+_:BnX2BonX2Bthe <https://w3id.org/tree#value> "n" .
+_:BnX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BnX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BnX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/n+on+the.nt> <https://w3id.org/tree#remainingItems> "21"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BoX2BonX2Bthe .
+_:BoX2BonX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2BonX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+on+the.nt> .
+_:BoX2BonX2Bthe <https://w3id.org/tree#value> "o" .
+_:BoX2BonX2Bthe <https://w3id.org/tree#value> "on" .
+_:BoX2BonX2Bthe <https://w3id.org/tree#value> "the" .
+_:BoX2BonX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+on+the.nt> <https://w3id.org/tree#remainingItems> "59"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BpX2Bthe .
+_:BonX2BpX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BpX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+p+the.nt> .
+_:BonX2BpX2Bthe <https://w3id.org/tree#value> "on" .
+_:BonX2BpX2Bthe <https://w3id.org/tree#value> "p" .
+_:BonX2BpX2Bthe <https://w3id.org/tree#value> "the" .
+_:BonX2BpX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+p+the.nt> <https://w3id.org/tree#remainingItems> "74"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BqX2Bthe .
+_:BonX2BqX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BqX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+q+the.nt> .
+_:BonX2BqX2Bthe <https://w3id.org/tree#value> "on" .
+_:BonX2BqX2Bthe <https://w3id.org/tree#value> "q" .
+_:BonX2BqX2Bthe <https://w3id.org/tree#value> "the" .
+_:BonX2BqX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+q+the.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BrX2Bthe .
+_:BonX2BrX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BrX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+r+the.nt> .
+_:BonX2BrX2Bthe <https://w3id.org/tree#value> "on" .
+_:BonX2BrX2Bthe <https://w3id.org/tree#value> "r" .
+_:BonX2BrX2Bthe <https://w3id.org/tree#value> "the" .
+_:BonX2BrX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+r+the.nt> <https://w3id.org/tree#remainingItems> "179"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BsX2Bthe .
+_:BonX2BsX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BsX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+s+the.nt> .
+_:BonX2BsX2Bthe <https://w3id.org/tree#value> "on" .
+_:BonX2BsX2Bthe <https://w3id.org/tree#value> "s" .
+_:BonX2BsX2Bthe <https://w3id.org/tree#value> "the" .
+_:BonX2BsX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+s+the.nt> <https://w3id.org/tree#remainingItems> "126"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BtX2Bthe .
+_:BonX2BtX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BtX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+t+the.nt> .
+_:BonX2BtX2Bthe <https://w3id.org/tree#value> "on" .
+_:BonX2BtX2Bthe <https://w3id.org/tree#value> "t" .
+_:BonX2BtX2Bthe <https://w3id.org/tree#value> "the" .
+_:BonX2BtX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+t+the.nt> <https://w3id.org/tree#remainingItems> "44"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BtheX2Bu .
+_:BonX2BtheX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BtheX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+the+u.nt> .
+_:BonX2BtheX2Bu <https://w3id.org/tree#value> "on" .
+_:BonX2BtheX2Bu <https://w3id.org/tree#value> "the" .
+_:BonX2BtheX2Bu <https://w3id.org/tree#value> "u" .
+_:BonX2BtheX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+the+u.nt> <https://w3id.org/tree#remainingItems> "27"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BtheX2Bv .
+_:BonX2BtheX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BtheX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+the+v.nt> .
+_:BonX2BtheX2Bv <https://w3id.org/tree#value> "on" .
+_:BonX2BtheX2Bv <https://w3id.org/tree#value> "the" .
+_:BonX2BtheX2Bv <https://w3id.org/tree#value> "v" .
+_:BonX2BtheX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+the+v.nt> <https://w3id.org/tree#remainingItems> "24"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BtheX2Bw .
+_:BonX2BtheX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BtheX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+the+w.nt> .
+_:BonX2BtheX2Bw <https://w3id.org/tree#value> "on" .
+_:BonX2BtheX2Bw <https://w3id.org/tree#value> "the" .
+_:BonX2BtheX2Bw <https://w3id.org/tree#value> "w" .
+_:BonX2BtheX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+the+w.nt> <https://w3id.org/tree#remainingItems> "59"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BtheX2Bx .
+_:BonX2BtheX2Bx <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BtheX2Bx <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+the+x.nt> .
+_:BonX2BtheX2Bx <https://w3id.org/tree#value> "on" .
+_:BonX2BtheX2Bx <https://w3id.org/tree#value> "the" .
+_:BonX2BtheX2Bx <https://w3id.org/tree#value> "x" .
+_:BonX2BtheX2Bx <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+the+x.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/on+the.nt> <https://w3id.org/tree#relation> _:BonX2BtheX2By .
+_:BonX2BtheX2By <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BonX2BtheX2By <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/on+the+y.nt> .
+_:BonX2BtheX2By <https://w3id.org/tree#value> "on" .
+_:BonX2BtheX2By <https://w3id.org/tree#value> "the" .
+_:BonX2BtheX2By <https://w3id.org/tree#value> "y" .
+_:BonX2BtheX2By <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/on+the+y.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

@@ -1,0 +1,294 @@
+<http://purl.org/ontology/places#point_on_map> <http://www.w3.org/2000/01/rdf-schema#label> "Point on map" <http://purl.org/ontology/places> .
+<http://purl.org/ontology/places#point_on_map> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/ontology/places> .
+<http://purl.org/ontology/places#point_on_map> <http://www.w3.org/2000/01/rdf-schema#comment> "The point on map property indicates where a place should be shown by a pin on a map." <http://purl.org/ontology/places> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://swan.mindinformatics.org/ontologies/1.2/pav/importedOn> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "The date this resource was imported from a source (pav:importedFrom).\n\nNote that pav:importedOn may overlap with pav:createdOn, but in cases where they differ, the import time indicates the time of the retrieval and transcription of the original source, while the creation time indicates when the final resource was made, for instance after user approval.\n\nThis property is normally used in a functional way, indicating the first import date, although PAV does not formally restrict this. If the resource is later reimported, this should instead be indicated with pav:lastRefreshedOn.\n\nThe source of the import should be given with pav:importedFrom. The agent that performed the import should be given with pav:importedBy.\n\nSee pav:importedFrom for a discussion about import vs. retrieval.\n\nThe value is of type xsd:dateTime, for instance \"2013-03-26T14:49:00+01:00\"^^xsd:dateTime. The timezone information (Z for UTC, +01:00 for UTC+1, etc) SHOULD be included unless unknown. If the time (or parts of time) is unknown, use 00:00:00Z. If the day/month is unknown, use 01-01, for instance, if we only know September 1983, then use \"1983-09-01T00:00:00Z\"^^xsd:dateTime."@en <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/importedBy> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#label> "Imported on"@en <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/pav/importedFrom> <http://purl.org/pav/> .
+<http://purl.org/pav/importedOn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/pav/> <http://purl.org/pav/> .
+<http://purl.org/uco/ns#originalPartsOnly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#originalPartsOnly> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#originalPartsOnly> <http://www.w3.org/2000/01/rdf-schema#domain> _:B9b4a19985345a60acb928290f98bf035 <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#originalPartsOnly> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#originalPartsOnly> <http://www.w3.org/2000/01/rdf-schema#label> "original parts only (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#originalPartsOnly> <http://www.w3.org/2000/01/rdf-schema#comment> "This indicates whether the parts used for repairing a damage, for a maintenance task, or a modification were all original."@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#notAtFaultAccident> <http://www.w3.org/2000/01/rdf-schema#label> "total loss (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#notAtFaultAccident> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#notAtFaultAccident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#notAtFaultAccident> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates whether the accident leading to the damage was a not-at-fault accident from the perspective of the owner."@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#notAtFaultAccident> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#notAtFaultAccident> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/uco/ns#DamageOrAccident> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#smoking> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#smoking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#smoking> <http://www.w3.org/2000/01/rdf-schema#label> "smoking (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#smoking> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#smoking> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates whether it has been smoked inside the car in the respective period of time (when attached to uco:OwnershipInfo) or ever (when directly applied to a vso:Vehicle)."@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#smoking> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bbdcea34604cfbfade298272a71e9d3a4 <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#airbagDeployment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#airbagDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "airbag deployment (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#airbagDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates whether at least one of the airbags of the vehicle has been deployed in the respective accident (when attached to uco:DamageOrAccident) or ever (when directly applied to a vso:Vehicle)."@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#airbagDeployment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#airbagDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#airbagDeployment> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bf569e74da20b8ce54052d644c291ad15 <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#repaired> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#repaired> <http://www.w3.org/2000/01/rdf-schema#label> "repaired (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#repaired> <http://www.w3.org/2000/01/rdf-schema#comment> "This indicates whether damages resulting from a certain uco:DamageOrAccident (when attached to this type) or all damages (when directly attached to a vso:Vehicle) have been properly repaired. Do not use this propery on a vso:Vehicle if it never had a damage."@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#repaired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#repaired> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bc0cf09bb10fd35e3af55bae45028985f <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#repaired> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#totalLoss> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#totalLoss> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba52f9e0b7d48a943eece61988e33bef3 <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#totalLoss> <http://www.w3.org/2000/01/rdf-schema#label> "total loss (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#totalLoss> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates whether the vehicle is considered a total loss as the result of a damage in the respective accident (when attached to uco:DamageOrAccident) or in general (when directly applied to a vso:Vehicle)."@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#totalLoss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#totalLoss> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#structuralDamage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#structuralDamage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#structuralDamage> <http://www.w3.org/2000/01/rdf-schema#domain> _:B95d7b92cf9e1d6682bffea708aa54a15 <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#structuralDamage> <http://www.w3.org/2000/01/rdf-schema#label> "structural damage (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#structuralDamage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#structuralDamage> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates whether the vehicle has suffered from structural damage in the respective accident (when attached to uco:DamageOrAccident) or ever (when directly applied to a vso:Vehicle)."@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#indicationOfOdometerRollback> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates whether it is likely or known that the odometer of the vehicle does not properly reflect the total mileage of the vehicle, e.g. because the odometer has been replaced, reset, or tampered with "@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#indicationOfOdometerRollback> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#indicationOfOdometerRollback> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#indicationOfOdometerRollback> <http://www.w3.org/2000/01/rdf-schema#label> "indication of odometer rollback (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#indicationOfOdometerRollback> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vso/ns#Vehicle> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#indicationOfOdometerRollback> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
+<http://purl.org/vso/ns#rentalUsage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#rentalUsage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#rentalUsage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vso/ns> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#rentalUsage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#rentalUsage> <http://www.w3.org/2000/01/rdf-schema#label> "rentalUsage (0..1)"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#rentalUsage> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the vehicle has been used for commercial rental. The legislation in many countries requires this information to be revealed when offering a car for sale. \n\nNote 1: This property should be used with gr:ActualProductOrServiceInstance (when offering a vehicle) or gr:ProductOrServicesSomeInstancesPlaceholder (when seeking a vehicle using gr:seeks) only.\nNote 2: This property is relevant mainly for offers to SELL the vehicle (gr:hasBusinessFunction gr:Sell)."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#rentalUsage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty> <http://purl.org/vso/ns> .
+<http://purl.uniprot.org/core/reviewed> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a resource has been reviewed by a curator." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/reviewed> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bb3020d43c95a3a39c6711c99adc33948 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/reviewed> <http://www.w3.org/2000/01/rdf-schema#domain> _:Beecaf45f855215b6327104d982217228 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/reviewed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/reviewed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/reviewed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.uniprot.org/core/> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasEnvelopeFeeder> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "Printer"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasEnvelopeFeeder> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasEnvelopeFeeder> <http://www.w3.org/2000/01/rdf-schema#label> "Kuvertzuführeinrichtung"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasEnvelopeFeeder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasEnvelopeFeeder> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#datatypeProductOrServiceProperty> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasEnvelopeFeeder> <http://www.w3.org/2000/01/rdf-schema#label> "envelope feeder"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasEnvelopeFeeder> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasEnvelopeFeeder> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates wheter this feature is available on this product."@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#substanceHolonym> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#substanceHolonym> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#holonymTerm> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#substanceHolonym> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates what this is composed of"@en <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#substanceHolonym> <http://www.w3.org/2000/01/rdf-schema#label> "substance holonym"@en <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#substanceHolonym> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.w3.org/2003/12/exif/ns#gpsLongitudeRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsLongitudeRef> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the longitude is east or west longitude. ASCII 'E' indicates east longitude, and 'W' is west longitude."@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsLongitudeRef> <http://www.w3.org/2003/12/exif/ns#tagNumber> "3"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsLongitudeRef> <http://www.w3.org/2000/01/rdf-schema#label> "GPSLongitudeRef"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsLongitudeRef> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#gpsInfo> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsLongitudeRef> <http://www.w3.org/2000/01/rdf-schema#comment> "経度の東経もしくは西経"@ja <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsLatitudeRef> <http://www.w3.org/2003/12/exif/ns#tagNumber> "1"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsLatitudeRef> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsLatitudeRef> <http://www.w3.org/2000/01/rdf-schema#comment> "緯度の北緯もしくは南緯"@ja <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsLatitudeRef> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the latitude is north or south latitude. The ASCII value 'N' indicates north latitude, and 'S' is south latitude."@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsLatitudeRef> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#gpsInfo> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsLatitudeRef> <http://www.w3.org/2000/01/rdf-schema#label> "GPSLatitudeRef"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsDifferential> <http://www.w3.org/2003/12/exif/ns#tagNumber> "30"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsDifferential> <http://www.w3.org/2000/01/rdf-schema#label> "GPSDifferential"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsDifferential> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#gpsInfo> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsDifferential> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether differential correction is applied to the GPS receiver."@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#gpsDifferential> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#planarConfiguration> <http://www.w3.org/2000/01/rdf-schema#label> "PlanarConfiguration"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#planarConfiguration> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether pixel components are recorded in chunky or planar format. In JPEG compressed files a JPEG marker is used instead of this tag. If this field does not exist, the TIFF default of 1 (chunky) is assumed."@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#planarConfiguration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#planarConfiguration> <http://www.w3.org/2003/12/exif/ns#tagNumber> "284"@en <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/2003/12/exif/ns#planarConfiguration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2003/12/exif/ns#imageDataStruct> <http://www.w3.org/2003/12/exif/ns> .
+<http://www.w3.org/ns/ldp#hasMemberRelation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ldp#> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#hasMemberRelation> <http://www.w3.org/2000/01/rdf-schema#label> "hasMemberRelation" <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#hasMemberRelation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ldp#Container> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#hasMemberRelation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates which predicate is used in membership triples, and that the membership triple pattern is < membership-constant-URI , object-of-hasMemberRelation, member-URI >." <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#hasMemberRelation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#hasMemberRelation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#hasMemberRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#insertedContentRelation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#insertedContentRelation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ldp#Container> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#insertedContentRelation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ldp#> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#insertedContentRelation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates which triple in a creation request should be used as the member-URI value in the membership triple added when the creation request is successful." <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#insertedContentRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#insertedContentRelation> <http://www.w3.org/2000/01/rdf-schema#label> "insertedContentRelation" <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#insertedContentRelation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#isMemberOfRelation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ldp#Container> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#isMemberOfRelation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ldp#> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#isMemberOfRelation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#isMemberOfRelation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#isMemberOfRelation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates which predicate is used in membership triples, and that the membership triple pattern is < member-URI , object-of-isMemberOfRelation, membership-constant-URI >." <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#isMemberOfRelation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#isMemberOfRelation> <http://www.w3.org/2000/01/rdf-schema#label> "isMemmberOfRelation" <http://www.w3.org/ns/ldp#> .
+<http://purl.org/net/VideoGameOntology#hasFeature> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/VideoGameOntology#Feature> <http://purl.org/net/VideoGameOntology> .
+<http://purl.org/net/VideoGameOntology#hasFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "The vgo:hasFeature property indicates what is a vgo:Feature (or ability) of a particular vgo:Item. For example, a fire sword, a healing staff or boots of flight connects item to a feature it can have. An item with connection to potable feature would make the item potable."@en <http://purl.org/net/VideoGameOntology> .
+<http://purl.org/net/VideoGameOntology#hasFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/net/VideoGameOntology> .
+<http://purl.org/net/VideoGameOntology#hasFeature> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/VideoGameOntology#Item> <http://purl.org/net/VideoGameOntology> .
+<http://purl.org/net/VideoGameOntology#hasFeature> <http://www.w3.org/2000/01/rdf-schema#label> "has feature"@en <http://purl.org/net/VideoGameOntology> .
+<http://purl.org/olia/ubyCat.owl#SenseAxisType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/olia/ubyCat.owl#LinkingFeature> <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#SenseAxisType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#SenseAxisType> <http://www.w3.org/2000/01/rdf-schema#comment> "In Uby-LMF, the attribute senseAxisType of the SenseAxis class indicates, whether the type of linking between to senses or between two synsets. Example values are monolingualSenseAlignment and crosslingualSenseAlignment" <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#SenseAxisType> <http://www.w3.org/2000/01/rdf-schema#label> "senseAxisType" <http://purl.org/olia/ubyCat.owl> .
+<http://www.w3.org/ns/csvw#ordered> <http://www.w3.org/2000/01/rdf-schema#label> "ordered"@en <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#ordered> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/csvw#> <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#ordered> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bceee4a9e2aca80989ba5f4a3decad675 <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#ordered> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#ordered> <http://www.w3.org/2000/01/rdf-schema#comment> "A boolean atomic property taking a single value which indicates whether a list that is the value of the cell is ordered (if `true`) or unordered (if `false`)."@en <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#ordered> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#virtual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#virtual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/csvw#> <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#virtual> <http://www.w3.org/2000/01/rdf-schema#comment> "A boolean atomic property taking a single value which indicates whether the column is a virtual column not present in the original source"@en <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#virtual> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/csvw#Column> <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#virtual> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#virtual> <http://www.w3.org/2000/01/rdf-schema#label> "virtual"@en <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#tableDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#tableDirection> <http://www.w3.org/2000/01/rdf-schema#domain> _:B836770c207d3e75c6aa17a4cf780b148 <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#tableDirection> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/csvw#Direction> <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#tableDirection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/csvw#> <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#tableDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "One of `rtl`, `ltr` or `auto`. Indicates whether the tables in the group should be displayed with the first column on the right, on the left, or based on the first character in the table that has a specific direction."@en <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#tableDirection> <http://www.w3.org/2000/01/rdf-schema#label> "table direction"@en <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#required> <http://www.w3.org/2000/01/rdf-schema#comment> "A boolean atomic property taking a single value which indicates whether the cell must have a non-null value. The default is `false`. "@en <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#required> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#required> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/csvw#> <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#required> <http://www.w3.org/2000/01/rdf-schema#domain> _:B090c8d54ae9f96bd4ea03ae225e1a9d6 <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#required> <http://www.w3.org/2000/01/rdf-schema#label> "required"@en <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#required> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://www.w3.org/ns/csvw#> .
+<http://vcharpenay.github.io/hto/hto.xml#leaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://vcharpenay.github.io/hto/hto.xml> .
+<http://vcharpenay.github.io/hto/hto.xml#leaving> <http://www.w3.org/2000/01/rdf-schema#comment> "  Indicates `water` or `steam` exiting a piece of equipment like a `boiler` or `chiller`." <http://vcharpenay.github.io/hto/hto.xml> .
+<http://vcharpenay.github.io/hto/hto.xml#leaving> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vcharpenay.github.io/hto/hto.xml#HTag> <http://vcharpenay.github.io/hto/hto.xml> .
+<http://vcharpenay.github.io/hto/hto.xml#leaving> <http://vcharpenay.github.io/hto/hto.xml#associatedTo> <http://vcharpenay.github.io/hto/hto.xml#Leaving> <http://vcharpenay.github.io/hto/hto.xml> .
+<http://vcharpenay.github.io/hto/hto.xml#entering> <http://vcharpenay.github.io/hto/hto.xml#associatedTo> <http://vcharpenay.github.io/hto/hto.xml#Entering> <http://vcharpenay.github.io/hto/hto.xml> .
+<http://vcharpenay.github.io/hto/hto.xml#entering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vcharpenay.github.io/hto/hto.xml#HTag> <http://vcharpenay.github.io/hto/hto.xml> .
+<http://vcharpenay.github.io/hto/hto.xml#entering> <http://www.w3.org/2000/01/rdf-schema#comment> "  Indicates `water` or `steam` entering a piece of equipment like a `boiler` or `chiller`.  Used with `vav` for air flow into the unit from the AHU." <http://vcharpenay.github.io/hto/hto.xml> .
+<http://vcharpenay.github.io/hto/hto.xml#entering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://vcharpenay.github.io/hto/hto.xml> .
+<http://ns.inria.fr/ludo/v1/xapi#isCompleted> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ludo/v1/xapi#Result> <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#isCompleted> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether or not the Activity was completed."@en <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#isCompleted> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#isCompleted> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#isCompleted> <http://www.w3.org/2000/01/rdf-schema#label> "Completion"@en <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#isSuccess> <http://www.w3.org/2000/01/rdf-schema#label> "Success"@en <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#isSuccess> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/ludo/v1/xapi#Result> <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#isSuccess> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether or not the attempt on the Activity was successful."@en <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#isSuccess> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://ns.inria.fr/ludo/v1/xapi> .
+<http://ns.inria.fr/ludo/v1/xapi#isSuccess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://ns.inria.fr/ludo/v1/xapi> .
+<http://purl.org/iot/vocab/m3-lite#VehicleOverspeedState> <http://www.w3.org/2000/01/rdf-schema#comment> "Measure to indicates whether the vehicle is exceeding the legal speed limit."@en <http://purl.org/iot/vocab/m3-lite#> .
+<http://purl.org/iot/vocab/m3-lite#VehicleOverspeedState> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle Overspeed State"@en <http://purl.org/iot/vocab/m3-lite#> .
+<http://purl.org/iot/vocab/m3-lite#VehicleOverspeedState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/vocab/m3-lite#> .
+<http://purl.org/iot/vocab/m3-lite#VehicleOverspeedState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/ssnx/qu/qu#QuantityKind> <http://purl.org/iot/vocab/m3-lite#> .
+<http://purl.org/iot/vocab/m3-lite#MotionStateVehicle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/iot/vocab/m3-lite#MotionState> <http://purl.org/iot/vocab/m3-lite#> .
+<http://purl.org/iot/vocab/m3-lite#MotionStateVehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether motion of the vehicle is detected or not."@en <http://purl.org/iot/vocab/m3-lite#> .
+<http://purl.org/iot/vocab/m3-lite#MotionStateVehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Motion State Vehicle"@en <http://purl.org/iot/vocab/m3-lite#> .
+<http://purl.org/iot/vocab/m3-lite#MotionStateVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/vocab/m3-lite#> .
+<http://vocab.datex.org/terms#VmsPictogramDisplayCharacteristics> <http://www.w3.org/2000/01/rdf-schema#comment> "Characteristics specific to the pictogram display area(s) on the VMS where pictogramDisplayAreaIndex indicates which pictogram area it relates to."@en <http://vocab.datex.org/terms#> .
+<http://vocab.datex.org/terms#VmsPictogramDisplayCharacteristics> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7059d30b85c12171064859d681c0087f <http://vocab.datex.org/terms#> .
+<http://vocab.datex.org/terms#VmsPictogramDisplayCharacteristics> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.datex.org/terms#> .
+<http://vocab.datex.org/terms#PictogramDisplayAreaSettings> <http://www.w3.org/2000/01/rdf-schema#comment> "Settings specific to a distinct pictogram display area on the VMS (where pictogramIndex indicates which pictogram area it relates to if there is more than one pictogram display area on the VMS)."@en <http://vocab.datex.org/terms#> .
+<http://vocab.datex.org/terms#PictogramDisplayAreaSettings> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bebe41f44a47d792010c1d06a05ea95dc <http://vocab.datex.org/terms#> .
+<http://vocab.datex.org/terms#PictogramDisplayAreaSettings> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.datex.org/terms#> .
+<http://vocab.datex.org/terms#actionOrigin> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the actions to be undertaken by the operator are the result of an internal operation or external influence."@en <http://vocab.datex.org/terms#> .
+<http://vocab.datex.org/terms#actionOrigin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://vocab.datex.org/terms#> .
+<http://vocab.datex.org/terms#alive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://vocab.datex.org/terms#> .
+<http://vocab.datex.org/terms#alive> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the identified animals are dead (immobile) or alive (potentially mobile)."@en <http://vocab.datex.org/terms#> .
+<https://saref.etsi.org/saref4ener/activateSlot> <http://www.w3.org/2000/01/rdf-schema#label> "activate slot"@en <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/activateSlot> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/activateSlot> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a slot is used (activateSlot = true) or not (activateSlot = false). SHALL be present if a slot is optional (i.e., the property s4ee:optionalSlot is TRUE), otherwise SHALL be absent (i.e. in case the slot is mandatory)."@en <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/activateSlot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/optionalSlot> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/optionalSlot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/optionalSlot> <http://www.w3.org/2000/01/rdf-schema#label> "optional slot"@en <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/optionalSlot> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a slot is optional (if set to TRUE). Otherwise, if a slot is mandatory, SHALL be omitted or set to FALSE. Note: This element applies to every repetition of the slot number."@en <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/valueTendency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/valueTendency> <http://www.w3.org/2000/01/rdf-schema#range> _:Be80463deda46b4585080d3292bef253f <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/valueTendency> <http://www.w3.org/2000/01/rdf-schema#label> "value tendency"@en <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/valueTendency> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the tendency of a measurement is rising, stable or falling."@en <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/greenest> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/greenest> <http://www.w3.org/2000/01/rdf-schema#label> "greenest"@en <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/greenest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/greenest> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a power sequence optimises the configuration towards the maximum availability of renewable energy (if set to TRUE). MAY be present. Absence of this element is equal to the presence with value FALSE. "@en <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/cheapest> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/cheapest> <http://www.w3.org/2000/01/rdf-schema#label> "cheapest"@en <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/cheapest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/cheapest> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether a power sequence applies a configuration that minimises the user’s energy bill (if set to TRUE). MAY be present. Absence of this element is equal to the presence with value FALSE. "@en <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/nodeRemoteControllable> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/nodeRemoteControllable> <http://www.w3.org/2000/01/rdf-schema#label> "node remote controllable"@en <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/nodeRemoteControllable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://saref.etsi.org/saref4ener/> .
+<https://saref.etsi.org/saref4ener/nodeRemoteControllable> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether the power profile of a device is configured for remote control (e.g., by an energy management system).This refers to the selection chosen by the user on the remote control feature of the device. If nodeRemoteControllable is equal to FALSE, all the supported power sequences shall set the sequenceRemoteControllable property to FALSE. If nodeRemoteControllable is equal to TRUE, at least one power sequence shall be remotely controllable by setting the sequenceRemoteControllable property to TRUE."@en <https://saref.etsi.org/saref4ener/> .
+<http://purl.org/net/dbm/ontology#brailleSupport> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/net/dbm/ontology#> .
+<http://purl.org/net/dbm/ontology#brailleSupport> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates wether the drug packaging has Braille support or not." <http://purl.org/net/dbm/ontology#> .
+<http://purl.org/net/dbm/ontology#brailleSupport> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/dbm/ontology#Drug> <http://purl.org/net/dbm/ontology#> .
+<http://purl.org/net/dbm/ontology#brailleSupport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/net/dbm/ontology#> .
+<http://purl.org/iot/vocab/m3-lite#VehicleOverspeedState> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/NET/ssnx/qu/qu#QuantityKind> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#VehicleOverspeedState> <http://www.w3.org/2000/01/rdf-schema#comment> "Measure to indicates whether the vehicle is exceeding the legal speed limit."@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#VehicleOverspeedState> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle Overspeed State"@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#VehicleOverspeedState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#MotionStateVehicle> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether motion of the vehicle is detected or not." <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#MotionStateVehicle> <http://www.w3.org/2000/01/rdf-schema#label> "Motion State Vehicle"@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#MotionStateVehicle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#MotionStateVehicle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/iot/vocab/m3-lite#MotionState> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://softeng.polito.it/rsctx#transportationMean> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/prissma/v2#Environment> <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#transportationMean> <http://www.w3.org/2000/01/rdf-schema#range> <http://softeng.polito.it/rsctx#TransportationMean> <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#transportationMean> <http://www.w3.org/2000/01/rdf-schema#comment> "It indicates which TransportationMean the user is using or is going to use."@en <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#transportationMean> <http://www.w3.org/2000/01/rdf-schema#label> "transportation mean"@en <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#transportationMean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#Companion> <http://www.w3.org/2000/01/rdf-schema#label> "Companion"@en <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#Companion> <http://www.w3.org/2000/01/rdf-schema#comment> "Companion class indicates which kind of company the user as at the moment. For example, it may be with family, friends or colleagues.\n\nWARNING Its subclasses not as individual, because the individual could be a person (e.g. Bob or Alice), and it is an istance also of one of companion sublasses to indicate which in kind of companion the individual is for the user in the current context (e.g. is family or colleagues or friend)."@en <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#Companion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#companion> <http://www.w3.org/2000/01/rdf-schema#label> "companion"@en <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#companion> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates who is the current companion of the user, e.g. a friend a family member or a colleague."@en <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#companion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#companion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ns.inria.fr/prissma/v2#Environment> <http://softeng.polito.it/rsctx> .
+<http://softeng.polito.it/rsctx#companion> <http://www.w3.org/2000/01/rdf-schema#range> <http://softeng.polito.it/rsctx#Companion> <http://softeng.polito.it/rsctx> .
+<http://schema.mobivoc.org/chargingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "hat Ladestation"@de <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/chargingPoint> <http://www.w3.org/2000/01/rdf-schema#domain> _:B502d2ec4928b9b3483324062de3e1e62 <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/chargingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/chargingPoint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://schema.mobivoc.org/> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/chargingPoint> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/chargingPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/chargingPoint> <http://www.w3.org/2000/01/rdf-schema#label> "has charging point"@en <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/chargingPoint> <http://purl.org/dc/terms/modified> "2018-01-12"^^<http://www.w3.org/2001/XMLSchema#date> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/chargingPoint> <http://purl.org/dc/terms/created> "2017-04-13"^^<http://www.w3.org/2001/XMLSchema#date> <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/chargingPoint> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates whether charging points are available." <http://schema.mobivoc.org/> .
+<http://schema.mobivoc.org/chargingPoint> <http://www.w3.org/2000/01/rdf-schema#range> <http://schema.mobivoc.org/ChargingPoint> <http://schema.mobivoc.org/> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/indicates+w.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+w.nt> <https://w3id.org/tree#relation> _:BindicatesX2Bwa .
+_:BindicatesX2Bwa <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Bwa <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+wa.nt> .
+_:BindicatesX2Bwa <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Bwa <https://w3id.org/tree#value> "wa" .
+_:BindicatesX2Bwa <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+wa.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+w.nt> <https://w3id.org/tree#relation> _:BindicatesX2Bwe .
+_:BindicatesX2Bwe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Bwe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+we.nt> .
+_:BindicatesX2Bwe <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Bwe <https://w3id.org/tree#value> "we" .
+_:BindicatesX2Bwe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+we.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+w.nt> <https://w3id.org/tree#relation> _:BindicatesX2Bwh .
+_:BindicatesX2Bwh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BindicatesX2Bwh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/indicates+wh.nt> .
+_:BindicatesX2Bwh <https://w3id.org/tree#value> "indicates" .
+_:BindicatesX2Bwh <https://w3id.org/tree#value> "wh" .
+_:BindicatesX2Bwh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/indicates+wh.nt> <https://w3id.org/tree#remainingItems> "51"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/indicates+w.nt> <https://w3id.org/tree#relation> _:BaX2BindicatesX2Bw .
+_:BaX2BindicatesX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BindicatesX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+indicates+w.nt> .
+_:BaX2BindicatesX2Bw <https://w3id.org/tree#value> "a" .
+_:BaX2BindicatesX2Bw <https://w3id.org/tree#value> "indicates" .
+_:BaX2BindicatesX2Bw <https://w3id.org/tree#value> "w" .
+_:BaX2BindicatesX2Bw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+indicates+w.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

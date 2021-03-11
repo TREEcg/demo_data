@@ -1,0 +1,652 @@
+<http://spinrdf.org/spin#imports> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Ontology> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#imports> <http://www.w3.org/2000/01/rdf-schema#label> "imports" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#imports> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#systemProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#imports> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Ontology> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#imports> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#OntologyProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#imports> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be used to link an RDF graph (usually the instance of owl:Ontology) with a SPIN library to define constraints. SPIN-aware tools should include the definitions from those libraries for constraint checking. Using such libraries is a simpler alternative than explicitly importing them using owl:imports, because it does not force all the SPIN triples into the RDF model." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#violationSource> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be used to link a spin:ConstraintViolation with the query or template call that caused it. This property is typically filled in automatically by the constraint checking engine and does not need to be set manually. However, it can be useful to learn more about the origin of a violation." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#violationSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#violationSource> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#systemProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#violationSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#violationSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spinrdf.org/spin#ConstraintViolation> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#violationSource> <http://www.w3.org/2000/01/rdf-schema#label> "violation source" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#fix> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be used to link a ConstraintViolation with one or more UPDATE Templates that would help fix the violation." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#fix> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spinrdf.org/spin#ConstraintViolation> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#fix> <http://www.w3.org/2000/01/rdf-schema#range> <http://spinrdf.org/spin#UpdateTemplate> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#fix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#fix> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#systemProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#fix> <http://www.w3.org/2000/01/rdf-schema#label> "fix" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#command> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#command> <http://www.w3.org/2000/01/rdf-schema#label> "command" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#command> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be used to link a resource with a SPARQL query or update request (sp:Command)." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#command> <http://www.w3.org/2000/01/rdf-schema#range> <http://spinrdf.org/sp#Command> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#nextRuleProperty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#systemProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#nextRuleProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#nextRuleProperty> <http://www.w3.org/2000/01/rdf-schema#range> <http://spinrdf.org/spin#RuleProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#nextRuleProperty> <http://www.w3.org/2000/01/rdf-schema#label> "next rule property" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#nextRuleProperty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://spinrdf.org/spin#RuleProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#nextRuleProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be used to link two sub-properties of spin:rule (or spin:rule itself) to instruct the SPIN engine to execute one set of rules before another one. The values of the subject property will be executed before those of the object property." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin> <http://www.w3.org/2000/01/rdf-schema#label> "SPIN Modeling Vocabulary" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin> <http://www.w3.org/2002/07/owl#imports> <http://spinrdf.org/sp> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin> <http://www.w3.org/2002/07/owl#versionInfo> "1.3.2" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin> <http://www.w3.org/2000/01/rdf-schema#comment> "An RDF Schema that can be used to attach constraints and rules to RDFS classes, and to encapsulate reusable SPARQL queries into functions and templates." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#query> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#query> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be used to point from any resource to a Query." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#query> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#command> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#query> <http://www.w3.org/2000/01/rdf-schema#range> <http://spinrdf.org/sp#Query> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#query> <http://www.w3.org/2000/01/rdf-schema#label> "query" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#MagicProperties> <http://www.w3.org/2000/01/rdf-schema#label> "Magic properties" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#MagicProperties> <http://spinrdf.org/spin#abstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#MagicProperties> <http://www.w3.org/2000/01/rdf-schema#comment> "An abstract superclass that can be used to group all spin:MagicProperty instances under a single parent class." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#MagicProperties> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#systemProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#MagicProperties> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#MagicProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#MagicProperties> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#Functions> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#rule> <http://www.w3.org/2000/01/rdf-schema#label> "rule" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#rule> <http://www.w3.org/2000/01/rdf-schema#range> <http://spinrdf.org/spin#Rule> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#rule> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#rule> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#command> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#RuleProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#rule> <http://www.w3.org/2000/01/rdf-schema#comment> "An inferencing rule attached to a class. Rules are expressed as CONSTRUCT queries or INSERT/DELETE operations where the variable ?this will be bound to the current instance of the class. These inferences can be used to derive new values from existing values at the instance." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#update> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#command> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#update> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be used to point from any resource to an Update." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#update> <http://www.w3.org/2000/01/rdf-schema#range> <http://spinrdf.org/sp#Update> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#update> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#update> <http://www.w3.org/2000/01/rdf-schema#label> "update" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#command> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#label> "constructor" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be used to attach a \"constructor\" to a class. A constructor is a SPARQL CONSTRUCT query or INSERT/DELETE Update operation that can add initial values to the current instance. At execution time, the variable ?this is bound to the current instance. Tools can call constructors of a class and its superclasses when an instance of a class has been created. Constructors will also be used to initialize resources that have received a new rdf:type triple as a result of spin:rules firing." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#range> <http://spinrdf.org/spin#Rule> <http://spinrdf.org/spin> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition: \tAn entity primarily responsible for making the content of the resource (for instance an author).\nComment: \tExamples of Creator include a person, an organization, or a service. Typically, the name of a Creator should be used to indicate the entity." <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/2000/01/rdf-schema#label> "urheber"@de <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/2002/07/owl#inverseOf> <http://swrc.ontoware.org/ontology#publisherOf> <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition: \tAn entity responsible for making the resource available\nComment: \tExamples of Publisher include a person, an organization, or a service. Typically, the name of a Publisher should be used to indicate the entity." <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/2000/01/rdf-schema#label> "herausgeber"@de <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/2000/01/rdf-schema#domain> <http://swrc.ontoware.org/ontology#Document> <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/2000/01/rdf-schema#comment> "check range. Olivier 2006-06-07\nPhilipp: checked." <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/2000/01/rdf-schema#comment> "check domain. Olivier 2006-06-07\nPhilipp: checked." <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/2000/01/rdf-schema#range> _:B2e286e3caf0b65e0052681a6a62c9bc0 <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/format> <http://www.w3.org/2000/01/rdf-schema#label> "Format"@de <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/format> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/format> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition: \tThe physical or digital manifestation of the resource.\nComment: \tTypically, Format may include the media-type or dimensions of the resource. Format may be used to identify the software, hardware, or other equipment needed to display or operate the resource. Examples of dimensions include size and duration. Recommended best practice is to select a value from a controlled vocabulary (for example, the list of Internet Media Types [MIME] defining computer media formats)." <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/2000/01/rdf-schema#range> _:Bf7cabb6cdefb95b1cebfdeb12345f5ea <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/2000/01/rdf-schema#comment> "check domain. Olivier 2006-06-07\nPhilipp: checked." <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/2000/01/rdf-schema#comment> "check range. Olivier 2006-06-07\nPhilipp: checked." <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/2000/01/rdf-schema#domain> _:B94c40361c8279a36c48b4ee87d68bab8 <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition: \tAn entity responsible for making contributions to the content of the resource.\nComment: \tExamples of Contributor include a person, an organization, or a service. Typically, the name of a Contributor should be used to indicate the entity." <http://swrc.ontoware.org/ontology-07> .
+<http://purl.org/dc/elements/1.1/contributor> <http://www.w3.org/2000/01/rdf-schema#label> "beteiligter"@de <http://swrc.ontoware.org/ontology-07> .
+<http://vocab.data.gov/def/drm#ExchangePackage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.data.gov/def/drm#StructuredDataResource> <http://vocab.data.gov/def/drm> .
+<http://vocab.data.gov/def/drm#ExchangePackage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.data.gov/def/drm> <http://vocab.data.gov/def/drm> .
+<http://vocab.data.gov/def/drm#ExchangePackage> <http://www.w3.org/2000/01/rdf-schema#label> "Exchange package" <http://vocab.data.gov/def/drm> .
+<http://vocab.data.gov/def/drm#ExchangePackage> <http://www.w3.org/2000/01/rdf-schema#comment> "A description of a specific recurring data exchange between a Supplier and a Consumer. An Exchange Package contains information (metadata) relating to the exchange (such as Supplier ID, Consumer ID, validity period for data, etc.), as well as a reference to the Payload (message content) for the exchange. An Exchange Package can also be used to define the result format for a query that is accepted and processed by a Query Point in a data sharing scenario." <http://vocab.data.gov/def/drm> .
+<http://vocab.data.gov/def/drm#ExchangePackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.data.gov/def/drm> .
+<http://vocab.data.gov/def/drm#ExchangePackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.data.gov/def/drm> .
+<http://vocab.deri.ie/cogs#Filter> <http://www.w3.org/2000/01/rdf-schema#label> "Filter" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#Filter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#Filter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#Filter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#Operation> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#Filter> <http://www.w3.org/2000/01/rdf-schema#comment> "An operation that can be used to retain rows in a mapping that do not meet specific conditions. @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.gtfs.org/terms#TransferType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#TransferType> <http://www.w3.org/2000/01/rdf-schema#comment> "Instances of this class can be used to describe how to handle a transfer rule"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#TransferType> <http://www.w3.org/2000/01/rdf-schema#label> "Transfer Type"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#TransferType> <http://vocab.gtfs.org/terms#comment> "When transfer_type in transfers.txt is 0 or empty, map to gtfs:RecommendedTransfer, when 1, map to gtfs:EnsuredTransfer, when 2, gtfs:MinimumTimeTransfer, when 3: gtfs:NoTransfer."@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#TransferType> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#distanceTraveled> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#distanceTraveled> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.gtfs.org/terms#StopTime> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#distanceTraveled> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#distanceTraveled> <http://www.w3.org/2000/01/rdf-schema#comment> "Positions a stop as a distance from the first shape point. It represents a real distance traveled along the route in units such as feet or kilometers. This information allows the trip planner to determine how much of the shape to draw when showing part of a trip on the map. The values used for gtfs:distanceTraveled must increase along with gtfs:stopSequence: they cannot be used to show reverse travel along a route."@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#distanceTraveled> <http://www.w3.org/2000/01/rdf-schema#label> "Distance Traveled"@en <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#distanceTraveled> <http://www.w3.org/2000/01/rdf-schema#domain> <http://vocab.gtfs.org/terms#Shape> <http://vocab.gtfs.org/terms#> .
+<http://vocab.gtfs.org/terms#distanceTraveled> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://vocab.gtfs.org/terms#> .
+<http://www.aktors.org/ontology/portal#has-research-interest> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.aktors.org/ontology/portal#Research-Area> <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#has-research-interest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.aktors.org/ontology/portal> <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#has-research-interest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#has-research-interest> <http://www.w3.org/2000/01/rdf-schema#comment> "People and in general even organizations and organization units may have research interests.  This relation shoudl be used to specify them" <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#has-research-interest> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bb398753a05c77db355f54746d3317beb <http://www.aktors.org/ontology/portal> .
+<http://www.bbc.co.uk/ontologies/cms/NewsIDM> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/cms> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/NewsIDM> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier for the news instance data manager which will be used to denote the ownership of news relevant thing-graphs  provided to LDP via the NewsIDM."@en-gb <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/NewsIDM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.bbc.co.uk/ontologies/cms/System> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/NewsIDM> <http://www.w3.org/2000/01/rdf-schema#label> "NewsIDM"@en-gb <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/MusicArtistsIngest> <http://www.w3.org/2000/01/rdf-schema#label> "MusicArtistsIngest"@en-gb <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/MusicArtistsIngest> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier for the music artists management system which will be used to denote the ownership of music artists thing-graphs provided to LDP via the music artists ingest."@en-gb <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/MusicArtistsIngest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.bbc.co.uk/ontologies/cms/System> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/MusicArtistsIngest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/cms> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/LocationServicesIngest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.bbc.co.uk/ontologies/cms/System> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/LocationServicesIngest> <http://www.w3.org/2000/01/rdf-schema#label> "LocationServicesIngest"@en-gb <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/LocationServicesIngest> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier for location services which will be used to denote the ownership of location thing-graphs  provided to LDP via location services ingest."@en-gb <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/LocationServicesIngest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/cms> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/LDM> <http://www.w3.org/2000/01/rdf-schema#label> "LDM"@en-gb <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/LDM> <http://www.w3.org/2000/01/rdf-schema#comment> "The identifier for the linked data manager which will be used to denote the ownership of thing-graphs provided to LDP via the LDM."@en-gb <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/LDM> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.bbc.co.uk/ontologies/cms/System> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.bbc.co.uk/ontologies/cms/LDM> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.bbc.co.uk/ontologies/cms> <http://www.bbc.co.uk/ontologies/cms> .
+<http://www.biopax.org/release/biopax-level3.owl#CovalentBindingFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.biopax.org/release/biopax-level3.owl#ModificationFeature> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#CovalentBindingFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.biopax.org/release/biopax-level3.owl#BindingFeature> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#CovalentBindingFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition : An entity feature that represent the covalently bound state of  a physical entity. \n\nRationale: Most frequent covalent modifications to proteins and DNA, such as phosphorylation and metylation are covered by the ModificationFeature class. In these cases, the added groups are simple and stateless therefore they can be captured by a controlled vocabulary. In other cases, such as ThiS-Thilacyl-disulfide, the covalently linked molecules are best represented as a molecular complex. CovalentBindingFeature should be used to model such covalently linked complexes.\n\nUsage: Using this construct, it is possible to represent small molecules as a covalent complex of two other small molecules. The demarcation of small molecules is a general problem and is delegated to small molecule databases.The best practice is not to model using covalent complexes unless at least one of the participants is a protein, DNA or RNA.\n\nExamples:\ndisulfide bond\nUhpC + glc-6P -> Uhpc-glc-6p\nacetyl-ACP -> decenoyl-ACP\ncharged tRNA" <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#CovalentBindingFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#dataSource> <http://www.w3.org/2000/01/rdf-schema#comment> "A free text description of the source of this data, e.g. a database or person name. This property should be used to describe the source of the data. This is meant to be used by databases that export their data to the BioPAX format or by systems that are integrating data from multiple sources. The granularity of use (specifying the data source in many or few instances) is up to the user. It is intended that this property report the last data source, not all data sources that the data has passed through from creation." <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#dataSource> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.biopax.org/release/biopax-level3.owl#Provenance> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#dataSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#dataSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.biopax.org/release/biopax-level3.owl#Entity> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#FragmentFeature> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#BindingFeature> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#FragmentFeature> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition: An entity feature that represents the resulting physical entity subsequent to a cleavage or degradation event. \n\nUsage: Fragment Feature can be used to cover multiple types of modfications to the sequence of the physical entity: \n1.    A protein with a single cleavage site that converts the protein into two fragments (e.g. pro-insulin converted to insulin and C-peptide). TODO: CV term for sequence fragment?  PSI-MI CV term for cleavage site?\n2.    A protein with two cleavage sites that removes an internal sequence e.g. an intein i.e. ABC -> A\n3.    Cleavage of a circular sequence e.g. a plasmid.\n\nIn the case of removal ( e.g. intron)  the fragment that is *removed* is specified in the feature location property. In the case of a \"cut\" (e.g. restriction enzyme cut site) the location of the cut is specified instead.\nExamples: Insulin Hormone" <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#FragmentFeature> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.biopax.org/release/biopax-level3.owl#EntityFeature> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#FragmentFeature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#FragmentFeature> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#ModificationFeature> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> "Обозначение"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E90_Symbolic_Object> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> "Benennung"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> "Appellation"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> "Appellation"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises all sequences of signs of any nature, either meaningful or not, that are used or can be used to refer to and identify a specific instance of some class within a certain context.\nInstances of E41 Appellation do not identify things by their meaning, even if they happen to have one, but by convention, tradition, or agreement. Instances of E41 Appellation are cultural constructs; as such, they have a context, a history, and a use in time and space by some group of users. A given instance of E41 Appellation can have alternative forms, i.e., other instances of E41 Appellation that are always regarded as equivalent independent from the thing it denotes. \nSpecific subclasses of E41 Appellation should be used when instances of E41 Appellation of a characteristic form are used for particular objects. Instances of E49 Time Appellation, for example, which take the form of instances of E50 Date, can be easily recognised.\nE41 Appellation should not be confused with the act of naming something. Cf. E15 Identifier Assignment\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> "Designação"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> "Ονομασία"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#label> "Μετακίνηση"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#label> "Déplacement"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises changes of the physical location of the instances of E19 Physical Object. \nNote, that the class E9 Move inherits the property P7 took place at (witnessed): E53 Place. This property should be used to describe the trajectory or a larger area within which a move takes place, whereas the properties P26 moved to (was destination of), P27 moved from (was origin of) describe the start and end points only. Moves may also be documented to consist of other moves (via P9 consists of (forms part of)), in order to describe intermediate stages on a trajectory. In that case, start and end points of the partial moves should match appropriately between each other and with the overall event.\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#label> "Objektbewegung"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#label> "Locomoção"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#label> "Move"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E9_Move> <http://www.w3.org/2000/01/rdf-schema#label> "Перемещение"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates> <http://www.w3.org/2000/01/rdf-schema#label> "Raumkoordinaten"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E44_Place_Appellation> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates> <http://www.w3.org/2000/01/rdf-schema#label> "Coordenadas Espaciais"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates> <http://www.w3.org/2000/01/rdf-schema#label> "Χωρικές Συντεταγμένες"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates> <http://www.w3.org/2000/01/rdf-schema#label> "Coordonnées spatiales"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates> <http://www.w3.org/2000/01/rdf-schema#label> "Пространственные Координаты"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Coordinates"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E47_Spatial_Coordinates> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises the textual or numeric information required to locate specific instances of E53 Place within schemes of spatial identification. \n\nCoordinates are a specific form of E44 Place Appellation, that is, a means of referring to a particular E53 Place. Coordinates are not restricted to longitude, latitude and altitude. Any regular system of reference that maps onto an E19 Physical Object can be used to generate coordinates.\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E44_Place_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> "Appellation de lieu"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E44_Place_Appellation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E41_Appellation> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E44_Place_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> "Ονομασία Τόπου"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E44_Place_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> "Обозначение Места"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E44_Place_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> "Place Appellation"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E44_Place_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> "Ortsbenennung"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E44_Place_Appellation> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises any sort of identifier characteristically used to refer to an E53 Place. \nInstances of E44 Place Appellation may vary in their degree of precision and their meaning may vary over time - the same instance of E44 Place Appellation may be used to refer to several places, either because of cultural shifts, or because objects used as reference points have moved around. Instances of E44 Place Appellation can be extremely varied in form: postal addresses, instances of E47 Spatial Coordinate, and parts of buildings can all be considered as instances of E44 Place Appellation.\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E44_Place_Appellation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E44_Place_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> "Designação de Local"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P144_joined_with> <http://www.w3.org/2000/01/rdf-schema#label> "joined with"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P144_joined_with> <http://www.w3.org/2000/01/rdf-schema#label> "verband mit"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P144_joined_with> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.cidoc-crm.org/cidoc-crm/P11_had_participant> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P144_joined_with> <http://www.w3.org/2000/01/rdf-schema#comment> "This property identifies the instance of E74 Group of which an instance of E39 Actor becomes a member through an instance of E85 Joining.\nAlthough a Joining activity normally concerns only one instance of E74 Group, it is possible to imagine circumstances under which becoming member of one Group implies becoming member of another Group as well. \nJoining events allow for describing people becoming members of a group with a more detailed path from E74 Group through P144 joined with (gained member by), E85 Joining, P143 joined (was joined by) to E39 Actor, compared to the shortcut offered by P107 has current or former member (is current or former member of).\nThe property P144.1 kind of member can be used to specify the type of membership or the role the member has in the group. \n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P144_joined_with> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P144_joined_with> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E85_Joining> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P144_joined_with> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E74_Group> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member> <http://www.w3.org/2000/01/rdf-schema#label> "hat derzeitiges oder früheres Mitglied"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member> <http://www.w3.org/2000/01/rdf-schema#label> "has current or former member"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member> <http://www.w3.org/2000/01/rdf-schema#label> "tem ou teve membro"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E74_Group> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member> <http://www.w3.org/2000/01/rdf-schema#label> "имеет действующего или бывшего члена"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member> <http://www.w3.org/2000/01/rdf-schema#label> "a pour membre actuel ou ancien"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member> <http://www.w3.org/2000/01/rdf-schema#label> "έχει ή είχε μέλος"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P107_has_current_or_former_member> <http://www.w3.org/2000/01/rdf-schema#comment> "This property relates an E39 Actor to the E74 Group of which that E39 Actor is a member.\nGroups, Legal Bodies and Persons, may all be members of Groups. A Group necessarily consists of more than one member.\nThis property is a shortcut of the more fully developed path from E74 Group through P144 joined with (gained member by), E85 Joining, P143 joined (was joined by) to E39 Actor\nThe property P107.1 kind of member can be used to specify the type of membership or the role the member has in the group. \n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from> <http://www.w3.org/2000/01/rdf-schema#label> "передал право собственности от"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from> <http://www.w3.org/2000/01/rdf-schema#label> "μετεβίβασε τον τίτλο από"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E8_Acquisition> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from> <http://www.w3.org/2000/01/rdf-schema#comment> "This property identifies the E39 Actor or Actors who relinquish legal ownership as the result of an E8 Acquisition.\nThe property will typically be used to describe a person donating or selling an object to a museum. In reality title is either transferred to or from someone, or both.\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from> <http://www.w3.org/2000/01/rdf-schema#label> "transferiu os direitos de propriedade de"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from> <http://www.w3.org/2000/01/rdf-schema#label> "a fait passer le droit de propriété de"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from> <http://www.w3.org/2000/01/rdf-schema#label> "transferred title from"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E39_Actor> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from> <http://www.w3.org/2000/01/rdf-schema#label> "übertrug Besitztitel von"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P23_transferred_title_from> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E36_Visual_Item> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E24_Physical_Man-Made_Thing> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.cidoc-crm.org/cidoc-crm/P128_carries> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item> <http://www.w3.org/2000/01/rdf-schema#label> "показывает визуальный предмет"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item> <http://www.w3.org/2000/01/rdf-schema#comment> "This property documents an E36 Visual Item shown by an instance of E24 Physical Man-Made Thing.\nThis property is similar to P62 depicts (is depicted by) in that it associates an item of E24 Physical Man-Made Thing with a visual representation. However, P65 shows visual item (is shown by) differs from the P62 depicts (is depicted by) property in that it makes no claims about what the E36 Visual Item is deemed to represent. E36 Visual Item identifies a recognisable image or visual symbol, regardless of what this image may or may not represent.\nFor example, all recent British coins bear a portrait of Queen Elizabeth II, a fact that is correctly documented using P62 depicts (is depicted by). Different portraits have been used at different periods, however. P65 shows visual item (is shown by) can be used to refer to a particular portrait.\nP65 shows visual item (is shown by) may also be used for Visual Items such as signs, marks and symbols, for example the 'Maltese Cross' or the 'copyright symbol’ that have no particular representational content. \nThis property is part of the fully developed path from E24 Physical Man-Made Thing through P65 shows visual item (is shown by), E36 Visual Item, P138 represents (has representation) to E1 CRM Entity which is shortcut by, P62 depicts (is depicted by).\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item> <http://www.w3.org/2000/01/rdf-schema#label> "εμφανίζει οπτικό στοιχείο"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item> <http://www.w3.org/2000/01/rdf-schema#label> "zeigt Bildliches"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item> <http://www.w3.org/2000/01/rdf-schema#label> "présente l'item visuel"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item> <http://www.w3.org/2000/01/rdf-schema#label> "apresenta item visual"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P65_shows_visual_item> <http://www.w3.org/2000/01/rdf-schema#label> "shows visual item"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.demcare.eu/ontologies/demlab.owl#AutonomyAssessment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.demcare.eu/ontologies/demlab.owl#SemiDirectedActivitiesStep> <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://www.demcare.eu/ontologies/demlab.owl#AutonomyAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2ffca51cf9605c0ef15d1ce73e71dd1b <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://www.demcare.eu/ontologies/demlab.owl#AutonomyAssessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://www.demcare.eu/ontologies/demlab.owl#AutonomyAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf3ba8e97adf9932ade5248726da83a20 <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://www.demcare.eu/ontologies/demlab.owl#AutonomyAssessment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.demcare.eu/ontologies/demlab.owl#ClinicalAssessment> <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://www.demcare.eu/ontologies/demlab.owl#AutonomyAssessment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.demcare.eu/ontologies/demlab.owl#iadl_e> <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://www.demcare.eu/ontologies/demlab.owl#AutonomyAssessment> <http://www.w3.org/2000/01/rdf-schema#comment> "Autonomy is assessed based on the performance of the participant during the SemiDirectedActivitiesStep. The property iadl_e (Instrumental Activities of Daily Living for Elderly) can be used to quantify autonomy"@en <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#VideoTrack> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#VideoTrack> <http://www.w3.org/2000/01/rdf-schema#comment> "A specialisation of Track for Video to provide\n            a link to specific data properties such as frameRate, etc. Signing is another possible\n            example of video track. Specific VideoTracks such as Signing can be defined as sub\n            VideoTracks.. In advanced systems, different VideoTracks can be used to provide e.g.\n            different viewing angles."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#VideoTrack> <http://www.w3.org/2000/01/rdf-schema#label> "Video track"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#VideoTrack> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Track> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Genre> <http://www.w3.org/2000/01/rdf-schema#label> "Genre"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Genre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Genre> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Type> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Genre> <http://www.w3.org/2000/01/rdf-schema#comment> "This class shall be used to provide information\n            on the genre of the BusinessObject or Resource. This is provided as free text in an\n            annotation label or as an identifier pointing to a term in a classification scheme e.g.\n            http://www.ebu.ch/metadata/ontologies/skos/ebu_ContentGenreCS.rdf or\n            http://www.ebu.ch/metadata/ontologies/skos/ebu_EditorialFormatCodeCS.rdf."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#title> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/ns/ma-ont#title> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#title> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the title or name given to the\n            resource.  A root for the definition of subproperties defining ebucore titles of different types. The ebucore title type can be used to define sub-properties to optionally refine the category of\n            the title."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#title> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/title> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#title> <http://www.w3.org/2000/01/rdf-schema#label> "Title"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#title> <http://www.w3.org/2000/01/rdf-schema#comment> "All value of the EBU title status\n            classification scheme\n            (http://www.ebu.ch/metadata/cs/web/ebu_TitleStatusCodeCS_p.xml.htm) are candidates\n            subproperties of the title property as implemented for an example with\n            alternativeTitle."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#identifier> <http://www.w3.org/2000/01/rdf-schema#label> "Identifier"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is intended to provide an\n            alternative identifier for the resource, which has no URI counterpart. In the case where\n            the alternative identifier can be expressed as a URI, it is recommended to use\n            owl:sameAs instead."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#identifier> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/identifier> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#identifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Corresponds to 'identifier'\n            in the W3C Ontology for Media Annotation. The URI may be used to express an alternative\n            identifier of the resource, or to share an identifier used by other instances of the\n            same resource (equivalent to the fucntionality owl:sameAs)."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/language> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasLanguage> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/ns/ma-ont#hasLanguage> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "Language"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "To associate a Language to a Resource or\n            BusinessObject. A controlled vocabulary based on BCP 47 is recommended. This\n            property can also be used to identify the presence of sign language (RFC 5646). By\n            inheritance, the hasLanguage property applies indifferently at the MediaResource /\n            Fragment / Track levels at which the usage is being defined. Best practice recommends to\n            use to best possible level of granularity fo describe the usage of language within a\n            MediaResource including at Fragment and Track levels."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasChannelQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "Anzahl von Kanäle"@de <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasChannelQuantity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasChannelQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasChannelQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the number of channels of a television that can be used to save specific transmitted signals."@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasChannelQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValueInteger> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasChannelQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "channel quantity"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasChannelQuantity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#hasChannelQuantity> <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1#belongsToModule> "TV"@en <http://www.ebusiness-unibw.org/ontologies/consumerelectronics/v1> .
+<http://www.essepuntato.it/2013/10/vagueness/Dimension> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B21910be99710a43fe466e868389df2fb <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.essepuntato.it/2013/10/vagueness/Dimension> <http://www.w3.org/2000/01/rdf-schema#label> "dimension"@en <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.essepuntato.it/2013/10/vagueness/Dimension> <http://www.w3.org/2000/01/rdf-schema#comment> "A dimension is part of the justification of a description of quantitative vagueness. Dimensions of such a justification are used to identify what boundaries are not defined precisely by a particular entity and, thus, are part of the causes of vagueness for the entity itself. A dimension is defined either as natural language text, an entity, a more complex logic formula, or any combination of them. \n\nThe relation between a justification and a dimension may be context-dependent, which means that it can be applied within the boundaries of a particular context (i.e. the same entity can be vague in dimension A in one context and in dimension B in another). In this case, instances of the classes 'DimensionInContext' should be used to link the justification to the related dimension."@en <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.essepuntato.it/2013/10/vagueness/Dimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.essepuntato.it/2013/10/vagueness/Dimension> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.essepuntato.it/2013/10/vagueness> <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.essepuntato.it/2013/10/vagueness/Dimension> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B09522363a8e0b1e6571cf42823ee3ec1 <http://www.essepuntato.it/2013/10/vagueness> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises signs, either meaningful or not, or arrangements of signs following a specific syntax, that are used or can be used to refer to and identify a specific instance of some class or category within a certain context.\n[Scope Note for E77 Persistent Item CIDOC CRM version 5.1.2]"@en <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC17_Conceptual_Object> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BT14_Appellation_Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BT14_Appellation_Type> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BT4_Conceptual_Object_Type> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BT14_Appellation_Type> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BT14_Appellation_Type> <http://www.w3.org/2000/01/rdf-schema#label> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BT14_Appellation_Type> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BT14_Appellation_Type> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BT14_Appellation_Type> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises types of Appellation that are used or can be used to identify a specific instance of some class within a certain context."@en <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC20_Declarative_Place> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC20_Declarative_Place> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC3_Place> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC20_Declarative_Place> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises instances of BC3  Place  whose extent and position is defined by a BC34   Geometric Place Expression. \nInstances of BC20 Declarative Places may be used to approximate instances of BC3 Places or parts of them. They may as well be used to define the location and spatial extent of property rights or national borders. Example:  Coordinate information in FAO like  coordinates <-40,5  -41.0999847,5 -41.9000000,5 -42.200000763,5 -……39.2000000763,5 -40.5>"@en <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC20_Declarative_Place> <http://www.w3.org/2000/01/rdf-schema#label> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC20_Declarative_Place> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC20_Declarative_Place> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC20_Declarative_Place> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC33_Spatial_Coordinate> <http://www.w3.org/2000/01/rdf-schema#label> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC33_Spatial_Coordinate> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC33_Spatial_Coordinate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC33_Spatial_Coordinate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC33_Spatial_Coordinate> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises the textual or numeric information required to locate specific instances of E53 Place within schemes of spatial identification. \n\nCoordinates are a specific form of E44 Place Appellation, that is, a means of referring to a particular E53 Place. Coordinates are not restricted to longitude, latitude and altitude. Any regular system of reference that maps onto an E19 Physical Object can be used to generate coordinates.\n[Scope Note for E47 Spatial Coordinates CIDOC CRM version 5.1.2]"@en <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC33_Spatial_Coordinate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC33_Spatial_Coordinate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC31_Place_Appellation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC30_Appellation> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC31_Place_Appellation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC31_Place_Appellation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC31_Place_Appellation> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises any sort of identifier characteristically used to refer to an E53 Place. \n\nInstances of E44 Place Appellation may vary in their degree of precision and their meaning may vary over time - the same instance of E44 Place Appellation may be used to refer to several places, either because of cultural shifts, or because objects used as reference points have moved around. Instances of E44 Place Appellation can be extremely varied in form: postal addresses, instances of E47 Spatial Coordinate, and parts of buildings can all be considered as instances of E44 Place Appellation.\n[Scope Note for E44 Place Appellation CIDOC CRM version 5.1.2]"@en <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC31_Place_Appellation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC31_Place_Appellation> <http://www.w3.org/2000/01/rdf-schema#label> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC31_Place_Appellation> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#LC35_describes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC1_TLO_Entity> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#LC35_describes> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#LC35_describes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#BC29_Spatial_Coordinate_Reference_System> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#LC35_describes> <http://www.w3.org/2000/01/rdf-schema#label> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#LC35_describes> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#LC35_describes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#LC35_describes> <http://www.w3.org/2000/01/rdf-schema#comment> "This property associates an instance of SP4 Spatial Coordinate Reference System with the instance of SP3 Reference Space for which it can be used to describe locations. [Scope Note for Q7 Describes CRMgeo]."@en <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl#LC35_describes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.ics.forth.gr/isl/MarineTLO/v4/marinetlo.owl> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/be+to+used.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BtogX2Bused .
+_:BbeX2BtogX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BtogX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+tog+used.nt> .
+_:BbeX2BtogX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BtogX2Bused <https://w3id.org/tree#value> "tog" .
+_:BbeX2BtogX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BtogX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+tog+used.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BaX2BbeX2BtoX2Bused .
+_:BaX2BbeX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BbeX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+be+to+used.nt> .
+_:BaX2BbeX2BtoX2Bused <https://w3id.org/tree#value> "a" .
+_:BaX2BbeX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BaX2BbeX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BaX2BbeX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BaX2BbeX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+be+to+used.nt> <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BcX2BtoX2Bused .
+_:BbeX2BcX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BcX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+c+to+used.nt> .
+_:BbeX2BcX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BcX2BtoX2Bused <https://w3id.org/tree#value> "c" .
+_:BbeX2BcX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BcX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BcX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+c+to+used.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BdX2BtoX2Bused .
+_:BbeX2BdX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BdX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+d+to+used.nt> .
+_:BbeX2BdX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BdX2BtoX2Bused <https://w3id.org/tree#value> "d" .
+_:BbeX2BdX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BdX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BdX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+d+to+used.nt> <https://w3id.org/tree#remainingItems> "41"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BeX2BtoX2Bused .
+_:BbeX2BeX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BeX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+e+to+used.nt> .
+_:BbeX2BeX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BeX2BtoX2Bused <https://w3id.org/tree#value> "e" .
+_:BbeX2BeX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BeX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BeX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+e+to+used.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BfX2BtoX2Bused .
+_:BbeX2BfX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BfX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+f+to+used.nt> .
+_:BbeX2BfX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BfX2BtoX2Bused <https://w3id.org/tree#value> "f" .
+_:BbeX2BfX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BfX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BfX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+f+to+used.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BgX2BtoX2Bused .
+_:BbeX2BgX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BgX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+g+to+used.nt> .
+_:BbeX2BgX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BgX2BtoX2Bused <https://w3id.org/tree#value> "g" .
+_:BbeX2BgX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BgX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BgX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+g+to+used.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BhX2BtoX2Bused .
+_:BbeX2BhX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BhX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+h+to+used.nt> .
+_:BbeX2BhX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BhX2BtoX2Bused <https://w3id.org/tree#value> "h" .
+_:BbeX2BhX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BhX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BhX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+h+to+used.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BiX2BtoX2Bused .
+_:BbeX2BiX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BiX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+i+to+used.nt> .
+_:BbeX2BiX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BiX2BtoX2Bused <https://w3id.org/tree#value> "i" .
+_:BbeX2BiX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BiX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BiX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+i+to+used.nt> <https://w3id.org/tree#remainingItems> "24"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BlX2BtoX2Bused .
+_:BbeX2BlX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BlX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+l+to+used.nt> .
+_:BbeX2BlX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BlX2BtoX2Bused <https://w3id.org/tree#value> "l" .
+_:BbeX2BlX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BlX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BlX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+l+to+used.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BmX2BtoX2Bused .
+_:BbeX2BmX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BmX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+m+to+used.nt> .
+_:BbeX2BmX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BmX2BtoX2Bused <https://w3id.org/tree#value> "m" .
+_:BbeX2BmX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BmX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BmX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+m+to+used.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BoX2BtoX2Bused .
+_:BbeX2BoX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BoX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+o+to+used.nt> .
+_:BbeX2BoX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BoX2BtoX2Bused <https://w3id.org/tree#value> "o" .
+_:BbeX2BoX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BoX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BoX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+o+to+used.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BpX2BtoX2Bused .
+_:BbeX2BpX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BpX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+p+to+used.nt> .
+_:BbeX2BpX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BpX2BtoX2Bused <https://w3id.org/tree#value> "p" .
+_:BbeX2BpX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BpX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BpX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+p+to+used.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BqX2BtoX2Bused .
+_:BbeX2BqX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BqX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+q+to+used.nt> .
+_:BbeX2BqX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BqX2BtoX2Bused <https://w3id.org/tree#value> "q" .
+_:BbeX2BqX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BqX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BqX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+q+to+used.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BrX2BtoX2Bused .
+_:BbeX2BrX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BrX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+r+to+used.nt> .
+_:BbeX2BrX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BrX2BtoX2Bused <https://w3id.org/tree#value> "r" .
+_:BbeX2BrX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BrX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BrX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+r+to+used.nt> <https://w3id.org/tree#remainingItems> "40"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BsX2BtoX2Bused .
+_:BbeX2BsX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BsX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+s+to+used.nt> .
+_:BbeX2BsX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BsX2BtoX2Bused <https://w3id.org/tree#value> "s" .
+_:BbeX2BsX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BsX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BsX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+s+to+used.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BtX2BtoX2Bused .
+_:BbeX2BtX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BtX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+t+to+used.nt> .
+_:BbeX2BtX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BtX2BtoX2Bused <https://w3id.org/tree#value> "t" .
+_:BbeX2BtX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BtX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BtX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+t+to+used.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BtoX2BuX2Bused .
+_:BbeX2BtoX2BuX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BtoX2BuX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+to+u+used.nt> .
+_:BbeX2BtoX2BuX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BtoX2BuX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BtoX2BuX2Bused <https://w3id.org/tree#value> "u" .
+_:BbeX2BtoX2BuX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BtoX2BuX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+to+u+used.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BtoX2BusedX2Bv .
+_:BbeX2BtoX2BusedX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BtoX2BusedX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+to+used+v.nt> .
+_:BbeX2BtoX2BusedX2Bv <https://w3id.org/tree#value> "be" .
+_:BbeX2BtoX2BusedX2Bv <https://w3id.org/tree#value> "to" .
+_:BbeX2BtoX2BusedX2Bv <https://w3id.org/tree#value> "used" .
+_:BbeX2BtoX2BusedX2Bv <https://w3id.org/tree#value> "v" .
+_:BbeX2BtoX2BusedX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+to+used+v.nt> <https://w3id.org/tree#remainingItems> "14"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/be+to+used.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BtogX2Bused .
+_:BbeX2BtogX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BtogX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+tog+used.nt> .
+_:BbeX2BtogX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BtogX2Bused <https://w3id.org/tree#value> "tog" .
+_:BbeX2BtogX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BtogX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+tog+used.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BaX2BbeX2BtoX2Bused .
+_:BaX2BbeX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2BbeX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+be+to+used.nt> .
+_:BaX2BbeX2BtoX2Bused <https://w3id.org/tree#value> "a" .
+_:BaX2BbeX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BaX2BbeX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BaX2BbeX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BaX2BbeX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+be+to+used.nt> <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BcX2BtoX2Bused .
+_:BbeX2BcX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BcX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+c+to+used.nt> .
+_:BbeX2BcX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BcX2BtoX2Bused <https://w3id.org/tree#value> "c" .
+_:BbeX2BcX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BcX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BcX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+c+to+used.nt> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BdX2BtoX2Bused .
+_:BbeX2BdX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BdX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+d+to+used.nt> .
+_:BbeX2BdX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BdX2BtoX2Bused <https://w3id.org/tree#value> "d" .
+_:BbeX2BdX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BdX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BdX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+d+to+used.nt> <https://w3id.org/tree#remainingItems> "41"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BeX2BtoX2Bused .
+_:BbeX2BeX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BeX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+e+to+used.nt> .
+_:BbeX2BeX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BeX2BtoX2Bused <https://w3id.org/tree#value> "e" .
+_:BbeX2BeX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BeX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BeX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+e+to+used.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BfX2BtoX2Bused .
+_:BbeX2BfX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BfX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+f+to+used.nt> .
+_:BbeX2BfX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BfX2BtoX2Bused <https://w3id.org/tree#value> "f" .
+_:BbeX2BfX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BfX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BfX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+f+to+used.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BgX2BtoX2Bused .
+_:BbeX2BgX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BgX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+g+to+used.nt> .
+_:BbeX2BgX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BgX2BtoX2Bused <https://w3id.org/tree#value> "g" .
+_:BbeX2BgX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BgX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BgX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+g+to+used.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BhX2BtoX2Bused .
+_:BbeX2BhX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BhX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+h+to+used.nt> .
+_:BbeX2BhX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BhX2BtoX2Bused <https://w3id.org/tree#value> "h" .
+_:BbeX2BhX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BhX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BhX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+h+to+used.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BiX2BtoX2Bused .
+_:BbeX2BiX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BiX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+i+to+used.nt> .
+_:BbeX2BiX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BiX2BtoX2Bused <https://w3id.org/tree#value> "i" .
+_:BbeX2BiX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BiX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BiX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+i+to+used.nt> <https://w3id.org/tree#remainingItems> "24"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BlX2BtoX2Bused .
+_:BbeX2BlX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BlX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+l+to+used.nt> .
+_:BbeX2BlX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BlX2BtoX2Bused <https://w3id.org/tree#value> "l" .
+_:BbeX2BlX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BlX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BlX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+l+to+used.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BmX2BtoX2Bused .
+_:BbeX2BmX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BmX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+m+to+used.nt> .
+_:BbeX2BmX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BmX2BtoX2Bused <https://w3id.org/tree#value> "m" .
+_:BbeX2BmX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BmX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BmX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+m+to+used.nt> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BoX2BtoX2Bused .
+_:BbeX2BoX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BoX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+o+to+used.nt> .
+_:BbeX2BoX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BoX2BtoX2Bused <https://w3id.org/tree#value> "o" .
+_:BbeX2BoX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BoX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BoX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+o+to+used.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BpX2BtoX2Bused .
+_:BbeX2BpX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BpX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+p+to+used.nt> .
+_:BbeX2BpX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BpX2BtoX2Bused <https://w3id.org/tree#value> "p" .
+_:BbeX2BpX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BpX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BpX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+p+to+used.nt> <https://w3id.org/tree#remainingItems> "9"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BqX2BtoX2Bused .
+_:BbeX2BqX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BqX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+q+to+used.nt> .
+_:BbeX2BqX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BqX2BtoX2Bused <https://w3id.org/tree#value> "q" .
+_:BbeX2BqX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BqX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BqX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+q+to+used.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BrX2BtoX2Bused .
+_:BbeX2BrX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BrX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+r+to+used.nt> .
+_:BbeX2BrX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BrX2BtoX2Bused <https://w3id.org/tree#value> "r" .
+_:BbeX2BrX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BrX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BrX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+r+to+used.nt> <https://w3id.org/tree#remainingItems> "40"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BsX2BtoX2Bused .
+_:BbeX2BsX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BsX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+s+to+used.nt> .
+_:BbeX2BsX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BsX2BtoX2Bused <https://w3id.org/tree#value> "s" .
+_:BbeX2BsX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BsX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BsX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+s+to+used.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BtX2BtoX2Bused .
+_:BbeX2BtX2BtoX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BtX2BtoX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+t+to+used.nt> .
+_:BbeX2BtX2BtoX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BtX2BtoX2Bused <https://w3id.org/tree#value> "t" .
+_:BbeX2BtX2BtoX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BtX2BtoX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BtX2BtoX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+t+to+used.nt> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BtoX2BuX2Bused .
+_:BbeX2BtoX2BuX2Bused <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BtoX2BuX2Bused <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+to+u+used.nt> .
+_:BbeX2BtoX2BuX2Bused <https://w3id.org/tree#value> "be" .
+_:BbeX2BtoX2BuX2Bused <https://w3id.org/tree#value> "to" .
+_:BbeX2BtoX2BuX2Bused <https://w3id.org/tree#value> "u" .
+_:BbeX2BtoX2BuX2Bused <https://w3id.org/tree#value> "used" .
+_:BbeX2BtoX2BuX2Bused <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+to+u+used.nt> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/be+to+used.nt> <https://w3id.org/tree#relation> _:BbeX2BtoX2BusedX2Bv .
+_:BbeX2BtoX2BusedX2Bv <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbeX2BtoX2BusedX2Bv <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/be+to+used+v.nt> .
+_:BbeX2BtoX2BusedX2Bv <https://w3id.org/tree#value> "be" .
+_:BbeX2BtoX2BusedX2Bv <https://w3id.org/tree#value> "to" .
+_:BbeX2BtoX2BusedX2Bv <https://w3id.org/tree#value> "used" .
+_:BbeX2BtoX2BusedX2Bv <https://w3id.org/tree#value> "v" .
+_:BbeX2BtoX2BusedX2Bv <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/be+to+used+v.nt> <https://w3id.org/tree#remainingItems> "14"^^<http://www.w3.org/2001/XMLSchema#int> .

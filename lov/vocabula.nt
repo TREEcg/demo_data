@@ -1,0 +1,343 @@
+<http://purl.org/vocommons/voaf/v2.1> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/pierre-yves-vandenbussche> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf/v2.1> <http://www.w3.org/2000/01/rdf-schema#comment> "Ajout des requêtes pour générer des relations VOAF entre deux vocabulaires"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf/v2.1> <http://www.w3.org/2000/01/rdf-schema#comment> "Added desrciption of queries used to infer a particular VOAF relation between two vocabularies"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf/v2.1> <http://purl.org/vocab/frbr/core#embodiment> <http://purl.org/vocommons/voaf/v2.1/voaf_v2.1.rdf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf/v2.1> <http://purl.org/dc/terms/date> "2012-10-15" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf/v2.1> <http://www.w3.org/2002/07/owl#versionInfo> "2.1" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf/v2.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/frbr/core#Expression> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#label> "a des disjonctions avec"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the subject vocabulary contains some declaration of disjoint classes with the object vocabulary."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://purl.org/dc/terms/description> "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n\t\tPREFIX owl:<http://www.w3.org/2002/07/owl#>\n\t\tPREFIX voaf:<http://purl.org/vocommons/voaf#>\n\t\t\n\t\tCONSTRUCT{\n\t\t\t?vocab1 voaf:hasDisjunctionsWith ?vocab2\n\t\t}\n\t\tWHERE{\n\t\t\t?elem1 owl:disjointWith ?elem2. FILTER(!isBlank(?elem2))\n\t\t\t?elem1 rdfs:isDefinedBy ?vocab1.\n\t\t\t?vocab1 a voaf:Vocabulary.\n\t\t\t?elem2 rdfs:isDefinedBy ?vocab2.\n\t\t\t?vocab2 a voaf:Vocabulary.\n\t\t\tFILTER(?vocab1!=?vocab2)\n\t\t}" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#label> "has disjunctions with"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique que le vocabulaire sujet contient des déclarations de classes disjointes avec le vocabulaire objet"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#hasDisjunctionsWith> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocommons/voaf#reliesOn> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#Work> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/2000/01/rdf-schema#label> "Vocabulaire"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/2000/01/rdf-schema#comment> "Un vocabulaire utilisé ou utilisable dans le Web des données. Une instance de voaf:Vocabulary s'appuie at/ou est utilisée par au moins une autre instance of voaf:Vocabulary"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/2002/07/owl#unionOf> _:B598800a75426ce9faf5d534a9f986742 <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/2000/01/rdf-schema#comment> "A vocabulary used in the linked data cloud. An instance of voaf:Vocabulary relies on or is used by at least another instance of voaf:Vocabulary"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rdfs.org/ns/void#Dataset> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/2002/07/owl#unionOf> _:Bbb3fc2ec2614d54a62aeee6bb64bb11c <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/2000/01/rdf-schema#label> "Vocabulary"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#Vocabulary> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#propertyNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of properties defined in the vocabulary namespace. Properties imported from other namespaces are not taken into account."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#propertyNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Le nombre de propriétés définies dans l'espace de noms du Vocabulaire. Les propriétés importées d'autres vocabulaires ne sont pas comptabilisées."@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#propertyNumber> <http://www.w3.org/2000/01/rdf-schema#label> "number of properties"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#propertyNumber> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#propertyNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#propertyNumber> <http://www.w3.org/2000/01/rdf-schema#label> "nombre de propriétés"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#propertyNumber> <http://purl.org/dc/terms/description> "PREFIX rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n\t\tPREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n\t\tPREFIX owl:<http://www.w3.org/2002/07/owl#>\n\t\tPREFIX voaf:<http://purl.org/vocommons/voaf#>\n\t\t\n\t\tCONSTRUCT{\n\t\t?vocab voaf:propertyNumber ?nbProp\n\t\t}\n\t\tWHERE{\n\t\t\tSELECT (COUNT(distinct ?prop) AS ?nbProp) ?vocab\n\t\t\tWHERE{\n\t\t\t\t{?prop a rdf:Property.}\n\t\t\t\tUNION{?prop a owl:ObjectProperty.}\n\t\t\t\tUNION{?prop a owl:DatatypeProperty.}\n\t\t\t\tUNION{?prop a owl:AnnotationProperty.}\n\t\t\t\tUNION{?prop a owl:FunctionalProperty.}\n\t\t\t\tUNION{?prop a owl:OntologyProperty.}\n\t\t\t\tUNION{?prop a owl:AsymmetricProperty.}\n\t\t\t\tUNION{?prop a owl:InverseFunctionalProperty.}\n\t\t\t\tUNION{?prop a owl:IrreflexiveProperty.}\n\t\t\t\tUNION{?prop a owl:ReflexiveProperty.}\n\t\t\t\tUNION{?prop a owl:SymmetricProperty.}\n\t\t\t\tUNION{?prop a owl:TransitiveProperty.}\n\t\t\t\t?prop a ?type.\n\t\t\t\tFILTER(?type!=owl:DeprecatedProperty)\n\t\t\t\t?prop rdfs:isDefinedBy ?vocab.\n\t\t\t\t?vocab a voaf:Vocabulary.\n\t\t\t}GROUP BY ?vocab\n\t\t}" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#propertyNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#propertyNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#propertyNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://purl.org/dc/terms/description> "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n\t\tPREFIX owl:<http://www.w3.org/2002/07/owl#>\n\t\tPREFIX voaf:<http://purl.org/vocommons/voaf#>\n\n\t\tCONSTRUCT{\n\t\t\t?vocab1 voaf:metadataVoc ?vocab2\n\t\t}\n\t\tWHERE{\n\t\t\t?elem1 ?elem2 ?o.\n\t\t\t?elem1 rdfs:isDefinedBy ?vocab1.\n\t\t\t?vocab1 a voaf:Vocabulary.\n\t\t\t?elem2 rdfs:isDefinedBy ?vocab2.\n\t\t\t?vocab2 a voaf:Vocabulary.\n\t\t\tFILTER(?vocab1!=?vocab2)\n\t\t}" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocommons/voaf#reliesOn> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#label> "vocabulaire de métadonnées"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the subject vocabulary uses the object vocabulary in metadata at global vocabulary level or at element level"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique que le vocabulaire sujet utilise le vocabulaire objet pour décrire ses métadonnées, au niveau global du vocabulaire ou au niveau des éléments"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/2000/01/rdf-schema#label> "metadata vocabulary"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#metadataVoc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/bernard-vatant> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/dc/terms/description> "Un vocabulaire de description des vocabulaires RDF et de leurs relations mutuelles"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/dc/terms/publisher> <http://dbpedia.org/resource/Open_Knowledge_Foundation> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/dc/terms/contributor> <http://data.semanticweb.org/person/pierre-yves-vandenbussche> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/dc/terms/title> "Vocabulaire d'un ami"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/dc/terms/title> "Vocabulary of a Friend"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/vocab/frbr/core#realization> <http://purl.org/vocommons/voaf/v2.1> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf#exampleDataset> <http://lov.okfn.org/dataset/lov/lov.rdf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/vocab/frbr/core#realization> <http://purl.org/vocommons/voaf/v1.1> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/vocab/frbr/core#realization> <http://purl.org/vocommons/voaf/v2.0> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/vocab/frbr/core#realization> <http://purl.org/vocommons/voaf/v1.0> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/dc/terms/description> "A vocabulary to describe linked data vocabularies and their relations."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/dc/terms/modified> "2013-05-24"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/dc/terms/issued> "2011-03-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/vocab/frbr/core#realization> <http://purl.org/vocommons/voaf/v2.3> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/vocommons/voaf#" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/dc/terms/contributor> <http://data.semanticweb.org/person/lise-rozat> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/vocab/frbr/core#realization> <http://purl.org/vocommons/voaf/v2.2> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://purl.org/vocab/vann/preferredNamespacePrefix> "voaf" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#DatasetOccurrences> <http://www.w3.org/2000/01/rdf-schema#comment> "Classe utilisée pour stocker l'information d'occurences d'un vocabulaire dans un jeu de données"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#DatasetOccurrences> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#DatasetOccurrences> <http://www.w3.org/2000/01/rdf-schema#comment> "Class used to store the number of occurences of a vocabulary in a particular dataset"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#DatasetOccurrences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#DatasetOccurrences> <http://www.w3.org/2000/01/rdf-schema#label> "Dataset occurrences"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#DatasetOccurrences> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#DatasetOccurrences> <http://www.w3.org/2000/01/rdf-schema#label> "Occurrences dans un jeu de données"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocommons/voaf#reliesOn> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#label> "extends"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#label> "étend"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique que le vocabulaire sujet étend l'expressivité du vocabulaire objet en déclarant des relations de subsomption avec ce dernier, ou en utilisant ses classes comme domaine ou co-domaine d'un propriété du vocabulaire sujet, ou en définissant des contraintes locales etc."@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the subject vocabulary extends the expressivity of the object vocabulary by declaring subsumption relationships, using object vocabulary class as domain or range of a subject vocabulary property, defining local restrictions etc ..."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://purl.org/dc/terms/description> "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n\t\tPREFIX owl:<http://www.w3.org/2002/07/owl#>\n\t\tPREFIX voaf:<http://purl.org/vocommons/voaf#>\n\n\t\tCONSTRUCT{\n\t\t\t?vocab1 voaf:extends ?vocab2\n\t\t}\n\t\tWHERE{\n\t\t\t{?elem1 owl:inverseOf ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\tUNION{?elem1 rdfs:domain ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\tUNION{?elem1 rdfs:range ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\tUNION{?elem2 rdfs:domain ?elem1. FILTER(!isBlank(?elem1))}\n\t\t\tUNION{?elem2 rdfs:range ?elem1. FILTER(!isBlank(?elem1))}\n\t\t\t?elem1 rdfs:isDefinedBy ?vocab1.\n\t\t\t?vocab1 a voaf:Vocabulary.\n\t\t\t?elem2 rdfs:isDefinedBy ?vocab2.\n\t\t\t?vocab2 a voaf:Vocabulary.\n\t\t\tFILTER(?vocab1!=?vocab2)\n\t\t}" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#extends> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrencesInVocabularies> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrencesInVocabularies> <http://www.w3.org/2000/01/rdf-schema#label> "occurrences in vocabularies"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrencesInVocabularies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrencesInVocabularies> <http://www.w3.org/2000/01/rdf-schema#label> "occurences dans des vocabulaires"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrencesInVocabularies> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrencesInVocabularies> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of vocabularies using a resource"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrencesInVocabularies> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrencesInVocabularies> <http://www.w3.org/2000/01/rdf-schema#comment> "Nombre de vocabulaires utilisant une ressource."@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#label> "specializes"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#label> "spécialise"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocommons/voaf#reliesOn> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://purl.org/dc/terms/description> "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n\t\tPREFIX voaf:<http://purl.org/vocommons/voaf#>\n\t\tPREFIX skos:<http://www.w3.org/2004/02/skos/core#>\n\t\t\n\t\tCONSTRUCT{\n\t\t\t?vocab1 voaf:specializes ?vocab2\n\t\t}\n\t\tWHERE{\n\t\t\t{?elem1 rdfs:subPropertyOf ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\tUNION{?elem1 rdfs:subClassOf ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\tUNION{?elem1 skos:broadMatch ?elem2. FILTER(!isBlank(?elem2))}\n\t\t\t?elem1 rdfs:isDefinedBy ?vocab1.\n\t\t\t?vocab1 a voaf:Vocabulary.\n\t\t\t?elem2 rdfs:isDefinedBy ?vocab2.\n\t\t\t?vocab2 a voaf:Vocabulary.\n\t\t\tFILTER(?vocab1!=?vocab2)\n\t\t}" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that the subject vocabulary defines some subclasses or subproperties of the object vocabulary, or local restrictions on those."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#specializes> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique que le vocabulaire sujet définit des sous-classes ou sous-propriétés du vocabulaire objet"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf/v2.3> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/pierre-yves-vandenbussche> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf/v2.3> <http://www.w3.org/2000/01/rdf-schema#comment> "Remplacement de voaf:dataset par un objet permettant d'attacher la notion d'occurrenceet ajout supplémentaire de propriétés pour représenter les métriques d'usage d'éléments de vocabulaire dans le LOV et le LOD"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf/v2.3> <http://purl.org/vocab/frbr/core#embodiment> <http://purl.org/vocommons/voaf/v2.3/voaf_v2.3.rdf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf/v2.3> <http://www.w3.org/2000/01/rdf-schema#comment> "Refined the voaf:dataset to a more complex element with occurrences information and added extra properties to represent metrics of vocabulary elements usage in LOV and LOD"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf/v2.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocab/frbr/core#Expression> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf/v2.3> <http://www.w3.org/2002/07/owl#versionInfo> "2.3" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf/v2.3> <http://purl.org/dc/terms/date> "2013-05-24" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#similar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#similar> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#similar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#similar> <http://www.w3.org/2000/01/rdf-schema#comment> "Used to assert that two vocabularies are similar in scope and objectives, independently of the fact that they otherwise refer to each other."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#similar> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#similar> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#similar> <http://www.w3.org/2000/01/rdf-schema#label> "similar"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#similar> <http://www.w3.org/2000/01/rdf-schema#label> "similaire"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#similar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#similar> <http://www.w3.org/2000/01/rdf-schema#comment> "Indique que deux vocabulaires sont similaires dans leur domaine et/ou leurs objectifs, sans être nécessairement reliés par des références."@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#toDoList> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#toDoList> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/12/cal/ical#Vtodo> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#toDoList> <http://www.w3.org/2000/01/rdf-schema#label> "to-do list"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#toDoList> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#toDoList> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#toDoList> <http://www.w3.org/2000/01/rdf-schema#label> "liste des choses à faire"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#toDoList> <http://www.w3.org/2000/01/rdf-schema#comment> "Liste des tâches prévues par le gestionnaire d'une ressource. Cette propriété est destinée à l'usage des gestionnaires de vocabulaires ou de jeu de données mais son doamine est ouvert, elle peut être utilisée pour n'importe quelle ressource. Utiliser la classe ical:Vtodo pour une description fine des tâches : calendrier, priorités etc"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#toDoList> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes future tasks planned by a resource curator. This property is primarily intended to be used for vocabularies or datasets, but the domain is left open, it can be used for any resource. Use iCalendar Vtodo class and its properties to further describe the task calendar, priorities etc."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrences> <http://www.w3.org/2000/01/rdf-schema#label> "occurrences"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrences> <http://www.w3.org/2000/01/rdf-schema#label> "occurrences"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrences> <http://www.w3.org/2000/01/rdf-schema#comment> "nombre d'occurrences d'un vocabulaire dans un dataset"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrences> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrences> <http://www.w3.org/2000/01/rdf-schema#comment> "Number of occurrences of a vocabulary in a dataset"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrences> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#DatasetOccurrences> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrences> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrences> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#occurrences> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reusedByVocabularies> <http://www.w3.org/2000/01/rdf-schema#comment> "Nombre distinct de vocabulaires reutilisant une resource."@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reusedByVocabularies> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reusedByVocabularies> <http://www.w3.org/2000/01/rdf-schema#label> "réutilisé par des vocabulaires"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reusedByVocabularies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reusedByVocabularies> <http://www.w3.org/2000/01/rdf-schema#label> "reused by vocabularies"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reusedByVocabularies> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reusedByVocabularies> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#reusedByVocabularies> <http://www.w3.org/2000/01/rdf-schema#comment> "Distinct number of vocabularies reusing a resource."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#inDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "dataset in which a vocabulary occurred"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#inDataset> <http://www.w3.org/2000/01/rdf-schema#label> "in dataset"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#inDataset> <http://www.w3.org/2000/01/rdf-schema#label> "dans le jeu de données"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#inDataset> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#DatasetOccurrences> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#inDataset> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#inDataset> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdfs.org/ns/void#Dataset> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#inDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#inDataset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#inDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "jeu de données dans lequel un vocabulaire apparait"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vso/ns> <http://www.w3.org/2000/01/rdf-schema#label> "Vehicle Sales Ontology"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://purl.org/dc/elements/1.1/contributor> "Many class and property definitions are inspired by or based on abstracts from Wikipedia, the free encyclopedia."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://purl.org/dc/elements/1.1/creator> "Martin Hepp"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://purl.org/dc/elements/1.1/title> "VSO: The Vehicle Sales Ontology for Semantic Web-based E-Commerce"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://www.w3.org/2000/01/rdf-schema#comment> "VSO: The Vehicle Sales Ontology\n    \nA Web vocabulary for describings cars, boats, bikes, and other vehicles for e-commerce.\n\nVocabulary:    http://purl.org/vso/ns\nNamespace:     http://purl.org/vso/ns#\n\nThe Vehicle Sales Ontology is designed to be used in combination with GoodRelations, a standard vocabulary for the commercial aspects of offers for sale or rental. \n\nSee http://purl.org/goodrelations/ for more information."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/goodrelations/v1> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://purl.org/dc/elements/1.1/rights> "The Vehicle Sales Ontology ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. \nIn a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), \nas long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work)."@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/goodrelations/> <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://www.w3.org/2002/07/owl#versionInfo> "V 1.0, Release 2010-10-02" <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://purl.org/dc/elements/1.1/subject> "E-Commerce, E-Business, GoodRelations, Ontology, Cars, Automobiles, Boats, Bikes"@en <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> <http://purl.org/vso/ns> .
+<http://purl.org/vvo/ns#> <http://www.w3.org/2000/01/rdf-schema#comment> "VVO: The Volkswagen Vehicles Ontology\n    \nA vocabulary for describing Volkswagen-specific features of automobiles and their components\n\nVocabulary:    http://purl.org/vvo/ns\nNamespace:     http://purl.org/vvo/ns#\n\n\nThe vocabulary is designed to be used in combination with \n(1) GoodRelations, a standard vocabulary for the commercial aspects of offers for sale, rental, repair, or disposal;\n(2) the Vehicle Sales Ontology, a standard vocabulary for cars and other vehicles; and\n(3) the Car Options Ontology, a standard vocabulary for buildability / configuration information for cars. \n\nSee http://purl.org/goodrelations/ for more information."@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/vso/ns> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://purl.org/dc/elements/1.1/subject> "Volkswagen, E-Commerce, E-Business, GoodRelations, Ontology, Cars, Automobiles"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://purl.org/dc/terms/license> <http://creativecommons.org/licenses/by/3.0/> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://www.w3.org/2002/07/owl#versionInfo> "V 1.0, Release 2010-10-12" <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/goodrelations/> <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://purl.org/dc/elements/1.1/creator> "Martin Hepp"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://purl.org/dc/elements/1.1/title> "VVO: The Volkswagen Vehicles Ontology for Semantic Web-based E-Commerce"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://purl.org/dc/elements/1.1/rights> "The Volkswagen Vehicles Ontology is available under the Creative Commons Attribution 3.0 Unported license; see http://creativecommons.org/licenses/by/3.0/. \nIn a nutshell, you are free to copy, distribute and transmit the work; to remix/adapt the work (e.g. to import the ontology and create specializations of its elements), \nas long as you attribute the work in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the work)."@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://www.w3.org/2000/01/rdf-schema#label> "Volkswagen Vehicles Ontology"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://purl.org/dc/elements/1.1/contributor> "Some class and property definitions are inspired by or based on abstracts from Wikipedia, the free encyclopedia."@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://purl.org/dc/elements/1.1/contributor> "Charles Sandeman-Craik, Tribal DDB; Chris Jenkins, Tribal DDB; Tim Redding, Tribal DDB; Yago Otero, Tribal DDB; William Greenly, Tribal DDB; Robin Dingle, Volkswagen UK" <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/goodrelations/v1> <http://purl.org/vvo/ns#> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://purl.org/dc/elements/1.1/creator> "Benjamin Zapilko" <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://purl.org/dc/elements/1.1/creator> "Richard Cyganiak" <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://purl.org/dc/elements/1.1/creator> "Thomas Bosch" <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://purl.org/dc/elements/1.1/title> "DDI-RDF Discovery Vocabulary"@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://purl.org/dc/elements/1.1/creator> "Joachim Wackerow" <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://purl.org/dc/elements/1.1/creator> "Benedikt Kämpgen" <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://purl.org/dc/elements/1.1/contributor> "Joachim Wackerow" <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://www.w3.org/2002/07/owl#versionInfo> "Version 0.6 - 2013-09-30" <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://purl.org/dc/elements/1.1/creator> "Olof Olsson" <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://purl.org/dc/elements/1.1/creator> "Heiko Paulheim" <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://purl.org/dc/elements/1.1/creator> "Arofan Gregory" <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://purl.org/dc/elements/1.1/contributor> "Thomas Bosch" <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://purl.org/dc/elements/1.1/contributor> "Benjamin Zapilko" <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://purl.org/dc/elements/1.1/creator> "Franck Cotton" <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://purl.org/dc/elements/1.1/contributor> "Richard Cyganiak" <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/discovery> <http://www.w3.org/2000/01/rdf-schema#comment> "This specification defines the DDI Discovery Vocabulary, an RDF Schema vocabulary that enables discovery of research and survey data on the Web. It is based on DDI (Data Documentation Initiative) XML formats."@en <http://rdf-vocabulary.ddialliance.org/discovery> .
+<http://rdf-vocabulary.ddialliance.org/phdd#characterSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#characterSet> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\tThe character set or encoding used in the table. Supports the use of an external controlled vocabulary in SKOS.\n\n\tEquivalent element in DDI 3.2: CharacterSet\n\tDDI 3.2 Documentation: http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/reusable_xsd/elements/CharacterSet.html\n\t"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#characterSet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/phdd> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#characterSet> <http://www.w3.org/2000/01/rdf-schema#label> "character set"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#characterSet> <http://www.w3.org/2000/01/rdf-schema#range> _:B390c334e0514ef1a9d4d8485d37a3735 <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#characterSet> <http://www.w3.org/2000/01/rdf-schema#range> _:B12f3682f75702332e6e3fd68ce313acd <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#characterSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#characterSet> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/reusable_xsd/elements/CharacterSet.html> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#characterSet> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf-vocabulary.ddialliance.org/phdd#TableStructure> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#Table> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/dcat#Distribution> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#Table> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/phdd> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#Table> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/physicaldataproduct_xsd/elements/PhysicalDataProduct.html> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#Table> <http://www.w3.org/2000/01/rdf-schema#comment> "A table, which could be a rectangular file with character-separated values (CSV) or a rectangular file with fixed record length.\n\n\tThis can be a subclass of \"Distribution\" in Data Catalog Vocabulary (DCAT), see: http://www.w3.org/TR/vocab-dcat/#class-distribution.\n\tThe equivalent class in DDI-RDF Discovery (Disco) is \"DataFile\", see: http://rdf-vocabulary.ddialliance.org/discovery.html#datafile.\n\t\n\tRelated element in DDI 3.2: p:PhysicalDataProduct\n\tDDI 3.2 Documentation:  http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/physicaldataproduct_xsd/elements/PhysicalDataProduct.html\n\t"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#Table> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B83648c7ce5801be80ac0cc8fee402e82 <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#Table> <http://www.w3.org/2000/01/rdf-schema#label> "Table"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#Table> <http://www.w3.org/2002/07/owl#equivalentClass> <http://rdf-vocabulary.ddialliance.org/discovery#DataFile> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#Table> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B129efa74de6e79f2f91068df2736000d <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#Table> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#Table> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by-nc-sa/3.0/us/> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd> <http://purl.org/dc/elements/1.1/date> "2014-05-25" <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd> <http://purl.org/dc/elements/1.1/creator> "Thomas Bosch" <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd> <http://purl.org/dc/elements/1.1/title> "Physical Data Description (PHDD)"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t    Physical data description (PHDD) of existing or published data (tables) in a rectangular format. The data could be either represented in records with character-separated values (CSV) or in records with fixed length. \n\t\tPHDD could be used standalone or together with related vocabularies like Data Catalog Vocabulary (DCAT) or DDI-RDF Discovery.\n\t\tDescriptions in PHDD could be added to Web pages which provide tables in rectangular format. This would enable processing by programs of this data. \n\t\tThe combined usage of PHDD, DDI-RDF Discovery, and DCAT would enable the creation of data repositories which provide metadata for the description of collections, for data discovery, and for processing of the data.\n\t\tPHDD is based on the DDI (Data Documentation Initiative, ddialliance.org) specification.\n        This ontology is available at http://rdf-vocabulary.ddialliance.org/phdd, and uses the namespace prefix phdd." <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd> <http://purl.org/dc/elements/1.1/contributor> "Richard Cyganiak" <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd> <http://purl.org/dc/elements/1.1/rights> "This work is distributed under a Creative Commons Attribution License (http://creativecommons.org/licenses/by-nc-sa/3.0/us/)."@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd> <http://purl.org/dc/elements/1.1/creator> "Larry Hoyle" <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd> <http://purl.org/dc/elements/1.1/description> <https://raw.githubusercontent.com/linked-statistics/physical-data-description/master/UML/phdd_web.png> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd> <http://www.w3.org/2002/07/owl#versionInfo> "0.1" <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd> <http://purl.org/dc/elements/1.1/creator> "Joachim Wackerow" <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#recommendedDisplayDataFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf-vocabulary.ddialliance.org/phdd#ColumnDescription> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#recommendedDisplayDataFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\tThe recommended display format of the data values of a column. Supports the use of an external controlled vocabulary in SKOS.\n\n\tEquivalent element in DDI 3.2: r:GenericOutputFormat\n\tDDI 3.2 Documentation: http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/reusable_xsd/elements/GenericOutputFormat.html\n\t"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#recommendedDisplayDataFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#recommendedDisplayDataFormat> <http://www.w3.org/2000/01/rdf-schema#range> _:B0659f382dcd5dc45dcb73d5de00a89d5 <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#recommendedDisplayDataFormat> <http://www.w3.org/2000/01/rdf-schema#label> "Recommended display data format"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#recommendedDisplayDataFormat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/phdd> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#recommendedDisplayDataFormat> <http://www.w3.org/2000/01/rdf-schema#range> _:B314169a258c0f31de1d596c0890ccb10 <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#recommendedDisplayDataFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#recommendedDisplayDataFormat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/reusable_xsd/elements/GenericOutputFormat.html> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLanguage> <http://www.w3.org/2000/01/rdf-schema#range> _:Be79bfa4144b879788670dddb5a1623db <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLanguage> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/physicaldataproduct_xsd/elements/LanguageOfData.html> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLanguage> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf-vocabulary.ddialliance.org/phdd#TableStructure> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLanguage> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\tDefault language of text in the table. Supports the use of an external controlled vocabulary in SKOS.\n\n\tRelated element in DDI 3.2: p:LanguageOfData\n\tDDI 3.2 Documentation: http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/physicaldataproduct_xsd/elements/LanguageOfData.html\n\t"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLanguage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLanguage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/phdd> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLanguage> <http://www.w3.org/2000/01/rdf-schema#label> "Default language"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLanguage> <http://www.w3.org/2000/01/rdf-schema#range> _:B09137bbd39a1e76a1dc070b64eadc19a <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#storageFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf-vocabulary.ddialliance.org/phdd#ColumnDescription> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#storageFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#storageFormat> <http://www.w3.org/2000/01/rdf-schema#range> _:Bdd0f07a01f0fb6a7de1be863c9cbe3f8 <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#storageFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#storageFormat> <http://www.w3.org/2000/01/rdf-schema#label> "Storage format"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#storageFormat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/physicaldataproduct_xsd/elements/StorageFormat.html> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#storageFormat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/phdd> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#storageFormat> <http://www.w3.org/2000/01/rdf-schema#range> _:B377e07da73fae906ec60062061cad332 <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#storageFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\tDefinition of the storage format of data values of a column. Supports the use of an external controlled vocabulary in SKOS.\n\n\tEquivalent element in DDI 3.2: p:StorageFormat\n\tDDI 3.2 Documentation: http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/physicaldataproduct_xsd/elements/StorageFormat.html\n\t"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLocale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLocale> <http://www.w3.org/2000/01/rdf-schema#range> _:Bd164c8b4c34b25ec32919d06e2969b6c <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLocale> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf-vocabulary.ddialliance.org/phdd> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLocale> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/physicaldataproduct_xsd/elements/LocaleOfData.html> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLocale> <http://www.w3.org/2000/01/rdf-schema#range> _:Bb0d85ea097bcd22bce34a48ddef7f62a <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLocale> <http://www.w3.org/2000/01/rdf-schema#label> "Default locale"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLocale> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLocale> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdf-vocabulary.ddialliance.org/phdd#TableStructure> <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf-vocabulary.ddialliance.org/phdd#defaultLocale> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\tThe default locale of text in the table. It is a set of parameters that defines the country, and any special variant preferences similar to BCP 47. The language can be defined by \"defaultLanguage\". Supports the use of an external controlled vocabulary in SKOS.\n\n\tRelated element in DDI 3.2: p:LocaleOfData\n\tDDI 3.2 Documentation: http://www.ddialliance.org/Specification/DDI-Lifecycle/3.2/XMLSchema/FieldLevelDocumentation/schemas/physicaldataproduct_xsd/elements/LocaleOfData.html\n\t"@en <http://rdf-vocabulary.ddialliance.org/phdd> .
+<http://rdf.geospecies.org/ont/geospecies.owl> <http://purl.org/dc/elements/1.1/title> "GeoSpecies Ontology" <http://rdf.geospecies.org/ont/geospecies> .
+<http://rdf.geospecies.org/ont/geospecies.owl> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdf.geospecies.org/ont/geospecies.owl> <http://rdf.geospecies.org/ont/geospecies> .
+<http://rdf.geospecies.org/ont/geospecies.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://rdf.geospecies.org/ont/geospecies> .
+<http://rdf.geospecies.org/ont/geospecies.owl> <http://purl.org/dc/elements/1.1/creator> "Peter J. DeVries" <http://rdf.geospecies.org/ont/geospecies> .
+<http://rdf.geospecies.org/ont/geospecies.owl> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://labs.mondeca.com/dataset/lov/lov.rdf> <http://rdf.geospecies.org/ont/geospecies> .
+<http://rdf.geospecies.org/ont/geospecies.owl> <http://purl.org/dc/elements/1.1/date> "2012-10-02" <http://rdf.geospecies.org/ont/geospecies> .
+<http://rdf.geospecies.org/ont/geospecies.owl> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://lod.taxonconcept.org/ontology/txn.owl> <http://rdf.geospecies.org/ont/geospecies> .
+<http://rdf.geospecies.org/ont/geospecies.owl> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://lod.geospecies.org/ontology/doc/index.html> <http://rdf.geospecies.org/ont/geospecies> .
+<http://rdf.geospecies.org/ont/geospecies.owl> <http://www.w3.org/2000/01/rdf-schema#comment> "This is an early version of the new ontology. Use it as a vocabulary, since is still under development. The demonstration SPARQL queries will work without the ontology loaded into your triple store." <http://rdf.geospecies.org/ont/geospecies> .
+<http://rdf.geospecies.org/ont/geospecies.owl> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://lod.geospecies.org/ontology/void.rdf> <http://rdf.geospecies.org/ont/geospecies> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/hasFormat> <http://rdfs.co/bevon/0.8/rdf> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://creativecommons.org/ns#Work> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/type> <http://purl.org/adms/assettype/Ontology> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#historyNote> _:B7111b3d7ec20fbae97e302e05859a431 <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/identifier> "http://rdfs.co/bevon/0.8" <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/termGroup> <http://rdfs.co/bevon/RelationGroup> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/publisher> <http://jayg.me/> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/creator> <http://jayg.me/> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/hasFormat> <http://rdfs.co/bevon/0.8/html> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#historyNote> _:B03f2db557273b234df61aa909378a8c1 <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/jgkim/bevon> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/example> _:Bac9c3e0bb9e491a3c1e2c39fa722240d <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/hasFormat> <http://rdfs.co/bevon/0.8/ttl> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    <div>\n      The master version of this vocabulary is maintained in <a\n      href=\"https://github.com/jgkim/bevon\">the GitHub repository</a> so others\n      can contribute edits and improvements.\n    </div>\n    " <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/example> _:B6226d6eaac8fa321fd7dcf07d69c757d <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/termGroup> <http://rdfs.co/bevon/ContainerGroup> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/termGroup> <http://rdfs.co/bevon/WhiskyGroup> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/description> "\n    Beverage Ontology is a Web vocabulary for describing beverages, mainly\n    alcoholic.\n    "@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/rights> "Copyright © 2013-2015 James G. Kim Some Rights Reserved." <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://rdfs.co/bevon/" <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/replaces> <http://rdfs.co/bevon/0.7> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2002/07/owl#versionInfo> "0.8" <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#changeNote> _:Be2aab9f2c5ac23ffff1c18f20120df20 <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#historyNote> _:B2c2aa718a0c7d7291d4d68a6e95070e9 <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#SemanticAsset> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    Most of the descriptions given here are from Wikipedia or from the websites\n    of the related products.\n    "@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/termGroup> <http://rdfs.co/bevon/CocktailGroup> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#historyNote> _:Be7b80dc56ca780951d39f8c9f7d78e80 <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bab71c4bd11e876940bf7608efb3ec52f <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/title> "BEVON: Beverage Ontology"@en <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#changeNote> _:B11a8e0d5c4b89f558d96f6ffdca6852e <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/issued> "2013-07-04+09:00"^^<http://www.w3.org/2001/XMLSchema#date> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/termGroup> <http://rdfs.co/bevon/BeerGroup> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#changeNote> _:B43c714345cff3ed9f009b3804ad31034 <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/isVersionOf> <http://rdfs.co/bevon/> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/termGroup> <http://rdfs.co/bevon/WineGroup> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/termGroup> <http://rdfs.co/bevon/CoreGroup> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/preferredNamespacePrefix> "bevon" <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/modified> "2015-07-23+09:00"^^<http://www.w3.org/2001/XMLSchema#date> <http://rdfs.co/bevon/> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/vocabula.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/vocabula.nt> <https://w3id.org/tree#relation> _:Bvocabulai .
+_:Bvocabulai <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bvocabulai <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/vocabulai.nt> .
+_:Bvocabulai <https://w3id.org/tree#value> "vocabulai" .
+_:Bvocabulai <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/vocabulai.nt> <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/vocabula.nt> <https://w3id.org/tree#relation> _:Bvocabular .
+_:Bvocabular <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bvocabular <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/vocabular.nt> .
+_:Bvocabular <https://w3id.org/tree#value> "vocabular" .
+_:Bvocabular <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/vocabular.nt> <https://w3id.org/tree#remainingItems> "704"^^<http://www.w3.org/2001/XMLSchema#int> .

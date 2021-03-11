@@ -1,0 +1,457 @@
+<http://dbpedia.org/ontology/organisationMember> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/OrganisationMember> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/organisationMember> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Organisation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/organisationMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/organisationMember> <http://www.w3.org/2000/01/rdf-schema#comment> "Identify the members of an organisation."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/organisationMember> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasMember> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/organisationMember> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:organisationMember> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/organisationMember> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/organisationMember> <http://www.w3.org/2000/01/rdf-schema#label> "Organisationsmitglied"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/organisationMember> <http://www.w3.org/2000/01/rdf-schema#label> "organisation member"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMemorial> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMemorial> <http://www.w3.org/2000/01/rdf-schema#label> "code gedenkteken"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMemorial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMemorial> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Memorial> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMemorial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://dbpedia.org/ontology/Code> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMemorial> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier for monuments of the Memorial type"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMemorial> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:codeMemorial> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMemorial> <http://www.w3.org/2000/01/rdf-schema#comment> "Code oorlogsmonument of ander gedenkteken"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMemorial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/codeMemorial> <http://www.w3.org/2000/01/rdf-schema#label> "memorial ID number"@en <http://dbpedia.org/ontology/> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Object> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2002/07/owl#disjointWith> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Complex> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#isAbstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#comment> "GM_Primitive (Figure 8) is the abstract root class of the geometric primitives. Its main purpose is to define the basic \"boundary\" operation that ties the primitives in each dimension together. A geometric primitive (GM_Primitive) is a geometric object that is not decomposed further into other primitives in the system. This includes curves and surfaces, even though they are composed of curve segments and surface patches, respectively. This composition is a strong aggregation: curve segments and surface patches cannot exist outside the context of a primitive.\nNOTE Most geometric primitives are decomposable infinitely many times. Adding a centre point to a line may split that line into two separate lines. A new curve drawn across a surface may divide that surface into two parts, each of which is a surface. This is the reason that the normal definition of primitive as \"non-decomposable\" is not plausible in a geometry model - the only non-decomposable object in geometry is a point.\nAny geometric object that is used to describe a feature is a collection of geometric primitives. A collection of geometric primitives may or may not be a geometric complex. Geometric complexes have additional properties such as closure by boundary operations and mutually exclusive component parts.\nGM_Primitive and GM_Complex share most semantics, in the meaning of operations, attributes and associations. There is an exception in that a GM_Primitive shall not contain its boundary (except in the trivial case of GM_Point where the boundary is empty), while a GM_Complex shall contain its boundary in all cases. This means that if an instantiated object implements GM_Object operations both as GM_Primitive and as a GM_Complex, the semantics of each set theoretic operation is determined by the its name resolution. Specifically, for a particular object such as GM_CompositeCurve, GM_Primitive::contains (returns FALSE for end points) is different from GM_Complex::contains (returns TRUE for end points). Further, if that object is cast as a GM_Primitive value and as a GM_Complex value, then the two values need not be equal as GM_Objects." <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2002/07/owl#disjointWith> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Aggregate> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2004/02/skos/core#notation> "GM_Primitive"^^<http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#ISOClassName> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry Primitive" <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.opengis.net/ont/gml#AbstractGeometricPrimitive> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#Process> <http://www.w3.org/2004/02/skos/core#notation> "OM_Process"^^<http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#ISOClassName> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "Process used in an observation, including sensors, algorithms, computation methods" <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "The class OM_Process (Figure 2) is an instance of the «metaclass» GF_FeatureType (ISO 19109:2005), which therefore represents a feature type. OM_Process is abstract, and has no attributes, operations or associations. It serves as the base class for observation processes. The purpose of an observation process is to generate an observation result. An instance of OM_Process is often an instrument or sensor, but may be a human observer, a simulator, or a process or algorithm applied to more primitive results used as inputs. \r\n\r\nNOTE\tISO 19115-2:2008 provides MI_Instrument, LE_Processing and LE_Algorithm, which could all be modelled as specializations of OM_Process. OGC SensorML [10] provides a model which is suitable for many observation procedures." <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#Process> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://def.seegrid.csiro.au/isotc211/iso19109/2005/feature#AnyFeature> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#Process> <http://www.w3.org/2002/07/owl#disjointWith> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#Observation> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#Process> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Observation process"@en <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/observation> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#SamplingFeatureCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "Collection of sampling features" <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#SamplingFeatureCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb3c17b2f7e6d112a572c831ae8914a17 <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#SamplingFeatureCollection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#SamplingFeatureCollection> <http://www.w3.org/2004/02/skos/core#notation> "SF_SamplingFeatureCollection"^^<http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#ISOClassName> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#SamplingFeatureCollection> <http://www.w3.org/2000/01/rdf-schema#label> "Sampling feature collection"@en <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#SamplingFeatureCollection> <http://www.w3.org/2000/01/rdf-schema#comment> "The class SF_SamplingFeatureCollection (Figure 9) is an instance of the «metaclass» GF_FeatureType (ISO 19109), which therefore represents a feature type. SF_SamplingFeatureCollection shall support one association." <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#SamplingFeatureCollection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling> .
+<http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling#SamplingFeatureCollection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://def.seegrid.csiro.au/isotc211/iso19109/2005/feature#AnyFeature> <http://def.seegrid.csiro.au/isotc211/iso19156/2011/sampling> .
+<http://elite.polito.it/ontologies/dogont.owl#MultipleTemperatureMeasurementNotificationFunctionality> <http://www.w3.org/2000/01/rdf-schema#comment> "Notifies the measurment of a temperature, through a proper temperature sensor"@en <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#MultipleTemperatureMeasurementNotificationFunctionality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#MultipleTemperatureMeasurementNotificationFunctionality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://elite.polito.it/ontologies/dogont.owl#ContinuousNotificationFunctionality> <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#MultipleTemperatureMeasurementNotificationFunctionality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B32c7bfed1d48722c6b0ca6dce6c91eab <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#TemperatureMeasurementNotificationFunctionality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8cf92192f878807ce6c775ff4e84ee2d <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#TemperatureMeasurementNotificationFunctionality> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://elite.polito.it/ontologies/dogont.owl#ContinuousNotificationFunctionality> <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#TemperatureMeasurementNotificationFunctionality> <http://www.w3.org/2000/01/rdf-schema#comment> "Notifies the measurment of a temperature, through a proper temperature sensor"@en <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#TemperatureMeasurementNotificationFunctionality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#TemperatureMeasurementNotificationFunctionality> <http://www.w3.org/2002/07/owl#disjointWith> <http://elite.polito.it/ontologies/dogont.owl#ThermostatNotificationFunctionality> <http://elite.polito.it/ontologies/dogont.owl> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#label> "corresponde con"@es <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#label> "corrisponde a"@it <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#label> "korrespondiert mit"@de <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#label> "corresponds to"@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://d-nb.info/standards/elementset/agrelon#> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "A normal property's (type rdf:Property) to-direction matches an n-ary concept (type rdfs:Class). \n2 mutually inverse normal properties match only 1 n-ary concept, because the meta statements must be identical for both 'to-direction' and 'fro-direction' of the relationship. \nThe normal property's fro-direction is related to the n-ary concept via correspondsToInverse."@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsToInverse> <http://www.w3.org/2000/01/rdf-schema#comment> "A normal property's (type rdf:Property) fro-direction matches an n-ary concept (type rdfs:Class). \n2 mutually inverse normal properties match only 1 n-ary concept, because the meta statements must be identical for both 'to-direction' and 'fro-direction' of the relationship. \nThe normal property's to-direction is related to the n-ary concept via correspondsTo."@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsToInverse> <http://www.w3.org/2000/01/rdf-schema#label> "corresponds to inverse"@en <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsToInverse> <http://www.w3.org/2000/01/rdf-schema#label> "corresponde inversamente con"@es <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsToInverse> <http://www.w3.org/2000/01/rdf-schema#label> "corrisponde inversamente a"@it <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsToInverse> <http://www.w3.org/2000/01/rdf-schema#label> "korrespondiert invers mit"@de <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsToInverse> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://d-nb.info/standards/elementset/agrelon#> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsToInverse> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsToInverse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://d-nb.info/standards/elementset/agrelon> .
+<http://d-nb.info/standards/elementset/agrelon#correspondsToInverse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://d-nb.info/standards/elementset/agrelon> .
+<https://saref.etsi.org/saref4envi/PeriodMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc1b2989105988f579e79e171d418b2f1 <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/PeriodMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Period measurement"@en <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/PeriodMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measured value over a period property. It is also linked to the period unit of measure in which the value is expressed and the timestamp of the measurement."@en <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/PeriodMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B17b739972998cc045c3c95f74828d4c2 <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/PeriodMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Measurement> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/PeriodMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://saref.etsi.org/core/" <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a measurement and the unit of measure in which the measurement value is expressed."@en <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/isMeasuredIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/isMeasuredIn> <http://www.w3.org/2000/01/rdf-schema#comment> "is measured in"@en <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/makesMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a sensor and the measurements it makes. Such measurement will link together the valur of the measurement, its unit of measure and the property to which it relates."@en <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/makesMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/makesMeasurement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "https://saref.etsi.org/core/" <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/makesMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "makes measurement"@en <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/FrequencyMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measured value made over a frequency property. It is also linked to the frequency unit of measure in which the value is expressed and the timestamp of the measurement."@en <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/FrequencyMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Frequency measurement"@en <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/FrequencyMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B868f6ca040b5d81ab7a276dbb5c2c1ad <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/FrequencyMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5bde7e08f80c97448ae84c7f17fe29e1 <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/FrequencyMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/FrequencyMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Measurement> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/HeightMeasurement> <http://www.w3.org/2000/01/rdf-schema#label> "Height measurement"@en <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/HeightMeasurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/HeightMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core/Measurement> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/HeightMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B746c55a66ab90e3677cab68069c740c6 <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/HeightMeasurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B742f0508455b04f7767b29acad93cc34 <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/saref4envi/HeightMeasurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measured value made over a height property. It is also linked to the height unit of measure in which the value is expressed and the timestamp of the measurement."@en <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the measured value made over a property. It is also linked to the unit of measure in which the value is expressed and the timestamp of the measurement."@en <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2000/01/rdf-schema#label> "Measurement"@en <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/core/UnitOfMeasure> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4envi/CommunicationProtocol> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4envi/Geometry> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2654620d3f51b7096cb8947eb78b7ca7 <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4envi/Light> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2ba75e75c4e2b8ece6eb9259610e60af <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcde9f2ac7efca619a2aca3471d0ccd60 <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B70e37e39c08ec8c7b15cbafb9620ec7b <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/core/Property> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4envi/CompassDirection> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B524bf4256088fbc76175b7b86f41fcae <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcd3ecdcf1081634e7af8baeec2a29547 <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B549878e6de8ca0c23e491a2e8076fbe9 <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4envi/CommunicationInterface> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/saref4envi/DigitalRepresentation> <https://saref.etsi.org/saref4envi/> .
+<https://saref.etsi.org/core/Measurement> <http://www.w3.org/2002/07/owl#disjointWith> <https://saref.etsi.org/core/Service> <https://saref.etsi.org/saref4envi/> .
+<http://inference-web.org/2.0/pml-provenance.owl#MethodRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://inference-web.org/2.0/pml-provenance.owl#InferenceRule> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#MethodRule> <http://www.w3.org/2000/01/rdf-schema#label> "Method Rule"@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#MethodRule> <http://www.w3.org/2000/01/rdf-schema#comment> "A method inference rule, uses patterns for premises and its conclusions, and additionally contains a method that must be applied.  In addition, \nthe conclusion needs to be a valid output of the method, using the premises.  For example, procedural attachment is a common encoding form for method rules."@en <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://inference-web.org/2.0/pml-provenance.owl#MethodRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://inference-web.org/2.0/pml-provenance.owl> .
+<http://lawd.info/ontology/Attestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://lawd.info/ontology/> .
+<http://lawd.info/ontology/Attestation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://lawd.info/ontology/EvidentiaryItem> <http://lawd.info/ontology/> .
+<http://lawd.info/ontology/Attestation> <http://www.w3.org/2000/01/rdf-schema#comment> "An Attestation models a piece of evidence for something in a text (e.g. the mention of a person in a document). Typically it is the conjunction of a Citation and an entity like a name or person."@en <http://lawd.info/ontology/> .
+<http://lemon-model.net/lemon#narrower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#narrower> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes that one sense is narrower than another. From a lexical point of view  this means replacing one lexical entry with another specializes the meaning of the phrase. From an ontological point of view this property makes not strong assertions. From a mapping point of view if the broader sense applies the narrower sense must also"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#narrower> <http://www.w3.org/2000/01/rdf-schema#range> <http://lemon-model.net/lemon#LexicalSense> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#narrower> <http://www.w3.org/2000/01/rdf-schema#label> "Narrower"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#narrower> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#LexicalSense> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#narrower> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lemon-model.net/lemon#senseRelation> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#narrower> <http://www.w3.org/2000/01/rdf-schema#label> "Plus restreint"@fr <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#narrower> <http://www.w3.org/2000/01/rdf-schema#label> "Enger"@nl <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#narrower> <http://www.w3.org/2000/01/rdf-schema#label> "Enger"@de <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#narrower> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#narrower> <http://www.w3.org/2000/01/rdf-schema#label> "Más estrecho"@es <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#incompatible> <http://www.w3.org/2000/01/rdf-schema#range> <http://lemon-model.net/lemon#LexicalSense> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#incompatible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#incompatible> <http://www.w3.org/2000/01/rdf-schema#comment> "Says that the two senses are disjoint. From a lexical point of view, this means substituting the lexical entries must change the meaning of the phrase. From an ontological point of view, this property is implied if both references are also disjoint, but does not imply disjointness, but non-equivalence of the references. For the mapping point of view  there is not instance when both mappings are valid."@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#incompatible> <http://www.w3.org/2000/01/rdf-schema#label> "Onverenigbaar"@nl <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#incompatible> <http://www.w3.org/2000/01/rdf-schema#label> "Incompatible"@fr <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#incompatible> <http://www.w3.org/2000/01/rdf-schema#label> "Incompatible"@es <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#incompatible> <http://www.w3.org/2000/01/rdf-schema#label> "Incompatible"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#incompatible> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lemon-model.net/lemon#senseRelation> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#incompatible> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#LexicalSense> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#incompatible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#incompatible> <http://www.w3.org/2000/01/rdf-schema#label> "Inkompatibel"@de <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#incompatible> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#broader> <http://www.w3.org/2000/01/rdf-schema#label> "Plus large"@fr <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#broader> <http://www.w3.org/2000/01/rdf-schema#label> "Más amplio"@es <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#broader> <http://www.w3.org/2000/01/rdf-schema#label> "Broader"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#broader> <http://www.w3.org/2000/01/rdf-schema#domain> <http://lemon-model.net/lemon#LexicalSense> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#broader> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://lemon-model.net/lemon#senseRelation> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#broader> <http://www.w3.org/2000/01/rdf-schema#comment> "Denotes that one sense is broader than another. From a lexical point of view  this means replacing one lexical entry with another generalizes the meaning of the phrase. From an ontological point of view this property makes not strong assertions. From a mapping point of view if the broader sense applies the narrower sense must also"@en <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#broader> <http://www.w3.org/2000/01/rdf-schema#label> "Breiter"@de <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#broader> <http://www.w3.org/2000/01/rdf-schema#label> "Breder"@nl <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#broader> <http://www.w3.org/2002/07/owl#inverseOf> <http://lemon-model.net/lemon#narrower> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#broader> <http://www.w3.org/2000/01/rdf-schema#range> <http://lemon-model.net/lemon#LexicalSense> <http://lemon-model.net/lemon> .
+<http://lemon-model.net/lemon#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://lemon-model.net/lemon> .
+<http://lod.taxonconcept.org/ontology/txn.owl#georeferenceProtocol> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.taxonconcept.org/ontology/txn.owl> <http://lod.taxonconcept.org/ontology/txn.owl> .
+<http://lod.taxonconcept.org/ontology/txn.owl#georeferenceProtocol> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://lod.taxonconcept.org/ontology/txn.owl> .
+<http://lod.taxonconcept.org/ontology/txn.owl#georeferenceProtocol> <http://www.w3.org/2000/01/rdf-schema#label> "georeferenceProtocol" <http://lod.taxonconcept.org/ontology/txn.owl> .
+<http://lod.taxonconcept.org/ontology/txn.owl#georeferenceProtocol> <http://www.w3.org/2000/01/rdf-schema#comment> "The method used to determine the latitude, longitude as a URI" <http://lod.taxonconcept.org/ontology/txn.owl> .
+<http://lod.taxonconcept.org/ontology/txn.owl#georeferenceProtocol> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://lod.taxonconcept.org/ontology/txn.owl> .
+<http://moat-project.org/ns#Meaning> <http://www.w3.org/2000/01/rdf-schema#label> "Tag Meaning" <http://moat-project.org/ns#> .
+<http://moat-project.org/ns#Meaning> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://moat-project.org/ns#> <http://moat-project.org/ns#> .
+<http://moat-project.org/ns#Meaning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcb5bc02ae3e56c788fb873fb8d530926 <http://moat-project.org/ns#> .
+<http://moat-project.org/ns#Meaning> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://moat-project.org/ns#> .
+<http://moat-project.org/ns#Meaning> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5ce5cc7e470dbba3f603467fc125cbed <http://moat-project.org/ns#> .
+<http://moat-project.org/ns#Meaning> <http://www.w3.org/2000/01/rdf-schema#comment> "A reified object to define a potential meaning for a Tag. The meaning is a unique and explicitely defined Semantic Web resource and is related to the agent that defined it with foaf:maker"@en <http://moat-project.org/ns#> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7106e5af1e8093a6dbb419355dc6b668 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B094183c308295dc2c22e7b9a38177637 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B661207f48b088bec3d527ff9e52122f4 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#Package_Metering> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4ee6fa9eeb6f0b3e42082598732a77de <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4fb8c89fba9dca0aa2226134f3afef90 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2460680bb8977738b3350bed5c6c3298 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba41b9e396901aa191818602690aa998a <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B90b3ac32791047af082bcf492fc3df12 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#comment> "Multiplier applied at the meter." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bac8fb4896233fe9eec2c36bc3e987ce6 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#IdentifiedObject> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc8f0d0a3ee3a4853ca4ebd7967206669 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7a41addc2e2917ecb7cd111ea880d460 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B57423d785403aa920fda68a0abdebea7 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplier> <http://www.w3.org/2000/01/rdf-schema#label> "MeterMultiplier" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplierKind.kH> <http://www.w3.org/2000/01/rdf-schema#label> "kH" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplierKind.kH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplierKind> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterMultiplierKind.kH> <http://www.w3.org/2000/01/rdf-schema#comment> "Meter kh (watthour) constant. The number of watthours that must be applied to the meter to cause one disk revolution for an electromechanical meter or the number of watthours represented by one increment pulse for an electronic meter." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter.formNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter.formNumber> <http://www.w3.org/2000/01/rdf-schema#label> "formNumber" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter.formNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Meter form designation per ANSI C12.10 or other applicable standard. An alphanumeric designation denoting the circuit arrangement for which the meter is applicable and its specific terminal arrangement." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter.formNumber> <http://langdale.com.au/2005/UML#hasStereotype> <http://langdale.com.au/2005/UML#attribute> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#ReadingType.measuringPeriod> <http://www.w3.org/2000/01/rdf-schema#label> "measuringPeriod" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#ReadingType.measuringPeriod> <http://langdale.com.au/2005/UML#hasStereotype> <http://langdale.com.au/2005/UML#attribute> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#ReadingType.measuringPeriod> <http://www.w3.org/2000/01/rdf-schema#comment> "Time attribute inherent or fundamental to the reading value (as opposed to 'macroPeriod' that supplies an \"adjective\" to describe aspects of a time period with regard to the measurement). It refers to the way the value was originally measured and not to the frequency at which it is reported or presented. For example, an hourly interval of consumption data would have value 'hourly' as an attribute. However in the case of an hourly sampled voltage value, the meterReadings schema would carry the 'hourly' interval size information.\r\nIt is common for meters to report demand in a form that is measured over the course of a portion of an hour, while enterprise applications however commonly assume the demand (in kW or kVAr) normalised to 1 hour. The sytem that receives readings directly from the meter therefore must perform this transformation before publishing readings for use by the other enterprise systems. The scalar used is chosen based on the block size (not any sub-interval size)." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#ReadingType.measuringPeriod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbf772a765a781097cdbe58eb548b76be <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B848b91ab4b35fd73bf68fd537f64b777 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bac81d98b2e532555f996fcb17ff232ee <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba26bf8e718a7fa335a006e9fd33cb897 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B93db6e09f77f275d410a0e7f0050201e <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B82cf4d3c9f97cc6678af6fe5cc4f3105 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3fa368a0dfd89f7d12c35dc497519baa <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#IdentifiedObject> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B16b7c84d76031c147ba94851076118c8 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0d597bfd7e9a963db171a2878d65bdd0 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#Package_Metering> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#comment> "Set of values obtained from the meter." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd7170406b30cbc88aaa725e7bfe08092 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4f8074cbcd42e9a906249a3857e8cb6b <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb703b6142ff794eb9fde0244322c1c60 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B99138d151396ddd45181c182f6d9f2de <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B422330b0720ef78e5a0941beb7351727 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8958f6e5bebf6058c881c927b69fba19 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0e133b0c4f013e0821120ec879f05725 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bdc25e95114bc7c75aa24083e38434fb8 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#label> "MeterReading" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be2827a8e3555e868d2fae99934272461 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcc82e91edeb272597057b726ccc8671e <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#MeterReading> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bba8cab7716175dcc645ced5c87f29027 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint.isVirtual> <http://www.w3.org/2000/01/rdf-schema#label> "isVirtual" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint.isVirtual> <http://www.w3.org/2000/01/rdf-schema#comment> "If true, this usage point is virtual, i.e., no physical location exists in the network where a meter could be located to collect the meter readings. For example, one may define a virtual usage point to serve as an aggregation of usage for all of a companies premises distributed widely across the distribution territory. Otherwise, the usage point is physical, i.e., there is a logical point in the network where a meter could be located to collect meter readings." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint.isVirtual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint.isVirtual> <http://langdale.com.au/2005/UML#hasStereotype> <http://langdale.com.au/2005/UML#attribute> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#AmiBillingReadyKind> <http://www.w3.org/2000/01/rdf-schema#comment> "Lifecycle states of the metering installation at a usage point with respect to readiness for billing via advanced metering infrastructure reads." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#AmiBillingReadyKind> <http://www.w3.org/2000/01/rdf-schema#label> "AmiBillingReadyKind" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#AmiBillingReadyKind> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#AmiBillingReadyKind> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#Package_Metering> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#AmiBillingReadyKind> <http://langdale.com.au/2005/UML#hasStereotype> <http://langdale.com.au/2005/UML#enumeration> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#EndDeviceFunctionKind.relaysProgramming> <http://www.w3.org/2000/01/rdf-schema#comment> "Support for one or more relays that may be programmable in the meter (and tied to TOU, time pulse, load control or other functions)." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#EndDeviceFunctionKind.relaysProgramming> <http://www.w3.org/2000/01/rdf-schema#label> "relaysProgramming" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#EndDeviceFunctionKind.relaysProgramming> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#EndDeviceFunctionKind> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Package_PaymentMetering> <http://www.w3.org/2000/01/rdf-schema#label> "PaymentMetering" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Package_PaymentMetering> <http://www.w3.org/2000/01/rdf-schema#comment> "This package is an extension of the Metering package and contains the information classes that support specialised applications such as prepayment metering. These classes are generally associated with the collection and control of revenue from the customer for a delivered service." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Package_PaymentMetering> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#Package_IEC61968> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Package_PaymentMetering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://langdale.com.au/2005/UML#Package> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint.amiBillingReady> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint.amiBillingReady> <http://www.w3.org/2000/01/rdf-schema#label> "amiBillingReady" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint.amiBillingReady> <http://www.w3.org/2000/01/rdf-schema#comment> "Tracks the lifecycle of the metering installation at a usage point with respect to readiness for billing via advanced metering infrastructure reads." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#UsagePoint.amiBillingReady> <http://langdale.com.au/2005/UML#hasStereotype> <http://langdale.com.au/2005/UML#attribute> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#label> "Meter" <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#Package_Metering> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6714140d4ba5dc1c5a4137c8a94f572f <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1d78beaa30ad6de7e0db9207d688c9c9 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8ac1a8d1be4dd24022ad05e8f17d4714 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba128e0b6ef982c90057d660e87c50cb4 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B09c5fc46302be2fe3b9217d4ee60b0ab <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd1376d4239ee75f6f0ad603247c3e86f <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bafa873687679742e6cf5235a32770616 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.cerise-project.nl/energy/def/cim-smartgrid#EndDevice> <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3f6677b13490ebaa9785149ec2729664 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B04541ab9b8c1f95a4a2f43564d7903ba <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B664998c8565de626a11f17411ff68c13 <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0cf72e675840a9c6164d15812c4453ef <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical asset that performs the metering role of the usage point. Used for measuring consumption and detection of events." <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.cerise-project.nl/energy/def/cim-smartgrid#Meter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B26e824e07051e57e2c1f702ca40fd61f <http://ns.cerise-project.nl/energy/def/cim-smartgrid> .
+<http://ns.inria.fr/ast/sql#Avg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://ns.inria.fr/ast/sql#> .
+<http://ns.inria.fr/ast/sql#Avg> <http://www.w3.org/2000/01/rdf-schema#comment> "The SQL aggregate function that returns the mean of the given expression."@en <http://ns.inria.fr/ast/sql#> .
+<http://ns.inria.fr/ast/sql#Avg> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://ns.inria.fr/ast/sql#> <http://ns.inria.fr/ast/sql#> .
+<http://ns.inria.fr/ast/sql#Avg> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ns.inria.fr/ast/sql#AggregateFunction> <http://ns.inria.fr/ast/sql#> .
+<http://ns.inria.fr/ast/sql#Avg> <http://www.w3.org/2000/01/rdf-schema#label> "Average"@en <http://ns.inria.fr/ast/sql#> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#hasForMedium> <http://www.w3.org/2000/01/rdf-schema#label> "È un medium di tipo"@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#hasForMedium> <http://www.w3.org/2000/01/rdf-schema#comment> "Propriété utilisée quand le libellé d'un tag indique de quel média la représentation de la ressource à laquelle on accède ressortit (\"forum\", \"vidéo\", \"photo\", \"page Web\", \"Webservice\", etc.)."@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#hasForMedium> <http://www.w3.org/2000/01/rdf-schema#comment> "Proprietà usata quando il contenuto di una tag indica il medium a cui appartiene la rappresentazione Web della risorsa a cui si accede (\"forum\", \"vidéo\", \"photo\", \"pagina Web\", \"Webservice\", etc.)."@it <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#hasForMedium> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://ns.inria.fr/nicetag/2010/09/09/voc#isRelatedTo> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#hasForMedium> <http://www.w3.org/2000/01/rdf-schema#label> "Es un medium de tipo"@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#hasForMedium> <http://www.w3.org/2000/01/rdf-schema#comment> "Eigenschap die gebruikt wordt wanneer het label van een tag aangeeft tot welk medium een via het web toegankelijke representatie behoort (\"forum\", \"video\", \"foto\", \"webpagina\", \"webdienst\", etc.)"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#hasForMedium> <http://www.w3.org/2000/01/rdf-schema#comment> "Propriedad usada cuando el contenido de una etiqueta indica el medium al que pertenece la representación Web del recurso al cual se accede (\"forum\", \"video\", \"foto\", \"página Web\", \"Webservice\", etc.)."@es <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#hasForMedium> <http://www.w3.org/2000/01/rdf-schema#label> "Est un medium de type"@fr <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#hasForMedium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#hasForMedium> <http://www.w3.org/2000/01/rdf-schema#label> "Is het medium"@nl <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#hasForMedium> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontologydesignpatterns.org/ont/web/irw.owl#WebRepresentation> <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#hasForMedium> <http://www.w3.org/2000/01/rdf-schema#comment> "Property used when the label of a tag indicates the medium which an HTTP-accessible Web representation belongs to (\"forum\", \"video\", \"photo\", \"Webpage\", \"Webservice\", etc.)."@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://ns.inria.fr/nicetag/2010/09/09/voc#hasForMedium> <http://www.w3.org/2000/01/rdf-schema#label> "Has for medium"@en <http://ns.inria.fr/nicetag/2010/09/09/voc> .
+<http://open-services.net/ns/asset#content> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open-services.net/ns/asset#> .
+<http://open-services.net/ns/asset#content> <http://www.w3.org/2000/01/rdf-schema#label> "content" <http://open-services.net/ns/asset#> .
+<http://open-services.net/ns/asset#content> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://open-services.net/bin/view/Main/AssetMgSpecificationV2#Artifact> <http://open-services.net/ns/asset#> .
+<http://open-services.net/ns/asset#content> <http://www.w3.org/2000/01/rdf-schema#range> <http://open-services.net/ns/asset#Artifact> <http://open-services.net/ns/asset#> .
+<http://open-services.net/ns/asset#content> <http://www.w3.org/2000/01/rdf-schema#comment> "The media resource reference URI (the artifact bytes).\n\t\t" <http://open-services.net/ns/asset#> .
+<http://open-services.net/ns/asset#content> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open-services.net/ns/asset#> <http://open-services.net/ns/asset#> .
+<http://open.vocab.org/terms/stickiness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/stickiness> <http://www.w3.org/2000/01/rdf-schema#label> "Stickiness"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/stickiness> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/stickiness> <http://schemas.talis.com/2005/dir/schema#etag> "\"4162307a-3a97-4e5e-82c1-dc28da32b515\"" <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/stickiness> <http://www.w3.org/2000/01/rdf-schema#comment> "The the measure of how sticky something is"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/stickiness> <http://purl.org/net/vocab/2004/03/label#plural> "Stickiness"@en <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/stickiness> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://open.vocab.org/terms> <http://open.vocab.org/terms> .
+<http://open.vocab.org/terms/stickiness> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <http://open.vocab.org/terms/stickiness.html> <http://open.vocab.org/terms> .
+<http://openprovenance.org/model/opmo#account> <http://www.w3.org/2000/01/rdf-schema#label> "account" <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#account> <http://www.w3.org/2000/01/rdf-schema#range> <http://openprovenance.org/model/opmo#Account> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#account> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://openprovenance.org/model/opmo> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#account> <http://www.w3.org/2000/01/rdf-schema#domain> _:B56f4bd7da2a13daa0fdabfe41f111a61 <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#account> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://openprovenance.org/model/opmo> .
+<http://openprovenance.org/model/opmo#account> <http://www.w3.org/2000/01/rdf-schema#comment> "Object Property to express the member of an OPM entity to some Account." <http://openprovenance.org/model/opmo> .
+<http://owlrep.eu01.aws.af.cm/fridge#EnergyObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://owlrep.eu01.aws.af.cm/fridge> .
+<http://owlrep.eu01.aws.af.cm/fridge#EnergyObservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://owlrep.eu01.aws.af.cm/fridge> .
+<http://owlrep.eu01.aws.af.cm/fridge#EnergyObservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B23cf66cf804745cc9e15262d6178ba91 <http://owlrep.eu01.aws.af.cm/fridge> .
+<http://owlrep.eu01.aws.af.cm/fridge#EnergyObservation> <http://www.w3.org/2000/01/rdf-schema#comment> "An energy observation is the main class of the measurment system. The observation connects to the sensing device, the measurement property, the observed appliance, the measurment result, and the time of measurement." <http://owlrep.eu01.aws.af.cm/fridge> .
+<http://owlrep.eu01.aws.af.cm/fridge#EnergyObservation> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Observation" <http://owlrep.eu01.aws.af.cm/fridge> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Phrase> <http://www.w3.org/2000/01/rdf-schema#label> "Phrase"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Phrase> <http://www.w3.org/2002/07/owl#versionInfo> "0.1.1" <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Phrase> <http://www.w3.org/2000/01/rdf-schema#comment> "A nif:Phrase can be a nif:String, that is a chunk of several words or a word itself (e.g. a NounPhrase as a Named Entity). The term is underspecified and can be compatible with many defintitions of phrase. Please subClass it to specify the meaning (e.g. for Chunking or Phrase Structure Grammar). Example: ((My dog)(also)(likes)(eating (sausage))) \n    Changelog:\n    * 0.1.1 fixed spelling\n    " <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Phrase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Phrase> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#Structure> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/nif-core#> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/meteo/aws#PrecipitationSensor> <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#comment> "Thin laser light sheets crossing the measuring volume: particle volume, speed (forward scatter)" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb5e08f156f7adb72a40a8d4ae60edcfc <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1549c75f836d90fa2d1556eff5a4ac07 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf2e1329d277b15734c109b7a9c87bba8 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfb4eded92f901e86d5784a98e6cf6492 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6904ce351de4b1585c532e855436d592 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B895dbd592d69ad7ca2a0286f551cb0b8 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#label> "Optical disdrometer" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0cdfaa46b8ceada251ce187d1b964680 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B59d3dd1fcda758c12ab13f67d11ae1ea <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcea1a2729d92f68f27e9e22558d885a5 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6c928214388a1e5ac0db4658b3f7a6f5 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7f048dafeb2266eaa17aa7f09805da97 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd4cc293e8b430904ff85b304c24029aa <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://purl.org/dc/elements/1.1/source> "skos:closeMatch Optical disdrometer [IOM-99_FI-RI 2.2.2a] http://www.wmo.int/pages/prog/www/IMOP/publications/IOM-99_FI-RI.pdf" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0f78c0b47d7cc4b48782d541d51bb135 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3cd120a57c63fd249e473d21d793b056 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd296c4734fb24b92b7a21b5c3483d9d0 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#OpticalDisdrometer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B02610c20f455e973129b7c03b943220e <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#DerivedUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#DerivedUnit> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'DerivedUnit' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#DerivedUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "A DerivedUnit is a Unit that represents a measurement unit that is defined as a product of powers of one or more other\nmeasurement units.\nFor example the measurement unit \"metre per second\" for \"velocity\" is specified as the product of \"metre\" to the power one\ntimes \"second\" to the power minus one" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#DerivedUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B999732837c29574f4780e4c576ea0db6 <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#DerivedUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B813db75044b02139498349c1aee6d810 <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#DerivedUnit> <http://www.w3.org/2000/01/rdf-schema#label> "DerivedUnit" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#DerivedUnit> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.omgsysml.org/qudv#Unit" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#DerivedUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/qu/qu#Unit> <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#DerivedUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/qu" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#scaleValueDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#IrreflexiveProperty> <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#scaleValueDefinition> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.oclc.org/NET/ssnx/qu/qu#ScaleValueDefinition> <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#scaleValueDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#scaleValueDefinition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/qu" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#scaleValueDefinition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#scaleValueDefinition> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.omgsysml.org/qudv#Scale" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#scaleValueDefinition> <http://www.w3.org/2000/01/rdf-schema#label> "scaleValueDefinition" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#scaleValueDefinition> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'valueDefinition' [SysML 1.2-QUDV] http://www.omgwiki.org/OMGSysML/doku.php?id=sysml-qudv:quantities_units_dimensions_values_qudv" <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.oclc.org/NET/ssnx/qu/qu#scaleValueDefinition> <http://www.w3.org/2000/01/rdf-schema#comment> "Ordered set of ScaleValueDefinition that specifies the defined numerical value(s) and textual definition(s) for the measurement scale." <http://purl.oclc.org/NET/ssnx/qu/qu> .
+<http://purl.org/cld/terms/itemFormat> <http://www.w3.org/2000/01/rdf-schema#label> "Item Format"@en <http://purl.org/cld/terms/> .
+<http://purl.org/cld/terms/itemFormat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/cld/terms/> <http://purl.org/cld/terms/> .
+<http://purl.org/cld/terms/itemFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/cld/terms/> .
+<http://purl.org/cld/terms/itemFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "The media type, physical or digital, of one or more items within the collection."@en <http://purl.org/cld/terms/> .
+<http://purl.org/cld/terms/itemFormat> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dc/dcmitype/Collection> <http://purl.org/cld/terms/> .
+<http://purl.org/co/element> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/co/Collection> <http://purl.org/co> .
+<http://purl.org/co/element> <http://www.w3.org/2000/01/rdf-schema#label> "has element"@en <http://purl.org/co> .
+<http://purl.org/co/element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/co> .
+<http://purl.org/co/element> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B714b4ada08ed8518c6e1d6b7228ce3df <http://purl.org/co> .
+<http://purl.org/co/element> <http://www.w3.org/2000/01/rdf-schema#comment> "The link to the members of a collection"@en <http://purl.org/co> .
+<http://purl.org/dc/terms/MESH> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://purl.org/dc/terms/issued> "2000-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of labeled concepts specified by the Medical Subject Headings."@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.nlm.nih.gov/mesh/meshhome.html> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://www.w3.org/2000/01/rdf-schema#label> "MeSH"@en <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#MESH-003> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/MESH> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/dc/terms/> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/me+the.nt> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/me+the.nt> <https://w3id.org/tree#relation> _:BmeaX2Bthe .
+_:BmeaX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmeaX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/mea+the.nt> .
+_:BmeaX2Bthe <https://w3id.org/tree#value> "mea" .
+_:BmeaX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmeaX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/mea+the.nt> <https://w3id.org/tree#remainingItems> "278"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/me+the.nt> <https://w3id.org/tree#relation> _:BmecX2Bthe .
+_:BmecX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmecX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/mec+the.nt> .
+_:BmecX2Bthe <https://w3id.org/tree#value> "mec" .
+_:BmecX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmecX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/mec+the.nt> <https://w3id.org/tree#remainingItems> "18"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/me+the.nt> <https://w3id.org/tree#relation> _:BmedX2Bthe .
+_:BmedX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmedX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/med+the.nt> .
+_:BmedX2Bthe <https://w3id.org/tree#value> "med" .
+_:BmedX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmedX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/med+the.nt> <https://w3id.org/tree#remainingItems> "106"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/me+the.nt> <https://w3id.org/tree#relation> _:BmeeX2Bthe .
+_:BmeeX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmeeX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/mee+the.nt> .
+_:BmeeX2Bthe <https://w3id.org/tree#value> "mee" .
+_:BmeeX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmeeX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/mee+the.nt> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/me+the.nt> <https://w3id.org/tree#relation> _:BmegX2Bthe .
+_:BmegX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmegX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/meg+the.nt> .
+_:BmegX2Bthe <https://w3id.org/tree#value> "meg" .
+_:BmegX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmegX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/meg+the.nt> <https://w3id.org/tree#remainingItems> "17"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/me+the.nt> <https://w3id.org/tree#relation> _:BmelX2Bthe .
+_:BmelX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmelX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/mel+the.nt> .
+_:BmelX2Bthe <https://w3id.org/tree#value> "mel" .
+_:BmelX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmelX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/mel+the.nt> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/me+the.nt> <https://w3id.org/tree#relation> _:BmemX2Bthe .
+_:BmemX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmemX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/mem+the.nt> .
+_:BmemX2Bthe <https://w3id.org/tree#value> "mem" .
+_:BmemX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmemX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/mem+the.nt> <https://w3id.org/tree#remainingItems> "82"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/me+the.nt> <https://w3id.org/tree#relation> _:BmenX2Bthe .
+_:BmenX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmenX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/men+the.nt> .
+_:BmenX2Bthe <https://w3id.org/tree#value> "men" .
+_:BmenX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmenX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/men+the.nt> <https://w3id.org/tree#remainingItems> "25"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/me+the.nt> <https://w3id.org/tree#relation> _:BmerX2Bthe .
+_:BmerX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmerX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/mer+the.nt> .
+_:BmerX2Bthe <https://w3id.org/tree#value> "mer" .
+_:BmerX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmerX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/mer+the.nt> <https://w3id.org/tree#remainingItems> "24"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/me+the.nt> <https://w3id.org/tree#relation> _:BmesX2Bthe .
+_:BmesX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmesX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/mes+the.nt> .
+_:BmesX2Bthe <https://w3id.org/tree#value> "mes" .
+_:BmesX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmesX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/mes+the.nt> <https://w3id.org/tree#remainingItems> "27"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/me+the.nt> <https://w3id.org/tree#relation> _:BmetX2Bthe .
+_:BmetX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmetX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/met+the.nt> .
+_:BmetX2Bthe <https://w3id.org/tree#value> "met" .
+_:BmetX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmetX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/met+the.nt> <https://w3id.org/tree#remainingItems> "95"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/me+the.nt> <https://w3id.org/tree#relation> _:BmexX2Bthe .
+_:BmexX2Bthe <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmexX2Bthe <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/mex+the.nt> .
+_:BmexX2Bthe <https://w3id.org/tree#value> "mex" .
+_:BmexX2Bthe <https://w3id.org/tree#value> "the" .
+_:BmexX2Bthe <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/mex+the.nt> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
