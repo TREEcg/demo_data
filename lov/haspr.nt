@@ -33,6 +33,7 @@
 <http://purl.org/ipo/core#hasPreCondition> <http://www.w3.org/2000/01/rdf-schema#label> "hasPreCondition"@en <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#hasPreCondition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ipo/core> <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#hasPreCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a precondition for the Action be executed.\n\nA precondition may represent a prerequisite for execution of the Action, without which it is not guaranteed correct execution."@en <http://purl.org/ipo/core> .
+<https://w3id.org/BCI-ontology#hasPrevious> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba3d14a484da55e8045bc8ca63bfd4a5f <https://w3id.org/BCI-ontology> .
 <https://w3id.org/BCI-ontology#hasPrevious> <http://www.w3.org/2004/02/skos/core#scopeNote> "<p>Connecting a (<a>Context.Scene</a> <em>or</em> <a>Record</a> <em>or</em>  <a>RecordedData</a> <em>or</em> <a>DataBlock</a>) with its <em><span style=\"text-decoration: underline;\">previous</span></em> (<a>Context.Scene</a> <em>or</em> <a>Record</a> <em>or</em>  <a>RecordedData</a> <em>or</em> <a>DataBlock</a>).</p>"^^<http://www.w3.org/2000/01/rdf-schema#Literal> <https://w3id.org/BCI-ontology> .
 <https://w3id.org/BCI-ontology#hasPrevious> <http://www.w3.org/2004/02/skos/core#definition> "<p>Connects a (<a>Context.Scene</a> <em>or</em> <a>Record</a> <em>or</em> <a>RecordedData</a> <em>or</em> <a>DataBlock</a>) with its <span style=\"text-decoration: underline;\"><em>previous</em></span> (<a>Context.Scene</a> <em>or</em> <a>Record</a> <em>or</em> <a>RecordedData</a> <em>or</em> <a>DataBlock</a>) of the sequence.</p>"^^<http://www.w3.org/2000/01/rdf-schema#Literal> <https://w3id.org/BCI-ontology> .
 <https://w3id.org/BCI-ontology#hasPrevious> <http://www.w3.org/2004/02/skos/core#changeNote> "%STATUS_STABLE%"^^<http://www.w3.org/2000/01/rdf-schema#Literal> <https://w3id.org/BCI-ontology> .
@@ -42,8 +43,7 @@
 <https://w3id.org/BCI-ontology#hasPrevious> <http://purl.org/dc/dcmitype/StillImage> "DataBlock.png"^^<http://www.w3.org/2000/01/rdf-schema#Literal> <https://w3id.org/BCI-ontology> .
 <https://w3id.org/BCI-ontology#hasPrevious> <http://purl.org/dc/terms/modified> "$ 02:50 AM 2016-07-07 $"^^<http://www.w3.org/2000/01/rdf-schema#Literal> <https://w3id.org/BCI-ontology> .
 <https://w3id.org/BCI-ontology#hasPrevious> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/BCI-ontology> .
-<https://w3id.org/BCI-ontology#hasPrevious> <http://www.w3.org/2000/01/rdf-schema#range> _:B9bea5f66885823b5b8529a6aeac589fa <https://w3id.org/BCI-ontology> .
-<https://w3id.org/BCI-ontology#hasPrevious> <http://www.w3.org/2000/01/rdf-schema#domain> _:B9b0edc7ee2af72f24b554c597aba86ce <https://w3id.org/BCI-ontology> .
+<https://w3id.org/BCI-ontology#hasPrevious> <http://www.w3.org/2000/01/rdf-schema#range> _:Be620d0ec9daba2950d8dcb788949aaa8 <https://w3id.org/BCI-ontology> .
 <https://w3id.org/BCI-ontology#hasPrevious> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/BCI-ontology> .
 <https://w3id.org/BCI-ontology#hasPrevious> <http://purl.org/dc/dcmitype/StillImage> "Context.Scene.png"^^<http://www.w3.org/2000/01/rdf-schema#Literal> <https://w3id.org/BCI-ontology> .
 <https://w3id.org/BCI-ontology#hasPrevious> <http://purl.org/dc/terms/title> "hasPrevious"^^<http://www.w3.org/2000/01/rdf-schema#Literal> <https://w3id.org/BCI-ontology> .
@@ -56,9 +56,9 @@
 <https://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "has property" <https://www.w3.org/ns/ssn> .
 <https://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2002/07/owl#inverseOf> <https://www.w3.org/ns/ssn/isPropertyOf> <https://www.w3.org/ns/ssn> .
 <https://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "The chain here ensures that the observed property of an observation is a property of the feature of interest.  This restriction is written in O&M; here we can enforce it formally.\n\nThe more obvious formulation:\n\nfeatureOfInterest o hasProperty SubPropertyOf observedProperty\n\ncan't be used, because (by the OWL2 decidability restrictions) that would mean cardinality restrictions couldn't be applied to observedProperty (see definition of Observation)." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B063e24636de79619f2efc4929f014b94 <https://www.w3.org/ns/ssn> .
 <https://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://www.w3.org/ns/ssn> .
 <https://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a FeatureOfInterest and a Property of that feature." <https://www.w3.org/ns/ssn> .
-<https://www.w3.org/ns/ssn/hasProperty> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:Baedbdcc1ae976498912109add53c5ff8 <https://www.w3.org/ns/ssn> .
 <http://purl.oclc.org/NET/ssnx/ssn#observedProperty> <http://www.w3.org/2000/01/rdf-schema#label> "Observed Property" <http://purl.org/iot/ontology/fiesta-iot> .
 <http://purl.oclc.org/NET/ssnx/ssn#observedProperty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/iot/ontology/fiesta-iot> .
 <http://purl.oclc.org/NET/ssnx/ssn#observedProperty> <http://purl.org/dc/elements/1.1/source> "skos:exactMatch 'observedProperty' [O&M - ISO/DIS 19156] \n\t\t                    http://portal.opengeospatial.org/files/?artifact_id=41579" <http://purl.org/iot/ontology/fiesta-iot> .
@@ -73,10 +73,10 @@
 <http://caressesrobot.org/ontology#hasPrep-object> <http://www.w3.org/2000/01/rdf-schema#comment> "Field used for automatically building sentences"^^<http://w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> <http://caressesrobot.org/ontology> .
 <http://caressesrobot.org/ontology#hasPrep-object> <http://www.w3.org/2000/01/rdf-schema#label> "hasPrep-object"@en <http://caressesrobot.org/ontology> .
 <http://www.purl.org/drammar#hasPropositionalContent> <http://www.w3.org/2000/01/rdf-schema#comment> "hasPropositionalContent links a BeliefSchema or a GoalSchema to the its\n            content (a factual state or process), that is, the Process or State that is the actual\n            content of the belief or the goal." <http://www.purl.org/drammar> .
+<http://www.purl.org/drammar#hasPropositionalContent> <http://www.w3.org/2000/01/rdf-schema#domain> _:B087adaa878c8a7418bdfe305da666783 <http://www.purl.org/drammar> .
 <http://www.purl.org/drammar#hasPropositionalContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.purl.org/drammar> .
 <http://www.purl.org/drammar#hasPropositionalContent> <http://www.w3.org/2000/01/rdf-schema#label> "hasPropositionalContent" <http://www.purl.org/drammar> .
 <http://www.purl.org/drammar#hasPropositionalContent> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.purl.org/drammar#isPropositionalContentOf> <http://www.purl.org/drammar> .
-<http://www.purl.org/drammar#hasPropositionalContent> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bdfdad320e59bbfa75e1fb836b44b6625 <http://www.purl.org/drammar> .
 <http://www.purl.org/drammar#hasPropositionalContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://www.purl.org/drammar> .
 <http://www.purl.org/drammar#isPropositionalContentOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.purl.org/drammar> .
 <http://www.purl.org/drammar#isPropositionalContentOf> <http://www.w3.org/2000/01/rdf-schema#comment> "Inverse of hasPropositionalContent. It links a BeliefSchema or a GoalSchema to\n            a State or Process." <http://www.purl.org/drammar> .

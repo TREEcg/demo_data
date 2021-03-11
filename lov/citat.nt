@@ -1,6 +1,6 @@
 <http://purl.org/spar/cito/Citation> <http://www.w3.org/2000/01/rdf-schema#label> "citation"@en <http://purl.org/spar/cito> .
 <http://purl.org/spar/cito/Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
-<http://purl.org/spar/cito/Citation> <http://www.w3.org/2002/07/owl#equivalentClass> _:B04968240c6a322af912cf2d61c8fb4c0 <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/2002/07/owl#equivalentClass> _:B47d2bb96462d519660d17fe0f9f0738b <http://purl.org/spar/cito> .
 <http://purl.org/spar/cito/Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation is a conceptual directional link from a citing entity to a cited entity, created by a human performative act of making a citation, typically instantiated by the inclusion of a bibliographic reference (biro:BibliographicReference) in the reference list of the citing entity, or by the inclusion within the citing entity of a link, in the form of an HTTP Uniform Resource Locator (URL), to a resource on the World Wide Web.\n\nThe time span of a citation, i.e. the interval between the publication year of the citing entity and the publication year of the cited entity, can be recorded using the data property cito:hasCitationTimeSpan.\n\nThe nature or type of a citation can be characterized by using CiTO object properties, e.g. http://purl.org/spar/cito/citesAsDataSource (definition: “The citing entity cites the cited entity as a source of data”).  \n\nThis CiTO class cito:Citation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties. \n\nFor example, the following RDF statement\n\n     :paperA cito:extends :paperB .\n\ncan be alternatively described as follows\n\n     :thisCitation a cito:Citation ; \n          cito:hasCitingEntity :paperA ;\n          cito:hasCitationCharacterization cito:extends ;\n          cito:hasCitedEntity :paperB .\n\nThis usage involved OWL2 punning, whereby a CiTO object property, such as the aforementioned cito:extends, is used as the object of the OWL assertion.\n\n     :thisCitation cito:hasCitationCharacterization cito:extends .\n\nUsing such OWL2 punning (described at http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), the CiTO object property is considered as a proper named individual of the class owl:Thing. \n\nSuch reification of citation acts can be very useful, since it permits one to combine these CiTO properties with other vocabularies, or to handle situations in which none of the citation characterizations available in CiTO are applicable.  \n\nSuch situations can be resolved by the creation of a user-defined citation characterization, for example by using the Open Annotation Data Model, as explained at http://semanticpublishing.wordpress.com/2013/07/03/extending-cito-for-open-annotations/."@en <http://purl.org/spar/cito> .
 <http://purl.org/spar/cito/hasCitedEntity> <http://www.w3.org/2000/01/rdf-schema#label> "has cited entity"@en <http://purl.org/spar/cito> .
 <http://purl.org/spar/cito/hasCitedEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
@@ -41,9 +41,9 @@
 <http://purl.org/spar/pso/open-access> <http://www.w3.org/2000/01/rdf-schema#label> "open access"@en <http://purl.org/spar/pso> .
 <http://purl.org/spar/pso/open-access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/pso/PublicationStatus> <http://purl.org/spar/pso> .
 <http://purl.org/spar/pso/open-access> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/pso> .
-<http://purl.uniprot.org/core/Submission_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4ddf68072463cad906ec4ac6b596c01b <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Submission_Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "Data that was submitted directly to a database." <http://purl.uniprot.org/core/> .
-<http://purl.uniprot.org/core/Submission_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be03199466963b8a58ed17806d3160502 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Submission_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1a7f3c6925364c301886f13f738cd75a <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Submission_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B77cc4a77bdca0563d72770fc85a24bf4 <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Submission_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Published_Citation> <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Submission_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Submission Citation" <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Submission_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
@@ -51,11 +51,11 @@
 <http://purl.uniprot.org/core/Patent_Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A patent application." <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Patent_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Patent_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Patent Citation" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1df32ed30cb4a62c2e1b356ba9918475 <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://purl.uniprot.org/core/> .
-<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf381170dc51b494a469d13a5d8c5f1af <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7a09e0f8b79c745ebd657eae03d8ca5e <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#comment> "The relationship between a resource and a citation." <http://purl.uniprot.org/core/> .
-<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd849a84c562b6e747674a31c7b3dacd6 <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Citation Statement" <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Observation_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Observation_Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "Citation of an unpublished result." <http://purl.uniprot.org/core/> .
@@ -64,15 +64,15 @@
 <http://purl.uniprot.org/core/Unpublished_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Unpublished_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Citation> <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Unpublished_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Unpublished Citation" <http://purl.uniprot.org/core/> .
-<http://purl.uniprot.org/core/Electronic_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B50fc13ad78ab85b057a34ffb3c389cf0 <http://purl.uniprot.org/core/> .
-<http://purl.uniprot.org/core/Electronic_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8c1f720e0370d84e3e7a6e14fc6248b3 <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Electronic_Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "An electronic publication." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Electronic_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6e6dfe4a279f6872e43f35f97abcb96f <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Electronic_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Electronic Citation" <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Electronic_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Electronic_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B64c51db86f6556e40a1fc932f1bbba04 <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Electronic_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Published_Citation> <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Book_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
-<http://purl.uniprot.org/core/Book_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd2a2d31dc3517bae959031f11384a935 <http://purl.uniprot.org/core/> .
-<http://purl.uniprot.org/core/Book_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B28377a76da833f76b8e4b7ae420b3f4d <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Book_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1ee79c628bd96af2a70801c533161138 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Book_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B98879997d5465c3244166e58ee82875f <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Book_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Published_Citation> <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Book_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Book Citation" <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Book_Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A chapter from a book." <http://purl.uniprot.org/core/> .
@@ -81,16 +81,16 @@
 <http://purl.uniprot.org/core/Published_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Published_Citation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.uniprot.org/manual/references"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Published_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Published Citation" <http://purl.uniprot.org/core/> .
-<http://purl.uniprot.org/core/Thesis_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B56c1b256ab52b15149615aff0d9d6946 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Thesis_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B405beecd6be17017afbcedce64db377c <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Thesis_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Thesis_Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A Ph.D. thesis." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Thesis_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4e4d65f1528b60f697f3ae6071b330ec <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Thesis_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Thesis Citation" <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Thesis_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Published_Citation> <http://purl.uniprot.org/core/> .
-<http://purl.uniprot.org/core/Thesis_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B04b69f67647ab75b70d9ec6b059a7698 <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Journal_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Journal Citation" <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Journal_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
-<http://purl.uniprot.org/core/Journal_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbeec185f858edf16e503b64b61367c81 <http://purl.uniprot.org/core/> .
-<http://purl.uniprot.org/core/Journal_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B95bd77f66918435127101613b3de3a6c <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Journal_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc9ae2dc7df60d0b56324ebb41f0bb6fa <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Journal_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb1faddfcbeeca3816b6b463b240bd806 <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Journal_Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "An article published in a journal." <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/Journal_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Published_Citation> <http://purl.uniprot.org/core/> .
 <http://rdaregistry.info/Elements/m/P30005> <http://www.w3.org/2000/01/rdf-schema#label> "has preferred citation"@en <http://rdaregistry.info/Elements/m> .
@@ -245,7 +245,7 @@
 <http://purl.obolibrary.org/obo/IAO_0000301> <http://purl.obolibrary.org/obo/IAO_0000111> "citation"@en <http://purl.obolibrary.org/obo/obi.owl> .
 <http://purl.obolibrary.org/obo/IAO_0000301> <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Lawrence Hunter"@en <http://purl.obolibrary.org/obo/obi.owl> .
 <http://purl.obolibrary.org/obo/IAO_0000301> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000300> <http://purl.obolibrary.org/obo/obi.owl> .
-<http://purl.obolibrary.org/obo/IAO_0000301> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8f2b26b5432e0fd37a92bb4300f214c5 <http://purl.obolibrary.org/obo/obi.owl> .
 <http://purl.obolibrary.org/obo/IAO_0000301> <http://www.w3.org/2000/01/rdf-schema#label> "citation"@en <http://purl.obolibrary.org/obo/obi.owl> .
 <http://purl.obolibrary.org/obo/IAO_0000301> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/IAO_0000301> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Baec3d2c895ec241323237b6c863cb4d7 <http://purl.obolibrary.org/obo/obi.owl> .
 <http://purl.obolibrary.org/obo/IAO_0000301> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.obolibrary.org/obo/obi.owl> .

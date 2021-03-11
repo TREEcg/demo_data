@@ -21,16 +21,16 @@
 <http://vocab.datex.org/terms#Location> <http://www.w3.org/2000/01/rdf-schema#comment> "The specification of a location either on a network (as a point or a linear location) or as an area. This may be provided in one or more referencing systems."@en <http://vocab.datex.org/terms#> .
 <http://vocab.datex.org/terms#Location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.datex.org/terms#> .
 <http://vocab.datex.org/terms#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.datex.org/terms#GroupOfLocations> <http://vocab.datex.org/terms#> .
-<http://vocab.datex.org/terms#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0a779d75702d055ce025fbdc7face9a0 <http://vocab.datex.org/terms#> .
+<http://vocab.datex.org/terms#Location> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6038a878ba3eaea1e0de5e459cecc7b3 <http://vocab.datex.org/terms#> .
 <https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/seas/FeatureOfInterest> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/Connection> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9619b651de8f612e66de26cf0313ab11 <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of connections between systems.\r\n\r\nThis class qualifies property `seas:connectedTo`. \r\n\r\nA connection describes potential interactions between systems. \r\n\r\nFor example, a power connection between power systems describes the fact that these systems may exchange electricity.\r\n\r\n```\r\n<connection> seas:connectsSystem <electric_vehicle> , <electric_vehicle_service_equipment> .\r\n<electric_vehicle> seas:connectedThrough <connection> .\r\n<electric_vehicle_service_equipment> seas:connectedThrough <connection> .\r\n```\r\n\r\nAny two connected systems are connected through a connection. If:\r\n\r\n```\r\n<system1> a seas:System .\r\n<system2> a seas:System .\r\n<system1> seas:connectedTo <system2> .\r\n```\r\n\r\nthen there exists `_:connection` such that:\r\n\r\n```\r\n_:connection seas:connectsSystem <system1> , <system2> .\r\n```\r\n\r\nA connection can connect more than two systems at the same time.\r\n\r\n\r\nFigure below illustrates connections of systems:\r\n\r\n[![Connections of systems](https://w3id.org/seas/system2.png)](https://w3id.org/seas/system2.png)\r\n\r\n"@en <https://w3id.org/seas/SystemOntology> .
-<https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba169c5bc57a58e36c1ba3c687e6157f5 <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B64a8983a12502a4da078957864fe626c <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/Connection> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/seas/System> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/Connection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#label> "Connection"@en <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/SystemOntology> <https://w3id.org/seas/SystemOntology> .
-<https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3d619e09a986536c738a6967f4dfa81e <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/seas/FeatureOfInterest> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Connection Point"@en <https://w3id.org/seas/SystemOntology> .
@@ -39,7 +39,7 @@
 <https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/seas/Connection> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/seas/System> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/seas/SystemOntology> .
-<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B44e9b9f7ca867b412837b7201018dd2d <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba0993d4186b9db24e0ae5d6b26a30897 <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/Battery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/seas/BatteryOntology> .
 <https://w3id.org/seas/Battery> <http://www.w3.org/2000/01/rdf-schema#label> "Battery" <https://w3id.org/seas/BatteryOntology> .
 <https://w3id.org/seas/Battery> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of batteries, which are electric power storage systems."@en <https://w3id.org/seas/BatteryOntology> .
@@ -78,16 +78,16 @@
 <http://resource.geosciml.org/ontology/timescale/thors> <http://purl.org/dc/terms/creator> <http://orcid.org/0000-0002-3884-3420> <https://lov.linkeddata.es/dataset/lov> .
 <http://resource.geosciml.org/ontology/timescale/thors> <http://purl.org/dc/terms/modified> "2017-04-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
 <http://resource.geosciml.org/ontology/timescale/thors> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/thors/versions/2017-04-28.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://resource.geosciml.org/ontology/timescale/thors> <http://purl.org/stuff/rev#hasReview> _:Bdd018d5cd00462945bdb64f4ba93386e <https://lov.linkeddata.es/dataset/lov> .
 <http://resource.geosciml.org/ontology/timescale/thors> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/thors/versions/2012-07-26.n3> <https://lov.linkeddata.es/dataset/lov> .
 <http://resource.geosciml.org/ontology/timescale/thors> <http://purl.org/vocab/vann/preferredNamespacePrefix> "thors" <https://lov.linkeddata.es/dataset/lov> .
 <http://resource.geosciml.org/ontology/timescale/thors> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://resource.geosciml.org/ontology/timescale/thors#" <https://lov.linkeddata.es/dataset/lov> .
 <http://resource.geosciml.org/ontology/timescale/thors> <http://purl.org/dc/terms/title> "The Temporal Ordinal Reference Systems"@en <https://lov.linkeddata.es/dataset/lov> .
 <http://resource.geosciml.org/ontology/timescale/thors> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/thors/versions/2013-11-14.n3> <https://lov.linkeddata.es/dataset/lov> .
 <http://resource.geosciml.org/ontology/timescale/thors> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
-<http://resource.geosciml.org/ontology/timescale/thors> <http://purl.org/stuff/rev#hasReview> _:B818215815642ae373e1fca0b5fe0ff36 <https://lov.linkeddata.es/dataset/lov> .
+<http://resource.geosciml.org/ontology/timescale/thors> <http://purl.org/stuff/rev#hasReview> _:Bc5c7ad0885efbcfa5cb8483f85222e85 <https://lov.linkeddata.es/dataset/lov> .
 <http://resource.geosciml.org/ontology/timescale/thors> <http://purl.org/dc/terms/issued> "2011-01-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
 <http://resource.geosciml.org/ontology/timescale/thors> <http://www.w3.org/ns/dcat#keyword> "Time" <https://lov.linkeddata.es/dataset/lov> .
-<http://resource.geosciml.org/ontology/timescale/thors> <http://purl.org/stuff/rev#hasReview> _:B46d565fbe55c70864ae9a64e8302463a <https://lov.linkeddata.es/dataset/lov> .
 <http://resource.geosciml.org/ontology/timescale/thors> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
 <https://lov.linkeddata.es/dataset/lov/vocabs/thors> <http://purl.org/dc/terms/modified> "2017-08-09"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
 <https://lov.linkeddata.es/dataset/lov/vocabs/thors> <http://purl.org/dc/terms/issued> "2014-02-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .

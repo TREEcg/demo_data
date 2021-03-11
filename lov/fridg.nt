@@ -7,8 +7,8 @@
 <https://w3id.org/seas/hasProperty> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a seas:FeatureOfInterest to a seas:Property of that feature. In the first version of the SSN ontology, this concept was defined as a subproperty of dul:hasQuality. dul:hasQuality is a relation between entities and qualities, e.g. 'Dmitri's skin is yellowish'.\r\n\r\nFor example, the following RDF graph describes that feature of interest `<fridge/1>` has property `<fridge/1/consumption>` .\r\n\r\n```\r\n<fridge/1> seas:hasProperty <fridge/1/consumption> .\r\n```\r\n"@en <https://w3id.org/seas/FeatureOfInterestOntology> .
 <https://w3id.org/seas/hasProperty> <http://www.w3.org/2000/01/rdf-schema#label> "property"@en <https://w3id.org/seas/FeatureOfInterestOntology> .
 <https://w3id.org/seas/Property> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <https://w3id.org/seas/FeatureOfInterestOntology> .
+<https://w3id.org/seas/Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B75bb797ae8a2017ba31c1d895bd79b91 <https://w3id.org/seas/FeatureOfInterestOntology> .
 <https://w3id.org/seas/Property> <http://www.w3.org/2000/01/rdf-schema#comment> "An observable or operable Quality of an Event or Object. That is, not a quality of an abstract entity as is also allowed by DUL's Quality, but rather an aspect of an entity that is intrinsic to and cannot exist without the entity and is observable by a sensor, or operable by an actuator. \r\n\r\nOn the other hand, a property may also itself be a feature of interest. For example if a fridge uses alternative current energy, then several aspects of its energy consumption property may be quantified. Examples of such aspects include:\r\n\r\n- the active power consumption;\r\n- the reactive power consumption;\r\n- the phase of voltage relative to current;\r\n- the frequency;\r\n- the minimal operating value of the frequency;\r\n- the number of occurences of unusual values.\r\n\r\nThese are different properties of the same property:\r\n\r\n```\r\nex:activePower a owl:ObjectProperty ;\r\n  rdfs:subPropertyOf seas:hasProperty ;\r\n  rdfs:domain seas:PowerProperty ;\r\n  rdfs:range seas:PowerProperty .\r\n\r\n<fridge/1/consumption> a seas:FeatureOfInterest ;\r\n  ex:activePower <fridge/1/consumption/activePower> .\r\n```\r\n\r\n"@en <https://w3id.org/seas/FeatureOfInterestOntology> .
-<https://w3id.org/seas/Property> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be8f69e6191b71e3c36c4d19c13f53f03 <https://w3id.org/seas/FeatureOfInterestOntology> .
 <https://w3id.org/seas/Property> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/seas/FeatureOfInterestOntology> .
 <https://w3id.org/seas/Property> <http://www.w3.org/2000/01/rdf-schema#label> "Property"@en <https://w3id.org/seas/FeatureOfInterestOntology> .
 <https://w3id.org/seas/Property> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/FeatureOfInterestOntology> <https://w3id.org/seas/FeatureOfInterestOntology> .
@@ -42,8 +42,8 @@
 <http://purl.org/iot/vocab/m3-lite#Fridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/UNIS/fiware/iot-lite#ActuatingDevice> <http://purl.org/iot/ontology/fiesta-iot> .
 <http://purl.org/iot/vocab/m3-lite#Fridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/ontology/fiesta-iot> .
 <http://purl.org/iot/vocab/m3-lite#Fridge> <http://www.w3.org/2000/01/rdf-schema#label> "Fridge, Refrigerator Actuating Device"@en <http://purl.org/iot/ontology/fiesta-iot> .
-<http://purl.org/iot/vocab/m3-lite#Fridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1c0099ac98527d1009716d74326eafcc <http://purl.org/iot/ontology/fiesta-iot> .
 <http://purl.org/iot/vocab/m3-lite#Fridge> <http://www.w3.org/2000/01/rdf-schema#comment> "An actuator to automatically switch on/off the fridge."@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.org/iot/vocab/m3-lite#Fridge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B53a5195df9c5691da3f419265821e5ab <http://purl.org/iot/ontology/fiesta-iot> .
 <https://w3id.org/seas/FixedStartSum> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/TimeOntology> <https://w3id.org/seas/TimeOntology> .
 <https://w3id.org/seas/FixedStartSum> <http://www.w3.org/2000/01/rdf-schema#label> "Fixed Start Sum"@en <https://w3id.org/seas/TimeOntology> .
 <https://w3id.org/seas/FixedStartSum> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/seas/TimeOntology> .
@@ -76,33 +76,33 @@
 <http://owlrep.eu01.aws.af.cm/fridge> <http://purl.org/dc/terms/title> "Open Fridge vocabulary"@en <https://lov.linkeddata.es/dataset/lov> .
 <http://owlrep.eu01.aws.af.cm/fridge> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/of/versions/2012-12-30.n3> <https://lov.linkeddata.es/dataset/lov> .
 <http://owlrep.eu01.aws.af.cm/fridge> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/of/versions/2015-01-11.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://owlrep.eu01.aws.af.cm/fridge> <http://purl.org/stuff/rev#hasReview> _:B3fe0297707ef64650e62a2cee5b65588 <https://lov.linkeddata.es/dataset/lov> .
 <http://owlrep.eu01.aws.af.cm/fridge> <http://purl.org/dc/terms/creator> <http://www.christianmayr.com/about.html> <https://lov.linkeddata.es/dataset/lov> .
+<http://owlrep.eu01.aws.af.cm/fridge> <http://purl.org/stuff/rev#hasReview> _:Bdc65b53e51add3504b64df3d92c4afe9 <https://lov.linkeddata.es/dataset/lov> .
 <http://owlrep.eu01.aws.af.cm/fridge> <http://purl.org/dc/terms/description> "Ontology for Open Fridge project"@en <https://lov.linkeddata.es/dataset/lov> .
-<http://owlrep.eu01.aws.af.cm/fridge> <http://purl.org/stuff/rev#hasReview> _:Baddcae9e9ec8590025f7ef20f54943ef <https://lov.linkeddata.es/dataset/lov> .
-<http://owlrep.eu01.aws.af.cm/fridge> <http://purl.org/stuff/rev#hasReview> _:B7864c480dcf0e60d32e8c878ed0bd9dd <https://lov.linkeddata.es/dataset/lov> .
+<http://owlrep.eu01.aws.af.cm/fridge> <http://purl.org/stuff/rev#hasReview> _:Ba6c679502c3424dcd2b9996421b37d14 <https://lov.linkeddata.es/dataset/lov> .
 <http://owlrep.eu01.aws.af.cm/fridge> <http://www.w3.org/ns/dcat#keyword> "IoT" <https://lov.linkeddata.es/dataset/lov> .
 <http://owlrep.eu01.aws.af.cm/fridge> <http://purl.org/dc/terms/modified> "2015-01-11"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
 <http://owlrep.eu01.aws.af.cm/fridge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
-<http://owlrep.eu01.aws.af.cm/fridge> <http://purl.org/stuff/rev#hasReview> _:B003bfccbf244f97e658c806504a46e27 <https://lov.linkeddata.es/dataset/lov> .
 <http://owlrep.eu01.aws.af.cm/fridge> <http://purl.org/dc/terms/issued> "2012-12-30"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
 <http://owlrep.eu01.aws.af.cm/fridge> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://owlrep.eu01.aws.af.cm/fridge#" <https://lov.linkeddata.es/dataset/lov> .
 <http://owlrep.eu01.aws.af.cm/fridge> <http://www.w3.org/ns/dcat#keyword> "Industry" <https://lov.linkeddata.es/dataset/lov> .
 <http://owlrep.eu01.aws.af.cm/fridge> <http://purl.org/dc/terms/publisher> <http://www.openfridge.net> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/opdm/refrigerator#> <http://purl.org/dc/terms/title> "Fridge and Freezer Vocabulary"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/opdm/refrigerator#> <http://purl.org/stuff/rev#hasReview> _:B9e7773060c28870ca70ee32f1fb197b8 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/opdm/refrigerator#> <http://purl.org/dc/terms/creator> <http://opdm-project.org/> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/opdm/refrigerator#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/deu> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/opdm/refrigerator#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/opdm/refrigerator#" <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/opdm/refrigerator#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/ofrd/versions/2014-08-18.n3> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/opdm/refrigerator#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ofrd" <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.org/opdm/refrigerator#> <http://purl.org/stuff/rev#hasReview> _:B24661393cde634d1d8fac37404d203a4 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/opdm/refrigerator#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/opdm/refrigerator#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/spa> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/opdm/refrigerator#> <http://purl.org/stuff/rev#hasReview> _:Badec25f8ba526f5e3c7012be9e6bd69c <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/opdm/refrigerator#> <http://www.w3.org/ns/dcat#keyword> "Industry" <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/opdm/refrigerator#> <http://purl.org/dc/terms/creator> <http://www.unibw.de/ebusiness/> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/opdm/refrigerator#> <http://purl.org/dc/terms/modified> "2014-08-18"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/opdm/refrigerator#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/opdm/refrigerator#> <http://purl.org/dc/terms/description> "Vocabulary to describe fridges and freezers"@en <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.org/opdm/refrigerator#> <http://purl.org/stuff/rev#hasReview> _:Bc8a07f10b50ed4e267083a8114674295 <https://lov.linkeddata.es/dataset/lov> .
 <https://lov.linkeddata.es/dataset/lov/vocabs/of> <http://xmlns.com/foaf/0.1/primaryTopic> <http://owlrep.eu01.aws.af.cm/fridge> <https://lov.linkeddata.es/dataset/lov> .
 <https://lov.linkeddata.es/dataset/lov/vocabs/of> <http://purl.org/dc/terms/title> "Open Fridge vocabulary"@en <https://lov.linkeddata.es/dataset/lov> .
 <https://lov.linkeddata.es/dataset/lov/vocabs/of> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .

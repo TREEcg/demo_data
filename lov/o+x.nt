@@ -17,12 +17,12 @@
 <http://purl.org/healthcarevocab/v1#Tag.0040.072A> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#Tag.0040.072A> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#Tag.0040.072A> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
-<http://purl.org/healthcarevocab/v1#Tag.0040.072A> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba19df840247869d1055b3305fcf5099e <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0040.072A> <http://www.w3.org/2000/01/rdf-schema#domain> _:B020f5b546324b08d133ae4ef77d92ecd <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#Tag.0040.072A> <http://www.w3.org/2000/01/rdf-schema#label> "X Offset in Slide Coordinate System" <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#Tag.0040.072A> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#XOffsetInSlideCoordinateSystem> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#XOffsetInSlideCoordinateSystem> <http://www.w3.org/2000/01/rdf-schema#domain> _:B1614a9f41388aa5cb396bbcbb60359ce <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#XOffsetInSlideCoordinateSystem> <http://www.w3.org/2000/01/rdf-schema#label> "X Offset in Slide Coordinate System" <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#XOffsetInSlideCoordinateSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
-<http://purl.org/healthcarevocab/v1#XOffsetInSlideCoordinateSystem> <http://www.w3.org/2000/01/rdf-schema#domain> _:B005512fdac7b7775ed9637c5775aa794 <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#XOffsetInSlideCoordinateSystem> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0040.072A> <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#XOffsetInSlideCoordinateSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#XOffsetInSlideCoordinateSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
@@ -68,14 +68,14 @@
 <http://purl.oclc.org/NET/ssnx/cf/cf-property#ratio_of_y_derivative_of_ocean_rigid_lid_pressure_to_sea_surface_density> <http://purl.oclc.org/NET/ssnx/ssn#isPropertyOf> <http://purl.oclc.org/NET/ssnx/cf/cf-feature#sea_surfaceocean> <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-property#ratio_of_y_derivative_of_ocean_rigid_lid_pressure_to_sea_surface_density> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.oclc.org/NET/ssnx/qu/dim#Acceleration> <http://purl.oclc.org/NET/ssnx/cf/cf-property> .
 <https://w3id.org/seas/observes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/seas/DeviceOntology> .
-<https://w3id.org/seas/observes> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B80ae7d0a77aa5d8ff6cf679dda031e58 <https://w3id.org/seas/DeviceOntology> .
 <https://w3id.org/seas/observes> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a sensing, sensor, or observation, to the feature of interest a property of which it observes.\r\n\r\nIf `x` observes a property, then it also observes the feature of interest of this property:\r\n\r\n```\r\nseas:observes < seas:observesProperty o seas:isPropertyOf .\r\n```\r\n\r\nIf a sensing observes a feature of interest, then any sensor that implements this sensing also observes this feature of interest, and any observation that used this sensing also observes this feature of interest. Furthermore, if a sensor observes a feature of interest, then any observation executed by this sensor also observes this feature of interest:\r\n\r\n```\r\nseas:observes < pep:usedProcedure o seas:observes .\r\nseas:observes < pep:usedProcedure o seas:observes .\r\nseas:observes < pep:madeBy o seas:observes .\r\n```\r\n  \r\n"@en <https://w3id.org/seas/DeviceOntology> .
-<https://w3id.org/seas/observes> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B9215ebabea2782582ee96f77683fc38c <https://w3id.org/seas/DeviceOntology> .
+<https://w3id.org/seas/observes> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B492b9e208de9618b692bfe5e96589f12 <https://w3id.org/seas/DeviceOntology> .
+<https://w3id.org/seas/observes> <http://www.w3.org/2000/01/rdf-schema#domain> _:B3e39cbe5aace5931201a0fd2967a2f19 <https://w3id.org/seas/DeviceOntology> .
+<https://w3id.org/seas/observes> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:Ba2c3f881c2e4f8c25d4bfcd9836c5c52 <https://w3id.org/seas/DeviceOntology> .
 <https://w3id.org/seas/observes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/DeviceOntology> <https://w3id.org/seas/DeviceOntology> .
 <https://w3id.org/seas/observes> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <https://w3id.org/seas/DeviceOntology> .
 <https://w3id.org/seas/observes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/seas/FeatureOfInterest> <https://w3id.org/seas/DeviceOntology> .
-<https://w3id.org/seas/observes> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B92551193e7bd9f639c79f1a875da2565 <https://w3id.org/seas/DeviceOntology> .
-<https://w3id.org/seas/observes> <http://www.w3.org/2000/01/rdf-schema#domain> _:B8d1e8f7afb3a8fd8241818723b77155c <https://w3id.org/seas/DeviceOntology> .
+<https://w3id.org/seas/observes> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B6adff780b992cf7c214c820b1131a088 <https://w3id.org/seas/DeviceOntology> .
 <https://w3id.org/seas/observes> <http://www.w3.org/2000/01/rdf-schema#label> "observes"@en <https://w3id.org/seas/DeviceOntology> .
 <https://w3id.org/arco/ontology/location/long> <http://www.w3.org/2002/07/owl#versionInfo> "stable"@en <https://w3id.org/arco/ontology/location> .
 <https://w3id.org/arco/ontology/location/long> <http://www.w3.org/2000/01/rdf-schema#label> "longitude"@en <https://w3id.org/arco/ontology/location> .

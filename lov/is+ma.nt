@@ -31,11 +31,11 @@
 <http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#UnitPriceSpecification> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
-<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#domain> _:Be458e2f400874d122f010385eff6760a <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the end of the validity of the gr:Offering, gr:PriceSpecification, gr:License, or gr:OpeningHoursSpecification.\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2008-05-30T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2008-05-30T09:30:10-09:00\n\nor\n2008-05-30T09:30:10+09:00.\n\nNote 1: If multiple contradicting instances of a gr:Offering, gr:PriceSpecification, or gr:OpeningHoursSpecification exist, it is a good heuristics to assume that\n1. Information with validity information for the respective period of time ranks higher than information without validity information.\n2. Among conflicting nodes both having validity information, the one with the shorter validity span ranks higher.\nNote 2: For Google, attaching a gr:validThrough statement to a gr:UnitPriceSpecification is mandatory. \n"@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#label> "valid through (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bfb33c0fc4cc55efe58d1b5d37517e562 <http://purl.org/goodrelations/v1> .
 <http://purl.org/imbi/ru-meta.owl#refact> <http://www.w3.org/2000/01/rdf-schema#comment> "When a class has been refactored into more atomic classes, then the original compound class is made obsolete and this deleted source class which gave birth to the new atomic child classes is mentioned here for all new atomic classes." <http://purl.org/imbi/ru-meta.owl> .
 <http://purl.org/imbi/ru-meta.owl#refact> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://purl.org/imbi/ru-meta.owl> .
 <http://purl.org/linguistics/gold/PartitiveCase> <http://www.w3.org/2000/01/rdf-schema#comment> "PartitiveCase expresses the partial nature of the referent of the noun it marks, as opposed to expressing the whole unit or class of which the referent is a part. This case may be found in items such as the following: existential clauses, nouns that are accompanied by numerals or units of measure, or predications of material from which something is made. It often has a meaning similar to the English word 'some'. [Pei and Gaynor 1954: 161; Richards, Platt and Weber 1985: 208; Quirk et al. 1985: 249; Sebeok 1946: 1214]"@eng <http://purl.org/linguistics/gold> .
@@ -90,12 +90,12 @@
 <http://purl.org/linked-data/api/vocab#uriTemplate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/linked-data/api/vocab#> <http://purl.org/linked-data/api/vocab#> .
 <http://purl.org/linked-data/api/vocab#uriTemplate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/api/vocab#Endpoint> <http://purl.org/linked-data/api/vocab#> .
 <http://purl.org/linked-data/api/vocab#uriTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/linked-data/api/vocab#> .
+<http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2002/07/owl#inverseOf> _:B506d259fa6541a5a8319e413aa3653ae <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/publisher> <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2000/01/rdf-schema#label> "has info service"@en <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2000/01/rdf-schema#comment> "Every subject related by this property is made available by an is:InfoService individual. This property could be used to associate a semantic graph based description or especially a website link, e.g. typed as foaf:Document, to the specific is:InfoService individual. This enables the consumer of this resource to retrieve more information (descriptions, ratings) about the underlying information service of this resource."@en <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://purl.org/ontology/is/core#> .
-<http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2002/07/owl#inverseOf> _:B5079a686815393c9ece77e9aa438a033 <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/is/core#> <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/is/core#InfoService> <http://purl.org/ontology/is/core#> .
@@ -121,12 +121,12 @@
 <http://purl.org/spar/fabio/hasDistributionDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/spar/fabio> .
 <http://purl.org/spar/fabio/hasDistributionDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date on which something is distributed, for example the date on which a preprint of a document is e-mailed to colleagues and other academics by the author(s), or the date on which a printed announcement of forthcoming theatre events is mailed to those those on the theatre's mailing list."@en <http://purl.org/spar/fabio> .
 <http://purl.org/spar/fabio/isManifestationOf> <http://www.w3.org/2000/01/rdf-schema#label> "is manifestation of"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/isManifestationOf> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B8dd157bd5a2fcfe9d5ed104fa32fb9d8 <http://purl.org/spar/fabio> .
 <http://purl.org/spar/fabio/isManifestationOf> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/vocab/frbr/core#Work> <http://purl.org/spar/fabio> .
 <http://purl.org/spar/fabio/isManifestationOf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/vocab/frbr/core#relatedEndeavour> <http://purl.org/spar/fabio> .
 <http://purl.org/spar/fabio/isManifestationOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/fabio> .
 <http://purl.org/spar/fabio/isManifestationOf> <http://www.w3.org/2000/01/rdf-schema#comment> "A property linking a particular manifestation to the work it is manifesting.  This property is additional to the relationships between FRBR endeavours present in the classical FRBR data model."@en <http://purl.org/spar/fabio> .
 <http://purl.org/spar/fabio/isManifestationOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/frbr/core#Manifestation> <http://purl.org/spar/fabio> .
-<http://purl.org/spar/fabio/isManifestationOf> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B8378c221eb58fde5823eff09138c71ba <http://purl.org/spar/fabio> .
 <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A time interval during which a role is held or a contribution is made by an agent."@en <http://purl.org/spar/pro> .
 <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/spar/pro> .
 <http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl#atTime> <http://www.w3.org/2000/01/rdf-schema#label> "at time"@en <http://purl.org/spar/pro> .
@@ -149,13 +149,13 @@
 <http://purl.org/spar/scoro/isMadeBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Agent> <http://purl.org/spar/scoro/> .
 <http://purl.org/spar/scoro/isMadeBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A property relating a contribution situation that an agent makes, to that agent."@en <http://purl.org/spar/scoro/> .
 <http://purl.org/twc/vocab/conversion/AbstractDataset> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/twc/vocab/conversion/VersionedDataset> <http://purl.org/twc/vocab/conversion/> .
-<http://purl.org/twc/vocab/conversion/AbstractDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6c3bf6791328190d0d8be422e78c77cf <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/AbstractDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4e514222d3aaa1cbd8f807fcfeca39c1 <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/AbstractDataset> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/twc/vocab/conversion/LayerDataset> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/AbstractDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfec8bbd729692980c1c8bee8b6dbb741 <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/AbstractDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/twc/vocab/conversion/Dataset> <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/AbstractDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "Dataset with source and dataset identifiers, but not version. Before any version is materialized (captured in time), and the union of all VersionedDatasets." <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/AbstractDataset> <http://www.w3.org/2000/01/rdf-schema#label> "Abstract Dataset" <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/AbstractDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/twc/vocab/conversion/> .
-<http://purl.org/twc/vocab/conversion/AbstractDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbbd98c9fa29ed1269e6fc86282f8afec <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/vocab/lifecycle/schema#mandatory> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/vocab/lifecycle/schema> .
 <http://purl.org/vocab/lifecycle/schema#mandatory> <http://www.w3.org/2000/01/rdf-schema#label> "mandatory"@en <http://purl.org/vocab/lifecycle/schema> .
 <http://purl.org/vocab/lifecycle/schema#mandatory> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/lifecycle/schema#Task> <http://purl.org/vocab/lifecycle/schema> .
@@ -204,7 +204,6 @@
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/microgramPerCubicCentimetre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gramPerPicolitre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
-<http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcd1d3aa342b3e90061e58b7fd2935b7d <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerCubicDecimetre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gramPerCubicmetre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/centigramPerLitre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
@@ -215,9 +214,9 @@
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gramPerTeralitre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gramPerLitre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.w3.org/2000/01/rdf-schema#label> "dichtheid"@nl <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9781dfcc8a12c4a578204eff2427a6da <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gramPerAttolitre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gramPerDecalitre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
-<http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B13f66d2137cd80962d53d5cd674f91bf <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/kilogramPerLitre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/exagramPerLitre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gramPerMegalitre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
@@ -248,6 +247,7 @@
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/femtogramPerLitre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gramPerKilolitre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/alternativeLabel> "mass density"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0b7016a4971013e7894d39cfdfa83ba0 <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/gramPerCubicCentimetre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/attogramPerLitre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Density> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/hectogramPerLitre> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
@@ -262,6 +262,7 @@
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/metreKilogramPerSecond-TimeSquared> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/femtonewton> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontology-of-units-of-measure.org/resource/om-2/Quantity> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfca6de7530251b1197e889d5025ca3af <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/exanewton> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/piconewton> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/micronewton> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
@@ -277,8 +278,7 @@
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/attonewton> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/teranewton> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.w3.org/2000/01/rdf-schema#label> "force"@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
-<http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B22de071a4f8df84ca0123c7123937413 <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
-<http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B408c2307a577a5e302c91ea2dd3a4dd5 <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
+<http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B728dc4e6e75f6fd2c9cc7c01e7537585 <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/petanewton> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.w3.org/2000/01/rdf-schema#comment> "Force is the extent to which an object with mass can be caused to accelerate. It is a derived quantity in the International System of Units. Force is mass times acceleration."@en <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/Force> <http://www.ontology-of-units-of-measure.org/resource/om-2/commonlyHasUnit> <http://www.ontology-of-units-of-measure.org/resource/om-2/nanonewton> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
@@ -331,19 +331,18 @@
 <http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/hasFormat> <http://rdfs.co/bevon/0.8/rdf> <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://creativecommons.org/ns#Work> <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/type> <http://purl.org/adms/assettype/Ontology> <http://rdfs.co/bevon/> .
-<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#historyNote> _:B7111b3d7ec20fbae97e302e05859a431 <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#changeNote> _:B3d5bf7275d8baab187034bdfc403df2c <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/identifier> "http://rdfs.co/bevon/0.8" <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/termGroup> <http://rdfs.co/bevon/RelationGroup> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#historyNote> _:B3cf35cd88398582c3ff2338b3426c552 <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/publisher> <http://jayg.me/> <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/creator> <http://jayg.me/> <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/hasFormat> <http://rdfs.co/bevon/0.8/html> <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/4.0/> <http://rdfs.co/bevon/> .
-<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#historyNote> _:B03f2db557273b234df61aa909378a8c1 <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/jgkim/bevon> <http://rdfs.co/bevon/> .
-<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/example> _:Bac9c3e0bb9e491a3c1e2c39fa722240d <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#changeNote> _:B2c43371cd56f1e26c0b1aae447d1ce2c <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/hasFormat> <http://rdfs.co/bevon/0.8/ttl> <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    <div>\n      The master version of this vocabulary is maintained in <a\n      href=\"https://github.com/jgkim/bevon\">the GitHub repository</a> so others\n      can contribute edits and improvements.\n    </div>\n    " <http://rdfs.co/bevon/> .
-<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/example> _:B6226d6eaac8fa321fd7dcf07d69c757d <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/termGroup> <http://rdfs.co/bevon/ContainerGroup> <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/termGroup> <http://rdfs.co/bevon/WhiskyGroup> <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/description> "\n    Beverage Ontology is a Web vocabulary for describing beverages, mainly\n    alcoholic.\n    "@en <http://rdfs.co/bevon/> .
@@ -351,20 +350,21 @@
 <http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://rdfs.co/bevon/" <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/replaces> <http://rdfs.co/bevon/0.7> <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://www.w3.org/2002/07/owl#versionInfo> "0.8" <http://rdfs.co/bevon/> .
-<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#changeNote> _:Be2aab9f2c5ac23ffff1c18f20120df20 <http://rdfs.co/bevon/> .
-<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#historyNote> _:B2c2aa718a0c7d7291d4d68a6e95070e9 <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/example> _:B6a0e02a835127a128c0bef25352014cf <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#SemanticAsset> <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://www.w3.org/ns/adms#status> <http://purl.org/adms/status/UnderDevelopment> <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://www.w3.org/2000/01/rdf-schema#comment> "\n    Most of the descriptions given here are from Wikipedia or from the websites\n    of the related products.\n    "@en <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/termGroup> <http://rdfs.co/bevon/CocktailGroup> <http://rdfs.co/bevon/> .
-<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#historyNote> _:Be7b80dc56ca780951d39f8c9f7d78e80 <http://rdfs.co/bevon/> .
-<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#changeNote> _:Bab71c4bd11e876940bf7608efb3ec52f <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#changeNote> _:B681b2a22bf140ca4be41b116372e6ec4 <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#historyNote> _:Be2ec85ee0458a6eaf4a18cd93f66ea36 <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/example> _:B6182301d1b3553b5520f34f87979f490 <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/title> "BEVON: Beverage Ontology"@en <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <http://rdfs.co/bevon/> .
-<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#changeNote> _:B11a8e0d5c4b89f558d96f6ffdca6852e <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/issued> "2013-07-04+09:00"^^<http://www.w3.org/2001/XMLSchema#date> <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#historyNote> _:B736a53984a864d8421ec89124c1f3361 <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/termGroup> <http://rdfs.co/bevon/BeerGroup> <http://rdfs.co/bevon/> .
-<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#changeNote> _:B43c714345cff3ed9f009b3804ad31034 <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#changeNote> _:Ba2aaddf4148c7e2d3d2d2a9a481e5a05 <http://rdfs.co/bevon/> .
+<http://rdfs.co/bevon/0.8> <http://www.w3.org/2004/02/skos/core#historyNote> _:B360e134b1330c4ef3a0863f4ad3ce74c <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/dc/terms/isVersionOf> <http://rdfs.co/bevon/> <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/termGroup> <http://rdfs.co/bevon/WineGroup> <http://rdfs.co/bevon/> .
 <http://rdfs.co/bevon/0.8> <http://purl.org/vocab/vann/termGroup> <http://rdfs.co/bevon/CoreGroup> <http://rdfs.co/bevon/> .
@@ -375,17 +375,17 @@
 <http://rhizomik.net/ontologies/copyrightonto.owl#Agree> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#Ambient> <http://rhizomik.net/ontologies/copyrightonto.owl> .
 <http://rhizomik.net/ontologies/copyrightonto.owl#Agree> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rhizomik.net/ontologies/copyrightonto.owl> .
 <http://rhizomik.net/ontologies/copyrightonto.owl#Agree> <http://www.w3.org/2000/01/rdf-schema#comment> "An event in which a written or unwritten accord is made between two or more parties." <http://rhizomik.net/ontologies/copyrightonto.owl> .
-<http://rhizomik.net/ontologies/copyrightonto.owl#CommunicationRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba7405b5598f8ea8ed4f279e67dedca7d <http://rhizomik.net/ontologies/copyrightonto.owl> .
 <http://rhizomik.net/ontologies/copyrightonto.owl#CommunicationRight> <http://www.w3.org/2000/01/rdf-schema#comment> "It regulates the realisation of Communications of works, including wire or wireless means and those realised from a place and at a time individually selected. This right is concretised into Broadcasting Right, when the communication is massive, and Make Available Right, when the communication is individually chosen."@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
 <http://rhizomik.net/ontologies/copyrightonto.owl#CommunicationRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#EconomicRights> <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#CommunicationRight> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B52c05eb9e606223bd08a84dcbbfdb498 <http://rhizomik.net/ontologies/copyrightonto.owl> .
 <http://rhizomik.net/ontologies/copyrightonto.owl#CommunicationRight> <http://www.w3.org/2000/01/rdf-schema#label> "Communication Right"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
 <http://rhizomik.net/ontologies/copyrightonto.owl#CommunicationRight> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rhizomik.net/ontologies/copyrightonto.owl> .
-<http://rhizomik.net/ontologies/copyrightonto.owl#Broadcast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc8418adfb416e5e622dbaa54ffff2fe6 <http://rhizomik.net/ontologies/copyrightonto.owl> .
-<http://rhizomik.net/ontologies/copyrightonto.owl#Broadcast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6bda1799f925d4217061b7f512fefffc <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Broadcast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0a39dd8a898e34634e9cfddddf5c6f1f <http://rhizomik.net/ontologies/copyrightonto.owl> .
 <http://rhizomik.net/ontologies/copyrightonto.owl#Broadcast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://rhizomik.net/ontologies/copyrightonto.owl> .
 <http://rhizomik.net/ontologies/copyrightonto.owl#Broadcast> <http://www.w3.org/2002/07/owl#disjointWith> <http://rhizomik.net/ontologies/copyrightonto.owl#MakeAvailable> <http://rhizomik.net/ontologies/copyrightonto.owl> .
 <http://rhizomik.net/ontologies/copyrightonto.owl#Broadcast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#Communicate> <http://rhizomik.net/ontologies/copyrightonto.owl> .
 <http://rhizomik.net/ontologies/copyrightonto.owl#Broadcast> <http://www.w3.org/2000/01/rdf-schema#label> "Broadcast"@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
+<http://rhizomik.net/ontologies/copyrightonto.owl#Broadcast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb546f1fda5a7ec7c69cf2b7863c28a92 <http://rhizomik.net/ontologies/copyrightonto.owl> .
 <http://rhizomik.net/ontologies/copyrightonto.owl#Broadcast> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://rhizomik.net/ontologies/copyrightonto.owl#BroadcastingRight> <http://rhizomik.net/ontologies/copyrightonto.owl> .
 <http://rhizomik.net/ontologies/copyrightonto.owl#Broadcast> <http://www.w3.org/2000/01/rdf-schema#comment> "When a work is broadcasted, it is made available to a collective through a communication medium. There are two kinds of broadcasting depending on the communication medium. In the first one the medium is the air. A wireless signal is emitted into the air, which can be received by any person, within range of the signal, who possesses the equipment (radio or television receiver) necessary to convert the signal into sounds or sounds and images. In the second one the medium is a cable. A signal is diffused and only persons who possess the required equipment linked to the cables used to diffuse the signal can receive it."@en <http://rhizomik.net/ontologies/copyrightonto.owl> .
 <http://rhizomik.net/ontologies/copyrightonto.owl#isManifestationOf> <http://www.w3.org/2002/07/owl#inverseOf> <http://rhizomik.net/ontologies/copyrightonto.owl#hasManifestation> <http://rhizomik.net/ontologies/copyrightonto.owl> .
@@ -440,8 +440,8 @@
 <http://www.lexinfo.net/ontology/2.0/lexinfo#DeclarativeFrame> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
 <http://www.lexinfo.net/ontology/2.0/lexinfo#DeclarativeFrame> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.lexinfo.net/ontology/2.0/lexinfo#VerbFrame> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
 <http://www.lexinfo.net/ontology/2.0/lexinfo#DeclarativeFrame> <http://www.w3.org/2000/01/rdf-schema#comment> "Declarative frames take a clause as an argument, this argument is marker with the declarative conjunction (\"that\" in English)"@en <http://www.lexinfo.net/ontology/2.0/lexinfo> .
-<http://www.lexinfo.net/ontology/2.0/lexinfo#DeclarativeFrame> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bbf58b201c4a173b0bbd90bb2ef00afb0 <http://www.lexinfo.net/ontology/2.0/lexinfo> .
 <http://www.lexinfo.net/ontology/2.0/lexinfo#DeclarativeFrame> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#DeclarativeFrame> <http://www.w3.org/2002/07/owl#equivalentClass> _:Be5c22b867d5073e215715c34c0208b26 <http://www.lexinfo.net/ontology/2.0/lexinfo> .
 <https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/is+ma.nt> .
 _:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
 _:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .

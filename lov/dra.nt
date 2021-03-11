@@ -118,34 +118,24 @@
 <http://dbpedia.org/ontology/lastFamilyMember> <http://www.w3.org/2000/01/rdf-schema#label> "laatste drager familienaam"@nl <http://dbpedia.org/ontology/> .
 <http://dbpedia.org/ontology/lastFamilyMember> <http://www.w3.org/2000/01/rdf-schema#label> "letztes Familienmitglied"@de <http://dbpedia.org/ontology/> .
 <http://dbpedia.org/ontology/lastFamilyMember> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:lastFamilyMember> <http://dbpedia.org/ontology/> .
-<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Object> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
-<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2002/07/owl#disjointWith> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Complex> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
-<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#isAbstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
-<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#comment> "GM_Primitive (Figure 8) is the abstract root class of the geometric primitives. Its main purpose is to define the basic \"boundary\" operation that ties the primitives in each dimension together. A geometric primitive (GM_Primitive) is a geometric object that is not decomposed further into other primitives in the system. This includes curves and surfaces, even though they are composed of curve segments and surface patches, respectively. This composition is a strong aggregation: curve segments and surface patches cannot exist outside the context of a primitive.\nNOTE Most geometric primitives are decomposable infinitely many times. Adding a centre point to a line may split that line into two separate lines. A new curve drawn across a surface may divide that surface into two parts, each of which is a surface. This is the reason that the normal definition of primitive as \"non-decomposable\" is not plausible in a geometry model - the only non-decomposable object in geometry is a point.\nAny geometric object that is used to describe a feature is a collection of geometric primitives. A collection of geometric primitives may or may not be a geometric complex. Geometric complexes have additional properties such as closure by boundary operations and mutually exclusive component parts.\nGM_Primitive and GM_Complex share most semantics, in the meaning of operations, attributes and associations. There is an exception in that a GM_Primitive shall not contain its boundary (except in the trivial case of GM_Point where the boundary is empty), while a GM_Complex shall contain its boundary in all cases. This means that if an instantiated object implements GM_Object operations both as GM_Primitive and as a GM_Complex, the semantics of each set theoretic operation is determined by the its name resolution. Specifically, for a particular object such as GM_CompositeCurve, GM_Primitive::contains (returns FALSE for end points) is different from GM_Complex::contains (returns TRUE for end points). Further, if that object is cast as a GM_Primitive value and as a GM_Complex value, then the two values need not be equal as GM_Objects." <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
-<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2002/07/owl#disjointWith> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Aggregate> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
-<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
-<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
-<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2004/02/skos/core#notation> "GM_Primitive"^^<http://def.seegrid.csiro.au/isotc211/iso19150/-2/2012/basic#ISOClassName> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
-<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2000/01/rdf-schema#label> "Geometry Primitive" <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
-<http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry#Primitive> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.opengis.net/ont/gml#AbstractGeometricPrimitive> <http://def.seegrid.csiro.au/isotc211/iso19107/2003/geometry> .
-<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfa61b5fe426e43f4ee92d988457be7b6 <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B00ad567fbc844006390405be863b5177 <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://elite.polito.it/ontologies/dogont.owl> .
-<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc170f0451d41f8c27097fb7a0e33c9ca <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2002/07/owl#disjointWith> <http://elite.polito.it/ontologies/dogont.owl#ShutterActuator> <http://elite.polito.it/ontologies/dogont.owl> .
-<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba5adc5026156ecb5c3ff92edb144f6fd <http://elite.polito.it/ontologies/dogont.owl> .
-<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbcadb51ef555a2346b125484e98074e2 <http://elite.polito.it/ontologies/dogont.owl> .
-<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Baca1d9f1f433c48afa8aaa8dc4594b31 <http://elite.polito.it/ontologies/dogont.owl> .
-<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B71c6b8c15641d6c9f24e75b5cc903df6 <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B826c71a6a70a816842f09771dd56e4f4 <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6d740061977273a66d3b09a2453d00ff <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8346b302da8990747d7bb9a932deb1c6 <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#label> "Shade"@en <http://elite.polito.it/ontologies/dogont.owl> .
-<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3d1be557a515d3a093b54120d618eacc <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B68e07ab5286003d2585f24c912f86a9c <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf6326559660e269f4cba3ab836074a19 <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B93a128a5b07e142af4eda32271d9c441 <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B24823763e1c5d379d8a15f256f0881cc <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2002/07/owl#disjointWith> <http://elite.polito.it/ontologies/dogont.owl#WindowActuator> <http://elite.polito.it/ontologies/dogont.owl> .
-<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B44ea9400d99bed7ddcd96cdb794e301d <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf3e4c9d941b17ca92afe0b208f6ef8f6 <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4a33e76cde393409d3ee70b4d6247391 <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0bba255fdeed0c1aba060f0f5f94aebc <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#comment> "The Shade Actuator device provides the ability to open or close window coverings, including setting partially open or partially closed states. This device type includes roller shades, drapes and tilt-only blinds actuators. Derives from ZigBee HA specifications (Shade device)"@en <http://elite.polito.it/ontologies/dogont.owl> .
-<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3e9c24bb2c3bd9b6c10859f7c563df73 <http://elite.polito.it/ontologies/dogont.owl> .
-<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B74e943ed3561a0fc4bbf1c5a8f3c536a <http://elite.polito.it/ontologies/dogont.owl> .
-<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B695a144022244461ce74124a87821faf <http://elite.polito.it/ontologies/dogont.owl> .
-<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B53f3e8a6fca1968ab1834d479aa75d6a <http://elite.polito.it/ontologies/dogont.owl> .
-<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3f464b043109956d5907b330b3d06201 <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd83d5b4ada7236fb76c568edb6425e63 <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbf056dfa090aa3ebbcd92d351fa1e318 <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#ShadeActuator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://elite.polito.it/ontologies/dogont.owl#Actuator> <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#Drawer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#Drawer> <http://www.w3.org/2002/07/owl#disjointWith> <http://elite.polito.it/ontologies/dogont.owl#Shade> <http://elite.polito.it/ontologies/dogont.owl> .
@@ -232,18 +222,18 @@
 <http://linkedgeodata.org/ontology/Boatyard> <http://www.w3.org/2000/01/rdf-schema#label> "Skeepswerf"@af <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Boatyard> <http://www.w3.org/2000/01/rdf-schema#label> "Astillero"@es <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
-<http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@fur <http://linkedgeodata.org/ontology> .
-<http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@pl <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@sk <http://linkedgeodata.org/ontology> .
-<http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@nds <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@pl <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@ast <http://linkedgeodata.org/ontology> .
-<http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@lb <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@it <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@nds <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@cs <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@lb <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@en-gb <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@fur <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Zoo"@hr <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Jardim zool??gico"@pt <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Zoo> <http://www.w3.org/2000/01/rdf-schema#label> "Kopsht zoologjik"@sq <http://linkedgeodata.org/ontology> .
@@ -400,14 +390,14 @@
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Pr??rodn?? rezerv??cia"@sk <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "R??serve naturelle"@fr <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Term??szetv??delmi ter??let"@hu <http://linkedgeodata.org/ontology> .
-<http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Reserva natural"@ia <http://linkedgeodata.org/ontology> .
-<http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????????"@be-tarask <http://linkedgeodata.org/ontology> .
-<http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Reserva natural"@ast <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Reserva natural"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Reserva natural"@ast <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Reserva natural"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????????"@be-tarask <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????????"@ru <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????????"@uk <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Reserva natural"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Reserva natural"@ia <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Strony ????itaneje p??irody"@dsb <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Riserve natur??l"@fur <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Naturreservat"@sv <http://linkedgeodata.org/ontology> .
@@ -429,9 +419,9 @@
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Do??a Koruma Alan??"@tr <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Riserva naturale"@it <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Luonnonsuojelualue"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Naturschutzgebitt"@lb <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Natuurreservaat"@af <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Natuurreservaat"@nl <http://linkedgeodata.org/ontology> .
-<http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Naturschutzgebitt"@lb <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Rezervat natyror"@aln <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Naravni rezervat"@sl <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/NatureReserve> <http://www.w3.org/2000/01/rdf-schema#label> "Natura Erreserba"@eu <http://linkedgeodata.org/ontology> .
@@ -466,12 +456,12 @@
 <http://linkedgeodata.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Kraj"@dsb <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Kraj"@hsb <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Country> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/Country/key/place/value/country> <http://linkedgeodata.org/ontology> .
-<http://linkedgeodata.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Land"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Land"@sv <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Land"@is <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Land"@lb <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Land"@nds <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Land"@nl <http://linkedgeodata.org/ontology> .
-<http://linkedgeodata.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Land"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Land"@no <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Land"@da <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Land"@af <http://linkedgeodata.org/ontology> .
 <http://linkedgeodata.org/ontology/Country> <http://www.w3.org/2000/01/rdf-schema#label> "Land"@de <http://linkedgeodata.org/ontology> .
@@ -731,12 +721,12 @@
 <http://purl.oclc.org/NET/ssnx/meteo/aws#PopoffLysimeterCombinedDrainageAndWeighingType> <http://www.w3.org/2000/01/rdf-schema#comment> "Lysimeters are used for measurement of evaporation, transpiration, evapotranspiration (ET), effective rainfall, drainage, chemical contents of drainage water, to study climatic effects of ET on the performance of crops." <http://purl.oclc.org/NET/ssnx/meteo/aws> .
 <http://purl.oclc.org/NET/ssnx/meteo/aws#Lysimeter> <http://purl.org/dc/elements/1.1/source> "skos:closeMatch lysimeter [GAMP 2.4.1.8.1] http://www.wmo.int/pages/prog/wcp/agm/gamp/gamp_en.html" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
 <http://purl.oclc.org/NET/ssnx/meteo/aws#Lysimeter> <http://www.w3.org/2000/01/rdf-schema#comment> "Lysimeters are used for measurement of evaporation, transpiration, evapotranspiration (ET), effective rainfall, drainage, chemical contents of drainage water, to study climatic effects of ET on the performance of crops." <http://purl.oclc.org/NET/ssnx/meteo/aws> .
-<http://purl.oclc.org/NET/ssnx/meteo/aws#Lysimeter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9ee18ce135a9389539d7c1a7be89b133 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
-<http://purl.oclc.org/NET/ssnx/meteo/aws#Lysimeter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6719192a563f6906fcde14b87fd9a405 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#Lysimeter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Baa51f24e5db4b3601abbe53b8648a4f7 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#Lysimeter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be1398027f8c4494f3107b54b19c30bfb <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#Lysimeter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb89cbf0336e6fb6397b183966d4ae432 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
 <http://purl.oclc.org/NET/ssnx/meteo/aws#Lysimeter> <http://www.w3.org/2000/01/rdf-schema#label> "lysimeter" <http://purl.oclc.org/NET/ssnx/meteo/aws> .
 <http://purl.oclc.org/NET/ssnx/meteo/aws#Lysimeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.oclc.org/NET/ssnx/meteo/aws> .
-<http://purl.oclc.org/NET/ssnx/meteo/aws#Lysimeter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bddf23277a4c2707c6a1881b31439b737 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
-<http://purl.oclc.org/NET/ssnx/meteo/aws#Lysimeter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B654a7a31996285479fff871cda7affca <http://purl.oclc.org/NET/ssnx/meteo/aws> .
+<http://purl.oclc.org/NET/ssnx/meteo/aws#Lysimeter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba61dcbf22f4af94eca48acbd5cfaefe3 <http://purl.oclc.org/NET/ssnx/meteo/aws> .
 <http://purl.oclc.org/NET/ssnx/meteo/aws#Lysimeter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.oclc.org/NET/ssnx/meteo/aws#HumiditySensor> <http://purl.oclc.org/NET/ssnx/meteo/aws> .
 <http://purl.oclc.org/NET/ssnx/meteo/aws#WeighingLysimeter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.oclc.org/NET/ssnx/meteo/aws> .
 <http://purl.oclc.org/NET/ssnx/meteo/aws#WeighingLysimeter> <http://www.w3.org/2000/01/rdf-schema#label> "weighing lysimeter" <http://purl.oclc.org/NET/ssnx/meteo/aws> .

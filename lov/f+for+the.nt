@@ -29,9 +29,9 @@
 <http://purl.org/cerif/frapo/Commitments> <http://www.w3.org/2000/01/rdf-schema#label> "commitments"@en <http://purl.org/cerif/frapo/> .
 <http://purl.org/cerif/frapo/Commitments> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/cerif/frapo/> .
 <http://purl.org/configurationontology#ConfigurationVariable> <http://www.w3.org/2000/01/rdf-schema#comment> "A variable in a Lexicon, eg. the fuel type, or the body color. Automotive ranges typically only use discrete variables: the possible values corresponding to one ConfigurationVariable are alternative specifications (for instance \"Diesel\", \"Gasoline\", etc.  for the fuel type variable)"@en <http://purl.org/configurationontology> .
-<http://purl.org/configurationontology#ConfigurationVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbb42190c838bdbfd7fb796af3dc63f1a <http://purl.org/configurationontology> .
 <http://purl.org/configurationontology#ConfigurationVariable> <http://www.w3.org/2000/01/rdf-schema#label> "Configuration variable"@en <http://purl.org/configurationontology> .
 <http://purl.org/configurationontology#ConfigurationVariable> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/configurationontology> .
+<http://purl.org/configurationontology#ConfigurationVariable> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B21adbfb8fcd058ccb69e0297d41f7dbc <http://purl.org/configurationontology> .
 <http://purl.org/goodrelations/v1#closes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#closes> <http://www.w3.org/2000/01/rdf-schema#label> "closes (1..1)"@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#closes> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://purl.org/goodrelations/v1> .
@@ -64,9 +64,9 @@
 <http://purl.org/ontology/po/director> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a programme to its supervisor. Generally refers to the person responsible for all audience-visible components of a program, film, or show, whereas the producer is responsible for the financial and other behind-the-scenes aspects. A director's duties might also include casting, script editing, shot selection, shot composition, and editing" <http://purl.org/ontology/po/> .
 <http://purl.org/ontology/po/director> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/po/> .
 <http://purl.org/spar/doco/FigureLabel> <http://www.w3.org/2000/01/rdf-schema#comment> "A block containing a label for the figure box, that may include the figure number."@en <http://purl.org/spar/doco> .
+<http://purl.org/spar/doco/FigureLabel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcb9cd255a862b2577463782658e769bc <http://purl.org/spar/doco> .
 <http://purl.org/spar/doco/FigureLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/doco> .
 <http://purl.org/spar/doco/FigureLabel> <http://www.w3.org/2000/01/rdf-schema#label> "figure label"@en <http://purl.org/spar/doco> .
-<http://purl.org/spar/doco/FigureLabel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4a922d9fb0cd0207c2d8d881f32df5bc <http://purl.org/spar/doco> .
 <http://purl.org/spar/fabio/Postprint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Manuscript> <http://purl.org/spar/fabio> .
 <http://purl.org/spar/fabio/Postprint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
 <http://purl.org/spar/fabio/Postprint> <http://www.w3.org/2000/01/rdf-schema#comment> "The version of an author's original scholarly work, such as a research paper or a review, re-submitted for publication after revision by the author in the light of comments from reviewers.  [Note: For the version before peer review, use fabio:Preprint. For the final piblished version, use fabio:DefinitiveVersion.]"@en <http://purl.org/spar/fabio> .
@@ -99,7 +99,7 @@
 <http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount of fuel consumed for traveling a particular distance or temporal duration with the given vehicle (e.g. liters per 100 km)\nTypical unit code(s): LTR for liters, GLL of US Gallons, GLI for UK / Imperial Gallons\n\t\t\nNote 1: There are unfortunately no standard unit codes for \"liters per 100 km\". Simply use \"LTR\" for liters, \"GLL\" of US Gallons, or \"GLI\" for UK / Imperial Gallons, and indicate the distance in the rdfs:label of the gr:QuantitativeValueFloat or use vso:referenceDistance to model the reference distance (e.g. 100 km). \nNote 2: There are two ways of indicating the fuel consumption, vso:fuelConsumption (e.g. 8 liters per 100 km) and vso:fuelEconomy (e.g. 30 miles per gallon). They are reciprocal.\nNote 3: Often, the absolute value is useful only when related to driving speed (\"at 80 km/h\") or usage pattern (\"city traffic\"). You can use gr:valueReference to link the value for the fuel consumption to another value."@en <http://purl.org/vso/ns> .
 <http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://en.wikipedia.org/wiki/Fuel_economy_in_automobiles> <http://purl.org/vso/ns> .
 <http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/2000/01/rdf-schema#label> "fuelConsumption (0..*)"@en <http://purl.org/vso/ns> .
-<http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bbcd9524938d5653b4117aca0e1fa681a <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bddf7e6e3344c4f7a22edbcb507501fbb <http://purl.org/vso/ns> .
 <http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValueFloat> <http://purl.org/vso/ns> .
 <http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> <http://purl.org/vso/ns> .
 <http://purl.org/vso/ns#fuelConsumption> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vso/ns> .
@@ -166,10 +166,10 @@
 <http://purl.org/vvo/ns#monthlyPayment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
 <http://purl.org/vvo/ns#monthlyPayment> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the monthly payment for the financing"@en <http://purl.org/vvo/ns#> .
 <http://purl.org/vvo/ns#monthlyPayment> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/vvo/ns#> .
-<http://purl.org/vvo/ns#fuelInjectionTypeId> <http://www.w3.org/2000/01/rdf-schema#domain> _:B99696dc764bd9cad12495d8d52e4d1ac <http://purl.org/vvo/ns#> .
 <http://purl.org/vvo/ns#fuelInjectionTypeId> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vvo/ns#> <http://purl.org/vvo/ns#> .
 <http://purl.org/vvo/ns#fuelInjectionTypeId> <http://www.w3.org/2000/01/rdf-schema#comment> "The Volkswagen-specific identifier for the fuel injection type of a vehicle or engine"@en <http://purl.org/vvo/ns#> .
 <http://purl.org/vvo/ns#fuelInjectionTypeId> <http://www.w3.org/2000/01/rdf-schema#label> "fuelInjectionTypeId (0..1)"@en <http://purl.org/vvo/ns#> .
+<http://purl.org/vvo/ns#fuelInjectionTypeId> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba82fdafbcbd95ed967a65533466cb4de <http://purl.org/vvo/ns#> .
 <http://purl.org/vvo/ns#fuelInjectionTypeId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/vvo/ns#> .
 <http://purl.org/vvo/ns#fuelInjectionTypeId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/vvo/ns#> .
 <http://purl.org/vvo/ns#depositContribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vvo/ns#> .
@@ -336,6 +336,6 @@
 <http://www.w3.org/ns/csvw#columnReference> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/csvw#> <http://www.w3.org/ns/csvw#> .
 <http://www.w3.org/ns/csvw#columnReference> <http://www.w3.org/2000/01/rdf-schema#comment> "A column reference property that holds either a single reference to a column description object within this schema, or an array of references. These form the referencing columns for the foreign key definition."@en <http://www.w3.org/ns/csvw#> .
 <http://www.w3.org/ns/csvw#columnReference> <http://www.w3.org/2000/01/rdf-schema#label> "column reference"@en <http://www.w3.org/ns/csvw#> .
-<http://www.w3.org/ns/csvw#columnReference> <http://www.w3.org/2000/01/rdf-schema#domain> _:B2f89cb2479a1a7077a64c86cb5044d04 <http://www.w3.org/ns/csvw#> .
 <http://www.w3.org/ns/csvw#columnReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/csvw#> .
 <http://www.w3.org/ns/csvw#columnReference> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.w3.org/ns/csvw#> .
+<http://www.w3.org/ns/csvw#columnReference> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bc192c7236343d29c1d47164d2de44272 <http://www.w3.org/ns/csvw#> .

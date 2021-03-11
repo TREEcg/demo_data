@@ -13,7 +13,7 @@
 <http://spinrdf.org/spin#ConstructTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#ConstructTemplate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#Template> <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#ConstructTemplate> <http://www.w3.org/2000/01/rdf-schema#label> "Construct template" <http://spinrdf.org/spin> .
-<http://spinrdf.org/spin#ConstructTemplate> <http://spinrdf.org/spin#constraint> _:B70804fb9f0e07432dcb1e0b1b773136a <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstructTemplate> <http://spinrdf.org/spin#constraint> _:B34ba8a93d65035910b499736070b5fe5 <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#private> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#private> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be set to true to indicate that a SPIN function or template is only meant to be used as a helper of other modules, but not directly. Among others, this allows user interfaces to filter out private modules. Furthermore, it tells potential users of this module that they should avoid using this module, as it may not be stable." <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#private> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#systemProperty> <http://spinrdf.org/spin> .
@@ -36,7 +36,7 @@
 <http://spinrdf.org/spin#Modules> <http://www.w3.org/2000/01/rdf-schema#label> "Modules" <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#Modules> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#Modules> <http://www.w3.org/2000/01/rdf-schema#comment> "An \"artificial\" parent class for all Functions and Templates." <http://spinrdf.org/spin> .
-<http://spinrdf.org/spin#Modules> <http://spinrdf.org/spin#constructor> _:B6b7d4ae999088aecdf637b0c59372928 <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#Modules> <http://spinrdf.org/spin#constructor> _:B2158d4aa774e893031d6ba66cd824fe2 <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#Modules> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#UpdateTemplates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#Templates> <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#UpdateTemplates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#UpdateTemplate> <http://spinrdf.org/spin> .
@@ -48,9 +48,9 @@
 <http://spinrdf.org/spin#Templates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#Template> <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#Templates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#Modules> <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#Templates> <http://spinrdf.org/spin#abstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://spinrdf.org/spin> .
-<http://spinrdf.org/spin#SelectTemplate> <http://spinrdf.org/spin#constraint> _:Bf7f29106ffc1b6baf9b3bfd977852698 <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#SelectTemplate> <http://www.w3.org/2000/01/rdf-schema#comment> "A SPIN template that wraps a SELECT query." <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#SelectTemplate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#TableDataProvider> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#SelectTemplate> <http://spinrdf.org/spin#constraint> _:B8dbbfc9ab667a08d357e0c173ce0b0b2 <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#SelectTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#SelectTemplate> <http://www.w3.org/2000/01/rdf-schema#label> "Select template" <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#SelectTemplate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#Template> <http://spinrdf.org/spin> .
@@ -71,7 +71,7 @@
 <http://spinrdf.org/spin#body> <http://www.w3.org/2000/01/rdf-schema#comment> "The body of a Function or Template. This points to a Query instance. For Functions, this is limited to either ASK or SELECT type queries. If the body is the ASK function then the return value is xsd:boolean. Otherwise, the SELECT query must have a single return variable. The first binding of this SELECT query will be returned as result of the function call." <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#Template> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#Module> <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#Template> <http://www.w3.org/2000/01/rdf-schema#label> "Template" <http://spinrdf.org/spin> .
-<http://spinrdf.org/spin#Template> <http://spinrdf.org/spin#constraint> _:B71bd62753f5bf784bda17b0562a41efa <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#Template> <http://spinrdf.org/spin#constraint> _:B37bb5fdd9f8b1ad06f8fe23d28350ada <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#Template> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#Template> <http://www.w3.org/2000/01/rdf-schema#comment> "The metaclass of SPIN templates. Templates are classes that are instances of this class. A template represents a reusable SPARQL query or update request that can be parameterized with arguments. Templates can be instantiated in places where normally a SPARQL query or update request is used, in particular as spin:rules and spin:constraints." <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#ConstructTemplates> <http://spinrdf.org/spin#abstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://spinrdf.org/spin> .
@@ -83,7 +83,7 @@
 <http://spinrdf.org/spin#AskTemplate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#Template> <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#AskTemplate> <http://www.w3.org/2000/01/rdf-schema#comment> "A SPIN template that wraps an ASK query." <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#AskTemplate> <http://www.w3.org/2000/01/rdf-schema#label> "Ask template" <http://spinrdf.org/spin> .
-<http://spinrdf.org/spin#AskTemplate> <http://spinrdf.org/spin#constraint> _:B7b036daa772dfa91635e2cabb0b669a9 <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#AskTemplate> <http://spinrdf.org/spin#constraint> _:B4b9179efcf5754f1dd5f2e67ae12adbb <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#labelTemplate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#labelTemplate> <http://www.w3.org/2000/01/rdf-schema#comment> "A template string for displaying instantiations of a module in human-readable form. The template may contain the argument variable names in curly braces to support substitution. For example, \"The number of values of the {?arg1} property.\"" <http://spinrdf.org/spin> .
 <http://spinrdf.org/spin#labelTemplate> <http://www.w3.org/2000/01/rdf-schema#label> "label template" <http://spinrdf.org/spin> .
@@ -121,10 +121,10 @@
 <http://www.biopax.org/release/biopax-level3.owl#TemplateReaction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#TemplateReaction> <http://www.w3.org/2000/01/rdf-schema#comment> "Definiton: An interaction where a macromolecule is polymerized from a \n    template macromolecule. \n\nRationale: This is an abstraction over multiple (not explicitly stated) biochemical \n    reactions. The ubiquitous molecules (NTP and amino acids) consumed are also usually\n    omitted. Template reaction is non-stoichiometric, does not obey law of \n    mass conservation and temporally non-atomic. It, however, provides a \n    mechanism to capture processes that are central to all living organisms.  \n\nUsage: Regulation of TemplateReaction, e.g. via a transcription factor can be \n    captured using TemplateReactionRegulation. TemplateReaction can also be \n    indirect  for example, it is not necessary to represent intermediary mRNA \n    for describing expression of a protein. It was decided to not subclass \n    TemplateReaction to subtypes such as transcription of translation for the \n    sake of  simplicity. If needed these subclasses can be added in the \n    future. \n\nExamples: Transcription, translation, replication, reverse transcription. E.g. \n    DNA to RNA is transcription, RNA to protein is translation and DNA to \n    protein is protein expression from DNA." <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#TemplateReaction> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#Control> <http://www.biopax.org/release/biopax-level3.owl> .
-<http://www.biopax.org/release/biopax-level3.owl#TemplateReaction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0cd03f74f5739ff1be3d8a6d5201300b <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#TemplateReaction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.biopax.org/release/biopax-level3.owl#Interaction> <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#TemplateReaction> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#GeneticInteraction> <http://www.biopax.org/release/biopax-level3.owl> .
-<http://www.biopax.org/release/biopax-level3.owl#product> <http://www.w3.org/2000/01/rdf-schema#range> _:B16365e831453fea604272d599c8756e3 <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#TemplateReaction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc48f6a6b5ea07f207509b5d06106f60b <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#product> <http://www.w3.org/2000/01/rdf-schema#range> _:B7d833ce221d576498c1915aea4d66a39 <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#product> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.biopax.org/release/biopax-level3.owl#participant> <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#product> <http://www.w3.org/2000/01/rdf-schema#comment> "The product of a template reaction." <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#product> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.biopax.org/release/biopax-level3.owl#TemplateReaction> <http://www.biopax.org/release/biopax-level3.owl> .
@@ -133,21 +133,21 @@
 <http://www.biopax.org/release/biopax-level3.owl#template> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#template> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.biopax.org/release/biopax-level3.owl#TemplateReaction> <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#template> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.biopax.org/release/biopax-level3.owl> .
-<http://www.biopax.org/release/biopax-level3.owl#template> <http://www.w3.org/2000/01/rdf-schema#range> _:Bf6b01979e45571a7c134fa0b00dfff13 <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#template> <http://www.w3.org/2000/01/rdf-schema#range> _:B9dbbc0bcf803af3d0e0a89e3080ffff2 <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#template> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.biopax.org/release/biopax-level3.owl#participant> <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#templateDirection> <http://www.w3.org/2000/01/rdf-schema#comment> "The direction of the template reaction on the template." <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#templateDirection> <http://www.w3.org/2000/01/rdf-schema#range> _:B5a5be81032dcaafed19f02d6109f199d <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#templateDirection> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.biopax.org/release/biopax-level3.owl#TemplateReaction> <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#templateDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://www.biopax.org/release/biopax-level3.owl> .
-<http://www.biopax.org/release/biopax-level3.owl#templateDirection> <http://www.w3.org/2000/01/rdf-schema#range> _:B432e663a41b750bf9438475dc03a651c <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#templateDirection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#TemplateReactionRegulation> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#Modulation> <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#TemplateReactionRegulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1e16a137718938e008a71821ad392b44 <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#TemplateReactionRegulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.biopax.org/release/biopax-level3.owl#Control> <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#TemplateReactionRegulation> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.biopax.org/release/biopax-level3.owl#Catalysis> <http://www.biopax.org/release/biopax-level3.owl> .
-<http://www.biopax.org/release/biopax-level3.owl#TemplateReactionRegulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B910a8b4a60a3a011d83c20c64ee3c916 <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#TemplateReactionRegulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5b25860b54d3ce79361440cee3a3a40b <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#TemplateReactionRegulation> <http://www.w3.org/2000/01/rdf-schema#comment> "Definition: Regulation of an expression reaction by a controlling element such as a transcription factor or microRNA. \n\nUsage: To represent the binding of the transcription factor to a regulatory element in the TemplateReaction, create a complex of the transcription factor and the regulatory element and set that as the controller." <http://www.biopax.org/release/biopax-level3.owl> .
+<http://www.biopax.org/release/biopax-level3.owl#TemplateReactionRegulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbd4b3397b5c96546611b8bc4ff7a805b <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.biopax.org/release/biopax-level3.owl#TemplateReactionRegulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.biopax.org/release/biopax-level3.owl> .
-<http://www.biopax.org/release/biopax-level3.owl#TemplateReactionRegulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba72632ac95c80fac11dbdf044785e1ce <http://www.biopax.org/release/biopax-level3.owl> .
-<http://www.biopax.org/release/biopax-level3.owl#TemplateReactionRegulation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B35e43bcac8a3fe744d8a73ead27ebe94 <http://www.biopax.org/release/biopax-level3.owl> .
 <http://www.opmw.org/ontology/isStepOfTemplate> <http://www.w3.org/2000/01/rdf-schema#label> "is Step of Template" <http://www.opmw.org/ontology/> .
 <http://www.opmw.org/ontology/isStepOfTemplate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.opmw.org/ontology/WorkflowTemplate> <http://www.opmw.org/ontology/> .
 <http://www.opmw.org/ontology/isStepOfTemplate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opmw.org/ontology/WorkflowTemplateProcess> <http://www.opmw.org/ontology/> .

@@ -55,12 +55,12 @@
 <http://purl.org/ipo/core> <http://purl.org/dc/elements/1.1/title> "IPO - Issue Procedure Ontology" <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core> <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by/3.0/> <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Transition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4736d8d47b00f1173d257ff1cec0a9a8 <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#Transition> <http://www.w3.org/2000/01/rdf-schema#label> "Transition"@en <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#Transition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ipo/core> <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#Transition> <http://www.w3.org/2000/01/rdf-schema#comment> "An Transition represents a transition (passage) between two Steps. Each Transition has a Step of origin (source) and a Step of destination (target). A Transition has a guard condition that specifies a boolean condition for that the Transition to occur.\nThrough the guard condition, can be implemented, in a simplified way, a workflow, establishing decision structures, repetition, choice, etc."@en <http://purl.org/ipo/core> .
-<http://purl.org/ipo/core#Transition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B142651e6ce16b7bc810edbeb987d5a08 <http://purl.org/ipo/core> .
-<http://purl.org/ipo/core#Transition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B101e59097e61a988521ad4c44ef00cbb <http://purl.org/ipo/core> .
-<http://purl.org/ipo/core#Transition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B35922f783469d6457063ce4da63455cc <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Transition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd13923616e21301b86306dd1559d3964 <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#Transition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Babd25b9b3791ca9969ff5a3e68cddf5f <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#Transition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#hasGuardCondition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ipo/core#Transition> <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#hasGuardCondition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ipo/core> <http://purl.org/ipo/core> .
@@ -69,17 +69,17 @@
 <http://purl.org/ipo/core#hasGuardCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a BooleanExpression for that a Transition occurs.\nFor example, a Transition can have as guardCondition that the Step of origin be executed 10 times. So while this Step does is not executes 10 times, will not be started the Step of destination. This example illustrates a repeating structure within the workflow."@en <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#hasGuardCondition> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ipo/core#BooleanExpression> <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#hasGuardCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/ipo/core> .
-<http://purl.org/ipo/core#CompoundAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3f62a8b1b9642d3a782f48883fdc3b48 <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#CompoundAction> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ipo/core> <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#CompoundAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/ipo/core#Action> <http://purl.org/ipo/core> .
-<http://purl.org/ipo/core#CompoundAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3be7ad45c1ae321cb46372598c922115 <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#CompoundAction> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/ipo/core#Task> <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#CompoundAction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#CompoundAction> <http://www.w3.org/2000/01/rdf-schema#comment> "An action composed of several other actions. A CompoundAction may have the goal of solving one or more Issues, representing a Procedure or not having an explicit goal, just be a group of Actions to be reused, behaving as an Activity. A CompoundAction has one or more execution steps that activate one Action (Task or other CompoundAction), thus allowing, that a compoundAction reuse another.\nA CompoundAction can be used to create a workflow structure, aimed at better structuring of actions that compose it."@en <http://purl.org/ipo/core> .
+<http://purl.org/ipo/core#CompoundAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbe65ab85dc335fdfc87a44821b783c29 <http://purl.org/ipo/core> .
 <http://purl.org/ipo/core#CompoundAction> <http://www.w3.org/2000/01/rdf-schema#label> "CompoundAction"@en <http://purl.org/ipo/core> .
-<http://linkeddata.center/kees/v1#Workflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B80a71faee46bd9f7cdbf6ff487ce2f12 <http://linkeddata.center/kees/v1> .
+<http://purl.org/ipo/core#CompoundAction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb54a664d75772a32e94fc80499a8168f <http://purl.org/ipo/core> .
 <http://linkeddata.center/kees/v1#Workflow> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkeddata.center/kees/v1> .
 <http://linkeddata.center/kees/v1#Workflow> <http://www.w3.org/2000/01/rdf-schema#comment> "A plan for a kees Cycle processing."@en <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#Workflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc8b4c30944508002cf5ad56705ab3744 <http://linkeddata.center/kees/v1> .
 <http://linkeddata.center/kees/v1#Workflow> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkeddata.center/kees/v1#Plan> <http://linkeddata.center/kees/v1> .
 <http://linkeddata.center/kees/v1#Workflow> <http://www.w3.org/2000/01/rdf-schema#label> "Workflow"@en <http://linkeddata.center/kees/v1> .
 <http://linkeddata.center/kees/v1#workflowStructure> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linkeddata.center/kees/v1#Workflow> <http://linkeddata.center/kees/v1> .
@@ -89,10 +89,10 @@
 <http://linkeddata.center/kees/v1#workflowStructure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://linkeddata.center/kees/v1> .
 <http://linkeddata.center/kees/v1#workflowStructure> <http://www.w3.org/2000/01/rdf-schema#comment> "A kees cycle description  in the form \"booting => learning => reasoning \" with some phases that can be omitted (i.e.  \"learning => reasoning \")"@en <http://linkeddata.center/kees/v1> .
 <http://www.w3.org/ns/mls#Implementation> <http://www.w3.org/2000/01/rdf-schema#comment> "Implementation is an executable implementation of a machine learning algorithm, a script, or a workflow. It is versioned, and sometimes belongs to a library (e.g. WEKA)." <http://www.w3.org/ns/mls> .
-<http://www.w3.org/ns/mls#Implementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B127a1845b9479d7606d57fe4ee39b40b <http://www.w3.org/ns/mls> .
-<http://www.w3.org/ns/mls#Implementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B56a422c6ab22d0fe3e31e2e5c6aec0aa <http://www.w3.org/ns/mls> .
-<http://www.w3.org/ns/mls#Implementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf739d805753436e704a2cd6e131d99eb <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#Implementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B93a134307aeafed9283b9ae7169e226d <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#Implementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc9279706207d8673f7378b9bb3b0d873 <http://www.w3.org/ns/mls> .
 <http://www.w3.org/ns/mls#Implementation> <http://purl.org/dc/terms/description> "Implementation is an executable implementation of a machine learning algorithm, a script, or a workflow. It is versioned, and sometimes belongs to a library (e.g. WEKA)." <http://www.w3.org/ns/mls> .
+<http://www.w3.org/ns/mls#Implementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3d1759d493c0317a098680d98688cd37 <http://www.w3.org/ns/mls> .
 <http://www.w3.org/ns/mls#Implementation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/mls> .
 <http://www.w3.org/ns/mls#Implementation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/mls#InformationEntity> <http://www.w3.org/ns/mls> .
 <http://www.w3.org/ns/sosa/Procedure> <http://www.w3.org/2004/02/skos/core#note> "Many observations may be created via the same Procedure, the same way as many tables are assembled using the same instructions (as information objects, not their concrete realization)."@en <http://www.w3.org/ns/sosa/> .
@@ -138,7 +138,7 @@
 <http://purl.org/net/wf-motifs> <http://purl.org/dc/terms/description> "Ontology for describing Workflow Motifs. Workflow Motifs outline the kinds of data-intensive activities that are observed in workflows (data-operation motifs) and the different manners in which activities are implemented within workflows (workflow-oriented motifs)."@en <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-motifs> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/wfm/versions/2013-03-15.n3> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-motifs> <http://purl.org/dc/terms/title> "The Workflow Motif Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.org/net/wf-motifs> <http://purl.org/stuff/rev#hasReview> _:B2250ba63fa3ed06d15750e3ef62ca736 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/wf-motifs> <http://purl.org/stuff/rev#hasReview> _:B39e99a638f8e68cd40d6bde29d0cef98 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-motifs> <http://purl.org/dc/terms/contributor> <https://plus.google.com/111252485485949924310> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-motifs> <http://purl.org/dc/terms/creator> <https://plus.google.com/108778999053858978438> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-motifs> <http://purl.org/dc/terms/creator> <https://plus.google.com/112455864978418678437> <https://lov.linkeddata.es/dataset/lov> .
@@ -148,16 +148,16 @@
 <http://purl.org/net/wf-motifs> <http://purl.org/dc/terms/contributor> <https://plus.google.com/112966856598966882615> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-motifs> <http://purl.org/vocab/vann/preferredNamespacePrefix> "wfm" <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-motifs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/wf-motifs> <http://purl.org/stuff/rev#hasReview> _:Be602055c61c65e319d387fc516aa5c68 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/wf-motifs> <http://purl.org/stuff/rev#hasReview> _:Ba66d3909eacf1aedf2633918e231b653 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-motifs> <http://www.w3.org/ns/dcat#keyword> "Methods" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/wf-motifs> <http://purl.org/stuff/rev#hasReview> _:Bbea2ce09a29fb65497fec887d9628d95 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-motifs> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.org/net/wf-motifs> <http://purl.org/stuff/rev#hasReview> _:Bf173b0f6a195e6b4520dcd0f52097edf <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-motifs> <http://xmlns.com/foaf/0.1/homepage> "http://vocab.linkeddata.es/motifs/" <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.org/net/wf-motifs> <http://purl.org/stuff/rev#hasReview> _:B57baf7b5dee95d8dfc5d8fbab0e1c3b8 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-motifs> <http://purl.org/dc/terms/creator> <https://plus.google.com/114876671741983407760> <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.org/net/wf-motifs> <http://purl.org/stuff/rev#hasReview> _:B403cf18916ed2d4a7b125d6d64a1c065 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-motifs> <http://purl.org/dc/terms/contributor> <https://plus.google.com/112371334577828533451> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-invocation> <http://purl.org/dc/terms/description> "Wf-invoc is a simple profile of the P-plan ontology to describe how workflow steps are invoked within a workflow execution."@en <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.org/net/wf-invocation> <http://purl.org/stuff/rev#hasReview> _:Bb424fc31198fc836bc741ffdd8b87d04 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/wf-invocation> <http://purl.org/stuff/rev#hasReview> _:Bd4c3fb578d745f35cdc0ba3b7422bd4e <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-invocation> <http://purl.org/vocab/vann/preferredNamespacePrefix> "wf-invoc" <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-invocation> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/net/wf-invocation#" <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-invocation> <http://purl.org/dc/terms/creator> <https://plus.google.com/112455864978418678437> <https://lov.linkeddata.es/dataset/lov> .
@@ -167,32 +167,32 @@
 <http://purl.org/net/wf-invocation> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/wf-invoc/versions/2013-05-17.n3> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-invocation> <http://purl.org/dc/terms/creator> <https://plus.google.com/112966856598966882615> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-invocation> <http://purl.org/dc/terms/issued> "2013-05-16"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.org/net/wf-invocation> <http://purl.org/stuff/rev#hasReview> _:B99aeddf09e5be9e62fe65445d5bf2dea <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/wf-invocation> <http://purl.org/stuff/rev#hasReview> _:Be42e8444fc96eb4bf614441df9900981 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/wf-invocation> <http://purl.org/stuff/rev#hasReview> _:Be702cdf17264b33ef6bd371de9b16d59 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/wf-invocation> <http://purl.org/stuff/rev#hasReview> _:Bfc1055d499a3a8484d1fb2d9d4c1c4cc <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-invocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-invocation> <http://www.w3.org/ns/dcat#keyword> "Methods" <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-invocation> <http://xmlns.com/foaf/0.1/homepage> "http://www.opmw.org/model/wf-invocation/" <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/net/wf-invocation> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.org/net/wf-invocation> <http://purl.org/stuff/rev#hasReview> _:Bc78f21fc1c630a82d90716836efcd13c <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.org/net/wf-invocation> <http://purl.org/stuff/rev#hasReview> _:B9ac900a2cb031e27f418d0ea741e2de8 <https://lov.linkeddata.es/dataset/lov> .
 <https://lov.linkeddata.es/dataset/lov/vocabs/wfm> <http://purl.org/dc/terms/issued> "2013-07-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
 <https://lov.linkeddata.es/dataset/lov/vocabs/wfm> <http://xmlns.com/foaf/0.1/primaryTopic> <http://purl.org/net/wf-motifs> <https://lov.linkeddata.es/dataset/lov> .
 <https://lov.linkeddata.es/dataset/lov/vocabs/wfm> <http://purl.org/dc/terms/title> "The Workflow Motif Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
 <https://lov.linkeddata.es/dataset/lov/vocabs/wfm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
 <https://lov.linkeddata.es/dataset/lov/vocabs/wfm> <http://purl.org/dc/terms/modified> "2016-01-13"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.org/spar/pwo> <http://purl.org/stuff/rev#hasReview> _:Bd743e3a32e71e12261adf84a7ba266f5 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/spar/pwo> <http://purl.org/stuff/rev#hasReview> _:B21f9128290dcb8392b57a0a04b79e544 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/spar/pwo> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pwo/versions/2011-02-23.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/spar/pwo> <http://purl.org/stuff/rev#hasReview> _:B73ab8975740ddb25b1741241217d7887 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/spar/pwo> <http://purl.org/stuff/rev#hasReview> _:B7bd235c61d75a7e5fee403a16cbe8341 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/spar/pwo> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pwo/versions/2015-06-18.n3> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/spar/pwo> <http://purl.org/dc/terms/modified> "2015-06-18"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/spar/pwo> <http://purl.org/dc/terms/creator> <https://plus.google.com/106628269166481436037> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/spar/pwo> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pwo" <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/spar/pwo> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pwo/versions/2013-05-11.n3> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/spar/pwo> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.org/spar/pwo> <http://purl.org/stuff/rev#hasReview> _:B090cddbf6238013f11335eca7cac9bd3 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/spar/pwo> <http://purl.org/dc/terms/description> "An ontology for describing the workflow associated with the publication of a document."@en <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/spar/pwo> <http://purl.org/dc/terms/creator> <https://plus.google.com/114789080541118396191> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/spar/pwo> <http://purl.org/dc/terms/title> "The Publishing Workflow Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/spar/pwo> <http://www.w3.org/ns/dcat#keyword> "SPAR" <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.org/spar/pwo> <http://purl.org/stuff/rev#hasReview> _:Bd056333721e5a260eed0830ac12385d4 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/spar/pwo> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/spar/pwo/" <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/spar/pwo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.org/spar/pwo> <http://purl.org/dc/terms/issued> "2011-02-23"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .

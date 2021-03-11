@@ -1,17 +1,17 @@
 <https://w3id.org/seas/forecasts> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/ForecastingOntology> <https://w3id.org/seas/ForecastingOntology> .
 <https://w3id.org/seas/forecasts> <http://www.w3.org/2000/01/rdf-schema#label> "forecasts"@en <https://w3id.org/seas/ForecastingOntology> .
 <https://w3id.org/seas/forecasts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/seas/ForecastingOntology> .
-<https://w3id.org/seas/forecasts> <http://www.w3.org/2000/01/rdf-schema#domain> _:B97b48c10ac9cf146cf8ec9113e14e254 <https://w3id.org/seas/ForecastingOntology> .
 <https://w3id.org/seas/forecasts> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <https://w3id.org/seas/ForecastingOntology> .
 <https://w3id.org/seas/forecasts> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/seas/FeatureOfInterest> <https://w3id.org/seas/ForecastingOntology> .
 <https://w3id.org/seas/forecasts> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an Forecasting, Forecaster, or Forecast, to the feature of interest a property of which it forecasts.\r\n\r\nIf `x` forecasts a property, then it also forecasts the feature of interest of this property:\r\n\r\n```\r\nseas:forecastsProperty < seas:forecasts o seas:isPropertyOf .\r\n```\r\n\r\nIf a forecasting forecasts a feature of interest, then any Forecaster that implements this forecasting also forecasts this feature of interest, and any Forecast that used this forecasting also forecasts this feature of interest. Furthermore, if a Forecaster forecasts a feature of interest, then any Forecast executed by this Forecaster also forecasts this feature of interest:\r\n\r\n```\r\nseas:forecasts < pep:usedProcedure o seas:forecasts .\r\nseas:forecasts < pep:usedProcedure o seas:forecasts .\r\nseas:forecasts < pep:madeBy o seas:forecasts .\r\n```\r\n"@en <https://w3id.org/seas/ForecastingOntology> .
-<https://w3id.org/seas/Forecaster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9714507dcf6046f5b4aa5ceae2902f6a <https://w3id.org/seas/ForecastingOntology> .
+<https://w3id.org/seas/forecasts> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bada07f80b98c28f684bf9a68d7825436 <https://w3id.org/seas/ForecastingOntology> .
 <https://w3id.org/seas/Forecaster> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/ForecastingOntology> <https://w3id.org/seas/ForecastingOntology> .
 <https://w3id.org/seas/Forecaster> <http://www.w3.org/2000/01/rdf-schema#comment> "A Forecaster implements some Forecasting procedure, and may generate forecasts."@en <https://w3id.org/seas/ForecastingOntology> .
+<https://w3id.org/seas/Forecaster> <http://www.w3.org/2002/07/owl#equivalentClass> _:Ba920cc5efdc7594a239962dc6f46f038 <https://w3id.org/seas/ForecastingOntology> .
 <https://w3id.org/seas/Forecaster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/pep/ProcedureExecutor> <https://w3id.org/seas/ForecastingOntology> .
 <https://w3id.org/seas/Forecaster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/seas/ForecastingOntology> .
-<https://w3id.org/seas/Forecaster> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bcea5215c54afa096ecf2dfe2045cff0e <https://w3id.org/seas/ForecastingOntology> .
 <https://w3id.org/seas/Forecaster> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <https://w3id.org/seas/ForecastingOntology> .
+<https://w3id.org/seas/Forecaster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4e3f5930a2047fe6999318c541e8ce99 <https://w3id.org/seas/ForecastingOntology> .
 <https://w3id.org/seas/Forecaster> <http://www.w3.org/2000/01/rdf-schema#label> "Forecaster"@en <https://w3id.org/seas/ForecastingOntology> .
 <https://w3id.org/eepsa#providesWeatherService> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a Weather Station and the Weather Service it provides (weather report, weather forecast,...)"@en <https://w3id.org/eepsa> .
 <https://w3id.org/eepsa#providesWeatherService> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/eepsa#WeatherService> <https://w3id.org/eepsa> .
@@ -53,15 +53,15 @@
 <https://data.nasa.gov/ontologies/atmonto/NAS#NAShour> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <https://data.nasa.gov/ontologies/atmonto/NAS#> .
 <https://data.nasa.gov/ontologies/atmonto/NAS#NAShour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://data.nasa.gov/ontologies/atmonto/NAS#> .
 <https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://data.nasa.gov/ontologies/atmonto/data#MetCondition> <https://data.nasa.gov/ontologies/atmonto/data#> .
-<https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7e726a94c7ea73e02d40e76512d616b1 <https://data.nasa.gov/ontologies/atmonto/data#> .
-<https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B24ced6c2f0f6daa89391de924dce30d0 <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B236d1e496c624e098dc1304a0ed0d023 <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be065157594c91408c2345ff21e3eb2da <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfa9fd6f5b57b86df4bc467facd3686cb <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://data.nasa.gov/ontologies/atmonto/data#> .
-<https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B444a8d56823be93c1648eb616d0321c3 <https://data.nasa.gov/ontologies/atmonto/data#> .
-<https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B01bc7544052d91a69647457fbac72d25 <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "The current or forecast weather conditions at a given airport or other reporting station." <https://data.nasa.gov/ontologies/atmonto/data#> .
-<https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0a32b8d422ab27699802a7e2db4a1020 <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Weather condition" <https://data.nasa.gov/ontologies/atmonto/data#> .
-<https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9cb3412c13e383757eea84a227abbd97 <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B22503e90d3ed2069b550f1d8599a82df <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2725ae5ab7a28249c3390a06c9aa489c <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B94ad555a2a04de0e342adaafbfeba659 <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#VisibilityCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://data.nasa.gov/ontologies/atmonto/data#MetCondition> <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#VisibilityCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Visibility condition" <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#VisibilityCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://data.nasa.gov/ontologies/atmonto/data#> .
@@ -70,15 +70,15 @@
 <https://data.nasa.gov/ontologies/atmonto/data#TAFmeteorologicalCondition> <http://www.w3.org/2000/01/rdf-schema#label> "TAF meteorological condition" <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#TAFmeteorologicalCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#TAFmeteorologicalCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "Meteorological conditions reported as part of a TAF forecast. Includes sky, wind, visibility and weather components for current and future time periods." <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#TAFmeteorologicalCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf2586aae7f2103a0f6a6bb3d2f925d67 <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#TAFmeteorologicalCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition> <https://data.nasa.gov/ontologies/atmonto/data#> .
-<https://data.nasa.gov/ontologies/atmonto/data#TAFmeteorologicalCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd5351b885074b35f37158a9815fe3cc1 <https://data.nasa.gov/ontologies/atmonto/data#> .
-<https://data.nasa.gov/ontologies/atmonto/data#TAFmeteorologicalCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7b078e07454b5121d1abe03eca1c4be1 <https://data.nasa.gov/ontologies/atmonto/data#> .
-<https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bede4182f3691aceeeb7fa8a71951198c <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#TAFmeteorologicalCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb3e2f25e8e4b04cbdbce6c2df88196d1 <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://data.nasa.gov/ontologies/atmonto/data#MetCondition> <https://data.nasa.gov/ontologies/atmonto/data#> .
-<https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5eef62ecce36b318960f91b3029aa97e <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition> <http://www.w3.org/2000/01/rdf-schema#label> "Surface wind condition" <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "The current or forecast surface wind conditions." <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B90ae14c9dedd77da93841d0f27d65bd2 <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#SurfaceWindCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be1647bfa42b8eb6ffa153970acbbf0d9 <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#meteorologicalConditionStatus> <http://www.w3.org/2000/01/rdf-schema#label> "meteorological condition status" <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#meteorologicalConditionStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <https://data.nasa.gov/ontologies/atmonto/data#MeteorologicalCondition> <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#meteorologicalConditionStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "An indicator of whether the meteorological condition is based on actual observations (observed) or on future projections (forecast)." <https://data.nasa.gov/ontologies/atmonto/data#> .
@@ -90,14 +90,14 @@
 <https://data.nasa.gov/ontologies/atmonto/data#forecastIssueTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#forecastIssueTime> <http://www.w3.org/2000/01/rdf-schema#label> "forecast issue time" <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#TAFreport> <http://www.w3.org/2000/01/rdf-schema#comment> "Meteorological conditions provided in a periodic TAF forecast. Includes sky, wind, visibility and weather components." <https://data.nasa.gov/ontologies/atmonto/data#> .
-<https://data.nasa.gov/ontologies/atmonto/data#TAFreport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B85b7927274274c99b425883bd50f29a9 <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#TAFreport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B82a9589d147204a3667c8bc14144aac7 <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#TAFreport> <http://www.w3.org/2000/01/rdf-schema#label> "TAF report" <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#TAFreport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://data.nasa.gov/ontologies/atmonto/data#IntervalData> <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#TAFreport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd928f1eec16a65799b37cbd7a4555f37 <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#TAFreport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://data.nasa.gov/ontologies/atmonto/data#> .
-<https://data.nasa.gov/ontologies/atmonto/data#TAFreport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B44c897bfa1a8833a2b43f43578b83c18 <https://data.nasa.gov/ontologies/atmonto/data#> .
-<https://data.nasa.gov/ontologies/atmonto/data#TAFreport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb56ab280faebc4cec840791d16a830ad <https://data.nasa.gov/ontologies/atmonto/data#> .
-<https://data.nasa.gov/ontologies/atmonto/data#TAFreport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3a74986c9e4673f786b559c6853ea681 <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#TAFreport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd6b07c71897137c44b004062d5be9ce0 <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#TAFreport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://data.nasa.gov/ontologies/atmonto/general#Sequence> <https://data.nasa.gov/ontologies/atmonto/data#> .
+<https://data.nasa.gov/ontologies/atmonto/data#TAFreport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3d922c45c0544fff4db07c25eba2144b <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#forecastingAirport> <http://www.w3.org/2000/01/rdf-schema#range> <https://data.nasa.gov/ontologies/atmonto/NAS#Airport> <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#forecastingAirport> <http://www.w3.org/2000/01/rdf-schema#domain> <https://data.nasa.gov/ontologies/atmonto/data#TAFreport> <https://data.nasa.gov/ontologies/atmonto/data#> .
 <https://data.nasa.gov/ontologies/atmonto/data#forecastingAirport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://data.nasa.gov/ontologies/atmonto/data#> .
@@ -143,12 +143,12 @@
 <https://w3id.org/seas/ForecastingOntology> <http://purl.org/dc/terms/publisher> <https://itea3.org/project/seas.html> <https://lov.linkeddata.es/dataset/lov> .
 <https://w3id.org/seas/ForecastingOntology> <http://www.w3.org/ns/dcat#keyword> "Environment" <https://lov.linkeddata.es/dataset/lov> .
 <https://w3id.org/seas/ForecastingOntology> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
-<https://w3id.org/seas/ForecastingOntology> <http://purl.org/stuff/rev#hasReview> _:Bede14a52392206fe38ec1011eb765f72 <https://lov.linkeddata.es/dataset/lov> .
 <https://w3id.org/seas/ForecastingOntology> <http://purl.org/dc/terms/title> "The SEAS Forecasting ontology"@en <https://lov.linkeddata.es/dataset/lov> .
 <https://w3id.org/seas/ForecastingOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
 <https://w3id.org/seas/ForecastingOntology> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/seas/" <https://lov.linkeddata.es/dataset/lov> .
 <https://w3id.org/seas/ForecastingOntology> <http://purl.org/vocommons/voaf#reusedByVocabularies> "1"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
 <https://w3id.org/seas/ForecastingOntology> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/seas/ForecastingOntology> <http://purl.org/stuff/rev#hasReview> _:B07473369fa195f9f63203045b083b454 <https://lov.linkeddata.es/dataset/lov> .
 <https://w3id.org/seas/ForecastingOntology> <http://purl.org/vocab/vann/preferredNamespacePrefix> "seasfo" <https://lov.linkeddata.es/dataset/lov> .
 <https://w3id.org/seas/ForecastingOntology> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/seasfo/versions/2017-08-29.n3> <https://lov.linkeddata.es/dataset/lov> .
 <https://w3id.org/seas/ForecastingOntology> <http://purl.org/dc/terms/issued> "2017-08-29"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
@@ -158,9 +158,8 @@
 <https://w3id.org/seas/ForecastingOntology> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://www.w3.org/ns/dcat#keyword> "Environment" <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://purl.org/dc/terms/creator> <http://www.w3.org/2005/Incubator/ssn/> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://purl.org/stuff/rev#hasReview> _:Bd341ce67f485a631e2f29094b645d842 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.oclc.org/NET/ssnx/cf/cf-feature#" <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://purl.org/stuff/rev#hasReview> _:B27aa5d5cd821dccbafde5de5ee1f7d00 <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://purl.org/stuff/rev#hasReview> _:Ba1cbdb573666cb02ca563d7136b437e4 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://purl.org/dc/terms/description> "This is an ontology representation of the generic features defined by Climate and Forecast (CF) standard names vocabulary (http://cf-pcmdi.llnl.gov/documents/cf-standard-names/), maintained by the Program for Climate Model Diagnosis and Intercomparison (http://cf-pcmdi.llnl.gov/ ) which is intended for use with climate and forecast data, in the  atmosphere, surface and ocean domains."@en <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
@@ -169,6 +168,7 @@
 <http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://purl.org/dc/terms/issued> "2010-10-05"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/cff/versions/2011-06-20.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://purl.org/stuff/rev#hasReview> _:B37b9786060237571eda3c35558bfc2b9 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cff" <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-feature> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
 <https://lov.linkeddata.es/dataset/lov/vocabs/cfp> <http://purl.org/dc/terms/modified> "2017-01-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
@@ -187,7 +187,6 @@
 <https://lov.linkeddata.es/dataset/lov/vocabs/seasfo> <http://xmlns.com/foaf/0.1/primaryTopic> <https://w3id.org/seas/ForecastingOntology> <https://lov.linkeddata.es/dataset/lov> .
 <https://lov.linkeddata.es/dataset/lov/vocabs/seasfo> <http://purl.org/dc/terms/modified> "2017-08-30"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://www.w3.org/ns/dcat#keyword> "IoT" <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.org/stuff/rev#hasReview> _:B12934f17f15fff26cf7f18687898a988 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.org/dc/terms/modified> "2011-06-20"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.org/dc/terms/issued> "2010-10-05"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
@@ -195,10 +194,11 @@
 <http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.org/dc/terms/title> "Climate and Forecast (CF) standard names parameter vocabulary"@en <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.org/dc/terms/description> "This is an ontology representation of the climatic data variables defined by Climate and Forecast (CF) standard names vocabulary (http://cf-pcmdi.llnl.gov/documents/cf-standard-names/), maintained by the Program for Climate Model Diagnosis and Intercomparison (http://cf-pcmdi.llnl.gov/ ) which is intended for use with climate and forecast data, in the  atmosphere, surface and ocean domains."@en <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.oclc.org/NET/ssnx/cf/cf-property#" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.org/stuff/rev#hasReview> _:Bd957bf373ca0f38d8abe5a7c754c559f <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
-<http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.org/stuff/rev#hasReview> _:Bce710aee0803c92d2508ba5e393dda21 <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/cfp/versions/2011-06-20.n3> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.org/dc/terms/creator> <http://www.w3.org/2005/Incubator/ssn/> <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://www.w3.org/ns/dcat#keyword> "Environment" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.org/stuff/rev#hasReview> _:Ba3aae1fa38360495ad556962c3099b8c <https://lov.linkeddata.es/dataset/lov> .
 <http://purl.oclc.org/NET/ssnx/cf/cf-property> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cfp" <https://lov.linkeddata.es/dataset/lov> .

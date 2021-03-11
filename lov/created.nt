@@ -37,7 +37,7 @@
 <http://purl.org/spar/cito/hasCitationCreationDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date on which the citation was created. This has the same numerical value as the publication date of the citing bibliographic resource, but is a property of the citation itself.  When combined with the citation time span, it permits that citation to be located in history."@en <http://purl.org/spar/cito> .
 <http://purl.org/spar/cito/Citation> <http://www.w3.org/2000/01/rdf-schema#label> "citation"@en <http://purl.org/spar/cito> .
 <http://purl.org/spar/cito/Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
-<http://purl.org/spar/cito/Citation> <http://www.w3.org/2002/07/owl#equivalentClass> _:B04968240c6a322af912cf2d61c8fb4c0 <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/2002/07/owl#equivalentClass> _:B47d2bb96462d519660d17fe0f9f0738b <http://purl.org/spar/cito> .
 <http://purl.org/spar/cito/Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation is a conceptual directional link from a citing entity to a cited entity, created by a human performative act of making a citation, typically instantiated by the inclusion of a bibliographic reference (biro:BibliographicReference) in the reference list of the citing entity, or by the inclusion within the citing entity of a link, in the form of an HTTP Uniform Resource Locator (URL), to a resource on the World Wide Web.\n\nThe time span of a citation, i.e. the interval between the publication year of the citing entity and the publication year of the cited entity, can be recorded using the data property cito:hasCitationTimeSpan.\n\nThe nature or type of a citation can be characterized by using CiTO object properties, e.g. http://purl.org/spar/cito/citesAsDataSource (definition: “The citing entity cites the cited entity as a source of data”).  \n\nThis CiTO class cito:Citation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties. \n\nFor example, the following RDF statement\n\n     :paperA cito:extends :paperB .\n\ncan be alternatively described as follows\n\n     :thisCitation a cito:Citation ; \n          cito:hasCitingEntity :paperA ;\n          cito:hasCitationCharacterization cito:extends ;\n          cito:hasCitedEntity :paperB .\n\nThis usage involved OWL2 punning, whereby a CiTO object property, such as the aforementioned cito:extends, is used as the object of the OWL assertion.\n\n     :thisCitation cito:hasCitationCharacterization cito:extends .\n\nUsing such OWL2 punning (described at http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), the CiTO object property is considered as a proper named individual of the class owl:Thing. \n\nSuch reification of citation acts can be very useful, since it permits one to combine these CiTO properties with other vocabularies, or to handle situations in which none of the citation characterizations available in CiTO are applicable.  \n\nSuch situations can be resolved by the creation of a user-defined citation characterization, for example by using the Open Annotation Data Model, as explained at http://semanticpublishing.wordpress.com/2013/07/03/extending-cito-for-open-annotations/."@en <http://purl.org/spar/cito> .
 <http://purl.org/spar/datacite/viaf> <http://www.w3.org/2000/01/rdf-schema#comment> "The Virtual International Authority File is an international authority file created by amalagamating the national authority files of several national libraries and operated by the Online Computer Library Center (OCLC).  It contains information about many topics including personal names."@en <http://purl.org/spar/datacite> .
 <http://purl.org/spar/datacite/viaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/datacite> .
@@ -66,7 +66,7 @@
 <http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/2000/01/rdf-schema#label> "archival record"@en <http://purl.org/spar/fabio> .
 <http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
 <http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/2000/01/rdf-schema#comment> "An archival record connotes a material created or received by a person, family, or organization, public or private, in the conduct of their affairs that is preserved because of the enduring value contained in the information it contains or as evidence of the function and the responsibilities of its creator."@en <http://purl.org/spar/fabio> .
-<http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbcec970458f3c79b52ba21e2bedcc959 <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B52404a8062dbc9205b1bb390a556a087 <http://purl.org/spar/fabio> .
 <http://purl.org/spar/fabio/ArchivalRecord> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Work> <http://purl.org/spar/fabio> .
 <http://purl.org/spar/fabio/Film> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Movie> <http://purl.org/spar/fabio> .
 <http://purl.org/spar/fabio/Film> <http://www.w3.org/2000/01/rdf-schema#comment> "A movie with an accompanying soundtrack, typically created by a professional film studio, designed to communicate a fictional story, record an artistic event, or impart information that is scientific or documentary in nature."@en <http://purl.org/spar/fabio> .
@@ -109,14 +109,14 @@
 <http://purl.org/twc/vocab/conversion/label> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/label> <http://www.w3.org/2000/01/rdf-schema#label> "label" <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/label> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/twc/vocab/conversion/> .
-<http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B14a940b2239e732e3e1b3e85b1e7fc6a <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2000/01/rdf-schema#comment> "A materialized (captured in time) dataset -- something is now on disk. Union of all LayerDatasets created by different conversion parameters." <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/twc/vocab/conversion/AbstractDataset> <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/twc/vocab/conversion/LayerDataset> <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B724e9cd71d07d9984e20ac880e93c72a <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2000/01/rdf-schema#label> "Versioned Dataset" <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/twc/vocab/conversion/Dataset> <http://purl.org/twc/vocab/conversion/> .
-<http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B95553bb99282770055fb3092bfb10cd6 <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/VersionedDataset> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B73cace7164944a799d186cc71d32ad69 <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/comment> <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs> <https://github.com/timrdf/csv2rdf4lod-automation/wiki/conversion:comment> <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/comment> <http://www.w3.org/2000/01/rdf-schema#label> "comment" <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/comment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/twc/vocab/conversion/> .
@@ -133,13 +133,13 @@
 <http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/vocab/changeset/schema> .
 <http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocab/changeset/schema#ChangeSet> <http://purl.org/vocab/changeset/schema> .
 <http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2004/02/skos/core#definition> "the date that the changeset was created"@en <http://purl.org/vocab/changeset/schema> .
-<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2004/02/skos/core#historyNote> _:Bafecda7e3e6025e9bfff22b3b6e35a95 <http://purl.org/vocab/changeset/schema> .
 <http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2000/01/rdf-schema#label> "createdDate"@en <http://purl.org/vocab/changeset/schema> .
 <http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> <http://purl.org/vocab/changeset/schema> .
-<http://purl.uniprot.org/core/created> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bf1153ab9bf8e6e90ca55a17347c0c693 <http://purl.uniprot.org/core/> .
+<http://purl.org/vocab/changeset/schema#createdDate> <http://www.w3.org/2004/02/skos/core#historyNote> _:B68c747a8f63022f2476ef362f93de33c <http://purl.org/vocab/changeset/schema> .
 <http://purl.uniprot.org/core/created> <http://www.w3.org/2000/01/rdf-schema#comment> "The date a resource was created." <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.uniprot.org/core/> .
-<http://purl.uniprot.org/core/created> <http://www.w3.org/2000/01/rdf-schema#domain> _:B7e1aa8573c2e0951bdfa293ba0b44f94 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/created> <http://www.w3.org/2000/01/rdf-schema#domain> _:B9cadc2effb178eb8569c5c8ecab9019a <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/created> <http://www.w3.org/2000/01/rdf-schema#domain> _:B68a1f415637d01992544cbd9c9ef82d1 <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/created> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> <http://purl.uniprot.org/core/> .
 <http://purl.uniprot.org/core/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.uniprot.org/core/> .
 <http://www.ontology-of-units-of-measure.org/resource/om-2/solarMassPerGigayearCubicParsec> <http://www.ontology-of-units-of-measure.org/resource/om-2/hasNumerator> <http://www.ontology-of-units-of-measure.org/resource/om-2/solarMass> <http://www.ontology-of-units-of-measure.org/resource/om-2/> .
@@ -250,13 +250,13 @@
 <http://purl.obolibrary.org/obo/ERO_0000007> <http://www.w3.org/2000/01/rdf-schema#label> "Technique" <http://vivoweb.org/ontology/core> .
 <http://purl.obolibrary.org/obo/ERO_0000007> <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Melissa Haendel" <http://vivoweb.org/ontology/core> .
 <http://purl.obolibrary.org/obo/ERO_0000007> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
-<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Beb00f02f9f8f264df8161603366ac432 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B92875617d81f63445cde00865ea5292b <http://vivoweb.org/ontology/core> .
 <http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://vivoweb.org/ontology/core> .
-<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2d26359328d7b41c550e33db5afa00a0 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4b1ec73cd7aa78fd195c226b2c16c364 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6a8379903fe4b7113e094c87af4b9060 <http://vivoweb.org/ontology/core> .
 <http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/ontology/bibo/"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://vivoweb.org/ontology/core> .
-<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9608545f6d505d056701152ed5c2a3c8 <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcfa5f79613112f256c01ad5dd76d8949 <http://vivoweb.org/ontology/core> .
 <http://purl.org/ontology/bibo/Thesis> <http://purl.obolibrary.org/obo/IAO_0000112> "Short Definition from OCLC Input Standards, EntW" <http://vivoweb.org/ontology/core> .
-<http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be3d6f233a81fe246068d0febd3fd3e98 <http://vivoweb.org/ontology/core> .
 <http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/2000/01/rdf-schema#label> "Thesis" <http://vivoweb.org/ontology/core> .
 <http://purl.org/ontology/bibo/Thesis> <http://purl.obolibrary.org/obo/IAO_0000115> "Works created to satisfy the requirements for an academic certification or degree; also called dissertation" <http://vivoweb.org/ontology/core> .
 <http://purl.org/ontology/bibo/Thesis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
@@ -337,9 +337,9 @@
 <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created> <http://www.w3.org/2000/01/rdf-schema#label> "created" <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
 <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#UnionOfEventJournalTodo> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
 <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal#created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.semanticdesktop.org/ontologies/2007/04/02/ncal> .
-<http://www.w3.org/2002/12/cal/ical#created> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba1069e4de00f979a968e1ff2d4a86ccf <http://www.w3.org/2002/12/cal/ical> .
 <http://www.w3.org/2002/12/cal/ical#created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/2002/12/cal/ical> .
 <http://www.w3.org/2002/12/cal/ical#created> <http://www.w3.org/2000/01/rdf-schema#label> "CREATED" <http://www.w3.org/2002/12/cal/ical> .
+<http://www.w3.org/2002/12/cal/ical#created> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba82c5cc8694c34b7319e5343464ee0ae <http://www.w3.org/2002/12/cal/ical> .
 <http://www.w3.org/2002/12/cal/ical#created> <http://www.w3.org/2000/01/rdf-schema#comment> "\n\t    value type: DATE-TIME" <http://www.w3.org/2002/12/cal/ical> .
 <http://www.w3.org/2002/12/cal/ical#created> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the date and time that the calendar information was created by the calendar user agent in the calendar store. Note: This is analogous to the creation date and time for a file in the file system." <http://www.w3.org/2002/12/cal/ical> .
 <http://www.w3.org/2002/12/cal/ical#created> <http://www.w3.org/2002/12/cal/icalSpec#valueType> "DATE-TIME" <http://www.w3.org/2002/12/cal/ical> .
@@ -357,9 +357,9 @@
 <https://w3id.org/idsa/core/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <https://w3id.org/idsa/core> .
 <https://w3id.org/idsa/core/created> <http://www.w3.org/2000/01/rdf-schema#comment> "The date of the creation of the Digital Content. In contrast to the ids:temporalCoverage, creation dates of ids:Representation, ids:Artifacts or any other form of meta-data, this property describes the creation date of referenced Digital Content itself."@en <https://w3id.org/idsa/core> .
 <https://w3id.org/idsa/core/created> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/issued> <https://w3id.org/idsa/core> .
-<https://w3id.org/idsa/core/created> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bb37acc7a474d6718270ae03b9a0ff38b <https://w3id.org/idsa/core> .
 <https://w3id.org/idsa/core/created> <http://www.w3.org/2000/01/rdf-schema#label> "created"@en <https://w3id.org/idsa/core> .
 <https://w3id.org/idsa/core/created> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/created> <https://w3id.org/idsa/core> .
+<https://w3id.org/idsa/core/created> <http://www.w3.org/2000/01/rdf-schema#domain> _:B50ea32ef7b07493bcc1ca7279813db91 <https://w3id.org/idsa/core> .
 <https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/created.nt> .
 _:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
 _:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .

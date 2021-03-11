@@ -99,8 +99,8 @@
 <https://w3id.org/seas/connectsSystem> <http://www.w3.org/2000/01/rdf-schema#label> "connects system"@en <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/connectsSystem> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/seas/System> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/connectsSystem> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/connectsSystem> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B015ac6ea2e981039660bc3bd66afcd3e <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/connectsSystem> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/seas/connectedThrough> <https://w3id.org/seas/SystemOntology> .
-<https://w3id.org/seas/connectsSystem> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B97574ac7a0dec4dd7cbbe50b47a8d71b <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/connectsSystemAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a connection to one of the connection points at which it connects a system."@en <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/connectsSystemAt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/SystemOntology> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/connectsSystemAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/seas/Connection> <https://w3id.org/seas/SystemOntology> .
@@ -111,13 +111,13 @@
 <https://w3id.org/seas/connectsSystemAt> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/seas/ConnectionPoint> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/seas/FeatureOfInterest> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/Connection> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9619b651de8f612e66de26cf0313ab11 <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of connections between systems.\r\n\r\nThis class qualifies property `seas:connectedTo`. \r\n\r\nA connection describes potential interactions between systems. \r\n\r\nFor example, a power connection between power systems describes the fact that these systems may exchange electricity.\r\n\r\n```\r\n<connection> seas:connectsSystem <electric_vehicle> , <electric_vehicle_service_equipment> .\r\n<electric_vehicle> seas:connectedThrough <connection> .\r\n<electric_vehicle_service_equipment> seas:connectedThrough <connection> .\r\n```\r\n\r\nAny two connected systems are connected through a connection. If:\r\n\r\n```\r\n<system1> a seas:System .\r\n<system2> a seas:System .\r\n<system1> seas:connectedTo <system2> .\r\n```\r\n\r\nthen there exists `_:connection` such that:\r\n\r\n```\r\n_:connection seas:connectsSystem <system1> , <system2> .\r\n```\r\n\r\nA connection can connect more than two systems at the same time.\r\n\r\n\r\nFigure below illustrates connections of systems:\r\n\r\n[![Connections of systems](https://w3id.org/seas/system2.png)](https://w3id.org/seas/system2.png)\r\n\r\n"@en <https://w3id.org/seas/SystemOntology> .
-<https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba169c5bc57a58e36c1ba3c687e6157f5 <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B64a8983a12502a4da078957864fe626c <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/Connection> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/seas/System> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/Connection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#label> "Connection"@en <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/SystemOntology> <https://w3id.org/seas/SystemOntology> .
-<https://w3id.org/seas/Connection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3d619e09a986536c738a6967f4dfa81e <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/seas/FeatureOfInterest> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#label> "Connection Point"@en <https://w3id.org/seas/SystemOntology> .
@@ -126,7 +126,7 @@
 <https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/seas/Connection> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/seas/System> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/seas/SystemOntology> .
-<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B44e9b9f7ca867b412837b7201018dd2d <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ConnectionPoint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba0993d4186b9db24e0ae5d6b26a30897 <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/connectsSystemThrough> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/SystemOntology> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/connectsSystemThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/connectsSystemThrough> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/seas/ConnectionPoint> <https://w3id.org/seas/SystemOntology> .
@@ -152,13 +152,13 @@
 <https://w3id.org/seas/connectedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/connectedTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/SystemOntology> <https://w3id.org/seas/SystemOntology> .
 <https://w3id.org/seas/connectedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/seas/System> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/ElectricityBilateralContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B634b7e870d19fb3dc29d822f8295542b <https://w3id.org/seas/TradingOntology> .
 <https://w3id.org/seas/ElectricityBilateralContract> <http://www.w3.org/2000/01/rdf-schema#comment> "An electricity bilateral contract is both a connection between electricity players, and a contract. It only connects electricity traders.\r\n\r\nIt is linked to some player that validates each trade."@en <https://w3id.org/seas/TradingOntology> .
 <https://w3id.org/seas/ElectricityBilateralContract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/seas/TradingOntology> .
-<https://w3id.org/seas/ElectricityBilateralContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc55e85bd097cee286a0eb14c0d399583 <https://w3id.org/seas/TradingOntology> .
 <https://w3id.org/seas/ElectricityBilateralContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/seas/Contract> <https://w3id.org/seas/TradingOntology> .
 <https://w3id.org/seas/ElectricityBilateralContract> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <https://w3id.org/seas/TradingOntology> .
+<https://w3id.org/seas/ElectricityBilateralContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B86984e0452ca02ec64ddca22aa0471f3 <https://w3id.org/seas/TradingOntology> .
 <https://w3id.org/seas/ElectricityBilateralContract> <http://www.w3.org/2000/01/rdf-schema#label> "Electricity Bilateral Contract"@en <https://w3id.org/seas/TradingOntology> .
-<https://w3id.org/seas/ElectricityBilateralContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B9555d867056bb4f3377a4632a76a9329 <https://w3id.org/seas/TradingOntology> .
 <https://w3id.org/seas/ElectricityBilateralContract> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/seas/Connection> <https://w3id.org/seas/TradingOntology> .
 <https://w3id.org/seas/ElectricityBilateralContract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/TradingOntology> <https://w3id.org/seas/TradingOntology> .
 <https://w3id.org/seas/ElectricityMarketLicense> <http://www.w3.org/2000/01/rdf-schema#comment> "An Electricity Market License is a connection point between a player and a market."@en <https://w3id.org/seas/TradingOntology> .
@@ -339,7 +339,7 @@
 <http://www.w3id.org/urban-iot/electric#hasPowerSupply> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3id.org/urban-iot/electric> .
 <http://www.w3id.org/urban-iot/electric#hasPowerSupply> <http://www.w3.org/2000/01/rdf-schema#comment> "Associates a Connector to possible power supplies."@en <http://www.w3id.org/urban-iot/electric> .
 <http://www.w3id.org/urban-iot/electric#hasPowerSupply> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/urban-iot/electric#Connector> <http://www.w3id.org/urban-iot/electric> .
-<http://www.w3id.org/urban-iot/electric#hasPowerSupply> <http://www.w3.org/2000/01/rdf-schema#range> _:B053a5e84ba4c807f95cf3d40934ff640 <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric#hasPowerSupply> <http://www.w3.org/2000/01/rdf-schema#range> _:Bd7d5d18a61b1ffb04bbeb7d080180f18 <http://www.w3id.org/urban-iot/electric> .
 <http://www.w3id.org/urban-iot/electric#hasPowerSupply> <http://www.w3.org/2000/01/rdf-schema#comment> "Associa un Connettore ai possibili tipi di alimentazione."@it <http://www.w3id.org/urban-iot/electric> .
 <http://www.w3id.org/urban-iot/electric#hasPowerSupply> <http://www.w3.org/2000/01/rdf-schema#label> "ha tipi di alimentazione"@it <http://www.w3id.org/urban-iot/electric> .
 <http://www.w3id.org/urban-iot/electric#isConnectorOf> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3id.org/urban-iot/electric#Connector> <http://www.w3id.org/urban-iot/electric> .

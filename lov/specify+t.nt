@@ -1,7 +1,7 @@
 <http://purl.org/goodrelations/v1#advanceBookingRequirement> <http://www.w3.org/2000/01/rdf-schema#comment> "The minimal and maximal amount of time that is required between accepting the gr:Offering and the actual usage of the resource or service. This is mostly relevant for offers regarding hotel rooms, the rental of objects, or the provisioning of services. The duration is specified relatively to the beginning of the usage of the contracted object. It is represented by attaching an instance of the class gr:QuantitativeValueInteger. The lower and upper boundaries are specified using the properties gr:hasMinValueInteger and gr:hasMaxValueInteger to that instance. The unit of measurement is specified using the property gr:hasUnitOfMeasurement with a string holding a UN/CEFACT code suitable for durations, e.g. MON (months), DAY (days), HUR (hours), or MIN (minutes).\n\nThe difference to the gr:validFrom and gr:validThrough properties is that those specify the interval during which the gr:Offering is valid, while gr:advanceBookingRequirement specifies the acceptable relative amount of time between accepting the offer and the fulfilment or usage."@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#advanceBookingRequirement> <http://www.w3.org/2000/01/rdf-schema#label> "advance booking requirement (0..1)"@en <http://purl.org/goodrelations/v1> .
-<http://purl.org/goodrelations/v1#advanceBookingRequirement> <http://www.w3.org/2000/01/rdf-schema#domain> _:B3403eb14799757730d32055d44bbe1c0 <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#advanceBookingRequirement> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValueInteger> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#advanceBookingRequirement> <http://www.w3.org/2000/01/rdf-schema#domain> _:Beb42d42d59e48fe34825d67cf47d5248 <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#advanceBookingRequirement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#advanceBookingRequirement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#DayOfWeek> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentMethod> <http://purl.org/goodrelations/v1> .
@@ -24,19 +24,19 @@
 <http://purl.org/goodrelations/v1#DayOfWeek> <http://www.w3.org/2000/01/rdf-schema#label> "Day of week"@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#DayOfWeek> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#ProductOrService> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#availabilityEnds> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#availabilityEnds> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bb12af6c409cd3915a78fc506759a2f10 <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#availabilityEnds> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#availabilityEnds> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the end of the availability of the gr:ProductOrService included in the gr:Offering.\nThe difference to the properties gr:validFrom and gr:validThrough is that those specify the period of time during which the offer is valid and can be accepted.\n\nExample: I offer to lease my boat for the period of August 1 - August 31, 2010, but you must accept by offer no later than July 15.\n\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2008-05-30T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2008-05-30T09:30:10-09:00\n\nor\n\n2008-05-30T09:30:10+09:00.\n\nNote: There is another property gr:availableAtOrFrom, which is used to indicate the gr:Location (e.g. store or shop) from which the goods would be available."@en <http://purl.org/goodrelations/v1> .
-<http://purl.org/goodrelations/v1#availabilityEnds> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba433343e4090b3e40c1aebc9a9223333 <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#availabilityEnds> <http://www.w3.org/2000/01/rdf-schema#label> "availability ends (0..1)"@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#availabilityEnds> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#availabilityStarts> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the beginning of the availability of the gr:ProductOrService included in the gr:Offering.\nThe difference to the properties gr:validFrom and gr:validThrough is that those specify the period of time during which the offer is valid and can be accepted.\n\nExample: I offer to lease my boat for the period of August 1 - August 31, 2010, but you must accept by offer no later than July 15.\n\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2008-05-30T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2008-05-30T09:30:10-09:00\n\nor\n\n2008-05-30T09:30:10+09:00.\n\nNote: There is another property gr:availableAtOrFrom, which is used to indicate the gr:Location (e.g. store or shop) from which the goods would be available."@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#availabilityStarts> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#availabilityStarts> <http://www.w3.org/2000/01/rdf-schema#domain> _:B676446fc0b6447b1a6e8bca40a72348c <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#availabilityStarts> <http://www.w3.org/2000/01/rdf-schema#label> "availability starts (0..1)"@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#availabilityStarts> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#availabilityStarts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
-<http://purl.org/goodrelations/v1#availabilityStarts> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bdbe6012efba0396bfddfa278dc48c1eb <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#includesObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
-<http://purl.org/goodrelations/v1#includesObject> <http://www.w3.org/2000/01/rdf-schema#domain> _:B23f5f80e0484bda92f0a4bd0c7407faf <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#includesObject> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bd77ec4e5b290aae08f6ca8470300f7fc <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#includesObject> <http://www.w3.org/2000/01/rdf-schema#comment> "This object property links a gr:Offering to one or multiple gr:TypeAndQuantityNode or nodes that specify the components that are included in the respective offer."@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#includesObject> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#TypeAndQuantityNode> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#includesObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/goodrelations/v1> .
@@ -109,9 +109,9 @@
 <http://purl.org/spar/scoro/makesContribution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/scoro/> .
 <http://purl.org/tio/ns#accessTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#accessTo> <http://www.w3.org/2000/01/rdf-schema#label> "accessTo (0..*)"@en <http://purl.org/tio/ns#> .
-<http://purl.org/tio/ns#accessTo> <http://www.w3.org/2000/01/rdf-schema#range> _:B7da7b8e1034232a3dd6c25406fcc63af <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#accessTo> <http://www.w3.org/2000/01/rdf-schema#range> _:B36b1928e8f34697c55d4b0b2c8ac3226 <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#accessTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/tio/ns#> .
-<http://purl.org/tio/ns#accessTo> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0214f548f9c82a83e928158d593cd9dd <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#accessTo> <http://www.w3.org/2000/01/rdf-schema#domain> _:B25b6460c6b01d91efd9f53e2aeaeca99 <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#accessTo> <http://www.w3.org/2000/01/rdf-schema#comment> "This links a tio:Ticket or a tio:ScopeOfAccess node to the tio:POI, tio:Event, or tio:TransportationService for which the tio:Ticket grants access.\n\nNote: When used to link a tio:Ticket directly to a tio:POI, tio:Event, or tio:TransportationService, you cannot specify the various details of a tio:ScopeOfAccess node."@en <http://purl.org/tio/ns#> .
 <http://purl.org/vocab/aiiso/schema#teaches> <http://purl.org/dc/terms/issued> "2008-09-25" <http://purl.org/vocab/aiiso/schema> .
 <http://purl.org/vocab/aiiso/schema#teaches> <http://www.w3.org/2000/01/rdf-schema#label> "teaches"@en <http://purl.org/vocab/aiiso/schema> .
@@ -125,7 +125,7 @@
 <http://purl.org/vocab/relationship/examples/2> <http://www.w3.org/2000/01/rdf-schema#label> "Using With HTML and XHTML" <http://purl.org/vocab/relationship/> .
 <http://purl.org/vso/ns#acceleration> <http://www.w3.org/2000/01/rdf-schema#comment> "The time needed to accelerate the vehicle from a given start velocity to a given target velocity\nTypical unit code(s): SEC for seconds\n\nNote: There are unfortunately no standard unit codes for seconds/0..100 km/h or seconds/0..60 mph. Simply use \"SEC\" for seconds and indicate the velocities in the rdfs:label of the gr:QuantitativeValueFloat, or use vso:referenceSpeeds with vso:0to60MPH (0..60 mph) or vso:0to100KMH (0..100 km/h) to specify the reference speeds."@en <http://purl.org/vso/ns> .
 <http://purl.org/vso/ns#acceleration> <http://www.w3.org/2000/01/rdf-schema#label> "acceleration (0..*)"@en <http://purl.org/vso/ns> .
-<http://purl.org/vso/ns#acceleration> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bacc9aad6796b8f0d5f04fd0480c89bf1 <http://purl.org/vso/ns> .
+<http://purl.org/vso/ns#acceleration> <http://www.w3.org/2000/01/rdf-schema#domain> _:B335443939174fd0f005984938b2b0c2d <http://purl.org/vso/ns> .
 <http://purl.org/vso/ns#acceleration> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/goodrelations/v1#quantitativeProductOrServiceProperty> <http://purl.org/vso/ns> .
 <http://purl.org/vso/ns#acceleration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/vso/ns> .
 <http://purl.org/vso/ns#acceleration> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/goodrelations/v1#QuantitativeValueFloat> <http://purl.org/vso/ns> .
@@ -162,73 +162,73 @@
 <http://www.w3.org/2006/vcard/ns#birthdate> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the birth date of the object the vCard represents" <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#Communication> <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/2000/01/rdf-schema#label> "Language" <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/2002/07/owl#equivalentClass> _:B02d23542917a25558bd29b1e05aad78e <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bf6f16496211919a526613cf888f7565c <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/2002/07/owl#equivalentClass> _:B7f96b9d161c0f81306ccf0b9b20012ff <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the language(s) that may be used for contacting the entity associated with the vCard." <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bdc0f63a3107314eed94e258ba1a332d7 <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#CalendarBusy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#CalendarBusy> <http://www.w3.org/2000/01/rdf-schema#label> "Calendar Busy" <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#CalendarBusy> <http://www.w3.org/2002/07/owl#equivalentClass> _:B09a82d495d1958c2820ec847a397caa6 <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#CalendarBusy> <http://www.w3.org/2002/07/owl#equivalentClass> _:B517a4480df4ec68ce188e48c358def6d <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#CalendarBusy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#Calendar> <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#CalendarBusy> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the URI for the busy time associated with the object that the vCard represents.\nWas called FBURI in vCard" <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#CalendarBusy> <http://www.w3.org/2002/07/owl#equivalentClass> _:B4e59c5ba2b47e0f91a26df1553bdcd60 <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#CalendarBusy> <http://www.w3.org/2002/07/owl#equivalentClass> _:B52d28d4bab6ab8678eea98a68d5e1ef4 <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Organization> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#Kind> <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Organization> <http://www.w3.org/2000/01/rdf-schema#label> "Organization" <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines all the properties required to be an  Organization" <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Organization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Organization> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the organizational name  associated with the vCard" <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Title> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the position or job of the object the vCard represents" <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#Title> <http://www.w3.org/2002/07/owl#equivalentClass> _:B787845205ee915bb47f1c99a210c0ea7 <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Title> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bca2be4f9c5d20f51c3efca3f08b060e9 <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Title> <http://www.w3.org/2002/07/owl#equivalentClass> _:B4554f9ae949b59d9c27fad95e25c88d1 <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Title> <http://www.w3.org/2000/01/rdf-schema#label> "Title" <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#Title> <http://www.w3.org/2002/07/owl#equivalentClass> _:Be7dead419406bae9219baf636cd506f0 <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Title> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#Organizational> <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#Email> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bdd49eb8d5fffcd003bca01f76c9375ec <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Email> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the electronic mail address for communication with the object the vCard represents" <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#Email> <http://www.w3.org/2002/07/owl#equivalentClass> _:B9b6c858a286e306e163b71bf61ff560b <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Email> <http://www.w3.org/2002/07/owl#equivalentClass> _:Be7d865a337b1e50caa408765f1036254 <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Email> <http://www.w3.org/2002/07/owl#equivalentClass> _:B7230d7b338ae333d7a474d332e38236b <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Email> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#Communication> <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Email> <http://www.w3.org/2000/01/rdf-schema#label> "Email" <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#Address> <http://www.w3.org/2002/07/owl#equivalentClass> _:B808de28dcc77303f12933742ecd6b9fe <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Address> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the components of the delivery address for the vCard object" <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Address> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#Address> <http://www.w3.org/2002/07/owl#equivalentClass> _:B38144a298a0177dca2a964b4cbd8f248 <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Address> <http://www.w3.org/2000/01/rdf-schema#label> "Address" <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Address> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#Addressing> <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Address> <http://www.w3.org/2002/07/owl#equivalentClass> _:Ba6d6cffa02f4d640f928072323b81531 <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Address> <http://www.w3.org/2002/07/owl#equivalentClass> _:Ba9b22fec9525cca32b0d174538a539df <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#CalendarRequest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#CalendarRequest> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the calendar user address [RFC5545] to which a scheduling request [RFC5546] should be sent for the object represented by the vCard. \nWas called CALADRURI in vCard" <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#CalendarRequest> <http://www.w3.org/2002/07/owl#equivalentClass> _:B9b23f88715e5e520068d0923b242e133 <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#CalendarRequest> <http://www.w3.org/2002/07/owl#equivalentClass> _:B2b388b1547897d52475f72c0f0d59873 <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#CalendarRequest> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#Calendar> <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#CalendarRequest> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bc1f0d66a65f0558f836da7aee267b6be <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#CalendarRequest> <http://www.w3.org/2002/07/owl#equivalentClass> _:B80d03c05f5ab5deefdd4c41f600ae471 <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#CalendarRequest> <http://www.w3.org/2000/01/rdf-schema#label> "Calendar Request" <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Sound> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bf7e1f4d271c59dd36dd91ffce4bad7ec <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Sound> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#Explanatory> <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Sound> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify a digital sound content information that annotates some aspect of the vCard.  This property is often used to specify the proper pronunciation of the name property value of the vCard" <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#Sound> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bcfe8430e62004a0020dc767e2e7a29ae <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Sound> <http://www.w3.org/2000/01/rdf-schema#label> "Sound" <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#Sound> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#Sound> <http://www.w3.org/2002/07/owl#equivalentClass> _:B93b1daa449d35e856599d5a5cfedd015 <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#Sound> <http://www.w3.org/2002/07/owl#equivalentClass> _:B74d2345840f947c63a39735484b8f2ca <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#gender> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2006/vcard/ns#Individual> <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#gender> <http://www.w3.org/2000/01/rdf-schema#label> "gender" <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#gender> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#gender> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the components of the sex and gender identity of the object the vCard represents.\nTo enable other Gender/Sex codes to be used, this dataproperty has range URI. The vCard gender code classes are defined under Code/Gender" <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#InstantMessage> <http://www.w3.org/2002/07/owl#equivalentClass> _:B0e2db751047385b77846e2f4b16448c2 <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#InstantMessage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#Communication> <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#InstantMessage> <http://www.w3.org/2000/01/rdf-schema#label> "Messaging" <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#InstantMessage> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the URI for instant messaging and presence protocol communications with the object the vCard represents. \nWas called IMPP in vCard." <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#InstantMessage> <http://www.w3.org/2002/07/owl#equivalentClass> _:B69accc37074ce99fa80d1f53901d3f2b <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#InstantMessage> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bc3ab28e9fdb2b0c4822d29716c00d998 <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#InstantMessage> <http://www.w3.org/2002/07/owl#equivalentClass> _:B41b7fa1839bc9a05fd81a587d735668c <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#InstantMessage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#CalendarLink> <http://www.w3.org/2002/07/owl#equivalentClass> _:B66308f4d3f14f23522f84554bbb19218 <http://vivoweb.org/ontology/core> .
-<http://www.w3.org/2006/vcard/ns#CalendarLink> <http://www.w3.org/2002/07/owl#equivalentClass> _:B47e40c67f636abbca8074ee82a3afded <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#CalendarLink> <http://www.w3.org/2002/07/owl#equivalentClass> _:B09307e2e36686e3ce4da82c1e009fd3d <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#CalendarLink> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2006/vcard/ns#Calendar> <http://vivoweb.org/ontology/core> .
+<http://www.w3.org/2006/vcard/ns#CalendarLink> <http://www.w3.org/2002/07/owl#equivalentClass> _:B1bff6d3c8a167168943f4948c9859408 <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#CalendarLink> <http://www.w3.org/2000/01/rdf-schema#label> "Calendar Link" <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#CalendarLink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
 <http://www.w3.org/2006/vcard/ns#CalendarLink> <http://www.w3.org/2000/01/rdf-schema#comment> "To specify the URI for a calendar associated with the object represented by the vCard.\nWas called CALURI in vCard." <http://vivoweb.org/ontology/core> .
 <http://www.aktors.org/ontology/portal#has-research-interest> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.aktors.org/ontology/portal#Research-Area> <http://www.aktors.org/ontology/portal> .
 <http://www.aktors.org/ontology/portal#has-research-interest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.aktors.org/ontology/portal> <http://www.aktors.org/ontology/portal> .
+<http://www.aktors.org/ontology/portal#has-research-interest> <http://www.w3.org/2000/01/rdf-schema#domain> _:B460312c846abe7152995aa3437251ab2 <http://www.aktors.org/ontology/portal> .
 <http://www.aktors.org/ontology/portal#has-research-interest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.aktors.org/ontology/portal> .
 <http://www.aktors.org/ontology/portal#has-research-interest> <http://www.w3.org/2000/01/rdf-schema#comment> "People and in general even organizations and organization units may have research interests.  This relation shoudl be used to specify them" <http://www.aktors.org/ontology/portal> .
-<http://www.aktors.org/ontology/portal#has-research-interest> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bb398753a05c77db355f54746d3317beb <http://www.aktors.org/ontology/portal> .
 <http://www.cidoc-crm.org/cidoc-crm/P56_bears_feature> <http://www.w3.org/2000/01/rdf-schema#label> "présente pour caractéristique"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
 <http://www.cidoc-crm.org/cidoc-crm/P56_bears_feature> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
 <http://www.cidoc-crm.org/cidoc-crm/P56_bears_feature> <http://www.w3.org/2000/01/rdf-schema#comment> "This property describes a E26 Physical Feature found on a E19 Physical Object It does not specify the location of the feature on the object.\nP56 bears feature (is found on) is a shortcut. A more detailed representation can make use of the fully developed (i.e. indirect) path from E19 Physical Object through P59 has section (is located on or within), E53 Place, P53 has former or current location (is former or current location of) to E26 Physical Feature.\nA Physical Feature can only exist on one object. One object may bear more than one Physical Feature. An E27 Site should be considered as an E26 Physical Feature on the surface of the Earth.\n"@en <http://www.cidoc-crm.org/cidoc-crm/> .

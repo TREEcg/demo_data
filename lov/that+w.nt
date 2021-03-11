@@ -26,10 +26,10 @@
 <https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/ep-plan> .
 <https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Activity> <https://w3id.org/ep-plan> .
 <https://w3id.org/ep-plan#FailedActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Failed Activity" <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#evaluatedTraceElement> <http://www.w3.org/2000/01/rdf-schema#range> _:B08326728b4aaa9daba9c6d2e64f0b1b7 <https://w3id.org/ep-plan> .
 <https://w3id.org/ep-plan#evaluatedTraceElement> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/ep-plan#wasEvaluatedtraceElement> <https://w3id.org/ep-plan> .
 <https://w3id.org/ep-plan#evaluatedTraceElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/ep-plan#ConstraintEvaluation> <https://w3id.org/ep-plan> .
 <https://w3id.org/ep-plan#evaluatedTraceElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
-<https://w3id.org/ep-plan#evaluatedTraceElement> <http://www.w3.org/2000/01/rdf-schema#range> _:Bb71e780edbe06929c819a16fc935bb0d <https://w3id.org/ep-plan> .
 <https://w3id.org/ep-plan#evaluatedTraceElement> <http://www.w3.org/2000/01/rdf-schema#comment> "ep-plan:evaluatedTraceElement links ep-plan:ConstriantEvaluation to a ep-plan:Activity or ep-plan:Communication that were evaluated against a ep-plan:Constraint defined in the plan." <https://w3id.org/ep-plan> .
 <https://w3id.org/ep-plan#evaluatedTraceElement> <http://www.w3.org/2000/01/rdf-schema#label> "evaluatedTraceElement" <https://w3id.org/ep-plan> .
 <https://w3id.org/ep-plan#ExecutionTraceBundle> <http://www.w3.org/2000/01/rdf-schema#label> "Execution Trace Bundle" <https://w3id.org/ep-plan> .
@@ -38,8 +38,8 @@
 <https://w3id.org/ep-plan#ExecutionTraceBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/ep-plan#Entity> <https://w3id.org/ep-plan> .
 <https://w3id.org/ep-plan#ExecutionTraceBundle> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of trace elements that were generated during a single plan execution." <https://w3id.org/ep-plan> .
 <https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/ep-plan> .
+<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> _:B78929899b8eb1faf6e144ebbbe5353d4 <https://w3id.org/ep-plan> .
 <https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "hasConstraint" <https://w3id.org/ep-plan> .
-<https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0796b9357a8f23f8a316a946ddc144a1 <https://w3id.org/ep-plan> .
 <https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/ep-plan#Constraint> <https://w3id.org/ep-plan> .
 <https://w3id.org/ep-plan#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "ep-plan:hasConstraint links ep-plan:Step, ep-plan:CommunicationSpec or ep-plan:Plan to a ep-plan:Constraint. Please note, that we do not stipulate that this constriant must be strictly satisfied before the plan can continue. This is to enable inclusions of constraints defined by policies which can be violated under certain conditions and to also enable capture of incorrect behaviour of a system (e.g. a plan ignored a constriant)." <https://w3id.org/ep-plan> .
 <http://data.lirmm.fr/ontologies/food#containsIngredient> <http://www.w3.org/2000/01/rdf-schema#comment> "Value is an object of the class Ingredient so that we can specify the quantity, the unit, and the nature of the ingredient (string or other Food object)\n\ne.g. 1 clove of garlic -> quantity = 1, unit = clove, ingredient = garlic (or Food object for garlic)" <http://data.lirmm.fr/ontologies/food> .
@@ -67,14 +67,14 @@
 <http://dbpedia.org/ontology/usedInWar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Weapon> <http://dbpedia.org/ontology/> .
 <http://dbpedia.org/ontology/usedInWar> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:usedInWar> <http://dbpedia.org/ontology/> .
 <http://dbpedia.org/ontology/usedInWar> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isParticipantIn> <http://dbpedia.org/ontology/> .
-<http://elite.polito.it/ontologies/dogont.owl#Door> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B00f8c745993e1555839a904ad5953811 <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#Door> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd1ec8da136a8acb41e17f9b6b4bb0e6e <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#Door> <http://www.w3.org/2000/01/rdf-schema#comment> "A swinging or sliding barrier that will close the entrance to a room or building." <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#Door> <http://www.w3.org/2000/01/rdf-schema#label> "Door" <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#Door> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb8fa3c6363aa9b95b703318ba6810398 <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#Door> <http://www.w3.org/2002/07/owl#disjointWith> <http://elite.polito.it/ontologies/dogont.owl#Window> <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#Door> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://elite.polito.it/ontologies/dogont.owl> .
-<http://elite.polito.it/ontologies/dogont.owl#Door> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcb489e1f6fb26a8190b47059f0c32b59 <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#Door> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://elite.polito.it/ontologies/dogont.owl#WallOpening> <http://elite.polito.it/ontologies/dogont.owl> .
-<http://elite.polito.it/ontologies/dogont.owl#Door> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4c8cb88abc57dec576ed8499403dac9a <http://elite.polito.it/ontologies/dogont.owl> .
+<http://elite.polito.it/ontologies/dogont.owl#Door> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6844aef1e72598ae8ac7db0e98a47c43 <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#AlarmClock> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://elite.polito.it/ontologies/dogont.owl#Clock> <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#AlarmClock> <http://www.w3.org/2002/07/owl#disjointWith> <http://elite.polito.it/ontologies/dogont.owl#CoffeeMaker> <http://elite.polito.it/ontologies/dogont.owl> .
 <http://elite.polito.it/ontologies/dogont.owl#AlarmClock> <http://www.w3.org/2002/07/owl#disjointWith> <http://elite.polito.it/ontologies/dogont.owl#Fan> <http://elite.polito.it/ontologies/dogont.owl> .
@@ -173,9 +173,9 @@
 <http://open.vocab.org/terms/IllegalRDFXMLStatement> <http://www.w3.org/2000/01/rdf-schema#label> "Illegal RDF/XML Statement"@en <http://open.vocab.org/terms> .
 <http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
 <http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherCondition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
-<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherCondition> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bef969d4b26bcfba06c91959fda9a08e9 <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
 <http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherPhenomenon> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
 <http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#hasCondition> <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
+<http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherCondition> <http://www.w3.org/2002/07/owl#equivalentClass> _:B5c84439b6337e7adc6e70d07e17cfa8c <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
 <http://paul.staroch.name/thesis/SmartHomeWeather.owl#WeatherCondition> <http://www.w3.org/2000/01/rdf-schema#comment> "A WeatherCondition is a simple description of the state of the weather. Currently there are: Cloud, Fog, LightCloud, PartlyCloud, Rain, Sleet, Snow, Sun, Thunder.\n\nSeveral instances of WeatherCondition can be associated with the same instance of WeatherPhenomenon using the hasCondition property. That way, it is possible to describe a thunderstorm that comes with rain." <http://paul.staroch.name/thesis/SmartHomeWeather.owl#> .
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#FATAL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#> .
 <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#FATAL> <http://www.w3.org/2000/01/rdf-schema#label> "FATAL"@en <http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog#> .

@@ -47,7 +47,7 @@
 <http://purl.org/dqm-vocabulary/v1/dqm#basedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dqm-vocabulary/v1/dqm#DataQualityScore> <http://purl.org/dqm-vocabulary/v1/dqm> .
 <http://purl.org/dqm-vocabulary/v1/dqm#basedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
 <http://purl.org/dqm-vocabulary/v1/dqm#basedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/dqm-vocabulary/v1/dqm#DataRequirement> <http://purl.org/dqm-vocabulary/v1/dqm> .
-<http://purl.org/dqm-vocabulary/v1/dqm#pattern> <http://www.w3.org/2000/01/rdf-schema#domain> _:B948579b156f34646bff26eb69f1a54d8 <http://purl.org/dqm-vocabulary/v1/dqm> .
+<http://purl.org/dqm-vocabulary/v1/dqm#pattern> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bb224edb7cd0e85a3492086ebbf5139e4 <http://purl.org/dqm-vocabulary/v1/dqm> .
 <http://purl.org/dqm-vocabulary/v1/dqm#pattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/dqm-vocabulary/v1/dqm> .
 <http://purl.org/dqm-vocabulary/v1/dqm#pattern> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/dqm-vocabulary/v1/dqm> .
 <http://purl.org/dqm-vocabulary/v1/dqm#pattern> <http://www.w3.org/2000/01/rdf-schema#label> "Pattern"@en <http://purl.org/dqm-vocabulary/v1/dqm> .
@@ -63,7 +63,7 @@
 <http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#label> "has MPN (0..*)"@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
-<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#domain> _:B6e0778f1bbcc279fa827e93d2e116f7a <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#domain> _:B88cf2fb9af3a74a53a9fb77e3c39ecd7 <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/productID> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#hasMPN> <http://www.w3.org/2000/01/rdf-schema#comment> "The Manufacturer Part Number or MPN is a unique identifier for a product, service, or bundle from the perspective of a particular manufacturer. MPNs can be assigned to products or product datasheets, or bundles. Accordingly, the domain of this property is the union of gr:ProductOrService (the common superclass of goods and datasheets), and gr:Offering.\n\nImportant: Be careful when assuming two products or services instances or offering instances to be identical based on the MPN. Since MPNs are unique only for the same gr:BusinessEntity, this holds only when the two MPN values refer to the same gr:BusinessEntity. Such can be done by taking into account the provenance of the data. \n\nUsually, the properties gr:hasEAN_UCC-13 and gr:hasGTIN-14 are much more reliable identifiers, because they are globally unique.\n\nSee also http://en.wikipedia.org/wiki/Part_number"@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
@@ -71,7 +71,7 @@
 <http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has Stock Keeping Unit (0..*)"@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "The Stock Keeping Unit, or SKU is a unique identifier for a product, service, or bundle from the perspective of a particular supplier, i.e. SKUs are mostly assigned and serialized at the merchant level. \nExamples of SKUs are the ordering or parts numbers used by a particular Web shop or catalog.\n\nConsequently, the domain of gr:hasStockKeepingUnit is the union of the classes gr:Offering and gr:ProductOrService. \nIf attached to a gr:Offering, the SKU will usually reflect a merchant-specific identifier, i.e. one valid only for that particular retailer or shop. \nIf attached to a gr:ProductOrServiceModel, the SKU can reflect either the identifier used by the merchant or the part number used by the official manufacturer of that part. For the latter, gr:hasMPN is a better choice.\n\nImportant: Be careful when assuming two products or services instances or offering instances to be identical based on the SKU. Since SKUs are unique only for the same gr:BusinessEntity, this can be assumed only when you are sure that the two SKU values refer to the same business entity. Such can be done by taking into account the provenance of the data. As long as instances of gr:Offering are concerned, you can also check that the offerings are being offered by the same gr:Business Entity.\n\nUsually, the properties gr:hasEAN_UCC-13 and gr:hasGTIN-14 are much more reliable identifiers, because they are globally unique.\n\nSee also http://en.wikipedia.org/wiki/Stock_Keeping_Unit."@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
-<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#domain> _:B81924e8aa2011604c6349ad36091f109 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#domain> _:B340f0abe582e712b8b782c05434c6917 <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#hasStockKeepingUnit> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://schema.org/productID> <http://purl.org/goodrelations/v1> .
 <http://purl.org/healthcarevocab/v1#TimeBasedImageSetsSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Time Based Image Sets Sequence" <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#TimeBasedImageSetsSequence> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0072.0030> <http://purl.org/healthcarevocab/v1> .
@@ -86,10 +86,10 @@
 <http://purl.org/healthcarevocab/v1#VolumeBasedCalculationTechnique> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#VolumeBasedCalculationTechnique> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#VolumeBasedCalculationTechnique> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#VolumeBasedCalculationTechnique> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bc2d06a14f176070e518bc037d24afe69 <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#VolumeBasedCalculationTechnique> <http://www.w3.org/2000/01/rdf-schema#label> "Volume Based Calculation Technique" <http://purl.org/healthcarevocab/v1> .
-<http://purl.org/healthcarevocab/v1#VolumeBasedCalculationTechnique> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0ac72a8b0b3c27ef26b2c1bb0c6b0632 <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#VolumeBasedCalculationTechnique> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0008.9207> <http://purl.org/healthcarevocab/v1> .
-<http://purl.org/healthcarevocab/v1#Tag.0008.9207> <http://www.w3.org/2000/01/rdf-schema#domain> _:B190fe30102771688cdc1deb847a61741 <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0008.9207> <http://www.w3.org/2000/01/rdf-schema#domain> _:Be648bd5c50e3226f7e1da235c5dff82b <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#Tag.0008.9207> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#VolumeBasedCalculationTechnique> <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#Tag.0008.9207> <http://www.w3.org/2000/01/rdf-schema#label> "Volume Based Calculation Technique" <http://purl.org/healthcarevocab/v1> .
 <http://purl.org/healthcarevocab/v1#Tag.0008.9207> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
@@ -194,34 +194,34 @@
 <http://purl.org/linked-data/api/vocab#template> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/linked-data/api/vocab#Viewer> <http://purl.org/linked-data/api/vocab#> .
 <http://purl.org/linked-data/api/vocab#template> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#PlainLiteral> <http://purl.org/linked-data/api/vocab#> .
 <http://purl.org/linked-data/api/vocab#template> <http://www.w3.org/2000/01/rdf-schema#label> "Template"@en <http://purl.org/linked-data/api/vocab#> .
-<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:B71c52aa81b121cdad7cd1296319b72b4 <http://purl.org/linked-data/cube> .
 <http://purl.org/linked-data/cube> <http://purl.org/dc/terms/modified> "2013-07-26"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:Be9bee396ed1ae9b8df5b7b1efc43954f <http://purl.org/linked-data/cube> .
 <http://purl.org/linked-data/cube> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/linked-data/cube> .
-<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:Bb7bae32098dcdd38589810e0f2c440c5 <http://purl.org/linked-data/cube> .
-<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:Bd151dd3553176c2f83c6108e389ec2c1 <http://purl.org/linked-data/cube> .
-<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:B223e5bc27d2c2841aa2333cfcd3e948f <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:B9b51bbf2ead97f4a90d0fd2a04b931ae <http://purl.org/linked-data/cube> .
 <http://purl.org/linked-data/cube> <http://purl.org/dc/terms/title> "Vocabulary for multi-dimensional (e.g. statistical) data publishing" <http://purl.org/linked-data/cube> .
 <http://purl.org/linked-data/cube> <http://www.w3.org/2000/01/rdf-schema#label> "The data cube vocabulary" <http://purl.org/linked-data/cube> .
 <http://purl.org/linked-data/cube> <http://purl.org/dc/terms/modified> "2013-03-02"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/linked-data/cube> .
 <http://purl.org/linked-data/cube> <http://www.w3.org/2002/07/owl#versionInfo> "0.2" <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:Bc86a7382d05893f33364376cfcc55f83 <http://purl.org/linked-data/cube> .
 <http://purl.org/linked-data/cube> <http://www.w3.org/2000/01/rdf-schema#comment> "This vocabulary allows multi-dimensional data, such as statistics, to be published in RDF. It is based on the core information model from SDMX (and thus also DDI)." <http://purl.org/linked-data/cube> .
-<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:Bbcc34b44e260fa7a89a6525752d376a9 <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:Bd846f7a832e7d134dfa51a32c7176399 <http://purl.org/linked-data/cube> .
 <http://purl.org/linked-data/cube> <http://purl.org/dc/terms/modified> "2010-11-27"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/linked-data/cube> .
 <http://purl.org/linked-data/cube> <http://purl.org/dc/terms/created> "2010-07-12"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/linked-data/cube> .
+<http://purl.org/linked-data/cube> <http://purl.org/dc/terms/contributor> _:B510eb0513f7dc29ba062826aedad0a25 <http://purl.org/linked-data/cube> .
 <http://purl.org/linked-data/cube> <http://purl.org/dc/terms/license> <http://www.opendatacommons.org/licenses/pddl/1.0/> <http://purl.org/linked-data/cube> .
-<http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/contributor> _:B6b8cfa76911f01db05c3b3417b37b449 <http://purl.org/linked-data/sdmx> .
+<http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/contributor> _:B8838a3198b5d2c1f1554bcb61938779c <http://purl.org/linked-data/sdmx> .
 <http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/source> <http://sdmx.org> <http://purl.org/linked-data/sdmx> .
 <http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/modified> "2010-07-22"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/linked-data/sdmx> .
-<http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/contributor> _:B3b4324919b0b56e655618d9fa285c236 <http://purl.org/linked-data/sdmx> .
-<http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/contributor> _:Bb9b7364b0d79fa15a5c104696f2a1a2b <http://purl.org/linked-data/sdmx> .
+<http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/contributor> _:Ba77272b3a8ebcb227bbbc5cdd73979bd <http://purl.org/linked-data/sdmx> .
 <http://purl.org/linked-data/sdmx> <http://www.w3.org/2000/01/rdf-schema#comment> "This vocabulary extends the data cube vocabulary to support publication of statistical data in RDF, using an information model based on SDMX" <http://purl.org/linked-data/sdmx> .
+<http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/contributor> _:B4e6901199389b77462729d0e627af221 <http://purl.org/linked-data/sdmx> .
 <http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/created> "2010-02-05"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/linked-data/sdmx> .
 <http://purl.org/linked-data/sdmx> <http://www.w3.org/2000/01/rdf-schema#label> "SDMX-RDF vocabulary" <http://purl.org/linked-data/sdmx> .
 <http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/references> <http://sdmx.org/?page_id=16#package> <http://purl.org/linked-data/sdmx> .
 <http://purl.org/linked-data/sdmx> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://purl.org/linked-data/sdmx> .
 <http://purl.org/linked-data/sdmx> <http://www.w3.org/2002/07/owl#versionInfo> "0.3" <http://purl.org/linked-data/sdmx> .
-<http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/contributor> _:B23388f0499303e4f38673629051f4c47 <http://purl.org/linked-data/sdmx> .
-<http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/contributor> _:B4dcf2b39902abfc30fcf64ed3e7a2229 <http://purl.org/linked-data/sdmx> .
+<http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/contributor> _:B33abf9e0039bf8d57a3a04cc1b3e731f <http://purl.org/linked-data/sdmx> .
+<http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/contributor> _:Be22a918a4197be2be2d8470d7c90ff39 <http://purl.org/linked-data/sdmx> .
 <http://purl.org/linked-data/sdmx> <http://dublincore.org/documents/dcmi-terms/title> "Vocabulary for publishing SDMX statistical data in RDF" <http://purl.org/linked-data/sdmx> .
 <http://purl.org/linked-data/sdmx/2009/code#TimeFormat> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/linked-data/sdmx/2009/code#timeFormat> <http://purl.org/linked-data/sdmx/2009/code> .
 <http://purl.org/linked-data/sdmx/2009/code#TimeFormat> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> <http://purl.org/linked-data/sdmx/2009/code> .
@@ -264,12 +264,12 @@
 <http://purl.org/ontology/chord/base_chord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/ontology/chord/> .
 <http://purl.org/ontology/chord/base_chord> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/chord/Chord> <http://purl.org/ontology/chord/> .
 <http://purl.org/ontology/chord/base_chord> <http://www.w3.org/2000/01/rdf-schema#comment> "The chord on which this one is based. \n\t\t\tFor example, a C7 chord might have chord:Cmaj as its base chord." <http://purl.org/ontology/chord/> .
+<http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2002/07/owl#inverseOf> _:B506d259fa6541a5a8319e413aa3653ae <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/publisher> <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2000/01/rdf-schema#label> "has info service"@en <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2000/01/rdf-schema#comment> "Every subject related by this property is made available by an is:InfoService individual. This property could be used to associate a semantic graph based description or especially a website link, e.g. typed as foaf:Document, to the specific is:InfoService individual. This enables the consumer of this resource to retrieve more information (descriptions, ratings) about the underlying information service of this resource."@en <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://purl.org/ontology/is/core#> .
-<http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2002/07/owl#inverseOf> _:B5079a686815393c9ece77e9aa438a033 <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/is/core#> <http://purl.org/ontology/is/core#> .
 <http://purl.org/ontology/is/core#info_service> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/is/core#InfoService> <http://purl.org/ontology/is/core#> .
@@ -279,20 +279,20 @@
 <http://purl.org/ontology/pbo/core#playlist_item> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable"@en <http://purl.org/ontology/pbo/core#> .
 <http://purl.org/ontology/pbo/core#playlist_item> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific playlist item, e.g. a music track, video or slides. The range types of this property must be \nbased on bibo:Document or frbr:Endeavour (to keep it somehow media based)."@en <http://purl.org/ontology/pbo/core#> .
 <http://purl.org/ontology/pbo/core#playlist_item> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/pbo/core#> .
-<http://purl.org/ontology/pbo/core#playlist_item> <http://www.w3.org/2002/07/owl#inverseOf> _:B1cc0e64db93654ee0b61bf3bb9b218d0 <http://purl.org/ontology/pbo/core#> .
+<http://purl.org/ontology/pbo/core#playlist_item> <http://www.w3.org/2000/01/rdf-schema#range> _:B3ea0568ba1d6e3f01b90d91f51d64419 <http://purl.org/ontology/pbo/core#> .
 <http://purl.org/ontology/pbo/core#playlist_item> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/pbo/core#PlaylistSlot> <http://purl.org/ontology/pbo/core#> .
-<http://purl.org/ontology/pbo/core#playlist_item> <http://www.w3.org/2000/01/rdf-schema#range> _:Ba8dd3c364206528882bd470137bd6d98 <http://purl.org/ontology/pbo/core#> .
+<http://purl.org/ontology/pbo/core#playlist_item> <http://www.w3.org/2002/07/owl#inverseOf> _:B2fa6dd47705de901c4875a2da9cdf556 <http://purl.org/ontology/pbo/core#> .
 <http://purl.org/ontology/places#latlong> <http://www.w3.org/2000/01/rdf-schema#label> "Lat/Long" <http://purl.org/ontology/places> .
 <http://purl.org/ontology/places#latlong> <http://www.w3.org/2000/01/rdf-schema#comment> "The Lat/long datatype allows us to specify that a literal value is a latitude/longitude pair, based in the WGS84 projection and in the comma-seperated, decimal format. e.g. \"38.897605896,-77.0365219116\"^^place:latlong would specify the WGS84 geographic co-ordinates of The White House, Washington DC." <http://purl.org/ontology/places> .
 <http://purl.org/ontology/places#latlong> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> <http://purl.org/ontology/places> .
 <http://purl.org/saws/ontology#hasOwned> <http://www.w3.org/2000/01/rdf-schema#label> "has owned"@en <http://purl.org/saws/ontology> .
 <http://purl.org/saws/ontology#hasOwned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/saws/ontology> .
 <http://purl.org/saws/ontology#hasOwned> <http://www.w3.org/2000/01/rdf-schema#comment> "A Person has owned (either currently or in the past) the Material of Interest. This would normally be based on a specific statement/mark of ownership.\n\n[nb this will always need a date?]"@en <http://purl.org/saws/ontology> .
-<http://purl.org/saws/ontology#hasOwned> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B04b89d5b155b0f5b38387aff8e14090f <http://purl.org/saws/ontology> .
-<http://purl.org/saws/ontology#hasOwned> <http://www.w3.org/2000/01/rdf-schema#domain> _:B6b0a8f392458d1e1252b69b36af7a463 <http://purl.org/saws/ontology> .
-<http://purl.org/saws/ontology#hasOwned> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:Ba8eb0ca1745338e200e9842ab860ab83 <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#hasOwned> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B61d562dace02482fc20d26478e13af40 <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#hasOwned> <http://www.w3.org/2000/01/rdf-schema#domain> _:B164cb02be2e1e0b7b2b586c20288fd39 <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#hasOwned> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:Bdc8c6378b3e57c96d9e5ed2a462d0d8c <http://purl.org/saws/ontology> .
 <http://purl.org/saws/ontology#hasOwned> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/saws/ontology#Material> <http://purl.org/saws/ontology> .
-<http://purl.org/saws/ontology#hasOwned> <http://www.w3.org/2000/01/rdf-schema#domain> _:B8d0feca4dde9f513a34d1862e5d5ea0b <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#hasOwned> <http://www.w3.org/2000/01/rdf-schema#domain> _:Be24697e0207535fbda2116b99b128ee5 <http://purl.org/saws/ontology> .
 <http://purl.org/saws/ontology#hasOwned> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/saws/ontology#isRelatedTo> <http://purl.org/saws/ontology> .
 <http://purl.org/saws/ontology#isBasedOn> <http://www.w3.org/2000/01/rdf-schema#label> "is based on"@en <http://purl.org/saws/ontology> .
 <http://purl.org/saws/ontology#isBasedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/saws/ontology> .
@@ -307,16 +307,16 @@
 <http://purl.org/saws/ontology#isSourceFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://erlangen-crm.org/current/E33_Linguistic_Object> <http://purl.org/saws/ontology> .
 <http://purl.org/saws/ontology#isSourceFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/saws/ontology#isRelatedTo> <http://purl.org/saws/ontology> .
 <http://purl.org/saws/ontology#isSourceFor> <http://www.w3.org/2000/01/rdf-schema#label> "is source for"@en <http://purl.org/saws/ontology> .
-<http://purl.org/saws/ontology#ownedBy> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B056f8b44b43abb7d854a1737a32faa88 <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#ownedBy> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:Ba1d0937b06bc664048fbaa1a1c392d7b <http://purl.org/saws/ontology> .
 <http://purl.org/saws/ontology#ownedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "The Material of interest has been owned (in the past or currently) by this particular Person. This would normally be based on a specific statement/mark of ownership.\n\n[nb this will always need a date?]"@en <http://purl.org/saws/ontology> .
 <http://purl.org/saws/ontology#ownedBy> <http://www.w3.org/2002/07/owl#inverseOf> <http://purl.org/saws/ontology#hasOwned> <http://purl.org/saws/ontology> .
-<http://purl.org/saws/ontology#ownedBy> <http://www.w3.org/2000/01/rdf-schema#range> _:Badcc127b40fc3667027104d7458efba6 <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#ownedBy> <http://www.w3.org/2000/01/rdf-schema#range> _:B5b7004a4c48df4fbd848a9ae9f539d4b <http://purl.org/saws/ontology> .
 <http://purl.org/saws/ontology#ownedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/saws/ontology#isRelatedTo> <http://purl.org/saws/ontology> .
-<http://purl.org/saws/ontology#ownedBy> <http://www.w3.org/2000/01/rdf-schema#range> _:B5b41e39f9517be17555c4f58b6158a22 <http://purl.org/saws/ontology> .
 <http://purl.org/saws/ontology#ownedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#ownedBy> <http://www.w3.org/2000/01/rdf-schema#range> _:Bf1f136f9833dc744b7b8848eef678a20 <http://purl.org/saws/ontology> .
 <http://purl.org/saws/ontology#ownedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/saws/ontology#Material> <http://purl.org/saws/ontology> .
+<http://purl.org/saws/ontology#ownedBy> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:Bf27b5cf8d4bf609cef2ce15874e9990b <http://purl.org/saws/ontology> .
 <http://purl.org/saws/ontology#ownedBy> <http://www.w3.org/2000/01/rdf-schema#label> "owned by"@en <http://purl.org/saws/ontology> .
-<http://purl.org/saws/ontology#ownedBy> <http://www.w3.org/2002/07/owl#propertyChainAxiom> _:B6f17702e3f86502d7622d257dcbe3722 <http://purl.org/saws/ontology> .
 <http://purl.org/spar/cito/providesAssertionFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/spar/cito> .
 <http://purl.org/spar/cito/providesAssertionFor> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited entity contains and is the original source of a statement of fact or a logical assertion (or a collection of such facts and/or assertions) that is to be found in the citing entity.   This inverse object property is designed to be used to relate a cited entity to a separate abstract, summary or nanopublication based upon it."@en <http://purl.org/spar/cito> .
 <http://purl.org/spar/cito/providesAssertionFor> <http://www.w3.org/2000/01/rdf-schema#label> "provides assertion for"@en <http://purl.org/spar/cito> .

@@ -2,8 +2,8 @@
 <http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#label> "serial number (0..*)"@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/goodrelations/v1> .
-<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba5b4ce436c1b1986edfe1868ec450a03 <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The serial number or any alphanumeric identifier of a particular product. Note that serial number are unique only for the same brand or the same model, so you cannot infer from two occurrences of the same serial number that the objects to which they are attached are identical.\n\nThis property can also be attached to a gr:Offering in cases where the included products are not modeled in more detail."@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#serialNumber> <http://www.w3.org/2000/01/rdf-schema#domain> _:B7b07f2a7aa41889f67c30369bbbdaae2 <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#hasCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#label> "has currency value (0..1)"@en <http://purl.org/goodrelations/v1> .
@@ -16,7 +16,7 @@
 <http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PaymentMethod> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyPromise> <http://purl.org/goodrelations/v1> .
-<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bdf6fa41cd8b2343f97a9c7b05b15e2f6 <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#equivalentClass> _:B85e56c69d4bfb1345338e60a614d1867 <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of this class represents the legal agent making (or seeking) a particular offering. This can be a legal body or a person. A business entity has at least a primary mailing address and contact details. For this, typical address standards (vCard) and location data (geo, WGS84) can be attached. Note that the location of the business entity is not necessarily the location from which the product or service is being available (e.g. the branch or store). Use gr:Location for stores and branches.\n\t\t\nExample: Siemens Austria AG, Volkswagen Ltd., Peter Miller's Cell phone Shop LLC\n\nCompatibility with schema.org: This class is equivalent to the union of http://schema.org/Person and http://schema.org/Organization.\t\t\n"@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2000/01/rdf-schema#label> "Business entity"@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/goodrelations/v1> .
@@ -32,11 +32,11 @@
 <http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QuantitativeValue> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#BusinessEntity> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#OpeningHoursSpecification> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/goodrelations/v1> .
-<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#domain> _:Be458e2f400874d122f010385eff6760a <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the end of the validity of the gr:Offering, gr:PriceSpecification, gr:License, or gr:OpeningHoursSpecification.\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2008-05-30T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2008-05-30T09:30:10-09:00\n\nor\n2008-05-30T09:30:10+09:00.\n\nNote 1: If multiple contradicting instances of a gr:Offering, gr:PriceSpecification, or gr:OpeningHoursSpecification exist, it is a good heuristics to assume that\n1. Information with validity information for the respective period of time ranks higher than information without validity information.\n2. Among conflicting nodes both having validity information, the one with the shorter validity span ranks higher.\nNote 2: For Google, attaching a gr:validThrough statement to a gr:UnitPriceSpecification is mandatory. \n"@en <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#label> "valid through (0..1)"@en <http://purl.org/goodrelations/v1> .
+<http://purl.org/goodrelations/v1#validThrough> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bfb33c0fc4cc55efe58d1b5d37517e562 <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#hasMinCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#hasMinCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/goodrelations/v1> <http://purl.org/goodrelations/v1> .
 <http://purl.org/goodrelations/v1#hasMinCurrencyValue> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the LOWER BOUND of the amount of money for a price RANGE per unit, shipping charges, or payment charges. The currency and other relevant details are attached to the respective gr:PriceSpecification etc.\nFor a gr:UnitPriceSpecification, this is the LOWER BOUND for the price for one unit or bundle (as specified in the unit of measurement of the unit price specification) of the respective gr:ProductOrService. For a gr:DeliveryChargeSpecification or a gr:PaymentChargeSpecification, it is the LOWER BOUND of the price per delivery or payment.\n\nUsing gr:hasCurrencyValue sets the upper and lower bounds to the same given value, i.e., x gr:hasCurrencyValue y implies x gr:hasMinCurrencyValue y, x gr:hasMaxCurrencyValue y."@en <http://purl.org/goodrelations/v1> .
@@ -129,9 +129,9 @@
 <http://purl.org/net/lio#technique> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/net/lio> .
 <http://purl.org/net/lio#technique> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/lio#Image> <http://purl.org/net/lio> .
 <http://purl.org/ontology/mo/similar_to> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://purl.org/ontology/mo/> .
-<http://purl.org/ontology/mo/similar_to> <http://www.w3.org/2000/01/rdf-schema#domain> _:B9ccc4aedcc243cbf32bc33e5ec4493cf <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/similar_to> <http://www.w3.org/2000/01/rdf-schema#range> _:Bd9e7f7ed3471d499caacb4d6bc9c3e77 <http://purl.org/ontology/mo/> .
 <http://purl.org/ontology/mo/similar_to> <http://purl.org/ontology/mo/level> "1" <http://purl.org/ontology/mo/> .
-<http://purl.org/ontology/mo/similar_to> <http://www.w3.org/2000/01/rdf-schema#range> _:B63ed541da0a8a02c772ae5cbec7af9ad <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/similar_to> <http://www.w3.org/2000/01/rdf-schema#domain> _:B98c2b709e50b11e72a39d4a8535b433a <http://purl.org/ontology/mo/> .
 <http://purl.org/ontology/mo/similar_to> <http://www.w3.org/2000/01/rdf-schema#comment> "\n            A similarity relationships between two objects (so far, either an agent, a signal or a genre, but\n        this could grow).\n        This relationship is pretty general and doesn't make any assumptions on how the similarity claim\n        was derived.\n        Such similarity statements can come from a range of different sources (Musicbrainz similarities between\n        artists, or coming from some automatic content analysis).\n        However, the origin of such statements should be kept using a named graph approach - and ultimately, the \n        documents providing such statements should attach some metadata to themselves (confidence of the claim, etc.).\n        " <http://purl.org/ontology/mo/> .
 <http://purl.org/ontology/mo/similar_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/mo/> .
 <http://purl.org/ontology/mo/similar_to> <http://www.w3.org/2000/01/rdf-schema#label> "similar_to" <http://purl.org/ontology/mo/> .
@@ -144,8 +144,8 @@
 <http://purl.org/ontology/mo/performance_of> <http://www.w3.org/2000/01/rdf-schema#label> "performance of" <http://purl.org/ontology/mo/> .
 <http://purl.org/ontology/mo/performance_of> <http://www.w3.org/2000/01/rdf-schema#comment> "\n        Associates a Performance to a musical work or an arrangement that is being used as a factor in it.\n        For example, I might use this property to attach the Magic Flute musical work to \n        a particular Performance.\n    " <http://purl.org/ontology/mo/> .
 <http://purl.org/ontology/mo/performance_of> <http://purl.org/ontology/mo/level> "2" <http://purl.org/ontology/mo/> .
+<http://purl.org/ontology/mo/performance_of> <http://www.w3.org/2000/01/rdf-schema#range> _:B1cd79bb5456f88a50f1b2731a03ee79d <http://purl.org/ontology/mo/> .
 <http://purl.org/ontology/mo/performance_of> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" <http://purl.org/ontology/mo/> .
-<http://purl.org/ontology/mo/performance_of> <http://www.w3.org/2000/01/rdf-schema#range> _:B726dcab41e786a2995aecc6c8305b348 <http://purl.org/ontology/mo/> .
 <http://purl.org/ontology/stories/tells> <http://www.w3.org/2000/01/rdf-schema#comment> "A story told by this Thing. The Thing could be a photograph which has a story attached to it, a person, a country, a monument, etc."@en <http://purl.org/ontology/stories/> .
 <http://purl.org/ontology/stories/tells> <http://www.w3.org/2000/01/rdf-schema#label> "tells"@en <http://purl.org/ontology/stories/> .
 <http://purl.org/ontology/stories/tells> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/stories/Story> <http://purl.org/ontology/stories/> .
@@ -191,7 +191,7 @@
 <http://purl.org/spar/fabio/internet> <http://www.w3.org/2000/01/rdf-schema#label> "internet"@en <http://purl.org/spar/fabio> .
 <http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the beginning of the validity of the access or right that the ticket grants. \nIt can be attached to the tio:Ticket (if meant for the ticket as a whole) and to individual tio:ScopeOfAccess entities (if meant for just a particular part of the access rights).\n\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2010-11-15T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2010-11-15T09:30:10-09:00\n\nor\n\n2010-11-15T09:30:10+09:00."@en <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
-<http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#domain> _:B0c61d629129a8c065605b91e013afd06 <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#domain> _:B598dad00a10ce4ada51d0eac6f86ef54 <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#label> "validFrom (0..1)"@en <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#validFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#validFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/tio/ns#> .
@@ -203,8 +203,8 @@
 <http://purl.org/tio/ns#ends> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/tio/ns#Event> <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#label> "validThrough (0..1)"@en <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#validThrough> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/tio/ns#> .
-<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bee530f1e715011ef1c8838a98bea38bd <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba1de00cde4d5367ca173230ca331ef88 <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the ending of the validity of the access or right that the ticket grants. \nIt can be attached to the tio:Ticket (if meant for the ticket as a whole) and to individual tio:ScopeOfAccess entities (if meant for just a particular part of the access rights).\n\nA time-zone should be specified. For a time in GMT/UTC, simply add a \"Z\" following the time:\n\n2010-11-15T09:30:10Z.\n\nAlternatively, you can specify an offset from the UTC time by adding a positive or negative time following the time:\n\n2010-11-15T09:30:10-09:00\n\nor\n\n2010-11-15T09:30:10+09:00."@en <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#validThrough> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#POI> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/tio/ns#Event> <http://purl.org/tio/ns#> .
@@ -225,7 +225,6 @@
 <http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#WarrantyScope> <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#BusinessEntityType> <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DeliveryMethod> <http://purl.org/tio/ns#> .
-<http://purl.org/tio/ns#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3c45cf74595c35680a321ebcc5d1a89f <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/tio/ns#Stop> <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#PriceSpecification> <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#LocationOfSalesOrServiceProvisioning> <http://purl.org/tio/ns#> .
@@ -233,6 +232,7 @@
 <http://purl.org/tio/ns#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#DayOfWeek> <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#N-Ary-Relations> <http://purl.org/tio/ns#> .
+<http://purl.org/tio/ns#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc2d58c7f9fb71a7bbe73d18736db23b2 <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#Event> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/goodrelations/v1#QualitativeValue> <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#Event> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "An event, e.g. a concert, a show, etc. You can also safely use the following external classes for describing the respective event:\n\nhttp://linkedevents.org/ontology/Event (lode:Event)\nhttp://purl.org/NET/c4dm/event.owl#Event (event:Event)\nhttp://www.loa-cnr.it/ontologies/DUL.owl#Event (dul:Event)\n\nNote: You can attach the time and date of the event using tio:starts and tio:ends as simple datatype properties, even if lode:Event and event:Event recommend other, more sophisticated ways of modeling the temporal aspects of events."@en <http://purl.org/tio/ns#> .
@@ -244,19 +244,19 @@
 <http://purl.org/tio/ns#starts> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/tio/ns#> <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#starts> <http://www.w3.org/2000/01/rdf-schema#label> "starts (0..1)"@en <http://purl.org/tio/ns#> .
 <http://purl.org/tio/ns#starts> <http://www.w3.org/2000/01/rdf-schema#comment> "The date and time for which the event is scheduled to begin\n\nNote: You can attach the time and date of the event using tio:starts and tio:ends as simple datatype properties,\neven if lode:Event and event:Event recommend other, more sophisticated ways of modeling the temporal aspects of events."@en <http://purl.org/tio/ns#> .
-<http://purl.org/twc/vocab/conversion/ImplicitBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bb271558291283e345ffbd55a40014058 <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ImplicitBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B52f3dab49215ea5975932d40c46157b9 <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ImplicitBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bac206604ca60114e2b9540244f82af64 <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ImplicitBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf97743247171b527455ae8a30681c74f <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/ImplicitBundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/twc/vocab/conversion/> .
-<http://purl.org/twc/vocab/conversion/ImplicitBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B92d49e5ecf5d2780356e2ee9cc53db0e <http://purl.org/twc/vocab/conversion/> .
-<http://purl.org/twc/vocab/conversion/ImplicitBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be86a143b4b96f21076be3483ed2de08e <http://purl.org/twc/vocab/conversion/> .
+<http://purl.org/twc/vocab/conversion/ImplicitBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bec6d32e88b2b0eb70a3114309aa03bae <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/ImplicitBundle> <http://www.w3.org/2000/01/rdf-schema#label> "Implicit Bundle" <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/ImplicitBundle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/twc/vocab/conversion/> <http://purl.org/twc/vocab/conversion/> .
-<http://purl.org/twc/vocab/conversion/ImplicitBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B89f3b4a346f668b3ad043cfd7fe2f4fb <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/ImplicitBundle> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.org/twc/vocab/conversion/ImplicitBundleEnhancement> <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/twc/vocab/conversion/ImplicitBundle> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents the structural template for an implicit bundle enhancement. The conversion:property_name specifies the property name by which a bundle is attached to an instance. An optional conversion:type_name may be specified for the bundle to indicate the rdf:type of the new resource." <http://purl.org/twc/vocab/conversion/> .
 <http://purl.org/uco/ns#numberOfDrivers> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of people who were/are regularly driving the vehicle in the respective period of time (when attached to uco:OwnershipInfo) or in total (when directly applied to a vso:Vehicle)"@en <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#numberOfDrivers> <http://www.w3.org/2000/01/rdf-schema#label> "number of drivers (0..1)"@en <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#numberOfDrivers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
-<http://purl.org/uco/ns#numberOfDrivers> <http://www.w3.org/2000/01/rdf-schema#domain> _:B3ab0542072a7e0d2fd759953b99486ae <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#numberOfDrivers> <http://www.w3.org/2000/01/rdf-schema#domain> _:B26eac17c7992b0768bc76d25d56d422e <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#numberOfDrivers> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#numberOfDrivers> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#parking> <http://www.w3.org/2000/01/rdf-schema#comment> "The main type(s) of parking that have been used for the vehicle during the period of ownership (if attached to uco:OwnershipInfo) or in general (if attached to the vso:Vehicle directly)"@en <http://purl.org/uco/ns#> .
@@ -269,21 +269,21 @@
 <http://purl.org/uco/ns#smoking> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#smoking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#smoking> <http://www.w3.org/2000/01/rdf-schema#label> "smoking (0..1)"@en <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#smoking> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bdab3845f6e6d6d1926e889c3a80ad9e3 <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#smoking> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#smoking> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates whether it has been smoked inside the car in the respective period of time (when attached to uco:OwnershipInfo) or ever (when directly applied to a vso:Vehicle)."@en <http://purl.org/uco/ns#> .
-<http://purl.org/uco/ns#smoking> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bbdcea34604cfbfade298272a71e9d3a4 <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#airbagDeployment> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#airbagDeployment> <http://www.w3.org/2000/01/rdf-schema#label> "airbag deployment (0..1)"@en <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#airbagDeployment> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates whether at least one of the airbags of the vehicle has been deployed in the respective accident (when attached to uco:DamageOrAccident) or ever (when directly applied to a vso:Vehicle)."@en <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#airbagDeployment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#airbagDeployment> <http://www.w3.org/2000/01/rdf-schema#domain> _:B92ec789df17d41170624b495353106eb <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#airbagDeployment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
-<http://purl.org/uco/ns#airbagDeployment> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bf569e74da20b8ce54052d644c291ad15 <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#repaired> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#repaired> <http://www.w3.org/2000/01/rdf-schema#label> "repaired (0..1)"@en <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#repaired> <http://www.w3.org/2000/01/rdf-schema#comment> "This indicates whether damages resulting from a certain uco:DamageOrAccident (when attached to this type) or all damages (when directly attached to a vso:Vehicle) have been properly repaired. Do not use this propery on a vso:Vehicle if it never had a damage."@en <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#repaired> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
-<http://purl.org/uco/ns#repaired> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bc0cf09bb10fd35e3af55bae45028985f <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#repaired> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#repaired> <http://www.w3.org/2000/01/rdf-schema#domain> _:B9194fd5a539a68c1d857e5188b6fc054 <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#pets> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/uco/ns#OwnershipInfo> <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#pets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#pets> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vso/ns#Vehicle> <http://purl.org/uco/ns#> .
@@ -299,11 +299,11 @@
 <http://purl.org/uco/ns#driver> <http://www.w3.org/2000/01/rdf-schema#label> "driver (0..*)"@en <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#driver> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#totalLoss> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/uco/ns#> <http://purl.org/uco/ns#> .
-<http://purl.org/uco/ns#totalLoss> <http://www.w3.org/2000/01/rdf-schema#domain> _:Ba52f9e0b7d48a943eece61988e33bef3 <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#totalLoss> <http://www.w3.org/2000/01/rdf-schema#label> "total loss (0..1)"@en <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#totalLoss> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates whether the vehicle is considered a total loss as the result of a damage in the respective accident (when attached to uco:DamageOrAccident) or in general (when directly applied to a vso:Vehicle)."@en <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#totalLoss> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/uco/ns#> .
 <http://purl.org/uco/ns#totalLoss> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/uco/ns#> .
+<http://purl.org/uco/ns#totalLoss> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bdbbafd05afac96d163511d973aa2a349 <http://purl.org/uco/ns#> .
 <https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/attac.nt> .
 _:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
 _:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#comment> .

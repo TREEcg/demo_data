@@ -85,10 +85,10 @@
 <http://www.w3.org/ns/prov#DirectQueryService> <http://www.w3.org/ns/prov#category> "access-and-query" <http://www.w3.org/ns/prov#> .
 <http://www.w3.org/ns/prov#DirectQueryService> <http://www.w3.org/ns/prov#aq> "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#provenance-query-service-discovery"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://www.w3.org/ns/prov#> .
 <http://purl.org/wf4ever/ro#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/wf4ever/ro> .
-<http://purl.org/wf4ever/ro#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B29c0cefe60d12a897de55cab4ddc922e <http://purl.org/wf4ever/ro> .
+<http://purl.org/wf4ever/ro#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbfa3978a84a9facbac7306737458cddc <http://purl.org/wf4ever/ro> .
 <http://purl.org/wf4ever/ro#Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "An ro:Resource is an ore:AggregatedResource which ore:isAggregatedBy an ro:ResearchObject. \n\nThis specialisation requires that there exists an ore:Proxy which is ore:proxyFor this resource, and which is ore:proxyIn the same ro:ResearchObject the resource ore:isAggregatedBy. Any annotations on such a proxy will descrive the ro:Resource within that particular ro:ResearchObject, in particular dct:creator and dct:created on the proxy will specify who added the resource to the aggregation at what time.\n\nNote that annotations (ro:AggregatedAnnotation) can be added to both the ro:Resource and the ore:Proxy - depending on if the annotation is seen to be globally true (such as the provenance of how the resource was created) or locally true within the Research Object (such as the the resource playing the role of a wf4ever:Dataset).\n\nNot all resources aggregated by an ro:ResearchObject are ro:Resource instances, in particular ro:AggregatedAnnotations will also be aggregated, but will not be \"true\" RO resources (and thus don't need their own ore:Proxy).  \n\nAggregated resources MAY also be organised in (potentially nested) ro:Folders to reflect a file-system like structure. Note that any such resources SHOULD also be aggregated in the \"mother\" ro:ResearchObject.\n"@en <http://purl.org/wf4ever/ro> .
+<http://purl.org/wf4ever/ro#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B89584ed06246db6c14e5a4d2851426f5 <http://purl.org/wf4ever/ro> .
 <http://purl.org/wf4ever/ro#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.openarchives.org/ore/terms/AggregatedResource> <http://purl.org/wf4ever/ro> .
-<http://purl.org/wf4ever/ro#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B708e2c55782181d62b4920c3245ebf37 <http://purl.org/wf4ever/ro> .
 <http://guava.iis.sinica.edu.tw/r4r/Provenance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://guava.iis.sinica.edu.tw/r4r/RRPolicy> <http://guava.iis.sinica.edu.tw/r4r> .
 <http://guava.iis.sinica.edu.tw/r4r/Provenance> <http://www.w3.org/2000/01/rdf-schema#label> "Provenance" <http://guava.iis.sinica.edu.tw/r4r> .
 <http://guava.iis.sinica.edu.tw/r4r/Provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://guava.iis.sinica.edu.tw/r4r> .
@@ -105,15 +105,15 @@
 <http://purl.org/wf4ever/wfprov> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/wf4ever/ro> <http://purl.org/wf4ever/wfprov> .
 <http://purl.org/hpi/patchr#provenance> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/hpi/patchr#> .
 <http://purl.org/hpi/patchr#provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/hpi/patchr#> .
-<http://purl.org/hpi/patchr#provenance> <http://www.w3.org/2000/01/rdf-schema#domain> _:B45ebac0c05fb6dc7230bf45a0919ca57 <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#provenance> <http://www.w3.org/2000/01/rdf-schema#domain> _:B774f9d01cf4c8cbfabdfc3b4583fa821 <http://purl.org/hpi/patchr#> .
 <http://purl.org/hpi/patchr#provenance> <http://www.w3.org/2000/01/rdf-schema#label> "provenance"@en <http://purl.org/hpi/patchr#> .
 <http://purl.org/hpi/patchr#provenance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/hpi/patchr#> <http://purl.org/hpi/patchr#> .
 <http://purl.org/hpi/patchr#provenance> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/provenance/ns#DataCreation> <http://purl.org/hpi/patchr#> .
 <http://purl.org/hpi/patchr#provenance> <http://www.w3.org/2000/01/rdf-schema#comment> "This property is deprecated and should not be used any more, use prov:wasGeneratedBy instead.\n\nRefers to the provenance context where this patch was created."@en <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#Patch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bc5b791be294e7416e79b1cb1fb50b387 <http://purl.org/hpi/patchr#> .
+<http://purl.org/hpi/patchr#Patch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0bf28e9ef2a93c7fb3d62ea683f98218 <http://purl.org/hpi/patchr#> .
 <http://purl.org/hpi/patchr#Patch> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/hpi/patchr#> <http://purl.org/hpi/patchr#> .
 <http://purl.org/hpi/patchr#Patch> <http://www.w3.org/2000/01/rdf-schema#label> "Patch"@en <http://purl.org/hpi/patchr#> .
-<http://purl.org/hpi/patchr#Patch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B467b2dcf17b90771b15fca9c1d47ed17 <http://purl.org/hpi/patchr#> .
-<http://purl.org/hpi/patchr#Patch> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B7ff383b3c909c5330ed9ea8d4c776d27 <http://purl.org/hpi/patchr#> .
 <http://purl.org/hpi/patchr#Patch> <http://www.w3.org/2000/01/rdf-schema#comment> "A patch is a request to add, change or delete certain triples (or subgraphs) within a dataset. A patch refers to an guo:UpdateInstruction. For convenient retrieval a patch should be described with provenance data, a patch type and a dataset it applies to."@en <http://purl.org/hpi/patchr#> .
 <http://purl.org/hpi/patchr#Patch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/hpi/patchr#> .
 <http://purl.org/hpi/patchr#advocate> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://purl.org/hpi/patchr#> .
@@ -162,15 +162,15 @@
 <http://reference.data.gov.au/def/ont/iso19160-1-address#Address.provenance> <http://www.w3.org/2000/01/rdf-schema#range> <http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://reference.data.gov.au/def/ont/iso19160-1-address> .
 <http://reference.data.gov.au/def/ont/iso19160-1-address#Address.provenance> <http://www.w3.org/2004/02/skos/core#definition> "Information about the source or origin of the address, such as the authority who assigned the address, the owner of the address data instance, and lineage of the address."@en <http://reference.data.gov.au/def/ont/iso19160-1-address> .
 <http://reference.data.gov.au/def/ont/iso19160-1-address#Address.provenance> <http://www.w3.org/2000/01/rdf-schema#domain> <http://reference.data.gov.au/def/ont/iso19160-1-address#Address> <http://reference.data.gov.au/def/ont/iso19160-1-address> .
-<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4f92439c73137904dcd6488bbffd0a7c <http://reference.data.gov.au/def/ont/iso19160-1-address> .
-<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6d3cae11e89800c28e39c53f73ed6570 <http://reference.data.gov.au/def/ont/iso19160-1-address> .
+<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B79fc3906f64bafb62fe467f6e65ff2f3 <http://reference.data.gov.au/def/ont/iso19160-1-address> .
+<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B985375aa801c00c1c1485fe01f60b2b4 <http://reference.data.gov.au/def/ont/iso19160-1-address> .
 <http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://reference.data.gov.au/def/ont/iso19160-1-address> .
 <http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://www.w3.org/2004/02/skos/core#definition> "Provenance information, e.g. the source or origin of the record, changes to the record, and organisations or individuals that have had custody of the record since its creation."@en <http://reference.data.gov.au/def/ont/iso19160-1-address> .
 <http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://www.w3.org/2000/01/rdf-schema#label> "Address Provenance"@en <http://reference.data.gov.au/def/ont/iso19160-1-address> .
 <http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://standards.iso.org/iso/19160/-1/ed-1/en/" <http://reference.data.gov.au/def/ont/iso19160-1-address> .
-<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B798ad8858ddd8dd501c27b3db426673d <http://reference.data.gov.au/def/ont/iso19160-1-address> .
-<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd7ed973b12f13d08c25d6d0a7db3a590 <http://reference.data.gov.au/def/ont/iso19160-1-address> .
-<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf396d88ae36862b9ef32dc33e210b9b9 <http://reference.data.gov.au/def/ont/iso19160-1-address> .
+<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bafed483887b31d2483ecc51304b92ee0 <http://reference.data.gov.au/def/ont/iso19160-1-address> .
+<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf505683779448f257dd6305cb837ae12 <http://reference.data.gov.au/def/ont/iso19160-1-address> .
+<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba98ba63ec8009a999b33afa38432288d <http://reference.data.gov.au/def/ont/iso19160-1-address> .
 <http://reference.data.gov.au/def/ont/iso19160-1-address#AddressComponent.provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://reference.data.gov.au/def/ont/iso19160-1-address> .
 <http://reference.data.gov.au/def/ont/iso19160-1-address#AddressComponent.provenance> <http://www.w3.org/2004/02/skos/core#definition> "Information about the source or origin of the address component, such as the authority who assigned the address component value, the owner of the address component data instance, and the lineage of the address component."@en <http://reference.data.gov.au/def/ont/iso19160-1-address> .
 <http://reference.data.gov.au/def/ont/iso19160-1-address#AddressComponent.provenance> <http://www.w3.org/2000/01/rdf-schema#range> <http://reference.data.gov.au/def/ont/iso19160-1-address#AddressProvenance> <http://reference.data.gov.au/def/ont/iso19160-1-address> .
@@ -219,10 +219,10 @@
 <http://d-nb.info/standards/elementset/gnd#ProvenanceCharacteristic> <http://d-nb.info/standards/elementset/gnd#marc21equivalent> "079 $v=wip" <http://d-nb.info/standards/elementset/gnd#> .
 <http://d-nb.info/standards/elementset/gnd#ProvenanceCharacteristic> <http://www.w3.org/2000/01/rdf-schema#comment> "Provenienzmerkmale bezeichnen spuren, die\n\tVorbesitzer (Personen und Institutionen) in und auf Büchern, Handschriften\n\toder anderen Artefakten hinterlassen haben. Diese Merkmale kennzeichnen\n\tBesitz, Lesespuren oder Zensurabsichten."@de <http://d-nb.info/standards/elementset/gnd#> .
 <http://d-nb.info/standards/elementset/gnd#ProvenanceCharacteristic> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://d-nb.info/standards/elementset/gnd#Work> <http://d-nb.info/standards/elementset/gnd#> .
-<https://w3id.org/GConsent#Consent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbe5b5b6818bad1295bbdd03403e93f63 <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#Consent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd72cb8f3c2770a3f89de0b4982a8b171 <https://w3id.org/GConsent> .
 <https://w3id.org/GConsent#Consent> <http://www.w3.org/2000/01/rdf-schema#comment> "As per Article 4(11) of the GDPR, ‘consent’ of the data subject means any freely given, specific, informed and unambiguous indication of the data subject’s wishes by which he or she, by a statement or by a clear affirmative action, signifies agreement to the processing of personal data relating to him or her;\n\nIn the case of this ontology, 'Consent' is a concept as well as a tangible entity (something that has a provenance record). To separate this distinction with relation to the data subject, the Consent class represents the consent of the data subject in its entirely, including any history and annotations for it.\n\nTo link the `Consent` instance with the `DataSubject` instance, use the `isConsentForDataSubject` and `hasConsent` properties."@en <https://w3id.org/GConsent> .
 <https://w3id.org/GConsent#Consent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT#GivenConsent> <https://w3id.org/GConsent> .
-<https://w3id.org/GConsent#Consent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba2e00ed5d24e39809f954f214faa9997 <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#Consent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba3ccc328b6968b29ef9557cd418c38b2 <https://w3id.org/GConsent> .
 <https://w3id.org/GConsent#Consent> <http://www.w3.org/2000/01/rdf-schema#label> "Consent"@en <https://w3id.org/GConsent> .
 <https://w3id.org/GConsent#Consent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Entity> <https://w3id.org/GConsent> .
 <https://w3id.org/GConsent#Consent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GConsent> .
@@ -246,15 +246,14 @@
 <https://w3id.org/GDPRov#DataStepWithoutProvenance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRov#DataStep> <https://w3id.org/GDPRov> .
 <https://w3id.org/GDPRov#DataStepWithoutProvenance> <http://www.w3.org/2000/01/rdf-schema#label> "Data Step without Provenance" <https://w3id.org/GDPRov> .
 <https://w3id.org/GDPRov#DataStepWithoutProvenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRov> .
+<http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:B6f8a00dbe19cbfbf6f71d50c00bbf978 <http://data.europa.eu/esco/model> .
 <http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.europa.eu/esco/model#Location> <http://data.europa.eu/esco/model> .
-<http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B08c3702b94db80000057bdcdb1b0ddcf <http://data.europa.eu/esco/model> .
 <http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://data.europa.eu/esco/model#plusUF> <http://data.europa.eu/esco/model> .
 <http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://data.europa.eu/esco/model#editorialStatus> <http://data.europa.eu/esco/model> .
 <http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://data.europa.eu/esco/model#GroupConcept> <http://data.europa.eu/esco/model> .
+<http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:Bb38d3fa92a62bf0a4614b13074c48636 <http://data.europa.eu/esco/model> .
 <http://data.europa.eu/esco/model#Concept> <http://purl.org/dc/terms/modified> "2013-12-03"^^<http://www.w3.org/2001/XMLSchema#date> <http://data.europa.eu/esco/model> .
 <http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "released" <http://data.europa.eu/esco/model> .
-<http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:B83d43728e322fbf450a68675b3735097 <http://data.europa.eu/esco/model> .
-<http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2002/07/owl#disjointUnionOf> _:B75523ba9e9dd3cadaddfbdf6c7e125c5 <http://data.europa.eu/esco/model> .
 <http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/dc/terms/modified> <http://data.europa.eu/esco/model> .
 <http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://data.europa.eu/esco/model"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://data.europa.eu/esco/model> .
 <http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> <http://data.europa.eu/esco/model> .
@@ -272,6 +271,7 @@
 <http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://purl.org/iso25964/skos-thes#status> <http://data.europa.eu/esco/model> .
 <http://data.europa.eu/esco/model#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.europa.eu/esco/model> .
 <http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2000/01/rdf-schema#label> "ESCO pillar Concept"@en <http://data.europa.eu/esco/model> .
+<http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B861f863f84d5480eb3e750c18f930a7f <http://data.europa.eu/esco/model> .
 <http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2002/07/owl#disjointWith> <http://data.europa.eu/esco/model#Language> <http://data.europa.eu/esco/model> .
 <http://data.europa.eu/esco/model#Concept> <http://purl.org/dc/terms/issued> "2013-06-27"^^<http://www.w3.org/2001/XMLSchema#date> <http://data.europa.eu/esco/model> .
 <http://data.europa.eu/esco/model#Concept> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://data.europa.eu/esco/model#SimpleConcept> <http://data.europa.eu/esco/model> .
@@ -329,37 +329,37 @@
 <http://openprovenance.org/model/opmo> <http://purl.org/dc/terms/contributor> <https://plus.google.com/104528963250879400352> <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://purl.org/dc/terms/description> "The Open Provenance Model is a model of provenance that is designed to meet the following requirements: (1) To allow provenance information to be exchanged between systems, by means of a compatibility layer based on a shared provenance model. (2) To allow developers to build and share tools that operate on such a provenance model. (3) To define provenance in a precise, technology-agnostic manner. (4) To support a digital representation of provenance for any 'thing', whether produced by computer systems or not. (5) To allow multiple levels of description to coexist. (6) To define a core set of rules that identify the valid inferences that can be made on provenance representation."@en <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/opmo/versions/2010-10-13.n3> <https://lov.linkeddata.es/dataset/lov> .
-<http://openprovenance.org/model/opmo> <http://purl.org/stuff/rev#hasReview> _:B4668a735ed89483592dc32a6a897dc73 <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://purl.org/dc/terms/contributor> <http://data.semanticweb.org/person/jun-zhao> <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://purl.org/dc/terms/contributor> <http://www.csd.abdn.ac.uk/~jpan/‎> <https://lov.linkeddata.es/dataset/lov> .
-<http://openprovenance.org/model/opmo> <http://purl.org/stuff/rev#hasReview> _:B8ffc31eb5beda0ae19691258afc472e8 <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://purl.org/dc/terms/contributor> <https://plus.google.com/115341823652000305339> <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://purl.org/dc/terms/contributor> <https://plus.google.com/104342885109667179006> <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://purl.org/dc/terms/contributor> <https://plus.google.com/103461686056975482297> <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://purl.org/dc/terms/contributor> <https://plus.google.com/112455864978418678437> <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://openprovenance.org/model/opmo-20101012.owl> <https://lov.linkeddata.es/dataset/lov> .
-<http://openprovenance.org/model/opmo> <http://purl.org/stuff/rev#hasReview> _:Bb3956b990ae61e0e0598c625be4987be <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/opmo/versions/2015-01-11.n3> <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://purl.org/dc/terms/modified> "2015-01-11"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://openprovenance.org/model/opmo> <http://purl.org/stuff/rev#hasReview> _:B7d21641722a8cbd9dd0f92e819675448 <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://openprovenance.org/model/opmo#" <https://lov.linkeddata.es/dataset/lov> .
+<http://openprovenance.org/model/opmo> <http://purl.org/stuff/rev#hasReview> _:B58ae4c6ce5e03ba7bdcafefb2ce650a0 <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://purl.org/dc/terms/contributor> <https://plus.google.com/112326694442177926310> <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://purl.org/vocab/vann/preferredNamespacePrefix> "opmo" <https://lov.linkeddata.es/dataset/lov> .
+<http://openprovenance.org/model/opmo> <http://purl.org/stuff/rev#hasReview> _:B1642a6c832ed292822c2823ca26ecddf <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://purl.org/dc/terms/contributor> <http://www.inf.kcl.ac.uk/staff/simonm/> <https://lov.linkeddata.es/dataset/lov> .
 <http://openprovenance.org/model/opmo> <http://purl.org/dc/terms/contributor> <https://plus.google.com/103320198526353469173> <https://lov.linkeddata.es/dataset/lov> .
 <http://www.bbc.co.uk/ontologies/provenance> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/bbcprov/versions/2012-12-01.n3> <https://lov.linkeddata.es/dataset/lov> .
 <http://www.bbc.co.uk/ontologies/provenance> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/bbcprov/versions/2014-03-27.n3> <https://lov.linkeddata.es/dataset/lov> .
 <http://www.bbc.co.uk/ontologies/provenance> <http://purl.org/dc/terms/title> "BBC Provenance Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.bbc.co.uk/ontologies/provenance> <http://purl.org/stuff/rev#hasReview> _:Bfe36e6c2f75c72b240103fb55751aa39 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.bbc.co.uk/ontologies/provenance> <http://purl.org/stuff/rev#hasReview> _:Bc7984e60a57c4b3e0b935a1412ce9ad4 <https://lov.linkeddata.es/dataset/lov> .
 <http://www.bbc.co.uk/ontologies/provenance> <http://purl.org/dc/terms/publisher> <http://viaf.org/viaf/134199040> <https://lov.linkeddata.es/dataset/lov> .
-<http://www.bbc.co.uk/ontologies/provenance> <http://purl.org/stuff/rev#hasReview> _:B3e40c9df2a6bcb74452702b3da2672c0 <https://lov.linkeddata.es/dataset/lov> .
 <http://www.bbc.co.uk/ontologies/provenance> <http://purl.org/dc/terms/modified> "2015-08-11"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
-<http://www.bbc.co.uk/ontologies/provenance> <http://purl.org/stuff/rev#hasReview> _:Bec310805db606509f135d67306b6a317 <https://lov.linkeddata.es/dataset/lov> .
 <http://www.bbc.co.uk/ontologies/provenance> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/bbcprov/versions/2014-04-03.n3> <https://lov.linkeddata.es/dataset/lov> .
 <http://www.bbc.co.uk/ontologies/provenance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
-<http://www.bbc.co.uk/ontologies/provenance> <http://purl.org/stuff/rev#hasReview> _:B78e56be00ed94acd866cd1030ff2521e <https://lov.linkeddata.es/dataset/lov> .
 <http://www.bbc.co.uk/ontologies/provenance> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/bbcprov/versions/2015-08-11.n3> <https://lov.linkeddata.es/dataset/lov> .
 <http://www.bbc.co.uk/ontologies/provenance> <http://purl.org/dc/terms/description> "The provenance ontology supports data management and auditing tasks. It is used to define the different types of named graphs we used in the store (quad store) and enables their association with metadata that allow us to manage, validate and expose data to BBC services"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.bbc.co.uk/ontologies/provenance> <http://purl.org/stuff/rev#hasReview> _:B13b29142de8df200ef8838aca1c49f2d <https://lov.linkeddata.es/dataset/lov> .
 <http://www.bbc.co.uk/ontologies/provenance> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.bbc.co.uk/ontologies/provenance/" <https://lov.linkeddata.es/dataset/lov> .
 <http://www.bbc.co.uk/ontologies/provenance> <http://purl.org/vocab/vann/preferredNamespacePrefix> "bbcprov" <https://lov.linkeddata.es/dataset/lov> .
 <http://www.bbc.co.uk/ontologies/provenance> <http://purl.org/dc/terms/issued> "2012-12-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
