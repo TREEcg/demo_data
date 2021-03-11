@@ -1,0 +1,327 @@
+<http://purl.org/innovation/ns#affects> <http://www.w3.org/2000/01/rdf-schema#comment> "The group of things affected by a problem. Again it is recommended that a SKOS model is used for such instances."@en <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#affects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#affects> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/innovation/ns#Problem> <http://purl.org/innovation/ns> .
+<http://purl.org/innovation/ns#affects> <http://www.w3.org/2000/01/rdf-schema#label> "affects"@en <http://purl.org/innovation/ns> .
+<http://purl.org/linguistics/gold/Affix> <http://www.w3.org/2000/01/rdf-schema#comment> "An affix is a morpheme with an abstract meaning which can only be used when added to a root morpheme.  These are classified in four different ways, depending on their position with reference to the root: suffix, prefix, circumfix and infix. [Haspelmath 2002: 265; Crystal 1980: 17]"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Affix> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/linguistics/gold/Morpheme> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Affix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Affix> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/linguistics/gold"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.org/linguistics/gold> .
+<http://purl.org/linguistics/gold/Affix> <http://www.w3.org/2000/01/rdf-schema#label> "Affix"@eng <http://purl.org/linguistics/gold> .
+<http://purl.org/net/nknouf/ns/bibtex#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.org/net/nknouf/ns/bibtex> .
+<http://purl.org/net/nknouf/ns/bibtex#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "The authors affiliation."@en <http://purl.org/net/nknouf/ns/bibtex> .
+<http://purl.org/net/nknouf/ns/bibtex#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/net/nknouf/ns/bibtex#Entry> <http://purl.org/net/nknouf/ns/bibtex> .
+<http://purl.org/net/nknouf/ns/bibtex#hasAffiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/net/nknouf/ns/bibtex> .
+<http://purl.org/net/nknouf/ns/bibtex#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#label> "has affiliation"@en <http://purl.org/net/nknouf/ns/bibtex> .
+<http://purl.org/spar/cito/AffilationSelfCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/cito/SelfCitation> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/AffilationSelfCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation in which at least one author from each of the citing and the cited entities is affiliated with the same academic institution.\n\nIn particular, like the ancestor class cito:Citation, cito:AffiliationSelfCitation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties, accompanied by an additional statement using cito:sharesAuthorInstitutionWith for linking the citing paper and the cited paper. \n\nFor example, the following cito:AffiliationSelfCitation resource\n\n     :thisCitation a cito:AffiliationSelfCitation ; \n          cito:hasCitingEntity :paperA ;\n          cito:hasCitationCharacterization cito:extends ;\n          cito:hasCitedEntity :paperB .\n\ncan be alternatively described as follows\n\n     :paperA cito:extends :paperB .\n     :paperA cito:sharesAuthorInstitutionWith :paperB ."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/AffilationSelfCitation> <http://www.w3.org/2000/01/rdf-schema#label> "affilation self citation"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/AffilationSelfCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
+<http://purl.org/spar/scoro/affiliate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/affiliate> <http://www.w3.org/2000/01/rdf-schema#comment> "The role an agent has of being affiliated to some organization or institution in a context of some entity or activity, for example a document, a project or an internship."@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/affiliate> <http://purl.org/dc/elements/1.1/description> "The affiliation of a person to an organization or institution can be specified by using the property pro:relatesToEntity, as shown in the following example:\n\nfoaf:Person scoro:holdsOrganizationalRole [ pro:withRole pro:affiliate ; pro:relatesToEntity _:aff ] .\n\n_:aff a foaf:Organization ; vcard:extended-address 'Department of Zoology, University of Oxford, United Kingdom' ."@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/affiliate> <http://www.w3.org/2000/01/rdf-schema#label> "affiliate"@en <http://purl.org/spar/scoro/> .
+<http://purl.org/spar/scoro/affiliate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/spar/scoro/OrganizationalRole> <http://purl.org/spar/scoro/> .
+<http://purl.uniprot.org/core/measuredAffinity> <http://www.w3.org/2000/01/rdf-schema#comment> "The Michaelis-Menten constant, Km." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/measuredAffinity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.uniprot.org/core/Kinetics_Annotation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/measuredAffinity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/measuredAffinity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/measuredAffinity> <http://www.w3.org/2000/01/rdf-schema#label> "measured affinity" <http://purl.uniprot.org/core/> .
+<http://rdaregistry.info/Elements/a/P50101> <http://metadataregistry.org/uri/profile/RegAp/name> "affiliation"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50101> <http://www.w3.org/2000/01/rdf-schema#label> "has affiliation"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50101> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A group with which a person is affiliated or has been affiliated through employment, membership, cultural identity, etc."@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50101> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/a/affiliation.en> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50101> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10004> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50101> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "affiliation"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50101> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "9.13" <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50101> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50101> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50101> <http://www.w3.org/2004/02/skos/core#definition> "Relates a person to a group with which a person is affiliated or has been affiliated through employment, membership, cultural identity, etc."@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50101> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60095> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50101> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/a/> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50241> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/a/localAffiliate.en> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50241> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60739> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50241> <http://www.w3.org/2000/01/rdf-schema#label> "has local affiliate"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50241> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A local corporate body affiliated with the broader body which acts for it and others at a broader organizational level."@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50241> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10005> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50241> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50241> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50241> <http://metadataregistry.org/uri/profile/RegAp/name> "localAffiliate"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50241> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "local affiliate"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50241> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/a/> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50241> <http://www.w3.org/2004/02/skos/core#definition> "Relates a corporate body to a local corporate body affiliated with the broader body which acts for it and others at a broader organizational level."@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50241> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdaregistry.info/Elements/c/C10005> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50240> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "broader affiliated body"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50240> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60738> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50240> <http://www.w3.org/2000/01/rdf-schema#label> "has broader affiliated body"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50240> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10005> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50240> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A corporate body that acts for the local affiliated body and others at a broader organizational level."@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50240> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50240> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50240> <http://metadataregistry.org/uri/profile/RegAp/name> "broaderAffiliatedBody"@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50240> <http://www.w3.org/2000/01/rdf-schema#range> <http://rdaregistry.info/Elements/c/C10005> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50240> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/a/> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50240> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/a/broaderAffiliatedBody.en> <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/a/P50240> <http://www.w3.org/2004/02/skos/core#definition> "Relates a corporate body to a corporate body that acts for the local affiliated body and others at a broader organizational level."@en <http://rdaregistry.info/Elements/a> .
+<http://rdaregistry.info/Elements/u/P60739> <http://www.w3.org/2004/02/skos/core#definition> "Relates a local agent affiliated with the broader agent which acts for it and others at a broader organizational level to the agent."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60739> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/localAffiliate.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60739> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60739> <http://www.w3.org/2000/01/rdf-schema#label> "has local affiliate"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60739> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60739> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60739> <http://metadataregistry.org/uri/profile/RegAp/name> "localAffiliate"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60095> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60095> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a group with which an agent is affiliated or has been affiliated through employment, membership, cultural identity, etc."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60095> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60095> <http://www.w3.org/2000/01/rdf-schema#label> "has affiliation"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60095> <http://metadataregistry.org/uri/profile/RegAp/name> "affiliation"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60095> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/a/P50101> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60095> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60095> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/affiliation.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60738> <http://metadataregistry.org/uri/profile/RegAp/name> "broaderAffiliatedAgent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60738> <http://www.w3.org/2004/02/skos/core#definition> "Relates an agent that acts for the local affiliated agent and others at a broader organizational level to the agent."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60738> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60738> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/broaderAffiliatedAgent.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60738> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60738> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60738> <http://www.w3.org/2000/01/rdf-schema#label> "has broader affiliated agent"@en <http://rdaregistry.info/Elements/u> .
+<http://rdvocab.info/ElementsGr2/affiliation> <http://www.w3.org/2000/01/rdf-schema#label> "Affiliation"@en <http://rdvocab.info/ElementsGr2> .
+<http://rdvocab.info/ElementsGr2/affiliation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/ElementsGr2> <http://rdvocab.info/ElementsGr2> .
+<http://rdvocab.info/ElementsGr2/affiliation> <http://www.w3.org/2004/02/skos/core#definition> "A group with which a person is affiliated or has been affiliated through employment, membership, cultural identity, etc."@en <http://rdvocab.info/ElementsGr2> .
+<http://rdvocab.info/ElementsGr2/affiliation> <http://metadataregistry.org/uri/profile/RegAp/name> "affiliation"@en <http://rdvocab.info/ElementsGr2> .
+<http://rdvocab.info/ElementsGr2/affiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdvocab.info/uri/schema/FRBRentitiesRDA/Person> <http://rdvocab.info/ElementsGr2> .
+<http://rdvocab.info/ElementsGr2/affiliation> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/ElementsGr2> .
+<http://rdvocab.info/ElementsGr2/affiliation> <http://www.w3.org/2004/02/skos/core#scopeNote> "FRAD 4.1."@en <http://rdvocab.info/ElementsGr2> .
+<http://rdvocab.info/ElementsGr2/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/ElementsGr2> .
+<http://semanticscience.org/resource/SIO_000173> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000287> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000173> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000173> <http://www.w3.org/2000/01/rdf-schema#label> "affiliation"@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000173> <http://purl.org/dc/terms/description> "An affiliation is a social relation which indicates the partnership between two or more entities."@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000173> <http://purl.org/dc/elements/1.1/identifier> "SIO_000173" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000173> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001158> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001158> <http://purl.org/dc/elements/1.1/identifier> "SIO_001158" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001158> <http://www.w3.org/2002/07/owl#inverseOf> <http://semanticscience.org/resource/SIO_001159> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001158> <http://www.w3.org/2000/01/rdf-schema#label> "affects"@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001158> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001158> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://semanticscience.org/resource/SIO_000229> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001159> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001159> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://semanticscience.org/resource/SIO_000062> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001159> <http://www.w3.org/2000/01/rdf-schema#label> "is affected by"@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001159> <http://purl.org/dc/elements/1.1/identifier> "SIO_001159" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001159> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000812> <http://purl.org/dc/elements/1.1/identifier> "SIO_000812" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000812> <http://www.w3.org/2000/01/rdf-schema#label> "affection"@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000812> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000812> <http://purl.org/dc/terms/description> "affection is an emotion characterized with a feeling or type of love for another living thing."@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000812> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000831> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000812> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> <http://semanticscience.org/ontology/sio.owl> .
+<http://purl.org/ontology/bibo/affirmedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/affirmedBy> <http://purl.obolibrary.org/obo/IAO_0000112> "The public description was taken from here:  http://bibotools.googlecode.com/svn/bibo-ontology/trunk/doc/index.html" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/affirmedBy> <http://www.w3.org/2000/01/rdf-schema#label> "affirmed by" <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/affirmedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.org/ontology/bibo/"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://vivoweb.org/ontology/core> .
+<http://purl.org/ontology/bibo/affirmedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "A legal decision that affirms a ruling."@en <http://vivoweb.org/ontology/core> .
+<http://vivoweb.org/ontology/core#affiliatedOrganization> <http://www.w3.org/2000/01/rdf-schema#domain> <http://xmlns.com/foaf/0.1/Organization> <http://vivoweb.org/ontology/core> .
+<http://vivoweb.org/ontology/core#affiliatedOrganization> <http://www.w3.org/2000/01/rdf-schema#range> <http://xmlns.com/foaf/0.1/Organization> <http://vivoweb.org/ontology/core> .
+<http://vivoweb.org/ontology/core#affiliatedOrganization> <http://www.w3.org/2000/01/rdf-schema#label> "has affiliated organization" <http://vivoweb.org/ontology/core> .
+<http://vivoweb.org/ontology/core#affiliatedOrganization> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://vivoweb.org/ontology/core> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://www.w3.org/2000/01/rdf-schema#label> "Australian Public Affairs Information Service"@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/terms/SubjectScheme> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://purl.org/dc/terms/issued> "2002-04-18" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcam/VocabularyEncodingScheme> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://purl.org/dc/terms/modified> "2009-02-02" <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://www.w3.org/2000/01/rdf-schema#comment> "The set of Australian economic, social, political and cultural affairs subjects specified by the National Library of Australia."@en-au <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.nla.gov.au/apais/> <http://www.agls.gov.au/agls/terms> .
+<http://www.agls.gov.au/agls/terms/APAIS> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.agls.gov.au/agls/terms/> <http://www.agls.gov.au/agls/terms> .
+<http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> <http://www.w3.org/2000/01/rdf-schema#label> "Merkmalszuweisung"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> <http://www.w3.org/2000/01/rdf-schema#label> "Atribuição de Característica"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> <http://www.w3.org/2000/01/rdf-schema#label> "Affectation d'attribut"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> <http://www.w3.org/2000/01/rdf-schema#label> "Attribute Assignment"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> <http://www.w3.org/2000/01/rdf-schema#comment> "This class comprises the actions of making assertions about properties of an object or any relation between two items or concepts. \nThis class allows the documentation of how the respective assignment came about, and whose opinion it was. All the attributes or properties assigned in such an action can also be seen as directly attached to the respective item or concept, possibly as a collection of contradictory values. All cases of properties in this model that are also described indirectly through an action are characterised as \"short cuts\" of this action. This redundant modelling of two alternative views is preferred because many implementations may have good reasons to model either the action or the short cut, and the relation between both alternatives can be captured by simple rules. \nIn particular, the class describes the actions of people making propositions and statements during certain museum procedures, e.g. the person and date when a condition statement was made, an identifier was assigned, the museum object was measured, etc. Which kinds of such assignments and statements need to be documented explicitly in structures of a schema rather than free text, depends on if this information should be accessible by structured queries. \n"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> <http://www.w3.org/2000/01/rdf-schema#label> "Присвоение Атрибута"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.cidoc-crm.org/cidoc-crm/E7_Activity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> <http://www.w3.org/2000/01/rdf-schema#label> "Απόδοση Ιδιοτήτων"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to> <http://www.w3.org/2000/01/rdf-schema#label> "a affecté un attribut à"@fr <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.cidoc-crm.org/cidoc-crm/E1_CRM_Entity> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to> <http://www.w3.org/2000/01/rdf-schema#label> "assigned attribute to"@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to> <http://www.w3.org/2000/01/rdf-schema#label> "wies Merkmal zu"@de <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to> <http://www.w3.org/2000/01/rdf-schema#label> "απέδωσε ιδιότητα σε"@el <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to> <http://www.w3.org/2000/01/rdf-schema#comment> "This property indicates the item to which an attribute or relation is assigned. "@en <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to> <http://www.w3.org/2000/01/rdf-schema#label> "присвоил атрибут для"@ru <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.cidoc-crm.org/cidoc-crm/E13_Attribute_Assignment> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to> <http://www.w3.org/2000/01/rdf-schema#label> "atribuiu atributo para"@pt <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.cidoc-crm.org/cidoc-crm/P140_assigned_attribute_to> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.cidoc-crm.org/cidoc-crm/> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasAffiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "A property to establish the relation between a\n            Contact/person and an Organisation."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#label> "Affiliation"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Contact> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Organisation> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#affiliationStartDate> <http://www.w3.org/2000/01/rdf-schema#label> "Affiliation start date" <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#affiliationStartDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Affiliation> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#affiliationStartDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#affiliationStartDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#affiliationEndDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#affiliationEndDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Affiliation> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#affiliationEndDate> <http://www.w3.org/2000/01/rdf-schema#label> "Affiliation start date"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#affiliationEndDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#affiliationEndDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date when a Contact left an Organisation"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Affiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "An Organisation to which a Contact is affiliated (with period of validity)."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Affiliation> <http://www.w3.org/2000/01/rdf-schema#label> "Affiliation"@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Affiliation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Organisation> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#Affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affixedPersonalPronoun> <http://www.w3.org/2000/01/rdf-schema#comment> "Personnal pronoun that is affixed, i.e. added as an affix to another word." <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affixedPersonalPronoun> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-2221> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affixedPersonalPronoun> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.lexinfo.net/ontology/2.0/lexinfo#PronounPOS> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affixedPersonalPronoun> <http://purl.org/dc/elements/1.1/#creator> "Francopoulo, Gil" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affixedPersonalPronoun> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affixedPersonalPronoun> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affixedPersonalPronoun> <http://www.w3.org/2002/07/owl#versionInfo> "1:0" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affixedPersonalPronoun> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affixedPersonalPronoun> <http://www.w3.org/2000/01/rdf-schema#label> "affixed personal pronoun" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affixedPersonalPronoun> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.lexinfo.net/ontology/2.0/lexinfo#PartOfSpeech> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affirmativeParticle> <http://purl.org/dc/elements/1.1/#creator> "Francopoulo, Gil" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affirmativeParticle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affirmativeParticle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affirmativeParticle> <http://www.w3.org/2000/01/rdf-schema#label> "affirmative particule" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affirmativeParticle> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.lexinfo.net/ontology/2.0/lexinfo> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affirmativeParticle> <http://www.w3.org/2002/07/owl#versionInfo> "1:0" <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affirmativeParticle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.lexinfo.net/ontology/2.0/lexinfo#PartOfSpeech> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affirmativeParticle> <http://www.isocat.org/ns/dcr.rdf#datcat> <http://www.isocat.org/datcat/DC-1918> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affirmativeParticle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.lexinfo.net/ontology/2.0/lexinfo#ParticlePOS> <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.lexinfo.net/ontology/2.0/lexinfo#affirmativeParticle> <http://www.w3.org/2000/01/rdf-schema#comment> "Particle used to express affirmation." <http://www.lexinfo.net/ontology/2.0/lexinfo> .
+<http://www.loc.gov/mads/rdf/v1#affiliationEnd> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.loc.gov/mads/rdf/v1#Affiliation> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#affiliationEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#affiliationEnd> <http://www.w3.org/2000/01/rdf-schema#comment> "The date an individual\n      ceased to be affiliated with an organization." <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#affiliationEnd> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#affiliationEnd> <http://www.w3.org/2000/01/rdf-schema#label> "Affiliation\n      Ended" <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#affiliationEnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.loc.gov/mads/rdf/v1#Affiliation> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasAffiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to associate an\n      individual, such as a foaf:Agent, to a group or organization with which an individual is or\n      has been affiliated." <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#label> "Has Affiliation" <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasAffiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.loc.gov/mads/rdf/v1#RWO> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasAffiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasAffiliationAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "The address of the group or\n      organization with which an individual is associated." <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasAffiliationAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasAffiliationAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.loc.gov/mads/rdf/v1#Affiliation> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasAffiliationAddress> <http://www.w3.org/2000/01/rdf-schema#label> "Has Affiliation\n      Address" <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasAffiliationAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#hasAffiliationAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.loc.gov/mads/rdf/v1#Address> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#affiliationStart> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.loc.gov/mads/rdf/v1#Affiliation> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#affiliationStart> <http://www.w3.org/2000/01/rdf-schema#comment> "The date an individual\n      established an affiliation with an organization." <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#affiliationStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#affiliationStart> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#affiliationStart> <http://www.w3.org/2000/01/rdf-schema#label> "Affiliation\n      Started" <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#affiliationStart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#natureOfAffiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#natureOfAffiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.loc.gov/mads/rdf/v1#Affiliation> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#natureOfAffiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#natureOfAffiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "Records the individual's\n      role or position in the organization with which the individual is affiliated. A \"job title\"\n      might be appropriate." <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#natureOfAffiliation> <http://www.w3.org/2000/01/rdf-schema#label> "Nature of\n      Affiliation" <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#Affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#Affiliation> <http://www.w3.org/2000/01/rdf-schema#label> "Affiliation"@en <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#Affiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "A resource that describes an individual's affiliation with an\n      organization or group, such as the nature of the affiliation and the active\n      dates."@en <http://www.loc.gov/mads/rdf/v1> .
+<http://observedchange.com/moac/ns#AffectedPopulation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://observedchange.com/moac/ns> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#AffectedPopulation> <http://www.w3.org/2000/01/rdf-schema#comment> "AffectedPopulation is a group of disaster affecgted people in need of humanitarian support."@en <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#AffectedPopulation> <http://www.w3.org/2000/01/rdf-schema#label> "AffectedPopulation"@en <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#AffectedPopulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#affectedby> <http://www.w3.org/2000/01/rdf-schema#range> <http://observedchange.com/moac/ns#NaturalHazard> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#affectedby> <http://www.w3.org/2000/01/rdf-schema#range> <http://observedchange.com/moac/ns#NaturalHazards> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#affectedby> <http://www.w3.org/2000/01/rdf-schema#range> <http://observedchange.com/moac/ns#ShelterOffered> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#affectedby> <http://www.w3.org/2000/01/rdf-schema#label> "affectedby"@en <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#affectedby> <http://www.w3.org/2000/01/rdf-schema#comment> "affectedby indicates disaster which has influence on population."@en <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#affectedby> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DataProperty> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#affectedby> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://observedchange.com/moac/ns> <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#affectedby> <http://www.w3.org/2000/01/rdf-schema#comment> "affectedby indicates the relation of people being affected by certain disaster."@en <http://www.observedchange.com/moac/ns#> .
+<http://observedchange.com/moac/ns#affectedby> <http://www.w3.org/2000/01/rdf-schema#range> <http://observedchange.com/moac/ns#AffectedPopulation> <http://www.observedchange.com/moac/ns#> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Affiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "Aggregates three properties defined in RFC2426. Originally all three were attached directly to a person. One person could have only one title and one role within one organization. This class is intended to lift this limitation." <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Affiliation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Role> <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://www.semanticdesktop.org/ontologies/2007/03/22/nco#Affiliation> <http://www.w3.org/2000/01/rdf-schema#label> "Affiliation" <http://www.semanticdesktop.org/ontologies/2007/03/22/nco> .
+<http://ontologi.es/doap-bugs#affects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://ontologi.es/doap-bugs#> .
+<http://ontologi.es/doap-bugs#affects> <http://www.w3.org/2000/01/rdf-schema#range> <http://usefulinc.com/ns/doap#Version> <http://ontologi.es/doap-bugs#> .
+<http://ontologi.es/doap-bugs#affects> <http://www.w3.org/2000/01/rdf-schema#domain> <http://ontologi.es/doap-bugs#Issue> <http://ontologi.es/doap-bugs#> .
+<http://ontologi.es/doap-bugs#affects> <http://www.w3.org/2000/01/rdf-schema#label> "affects"@en <http://ontologi.es/doap-bugs#> .
+<http://purl.obolibrary.org/obo/OBI_0000461> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000461> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000461> <http://purl.obolibrary.org/obo/IAO_0000111> "obsolete_the supplier role of Affymetrix" <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000461> <http://www.w3.org/2000/01/rdf-schema#label> "obsolete_the supplier role of Affymetrix" <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000461> <http://purl.obolibrary.org/obo/IAO_0000231> <http://purl.obolibrary.org/obo/IAO_0000103> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000461> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000461> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Thing> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000462> <http://purl.obolibrary.org/obo/IAO_0000115> "An organization which supplies technology, tools and protocols for use in high throughput applications" <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000462> <http://www.w3.org/2000/01/rdf-schema#label> "Affymetrix"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000462> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000123> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000462> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.obolibrary.org/obo/OBI_0000245> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000462> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:Bd06dd358ec66bf9ea0853b58f8cbd2c2 <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000462> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000462> <http://purl.obolibrary.org/obo/IAO_0000111> "Affymetrix" <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000462> <http://purl.obolibrary.org/obo/IAO_0000112> "Affymetrix supplied microarray" <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000462> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> _:B20432e0d11ced0bef5eea768c2b7d9a4 <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000533> <http://purl.obolibrary.org/obo/IAO_0000115> "An affinity column is a chromatography column that is used in affinity chromatography. Differences in the affinity of molecules to be separated to a stationary phase are used for discriminate retention."@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000533> <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON:Daniel Schober"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000533> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000533> <http://purl.obolibrary.org/obo/IAO_0000111> "affinity column"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000533> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/OBI_0000038> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000533> <http://www.w3.org/2000/01/rdf-schema#label> "affinity column"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000533> <http://purl.obolibrary.org/obo/IAO_0000119> "GROUP:<http://msi-ontology.sourceforge.net>"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000533> <http://purl.obolibrary.org/obo/IAO_0000119> "http://msi-ontology.sourceforge.net/ontology/CHROM.owl#msi_01094" <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0000533> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://www.disit.org/km4city/schema#Boarding_house> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Boarding_house> <http://www.w3.org/2000/01/rdf-schema#comment> "" <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Boarding_house> <http://www.w3.org/2000/01/rdf-schema#label> "Affittacamere"@it <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Boarding_house> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.disit.org/km4city/schema#Accommodation> <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Boarding_house> <http://www.w3.org/2000/01/rdf-schema#label> "Boarding house"@en <http://www.disit.org/km4city/schema> .
+<http://purl.org/olia/ubyCat.owl#affixSuffix> <http://www.w3.org/2000/01/rdf-schema#label> "affixSuffix" <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#affixSuffix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/olia/ubyCat.owl#PartOfSpeech> <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#affixSuffix> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.isocat.org/datcat/DC-1395" <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#affixSuffix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#affixPrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#affixPrefix> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.isocat.org/datcat/DC-1365" <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#affixPrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/olia/ubyCat.owl#PartOfSpeech> <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#affixPrefix> <http://www.w3.org/2000/01/rdf-schema#label> "affixPrefix" <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#affix> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://www.isocat.org/datcat/DC-1234" <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#affix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#affix> <http://www.w3.org/2000/01/rdf-schema#label> "affix" <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/olia/ubyCat.owl#affix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/olia/ubyCat.owl#PartOfSpeech> <http://purl.org/olia/ubyCat.owl> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://purl.org/cwmo/#hasCreativePhase> <http://purl.org/cwmo/#EvalAndRafinement> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://purl.org/cwmo/#hasInputType> <http://purl.org/cwmo/#Behavioral> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://purl.org/dc/terms/title> "Diagramme d'affinités"@fr <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/cwmo/#CreativeTechnique> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://purl.org/cwmo/#requireEquipment> <http://purl.org/cwmo/#PostIt> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://purl.org/cwmo/#isRelatedTo> <http://purl.org/cwmo/#ContextualDesign> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://purl.org/cwmo/#hasFunction> <http://purl.org/cwmo/#Generation> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://purl.org/cwmo/#isRelatedTo> <http://purl.org/cwmo/#UsabilityTesting> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://purl.org/dc/terms/title> "Affinity Diagramming"@en <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://purl.org/cwmo/#hasCreativePhase> <http://purl.org/cwmo/#ImplementAndMonitoring> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://purl.org/cwmo/#hasCreativePhase> <http://purl.org/cwmo/#Ideation> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://purl.org/cwmo/#hasInputType> <http://purl.org/cwmo/#Attitudinal> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://purl.org/cwmo/#isRelatedTo> <http://purl.org/cwmo/#KJTechnique> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://purl.org/cwmo/#isProducingData> <http://purl.org/cwmo/#QualitativeData> <http://purl.org/cwmo/#> .
+<http://purl.org/cwmo/#AffinityDiagramming> <http://purl.org/cwmo/#hasCreativePhase> <http://purl.org/cwmo/#Synthesis> <http://purl.org/cwmo/#> .
+<https://schema.org/affiliation> <http://www.w3.org/2000/01/rdf-schema#range> <https://schema.org/Organization> <https://bmake.th-brandenburg.de/spv> .
+<https://schema.org/affiliation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/Person> <https://bmake.th-brandenburg.de/spv> .
+<https://schema.org/affiliation> <http://www.w3.org/2000/01/rdf-schema#comment> "Is used to indicate the affiliation of a person to an organization."@en <https://bmake.th-brandenburg.de/spv> .
+<https://schema.org/affiliation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://bmake.th-brandenburg.de/spv> .
+<https://schema.org/affiliation> <http://www.w3.org/2000/01/rdf-schema#label> "affiliation"@en <https://bmake.th-brandenburg.de/spv> .
+<http://www.data-knowledge.org/dk/affects> <http://www.w3.org/2000/01/rdf-schema#comment> "Eine Änderungsanfrage betrifft einen Geschäftsobjekttypen (BOT)"@de <http://www.data-knowledge.org/dk/> .
+<http://www.data-knowledge.org/dk/affects> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.data-knowledge.org/dk/> .
+<http://www.data-knowledge.org/dk/affects> <http://purl.org/vocab/vann/example> "Änderungsanfrage 'füge Feld 'Alter' zu Kunde hinzu' betrifft BOT 'Kunde'"@de <http://www.data-knowledge.org/dk/> .
+<http://www.data-knowledge.org/dk/affects> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> <http://www.data-knowledge.org/dk/> .
+<http://www.data-knowledge.org/dk/affects> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.data-knowledge.org/dk/ChangeRequest> <http://www.data-knowledge.org/dk/> .
+<http://www.data-knowledge.org/dk/affects> <http://purl.org/vocab/vann/example> "Change Request 'add field 'age' to customer' affects BOT 'Customer'"@en <http://www.data-knowledge.org/dk/> .
+<http://www.data-knowledge.org/dk/affects> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.data-knowledge.org/dk/> <http://www.data-knowledge.org/dk/> .
+<http://www.data-knowledge.org/dk/affects> <http://www.w3.org/2000/01/rdf-schema#comment> "A Change Requests affects a Business Object Type or an Application"@en <http://www.data-knowledge.org/dk/> .
+<http://www.data-knowledge.org/dk/affects> <http://www.w3.org/2000/01/rdf-schema#label> "betrifft"@de <http://www.data-knowledge.org/dk/> .
+<http://www.data-knowledge.org/dk/affects> <http://www.w3.org/2000/01/rdf-schema#label> "affects"@en <http://www.data-knowledge.org/dk/> .
+<https://w3id.org/eepsa#isHighlyAffectedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/Property> <https://w3id.org/eepsa> .
+<https://w3id.org/eepsa#isHighlyAffectedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/eepsa#isAffectedBy> <https://w3id.org/eepsa> .
+<https://w3id.org/eepsa#isHighlyAffectedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a space and the Quantity Kind that is affects its indoor conditions with a higher degree"@en <https://w3id.org/eepsa> .
+<https://w3id.org/eepsa#isHighlyAffectedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is highly affected by"@en <https://w3id.org/eepsa> .
+<https://w3id.org/eepsa#isHighlyAffectedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/eepsa> .
+<https://w3id.org/eepsa#isAffectedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is affected by"@en <https://w3id.org/eepsa> .
+<https://w3id.org/eepsa#isAffectedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship between a space and the Quantity Kind that is affects its indoor conditions"@en <https://w3id.org/eepsa> .
+<https://w3id.org/eepsa#isAffectedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/eepsa> .
+<https://w3id.org/eepsa#isAffectedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/ssn/Property> <https://w3id.org/eepsa> .
+<https://w3id.org/eepsa#isAffectedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Space> <https://w3id.org/eepsa> .

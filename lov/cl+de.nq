@@ -1,0 +1,45 @@
+<http://dbpedia.org/ontology/Type> <http://www.w3.org/2000/01/rdf-schema#label> "τύπος"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Type> <http://www.w3.org/2000/01/rdf-schema#label> "型"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Type> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Type> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Type> <http://www.w3.org/2000/01/rdf-schema#comment> "categorie binnen een classificatiesysteem"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Type> <http://www.w3.org/2000/01/rdf-schema#label> "Typ"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Type> <http://www.w3.org/2000/01/rdf-schema#label> "cineál"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Type> <http://www.w3.org/2000/01/rdf-schema#label> "type"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Type> <http://www.w3.org/2000/01/rdf-schema#label> "type"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Type> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/TopicalConcept> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Type> <http://www.w3.org/2000/01/rdf-schema#comment> "a category within a classification system"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Type> <http://www.w3.org/2000/01/rdf-schema#label> "régime de classification"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfClubs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfClubs> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfClubs> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Activity> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfClubs> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:numberOfClubs> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfClubs> <http://www.w3.org/2000/01/rdf-schema#label> "numero de clubs"@es <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfClubs> <http://www.w3.org/2000/01/rdf-schema#label> "Anzahl der Clubs"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfClubs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfClubs> <http://www.w3.org/2000/01/rdf-schema#label> "nombre de clubs"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfClubs> <http://www.w3.org/2000/01/rdf-schema#label> "number of clubs"@en <http://dbpedia.org/ontology/> .
+<http://purl.org/vocommons/voaf#classNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "Le nombre de classes définies dans l'espace de noms du Vocabulaire. Les classes importées d'autres vocabulaires ne sont pas comptabilisées."@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#classNumber> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#classNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#classNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of classes defined in the vocabulary namespace. Classes imported from other namespaces are not taken into account."@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#classNumber> <http://purl.org/dc/terms/description> "PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#>\n\t\tPREFIX owl:<http://www.w3.org/2002/07/owl#>\n\t\tPREFIX voaf:<http://purl.org/vocommons/voaf#>\n\t\t\n\t\tCONSTRUCT{\n\t\t?vocab voaf:classNumber ?nbClass\n\t\t}\n\t\tWHERE{\n\t\t\tSELECT (COUNT(distinct ?class) AS ?nbClass) ?vocab\n\t\t\tWHERE{\n\t\t\t\t{?class a rdfs:Class.}\n\t\t\t\tUNION{?class a owl:Class.}\n\t\t\t\t?class a ?type.\n\t\t\t\tFILTER(?type!=owl:DeprecatedClass)\n\t\t\t\t?class rdfs:isDefinedBy ?vocab.\n\t\t\t\t?vocab a voaf:Vocabulary.\n\t\t\t}GROUP BY ?vocab\n\t\t}" <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#classNumber> <http://www.w3.org/2000/01/rdf-schema#label> "nombre de classes"@fr <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#classNumber> <http://www.w3.org/2000/01/rdf-schema#label> "number of classes"@en <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#classNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#classNumber> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/vocommons/voaf> <http://purl.org/vocommons/voaf> .
+<http://purl.org/vocommons/voaf#classNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/vocommons/voaf#Vocabulary> <http://purl.org/vocommons/voaf> .
+<http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfDefined> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://sparql.cwrc.ca/ontologies/cwrc#personalPropertySelfDeclared> <http://sparql.cwrc.ca/ontologies/cwrc> .
+<http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfDefined> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated"@en <http://sparql.cwrc.ca/ontologies/cwrc> .
+<http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfDefined> <http://www.w3.org/2000/01/rdf-schema#label> "has social class (self defined)"@en <http://sparql.cwrc.ca/ontologies/cwrc> .
+<http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfDefined> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://sparql.cwrc.ca/ontologies/cwrc> .
+<http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfDefined> <http://www.w3.org/2004/02/skos/core#definition> ""@fr <http://sparql.cwrc.ca/ontologies/cwrc> .
+<http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfDefined> <http://www.w3.org/2004/02/skos/core#definition> ""@en <http://sparql.cwrc.ca/ontologies/cwrc> .
+<http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfDefined> <http://www.w3.org/2000/01/rdf-schema#range> <http://sparql.cwrc.ca/ontologies/cwrc#SocialClass> <http://sparql.cwrc.ca/ontologies/cwrc> .
+<http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfDefined> <http://www.w3.org/2000/01/rdf-schema#label> "de classe sociale (autodéclarés)"@fr <http://sparql.cwrc.ca/ontologies/cwrc> .
+<http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfDefined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DeprecatedProperty> <http://sparql.cwrc.ca/ontologies/cwrc> .
+<http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfDefined> <http://www.w3.org/2000/01/rdf-schema#comment> "Désapprouver en faveur de l'instance <a href=\"#hasSocialClassSelfReported\" title=\"#hasSocialClassSelfReported\">a classe sociale autodéclarée</a>."@fr <http://sparql.cwrc.ca/ontologies/cwrc> .
+<http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfDefined> <http://purl.org/dc/terms/isReplacedBy> <http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfReported> <http://sparql.cwrc.ca/ontologies/cwrc> .
+<http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfDefined> <http://rdfs.org/ns/void#inDataset> <http://sparql.cwrc.ca/ontologies/cwrc#datasetdefinition> <http://sparql.cwrc.ca/ontologies/cwrc> .
+<http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfDefined> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://sparql.cwrc.ca/ontologies/cwrc-2018-09-30> <http://sparql.cwrc.ca/ontologies/cwrc> .
+<http://sparql.cwrc.ca/ontologies/cwrc#hasSocialClassSelfDefined> <http://www.w3.org/2000/01/rdf-schema#comment> "Deprecated in favour of instance <a href=\"#hasSocialClassSelfReported\" title=\"#hasSocialClassSelfReported\">has class identity (self-reported)</a>."@en <http://sparql.cwrc.ca/ontologies/cwrc> .

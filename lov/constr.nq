@@ -1,0 +1,302 @@
+<http://rdfunit.aksw.org/ns/core#constraintPattern> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://rdfunit.aksw.org/ns/core#> .
+<http://rdfunit.aksw.org/ns/core#constraintPattern> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://rdfunit.aksw.org/ns/core#> .
+<http://rdfunit.aksw.org/ns/core#constraintPattern> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfunit.aksw.org/ns/core#Parameter> <http://rdfunit.aksw.org/ns/core#> .
+<http://rdfunit.aksw.org/ns/core#constraintPattern> <http://www.w3.org/2000/01/rdf-schema#label> "constraintPattern"@en <http://rdfunit.aksw.org/ns/core#> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "The SEM Constraint class contains instances of properties that have a constrained (i.e. not universal) validity. This includes time dependent validity (Temporary), validity in the guise of a specific role (Role), or validity according to a given Authority (View)." <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint" <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://semanticweb.cs.vu.nl/2009/11/sem/Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://semanticweb.cs.vu.nl/2009/11/sem/> .
+<http://spinrdf.org/sp#Construct> <http://www.w3.org/2000/01/rdf-schema#comment> "A CONSTRUCT-type query that can be used to construct new triples from template triples (head) that use variable bindings from the match patterns (body)." <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#Construct> <http://www.w3.org/2000/01/rdf-schema#label> "Construct" <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#Construct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/sp#Query> <http://spinrdf.org/sp> .
+<http://spinrdf.org/sp#Construct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/sp> .
+<http://spinrdf.org/spin#ConstructTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstructTemplate> <http://spinrdf.org/spin#constraint> _:Bfe506dbe926ef40678b34115e0f611b0 <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstructTemplate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#Template> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstructTemplate> <http://www.w3.org/2000/01/rdf-schema#label> "Construct template" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#construct> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#MagicProperty> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#construct> <http://www.w3.org/2000/01/rdf-schema#comment> "Evaluates a given sp:Construct or SPIN template call (first argument on the left hand side) and binds the resulting triples to the variables on the right hand side.\n\nExample:\n\n    (?query \"this\" owl:Thing) spin:construct (?s ?p ?o)\n\nwill execute the sp:Construct ?query using the binding of owl:Thing to ?this. The resulting triples will be bound to ?s, ?p and ?o. If any of ?s ?p ?o are bound, it will only return the matching triples." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#construct> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#MagicProperties> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#construct> <http://www.w3.org/2000/01/rdf-schema#label> "construct" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstraintViolationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstraintViolationLevel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstraintViolationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "The type of the supported levels of constraint violations, including spin:Error and spin:Warning." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstraintViolationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint violation level" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstraintViolation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstraintViolation> <http://www.w3.org/2000/01/rdf-schema#comment> "An object that can be created by spin:constraints to provide information about a constraint violation." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstraintViolation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstraintViolation> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint violation" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstructTemplates> <http://spinrdf.org/spin#abstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstructTemplates> <http://www.w3.org/2000/01/rdf-schema#comment> "Suggested abstract base class for all ConstructTemplates." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstructTemplates> <http://www.w3.org/2000/01/rdf-schema#label> "Construct templates" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstructTemplates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#ConstructTemplate> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#ConstructTemplates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#Templates> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constraint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a class with constraints on its instances. The values of this property are \"axioms\" expressed as CONSTRUCT or ASK queries where the variable ?this refers to the instances of the surrounding class. ASK queries must evaluate to false for each member of this class - returning true means that the instance ?this violates the constraint. CONSTRUCT queries must create instances of spin:ConstraintViolation to provide details on the reason for the violation." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constraint> <http://www.w3.org/2000/01/rdf-schema#label> "constraint" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constraint> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#query> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2000/01/rdf-schema#Class> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://spinrdf.org/spin#command> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#label> "constructor" <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#comment> "Can be used to attach a \"constructor\" to a class. A constructor is a SPARQL CONSTRUCT query or INSERT/DELETE Update operation that can add initial values to the current instance. At execution time, the variable ?this is bound to the current instance. Tools can call constructors of a class and its superclasses when an instance of a class has been created. Constructors will also be used to initialize resources that have received a new rdf:type triple as a result of spin:rules firing." <http://spinrdf.org/spin> .
+<http://spinrdf.org/spin#constructor> <http://www.w3.org/2000/01/rdf-schema#range> <http://spinrdf.org/spin#Rule> <http://spinrdf.org/spin> .
+<http://vocab.data.gov/def/drm#constrainedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://vocab.data.gov/def/drm> .
+<http://vocab.data.gov/def/drm#constrainedBy> <http://www.w3.org/2000/01/rdf-schema#label> "constrained by" <http://vocab.data.gov/def/drm> .
+<http://vocab.data.gov/def/drm#constrainedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://vocab.data.gov/def/drm> <http://vocab.data.gov/def/drm> .
+<http://vocab.deri.ie/cogs#ConstructiveMerge> <http://www.w3.org/2000/01/rdf-schema#label> "ConstructiveMerge" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#ConstructiveMerge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#ConstructiveMerge> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#ConstructiveMerge> <http://www.w3.org/2000/01/rdf-schema#comment> "If the primary key of an incoming record matches with the key of an existing Record, leaves the existing Record, adds the incoming record and marks the added record as superseding the old record. @en-us" <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/cogs#ConstructiveMerge> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://vocab.deri.ie/cogs#Loading> <http://vocab.deri.ie/cogs> .
+<http://vocab.deri.ie/csp> <http://purl.org/dc/terms/created> "2011-03-09"^^<http://www.w3.org/2001/XMLSchema#date> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://purl.org/dc/terms/status> <http://purl.org/adms/status/UnderDevelopment> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://purl.org/vocab/vann/preferredNamespacePrefix> "csp" <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://xmlns.com/foaf/0.1/homepage> <http://vocab.deri.ie/csp.html> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://purl.org/dc/terms/partOf> <http://vocab.deri.ie> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://purl.org/dc/elements/1.1/creator> <http://vocab.deri.ie/csp#alepas> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://purl.org/dc/elements/1.1/creator> <http://vocab.deri.ie/csp#fpservant> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://purl.org/dc/elements/1.1/creator> <http://vocab.deri.ie/csp#fbadra> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://purl.org/dc/terms/title> "CSP - A vocabulary to represent Constraint Satisfaction Problems." <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://purl.org/dc/terms/description> "A vocabulary to represent Constraint Satisfaction Problems (CSPs) in which constraints are expressed by Boolean expressions on fluents.</b>" <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://vocab.deri.ie/csp#" <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://purl.org/dc/terms/modified> "2011-06-29"^^<http://www.w3.org/2001/XMLSchema#date> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#SemanticAsset> <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://purl.org/dc/terms/publisher> "http://vocab.deri.ie/csp#DERI%2C%20NUI%20Galway" <http://vocab.deri.ie/csp> .
+<http://vocab.deri.ie/csp> <http://purl.org/dc/terms/type> <http://purl.org/adms/assettype/Ontology> <http://vocab.deri.ie/csp> .
+<http://www.linkedmodel.org/schema/vaem#ConstraintsGraph> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.linkedmodel.org/schema/vaem> <http://www.linkedmodel.org/schema/vaem> .
+<http://www.linkedmodel.org/schema/vaem#ConstraintsGraph> <http://www.linkedmodel.org/schema/vaem#filePrefix> "CONSTRAINTS" <http://www.linkedmodel.org/schema/vaem> .
+<http://www.linkedmodel.org/schema/vaem#ConstraintsGraph> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.linkedmodel.org/schema/vaem#GraphRole> <http://www.linkedmodel.org/schema/vaem> .
+<http://www.linkedmodel.org/schema/vaem#ConstraintsGraph> <http://purl.org/dc/terms/description> "A \"vaem:ConstraintsGraph\" is a graph that holds SPIN constraints" <http://www.linkedmodel.org/schema/vaem> .
+<http://www.linkedmodel.org/schema/vaem#ConstraintsGraph> <http://www.w3.org/2000/01/rdf-schema#label> "Constraints graph" <http://www.linkedmodel.org/schema/vaem> .
+<http://www.linkedmodel.org/schema/vaem#ConstraintsGraph> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.linkedmodel.org/2.0/schema/vaem> <http://www.linkedmodel.org/schema/vaem> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstraintFor> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#classifies> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstraintFor> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstraintFor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstraintFor> <http://www.w3.org/2002/07/owl#inverseOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstraint> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstraintFor> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstraintFor> <http://www.w3.org/2000/01/rdf-schema#label> "is constraint for"@en <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstraintFor> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstraintFor> <http://www.w3.org/2000/01/rdf-schema#label> "è un vincolo per"@it <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isConstraintFor> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between parameters and entities. It allows to assert generic constraints (encoded as parameters), e.g. MinimumAgeForDriving isConstraintFor John (where John is a legal subject under the TrafficLaw).\nThe intended semantics (not expressible in OWL) is that a Parameter isConstraintFor and Entity if the Parameter isParameterFor a Concept that classifies that Entity; moreover, it entails that a Parameter parametrizes a Region that isRegionFor that Entity. The use in OWL is therefore a shortcut to annotate what Parameter constrains what Entity" <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Parameter> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#Entity> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "ha vincolo"@it <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between parameters and entities. It allows to assert generic constraints (encoded as parameters), e.g. MinimumAgeForDriving isConstraintFor John (where John is a legal subject under the TrafficLaw).\nThe intended semantics (not expressible in OWL) is that a Parameter isParameterFor a Concept that classifies an Entity; moreover, it entails that a Parameter parametrizes a Region that isRegionFor that Entity." <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "has constraint"@en <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasConstraint> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#isClassifiedBy> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.4.1.3> <http://www.w3.org/2000/01/rdf-schema#label> "F.4.1.3. Logic and constraint programming" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.4.1.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.4.1.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#F.4.1> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.3.3.2> <http://www.w3.org/2000/01/rdf-schema#label> "F.3.3.2. Object-oriented constructs" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.3.3.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.3.3.2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#F.3.3> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.3.2.2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#D.3.2> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.3.2.2> <http://www.w3.org/2000/01/rdf-schema#label> "D.3.2.2. Constraint and logic languages" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.3.2.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.3.3.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.3.3.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#D.3.3> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.3.3.3> <http://www.w3.org/2000/01/rdf-schema#label> "D.3.3.3. Constraints" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.3.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#D.3> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.3.3> <http://www.w3.org/2000/01/rdf-schema#comment> "See also #E.2." <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.3.3> <http://www.w3.org/2000/01/rdf-schema#label> "D.3.3. Language Constructs and Features" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.3.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.3.5.1> <http://www.w3.org/2000/01/rdf-schema#label> "I.3.5.1. Constructive solid geometry" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.3.5.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.3.5.1> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#I.3.5> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.3.5.1> <http://www.w3.org/2000/01/rdf-schema#comment> "Depricated, no longer used as of January 1998." <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.3.3.1> <http://www.w3.org/2000/01/rdf-schema#label> "F.3.3.1. Functional constructs" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.3.3.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.3.3.1> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#F.3.3> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.3.3> <http://www.w3.org/2000/01/rdf-schema#label> "F.3.3. Studies of Program Constructs" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.3.3> <http://www.w3.org/2000/01/rdf-schema#comment> "See also #D.3.2, #D.3.3." <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.3.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#F.3> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.3.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.1.6.0> <http://www.w3.org/2000/01/rdf-schema#label> "G.1.6.0. Constrained optimization" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.1.6.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.1.6.0> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#G.1.6> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://www.w3.org/ns/ldp#constrainedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#constrainedBy> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#constrainedBy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#constrainedBy> <http://www.w3.org/2000/01/rdf-schema#label> "constrainedBy" <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#constrainedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/ldp#Resource> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#constrainedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a resource with constraints that the server requires requests like creation and update to conform to." <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/ldp#constrainedBy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ldp#> <http://www.w3.org/ns/ldp#> .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Has Constraint"@en <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/2000/01/rdf-schema#range> _:B68a744832c60f04d85a5c14c04ab3705 <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/2004/02/skos/core#definition> "Constraint applied to a Rule"@en <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bf1a519ee8b6311dd98acabd5842edb03 <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/2004/02/skos/core#note> "Constraints on Rules are used to determine if a rule is Active or not. Example: the Permission rule is only active during the year 2018."@en <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/LogicalConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/LogicalConstraint> <http://www.w3.org/2004/02/skos/core#definition> "A logical expression that refines the semantics of an Action and Party/Asset Collection or declare the conditions applicable to a Rule."@en <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/LogicalConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/LogicalConstraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/LogicalConstraint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/LogicalConstraint> <http://www.w3.org/2000/01/rdf-schema#label> "Logical Constraint"@en <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/2004/02/skos/core#definition> "A boolean expression that refines the semantics of an Action and Party/Asset Collection or declare the conditions applicable to a Rule."@en <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint"@en <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> <http://www.w3.org/ns/odrl/2/> .
+<http://semwebquality.org/ontologies/dq-constraints#LegalValueConstraints> <http://spinrdf.org/spin#abstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#LegalValueConstraints> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#LegalValueConstraints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#Template> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#LegalValueConstraints> <http://www.w3.org/2000/01/rdf-schema#label> "legal value constraints"@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#LegalValueConstraints> <http://www.w3.org/2000/01/rdf-schema#comment> "Legal value constraints identify values that are either not explicitly allowed or explicitly illegal."@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#SyntaxConstraints> <http://www.w3.org/2000/01/rdf-schema#comment> "Syntax constraints identify values that do not adhere to syntactical rules. {@en} " <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#SyntaxConstraints> <http://spinrdf.org/spin#abstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#SyntaxConstraints> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#SyntaxConstraints> <http://www.w3.org/2000/01/rdf-schema#label> "syntax constraints"@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#SyntaxConstraints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#Template> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://spinrdf.org/spin#Templates> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://spinrdf.org/spin#abstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://www.w3.org/2000/01/rdf-schema#comment> "Constraint templates are generalized SPARQL query templates based on the SPARQL Inferencing Framework (SPIN). The query templates represent generic data quality rules that may be used to identify data quality problems, i.e. violations of previously defined constraints."@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://www.w3.org/2000/01/rdf-schema#label> "data quality constraint templates" <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#Template> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#ValueRangeConstraints> <http://www.w3.org/2000/01/rdf-schema#comment> "Value range constraints allow the identification of values that do not obey a certain upper and/or lower limit."@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#ValueRangeConstraints> <http://spinrdf.org/spin#abstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#ValueRangeConstraints> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#ValueRangeConstraints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#Template> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#ValueRangeConstraints> <http://www.w3.org/2000/01/rdf-schema#label> "value range constraints"@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#UniquenessConstraints> <http://www.w3.org/2000/01/rdf-schema#label> "uniqueness constraints"@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#UniquenessConstraints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#Template> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#UniquenessConstraints> <http://www.w3.org/2000/01/rdf-schema#comment> "Uniqueness constraints identify values that shall be unique, but are redundant within a certain data set."@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#UniquenessConstraints> <http://spinrdf.org/spin#abstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#UniquenessConstraints> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#FunctionalDependencyConstraints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#Template> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#FunctionalDependencyConstraints> <http://spinrdf.org/spin#abstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#FunctionalDependencyConstraints> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#FunctionalDependencyConstraints> <http://www.w3.org/2000/01/rdf-schema#label> "functional dependency constraints"@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#FunctionalDependencyConstraints> <http://www.w3.org/2000/01/rdf-schema#comment> "Functional dependencies are dependencies between the values of two or more different properties. Functional dependency constraints check the abidance of functional dependencies."@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://www.w3.org/2002/07/owl#versionInfo> "V 1.1 Release 2011-03-28" <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://www.w3.org/2000/01/rdf-schema#label> "The Data Quality Constraints Library"@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://www.w3.org/2002/07/owl#imports> <http://spinrdf.org/spin> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://www.w3.org/2000/01/rdf-schema#comment> "This RDF document contains a library of data quality constraints represented as SPARQL query templates based on the SPARQL Inferencing Framework (SPIN). The data quality constraint templates are especially useful for the identification of data quality problems during data entry and for periodic quality checks during data usage."@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://purl.org/dc/elements/1.1/subject> "Semantic Data Quality Management"@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://purl.org/dc/elements/1.1/date> "2011-03-28" <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://purl.org/dc/elements/1.1/title> "The Data Quality Constraints Library"@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://purl.org/dc/elements/1.1/creator> "Christian Fuerber, Martin Hepp, and Markus Wischnewski"@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints> <http://purl.org/dc/terms/license> <http://www.gnu.org/licenses/lgpl.html> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#MissingElementConstraints> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://spinrdf.org/spin#Template> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#MissingElementConstraints> <http://spinrdf.org/spin#abstract> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#MissingElementConstraints> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semwebquality.org/ontologies/dq-constraints#ConstraintTemplates> <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#MissingElementConstraints> <http://www.w3.org/2000/01/rdf-schema#comment> "Missing element constraints identify elements in the data set that are missing but required."@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://semwebquality.org/ontologies/dq-constraints#MissingElementConstraints> <http://www.w3.org/2000/01/rdf-schema#label> "missing element constraints"@en <http://semwebquality.org/ontologies/dq-constraints> .
+<http://purl.org/qb4olap/cubes#cardinality> <http://www.w3.org/2000/01/rdf-schema#label> "cardinality"@en <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#cardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#cardinality> <http://www.w3.org/2000/01/rdf-schema#comment> "An alternative to qb:componentProperty which allows to specify a cardinality constraint in fact-level relationship"@en <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#cardinality> <http://www.w3.org/2000/01/rdf-schema#label> "cardinality constraint"@en <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#cardinality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/qb4olap/cubes> <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#cardinality> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/linked-data/cube#componentProperty> <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#cardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#cardinality> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/qb4olap/cubes#Cardinality> <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#pcCardinality> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/qb4olap/cubes#Cardinality> <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#pcCardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#pcCardinality> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/qb4olap/cubes#HierarchyStep> <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#pcCardinality> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/qb4olap/cubes> <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#pcCardinality> <http://www.w3.org/2000/01/rdf-schema#label> "cardinality constraint"@en <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#pcCardinality> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#pcCardinality> <http://www.w3.org/2000/01/rdf-schema#comment> "A property which allows to specify a cardinality constraint in a parent-child relationship"@en <http://purl.org/qb4olap/cubes> .
+<http://purl.org/qb4olap/cubes#pcCardinality> <http://www.w3.org/2000/01/rdf-schema#label> "cardinality"@en <http://purl.org/qb4olap/cubes> .
+<http://purl.obolibrary.org/obo/OBI_0200126> <http://purl.obolibrary.org/obo/IAO_0000117> "Richard Scheuermann"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200126> <http://purl.obolibrary.org/obo/IAO_0000111> "network graph construction"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200126> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/OBI_0200080> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200126> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200126> <http://www.w3.org/2000/01/rdf-schema#label> "network graph construction"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200126> <http://purl.obolibrary.org/obo/IAO_0000119> "PERSON: Richard Scheuermann"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200126> <http://purl.obolibrary.org/obo/IAO_0000115> "A network analysis in which an input data set describing objects and relationships between objects is transformed into an output representation of these objects as nodes and the relationships as edges of a network graph."@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200126> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0002475> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0002475> <http://purl.obolibrary.org/obo/IAO_0000118> "library construction PCR cycles"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0002475> <http://purl.obolibrary.org/obo/IAO_0000119> "https://en.wikipedia.org/wiki/Polymerase_chain_reaction"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0002475> <http://purl.obolibrary.org/obo/IAO_0000111> "number of PCR cycles during library construction"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0002475> <http://purl.obolibrary.org/obo/IAO_0000115> "A data item that is the number of PCR cycles used during the construction of a sequencing library."@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0002475> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000120> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0002475> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000027> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0002475> <http://www.w3.org/2000/01/rdf-schema#label> "number of PCR cycles during library construction"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0002475> <http://purl.obolibrary.org/obo/IAO_0000117> "Stephen A. Fisher, Junhyong Kim, Dan Berrios"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200127> <http://purl.obolibrary.org/obo/IAO_0000117> "Richard Scheuermann"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200127> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/OBI_0200126> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200127> <http://purl.obolibrary.org/obo/IAO_0000111> "weighted network graph construction"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200127> <http://www.w3.org/2000/01/rdf-schema#label> "weighted network graph construction"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200127> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200127> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200127> <http://purl.obolibrary.org/obo/IAO_0000119> "PERSON: Richard Scheuermann"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200127> <http://purl.obolibrary.org/obo/IAO_0000115> "A network graph construction in which an input data set describing objects and quantitative relationships between objects is transformed into and output representation of these objects as nodes and the quantitative relationships as weighted edges of a network graph."@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200128> <http://purl.obolibrary.org/obo/IAO_0000117> "Richard Scheuermann"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200128> <http://purl.obolibrary.org/obo/IAO_0000115> "A network graph construction in which an input data set describing objects and directional relationships between objects is transformed into and output representation of these objects as nodes and the directional relationships as directed edges of a network graph."@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200128> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/OBI_0200126> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200128> <http://purl.obolibrary.org/obo/IAO_0000111> "directed network graph construction"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200128> <http://www.w3.org/2000/01/rdf-schema#label> "directed network graph construction"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200128> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200128> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_0200128> <http://purl.obolibrary.org/obo/IAO_0000119> "PERSON: Richard Scheuermann"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_1000042> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd3726cfc8ebac68466f9a99de36d8ba5 <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_1000042> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_1000042> <http://www.w3.org/2000/01/rdf-schema#label> "peptide construct"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_1000042> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/OBI_0000047> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_1000042> <http://purl.obolibrary.org/obo/IAO_0000115> "a material entity synthesized to contain a number of peptides conjugated together in a non-linear fashion"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_1000042> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000122> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_1000042> <http://purl.obolibrary.org/obo/IAO_0000119> "IEDB"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_1000042> <http://purl.obolibrary.org/obo/IAO_0000111> "peptide construct"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_1000042> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6cbfa5c555cb010d07084ba19e4c1a1d <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_1000042> <http://purl.obolibrary.org/obo/IAO_0000112> "Multiple Antigenic Peptide (MAP) construct containing T and B cell epitopes from p. falciparum congugated to a central glycin\n\nA novel multivalent human CTL peptide construct elicits robust cellular immune responses in HLA-A*0201 transgenic mice: implications for HTLV-1 vaccine design. Vaccine. 2003 Jun 20;21(21-22):2767-81. PMID: 12798617"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/OBI_1000042> <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Bjoern Peters"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://www.disit.org/km4city/schema#Building_construction> <http://www.w3.org/2000/01/rdf-schema#label> "Building Construction"@en <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Building_construction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.disit.org/km4city/schema#CivilAndEdilEngineering> <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Building_construction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Building_construction> <http://www.w3.org/2000/01/rdf-schema#comment> "" <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Building_construction> <http://www.w3.org/2000/01/rdf-schema#label> "Costruzione Edifici"@it <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Specialized_construction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.disit.org/km4city/schema#CivilAndEdilEngineering> <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Specialized_construction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Specialized_construction> <http://www.w3.org/2000/01/rdf-schema#label> "Specialized Construction"@en <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Specialized_construction> <http://www.w3.org/2000/01/rdf-schema#label> "Lavori Costruzione Specializzati"@it <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Specialized_construction> <http://www.w3.org/2000/01/rdf-schema#comment> "" <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Other_specialized_construction> <http://www.w3.org/2000/01/rdf-schema#comment> "" <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Other_specialized_construction> <http://www.w3.org/2000/01/rdf-schema#label> "Other Specialized Construction"@en <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Other_specialized_construction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.disit.org/km4city/schema#CivilAndEdilEngineering> <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Other_specialized_construction> <http://www.w3.org/2000/01/rdf-schema#label> "Altri Lavori Costruzione Specializzati"@it <http://www.disit.org/km4city/schema> .
+<http://www.disit.org/km4city/schema#Other_specialized_construction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.disit.org/km4city/schema> .
+<https://w3id.org/dio#Constraint> <http://purl.org/dc/elements/1.1/description> "A constraint that underlies the proposed solution." <https://w3id.org/dio> .
+<https://w3id.org/dio#Constraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/dio#DesignIntentArtifact> <https://w3id.org/dio> .
+<https://w3id.org/dio#Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/dio> .
+<https://w3id.org/dio#Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint" <https://w3id.org/dio> .
+<http://linkeddata.center/kees/v1#ConstructRule> <http://www.w3.org/2002/07/owl#disjointWith> <http://linkeddata.center/kees/v1#DestructRule> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#ConstructRule> <http://www.w3.org/2000/01/rdf-schema#label> "Construct Rule"@en <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#ConstructRule> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkeddata.center/kees/v1#ReasoningPolicy> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#ConstructRule> <http://www.w3.org/2000/01/rdf-schema#comment> "A rule that create new facts in a Knowledge base"@en <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#ConstructRule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#constructQuery> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linkeddata.center/kees/v1#SparqlServiceAccrualPolicy> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#constructQuery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#constructQuery> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#constructQuery> <http://www.w3.org/2000/01/rdf-schema#label> "construct query"@en <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#constructQuery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://linkeddata.center/kees/v1> .
+<http://linkeddata.center/kees/v1#constructQuery> <http://www.w3.org/2000/01/rdf-schema#comment> "The SPARQL 1.1.  query to extract data from a SPARQL endpoint. No paging constructs allowed ( OFSET and LIMIT ), use pageSize, fromPage and toPage instead. If not specified \"CONSTRUCT { ?s ?p ?o }  WHERE { ?s ?p ?o }\" apply"@en <http://linkeddata.center/kees/v1> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/constr.nq> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/constr.nq> <https://w3id.org/tree#relation> _:Bconstra .
+_:Bconstra <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bconstra <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/constra.nq> .
+_:Bconstra <https://w3id.org/tree#value> "constra" .
+_:Bconstra <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/constra.nq> <https://w3id.org/tree#remainingItems> "66"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/constr.nq> <https://w3id.org/tree#relation> _:Bconstru .
+_:Bconstru <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bconstru <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/constru.nq> .
+_:Bconstru <https://w3id.org/tree#value> "constru" .
+_:Bconstru <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/constru.nq> <https://w3id.org/tree#remainingItems> "29"^^<http://www.w3.org/2001/XMLSchema#int> .

@@ -1,0 +1,568 @@
+<https://w3id.org/pep/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <https://w3id.org/pep/> .
+<https://w3id.org/pep/> <http://purl.org/dc/terms/description> "The process execution ontology is a proposal for a simple extension of both the [W3C Semantic Sensor Network](https://www.w3.org/TR/vocab-ssn/) and the [Semantic Actuator Network](https://www.irit.fr/recherches/MELODI/ontologies/SAN.owl) ontology cores. \n\nSSN describe `ssn:Sensor`s that implement `ssn:Sensing` methods and generate `ssn:Observation`s, which are (soon to be) activities.\n\nIn parallel to this, SAN describes `san:Actuator`s that implement `san:Acting` methods and generate `ssn:Actuation` activities.\n\nIn this ontology, we want to generalize these two parallel conceptual models, and account for a third use case: *Web services exposed on the web may trigger the execution of some processes*. \n\nWe hence propose the following core concepts for the Process Execution ontology:\n\n> `pep:ProcessExecutor`s implement `pep:Process` methods, and generate `pep:ProcessExecution`s activities.\n\n_Note: we call for comments and suggestions about the naming of these concepts [in this project open issue](https://github.com/thesmartenergy/pep/issues/1)_\n\nAs sensing and acting methods in SSN and SAN, processes may describe the necessary inputs and outputs. This is represented using properties `pep:hasInput` and `pep:hasOutput`. These properties may also be used to describe the actual input and output of a specific process execution.\n\nFigure below overviews the PEP ontology, and illustrates it with an example.\n\n[![Overview of the PEP Ontology](https://w3id.org/pep/pep.png)](https://w3id.org/pep/pep.png).\n\nAdditional documents describe alignments with other existing ontologies:\n\n- [the Semantic Sensor Network ontology](https://w3id.org/pep/SSNAlignment);\n- [the RDF Presentation ontology](https://w3id.org/pep/RDFPAlignment).\n\n## Process Execution Platform\n\n[Process execution platforms](https://w3id.org/pep/platform.html) expose process executors on the Web in a RESTful way.\n\n"@en <https://w3id.org/pep/> .
+<https://w3id.org/pep/> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0" <https://w3id.org/pep/> .
+<https://w3id.org/pep/> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/pep/> <https://w3id.org/pep/> .
+<https://w3id.org/pep/> <http://purl.org/dc/terms/title> "Process Execution ontology."@en <https://w3id.org/pep/> .
+<https://w3id.org/pep/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://w3id.org/pep/> .
+<https://w3id.org/pep/> <http://creativecommons.org/ns#license> <https://www.apache.org/licenses/LICENSE-2.0> <https://w3id.org/pep/> .
+<https://w3id.org/pep/> <http://purl.org/dc/terms/issued> "2016-07-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://w3id.org/pep/> .
+<https://w3id.org/pep/> <http://purl.org/dc/terms/modified> "2016-09-12"^^<http://www.w3.org/2001/XMLSchema#date> <https://w3id.org/pep/> .
+<https://w3id.org/pep/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pep" <https://w3id.org/pep/> .
+<https://w3id.org/pep/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Document> <https://w3id.org/pep/> .
+<https://w3id.org/pep/> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/pep/pep-1.0> <https://w3id.org/pep/> .
+<https://w3id.org/pep/> <http://purl.org/dc/terms/creator> <http://www.maxime-lefrancois.info/me#> <https://w3id.org/pep/> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pnt> <http://xmlns.com/foaf/0.1/primaryTopic> <http://data.press.net/ontology/tag/> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pnt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pnt> <http://purl.org/dc/terms/modified> "2015-08-21"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pnt> <http://purl.org/dc/terms/title> "Press.net Tag Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pnt> <http://purl.org/dc/terms/issued> "2013-06-25"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/premis> <http://purl.org/dc/terms/title> "PREMIS Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/premis> <http://purl.org/dc/terms/issued> "2013-06-12"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/premis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/premis> <http://purl.org/dc/terms/modified> "2019-10-20"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/premis> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.loc.gov/premis/rdf/v1> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pat> <http://purl.org/dc/terms/issued> "2015-03-25"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pat> <http://xmlns.com/foaf/0.1/primaryTopic> <http://purl.org/hpi/patchr#> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pat> <http://purl.org/dc/terms/title> "Patch Request Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pat> <http://purl.org/dc/terms/modified> "2015-04-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://purl.org/dc/terms/modified> "2013-11-13"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://www.w3.org/ns/dcat#keyword> "API" <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://vocab.deri.ie/ppo#" <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/ppo/versions/2013-11-13.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://purl.org/dc/terms/title> "Privacy Preference Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://purl.org/stuff/rev#hasReview> _:B73722276e3df432d06c4b4aa4a0850af <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://purl.org/stuff/rev#hasReview> _:Bef8d1b46d1dad6ea1413162013589a00 <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ppo" <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/ppo/versions/2012-04-27.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://purl.org/dc/terms/description> "An ontology to create privacy preferences for Linked Data"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://purl.org/dc/terms/issued> "2011-02-15"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://purl.org/stuff/rev#hasReview> _:Bf6028f9e7eaa114da1105f4106013c22 <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://purl.org/dc/terms/creator> <https://plus.google.com/104211049257978376394> <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/ppo> <http://purl.org/dc/terms/creator> <http://google.com/+AlexandrePassant> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pproc/versions/2014-05-14.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/dc/terms/issued> "2014-05-14"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://www.w3.org/ns/dcat#keyword> "Contracts" <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/dc/terms/contributor> <http://webdiis.unizar.es/people/cbobed/> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/dc/terms/contributor> <https://www.linkedin.com/in/carlosbecana> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://xmlns.com/foaf/0.1/homepage> "http://contsem.unizar.es/def/sector-publico/pproc.html" <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/stuff/rev#hasReview> _:Bd0f4a3d095f9dcb2280960f05ec5cd3a <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/pub/guillermo-esteban-p%C3%A9rez/56/210/5a8> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://contsem.unizar.es/def/sector-publico/pproc#" <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/dc/terms/creator> <http://webdiis.unizar.es/~seron/> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/stuff/rev#hasReview> _:B7251d8aecf424cafdc3ba2bfcde710e8 <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/dc/terms/creator> <https://plus.google.com/103765724382353465116> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/dc/terms/modified> "2015-01-11"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pproc/versions/2015-01-11.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/dc/terms/title> "PPROC ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/dc/terms/description> "The PPROC ontology defines the necessary concepts to describe public procurement process and the contracts of public sector (public e-procurement). The ontology has been designed with the main purpose of publishing data about public contracts."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/profile/view?id=218098827> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/dc/terms/contributor> <https://plus.google.com/112371334577828533451> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/spa> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://contsem.unizar.es/def/sector-publico/pproc> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pproc" <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/parl> <http://xmlns.com/foaf/0.1/primaryTopic> <http://reference.data.gov.uk/def/parliament> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/parl> <http://purl.org/dc/terms/modified> "2015-08-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/parl> <http://purl.org/dc/terms/issued> "2013-06-11"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/parl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/parl> <http://purl.org/dc/terms/title> "Parliament Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/stuff/rev#hasReview> _:B54bc6d9d8d926acc05936e0f9d616ef5 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/stuff/rev#hasReview> _:Baa3aec6e476be67625ea453039b8cd40 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/prv/versions/2009-10-07.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/olaf-hartig> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:B676f13349748646588af120ffa894d13 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:B4575d7ce58c80dc6c718e51ad9968e98 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/prv/versions/2010-07-10.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/dc/terms/title> "Provenance Vocabulary Core Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:Bffaa60131cb6809e087380b95a0dc596 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:Bea2d58c25c1ce5f5fef70f7454c8e74c <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/prv/versions/2009-08-25.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/prv/versions/2009-11-28.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:Bbbf42c175e9a5ca1b908188b2516592e <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:Bde2652981058a3d91939c386405bbddd <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/prv/versions/2012-03-14.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:B307dac39648ceb875f871538e42c14c0 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/prv/versions/2010-04-04.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:B40430a1c94a38eb93d9ffc3264ef84d0 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/prv/versions/2011-01-25.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:Bae50da214cfd23ed6b4cb1bd0b05df42 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:B797de90a869f7093f26d192cf0554136 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/net/provenance/ns#" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/dc/terms/modified> "2012-03-14"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:Bd721558ca6fc806d7b0869a114fd2482 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "711"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#reusedByVocabularies> "7"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://www.w3.org/ns/dcat#keyword> "Quality" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:B69305e9aefc6ee205e91a5bfb6ec8040 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:B194557f65fc546a807a418e827c956dd <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:Beca7996ea85d9a03a3d663537af47f39 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:B1968c06bb179fa309c48b7e8aa6b8261 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/dc/terms/issued> "2009-08-25"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:B0fdfea0b3072f57453b68e49b9627e5b <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/stuff/rev#hasReview> _:B92d8dc59e3e8a519ea13d430d400827c <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/dc/terms/description> "The Provenance Vocabulary Core Ontology provides the main classes and properties required to describe provenance of data on the Web."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "prv" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#usageInDataset> _:Bd90e3aee3c5f9dc7197c191faf40d8ea <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/stuff/rev#hasReview> _:Bdeb36b2f38219cac76cdf91768ba5a7b <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/jun-zhao> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/provenance/ns#> <http://purl.org/vocommons/voaf#reusedByDatasets> "17"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pna> <http://purl.org/dc/terms/issued> "2013-06-27"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pna> <http://purl.org/dc/terms/title> "Press.net Asset Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pna> <http://xmlns.com/foaf/0.1/primaryTopic> <http://data.press.net/ontology/asset/> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pna> <http://purl.org/dc/terms/modified> "2015-08-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/postcode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/postcode> <http://xmlns.com/foaf/0.1/primaryTopic> <http://data.ordnancesurvey.co.uk/ontology/postcode/> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/postcode> <http://purl.org/dc/terms/title> "Postcode Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/postcode> <http://purl.org/dc/terms/modified> "2017-12-25"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/postcode> <http://purl.org/dc/terms/issued> "2013-06-03"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/dc/terms/modified> "2010-11-16"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/stuff/rev#hasReview> _:B197abdbc7b903d38afab6eabfaaaf808 <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/vocommons/voaf#usageInDataset> _:Bb890b942865056af24257eb40f91e533 <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/dc/terms/creator> <https://plus.google.com/112095156983892490612> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/vocommons/voaf#reusedByVocabularies> "1"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "6"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/stuff/rev#hasReview> _:Ba225871c5585d8c9fd236caaecb2fc6b <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/dc/terms/title> "Payments ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pay" <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://reference.data.gov.uk/def/payment#" <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://xmlns.com/foaf/0.1/homepage> "http://data.gov.uk/resources/payments" <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/stuff/rev#hasReview> _:Bbfadd94d1c332aab3a93bc6b6347264d <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/vocommons/voaf#reusedByDatasets> "1"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pay/versions/2010-11-16.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/dc/terms/issued> "2010-08-05"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/dc/terms/description> "Vocabulary for representing payments, such as government expenditures, using the data cube representation."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/dc/terms/creator> <https://plus.google.com/114719444327647609228> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://purl.org/stuff/rev#hasReview> _:B7ca67aa0efd917bc5b0125992905f8ee <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/payment#> <http://www.w3.org/ns/dcat#keyword> "Contracts" <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/pdo> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pdo" <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/pdo> <http://purl.org/stuff/rev#hasReview> _:B216f3acc7736fa50d6e2d2f0bd475a64 <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/pdo> <http://www.w3.org/ns/dcat#keyword> "Society" <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/pdo> <http://purl.org/dc/terms/issued> "2010-07-09"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/pdo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/pdo> <http://purl.org/stuff/rev#hasReview> _:Bb68b34973a7df3bcf6e01adb894e11b0 <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/pdo> <http://purl.org/dc/terms/description> "The Project Documents Ontology models the inherent structure and concepts of various documents in a project-specific setting, like meeting minutes, status reports etc."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/pdo> <http://purl.org/stuff/rev#hasReview> _:B7b4564aad668b5f412d978aa483d4bd7 <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/pdo> <http://purl.org/dc/terms/creator> <http://vocab.deri.ie/pdo#pravar> <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/pdo> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pdo/versions/2010-07-09.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/pdo> <http://purl.org/dc/terms/modified> "2010-07-09"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/pdo> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://ontologies.smile.deri.ie/pdo#" <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/pdo> <http://purl.org/dc/terms/title> "Project Documents Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://vocab.deri.ie/pdo> <http://xmlns.com/foaf/0.1/homepage> "http://vocab.deri.ie/pdo" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://purl.org/dc/terms/creator> <https://plus.google.com/117790372940620323498> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pns" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://purl.org/dc/terms/modified> "2012-06-18"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://purl.org/dc/terms/title> "Press.net Stuff Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://purl.org/dc/terms/creator> <http://uk.linkedin.com/in/pauliharman> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/jarred-mcginnis> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://purl.org/stuff/rev#hasReview> _:Bdcfa885b3960ad4152f63aeb394b3651 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://purl.org/dc/terms/description> "Press.net Stuff Ontology models real world entities. There are two kinds of stuff: tangibles and intangibles. Tangible stuff includes persons, locations and organizations. Intangibles are abstract concepts such as smoking, feminism or love."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://www.w3.org/ns/dcat#keyword> "Press" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.press.net/ontology/stuff/" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://purl.org/stuff/rev#hasReview> _:B72c10fd02b28ef23c33fb0487086254f <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pns/versions/2012-06-18.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://purl.org/stuff/rev#hasReview> _:Bc457943830ee5fddc417eb955eec6570 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://purl.org/stuff/rev#hasReview> _:Be2323d23bae7569ebc8f0eaa6c8c5178 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/stuff/> <http://purl.org/dc/terms/issued> "2011-07-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pproc> <http://purl.org/dc/terms/modified> "2015-09-15"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pproc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pproc> <http://xmlns.com/foaf/0.1/primaryTopic> <http://contsem.unizar.es/def/sector-publico/pproc> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pproc> <http://purl.org/dc/terms/issued> "2014-09-09"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pproc> <http://purl.org/dc/terms/title> "PPROC ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/dc/terms/contributor> <http://data.semanticweb.org/person/nicholas-humfrey> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/po/versions/2010-02-20.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/dc/terms/contributor> <https://plus.google.com/115186039655970066249> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/stuff/rev#hasReview> _:B85a4560f2d72990769dcfc5acac1a182 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/dc/terms/title> "Programmes ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "po" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://xmlns.com/foaf/0.1/homepage> "http://www.bbc.co.uk/ontologies/programmes/2009-09-07.shtml" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/dc/terms/issued> "2007-11-19"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/stuff/rev#hasReview> _:B38748235ccf69bd9036bb46892795497 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/stuff/rev#hasReview> _:B3b47e47015132956d3ac5c5175189581 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/stuff/rev#hasReview> _:B32c985bb7d29bba70cab525a3d5d8e0f <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/dc/terms/description> "This ontology aims at providing a simple vocabulary for describing programmes. It covers brands, series (seasons), episodes, broadcast events, broadcast services, etc."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/dc/terms/creator> <http://google.com/+YvesRaimond> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/dc/terms/modified> "2010-02-20"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/po/versions/2007-11-19.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/ontology/po/" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/po/versions/2008-02-28.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://www.w3.org/ns/dcat#keyword> "Multimedia" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://purl.org/dc/terms/publisher> <http://viaf.org/viaf/134199040> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/po/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/po/versions/2009-02-20.n3> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pnc> <http://purl.org/dc/terms/title> "Press.net Classification Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pnc> <http://purl.org/dc/terms/modified> "2016-08-12"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pnc> <http://purl.org/dc/terms/issued> "2013-04-15"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pnc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pnc> <http://xmlns.com/foaf/0.1/primaryTopic> <http://data.press.net/ontology/classification/> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://purl.org/stuff/rev#hasReview> _:B08ac1d86d75212b112d19b2958f0a841 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://purl.org/dc/terms/issued> "2011-07-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pnt/versions/2011-10-03.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://purl.org/stuff/rev#hasReview> _:B8b90655c85defac9e07a68814475092e <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://purl.org/dc/terms/title> "Press.net Tag Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://www.w3.org/ns/dcat#keyword> "Tag" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://purl.org/dc/terms/modified> "2011-10-03"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://purl.org/dc/terms/creator> <https://plus.google.com/117790372940620323498> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pnt" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/jarred-mcginnis> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://purl.org/dc/terms/description> "Press.net Tag Ontology defines relationships for semantically annotating taggable things (for example news assets) with domain entities (stuff) and events."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://purl.org/stuff/rev#hasReview> _:B99f2a2dc3b835a91ed4f3d6b242d86da <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.press.net/ontology/tag/" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/tag/> <http://purl.org/dc/terms/creator> <http://uk.linkedin.com/in/pauliharman> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/plo> <http://purl.org/dc/terms/issued> "2014-09-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/plo> <http://purl.org/dc/terms/modified> "2016-01-12"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/plo> <http://purl.org/dc/terms/title> "Playlist Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/plo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/plo> <http://xmlns.com/foaf/0.1/primaryTopic> <http://purl.org/net/po#> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmlp> <http://xmlns.com/foaf/0.1/primaryTopic> <http://inference-web.org/2.0/pml-provenance.owl> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmlp> <http://purl.org/dc/terms/issued> "2013-04-15"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmlp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmlp> <http://purl.org/dc/terms/modified> "2016-01-11"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmlp> <http://purl.org/dc/terms/title> "PML2 provenance ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/po#> <http://purl.org/stuff/rev#hasReview> _:Bb5c22ce3314802e2a6ba16b4988d4a8b <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/po#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/plo/versions/2014-08-26.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/po#> <http://purl.org/dc/terms/issued> "2014-08-26"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/po#> <http://purl.org/dc/terms/title> "Playlist Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/po#> <http://purl.org/dc/terms/description> "An ontology for describing playlists, playlist entries and songs."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/po#> <http://purl.org/stuff/rev#hasReview> _:B9c3cbc2c119924b9f3fe34c0cbdd0b41 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/po#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "plo" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/po#> <http://purl.org/dc/terms/creator> <https://plus.google.com/+MilosJovanovik> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/po#> <http://purl.org/stuff/rev#hasReview> _:Bd113c028fc771554d3a994b02dda91aa <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/po#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/po#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/po#> <http://www.w3.org/ns/dcat#keyword> "Music" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/po#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/net/po#" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/net/po#> <http://purl.org/dc/terms/modified> "2014-08-26"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://purl.org/dc/terms/creator> <https://plus.google.com/117790372940620323498> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pna/versions/2012-01-11.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://purl.org/dc/terms/title> "Press.net Asset Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://purl.org/dc/terms/modified> "2012-01-11"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://purl.org/dc/terms/creator> <http://uk.linkedin.com/in/pauliharman> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pna" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/jarred-mcginnis> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://www.w3.org/ns/dcat#keyword> "Press" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.press.net/ontology/asset/" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://purl.org/stuff/rev#hasReview> _:B8c9d47ae53de059b3893615003ab5495 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://purl.org/stuff/rev#hasReview> _:B3ef5996c5c39d0f9b0f233754281ab42 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://purl.org/dc/terms/description> "Press.net Asset Ontology describes news assets (text, images, video, data, etc), the relationships between them and how assets can be classified and semantically annotated."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://purl.org/stuff/rev#hasReview> _:Bde4950036aff0eb755045cb58110b52b <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/asset/> <http://purl.org/dc/terms/issued> "2011-07-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/vocommons/voaf#usageInDataset> _:B8f2efeac0c7666466178016b3ba32bc0 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/vocommons/voaf#reusedByDatasets> "3"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/stuff/rev#hasReview> _:B86cc841e1ac825938b41dfa656a8faeb <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/dc/terms/creator> <http://viaf.org/viaf/142310292> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/dc/terms/publisher> <http://viaf.org/viaf/142310292> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.ordnancesurvey.co.uk/oswebsite/ontology/postcode.owl> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/postcode/versions/2013-06-03.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/dc/terms/title> "Postcode Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/vocommons/voaf#usageInDataset> _:Bfc4637a1b10c8881c34f0e74efc3ac47 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/dc/terms/modified> "2013-09-04"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/stuff/rev#hasReview> _:Ba5f48fe2910b1abe6acb2ef4b6755461 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/stuff/rev#hasReview> _:B5d53690182ae280cb9daf23ac6e9c26f <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.ordnancesurvey.co.uk/ontology/postcode/" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "postcode" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/vocommons/voaf#usageInDataset> _:B041d3dc31322fd6c11f5c0c3d4d5d8f8 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/dc/terms/issued> "2013-06-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "3"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/postcode/versions/2013-09-04.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/stuff/rev#hasReview> _:B9599308550a105aac9fa0bc627900247 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/dc/terms/description> "An ontology describing the postcode geography in Great Britain."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://www.w3.org/ns/dcat#keyword> "Geography" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ordnancesurvey.co.uk/ontology/postcode/> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/prv> <http://purl.org/dc/terms/title> "Provenance Vocabulary Core Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/prv> <http://purl.org/dc/terms/modified> "2018-04-13"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/prv> <http://purl.org/dc/terms/issued> "2013-06-18"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/prv> <http://xmlns.com/foaf/0.1/primaryTopic> <http://purl.org/net/provenance/ns#> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/prv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pne> <http://purl.org/dc/terms/issued> "2013-07-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pne> <http://purl.org/dc/terms/modified> "2015-09-26"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pne> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pne> <http://purl.org/dc/terms/title> "Press.net Event Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pne> <http://xmlns.com/foaf/0.1/primaryTopic> <http://data.press.net/ontology/event/> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pay> <http://xmlns.com/foaf/0.1/primaryTopic> <http://reference.data.gov.uk/def/payment#> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pay> <http://purl.org/dc/terms/modified> "2016-08-12"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pay> <http://purl.org/dc/terms/title> "Payments ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pay> <http://purl.org/dc/terms/issued> "2013-05-17"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pc> <http://purl.org/dc/terms/modified> "2015-04-17"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pc> <http://xmlns.com/foaf/0.1/primaryTopic> <http://purl.org/procurement/public-contracts> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pc> <http://purl.org/dc/terms/title> "Public Contracts Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pc> <http://purl.org/dc/terms/issued> "2013-05-20"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/modified> "2012-10-10"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://www.w3.org/ns/dcat#keyword> "Contracts" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/creator> <http://google.com/+JakubKlímek> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pc/versions/2012-10-10.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pc" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/creator> <https://plus.google.com/111433038843082977427> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/title> "Public Contracts Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/creator> <http://keg.vse.cz/resource/person/vojtech-svatek> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://code.google.com/p/public-contracts-ontology/source/browse/public-contracts.ttl> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/description> "Ontologie pro veřejné zakázky poskytuje vyjadřovací prostředky pro popis zakázek zadávaných institucemi veřejné správy."@cs <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/procurement/public-contracts#" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/creator> <http://google.com/+JosefPetrák> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/issued> "2011-11-18"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pc/versions/2011-11-18.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/deu> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/creator> <http://www.facebook.com/nohis> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/stuff/rev#hasReview> _:Ba7e9f178dec0c29d1fd1a6921bfa7a13 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/fra> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/creator> <https://plus.google.com/101960478140753398646> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/stuff/rev#hasReview> _:Bea0b292374efe31bc70fde2c449e11c7 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/creator> <http://purl.org/knap#me> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/ces> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/dc/terms/description> "Public Contracts Ontology offers a means of expression for describing public contracts in the public sector"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/procurement/public-contracts> <http://purl.org/stuff/rev#hasReview> _:B749e069403fb5deca5684c59060927de <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://purl.org/vocommons/voaf#reusedByVocabularies> "4"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://purl.org/dc/terms/issued> "2016-07-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://purl.org/stuff/rev#hasReview> _:Bdbfa8cb20bb14969bde89c31dded0c56 <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://www.w3.org/ns/dcat#keyword> "Industry" <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pep" <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://www.w3.org/ns/dcat#keyword> "Methods" <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://purl.org/dc/terms/creator> <http://maxime-lefrancois.info#me> <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://purl.org/stuff/rev#hasReview> _:B0986a91004021424fbe41db67cd6d4f7 <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pep/versions/2016-07-01.n3> <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://www.w3.org/ns/dcat#keyword> "Services" <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/pep/" <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://purl.org/dc/terms/modified> "2016-07-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://purl.org/dc/terms/title> "Process Execution ontology."@en <https://lov.linkeddata.es/dataset/lov> .
+<https://w3id.org/pep/> <http://purl.org/dc/terms/description> "The process execution ontology is a proposal for a simple extension of both the [W3C Semantic Sensor Network](https://www.w3.org/TR/vocab-ssn/) and the [Semantic Actuator Network](https://www.irit.fr/recherches/MELODI/ontologies/SAN.owl) ontology cores."@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pbo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pbo> <http://xmlns.com/foaf/0.1/primaryTopic> <http://purl.org/ontology/pbo/core#> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pbo> <http://purl.org/dc/terms/title> "Play Back Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pbo> <http://purl.org/dc/terms/modified> "2015-08-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pbo> <http://purl.org/dc/terms/issued> "2013-06-13"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://purl.org/vocab/vann/preferredNamespacePrefix> "premis" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/premis/versions/2018-10-12.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://purl.org/stuff/rev#hasReview> _:B3ffa7be9a08ce2eaa79073aec63d3712 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://purl.org/stuff/rev#hasReview> _:B46f1ea578245c860b7e2bf0157e42ab3 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://purl.org/dc/terms/issued> "2011-10-12"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://purl.org/dc/terms/title> "PREMIS Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://purl.org/stuff/rev#hasReview> _:Bcf08e197339f7175460bf32fcc75b295 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://www.w3.org/ns/dcat#keyword> "Catalogs" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://xmlns.com/foaf/0.1/homepage> "http://id.loc.gov/ontologies/premis.html" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://purl.org/dc/terms/modified> "2018-10-12"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://purl.org/dc/terms/contributor> <http://dbpedia.org/resource/Biblioth%C3%A8que_nationale_de_France> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://purl.org/stuff/rev#hasReview> _:Bdf72180887280ba72eb6c2052329d9de <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://purl.org/dc/terms/publisher> <http://dbpedia.org/resource/Library_of_Congress> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://purl.org/dc/terms/description> "This ontology identifies the classes and properties used to describe preservation metadata in RDF."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/premis/versions/2011-10-12.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/premis/versions/2012-09-14.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.loc.gov/premis/rdf/v1> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.loc.gov/premis/rdf/v1#" <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ppo> <http://xmlns.com/foaf/0.1/primaryTopic> <http://vocab.deri.ie/ppo> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ppo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ppo> <http://purl.org/dc/terms/title> "Privacy Preference Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ppo> <http://purl.org/dc/terms/modified> "2015-08-05"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ppo> <http://purl.org/dc/terms/issued> "2013-07-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/passim> <http://xmlns.com/foaf/0.1/primaryTopic> <http://data.lirmm.fr/ontologies/passim> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/passim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/passim> <http://purl.org/dc/terms/title> "PASSIM ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/passim> <http://purl.org/dc/terms/modified> "2017-10-10"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/passim> <http://purl.org/dc/terms/issued> "2013-07-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://www.w3.org/ns/dcat#keyword> "Travel" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/stuff/rev#hasReview> _:Ba1e5a066da962007d37cd2766dd5a9c4 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/stuff/rev#hasReview> _:B746860b55217c9129b272eacba5fd830 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/vocab/vann/preferredNamespacePrefix> "passim" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/dc/terms/description> "Description of the operation of a transport information service"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/dc/terms/creator> <http://google.com/+JulienPlu> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/vocommons/voaf#reusedByDatasets> "1"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.lirmm.fr/ontologies/passim#" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/stuff/rev#hasReview> _:Bf099e17ab056aa55d919b1def0569d30 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/dc/terms/title> "PASSIM ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/vocommons/voaf#usageInDataset> _:B8819b6de5327547cf1333701bbd6f9b9 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/dc/terms/modified> "2014-07-22"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "14478"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/passim/versions/2011-08-11.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/stuff/rev#hasReview> _:B5349741060780f0c9456f6d1352383af <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/dc/terms/issued> "2011-06-20"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/passim/versions/2014-07-22.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/passim> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://purl.org/stuff/rev#hasReview> _:Bae57b161729513375c2902fd20675cd5 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://purl.org/dc/terms/title> "Patch Request Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://purl.org/dc/terms/modified> "2015-01-20"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://purl.org/dc/terms/description> "The Patch Request Ontology provides a schema to describe desired changes in Linked Data. By wrapping the Graph Update Ontology (guo) patch requests can be formulated to add, modify or delete particular triples (or subgraphs) within a dataset."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pat" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://purl.org/stuff/rev#hasReview> _:B9abc6a80bceeb4a2cd07caa744266049 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://www.w3.org/ns/dcat#keyword> "RDF" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pat/versions/2014-06-26.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/hpi/patchr#" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pat/versions/2014-03-11.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://purl.org/dc/terms/creator> <http://jhercher.de> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://xmlns.com/foaf/0.1/homepage> "http://patchr.s16a.org/ontologies/patchr.html" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://purl.org/dc/terms/creator> <http://magnus.13mm.de> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pat/versions/2013-09-01.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pat/versions/2015-01-20.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/hpi/patchr#> <http://purl.org/dc/terms/issued> "2013-09-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://purl.org/dc/terms/issued> "2011-07-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.press.net/ontology/event/" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://purl.org/stuff/rev#hasReview> _:B11d1227d4584717929d1f680818edb31 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://purl.org/stuff/rev#hasReview> _:B558549db07adebc07b20f55bbdb0a9fc <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://www.w3.org/ns/dcat#keyword> "Press" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://purl.org/stuff/rev#hasReview> _:Bbba84e2122dc399cc9080c5a35127030 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://purl.org/dc/terms/description> "Press.net Event Ontology models news-worthy events and their relationship to news assets and stuff (simple entities) in the world."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://purl.org/dc/terms/creator> <http://uk.linkedin.com/in/pauliharman> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pne/versions/2012-04-20.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://purl.org/dc/terms/modified> "2012-04-20"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/jarred-mcginnis> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://purl.org/dc/terms/title> "Press.net Event Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://purl.org/dc/terms/creator> <https://plus.google.com/117790372940620323498> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/event/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pne" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pbo/versions/2010-09-13.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://purl.org/dc/terms/issued> "2010-07-27"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://www.w3.org/ns/dcat#keyword> "Music" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://purl.org/dc/terms/title> "Play Back Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://purl.org/ontology/pbo/core#" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://purl.org/dc/terms/creator> <http://dbtune.org/last-fm/kurtjx> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://purl.org/dc/terms/description> "The Play Back Ontology specification provides basic concepts and properties for describing concepts that are related to the play back domain."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pbo" <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://purl.org/stuff/rev#hasReview> _:B2a9e133aacad8be0e7162beccb40fff0 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://purl.org/dc/terms/modified> "2010-09-13"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://purl.org/stuff/rev#hasReview> _:B09f704a04b61085f6309049679b99514 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pbo/versions/2010-08-04.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://purl.org/stuff/rev#hasReview> _:Ba62d12ed90b8c1ba0ced32faedeb3a03 <https://lov.linkeddata.es/dataset/lov> .
+<http://purl.org/ontology/pbo/core#> <http://purl.org/dc/terms/creator> <https://plus.google.com/106896159127588057802> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/parliament> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/parliament> <http://purl.org/dc/terms/modified> "2010-06-17"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/parliament> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/parl/versions/2010-06-17.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/parliament> <http://purl.org/dc/terms/title> "Parliament Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/parliament> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://reference.data.gov.uk/def/parliament/" <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/parliament> <http://purl.org/stuff/rev#hasReview> _:Bc7bcca2bb39ece1a04ee35b913cad845 <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/parliament> <http://purl.org/stuff/rev#hasReview> _:Bb1f16774e45fcdf70e595263d9ba4a4c <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/parliament> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/parliament> <http://purl.org/vocab/vann/preferredNamespacePrefix> "parl" <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/parliament> <http://purl.org/stuff/rev#hasReview> _:B638c8a49fe06f2cd9261ed61b4bac4c0 <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/parliament> <http://www.w3.org/ns/dcat#keyword> "Government" <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/parliament> <http://purl.org/dc/terms/description> "An ontology of UK Parliament"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://reference.data.gov.uk/def/parliament> <http://purl.org/dc/terms/issued> "2010-06-17"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/po> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/po> <http://purl.org/dc/terms/modified> "2016-11-26"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/po> <http://purl.org/dc/terms/title> "Programmes ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/po> <http://xmlns.com/foaf/0.1/primaryTopic> <http://purl.org/ontology/po/> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/po> <http://purl.org/dc/terms/issued> "2013-06-10"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pdo> <http://xmlns.com/foaf/0.1/primaryTopic> <http://vocab.deri.ie/pdo> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pdo> <http://purl.org/dc/terms/issued> "2013-06-12"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pdo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pdo> <http://purl.org/dc/terms/title> "Project Documents Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pdo> <http://purl.org/dc/terms/modified> "2015-08-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/plink> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/plink> <http://purl.org/dc/terms/issued> "2016-08-10"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/plink> <http://purl.org/dc/terms/title> "PersonLink Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/plink> <http://xmlns.com/foaf/0.1/primaryTopic> <http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/plink> <http://purl.org/dc/terms/modified> "2018-12-19"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#usageInDataset> _:B7e5164b40100c5233334f6e5cad42f11 <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#usageInDataset> _:Bd8ce3aa19664275ccbc3ab9261d686c9 <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/stuff/rev#hasReview> _:B6fd668d51b209e17a763dccfde996ac1 <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#usageInDataset> _:B7b64c12b2983fb4eec68b898f23775f4 <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#usageInDataset> _:Bf8a484df5b177d57eff2812b8048bd57 <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "201"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#usageInDataset> _:B4bf3ea72a35983389fa1e060caf1e4cb <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/stuff/rev#hasReview> _:B69eb66cc3a2af18e48aff0632c4e583a <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/dc/terms/creator> <http://www.cs.utep.edu/paulo> <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/dc/terms/creator> <http://labs.yahoo.com/Alyssa_Glass> <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/cynthia-chang> <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://inference-web.org/2.0/pml-provenance.owl#" <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://www.w3.org/ns/dcat#keyword> "Quality" <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/dc/terms/creator> <https://plus.google.com/112326694442177926310> <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/dc/terms/title> "PML2 provenance ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pmlp/versions/2009-04-24.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#usageInDataset> _:Ba3e2f5be470f3d9fc89f8782e971428c <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pmlp/versions/2015-01-11.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/stuff/rev#hasReview> _:B3e70b54002df53dfee076d4e192fa4f8 <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#usageInDataset> _:Bf7058e6c8b7f391c28005175b39ae9b4 <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#usageInDataset> _:B59e244efb202fcde67aa33e10134bc25 <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#usageInDataset> _:B45b337bc6f27838a09f38fc1a2276439 <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#usageInDataset> _:Bc8d418a89f900e44aab0a0ddafee8b68 <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/dc/terms/description> "The provenance part of PML2 ontology. It is a fundamental component of PML2 ontology."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#reusedByDatasets> "12"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#usageInDataset> _:B4093bf44ec5e7e8070a6a09145493930 <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/stuff/rev#hasReview> _:Bba0caed372bcdc365a117fe709c3d252 <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/dc/terms/modified> "2015-01-11"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pmlp" <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/dc/terms/creator> <https://plus.google.com/110672390728356952792> <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://inference-web.org/2.0/pml-provenance.owl> <http://purl.org/vocommons/voaf#usageInDataset> _:B87c158b80a03aef96f4116e5c00d5818 <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/dc/terms/description> "Un vocabulaire multilingue et multiculturel pour représenter les relations familiale."@fr <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/ara> <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/dc/terms/modified> "2015-02-14"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/vocab/vann/preferredNamespacePrefix> "plink" <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/dc/terms/creator> <http://cedric.cnam.fr/~hamdif> <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/plink/versions/2015-02-14.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/dc/terms/creator> <http://cedric.cnam.fr/index.php/labo/membre/view?id=125> <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/stuff/rev#hasReview> _:B61102ae2cb87d1cb1a0c37176ece0651 <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/stuff/rev#hasReview> _:B43e5bc1310bdfe1b3a6110471553d824 <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/fra> <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/dc/terms/issued> "2015-02-14"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/dc/terms/title> "PersonLink Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/dc/terms/description> "A Multilingual and Multicultural Ontology Representing Family Relationships."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://cedric.cnam.fr/isid/ontologies/PersonLink.owl#" <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/dc/terms/publisher> <http://fr.dbpedia.org/resource/Conservatoire_national_des_arts_et_métiers> <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://www.w3.org/ns/dcat#keyword> "People" <https://lov.linkeddata.es/dataset/lov> .
+<http://cedric.cnam.fr/isid/ontologies/PersonLink.owl> <http://purl.org/dc/terms/creator> <http://cedric.cnam.fr/index.php/labo/membre/view?id=2201> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://purl.org/dc/terms/modified> "2012-09-25"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pnc/versions/2012-09-25.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pnc/versions/2011-10-17.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://purl.org/stuff/rev#hasReview> _:Baf93810cf6d3800a93a1253904e64926 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://purl.org/dc/terms/title> "Press.net Classification Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://purl.org/dc/terms/description> "The Press.net Classification Ontology allows assets to be holistically classified using a controlled vocabulary or taxonomy."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://www.w3.org/ns/dcat#keyword> "Catalogs" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://purl.org/stuff/rev#hasReview> _:B6d85ba3fe500d018a51f172a71bd667a <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pnc" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://purl.org/dc/terms/issued> "2011-07-27"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://purl.org/dc/terms/creator> <https://plus.google.com/117790372940620323498> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://purl.org/stuff/rev#hasReview> _:Bd335ec251cc1a627afc7627b25eb15f1 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/jarred-mcginnis> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.press.net/ontology/classification/" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://purl.org/dc/terms/creator> <http://uk.linkedin.com/in/pauliharman> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.press.net/ontology/classification/> <http://purl.org/stuff/rev#hasReview> _:B1e0a10b9565e3d2e273dad9b411eb1dd <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pns> <http://xmlns.com/foaf/0.1/primaryTopic> <http://data.press.net/ontology/stuff/> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pns> <http://purl.org/dc/terms/issued> "2013-07-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pns> <http://purl.org/dc/terms/title> "Press.net Stuff Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pns> <http://purl.org/dc/terms/modified> "2018-04-10"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pep> <http://purl.org/dc/terms/modified> "2020-12-29"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pep> <http://xmlns.com/foaf/0.1/primaryTopic> <https://w3id.org/pep/> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pep> <http://purl.org/dc/terms/issued> "2016-10-24"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pep> <http://purl.org/dc/terms/title> "Process Execution ontology."@en <https://lov.linkeddata.es/dataset/lov> .

@@ -1,0 +1,485 @@
+<http://data.lirmm.fr/ontologies/food#containsIngredient> <http://www.w3.org/2000/01/rdf-schema#comment> "Value is an object of the class Ingredient so that we can specify the quantity, the unit, and the nature of the ingredient (string or other Food object)\n\ne.g. 1 clove of garlic -> quantity = 1, unit = clove, ingredient = garlic (or Food object for garlic)" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#containsIngredient> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.lirmm.fr/ontologies/food#Ingredient> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#containsIngredient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#containsIngredient> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/food#Food> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#containsIngredient> <http://www.w3.org/2000/01/rdf-schema#label> "Specifies an ingredient contained in the Food object" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#NutritionData> <http://www.w3.org/2000/01/rdf-schema#label> "Nutrition data for a food item (recipe, product or ingredient)" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#NutritionData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#NutritionData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#rank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#rank> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#rank> <http://www.w3.org/2000/01/rdf-schema#label> "Rank of an ingredient in an ingredient list ordered by quantity (e.g. food products)" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#rank> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/food#Ingredient> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#rank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#percent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/food#Ingredient> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#percent> <http://www.w3.org/2000/01/rdf-schema#comment> "Useful in particular for food products" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#percent> <http://www.w3.org/2000/01/rdf-schema#label> "Quantity of ingredient in percentage % of the total amount of ingredients in a Food" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#percent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#Ingredient> <http://www.w3.org/2000/01/rdf-schema#label> "An ingredient : a certain quantity of food that is part of another food" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#Ingredient> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents an ingredient line in a recipe (for a Dish) or an ingredient listed in the ingredient list (for a Product).\n\nWe need to specify a quantity and unit, so the relation is not binary. So the value for the containsIngredient property of a Food object is an object of the IngredientAmount class (instead of a Food object or string directly). See http://www.w3.org/TR/swbp-n-aryRelations/ for details." <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#Ingredient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#Ingredient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#ingredientListAsText> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#ingredientListAsText> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/food#Food> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#ingredientListAsText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#ingredientListAsText> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#ingredientListAsText> <http://www.w3.org/2000/01/rdf-schema#comment> "Full text of the list of ingredients of a Food item (Product or Dish). May contain more details than what can be listed in the containsIngredient properties." <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#ingredientListAsText> <http://www.w3.org/2000/01/rdf-schema#label> "Text of the list of ingredients" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#quantity> <http://www.w3.org/2000/01/rdf-schema#comment> "e.g. 1 clove of garlic -> quantity = 1, unit = clove, ingredient = garlic (or Food object for garlic)" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#quantity> <http://www.w3.org/2000/01/rdf-schema#label> "quantity of ingredient in any unit (unit specified in unit)" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#quantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#quantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#quantity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/food#Ingredient> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#quantity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#food> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.lirmm.fr/ontologies/food#Ingredient> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#food> <http://www.w3.org/2000/01/rdf-schema#label> "Food that is an ingredient of another food" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#food> <http://www.w3.org/2000/01/rdf-schema#comment> "String or Food object" <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#food> <http://www.w3.org/2000/01/rdf-schema#range> <http://data.lirmm.fr/ontologies/food#Food> <http://data.lirmm.fr/ontologies/food> .
+<http://data.lirmm.fr/ontologies/food#food> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://data.lirmm.fr/ontologies/food> .
+<http://dbpedia.org/ontology/ingredient> <http://www.w3.org/2000/01/rdf-schema#comment> "Main ingredient used to prepare a specific Food or Beverage. For strings use ingredientName, for objects use ingredient."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredient> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredient> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:ingredient> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredient> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Food> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredient> <http://www.w3.org/2000/01/rdf-schema#label> "Zutat"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredient> <http://www.w3.org/2000/01/rdf-schema#label> "ingredient"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/solventWithGoodSolubility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/solventWithGoodSolubility> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:solventWithGoodSolubility> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/solventWithGoodSolubility> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/ChemicalSubstance> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/solventWithGoodSolubility> <http://www.w3.org/2000/01/rdf-schema#label> "Lösungsmittel mit guter Löslichkeit"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/solventWithGoodSolubility> <http://www.w3.org/2000/01/rdf-schema#label> "solvent with good solubility"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/solventWithGoodSolubility> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/ChemicalSubstance> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/solventWithGoodSolubility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/solventWithGoodSolubility> <http://www.w3.org/2000/01/rdf-schema#label> "goed oplosbaar in"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Engineer> <http://www.w3.org/2000/01/rdf-schema#label> "engineer"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Engineer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Engineer> <http://www.w3.org/2000/01/rdf-schema#label> "공학자"@ko <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Engineer> <http://www.w3.org/2000/01/rdf-schema#label> "ingenieur"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Engineer> <http://www.w3.org/2000/01/rdf-schema#label> "ingeniero"@es <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Engineer> <http://www.w3.org/2000/01/rdf-schema#label> "μηχανικός"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Engineer> <http://www.w3.org/2000/01/rdf-schema#label> "Ingenieur"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Engineer> <http://www.w3.org/2000/01/rdf-schema#label> "ingénieur"@fr <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Engineer> <http://www.w3.org/2000/01/rdf-schema#label> "技術者"@ja <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Engineer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://dbpedia.org/ontology/Person> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Engineer> <http://www.w3.org/2000/01/rdf-schema#label> "innealtóir"@ga <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Engineer> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.wikidata.org/entity/Q81096> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Engineer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyClass:Engineer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/Engineer> <http://www.w3.org/2000/01/rdf-schema#label> "ingeniere"@it <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfEntrances> <http://www.w3.org/2000/01/rdf-schema#label> "Anzahl der Eingänge"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfEntrances> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfEntrances> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfEntrances> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:numberOfEntrances> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfEntrances> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Cave> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfEntrances> <http://www.w3.org/2000/01/rdf-schema#label> "number of entrances"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfEntrances> <http://www.w3.org/2000/01/rdf-schema#label> "αριθμός εισόδων"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfEntrances> <http://www.w3.org/2000/01/rdf-schema#label> "aantal ingangen"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/numberOfEntrances> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/spokenIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/spokenIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/PopulatedPlace> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/spokenIn> <http://www.w3.org/2000/01/rdf-schema#label> "spoken in"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/spokenIn> <http://www.w3.org/2000/01/rdf-schema#label> "gesprochen in"@de <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/spokenIn> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:spokenIn> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/spokenIn> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasLocation> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/spokenIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Language> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/spokenIn> <http://www.w3.org/2000/01/rdf-schema#label> "gesproken in"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/spokenIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredientName> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredientName> <http://www.w3.org/2000/01/rdf-schema#domain> <http://dbpedia.org/ontology/Food> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredientName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredientName> <http://www.w3.org/2000/01/rdf-schema#label> "ingredient name (literal)"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredientName> <http://www.w3.org/2000/01/rdf-schema#comment> "Main ingredient used to prepare a specific Food or Beverage. For strings use ingredientName, for objects use ingredient."@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredientName> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:ingredientName> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredientName> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#hasPart> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/ingredientName> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/engineer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/engineer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#coparticipatesWith> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/engineer> <http://www.w3.org/ns/prov#wasDerivedFrom> <http://mappings.dbpedia.org/index.php/OntologyProperty:engineer> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/engineer> <http://www.w3.org/2000/01/rdf-schema#range> <http://dbpedia.org/ontology/Person> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/engineer> <http://www.w3.org/2000/01/rdf-schema#label> "engineer"@en <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/engineer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/engineer> <http://www.w3.org/2000/01/rdf-schema#label> "ingenieur"@nl <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/engineer> <http://www.w3.org/2000/01/rdf-schema#label> "μηχανικός"@el <http://dbpedia.org/ontology/> .
+<http://dbpedia.org/ontology/engineer> <http://www.w3.org/2000/01/rdf-schema#label> "Ingenieur"@de <http://dbpedia.org/ontology/> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Immobili??ria"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ??????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ??????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Inmobiliaria"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Biuro nieruchomo??ci"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Agenzia immobiliare"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Nepremi??ninska agencija"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Makla?? gruntow"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Ahente ng Lupain"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Makler z imobilijemi"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Imobilienh??ndler"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Shop> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Higiezinen agente"@eu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Makelaar"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Agentia immobiliari"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Estate Agent"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Nekilnojamojo turto agentas"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????? ????????????????????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "?????????? ???? ????????????????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Ejendomsm??gler"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Imobili??ria"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "????????????"@zh-hant <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "????????????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "agjent immobile"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/EstateAgent/key/shop/value/estate_agent> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Realitn?? kancel????"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent za nekretnine"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Egendomsm??klare"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Nekustam?? ??pa??uma a??ents"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Axencia inmobiliaria"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Axencia inmobiliaria"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Realitn?? kancel??ria"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Ingatlankeresked??s"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????? ????????????????????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????? ??????????????????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Emlak????"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Kourater tiez"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Agent immobilier"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Eiendomsmegler"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Agencija za nekretnine"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/EstateAgent> <http://www.w3.org/2000/01/rdf-schema#label> "V??n ph??ng B???t ?????ng s???n"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Automat do sprzeda??y"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Salmenta automatiko"@eu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Predajn?? automat"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Verkaafsautomat"@lb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Sat???? makinesi"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Vareautomat"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Distributeur automatique"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Varumaskin"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Automaat"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Distributor automatic"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/VendingMachine/key/amenity/value/vending_machine> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????-????????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Ingaler emgefre"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Awtomat"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Awtomat"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "?????? ??????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "?????? ??????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????????? ????????????????????????"@ka <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Prodejn?? automat"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Automat me monedh??"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Distribut??r automatic"@fur <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Automat"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Automat"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Automat"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "M??quina expendedora"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "M??quina expendedora"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????? ??????????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????? ??????????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????? ??????????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Distributore automatico"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Venta autom??tica"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "M??y B??n h??ng"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "??rus??t?? automata"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Vendingas"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Tirdzniec??bas autom??ts"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Amenity> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Avtomat"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Mesin Layan Diri"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "M??quina de venda autom??tica"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Makinang Nagbebenta"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Myyntiautomaatti"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Vending Machine"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Sj??lfsali"@is <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "?????????? ??????????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "M??quina expenedora"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/2000/01/rdf-schema#label> "Selbstbedienungsautomat"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/VendingMachine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????????? ????????????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Tramwajkowe zastani????o"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Sp??rvagnsh??llplats"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "?????????? ????????"@el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????? ????????????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Parada de tranv??a"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Parada de tranv??a"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Fermade dal tram"@fur <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Parada de bonde"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Raitiovaunupys??kki"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????? ??????????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Fermata del tram"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Halto de tram"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Ga X??p ??i???n"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Tramvay Dura????"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ????????????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Tramvajsko stajali??te"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Arsav tramgarr"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Trikkestopp"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Parada de tramvia"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Tramvaja pietura"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Tramvaj Stop"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Tram Stop"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????????? ????????????????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Hintuan ng Trambya"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Tranbia geltoki"@eu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Tramvajov?? zast??vka"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Villamosmeg??ll??"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Stra??enbahn-Haltestelle"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Tramvajska postaja"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Tramvajska stanica"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Zast??vka elektri??ky"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Przystanek tramwajowy"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Zastani????o elektriskeje"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????????????? ????????????????????????"@ka <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "?????????"@zh-hant <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Trammipeatus"@et <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????????????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/TramStop/key/railway/value/tram_stop> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Stratenbahn-Stopp"@nds <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Tramhalte"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Tramhalte"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Tramvajaus stotel??"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "???????????????????? ??????????????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Sporvognsstoppested"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/RailwayThing> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Parada de tranv??as"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/TramStop> <http://www.w3.org/2000/01/rdf-schema#label> "Arr??t de tram"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Ingresso alla metropolitana"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Metr??kij??rat"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Ulaz u metro"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Vchod do metra"@sk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "????????????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ???? ??????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Boca de metro"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Boca de metro"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Subway Entrance"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "?????????????? ?????? ??????????"@el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Entrada do metr??"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "????jimas ?? metro"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "??????????????????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Bouche de m??tro"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "T-baneinngang"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Undergrundsindgang"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Metro Giri??"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "U-Bahn-Zugang"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Acc??s al Metro"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "C???a v??o Nh?? ga Xe ??i???n ng???m"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Entrada de metro"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Metro ieeja"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Entrata al metro"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Metron sis????nk??ynti"@fi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Zachod do podzemskeje ??eleznicy"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Vstup do metra"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Zachod k p??dzemskej"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Tunnelbaneing??ng"@sv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "?????????? ?????????? ???????? ??????????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Vhod na podzemno"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Podzemna - ulaz"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????????? ??????????????????????????????"@ka <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Pintu Masuk Bawah Tanah"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Antre metro"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Pasukan sa Pang-ilalim na Daambakal"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ?? ??????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ?? ??????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ?? ??????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Metro Sarbidea"@eu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Wej??cie na stacj?? metra"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Metro Hyrja"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "???????????? ?? ??????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/SubwayEntrance/key/railway/value/subway_entrance> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/RailwayThing> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Metroingang"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/SubwayEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Metroingang"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "??p??letbej??rat"@hu <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Entrata dell'edificio"@it <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Ulaz"@hr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "????????????"@ja <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "????????????"@zh-hans <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Bygningsindgang"@da <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "????????????????????? ??????????????????????????????"@ka <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Jentrade dal edifici"@fur <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Building> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Vhod"@sl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Antre ar savadur"@br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Entrata de edificio"@ia <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ????????"@ar <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ????????"@arz <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Building Entrance"@en-gb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Entrada de edif??cio"@pt-br <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Entrada a edificio"@es <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ?? ????????????"@sr-ec <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ?? ????????????"@ru <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ???? ????????????"@mk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Accesu al edificiu"@ast <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "??kas ieeja"@lv <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Ulaz u zgradu"@sr-el <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Entrada de l'Edifici"@ca <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Wej??cie do budynku"@pl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Pasukan ng Gusali"@tl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Entr??e de b??timent"@fr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Ingang"@af <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Ingang"@nl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://linkedgeodata.org/ontology/Amenity> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "????jimas ?? pastat??"@lt <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Vstup do objektu"@cs <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Entrada do edificio"@gl <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "?????????? ????????????"@he <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "???????? ?? ??????????????"@uk <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/BuildingEntrance/key/building/value/entrance> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Twarjenjowy zachod"@hsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Eingang"@de <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "C???a v??o"@vi <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Zachod do twarjenja"@dsb <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Bygningsinngang"@no <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Nd??rtimi Hyrja"@aln <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "???????????? ?? ??????????????"@be-tarask <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://linkedgeodata.org/meta/sourceTag> <http://linkedgeodata.org/ontology/BuildingEntrance/key/amenity/value/building_entrance> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Bina Giri??i"@tr <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Pintu Masuk Bangunan"@ms <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://linkedgeodata.org/ontology> .
+<http://linkedgeodata.org/ontology/BuildingEntrance> <http://www.w3.org/2000/01/rdf-schema#label> "Rakennuksen sis????nk??ynti"@fi <http://linkedgeodata.org/ontology> .
+<http://lod.taxonconcept.org/ontology/txn.owl#inGenus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://lod.taxonconcept.org/ontology/txn.owl> .
+<http://lod.taxonconcept.org/ontology/txn.owl#inGenus> <http://www.w3.org/2000/01/rdf-schema#label> "inGenus" <http://lod.taxonconcept.org/ontology/txn.owl> .
+<http://lod.taxonconcept.org/ontology/txn.owl#inGenus> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://lod.taxonconcept.org/ontology/txn.owl> .
+<http://lod.taxonconcept.org/ontology/txn.owl#inGenus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.taxonconcept.org/ontology/txn.owl> <http://lod.taxonconcept.org/ontology/txn.owl> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0018.9338> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Contrast/Bolus Ingredient Code Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0018.9338> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0018.9338> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0018.9338> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.ContrastBolusIngredientCodeSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9425> <http://www.w3.org/2000/01/rdf-schema#label> "Contrast/Bolus Ingredient Opaque" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9425> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.ContrastBolusAgentSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9425> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9425> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#ContrastBolusIngredientOpaque> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9425> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9425> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.ContrastBolusIngredientCodeSequence> <http://www.w3.org/2002/07/owl#equivalentClass> <http://purl.org/healthcarevocab/v1#SequenceItem.Tag.0018.9338> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.ContrastBolusIngredientCodeSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Item of: Contrast/Bolus Ingredient Code Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.ContrastBolusIngredientCodeSequence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#SequenceItem.ContrastBolusIngredientCodeSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0052.0001> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.ContrastBolusAgentSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0052.0001> <http://www.w3.org/2000/01/rdf-schema#label> "Contrast/Bolus Ingredient Percent by Volume" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0052.0001> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#ContrastBolusIngredientPercentByVolume> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0052.0001> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0052.0001> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0052.0001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9338> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#ContrastBolusIngredientCodeSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9338> <http://www.w3.org/2000/01/rdf-schema#label> "Contrast/Bolus Ingredient Code Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9338> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.ContrastBolusAgentSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9338> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9338> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.9338> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredient> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredient> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredient> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0018.1048> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredient> <http://www.w3.org/2000/01/rdf-schema#label> "Contrast/Bolus Ingredient" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredient> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.Image> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientOpaque> <http://www.w3.org/2000/01/rdf-schema#label> "Contrast/Bolus Ingredient Opaque" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientOpaque> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.ContrastBolusAgentSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientOpaque> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientOpaque> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientOpaque> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientOpaque> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0018.9425> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientCodeSequence> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/co/List> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientCodeSequence> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientCodeSequence> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientCodeSequence> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0018.9338> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientCodeSequence> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.ContrastBolusAgentSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientCodeSequence> <http://www.w3.org/2000/01/rdf-schema#label> "Contrast/Bolus Ingredient Code Sequence" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientConcentration> <http://www.w3.org/2000/01/rdf-schema#label> "Contrast/Bolus Ingredient Concentration" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientConcentration> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bbdb4cbf6ffb98ef405ece8443b9d64dc <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientConcentration> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientConcentration> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientConcentration> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientConcentration> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0018.1049> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientPercentByVolume> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#Tag.0052.0001> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientPercentByVolume> <http://www.w3.org/2000/01/rdf-schema#label> "Contrast/Bolus Ingredient Percent by Volume" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientPercentByVolume> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#SequenceItem.ContrastBolusAgentSequence> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientPercentByVolume> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientPercentByVolume> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#ContrastBolusIngredientPercentByVolume> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1048> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1048> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1048> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1048> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/healthcarevocab/v1#IE.Image> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1048> <http://www.w3.org/2000/01/rdf-schema#label> "Contrast/Bolus Ingredient" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1048> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#ContrastBolusIngredient> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1049> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/healthcarevocab/v1> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1049> <http://www.w3.org/2000/01/rdf-schema#label> "Contrast/Bolus Ingredient Concentration" <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1049> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://purl.org/healthcarevocab/v1#ContrastBolusIngredientConcentration> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1049> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1049> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/healthcarevocab/v1#Tag.0018.1049> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bc09b90260039fda22ed92c66009200a2 <http://purl.org/healthcarevocab/v1> .
+<http://purl.org/ontology/wo/growsIn> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/growsIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/ontology/wo/TaxonRank> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/growsIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/ontology/wo/Habitat> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/growsIn> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/ontology/wo/> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/growsIn> <http://www.w3.org/2000/01/rdf-schema#comment> "associates a taxon rank with a habitat in which it grows. Sub-property of wo:habitat to be used for plants, fungi, etc"@en-gb <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/growsIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://purl.org/ontology/wo/> .
+<http://purl.org/ontology/wo/growsIn> <http://www.w3.org/2000/01/rdf-schema#label> "grows in"@en-gb <http://purl.org/ontology/wo/> .
+<http://semanticscience.org/resource/SIO_010077> <http://www.w3.org/2000/01/rdf-schema#label> "active ingredient"@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_010077> <http://purl.org/dc/terms/description> "An active ingredient is a molecular entity that exhibits biological activity."@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_010077> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_010338> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_010077> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_010077> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_010077> <http://purl.org/dc/elements/1.1/identifier> "SIO_010077" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001105> <http://purl.org/dc/elements/1.1/identifier> "SIO_001105" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001105> <http://purl.org/dc/terms/description> "to ingest is the capability to take into the body by the mouth for digestion or absorption."@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001105> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001105> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000492> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001105> <http://www.w3.org/2000/01/rdf-schema#label> "to ingest"@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_001105> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_010087> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_010338> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_010087> <http://purl.org/dc/terms/description> "Aninactive ingredient is a molecular entity that does not exhibit biological activity."@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_010087> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_010087> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_010087> <http://purl.org/dc/elements/1.1/identifier> "SIO_010087" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_010087> <http://www.w3.org/2000/01/rdf-schema#label> "inactive ingredient"@en <http://semanticscience.org/ontology/sio.owl> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested> <http://www.w3.org/2000/01/rdf-schema#comment> "The date when the resource was removed from institutional holdings."@en <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/ns/ma-ont#creationDate> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested> <http://www.w3.org/2000/01/rdf-schema#domain> _:Bc973877012651451b997793d89eb8c73 <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/date> <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#dateIngested> <http://www.w3.org/2000/01/rdf-schema#label> "Ingest date" <http://www.ebu.ch/metadata/ontologies/ebucore/ebucore> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0064> <http://purl.org/dc/elements/1.1/description> "An active ingredient role is a role played by a chemical substance which has the disposition to treat a certain disease and is part of a pharmaceutical formulation."@en <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0064> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0064> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0062> <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0064> <http://www.w3.org/2000/01/rdf-schema#label> "active ingredient role"@en <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0071> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0063> <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0071> <http://www.w3.org/2000/01/rdf-schema#label> "pharmaceutical ingredient"@en <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0071> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6f23cbb0196bebe91d0aba5f86f0bccd <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0071> <http://www.w3.org/2002/07/owl#equivalentClass> _:Bf203a413d1e97a3d1481135beda0210d <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0071> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0071> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "dailymed:ingredients" <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0071> <http://purl.org/dc/elements/1.1/description> "A pharmaceutical ingredient is a chemical substance that is part of a formulated pharmaceutical that bears a pharmaceutical ingredient role."@en <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0065> <http://purl.org/dc/elements/1.1/description> "An inactive ingredient role is a role played by a chemical substance which is part of a pharmaceutical formulation but does not have the disposition to treat a certain disease."@en <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0065> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0065> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0062> <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0065> <http://www.w3.org/2000/01/rdf-schema#label> "inactive ingredient role"@en <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0000> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "HL7V3.0:ACTI" <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0000> <http://www.w3.org/2002/07/owl#equivalentClass> _:B58da8b0325a3e97b11ddc2a92713c5d8 <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0000> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0071> <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0000> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0000> <http://www.w3.org/2000/01/rdf-schema#label> "active ingredient"@en <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0000> <http://purl.org/dc/elements/1.1/description> "An active ingredient is a pharmaceutical ingredient that has the disposition to treat a certain disease."@en <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0062> <http://www.w3.org/2000/01/rdf-schema#label> "pharmaceutical ingredient role"@en <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0062> <http://purl.org/dc/elements/1.1/description> "A pharmaceutical ingredient role is a role played by a chemical substance that is part of a pharmaceutical formulation."@en <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0062> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0062> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0073> <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0003> <http://www.w3.org/2000/01/rdf-schema#label> "inactive ingredient"@en <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0003> <http://www.w3.org/2002/07/owl#equivalentClass> _:Be4c721c94a9fcd4a3371398598b77096 <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0003> <http://purl.org/dc/elements/1.1/description> "An inactive ingredient is a pharmaceutical ingredient that is part of a pharmaceutical formulation but does not have the disposition to treat a certain disease."@en <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0003> <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "HL7V3.0:IACT" <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0003> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2001/sw/hcls/ns/transmed/TMO_0071> <http://www.w3.org/2001/sw/hcls/ns/transmed/> .
+<http://ontology.eil.utoronto.ca/ISO37120.owl#11.6> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.eil.utoronto.ca/ISO37120.owl#Governance> <http://ontology.eil.utoronto.ca/ISO37120.owl> .
+<http://ontology.eil.utoronto.ca/ISO37120.owl#11.6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ontology.eil.utoronto.ca/ISO37120.owl> .
+<http://ontology.eil.utoronto.ca/ISO37120.owl#11.6> <http://www.w3.org/2000/01/rdf-schema#label> "Number of registered voters as a percentage of the voting age population (support- ing indicator)"@en <http://ontology.eil.utoronto.ca/ISO37120.owl> .
+<http://ontology.eil.utoronto.ca/ISO37120.owl#10.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://ontology.eil.utoronto.ca/ISO37120.owl> .
+<http://ontology.eil.utoronto.ca/ISO37120.owl#10.4> <http://www.w3.org/2000/01/rdf-schema#label> "Number of volunteer and part-time firefighters per 100 000 population (support- ing indicator)"@en <http://ontology.eil.utoronto.ca/ISO37120.owl> .
+<http://ontology.eil.utoronto.ca/ISO37120.owl#10.4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://ontology.eil.utoronto.ca/ISO37120.owl#FireAndEmergencyResponse> <http://ontology.eil.utoronto.ca/ISO37120.owl> .

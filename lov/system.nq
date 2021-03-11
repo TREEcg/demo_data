@@ -1,0 +1,481 @@
+<http://www.ontotext.com/proton/protonext#IrrigationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#IrrigationSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.ontotext.com/proton/protonext#WaterRegion> <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#IrrigationSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Irrigation System"@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protonext#IrrigationSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "A network of ditches and one or more of the following elements: water supply, reservoir, canal, pump, well, drain, etc. NIMA GNS designator H.SYSI."@en <http://www.ontotext.com/proton/protonext> .
+<http://www.ontotext.com/proton/protontop#systemPrimitive> <http://www.w3.org/2000/01/rdf-schema#label> "System Primitive"@en <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#systemPrimitive> <http://www.w3.org/2000/01/rdf-schema#comment> "The system classes and properties are used to encode system specific information. They, as well as their instances and related information, should usually not be presented to the end-user. In practice, user-interface and visualization modules, can filter such primitives. All system primitives with this property should be marked with string value \"T\"."@en <http://www.ontotext.com/proton/protontop> .
+<http://www.ontotext.com/proton/protontop#systemPrimitive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://www.ontotext.com/proton/protontop> .
+<http://www.opmw.org/ontology/hasNativeSystemTemplate> <http://www.w3.org/2000/01/rdf-schema#comment> "Property used to link a workflow template to its native template (encoded in the syntax of the workflow system where it was designed: scufl, owl, etc.).\n\nExample:\n@prefix opmw: <http://www.opmw.org/ontology/> .\n\n<http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_NTM>\n     a opmw:WorkflowTemplate;\n     opmw:hasNativeSystemTemplate \"http://wind.isi.edu/marbles/assets/components/workflow_portal/users/1/Water/ontology/Water/AquaFlow_NTM.owl\"xsd:anyURI."@en <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/hasNativeSystemTemplate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/hasNativeSystemTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/hasNativeSystemTemplate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/hasNativeSystemTemplate> <http://www.w3.org/2000/01/rdf-schema#label> "has Native System Template"@en <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/hasNativeSystemTemplate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opmw.org/ontology/WorkflowTemplate> <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/createdInWorkflowSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/createdInWorkflowSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/createdInWorkflowSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opmw.org/ontology/WorkflowTemplate> <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/createdInWorkflowSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "This data property binds a workflow template to the tool used for its design and creation. The tool is represented by its URL.\n\nExample:\n@prefix opmw: <http://www.opmw.org/ontology/> .\n\n<http://www.opmw.org/export/resource/WorkflowTemplate/AQUAFLOW_EDM>\n         a opmw:WorkflowTemplate;\n         opmw:createdInWorkflowSystem \"http://wings.isi.edu\"^^xsd:anyURI."@en <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/createdInWorkflowSystem> <http://www.w3.org/2000/01/rdf-schema#label> "created in Workflow System"@en <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/createdInWorkflowSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#anyURI> <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/executedInWorkflowSystem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.opmw.org/ontology/WorkflowExecutionAccount> <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/executedInWorkflowSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to bind an execution account to the system where it was executed (which could be different from the one used for designing its workflow template).\n\nExample:\n@prefix opmw: <http://www.opmw.org/ontology/> .\n@prefix opmo: <http://openprovenance.org/model/opmo#> .\n\n<http://www.opmw.org/export/resource/WorkflowExecutionAccount/acc1>\n      a opmo:Account, opmw:executionAccount;\n      opmw:executedInWorkflowSystem <http://www.opmw.org/export/resource/Agent/SHELL>.\n\n<http://www.opmw.org/export/resource/Agent/SHELL> \n     a opmw:Agent."@en <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/executedInWorkflowSystem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/prov#wasAttributedTo> <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/executedInWorkflowSystem> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/net/opmv/ns#Agent> <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/executedInWorkflowSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/executedInWorkflowSystem> <http://www.w3.org/2000/01/rdf-schema#label> "executed in Workflow System"@en <http://www.opmw.org/ontology/> .
+<http://www.opmw.org/ontology/executedInWorkflowSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://www.opmw.org/ontology/> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.3.5.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.3.5.3> <http://www.w3.org/2000/01/rdf-schema#label> "I.3.5.3. Geometric algorithms, languages, and systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.3.5.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#I.3.5> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.1.3.5> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#C.1.3> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.1.3.5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.1.3.5> <http://www.w3.org/2000/01/rdf-schema#label> "C.1.3.5. Heterogeneous systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#K.6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#K.6> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#K> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#K.6> <http://www.w3.org/2000/01/rdf-schema#label> "K.6. MANAGEMENT OF COMPUTING AND INFORMATION SYSTEMS" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.1.3> <http://www.w3.org/2000/01/rdf-schema#label> "I.1.3. Languages and Systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.1.3> <http://www.w3.org/2000/01/rdf-schema#comment> "See also #D.3.2, #D.3.3, #F.2.2." <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.1.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#I.1> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.1.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.2.5.0> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#I.2.5> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.2.5.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.2.5.0> <http://www.w3.org/2000/01/rdf-schema#label> "I.2.5.0. Expert system tools and techniques" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.1.3.4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#G.1.3> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.1.3.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.1.3.4> <http://www.w3.org/2000/01/rdf-schema#label> "G.1.3.4. Linear systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.4.2.4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#F.4.2> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.4.2.4> <http://www.w3.org/2000/01/rdf-schema#label> "F.4.2.4. Thue systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.4.2.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.2.11.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#I.2.11> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.2.11.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.2.11.3> <http://www.w3.org/2000/01/rdf-schema#label> "I.2.11.3. Multiagent systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.1.3.2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#I.1.3> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.1.3.2> <http://www.w3.org/2000/01/rdf-schema#label> "I.1.3.2. Special-purpose algebraic systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.1.3.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.5> <http://www.w3.org/2000/01/rdf-schema#label> "C.5. COMPUTER SYSTEM IMPLEMENTATION" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.5> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#C> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.2.4.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#I.2.4> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.2.4.3> <http://www.w3.org/2000/01/rdf-schema#label> "I.2.4.3. Relation systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.2.4.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.3.4.11> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#D.3.4> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.3.4.11> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.3.4.11> <http://www.w3.org/2000/01/rdf-schema#label> "D.3.4.11. Translator writing systems and compiler generators" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.1.1.0> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#H.1.1> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.1.1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.1.1.0> <http://www.w3.org/2000/01/rdf-schema#label> "H.1.1.0. General systems theory" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.2.4.3> <http://www.w3.org/2000/01/rdf-schema#label> "C.2.4.3. Network operating systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.2.4.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.2.4.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#C.2.4> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.4.1.2> <http://www.w3.org/2000/01/rdf-schema#label> "F.4.1.2. Lambda calculus and related systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.4.1.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.4.1.2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#F.4.1> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.1.3.8> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#G.1.3> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.1.3.8> <http://www.w3.org/2000/01/rdf-schema#label> "G.1.3.8. Sparse, structured, and very large systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.1.3.8> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#K.6.1.5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#K.6.1.5> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#K.6.1> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#K.6.1.5> <http://www.w3.org/2000/01/rdf-schema#label> "K.6.1.5. Systems development" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.3.4.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.3.4.1> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#H.3.4> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.3.4.1> <http://www.w3.org/2000/01/rdf-schema#label> "H.3.4.1. Distributed systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.3.4.5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.3.4.5> <http://www.w3.org/2000/01/rdf-schema#label> "I.3.4.5. Paint systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.3.4.5> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#I.3.4> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.7.1> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#D.4.7> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.7.1> <http://www.w3.org/2000/01/rdf-schema#label> "D.4.7.1. Distributed systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.7.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.3.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#C.3> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.3.3> <http://www.w3.org/2000/01/rdf-schema#label> "C.3.3. Signal processing systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.3.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.1.5.5> <http://www.w3.org/2000/01/rdf-schema#label> "G.1.5.5. Systems of equations" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.1.5.5> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#G.1.5> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#G.1.5.5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.9> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.9> <http://www.w3.org/2000/01/rdf-schema#label> "D.4.9. Systems Programs and Utilities" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.9> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#D.4> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#C> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.4> <http://www.w3.org/2000/01/rdf-schema#label> "C.4. PERFORMANCE OF SYSTEMS" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.0.4> <http://www.w3.org/2000/01/rdf-schema#label> "C.0.4. Systems specification methodology" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.0.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.0.4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#C.0> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H> <http://www.w3.org/2000/01/rdf-schema#label> "H. Information Systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.aktors.org/ontology/portal#Research-Interest> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.2.18> <http://www.w3.org/2000/01/rdf-schema#label> "H.5.2.18. Windowing systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.2.18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.5.2.18> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#H.5.2> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C> <http://www.w3.org/2000/01/rdf-schema#label> "C. Computer Systems Organization" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.aktors.org/ontology/portal#Research-Interest> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.3.2.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.3.2.2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#I.3.2> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.3.2.2> <http://www.w3.org/2000/01/rdf-schema#label> "I.3.2.2. Stand-alone systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.3.2.2> <http://www.w3.org/2000/01/rdf-schema#comment> "Depricated, no longer used as of January 1998." <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.4.2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#H.4> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.4.2> <http://www.w3.org/2000/01/rdf-schema#label> "H.4.2. Types of Systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.4.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.6.1.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.6.1.1> <http://www.w3.org/2000/01/rdf-schema#label> "I.6.1.1. Systems theory" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.6.1.1> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#I.6.1> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.4.2.2> <http://www.w3.org/2000/01/rdf-schema#label> "F.4.2.2. Parallel rewriting systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.4.2.2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#F.4.2> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#F.4.2.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.6.7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.6.7> <http://www.w3.org/2000/01/rdf-schema#label> "I.6.7. Simulation Support Systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#I.6.7> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#I.6> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#K.6.1.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#K.6.1.4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#K.6.1> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#K.6.1.4> <http://www.w3.org/2000/01/rdf-schema#label> "K.6.1.4. Systems analysis and design" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#B.1.5.1> <http://www.w3.org/2000/01/rdf-schema#label> "B.1.5.1. Firmware support of operating systems/instruction sets" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#B.1.5.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#B.1.5.1> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#B.1.5> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#B.1.5.1> <http://www.w3.org/2000/01/rdf-schema#comment> "Depricated, no longer used as of January 1998." <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.3.4.0> <http://www.w3.org/2000/01/rdf-schema#label> "H.3.4.0. Current awareness systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.3.4.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.3.4.0> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#H.3.4> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.3.4.0> <http://www.w3.org/2000/01/rdf-schema#comment> "Depricated, no longer used as of January 1998." <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.7.0> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#D.4.7> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.7.0> <http://www.w3.org/2000/01/rdf-schema#label> "D.4.7.0. Batch processing systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.7.0> <http://www.w3.org/2000/01/rdf-schema#comment> "Depricated, no longer used as of January 1998." <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.7.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.3.2> <http://www.w3.org/2000/01/rdf-schema#label> "D.4.3.2. Distributed file systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.3.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.3.2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#D.4.3> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.2.4> <http://www.w3.org/2000/01/rdf-schema#label> "H.2.4. Systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.2.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#H.2.4> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#H.2> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#J.7> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#J> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#J.7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#J.7> <http://www.w3.org/2000/01/rdf-schema#comment> "See also #C.3." <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#J.7> <http://www.w3.org/2000/01/rdf-schema#label> "J.7. COMPUTERS IN OTHER SYSTEMS" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.3.2> <http://www.w3.org/2000/01/rdf-schema#label> "C.3.2. Real-time and embedded systems" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.3.2> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#C.3> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.3.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.3> <http://www.w3.org/2000/01/rdf-schema#label> "C.3. SPECIAL-PURPOSE AND APPLICATION-BASED SYSTEMS" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.3> <http://www.w3.org/2000/01/rdf-schema#comment> "See also #J.7." <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#C> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.0.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.0.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#C.0> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.0.3> <http://www.w3.org/2000/01/rdf-schema#label> "C.0.3. System architectures" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.2.0.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.2.0.1> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#C.2.0> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#C.2.0.1> <http://www.w3.org/2000/01/rdf-schema#label> "C.2.0.1. Open Systems Interconnection reference model" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.3> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://acm.rkbexplorer.com/ontologies/acm#D.4> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.3> <http://www.w3.org/2000/01/rdf-schema#label> "D.4.3. File Systems Management" <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.3> <http://www.w3.org/2000/01/rdf-schema#comment> "See also #E.5." <http://www.rkbexplorer.com/ontologies/acm> .
+<http://acm.rkbexplorer.com/ontologies/acm#D.4.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.rkbexplorer.com/ontologies/acm> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba7ca12bf2deadd684f092da4a052de00 <http://www.w3.org/ns/ssn/> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#comment> "System is a unit of abstraction for pieces of infrastructure (and we largely care that they are) for sensing. A system has components, its subsystems, which are other systems." <http://www.w3.org/ns/ssn/> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://purl.oclc.org/NET/ssnx/ssn" <http://www.w3.org/ns/ssn/> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Model#System" <http://www.w3.org/ns/ssn/> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://purl.org/dc/elements/1.1/source> "http://www.w3.org/2005/Incubator/ssn/" <http://www.w3.org/ns/ssn/> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B718d85a02b1b9de8c90ba3885b87e36a <http://www.w3.org/ns/ssn/> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Ba2bb810d64f0791526044261457f5d98 <http://www.w3.org/ns/ssn/> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#label> "System" <http://www.w3.org/ns/ssn/> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd3cf091b09023c09ab4819f3cfaca03f <http://www.w3.org/ns/ssn/> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B162a2eb4b4c5bb8c7d3e51cba249b1b6 <http://www.w3.org/ns/ssn/> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B3fd98fbc5b6b7b6af37729df9224a871 <http://www.w3.org/ns/ssn/> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/ssn/> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalObject> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2002/07/owl#deprecated> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/LeftOperand> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2004/02/skos/core#definition> "An identified computing system used for exercising the action of the Rule."@en <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2004/02/skos/core#note> "See System Device" <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2004/02/skos/core#exactMatch> <http://www.w3.org/ns/odrl/2/systemDevice> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://www.w3.org/ns/odrl/2/> .
+<https://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#comment> "System is a unit of abstraction for pieces of infrastructure (and we largely care that they are) for sensing. A system has components, its subsystems, which are other systems." <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B753877e39b33cd685b3b5b9329b4aa17 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#label> "System" <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B45a58b92d0898e04e085af96954d5312 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B450f453749be2c8166c5a9ec86f72512 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B15e698b0162cca806b4ca0b27eccbe76 <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B0b0cd9702e6b28be4429440883bc0e9d <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B4f991f9e1f8535d14e88de651b995edc <https://www.w3.org/ns/ssn> .
+<https://www.w3.org/ns/ssn/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://www.w3.org/ns/ssn> .
+<https://w3id.org/seas/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/seas/FeatureOfInterest> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/System> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/System> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of systems, i.e., systems virtually isolated from the environment, whose behaviour and interactions with the environment are modeled.\r\n\r\n  Systems can be connected to other systems. Connected systems interact in some ways. For example:\r\n\r\n```\r\n<electric_vehicle> seas:connectedTo <electric_vehicle_service_equipment> .\r\n```\r\n\r\n  Systems can also have subsystems. Properties of subsystems somehow contribute to the properties of the supersystem. For example:\r\n\r\n```\r\n<battery> seas:subSystemOf <electric_vehicle> .\r\n```\r\n\r\nFigure below illustrates systems and their connections:\r\n\r\n[![Systems and their connections](https://w3id.org/seas/system1.png)](https://w3id.org/seas/system1.png)\r\n\r\n"@en <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/System> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/seas/SystemOntology> <https://w3id.org/seas/SystemOntology> .
+<https://w3id.org/seas/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/seas/SystemOntology> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://purl.org/dc/elements/1.1/source> "http://www.w3.org/2005/Incubator/ssn/" <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6922170487ec8c48acbebb4bd1d28e16 <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be0c84433efd089eda4252400316e4174 <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#comment> "System is a unit of abstraction for pieces of infrastructure (and we largely care that they are) for sensing. A system has components, its subsystems, which are other systems." <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B11de9152080b6c594bd9bd283c5ffbb0 <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.w3.org/2005/Incubator/ssn/wiki/SSN_Model#System" <http://purl.org/iot/ontology/fiesta-iot> .
+<http://purl.oclc.org/NET/ssnx/ssn#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd5fdca3cc70be63c36a6f846f65e43b6 <http://purl.org/iot/ontology/fiesta-iot> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf6cad8631f32dfebf158b99fdae53aa8 <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B72a07da3daa1adfbae6b3870e09c1bd8 <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Be74eea186ecfa5756e0a310f4a4b3416 <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#comment> "System is a unit of abstraction for pieces of infrastructure that implements Procedures. A System may have components, its subsystems, which are other systems."@en <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcf88272442cf7869146ae1fca5cf108c <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B8d927b83e6c8b58390cca8c6b7efcf2e <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2004/02/skos/core#definition> "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems."@en <http://www.w3.org/ns/ssn/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en <http://www.w3.org/ns/ssn/> .
+<https://bmake.th-brandenburg.de/spv#ResArtifactSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "complex object whose parts interact and form a desing-related and functional whole"@en <https://bmake.th-brandenburg.de/spv> .
+<https://bmake.th-brandenburg.de/spv#ResArtifactSystem> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en <https://bmake.th-brandenburg.de/spv> .
+<https://bmake.th-brandenburg.de/spv#ResArtifactSystem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://bmake.th-brandenburg.de/spv#> <https://bmake.th-brandenburg.de/spv> .
+<https://bmake.th-brandenburg.de/spv#ResArtifactSystem> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" <https://bmake.th-brandenburg.de/spv> .
+<https://bmake.th-brandenburg.de/spv#ResArtifactSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <https://bmake.th-brandenburg.de/spv> .
+<https://bmake.th-brandenburg.de/spv#ResArtifactSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://bmake.th-brandenburg.de/spv#ResearchArtifact> <https://bmake.th-brandenburg.de/spv> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/saref4agri/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#comment> "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other Systems. (Definition taken from http://www.w3.org/ns/ssn/System)"@en <https://saref.etsi.org/saref4agri/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en <https://saref.etsi.org/saref4agri/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> <https://saref.etsi.org/saref4agri/> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/ssn/> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#comment> "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems."@en <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/iot/vocab/iot-taxonomy-lite#> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en <http://www.w3id.org/def/caso#> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.w3id.org/def/caso#> .
+<http://www.w3.org/ns/ssn/System> <http://www.w3.org/2000/01/rdf-schema#comment> "System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other Systems."@en <http://www.w3id.org/def/caso#> .
+<https://saref.etsi.org/saref4syst/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/saref4watr/> .
+<https://saref.etsi.org/saref4syst/System> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://saref.etsi.org/saref4syst/> <https://saref.etsi.org/saref4watr/> .
+<https://saref.etsi.org/saref4syst/System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en <https://saref.etsi.org/saref4watr/> .
+<https://saref.etsi.org/saref4syst/System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/System> <http://www.w3.org/2000/01/rdf-schema#comment> "The class of systems, i.e., systems virtually isolated from the environment, whose behaviour and interactions with the environment are modeled. Systems can be connected to other systems. Connected systems interact in some ways. Systems can also have subsystems. Properties of subsystems somehow contribute to the properties of the supersystem."@en <https://saref.etsi.org/saref4syst/> .
+<https://saref.etsi.org/saref4syst/System> <http://www.w3.org/2000/01/rdf-schema#label> "System"@en <https://saref.etsi.org/saref4syst/> .
+<https://treecg.github.io/demo_data/lov/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/lov/system.nq> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://www.w3.org/2000/01/rdf-schema#label> .
+_:BpathX5Fnode <https://www.w3.org/ns/shacl#alternativePath> <http://purl.org/dc/terms/title> .
+<https://treecg.github.io/demo_data/lov/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
+_:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> _:BpathX5Fnode .
+_:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystema .
+_:Bsystema <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystema <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systema.nq> .
+_:Bsystema <https://w3id.org/tree#value> "systema" .
+_:Bsystema <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systema.nq> <https://w3id.org/tree#remainingItems> "13"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemb .
+_:Bsystemb <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemb <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemb.nq> .
+_:Bsystemb <https://w3id.org/tree#value> "systemb" .
+_:Bsystemb <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemb.nq> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemc .
+_:Bsystemc <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemc <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemc.nq> .
+_:Bsystemc <https://w3id.org/tree#value> "systemc" .
+_:Bsystemc <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemc.nq> <https://w3id.org/tree#remainingItems> "10"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemd .
+_:Bsystemd <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemd <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemd.nq> .
+_:Bsystemd <https://w3id.org/tree#value> "systemd" .
+_:Bsystemd <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemd.nq> <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsysteme .
+_:Bsysteme <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsysteme <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systeme.nq> .
+_:Bsysteme <https://w3id.org/tree#value> "systeme" .
+_:Bsysteme <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systeme.nq> <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemf .
+_:Bsystemf <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemf <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemf.nq> .
+_:Bsystemf <https://w3id.org/tree#value> "systemf" .
+_:Bsystemf <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemf.nq> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemg .
+_:Bsystemg <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemg <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemg.nq> .
+_:Bsystemg <https://w3id.org/tree#value> "systemg" .
+_:Bsystemg <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemg.nq> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemh .
+_:Bsystemh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemh.nq> .
+_:Bsystemh <https://w3id.org/tree#value> "systemh" .
+_:Bsystemh <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemh.nq> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemi .
+_:Bsystemi <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemi <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemi.nq> .
+_:Bsystemi <https://w3id.org/tree#value> "systemi" .
+_:Bsystemi <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemi.nq> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsysteml .
+_:Bsysteml <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsysteml <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systeml.nq> .
+_:Bsysteml <https://w3id.org/tree#value> "systeml" .
+_:Bsysteml <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systeml.nq> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemm .
+_:Bsystemm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemm.nq> .
+_:Bsystemm <https://w3id.org/tree#value> "systemm" .
+_:Bsystemm <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemm.nq> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemn .
+_:Bsystemn <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemn <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemn.nq> .
+_:Bsystemn <https://w3id.org/tree#value> "systemn" .
+_:Bsystemn <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemn.nq> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemo .
+_:Bsystemo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemo.nq> .
+_:Bsystemo <https://w3id.org/tree#value> "systemo" .
+_:Bsystemo <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemo.nq> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemp .
+_:Bsystemp <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemp <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemp.nq> .
+_:Bsystemp <https://w3id.org/tree#value> "systemp" .
+_:Bsystemp <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemp.nq> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemq .
+_:Bsystemq <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemq <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemq.nq> .
+_:Bsystemq <https://w3id.org/tree#value> "systemq" .
+_:Bsystemq <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemq.nq> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystems .
+_:Bsystems <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystems <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systems.nq> .
+_:Bsystems <https://w3id.org/tree#value> "systems" .
+_:Bsystems <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systems.nq> <https://w3id.org/tree#remainingItems> "50"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemt .
+_:Bsystemt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemt.nq> .
+_:Bsystemt <https://w3id.org/tree#value> "systemt" .
+_:Bsystemt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemt.nq> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemu .
+_:Bsystemu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemu.nq> .
+_:Bsystemu <https://w3id.org/tree#value> "systemu" .
+_:Bsystemu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemu.nq> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:Bsystemw .
+_:Bsystemw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:Bsystemw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/systemw.nq> .
+_:Bsystemw <https://w3id.org/tree#value> "systemw" .
+_:Bsystemw <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/systemw.nq> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BaX2Bsystem .
+_:BaX2Bsystem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BaX2Bsystem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/a+system.nq> .
+_:BaX2Bsystem <https://w3id.org/tree#value> "a" .
+_:BaX2Bsystem <https://w3id.org/tree#value> "system" .
+_:BaX2Bsystem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/a+system.nq> <https://w3id.org/tree#remainingItems> "12"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BbX2Bsystem .
+_:BbX2Bsystem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BbX2Bsystem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/b+system.nq> .
+_:BbX2Bsystem <https://w3id.org/tree#value> "b" .
+_:BbX2Bsystem <https://w3id.org/tree#value> "system" .
+_:BbX2Bsystem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/b+system.nq> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BcX2Bsystem .
+_:BcX2Bsystem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BcX2Bsystem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/c+system.nq> .
+_:BcX2Bsystem <https://w3id.org/tree#value> "c" .
+_:BcX2Bsystem <https://w3id.org/tree#value> "system" .
+_:BcX2Bsystem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/c+system.nq> <https://w3id.org/tree#remainingItems> "8"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BdX2Bsystem .
+_:BdX2Bsystem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BdX2Bsystem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/d+system.nq> .
+_:BdX2Bsystem <https://w3id.org/tree#value> "d" .
+_:BdX2Bsystem <https://w3id.org/tree#value> "system" .
+_:BdX2Bsystem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/d+system.nq> <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BfX2Bsystem .
+_:BfX2Bsystem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BfX2Bsystem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/f+system.nq> .
+_:BfX2Bsystem <https://w3id.org/tree#value> "f" .
+_:BfX2Bsystem <https://w3id.org/tree#value> "system" .
+_:BfX2Bsystem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/f+system.nq> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BhX2Bsystem .
+_:BhX2Bsystem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BhX2Bsystem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/h+system.nq> .
+_:BhX2Bsystem <https://w3id.org/tree#value> "h" .
+_:BhX2Bsystem <https://w3id.org/tree#value> "system" .
+_:BhX2Bsystem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/h+system.nq> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BiX2Bsystem .
+_:BiX2Bsystem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BiX2Bsystem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/i+system.nq> .
+_:BiX2Bsystem <https://w3id.org/tree#value> "i" .
+_:BiX2Bsystem <https://w3id.org/tree#value> "system" .
+_:BiX2Bsystem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/i+system.nq> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BlX2Bsystem .
+_:BlX2Bsystem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BlX2Bsystem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/l+system.nq> .
+_:BlX2Bsystem <https://w3id.org/tree#value> "l" .
+_:BlX2Bsystem <https://w3id.org/tree#value> "system" .
+_:BlX2Bsystem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/l+system.nq> <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BmX2Bsystem .
+_:BmX2Bsystem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BmX2Bsystem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/m+system.nq> .
+_:BmX2Bsystem <https://w3id.org/tree#value> "m" .
+_:BmX2Bsystem <https://w3id.org/tree#value> "system" .
+_:BmX2Bsystem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/m+system.nq> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BnX2Bsystem .
+_:BnX2Bsystem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BnX2Bsystem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/n+system.nq> .
+_:BnX2Bsystem <https://w3id.org/tree#value> "n" .
+_:BnX2Bsystem <https://w3id.org/tree#value> "system" .
+_:BnX2Bsystem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/n+system.nq> <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BoX2Bsystem .
+_:BoX2Bsystem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BoX2Bsystem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/o+system.nq> .
+_:BoX2Bsystem <https://w3id.org/tree#value> "o" .
+_:BoX2Bsystem <https://w3id.org/tree#value> "system" .
+_:BoX2Bsystem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/o+system.nq> <https://w3id.org/tree#remainingItems> "22"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BpX2Bsystem .
+_:BpX2Bsystem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BpX2Bsystem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/p+system.nq> .
+_:BpX2Bsystem <https://w3id.org/tree#value> "p" .
+_:BpX2Bsystem <https://w3id.org/tree#value> "system" .
+_:BpX2Bsystem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/p+system.nq> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BrX2Bsystem .
+_:BrX2Bsystem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BrX2Bsystem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/r+system.nq> .
+_:BrX2Bsystem <https://w3id.org/tree#value> "r" .
+_:BrX2Bsystem <https://w3id.org/tree#value> "system" .
+_:BrX2Bsystem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/r+system.nq> <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BsX2Bsystem .
+_:BsX2Bsystem <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsX2Bsystem <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/s+system.nq> .
+_:BsX2Bsystem <https://w3id.org/tree#value> "s" .
+_:BsX2Bsystem <https://w3id.org/tree#value> "system" .
+_:BsX2Bsystem <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/s+system.nq> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BsystemX2Bt .
+_:BsystemX2Bt <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsystemX2Bt <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/system+t.nq> .
+_:BsystemX2Bt <https://w3id.org/tree#value> "system" .
+_:BsystemX2Bt <https://w3id.org/tree#value> "t" .
+_:BsystemX2Bt <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/system+t.nq> <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<https://treecg.github.io/demo_data/lov/system.nq> <https://w3id.org/tree#relation> _:BsystemX2Bu .
+_:BsystemX2Bu <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
+_:BsystemX2Bu <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/lov/system+u.nq> .
+_:BsystemX2Bu <https://w3id.org/tree#value> "system" .
+_:BsystemX2Bu <https://w3id.org/tree#value> "u" .
+_:BsystemX2Bu <https://w3id.org/tree#path> _:BpathX5Fnode .
+<https://treecg.github.io/demo_data/lov/system+u.nq> <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

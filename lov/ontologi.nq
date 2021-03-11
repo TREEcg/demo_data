@@ -1,0 +1,744 @@
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologie du projet Istex pour le triple store Triplex"@fr <https://data.istex.fr/ontology/istex#> .
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/ontology/bibo/> <https://data.istex.fr/ontology/istex#> .
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/dcat> <https://data.istex.fr/ontology/istex#> .
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/2002/07/owl#versionIRI> <https://data.istex.fr/ontology/istex> <https://data.istex.fr/ontology/istex#> .
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/2000/01/rdf-schema#comment> "v 1.6 30-01-2018 Ajout de la propriété istex:tool\n\nv 1.9 17-12-2018 Ajout de la propriété istex:eISBN\n\nv 1.8 11-10-2018 Ajout de la propriété istex:publicationTitle\nSuppression de la propriété istex:bookTitle\nSuppression de la propriété istex:databaseTitle\nSuppression de la propriété istex:journalTitle\nSuppression de la propriété istex:referenceWorksTitle\nSuppression de la propriété istex:seriesTitle\n\nv 1.7 21-09-2018 Ajout de la propriété istex:bookTitle\nAjout de la propriété istex:databaseTitle\nAjout de la propriété istex:journalTitle\nAjout de la propriété istex:referenceWorksTitle\nAjout de la propriété istex:seriesTitle\n\nv 1.6 22-05-2018 Ajout de la propriété istex:analysisType\nAjout de la propriété istex:addresseeWork\n\nv 1.5 22-12-2017 Ajout de la propriété istex:subjectScopus\nAjout de la classe istex:ScopusConcept\n\nv 1.4 16-10-2017 Ajout de la propriété istex:identityProvider\nSuppression de istex:catalog\nSuppression de istex:SoftwareApplication\nAjout commentaires niveau Classe et Object Properties\nAjout de la classe istex:NamedEntityConcept\nAjout de la classe istex:EnrichmentProcessConcept\nAjout de l'object property istex:enrichmentProcess\n\nV 1.3 22-09-2017 Ajout de la propriété istex:accessURL\nAjout de la propriété istex:subjectLabel\nAjout de la propriété istex:catalog\nAjout de la Classe istex:SoftwareApplication + ajout range à istex:enrichmentType et istex:constraint\nAjout de la Classe istex:PublisherConcept\nSuppression domaine istex:query + ajout range xsd:anyURI au lieu de rdfs:literal\n\nV 1.2 22-06-2017 Changement uri pour passer à https://data.istex.fr/ontology/istex\nAjouté la propriété istex:query\nAjouté les propriétés  schema:endDate et schema:startDate ainsi que la classe dct:PeriodOfTime et la propriété dct:temporal pour décrire la période de couverture des lots de chargement\nAjouté la propriété istex:affiliation (existe dans MODS XML mais pas dans MODS OWL)\nAjouté la propriété quantityOfItems pour décrire le nombre de titres présents dans chaque corpus ISTEX\n\nV 1.1 12-04-2017 Ajout de la classe dcterms:LinguisticSystem - les valeurs de dcterms:language sont des instances de la classe LinguisticSystem\n\nV 1.0 11-04-2017 Première version de l'ontologie basée sur bibo, skos et prov-o"@fr <https://data.istex.fr/ontology/istex#> .
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/2002/07/owl#imports> <http://xmlns.com/foaf/0.1/> <https://data.istex.fr/ontology/istex#> .
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/2004/02/skos/core> <https://data.istex.fr/ontology/istex#> .
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/2002/07/owl#imports> <http://www.w3.org/ns/prov-o-20130430> <https://data.istex.fr/ontology/istex#> .
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <https://data.istex.fr/ontology/istex#> .
+<http://data.lirmm.fr/ontologies/oan> <http://purl.org/dc/terms/title> "Ontologie OAN" <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan> <http://purl.org/dc/terms/description> "Cette ontologie représente la description du fonctionnement de l&#039;assemblée nationale française." <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan> <http://purl.org/dc/terms/status> <http://purl.org/adms/status/UnderDevelopment> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan> <http://purl.org/dc/elements/1.1/creator> <http://data.lirmm.fr/ontologies/oan#snake> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan> <http://purl.org/dc/terms/partOf> <http://data.lirmm.fr/ontologies> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan> <http://purl.org/dc/terms/created> "2011-03-30"^^<http://www.w3.org/2001/XMLSchema#date> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.lirmm.fr/ontologies/oan/" <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan> <http://purl.org/dc/terms/modified> "2012-04-25"^^<http://www.w3.org/2001/XMLSchema#date> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan> <http://purl.org/vocab/vann/preferredNamespacePrefix> "oan" <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan> <http://purl.org/dc/elements/1.1/creator> <http://data.lirmm.fr/ontologies/oan#fran%C3%A7ois> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan> <http://xmlns.com/foaf/0.1/homepage> <http://data.lirmm.fr/ontologies/oan.html> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/adms#SemanticAsset> <http://data.lirmm.fr/ontologies/oan> .
+<http://data.lirmm.fr/ontologies/oan> <http://purl.org/dc/terms/type> <http://purl.org/adms/assettype/Ontology> <http://data.lirmm.fr/ontologies/oan> .
+<https://w3id.org/arco/ontology/core> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/countingas.owl> <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/elements/1.1/title> "Ontologia Core (ArCo network)"@it <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.0"@en <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/elements/1.1/description> "Questo modulo rappresenta concetti trasversali a tutta la network, che sono quindi importati da tutti gli altri moduli ontologici (es.: relazione parte-tutto, classificazione)."@it <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/partof.owl> <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl> <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/place.owl#> <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://www.w3.org/2002/07/owl#versionInfo> "Versione 1.0"@it <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl#> <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/elements/1.1/creator> "Andrea Nuzzolese (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/elements/1.1/language> <http://publications.europa.eu/resource/authority/language/ENG> <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/elements/1.1/title> "Core Ontology (ArCo network)"@en <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://www.w3.org/2000/01/rdf-schema#comment> "The Core module represents general-purpose concepts orthogonal to the whole network, which are imported by all other ontology modules (e.g. part-whole relation, classification)."@en <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/elements/1.1/creator> "Valentina Carriero (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/terms/license> <https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40> <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://www.w3.org/2000/01/rdf-schema#label> "Core Ontology (ArCo network)"@en <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://www.w3.org/2000/01/rdf-schema#comment> "Questo modulo rappresenta concetti trasversali a tutta la network, che sono quindi importati da tutti gli altri moduli ontologici (es.: relazione parte-tutto, classificazione)."@it <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/elements/1.1/creator> "Valentina Presutti (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/elements/1.1/creator> "Marialetizia Mancinelli (MiBAC, ICCD)" <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/terms/issued> "2018-03-07" <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/elements/1.1/language> <http://publications.europa.eu/resource/authority/language/ITA> <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/terms/modified> "2019-06-01" <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl> <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/elements/1.1/creator> "Ludovica Marinucci (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia Core (ArCo network)"@it <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/elements/1.1/creator> "Chiara Veninata (MiBAC, ICCD)" <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/core> <http://purl.org/dc/elements/1.1/description> "The Core module represents general-purpose concepts orthogonal to the whole network, which are imported by all other ontology modules (e.g. part-whole relation, classification)."@en <https://w3id.org/arco/ontology/core> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/elements/1.1/creator> "Valentina Carriero (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/terms/license> <https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/elements/1.1/title> "Context Description Ontology (ArCo network)"@en <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/elements/1.1/creator> "Valentina Presutti (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.w3.org/2000/01/rdf-schema#comment> "The Context Description module includes models for the context of a cultural property, in a broad sense: agents (e.g.: author, collector, copyright holder), objects (e.g.: inventories, bibliography, protective measures, other cultural properties, collections etc.), activities (e.g.: surveys, conservation interventions), situations (e.g.: commission, coin issuance, estimate, legal situation) related, involved or involving the cultural property. Thus it represents attributes that do not result from a measurement of features in a cultural property, but are associated with it.\nIn this module are used as template the following Ontology Design Patterns:\n- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl\n- http://www.ontologydesignpatterns.org/cp/owl/countingas.owl\n- http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl\n- http://www.ontologydesignpatterns.org/cp/owl/classification.owl\n- http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl\n- http://www.ontologydesignpatterns.org/cp/owl/place.owl\n- http://www.ontologydesignpatterns.org/cp/owl/situation.owl"@en <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/terms/issued> "2018-03-07" <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/elements/1.1/creator> "Chiara Veninata (MiBACT, ICCD)" <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/countingas.owl> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/elements/1.1/creator> "Marialetizia Mancinelli (MiBACT, ICCD)" <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/elements/1.1/language> <http://publications.europa.eu/resource/authority/language/ITA> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/arco/ontology/catalogue> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/arco/ontology/core> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/terms/modified> "2019-06-01" <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/elements/1.1/creator> "Ludovica Marinucci (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia della Descrizione di Contesto (ArCo network)"@it <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/place.owl#> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/elements/1.1/description> "Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc. Dunque, rappresenta attributi che non sono il risultato di una misurazione condotta sul bene culturale, ma che sono associati al bene culturale."@it <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.0"@en <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/elements/1.1/title> "Ontologia della Descrizione di Contesto (ArCo network)"@it <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.w3.org/2000/01/rdf-schema#comment> "Questo modulo, detto della descrizione di contesto, include le informazioni che riguardano il contesto (inteso in senso ampio) in cui il bene culturale viene a trovarsi nel corso della sua storia. Fanno per esempio parte delle informazioni di contesto: autore, committente, collezione, ambito culturale, eventi coinvolti, contenitore giuridico, utente, circostanza, modalità di fruizione, bibliografia, documentazione collegata, collocazione in un determinato inventario, etc. Dunque, rappresenta attributi che non sono il risultato di una misurazione condotta sul bene culturale, ma che sono associati al bene culturale.\nIn questo modulo sono riusati come template i seguenti Ontology Design Patterns:\n- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl\n- http://www.ontologydesignpatterns.org/cp/owl/countingas.owl\n- http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl\n- http://www.ontologydesignpatterns.org/cp/owl/classification.owl\n- http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl\n- http://www.ontologydesignpatterns.org/cp/owl/place.owl\n- http://www.ontologydesignpatterns.org/cp/owl/situation.owl"@it <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/agentrole.owl> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.w3.org/2002/07/owl#versionInfo> "Versione 1.0"@it <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/elements/1.1/description> "The Context Description module includes models for the context of a cultural property, in a broad sense: agents (e.g.: author, collector, copyright holder), objects (e.g.: inventories, bibliography, protective measures, other cultural properties, collections etc.), activities (e.g.: surveys, conservation interventions), situations (e.g.: commission, coin issuance, estimate, legal situation) related, involved or involving the cultural property. Thus it represents attributes that do not result from a measurement of features in a cultural property, but are associated with it."@en <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://mklab.iti.gr/pericles/BornDigitalArchives_ODP.owl> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/elements/1.1/creator> "Andrea Nuzzolese (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.w3.org/2000/01/rdf-schema#label> "Context Description Ontology (ArCo network)"@en <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/context-description> <http://purl.org/dc/elements/1.1/language> <http://publications.europa.eu/resource/authority/language/ENG> <https://w3id.org/arco/ontology/context-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/elements/1.1/creator> "Andrea Nuzzolese (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/elements/1.1/language> <http://publications.europa.eu/resource/authority/language/ENG> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/arco/ontology/location> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://www.w3.org/2002/07/owl#versionInfo> "Versione 1.0"@it <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://www.w3.org/2000/01/rdf-schema#comment> "The Denotative Description module encodes the characteristics of a cultural property, as detectable and/or detected during the cataloguing process and measurable according to a reference system. Examples include measurements e.g. length, constituting materials e.g. clay, employed techniques e.g. melting, conservation status e.g. good, decent, bad.\nIn this module are used as template the following Ontology Design Patterns:\n- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl\n- http://www.ontologydesignpatterns.org/cp/owl/classification.owl\n- http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl\n- http://www.ontologydesignpatterns.org/cp/owl/situation.owl"@en <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/arco/ontology/context-description> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/elements/1.1/title> "Ontologia della Descrizione Denotativa (ArCo network)"@it <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/elements/1.1/title> "Denotative Description Ontology (ArCo network)"@en <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/elements/1.1/description> "Questo modulo, detto della descrizione denotativa (denotazione è inteso come l'atto di indicare una cosa attraverso segni esteriori), modella le caratteristiche di un bene culturale, individuabili e/o individuate durante il processo di catalogazione e misurabili in accordo con un sistema di riferimento. Esempi includono misure es. lunghezza, materia es. argilla, tecniche es. fusione, stato di conservazione es. buono, discreto, cattivo."@it <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://www.w3.org/2000/01/rdf-schema#comment> "Questo modulo, detto della descrizione denotativa (denotazione è inteso come l'atto di indicare una cosa attraverso segni esteriori), modella le caratteristiche di un bene culturale, individuabili e/o individuate durante il processo di catalogazione e misurabili in accordo con un sistema di riferimento. Esempi includono misure es. lunghezza, materia es. argilla, tecniche es. fusione, stato di conservazione es. buono, discreto, cattivo.\nIn questo modulo si riusano come template i seguenti Ontology Design Patterns:\n- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl\n- http://www.ontologydesignpatterns.org/cp/owl/classification.owl\n- http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl\n- http://www.ontologydesignpatterns.org/cp/owl/situation.owl"@it <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.0"@en <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/descriptionandsituation.owl> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/elements/1.1/creator> "Chiara Veninata (MiBAC, ICCD)" <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://www.w3.org/2000/01/rdf-schema#label> "Denotative Description Ontology (ArCo network)"@en <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia della Descrizione Denotativa (ArCo network)"@it <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/arco/ontology/core> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/terms/modified> "2019-06-01" <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/elements/1.1/language> <http://publications.europa.eu/resource/authority/language/ITA> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/elements/1.1/creator> "Ludovica Marinucci (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/terms/issued> "2018-03-07" <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/elements/1.1/creator> "Marialetizia Mancinelli (MiBAC, ICCD)" <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/elements/1.1/description> "The Denotative Description module encodes the characteristics of a cultural property, as detectable and/or detected during the cataloguing process and measurable according to a reference system. Examples include measurements e.g. length, constituting materials e.g. clay, employed techniques e.g. melting, conservation status e.g. good, decent, bad."@en <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/terms/license> <https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40> <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/elements/1.1/creator> "Valentina Carriero (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/denotative-description> <http://purl.org/dc/elements/1.1/creator> "Valentina Presutti (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/denotative-description> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/elements/1.1/description> "Questo modulo modella le informazioni relative al Catalogo Generale dei Beni Culturali (ICCD-MiBAC) e alle schede di catalogo che descrivono un bene culturale."@it <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/elements/1.1/creator> "Andrea Nuzzolese (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia del Catalogo (ArCo network)"@it <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/elements/1.1/language> <http://publications.europa.eu/resource/authority/language/ENG> <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://www.w3.org/2000/01/rdf-schema#comment> "The Catalogue module allows the description of concepts related to the Italian General Catalogue of Cultural Heritage (ICCD-MiBAC), and in particular catalogue records, that is XML files recording all data gathered by a cataloguer on a particular cultural property.\nIn this module are used as template the following Ontology Design Patterns:\n- http://www.ontologydesignpatterns.org/cp/owl/classification.owl\n- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"@en <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://www.w3.org/2002/07/owl#versionInfo> "Versione 1.0"@it <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/elements/1.1/creator> "Maria Letizia Mancinelli (MiBACT, ICCD)" <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://ontologydesignpatterns.org/cp/owl/classification.owl> <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/elements/1.1/title> "Catalogue Ontology (ArCo network)"@en <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.0"@en <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://www.w3.org/2000/01/rdf-schema#comment> "Questo modulo modella le informazioni relative al Catalogo Generale dei Beni Culturali (ICCD-MiBAC) e alle schede di catalogo che descrivono un bene culturale.\nIn questo modulo sono riusati come template i seguenti Ontology Design Patterns:\n- http://www.ontologydesignpatterns.org/cp/owl/classification.owl\n- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"@it <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/elements/1.1/language> <http://publications.europa.eu/resource/authority/language/ITA> <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://www.w3.org/2000/01/rdf-schema#label> "Catalogue Ontology (ArCo network)"@en <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/arco/ontology/core> <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/terms/modified> "2019-06-01" <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/elements/1.1/creator> "Ludovica Marinucci (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/elements/1.1/description> "The Catalogue module allows the description of concepts related to the Italian General Catalogue of Cultural Heritage (ICCD-MiBAC), and in particular catalogue records, that is XML files recording all data gathered by a cataloguer on a particular cultural property."@en <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/terms/issued> "2018-03-07" <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/elements/1.1/creator> "Chiara Veninata (MiBACT, ICCD)" <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://ontologydesignpatterns.org/cp/owl/sequence.owl> <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/terms/license> <https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40> <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/elements/1.1/creator> "Valentina Carriero (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/elements/1.1/title> "Ontologia del Catalogo (ArCo network)"@it <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/catalogue> <http://purl.org/dc/elements/1.1/creator> "Valentina Presutti (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/catalogue> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/elements/1.1/description> "The Cultural Event module models cultural events, i.e. events involving cultural properties."@en <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://ontologydesignpatterns.org/cp/owl/sequence.owl> <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.0"@en <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/elements/1.1/title> "Ontologia degli Eventi Culturali (ArCo network)"@it <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/elements/1.1/creator> "Andrea Nuzzolese (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/elements/1.1/language> <http://publications.europa.eu/resource/authority/language/ENG> <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/elements/1.1/title> "Cultural Event Ontology (ArCo network)"@en <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://www.ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl> <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://www.w3.org/2002/07/owl#versionInfo> "Versione 1.0"@it <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://www.w3.org/2000/01/rdf-schema#comment> "Questo modulo modella gli eventi culturali, cioè eventi che coinvolgono un bene culturale.\nIn questo modulo sono riusati come template i seguenti Ontology Design Patterns:\n- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl\n- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"@it <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/terms/issued> "2018-03-07" <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/elements/1.1/creator> "Chiara Veninata (MiBACT, ICCD)" <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://www.w3.org/2000/01/rdf-schema#label> "Cultural Event Ontology (ArCo network)"@en <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/terms/license> <https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40> <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://www.w3.org/2000/01/rdf-schema#comment> "The Cultural Event module models cultural events, i.e. events involving cultural properties.\nIn this module are used as template the following Ontology Design Patterns:\n- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl\n- http://www.ontologydesignpatterns.org/cp/owl/sequence.owl"@en <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/elements/1.1/creator> "Valentina Carriero (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/elements/1.1/creator> "Valentina Presutti (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia degli Eventi Culturali (ArCo network)"@it <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/elements/1.1/description> "Questo modulo modella gli eventi culturali, cioè eventi che coinvolgono un bene culturale."@it <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/arco/ontology/core> <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/terms/modified> "2019-06-01" <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/elements/1.1/creator> "Marialetizia Mancinelli (MiBACT, ICCD)" <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/elements/1.1/language> <http://publications.europa.eu/resource/authority/language/ITA> <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/arco/ontology/catalogue> <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/cultural-event> <http://purl.org/dc/elements/1.1/creator> "Ludovica Marinucci (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/cultural-event> .
+<https://w3id.org/arco/ontology/location> <http://www.w3.org/2002/07/owl#versionInfo> "Versione 1.0"@it <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia della Localizzazione (ArCo network)"@it <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/place.owl#> <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://www.w3.org/2000/01/rdf-schema#comment> "The module Location models information related to the localization and georeferencing of a cultural property.\nIn this module are used as template the following Ontology Design Patterns:\n- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl\n- http://www.ontologydesignpatterns.org/cp/owl/classification.owl\n- http://www.ontologydesignpatterns.org/cp/owl/place.owl\n- http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl\n- http://www.ontologydesignpatterns.org/cp/owl/situation.owl"@en <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://www.w3.org/2000/01/rdf-schema#label> "Location Ontology (ArCo network)"@en <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/elements/1.1/language> <http://publications.europa.eu/resource/authority/language/ENG> <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://www.w3.org/2000/01/rdf-schema#comment> "Questo modulo modella le informazioni relative alle localizzazioni e alla georeferenziazione di un bene culturale.\nIn questo modulo si riusano come template i seguenti Ontology Design Patterns:\n- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl\n- http://www.ontologydesignpatterns.org/cp/owl/classification.owl\n- http://www.ontologydesignpatterns.org/cp/owl/place.owl\n- http://www.ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl\n- http://www.ontologydesignpatterns.org/cp/owl/situation.owl"@it <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/elements/1.1/creator> "Andrea Nuzzolese (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl> <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.0" <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://ontologydesignpatterns.org/cp/owl/timeindexedsituation.owl> <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/elements/1.1/creator> "Ludovica Marinucci (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/elements/1.1/language> <http://publications.europa.eu/resource/authority/language/ITA> <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/arco/ontology/core> <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/terms/modified> "2019-06-01" <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/elements/1.1/creator> "Chiara Veninata (MiBAC, ICCD)" <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl> <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/elements/1.1/creator> "Valentina Presutti (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/elements/1.1/creator> "Valentina Carriero (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/terms/license> <https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40> <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/elements/1.1/title> "Location Ontology (ArCo network)"@en <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/elements/1.1/creator> "Marialetizia Mancinelli (MiBAC, ICCD)" <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/elements/1.1/title> "Ontologia della Localizzazione (ArCo network)"@it <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/location> <http://purl.org/dc/terms/issued> "2018-03-07" <https://w3id.org/arco/ontology/location> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/elements/1.1/creator> "Andrea Nuzzolese (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/elements/1.1/language> <http://publications.europa.eu/resource/authority/language/ENG> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/arco/ontology/location> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/elements/1.1/title> "Ontologia ArCo (ArCo network)"@it <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://www.w3.org/2002/07/owl#versionInfo> "Versione 1.0"@it <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/elements/1.1/description> "Questo è il modulo centrale della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al dominio dei beni culturali, considerate top-level. Vengono importati tutti gli altri moduli della rete."@it <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://www.w3.org/2000/01/rdf-schema#label> "ArCo Ontology (ArCo network)"@en <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by-sa/4.0/> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/partof.owl> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/arco/ontology/context-description> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/arco/ontology/cultural-event> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/arco/ontology/denotative-description> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/elements/1.1/creator> "Aldo Gangemi (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://www.w3.org/2002/07/owl#versionInfo> "Version 1.0"@en <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/classification.owl> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/elements/1.1/description> "The ArCo module is the root of the network ArCo - Architecture of Knowledge. It imports all the other modules and models top-level distinctions from the cultural heritage domain."@en <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/elements/1.1/creator> "Chiara Veninata (MiBAC, ICCD)" <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/terms/modified> "2019-06-01" <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://www.w3.org/2000/01/rdf-schema#comment> "Questo è il modulo centrale della rete di ontologie di ArCo - Architettura della Conoscenza. Qui si modellano informazioni, relative al dominio dei beni culturali, considerate top-level. Vengono importati tutti gli altri moduli della rete.\nIn questo modulo sono riusati come template i seguenti Ontology Design Patterns:\n- http://www.ontologydesignpatterns.org/cp/owl/classification.owl\n- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl\n- http://www.ontologydesignpatterns.org/cp/owl/componency.owl\n- http://www.ontologydesignpatterns.org/cp/owl/partof.owl\n- http://www.ontologydesignpatterns.org/cp/owl/situation.owl"@it <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/elements/1.1/language> <http://publications.europa.eu/resource/authority/language/ITA> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://www.w3.org/2002/07/owl#imports> <https://w3id.org/arco/ontology/catalogue> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/terms/issued> "2019-03-05" <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/elements/1.1/title> "ArCo Ontology (ArCo network)"@en <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/componency.owl> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/elements/1.1/creator> "Ludovica Marinucci (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://www.w3.org/2000/01/rdf-schema#comment> "The ArCo module is the root of the network ArCo - Architecture of Knowledge. It imports all the other modules and models top-level distinctions from the cultural heritage domain.\nIn this module are used as template the following Ontology Design Patterns:\n- http://www.ontologydesignpatterns.org/cp/owl/classification.owl\n- http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl\n- http://www.ontologydesignpatterns.org/cp/owl/componency.owl\n- http://www.ontologydesignpatterns.org/cp/owl/partof.owl\n- http://www.ontologydesignpatterns.org/cp/owl/situation.owl"@en <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologia ArCo (ArCo network)"@it <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/elements/1.1/creator> "Maria Letizia Mancinelli (MiBAC, ICCD)" <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://ontologydesignpatterns.org/opla/reusesPatternAsTemplate> <http://www.ontologydesignpatterns.org/cp/owl/situation.owl> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/elements/1.1/creator> "Valentina Carriero (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/terms/license> <https://w3id.org/italia/controlled-vocabulary/licences/A31_CCBYSA40> <https://w3id.org/arco/ontology/arco> .
+<https://w3id.org/arco/ontology/arco> <http://purl.org/dc/elements/1.1/creator> "Valentina Presutti (ISTC-CNR, STLab)" <https://w3id.org/arco/ontology/arco> .
+<http://www.w3id.org/urban-iot/electric> <http://www.w3.org/2000/01/rdf-schema#comment> "Electric Mobility module of the suite of ontologies for urban IoT devices."@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://purl.org/dc/elements/1.1/creator> "Mario Scrocca (Cefriel)" <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://purl.org/dc/elements/1.1/title> "Ontologie per gli Apparati IoT Urbani - Modulo Electric Mobility"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://purl.org/dc/elements/1.1/creator> "Ilaria Baroni (Cefriel)" <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.w3id.org/urban-iot/electric#" <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://purl.org/vocab/vann/preferredNamespacePrefix> "uiote" <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://www.w3.org/2000/01/rdf-schema#comment> "Modulo Electric Mobility delle ontologie per gli apparati IoT urbani."@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://purl.org/dc/elements/1.1/contributor> "Direzione Mobilità e Trasporti - Area Pianificazione e Programmazione Mobilità (Comune di Milano)" <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://www.w3.org/2000/01/rdf-schema#label> "Urban IoT Ontologies - Electric Mobility Module"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://www.w3.org/2002/07/owl#imports> <http://www.w3id.org/urban-iot/core/1.0.0> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://purl.org/dc/elements/1.1/title> "Urban IoT Ontologies - Electric Mobility Module"@en <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://purl.org/dc/elements/1.1/contributor> "Area Pianificazione e Monitoraggio (AMAT Milano)" <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://purl.org/dc/elements/1.1/creator> "Irene Celino (Cefriel)" <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://purl.org/dc/elements/1.1/rights> "Copyright Comune di Milano, 2020" <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://purl.org/dc/elements/1.1/publisher> "Comune di Milano" <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3id.org/urban-iot/electric/1.0.0> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://purl.org/dc/elements/1.1/contributor> "Direzione Sistemi Informativi ed Agenda Digitale - Area Gestione ed Integrazione Dati (Comune di Milano)" <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologie per gli Apparati IoT Urbani - Modulo Electric Mobility"@it <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://purl.org/dc/terms/bibliographicCitation> "Comune di Milano. Urban IoT Ontologies - Electric Mobility Module (v1.0.0). http://www.w3id.org/urban-iot/electric" <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/electric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://www.w3id.org/urban-iot/electric> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/elements/1.1/contributor> "Direzione Mobilità e Trasporti - Area Pianificazione e Programmazione Mobilità (Comune di Milano)" <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.w3id.org/urban-iot/core#" <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://www.w3.org/2000/01/rdf-schema#label> "Urban IoT Ontologies - Core Module"@en <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://www.w3.org/2002/07/owl#versionInfo> "v1.0.0" <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/vocab/vann/preferredNamespacePrefix> "uiot" <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://www.w3.org/2000/01/rdf-schema#label> "Ontologie per gli Apparati IoT Urbani - Modulo Core"@it <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://www.w3.org/2000/01/rdf-schema#comment> "Modulo core delle ontologie per gli apparati IoT urbani."@it <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/elements/1.1/creator> "Ilaria Baroni (Cefriel)" <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://www.w3.org/2000/01/rdf-schema#comment> "Core module of the suite of ontologies for urban IoT devices."@en <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/elements/1.1/creator> "Mario Scrocca (Cefriel)" <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/terms/bibliographicCitation> "Comune di Milano. Urban IoT Ontologies - Core Module (v1.0.0). http://www.w3id.org/urban-iot/core" <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/elements/1.1/contributor> "Direzione Sistemi Informativi ed Agenda Digitale - Area Gestione ed Integrazione Dati (Comune di Milano)" <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/elements/1.1/title> "Ontologie per gli Apparati IoT Urbani - Modulo Core"@it <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://www.w3.org/2002/07/owl#versionIRI> <http://www.w3id.org/urban-iot/core/1.0.0> <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/elements/1.1/title> "Urban IoT Ontologies - Core Module"@en <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/elements/1.1/rights> "Copyright Comune di Milano, 2020" <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/elements/1.1/creator> "Irene Celino (Cefriel)" <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/elements/1.1/publisher> "Comune di Milano" <http://www.w3id.org/urban-iot/core> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/elements/1.1/contributor> "Area Pianificazione e Monitoraggio (AMAT Milano)" <http://www.w3id.org/urban-iot/core> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmovn> <http://xmlns.com/foaf/0.1/primaryTopic> <http://premon.fbk.eu/ontology/vn> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmovn> <http://purl.org/dc/terms/modified> "2017-08-23"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmovn> <http://purl.org/dc/terms/issued> "2017-08-23"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmovn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmovn> <http://purl.org/dc/terms/title> "Predicate Model for Ontologies (PreMOn) - VerbNet ontology module"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/modified> "2016-03-30"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/stuff/rev#hasReview> _:B718744447cd953716780f79077c2a3e1 <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/description> "The ontology aims at modelling the data on cultural institutes or sites such as data regarding the agents that play a specific role on cultural institutes or sites, the sites themselves, the contact points, all multimedia files which describe the cultural institute or site and any other information useful to the public in order to access the institute or site. Moreover, the ontology represents events that can take place in specific cultural institutes or sites."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://www.w3.org/ns/dcat#keyword> "Multimedia" <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/annarita-orsini-35312a99> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://www.w3.org/ns/dcat#keyword> "Government" <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/issued> "2015-01-12"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://xmlns.com/foaf/0.1/homepage> "http://dati.beniculturali.it/lodview/cis/.html" <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/title> "Cultural-ON (Cultural ONtology): Ontologia dei Luoghi della Cultura e degli Eventi Culturali"@it <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/creator> <http://stlab.istc.cnr.it/stlab/staff/luigi-asprino/> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/aldo-gangemi> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/publisher> <www.beniculturali.it/> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/creator> <www.beniculturali.it/> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/ita> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://www.w3.org/ns/dcat#keyword> "Events" <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/chiaraveninata> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://dati.beniculturali.it/cis/" <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/creator> <http://stlab.istc.cnr.it/stlab/staff/andrea-nuzzolese> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/creator> <https://plus.google.com/106628269166481436037> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/vocab/vann/preferredNamespacePrefix> "cis" <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/cis/versions/2016-03-30.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/valentina-presutti> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/title> "Cultural-ON (Cultural ONtology): Cultural Institute/Site and Cultural Event Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.beniculturali.it/cultural-ON/cultural-ON.owl> <http://purl.org/dc/terms/creator> <mailto:giorgia.lodi@agid.gov.it> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/turismo> <http://purl.org/dc/terms/title> "Ontología de Turismo para el Ayuntamiento de Zaragoza"@es <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/turismo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/turismo> <http://purl.org/dc/terms/title> "Ontology of Tourist for Saragossa town hall."@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/turismo> <http://purl.org/dc/terms/modified> "2016-01-04"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/turismo> <http://purl.org/dc/terms/issued> "2012-10-12"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/turismo> <http://xmlns.com/foaf/0.1/primaryTopic> <http://idi.fundacionctic.org/cruzar/turismo> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/geom> <http://purl.org/dc/terms/title> "Ontology for geometry"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/geom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/geom> <http://purl.org/dc/terms/issued> "2014-07-30"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/geom> <http://purl.org/dc/terms/modified> "2016-01-04"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/geom> <http://xmlns.com/foaf/0.1/primaryTopic> <http://data.ign.fr/def/geometrie> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/geom> <http://purl.org/dc/terms/title> "Ontologie des primitives géométriques"@fr <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/dc/terms/issued> "2016-05-06"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/imo/versions/2018-01-12.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/dc/terms/creator> <http://aidanhogan.com/foaf.rdf#me> <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://imgpedia.dcc.uchile.cl/ontology#" <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/dc/terms/description> "La Ontologia de IMGpedia provee terminos para referirse a descriptores visuales y relaciones de similitud entre imagenes"@es <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/dc/terms/modified> "2018-01-12"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://www.w3.org/ns/dcat#keyword> "Image" <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/dc/terms/title> "La Ontología de IMGpedia"@es <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/spa> <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/stuff/rev#hasReview> _:B24c6480f108ce8e2d5db02157b5e35b6 <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/dc/terms/description> "The IMGpedia Ontology provides terms to describe descriptors and similarity relations between images"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/vocab/vann/preferredNamespacePrefix> "imo" <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/dc/terms/creator> <http://scferrada.github.io/rdf/foaf.ttl#me> <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/dc/terms/title> "The IMGpedia Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://imgpedia.dcc.uchile.cl/ontology> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/stuff/rev#hasReview> _:B9842986f5fbff49ab869d243db167169 <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/dc/terms/creator> <https://www.inist.fr/> <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/dc/terms/contributor> <https://www.researchgate.net/profile/Alain_Collignon> <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/ns/dcat#keyword> "Press" <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/dc/terms/description> "ISTEX est une plateforme qui a pour ambition d’offrir, à l’ensemble de la communauté de l’enseignement supérieur et de la recherche française qui le souhaite, un accès en ligne aux collections rétrospectives de la littérature scientifique dans toutes les disciplines. À ce réservoir inégalé en ressources multidisciplinaires s’ajoute un nombre important de services à valeur ajoutée permettant d’en optimiser l’exploitation grâce à des outils de fouille de contenus (TDM) et de valorisation interactive."@fr <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/dc/terms/title> "Istex ontology for scholarly documents and extracted entities"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/dc/terms/title> "Ontologie du projet Istex pour la diffusion de la littérature scientifique"@fr <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/ns/dcat#keyword> "Metadata" <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "istex" <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://data.istex.fr/ontology/istex#" <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://xmlns.com/foaf/0.1/homepage> "https://data.istex.fr/ontology/istex/" <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/dc/terms/description> "ISTEX is a platform that aims to provide the entire French higher education and research community with an online access to retrospective collections of scientific literature in all disciplines. This unparalleled reservoir of multidisciplinary resources is complemented by a significant number of value-added services that can be used to optimise operations through content discovery and interactive valuation tools."@en <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/istex/versions/2018-12-17.n3> <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/ns/dcat#keyword> "Academy" <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/fra> <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/dc/terms/publisher> <https://www.istex.fr/> <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/dc/terms/issued> "2017-04-11"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://raw.githubusercontent.com/istex/ontology/master/istexXML.owl> <https://lov.linkeddata.es/dataset/lov> .
+<https://data.istex.fr/ontology/istex#> <http://purl.org/dc/terms/modified> "2018-12-17"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pmofn" <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://purl.org/dc/terms/description> "The FrameNet module of the PreMOn ontology extends the core module for representing concepts specific to FrameNet. The modeling is based on the [FrameNet II: Extended Theory and Practice](https://framenet2.icsi.berkeley.edu/docs/r1.5/book.pdf) book."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://www.w3.org/ns/dcat#keyword> "Tag" <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://purl.org/dc/terms/publisher> <https://dkm.fbk.eu/> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://purl.org/dc/terms/issued> "2015-10-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://purl.org/dc/terms/creator> <http://dblp.uni-trier.de/pers/hd/c/Corcoglioniti:Francesco> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pmofn/versions/2017-08-23.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://purl.org/dc/terms/title> "Predicate Model for Ontologies (PreMOn) - FrameNet ontology module"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://premon.fbk.eu/ontology/fn#" <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://purl.org/stuff/rev#hasReview> _:B1d8a64165b7a3d206388a00dad5c2272 <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://purl.org/dc/terms/creator> <https://dkm.fbk.eu/rospocher> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/fn> <http://purl.org/dc/terms/modified> "2017-08-23"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/contributor> <https://plus.google.com/u/0/109521706182203630583> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/description> "Extensión de la ontología de Organizaciones para adecuarla al Directorio Común de entidades públicas en España."@es <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/contributor> <http://www.oeg-upm.net/index.php/en/teachers/194-asun> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/creator> <http://www.red.es> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/title> "Ontology about Spanish public organizations"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/contributor> <https://plus.google.com/u/0/+DavidReyJordan> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/spa> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/contributor> <https://plus.google.com/u/0/117418293683410914972> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://datos.gob.es/def/sector-publico/organizacion#" <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "orges" <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/orges/versions/2015-02-19.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://www.w3.org/ns/dcat#keyword> "Government" <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/creator> <http://www.minetur.gob.es> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/contributor> <https://plus.google.com/112371334577828533451> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/title> "Ontología sobre organizaciones públicas en España"@es <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://datos.gob.es/sites/default/files/OntologiaDIR3/orges.owl> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/contributor> <https://www.linkedin.com/in/imanolarg> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/stuff/rev#hasReview> _:Bd2c2c7c3fa4d9ccd770db77933d46e7a <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/issued> "2015-02-19"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/contributor> <https://es.linkedin.com/pub/antonio-velasco-lerma/17/36/760> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/contributor> <http://www.w3c.es/Personal/Martin#me> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/contributor> <https://plus.google.com/u/0/116092916901281712093> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/description> "Extension of the Org ontology to make it suitable for the Spanish common registry of public entities."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/modified> "2015-02-19"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/creator> <http://www.minhap.gob.es> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/contributor> <https://www.linkedin.com/in/josemsubero> <https://lov.linkeddata.es/dataset/lov> .
+<http://datos.gob.es/def/sector-publico/organizacion#> <http://purl.org/dc/terms/contributor> <https://es.linkedin.com/pub/dolores-hernandez-maroto/24/a9/325> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/san-lod> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dati.san.beniculturali.it/SAN/> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/san-lod> <http://purl.org/dc/terms/title> "SAN Ontologia"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/san-lod> <http://purl.org/dc/terms/modified> "2017-02-07"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/san-lod> <http://purl.org/dc/terms/issued> "2017-02-07"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/san-lod> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://purl.org/dc/terms/description> "Sharing Mobility module of the suite of ontologies for urban IoT devices."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/irene-celino/> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://purl.org/vocab/vann/preferredNamespacePrefix> "uiots" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://purl.org/dc/terms/title> "Urban IoT Ontologies - Sharing Mobility Module"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.w3id.org/urban-iot/sharing#" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://www.w3.org/ns/dcat#keyword> "Transport" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://purl.org/dc/terms/description> "Modulo Sharing Mobility delle ontologie per gli apparati IoT urbani."@it <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://purl.org/stuff/rev#hasReview> _:B1087c5703d158ac4ab06ae7e6e5d93ff <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://purl.org/dc/terms/title> "Ontologie per gli Apparati IoT Urbani - Modulo Sharing Mobility"@it <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/marioscrocca/> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/sharing> <http://www.w3.org/ns/dcat#keyword> "Services" <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/oan> <http://purl.org/dc/terms/title> "Ontologie de l'Assemblée  Nationale"@fr <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/oan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/oan> <http://xmlns.com/foaf/0.1/primaryTopic> <http://data.lirmm.fr/ontologies/oan> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/oan> <http://purl.org/dc/terms/title> "Ontology of the French National Assembly"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/oan> <http://purl.org/dc/terms/modified> "2019-05-06"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/oan> <http://purl.org/dc/terms/issued> "2013-07-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ignf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ignf> <http://purl.org/dc/terms/title> "Ontologie des systèmes de coordonnées de référence"@fr <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ignf> <http://purl.org/dc/terms/title> "Ontology of coordinates reference systems"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ignf> <http://xmlns.com/foaf/0.1/primaryTopic> <http://data.ign.fr/def/ignf> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ignf> <http://purl.org/dc/terms/modified> "2016-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ignf> <http://purl.org/dc/terms/issued> "2014-07-30"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/cdesc> <http://purl.org/dc/terms/modified> "2019-10-23"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/cdesc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/cdesc> <http://purl.org/dc/terms/title> "Ontologia della Descrizione di Contesto (ArCo network)"@it <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/cdesc> <http://purl.org/dc/terms/title> "Context Description Ontology (ArCo network)"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/cdesc> <http://xmlns.com/foaf/0.1/primaryTopic> <https://w3id.org/arco/ontology/context-description> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/cdesc> <http://purl.org/dc/terms/issued> "2019-10-23"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/stuff/rev#hasReview> _:B72a070275d50c543ae2acccd0113562b <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/title> "An ontology for describing territory elements an infrastructure at French Mapping Agency."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/stuff/rev#hasReview> _:B6025baa3d6973261b247110031d08b7b <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/contributor> <https://fr.linkedin.com/in/gatemezing> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/description> "This ontology reuses the legacy schema of BDTOPO(IGN) and aims at covering the topographic entities and administrative boundaries of the French national territory. The themes covered are: railway, transport, roads, energy, hydrography, POI, communes, etc."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/topo/versions/2014-04-12.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://www.w3.org/ns/dcat#keyword> "Geography" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/vocab/vann/preferredNamespacePrefix> "topo" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/stuff/rev#hasReview> _:B31b1ba89d76a79150cf9bb6f85f07545 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/issued> "2014-04-16"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/fra> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/creator> <http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&nom=Abadie> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/description> "Ontologie décrivant les éléments du territoire et ses infrastructures. Elle repend l'essentiel du vocabulaire de la BDTOPO(IGN) et vise à couvrir l'ensemble des entités topographiques et administratives du territoire national. Les thèmes couverts sont: le réseau routier, le réseau ferroviaire, le réseau de transport d'énergie, le réseau hydrographique, les bâtiments, la végétation arborée, l'orographie, les communes, les points d'activité ou d'intérêt."@fr <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/publisher> <http://fr.dbpedia.org/resource/Institut_national_de_l%27information_g%C3%A9ographique_et_foresti%C3%A8re> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.ign.fr/def/topo#" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/modified> "2014-04-12"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://purl.org/dc/terms/title> "Ontologie des éléments du territoire et de ses infrastructures de l'IGN"@fr <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/topo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/topo> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/uiot> <http://purl.org/dc/terms/title> "Urban IoT Ontologies - Core Module"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/uiot> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.w3id.org/urban-iot/core> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/uiot> <http://purl.org/dc/terms/title> "Ontologie per gli Apparati IoT Urbani - Modulo Core"@it <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/uiot> <http://purl.org/dc/terms/modified> "2020-12-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/uiot> <http://purl.org/dc/terms/issued> "2020-12-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/uiot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/orges> <http://purl.org/dc/terms/modified> "2015-09-09"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/orges> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/orges> <http://purl.org/dc/terms/title> "Ontología sobre organizaciones públicas en España"@es <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/orges> <http://xmlns.com/foaf/0.1/primaryTopic> <http://datos.gob.es/def/sector-publico/organizacion#> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/orges> <http://purl.org/dc/terms/title> "Ontology about Spanish public organizations"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/orges> <http://purl.org/dc/terms/issued> "2015-08-26"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/medred> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/medred> <http://purl.org/dc/terms/title> "Ontología MedRed: modelo de adquisición de datos clínicos"@es <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/medred> <http://purl.org/dc/terms/issued> "2017-05-08"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/medred> <http://purl.org/dc/terms/modified> "2017-05-08"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/medred> <http://purl.org/dc/terms/title> "MedRed ontologie: modèle d'aquisition de données cliniques"@fr <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/medred> <http://xmlns.com/foaf/0.1/primaryTopic> <http://w3id.org/medred/medred#> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/medred> <http://purl.org/dc/terms/title> "MedRed ontology: clinical data acquisition model"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/idemo> <http://purl.org/dc/terms/title> "Ontologie démographique de l'INSEE"@fr <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/idemo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/idemo> <http://xmlns.com/foaf/0.1/primaryTopic> <http://rdf.insee.fr/def/demo> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/idemo> <http://purl.org/dc/terms/title> "Demographic ontology from the French Statistics Institute"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/idemo> <http://purl.org/dc/terms/modified> "2016-01-09"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/idemo> <http://purl.org/dc/terms/issued> "2013-09-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/dc/terms/creator> <https://fr.linkedin.com/in/gatemezing> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/stuff/rev#hasReview> _:Bec8c0cf9d08c9aa890b2ad12c8cc25f7 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/geom/versions/2014-08-01.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://www.w3.org/ns/dcat#keyword> "Geometry" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/dc/terms/title> "Ontologie des primitives géométriques"@fr <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/fra> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/dc/terms/contributor> <http://recherche.ign.fr/labos/cogit/cv.php?prenom=Bénédicte&nom=Bucher> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/dc/terms/creator> <http://recherche.ign.fr/labos/cogit/cv.php?prenom=Nathalie&nom=Abadie> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/dc/terms/issued> "2013-06-11"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/geom/versions/2014-08-22.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://data.ign.fr/def/geometrie> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/vocab/vann/preferredNamespacePrefix> "geom" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/geom/versions/2015-01-11.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/dc/terms/modified> "2015-01-11"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/stuff/rev#hasReview> _:Bbf651a603c66baba68430a6ab3c16c26 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/dc/terms/description> "An ontology for describing the shape and the location of topographic entities"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/dc/terms/description> "Ontologie des primitives géométriques représentant la forme et la localisation d'entités topographiques."@fr <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.ign.fr/def/geometrie#" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/dc/terms/contributor> <http://data.semanticweb.org/person/raphael-troncy> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/geom/versions/2014-07-30.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/dc/terms/contributor> <http://data.semanticweb.org/person/bernard-vatant> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/dc/terms/publisher> <http://fr.dbpedia.org/resource/Institut_national_de_l%27information_g%C3%A9ographique_et_foresti%C3%A8re> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/dc/terms/title> "Ontology for geometry"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.ign.fr/def/geometrie> <http://purl.org/stuff/rev#hasReview> _:B6f38b92a4e82b75c8fde269f31b8c736 <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://idi.fundacionctic.org/cruzar/turismo#" <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/stuff/rev#hasReview> _:Bfa056bca02a00cc50444247df6753d22 <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "62082"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/vocommons/voaf#reusedByDatasets> "1"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/vocab/vann/preferredNamespacePrefix> "turismo" <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/dc/terms/description> "Esta ontología se ha construido dentro del proyecto financiado por el Ayuntamiento de Zaragoza: \"Un visitante, una ruta\", una aplicación informática para el cálculo de rutas turísticas en la ciudad de Zaragoza en base al perfil y contexto del usuario."@es <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/spa> <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/deu> <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/ita> <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/dc/terms/description> "The ontology is applied to an application to compute the touristic paths in the city of Saragossa."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/dc/terms/issued> "2007-11-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/fra> <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/stuff/rev#hasReview> _:B7e632763c0a91413fcb06e720b37cf67 <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/organization/fundacion-ctic> <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/vocommons/voaf#usageInDataset> _:Bc67e3ac9e0c27baf93a0de1296c47b7e <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/dc/terms/title> "Ontology of Tourist for Saragossa town hall."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/turismo/versions/2007-11-02.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/stuff/rev#hasReview> _:B1e0d431d29cf8f90d571646ad60236f2 <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/dc/terms/title> "Ontología de Turismo para el Ayuntamiento de Zaragoza"@es <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://www.w3.org/ns/dcat#keyword> "Travel" <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/dc/terms/modified> "2007-11-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://idi.fundacionctic.org/cruzar/turismo> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/por> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmonb> <http://purl.org/dc/terms/title> "Predicate Model for Ontologies (PreMOn) - NomBank ontology module"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmonb> <http://purl.org/dc/terms/modified> "2017-08-23"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmonb> <http://xmlns.com/foaf/0.1/primaryTopic> <http://premon.fbk.eu/ontology/nb> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmonb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmonb> <http://purl.org/dc/terms/issued> "2017-08-23"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://purl.org/vocab/vann/preferredNamespacePrefix> "osp" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://purl.org/dc/terms/creator> <https://plus.google.com/110553034913069627325> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://purl.org/dc/terms/issued> "2011-09-17"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://data.lirmm.fr/ontologies/osp#" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://purl.org/dc/terms/title> "Ontologie du Service Public"@fr <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://purl.org/dc/terms/description> "Ontology for public services and organizations"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/osp/versions/2013-03-07.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://purl.org/dc/terms/creator> <https://plus.google.com/100036131215914277564> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://purl.org/dc/terms/modified> "2013-03-07"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://purl.org/dc/terms/title> "French Public Services Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://www.w3.org/ns/dcat#keyword> "Society" <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://purl.org/dc/terms/description> "Ontologie d'une organisation publique, plus particulièrement d'un tribunal, d'une organisation internationale ou d'un pays."@fr <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://purl.org/stuff/rev#hasReview> _:Bbfd07b72a126a511d0446ffa1198aa36 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/osp/versions/2012-02-13.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://purl.org/stuff/rev#hasReview> _:B619f2e96e21533938e8cc9e09da2afec <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://purl.org/stuff/rev#hasReview> _:Ba7510c47f412e4f1d5170c672d8fb671 <https://lov.linkeddata.es/dataset/lov> .
+<http://data.lirmm.fr/ontologies/osp> <http://purl.org/stuff/rev#hasReview> _:B8aad289810eb501fdd3bed252ce49250 <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://premon.fbk.eu/ontology/vn#" <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://www.w3.org/ns/dcat#keyword> "Tag" <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://purl.org/dc/terms/publisher> <https://dkm.fbk.eu/> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://purl.org/dc/terms/issued> "2015-10-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://purl.org/dc/terms/description> "The VerbNet module of the PreMOn ontology extends the core module with classes and properties specific to the VerbNet predicate model. The modelling is based on the VerbNet Annotation Guidelines."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://purl.org/stuff/rev#hasReview> _:B86c17880606f49019cb08a2f16e4be33 <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://purl.org/dc/terms/title> "Predicate Model for Ontologies (PreMOn) - VerbNet ontology module"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pmovn" <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://purl.org/dc/terms/creator> <https://dkm.fbk.eu/rospocher> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://xmlns.com/foaf/0.1/homepage> "http://premon.fbk.eu/ontology/vn" <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://purl.org/dc/terms/creator> <http://dblp.uni-trier.de/pers/hd/c/Corcoglioniti:Francesco> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://purl.org/dc/terms/modified> "2015-10-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/vn> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pmovn/versions/2015-10-28.n3> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ocd> <http://purl.org/dc/terms/modified> "2015-07-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ocd> <http://xmlns.com/foaf/0.1/primaryTopic> <http://dati.camera.it/ocd/> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ocd> <http://purl.org/dc/terms/title> "Ontologia Camera dei Deputati"@it <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ocd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ocd> <http://purl.org/dc/terms/title> "Ontology of Italian Deputy Chamber"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/ocd> <http://purl.org/dc/terms/issued> "2013-08-24"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/terms/issued> "2020-01-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/vocommons/voaf#reusedByVocabularies> "1"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/vocab/vann/preferredNamespacePrefix> "uiot" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.w3id.org/urban-iot/core#" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/irene-celino/> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://www.w3.org/ns/dcat#keyword> "IoT" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/terms/title> "Ontologie per gli Apparati IoT Urbani - Modulo Core"@it <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/terms/title> "Urban IoT Ontologies - Core Module"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/terms/description> "Core module of the suite of ontologies for urban IoT devices."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/uiot/versions/2020-12-02.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://www.w3.org/ns/dcat#keyword> "Services" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/terms/creator> <https://www.linkedin.com/in/marioscrocca/> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/terms/description> "Modulo core delle ontologie per gli apparati IoT urbani."@it <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/terms/modified> "2020-12-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/ita> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.w3id.org/urban-iot/core> <http://purl.org/stuff/rev#hasReview> _:B0f0a6232180802c471ea04530723d657 <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/cbs> <http://purl.org/dc/terms/modified> "2018-06-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/cbs> <http://purl.org/dc/terms/title> "De Centraal Bureau voor de Statistiek (CBS) ontologie"@nl <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/cbs> <http://xmlns.com/foaf/0.1/primaryTopic> <http://betalinkeddata.cbs.nl/def/cbs> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/cbs> <http://purl.org/dc/terms/title> "Netherlands' National Statistics Office (CBS) ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/cbs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/cbs> <http://purl.org/dc/terms/issued> "2018-06-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmopb> <http://xmlns.com/foaf/0.1/primaryTopic> <http://premon.fbk.eu/ontology/pb> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmopb> <http://purl.org/dc/terms/issued> "2017-08-23"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmopb> <http://purl.org/dc/terms/title> "Predicate Model for Ontologies (PreMOn) - PropBank ontology module"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmopb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/pmopb> <http://purl.org/dc/terms/modified> "2017-08-23"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/igeo> <http://purl.org/dc/terms/modified> "2017-08-14"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/igeo> <http://xmlns.com/foaf/0.1/primaryTopic> <http://rdf.insee.fr/def/geo> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/igeo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/igeo> <http://purl.org/dc/terms/title> "French Statistical ontology for geolocation"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/igeo> <http://purl.org/dc/terms/title> "Ontologie géographique de l'INSEE"@fr <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/igeo> <http://purl.org/dc/terms/issued> "2013-08-24"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://lemon-model.net/lemon#" <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/deu> <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/rus> <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/lemon/versions/2012-07-19.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/dc/terms/description> "Lemon: The lexicon model for ontologies is designed to allow  for descriptions of lexical information regarding ontological elements and other RDF resources. Lemon covers mapping of lexical decomposition, phrase structure, syntax,  variation, morphology, and lexicon-ontology mapping."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/stuff/rev#hasReview> _:Be963c3ad76e69e0ca5d45c347b90d33c <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/fra> <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/dc/terms/modified> "2016-07-13"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/stuff/rev#hasReview> _:B7170dc8f79214c4c7a02f0f60d4bc8e4 <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/dc/terms/title> "LExicon Model for ONtologies"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/vocab/vann/preferredNamespacePrefix> "lemon" <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/stuff/rev#hasReview> _:Bcb8b04e2f73d82bdd418b13351a769eb <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/stuff/rev#hasReview> _:B6b454ae94abc5b8c46d3b01d44f1d7c9 <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://www.w3.org/ns/dcat#keyword> "Vocabularies" <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://xmlns.com/foaf/0.1/homepage> "http://www.lemon-model.net/" <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/lemon/versions/2014-05-26.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/lemon/versions/2012-10-26.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/spa> <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/lemon/versions/2016-07-13.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://lemon-model.net/lemon> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/nld> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/ita> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/dc/terms/publisher> <http://dbpedia.org/resource/Italian_Chamber_of_Deputies> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/dc/terms/creator> <http://dbpedia.org/resource/Italian_Chamber_of_Deputies> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "3695518"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/vocommons/voaf#usageInDataset> _:B291600e2a1b2bf88e26879f297874059 <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/dc/terms/description> "Ontology of the Chamber of Deputies of the Italian Parliament."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/dc/terms/issued> "2011-12-20"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://dati.camera.it/ocd/classi.rdf> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/dc/terms/title> "Ontology of Italian Deputy Chamber"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/ocd/versions/2012-04-26.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/stuff/rev#hasReview> _:B96a42b3f73ddefe175c3ec2d380449a2 <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/vocommons/voaf#usageInDataset> _:B3978e267d43ac16499e5ea0347206a3d <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/vocommons/voaf#reusedByDatasets> "6"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/ocd/versions/2013-05-02.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/ocd/versions/2012-10-15.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://dati.camera.it/ocd/" <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://www.w3.org/ns/dcat#keyword> "Government" <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/vocommons/voaf#usageInDataset> _:Bec1a4b04afc89878e7700753d1dcc7a0 <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/dc/terms/modified> "2013-05-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/dc/terms/description> "L'ontologia Camera dei deputati è stata creata per descrivere tutte le risorse (persone, eventi, documenti) sia storiche che correnti, connesse alla Camera e alla sua attività"@it <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/vocommons/voaf#usageInDataset> _:B3a4037d89deb298c9e0ecc6d6197970a <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/vocommons/voaf#usageInDataset> _:B5d57970d2d773d81f65750b8c94e7f9f <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/vocommons/voaf#usageInDataset> _:Bc35376dce16b9810c4d0aafc0ad8017e <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "ocd" <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/stuff/rev#hasReview> _:Bf903de62515d468b27d5296680d71e48 <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/stuff/rev#hasReview> _:Be70ce934b500ccb32a8e50b19653d9c8 <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://xmlns.com/foaf/0.1/homepage> "http://dati.camera.it/ocd/reference_document/" <https://lov.linkeddata.es/dataset/lov> .
+<http://dati.camera.it/ocd/> <http://purl.org/dc/terms/title> "Ontologia Camera dei Deputati"@it <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/poste> <http://purl.org/dc/terms/issued> "2013-06-03"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/poste> <http://xmlns.com/foaf/0.1/primaryTopic> <http://data.lirmm.fr/ontologies/poste> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/poste> <http://purl.org/dc/terms/modified> "2016-07-11"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/poste> <http://purl.org/dc/terms/title> "\"La Poste\" Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/poste> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/poste> <http://purl.org/dc/terms/title> "Ontologie de la Poste"@fr <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/imo> <http://purl.org/dc/terms/title> "La Ontología de IMGpedia"@es <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/imo> <http://purl.org/dc/terms/issued> "2018-03-13"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/imo> <http://purl.org/dc/terms/title> "The IMGpedia Ontology"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/imo> <http://xmlns.com/foaf/0.1/primaryTopic> <http://imgpedia.dcc.uchile.cl/ontology> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/imo> <http://purl.org/dc/terms/modified> "2018-03-13"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/imo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/uiote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/uiote> <http://purl.org/dc/terms/modified> "2020-11-13"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/uiote> <http://purl.org/dc/terms/issued> "2020-11-13"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/uiote> <http://purl.org/dc/terms/title> "Urban IoT Ontologies - Electric Mobility Module"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/uiote> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.w3id.org/urban-iot/electric> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/uiote> <http://purl.org/dc/terms/title> "Ontologie per gli Apparati IoT Urbani - Modulo Electric Mobility"@it <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://purl.org/dc/terms/issued> "2015-10-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://purl.org/dc/terms/publisher> <https://dkm.fbk.eu/> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://purl.org/stuff/rev#hasReview> _:Bb4487784f1e84d47b4071ef48d1b827b <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://www.w3.org/ns/dcat#keyword> "Tag" <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://purl.org/dc/terms/title> "Predicate Model for Ontologies (PreMOn) - NomBank ontology module"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://premon.fbk.eu/ontology/nb#" <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://xmlns.com/foaf/0.1/homepage> "http://premon.fbk.eu/ontology/nb" <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/pmonb/versions/2015-10-28.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://purl.org/dc/terms/description> "The NomBank module of the PreMOn ontology extends the core module for representing concepts specific to NomBank. The modelling is based on the NomBank Specifications."@en <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://purl.org/vocab/vann/preferredNamespacePrefix> "pmonb" <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://purl.org/dc/terms/creator> <https://dkm.fbk.eu/rospocher> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://purl.org/dc/terms/creator> <http://dblp.uni-trier.de/pers/hd/c/Corcoglioniti:Francesco> <https://lov.linkeddata.es/dataset/lov> .
+<http://premon.fbk.eu/ontology/nb> <http://purl.org/dc/terms/modified> "2015-10-28"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/spa> <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/dc/terms/description> "Cette ontologie a été conçue pour representer des Instruments pour l'aquisition de données cliniques, dans le contexte du projet MedRed project (https://www.hevs.ch/en/rad-institutes/institute-of-information-systems/projects/medical-research-data-acquisition-platform-14092)"@fr <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://w3id.org/medred/medred#" <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/medred/versions/2017-05-08.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/stuff/rev#hasReview> _:Bb472bba9f0ddcbae90443e1444910d91 <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/dc/terms/creator> <http://w3id.org/people/jpcik/me> <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/dc/terms/description> "This ontology aims to model generic Medical Data Acquisition Instruments, which can be interoperable across different clinical data management systems. The ontology is developed in the context of the MedRed project (https://www.hevs.ch/en/rad-institutes/institute-of-information-systems/projects/medical-research-data-acquisition-platform-14092)"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://www.w3.org/ns/dcat#keyword> "Health" <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/dc/terms/title> "MedRed ontologie: modèle d'aquisition de données cliniques"@fr <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/vocommons/voaf#reusedByDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/dc/terms/title> "MedRed ontology: clinical data acquisition model"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/dc/terms/publisher> <http://aislab.hevs.ch/> <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "medred" <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/dc/terms/issued> "2017-04-01"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/dc/terms/title> "Ontología MedRed: modelo de adquisición de datos clínicos"@es <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/dc/terms/modified> "2017-05-08"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://www.w3.org/ns/dcat#keyword> "Biology" <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/fra> <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/vocommons/voaf#occurrencesInDatasets> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/vocommons/voaf#reusedByVocabularies> "0"^^<http://www.w3.org/2001/XMLSchema#int> <https://lov.linkeddata.es/dataset/lov> .
+<http://w3id.org/medred/medred#> <http://purl.org/dc/terms/description> "Esta ontología has sido diseñada para representar Instrumentos de captura de datos clínicos, dentro del contexto del proyecto MedRed (https://www.hevs.ch/en/rad-institutes/institute-of-information-systems/projects/medical-research-data-acquisition-platform-14092)"@es <https://lov.linkeddata.es/dataset/lov> .

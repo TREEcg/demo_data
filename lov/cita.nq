@@ -1,0 +1,311 @@
+<http://purl.org/spar/cito/FunderSelfCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/FunderSelfCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation in which the works reported in the citing and the cited entities were funded by the same funding agency.\n\nIn particular, like the ancestor class cito:Citation, cito:FunderSelfCitation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties, accompanied by an additional statement using cito:sharesFundingAgencyWith for linking the citing paper and the cited paper. \n\nFor example, the following cito:FundingSelfCitation resource\n\n     :thisCitation a cito:FundingSelfCitation ; \n          cito:hasCitingEntity :paperA ;\n          cito:hasCitationCharacterization cito:extends ;\n          cito:hasCitedEntity :paperB .\n\ncan be alternatively described as follows\n\n     :paperA cito:extends :paperB .\n     :paperA cito:sharesFundingAgencyWith :paperB ."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/FunderSelfCitation> <http://www.w3.org/2000/01/rdf-schema#label> "funder self citation"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/FunderSelfCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/cito/SelfCitation> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/hasCoAuthorshipCitationLevel> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#positiveInteger> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/hasCoAuthorshipCitationLevel> <http://www.w3.org/2000/01/rdf-schema#comment> "This property specifies the minimal distance that one of the authors of the citing entity has with regards to one of the authors of the cited entity, according to their co-authorship network.\n\nFor instance, a citation has a co-authorship citation level equal to 1 if at least one author of the citing entity has previously published as co-author with one of the authors of the cited entity. Similarly, we say that a citation has a co-authorship citation level equal to 2 if at least one author of the citing entity has previously published as co-author with someone who him/herself has previously published as co-author with one of the authors of the cited entity. And so on."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/hasCoAuthorshipCitationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/hasCoAuthorshipCitationLevel> <http://www.w3.org/2000/01/rdf-schema#label> "has co-authorship citation level"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/hasCoAuthorshipCitationLevel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/hasCoAuthorshipCitationLevel> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/cito/AuthorNetworkSelfCitation> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/SelfCitation> <http://www.w3.org/2000/01/rdf-schema#label> "self citation"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/SelfCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/SelfCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/cito/Citation> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/SelfCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation in which the citing and the cited entities have something significant in common with one another, over and beyond their subject matter, for example authors, journal, institutional affiliation, or funding agency."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/2000/01/rdf-schema#label> "citation"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/2002/07/owl#equivalentClass> _:B01799eb732a55d19c1f8900ec36a0d9e <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation is a conceptual directional link from a citing entity to a cited entity, created by a human performative act of making a citation, typically instantiated by the inclusion of a bibliographic reference (biro:BibliographicReference) in the reference list of the citing entity, or by the inclusion within the citing entity of a link, in the form of an HTTP Uniform Resource Locator (URL), to a resource on the World Wide Web.\n\nThe time span of a citation, i.e. the interval between the publication year of the citing entity and the publication year of the cited entity, can be recorded using the data property cito:hasCitationTimeSpan.\n\nThe nature or type of a citation can be characterized by using CiTO object properties, e.g. http://purl.org/spar/cito/citesAsDataSource (definition: “The citing entity cites the cited entity as a source of data”).  \n\nThis CiTO class cito:Citation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties. \n\nFor example, the following RDF statement\n\n     :paperA cito:extends :paperB .\n\ncan be alternatively described as follows\n\n     :thisCitation a cito:Citation ; \n          cito:hasCitingEntity :paperA ;\n          cito:hasCitationCharacterization cito:extends ;\n          cito:hasCitedEntity :paperB .\n\nThis usage involved OWL2 punning, whereby a CiTO object property, such as the aforementioned cito:extends, is used as the object of the OWL assertion.\n\n     :thisCitation cito:hasCitationCharacterization cito:extends .\n\nUsing such OWL2 punning (described at http://www.w3.org/TR/2009/WD-owl2-new-features-20090611/#F12:_Punning), the CiTO object property is considered as a proper named individual of the class owl:Thing. \n\nSuch reification of citation acts can be very useful, since it permits one to combine these CiTO properties with other vocabularies, or to handle situations in which none of the citation characterizations available in CiTO are applicable.  \n\nSuch situations can be resolved by the creation of a user-defined citation characterization, for example by using the Open Annotation Data Model, as explained at http://semanticpublishing.wordpress.com/2013/07/03/extending-cito-for-open-annotations/."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/JournalCartelCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/JournalCartelCitation> <http://purl.org/dc/elements/1.1/description> "Derived from the blog post 'What do we know about journal citation cartels? A call for information' by Philippe Mongeon, Ludo Waltman and Sarah de Rijcke (https://www.cwts.nl/blog?article=n-q2w2b4)."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/JournalCartelCitation> <http://www.w3.org/2000/01/rdf-schema#label> "journal cartel citation"@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/JournalCartelCitation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/cito/Citation> <http://purl.org/spar/cito> .
+<http://purl.org/spar/cito/JournalCartelCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation from one journal to another journal which forms one of a very large number of citations from the citing journal to recent articles in the cited journal, possibly undertaken as part of a citation cartel for the purpose of gaming the impact factor of the cited journal."@en <http://purl.org/spar/cito> .
+<http://purl.org/spar/fabio/CitationMetadata> <http://www.w3.org/2000/01/rdf-schema#label> "citation metadata"@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/CitationMetadata> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Metadata> <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/CitationMetadata> <http://www.w3.org/2000/01/rdf-schema#comment> "Metadata describing the citations made within a work to other works, and (optionally) some characteristics of the expressions of the cited works."@en <http://purl.org/spar/fabio> .
+<http://purl.org/spar/fabio/CitationMetadata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.org/spar/fabio> .
+<http://purl.uniprot.org/core/Submission_Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "Data that was submitted directly to a database." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Submission_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Published_Citation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Submission_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Submission Citation" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Submission_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B2c25845853004641bf2a1516ae87bd1f <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Submission_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5e63fe6758f63d94ad16aa325b1dd522 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Submission_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Patent_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Published_Citation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Patent_Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A patent application." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Patent_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Patent_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Patent Citation" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B15bde512eb0c5a3cc62fc9eaba7393dc <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#comment> "The relationship between a resource and a citation." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Citation Statement" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Citation_Statement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B86fcb37949b9f6d4963ebf503a3f9c9b <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Observation_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Observation_Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "Citation of an unpublished result." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Observation_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Unpublished_Citation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Observation_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Observation Citation" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Unpublished_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Unpublished_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Citation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Unpublished_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Unpublished Citation" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Electronic_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B6c5340dd3d6331731e98bc8a84ec16c2 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Electronic_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B881d74262a70a7cfeaf08095515e53e5 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Electronic_Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "An electronic publication." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Electronic_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Electronic Citation" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Electronic_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Electronic_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Published_Citation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Book_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Book_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B800bf02203ac848509df68bc28d75285 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Book_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Published_Citation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Book_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Book Citation" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Book_Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A chapter from a book." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Book_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B1c506b14a0fbc99f2cc0af126ca08c69 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Published_Citation> <http://www.w3.org/2002/07/owl#disjointWith> <http://purl.uniprot.org/core/Unpublished_Citation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Published_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Citation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Published_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Published_Citation> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://www.uniprot.org/manual/references"^^<http://www.w3.org/2001/XMLSchema#anyURI> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Published_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Published Citation" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Thesis_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bfdda156308b2175f7c41f81c5d58b498 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Thesis_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Thesis_Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A Ph.D. thesis." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Thesis_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bd4cb45d284ebc31b4100c2750be9a632 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Thesis_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Thesis Citation" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Thesis_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Published_Citation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Journal_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B96f7c7d9c6d48ad485703e1319176727 <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Journal_Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Journal Citation" <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Journal_Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Journal_Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "An article published in a journal." <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Journal_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.uniprot.org/core/Published_Citation> <http://purl.uniprot.org/core/> .
+<http://purl.uniprot.org/core/Journal_Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bf3715f2e82a6aa428c6b9b2a39f941c6 <http://purl.uniprot.org/core/> .
+<http://rdaregistry.info/Elements/m/P30005> <http://www.w3.org/2000/01/rdf-schema#label> "has preferred citation"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30005> <http://metadataregistry.org/uri/profile/RegAp/hasUnconstrained> <http://rdaregistry.info/Elements/u/P60057> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30005> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30005> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/m/preferredCitation.en> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30005> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/m/> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30005> <http://metadataregistry.org/uri/profile/RegAp/name> "preferredCitation"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30005> <http://metadataregistry.org/uri/profile/rdakit/instructionNumber> "2.16" <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30005> <http://metadataregistry.org/uri/profile/rdakit/toolkitLabel> "preferred citation"@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30005> <http://metadataregistry.org/uri/profile/rdakit/toolkitDefinition> "A citation for a resource in the form preferred by a creator, publisher, custodian, indexing or abstracting service, etc."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30005> <http://www.w3.org/2004/02/skos/core#definition> "Relates a manifestation to a citation for a resource in the form preferred by a creator, publisher, custodian, indexing or abstracting service, etc."@en <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/m/P30005> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdaregistry.info/Elements/c/C10007> <http://rdaregistry.info/Elements/m> .
+<http://rdaregistry.info/Elements/u/P60057> <http://www.w3.org/2000/01/rdf-schema#label> "has preferred citation"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60057> <http://metadataregistry.org/uri/profile/RegAp/lexicalAlias> <http://rdaregistry.info/Elements/u/preferredCitation.en> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60057> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1001> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60057> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60057> <http://www.w3.org/2004/02/skos/core#definition> "Relates a resource to a citation for a resource in the form preferred by a creator, publisher, custodian, indexing or abstracting service, etc."@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60057> <http://metadataregistry.org/uri/profile/RegAp/name> "preferredCitation"@en <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60057> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdaregistry.info/Elements/u/> <http://rdaregistry.info/Elements/u> .
+<http://rdaregistry.info/Elements/u/P60057> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdaregistry.info/Elements/m/P30005> <http://rdaregistry.info/Elements/u> .
+<http://rdvocab.info/Elements/preferredCitationManifestation> <http://www.w3.org/2000/01/rdf-schema#label> "Preferred citation (Manifestation)"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationManifestation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/Elements/preferredCitation> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationManifestation> <http://www.w3.org/2004/02/skos/core#definition> "A citation for a resource in the form preferred by a creator, publisher, custodian, indexing or abstracting service, etc. "@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationManifestation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdvocab.info/uri/schema/FRBRentitiesRDA/Manifestation> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationManifestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationManifestation> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationManifestation> <http://metadataregistry.org/uri/profile/RegAp/name> "preferredCitationManifestation"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationManifestation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/Elements> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitation> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdvocab.info/Elements/preferredCitationItem> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitation> <http://www.w3.org/2000/01/rdf-schema#label> "Preferred citation"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitation> <http://www.w3.org/2004/02/skos/core#definition> "A citation for a resource in the form preferred by a creator, publisher, custodian, indexing or abstracting service, etc. "@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitation> <http://metadataregistry.org/uri/profile/RegAp/name> "preferredCitation"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitation> <http://metadataregistry.org/uri/profile/RegAp/hasSubproperty> <http://rdvocab.info/Elements/preferredCitationManifestation> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitation> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/Elements> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationItem> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://rdvocab.info/Elements> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationItem> <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdvocab.info/uri/schema/FRBRentitiesRDA/Item> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationItem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationItem> <http://www.w3.org/2000/01/rdf-schema#label> "Preferred citation (Item)"@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationItem> <http://metadataregistry.org/uri/profile/RegAp/status> <http://metadataregistry.org/uri/RegStatus/1002> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationItem> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://rdvocab.info/Elements/preferredCitation> <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationItem> <http://www.w3.org/2004/02/skos/core#definition> "A citation for a resource in the form preferred by a creator, publisher, custodian, indexing or abstracting service, etc. "@en <http://rdvocab.info/Elements> .
+<http://rdvocab.info/Elements/preferredCitationItem> <http://metadataregistry.org/uri/profile/RegAp/name> "preferredCitationItem"@en <http://rdvocab.info/Elements> .
+<http://salt.semanticauthoring.org/ontologies/sao#CitationContext> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://salt.semanticauthoring.org/ontologies/sao#Annotation> <http://salt.semanticauthoring.org/ontologies/sao> .
+<http://salt.semanticauthoring.org/ontologies/sao#CitationContext> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> <http://salt.semanticauthoring.org/ontologies/sao> .
+<http://salt.semanticauthoring.org/ontologies/sao#CitationContext> <http://www.w3.org/2000/01/rdf-schema#label> "CitationContext" <http://salt.semanticauthoring.org/ontologies/sao> .
+<http://semanticscience.org/resource/SIO_000174> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://semanticscience.org/ontology/sio.owl> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000174> <http://purl.org/dc/terms/description> "A citation is a textual entity which denotes a source described in the bibliography or reference section of a document."@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000174> <http://purl.org/dc/elements/1.1/identifier> "SIO_000174" <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000174> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000174> <http://www.w3.org/2000/01/rdf-schema#label> "citation"@en <http://semanticscience.org/ontology/sio.owl> .
+<http://semanticscience.org/resource/SIO_000174> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://semanticscience.org/resource/SIO_000171> <http://semanticscience.org/ontology/sio.owl> .
+<http://purl.org/spar/cito/> <http://www.w3.org/2000/01/rdf-schema#label> "CiTO (Citation Typing Ontology)" <http://vivoweb.org/ontology/core> .
+<http://purl.org/spar/c4o/> <http://www.w3.org/2000/01/rdf-schema#label> "Citation Counting and Context Characterization Ontology" <http://vivoweb.org/ontology/core> .
+<http://purl.org/spar/c4o/GlobalCitationCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://vivoweb.org/ontology/core> .
+<http://purl.org/spar/c4o/GlobalCitationCount> <http://www.w3.org/2000/01/rdf-schema#label> "Global Citation Count" <http://vivoweb.org/ontology/core> .
+<http://purl.org/spar/c4o/GlobalCitationCount> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000032> <http://vivoweb.org/ontology/core> .
+<http://purl.org/spar/c4o/GlobalCitationCount> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#descriptionAnnot> "The number of times a work has been cited globally, as determined from a particular bibliographic information source on a particular date." <http://vivoweb.org/ontology/core> .
+<http://purl.org/spar/c4o/GlobalCitationCount> <http://purl.obolibrary.org/obo/IAO_0000115> "The number of times a work has been cited globally, as determined from a particular bibliographic information source on a particular date." <http://vivoweb.org/ontology/core> .
+<http://purl.org/spar/c4o/hasGlobalCitationFrequency> <http://www.w3.org/2000/01/rdf-schema#label> "has global citation frequency" <http://vivoweb.org/ontology/core> .
+<http://purl.org/spar/c4o/hasGlobalCitationFrequency> <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#descriptionAnnot> "A property linking a publication entity to the property c40:GlobalCitationCount that specify how many times a work has been cited by others, according to a particular information source on a particular date." <http://vivoweb.org/ontology/core> .
+<http://purl.org/spar/c4o/hasGlobalCitationFrequency> <http://www.w3.org/2000/01/rdf-schema#range> <http://purl.org/spar/c4o/GlobalCitationCount> <http://vivoweb.org/ontology/core> .
+<http://purl.org/spar/c4o/hasGlobalCitationFrequency> <http://purl.obolibrary.org/obo/IAO_0000115> "A property linking a publication entity to an instance of c40:GlobalCitationCount that specifies how many times a work has been cited by others, according to a particular information source on a particular date." <http://vivoweb.org/ontology/core> .
+<http://purl.org/spar/c4o/hasGlobalCitationFrequency> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://vivoweb.org/ontology/core> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A bibliographic reference for the resource."@en <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliographic Citation"@en <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://purl.org/dc/terms/description> "Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible."@en <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/identifier> <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dc/terms/BibliographicResource> <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#bibliographicCitation-002> <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://purl.org/dc/terms/issued> "2003-02-15"^^<http://www.w3.org/2001/XMLSchema#date> <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.demcare.eu/ontologies/demlab.owl> .
+<http://www.essepuntato.it/2013/03/cito-functions/CitationFunction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://www.essepuntato.it/2013/03/cito-functions> .
+<http://www.essepuntato.it/2013/03/cito-functions/CitationFunction> <http://www.w3.org/2000/01/rdf-schema#comment> "A class defining the set of citation types having a particular function."@en <http://www.essepuntato.it/2013/03/cito-functions> .
+<http://www.essepuntato.it/2013/03/cito-functions/CitationFunction> <http://www.w3.org/2000/01/rdf-schema#label> "citation function"@en <http://www.essepuntato.it/2013/03/cito-functions> .
+<http://www.loc.gov/mads/rdf/v1#citationSource> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.loc.gov/mads/rdf/v1#Source> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationSource> <http://www.w3.org/2000/01/rdf-schema#label> "Citation Source"@en <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The cited resource."@en <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationNote> <http://www.w3.org/2000/01/rdf-schema#label> "Citation Note"@en <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationNote> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.loc.gov/mads/rdf/v1#Source> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationNote> <http://www.w3.org/2000/01/rdf-schema#comment> "A note about how the madsrdf:Source relates to the resource about\n      which the madsrdf:Source is the information source."@en <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationStatus> <http://www.w3.org/2000/01/rdf-schema#label> "Citation Status"@en <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.loc.gov/mads/rdf/v1#Source> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "Should use a standard term - such as 'found' or 'not found' - to\n      indicate whether the cited resource yielded information about the resource related to the\n      madsrdf:Source."@en <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/mads/rdf/v1#citationStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.loc.gov/mads/rdf/v1> .
+<http://www.loc.gov/premis/rdf/v3/citation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://www.loc.gov/premis/rdf/v1> .
+<http://www.loc.gov/premis/rdf/v3/citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://www.loc.gov/premis/rdf/v1> .
+<http://www.loc.gov/premis/rdf/v3/citation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.loc.gov/premis/rdf/v3/> <http://www.loc.gov/premis/rdf/v1> .
+<http://www.loc.gov/premis/rdf/v3/citation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.loc.gov/premis/rdf/v3/RightsBasis> <http://www.loc.gov/premis/rdf/v1> .
+<http://www.loc.gov/premis/rdf/v3/citation> <http://www.w3.org/2000/01/rdf-schema#label> "has citation"@en <http://www.loc.gov/premis/rdf/v1> .
+<http://gov.genealogy.net/ontology.owl#SourceReference> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://gov.genealogy.net/ontology.owl> .
+<http://gov.genealogy.net/ontology.owl#SourceReference> <http://www.w3.org/2000/01/rdf-schema#label> "source citation"@en <http://gov.genealogy.net/ontology.owl> .
+<http://gov.genealogy.net/ontology.owl#SourceReference> <http://www.w3.org/2000/01/rdf-schema#label> "Quellenangabe"@de <http://gov.genealogy.net/ontology.owl> .
+<http://gov.genealogy.net/ontology.owl#source> <http://www.w3.org/2000/01/rdf-schema#label> "Quellenangabe"@de <http://gov.genealogy.net/ontology.owl> .
+<http://gov.genealogy.net/ontology.owl#source> <http://www.w3.org/2000/01/rdf-schema#label> "source citation"@en <http://gov.genealogy.net/ontology.owl> .
+<http://gov.genealogy.net/ontology.owl#source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://gov.genealogy.net/ontology.owl> .
+<http://purl.obolibrary.org/obo/IAO_0000301> <http://purl.obolibrary.org/obo/IAO_0000112> "Verspoor, K., Cohen, KB., Hunter, L. Textual characteristics of traditional and Open Access scientific journals are similar, BMC Bioinformatics 2009, 10:183."@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/IAO_0000301> <http://purl.obolibrary.org/obo/IAO_0000115> "a textual entity intended to identify a particular publication"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/IAO_0000301> <http://purl.obolibrary.org/obo/IAO_0000111> "citation"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/IAO_0000301> <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Lawrence Hunter"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/IAO_0000301> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000300> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/IAO_0000301> <http://www.w3.org/2000/01/rdf-schema#label> "citation"@en <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/IAO_0000301> <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/IAO_0000301> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bcc37aa7ed8ca1edcb6acb9ee0bd40ae9 <http://purl.obolibrary.org/obo/obi.owl> .
+<http://purl.obolibrary.org/obo/IAO_0000301> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://purl.obolibrary.org/obo/obi.owl> .
+<http://lod.nl.go.kr/ontology/citationReferenceNote> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/citationReferenceNote> <http://www.w3.org/2000/01/rdf-schema#domain> _:B2a67a4ec8a160697a1e8f563332b4bd1 <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/citationReferenceNote> <http://www.w3.org/2000/01/rdf-schema#comment> "이 필드는 자료의 서평 및 발행된 서지 기술에 대한 인용사항이나 참고문헌 주기를 기술하며 자료가 어디에서 인용되고, 서평 기사를 수록하고 있는지를 상술하는데 적용된다. 인용사항이나 참고문헌은 간략한 형태 즉, 일반적으로 인식할 수 있는 약자 등으로 기술된다. 실제 발행된 기술의 내용은 510 필드에 기술되지 않고, 520(요약 등 주기) 필드에 기술된다.\r\n\r\n도서와 녹음자료의 경우, 자료의 출판된 기술사항(예, 간략하고 표준화된 형식으로 기술된 희귀자료 기술) 또는 서평(전문 저술에 관한 비평)에 대한 참고문헌을 주기한다.\r\n\r\n연속간행물의 경우, 연속간행물에 대한 색인 또는 요약이 실린 출판물을 상술하고, 알 수 있을 때 수록 날짜 범위까지 상술하는데 적용된다. 참조된 색인과 초록 서비스는 주로 연속간행물로서 발행된 것들이다. 단행본 표제라 할지라도 어떤 주제 분야의 참고자료로 쓰이고, 연속간행물 형식은 아니지만 일정한 기간을 다룬다면 여기서 다룰 수 있다.\r\n\r\n집합물로 다루어지는 인쇄물이 아닌 시청각자료나 그래픽 자료인 경우, 이 필드는 작품 또는 작품집에 대한 기술을 수록하고 있는 참고자료들을 기술한다.\r\n\r\n복합자료의 경우, 기술된 자료의 초록, 인용, 기술, 색인을 수록한 참고문헌을 기술한다."@ko <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/citationReferenceNote> <http://www.w3.org/2000/01/rdf-schema#label> "인용 참고 주기"@ko <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/citationReferenceNote> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/description> <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/citationReferenceNote> <http://www.w3.org/2000/01/rdf-schema#label> "citation reference note"@en <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/citationReferenceNote> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://lod.nl.go.kr/ontology/> <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/citationReferenceNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://lod.nl.go.kr/ontology/> .
+<http://lod.nl.go.kr/ontology/citationReferenceNote> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://lod.nl.go.kr/ontology/> .
+<http://linked.earth/ontology#citation> <http://www.w3.org/2000/01/rdf-schema#label> "citation"@en <http://linked.earth/ontology#> .
+<http://linked.earth/ontology#citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://linked.earth/ontology#> .
+<http://linked.earth/ontology#citation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/bibliographicCitation> <http://linked.earth/ontology#> .
+<http://linked.earth/ontology#citation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://linked.earth/ontology#Publication> <http://linked.earth/ontology#> .
+<http://linked.earth/ontology#citation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://linked.earth/ontology#> .
+<http://linked.earth/ontology#citation> <http://www.w3.org/2000/01/rdf-schema#comment> "Sentence indicating how a paper should be published"@en <http://linked.earth/ontology#> .
+<https://schema.org/citation> <http://www.w3.org/2000/01/rdf-schema#comment> "Is used to create references of a scientific paper to other items of creative work (particularly other papers)."@en <https://bmake.th-brandenburg.de/spv> .
+<https://schema.org/citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://bmake.th-brandenburg.de/spv> .
+<https://schema.org/citation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <https://bmake.th-brandenburg.de/spv> .
+<https://schema.org/citation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://schema.org/> <https://bmake.th-brandenburg.de/spv> .
+<https://schema.org/citation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://schema.org/ScholarlyArticle> <https://bmake.th-brandenburg.de/spv> .
+<https://schema.org/citation> <http://www.w3.org/2000/01/rdf-schema#label> "citation"@en <https://bmake.th-brandenburg.de/spv> .
+<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressSpecification.addressSpecificationCitation> <http://www.w3.org/2004/02/skos/core#definition> "Reference to a specification or document that contains a definition of the address classes."@en <http://reference.data.gov.au/def/ont/iso19160-1-address> .
+<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressSpecification.addressSpecificationCitation> <http://www.w3.org/2000/01/rdf-schema#label> "address specification citation"@en <http://reference.data.gov.au/def/ont/iso19160-1-address> .
+<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressSpecification.addressSpecificationCitation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> "http://standards.iso.org/iso/19160/-1/ed-1/en/" <http://reference.data.gov.au/def/ont/iso19160-1-address> .
+<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressSpecification.addressSpecificationCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <http://reference.data.gov.au/def/ont/iso19160-1-address> .
+<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressSpecification.addressSpecificationCitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://def.isotc211.org/iso19115/-1/2014/CitationAndResponsiblePartyInformation#CI_Citation> <http://reference.data.gov.au/def/ont/iso19160-1-address> .
+<http://reference.data.gov.au/def/ont/iso19160-1-address#AddressSpecification.addressSpecificationCitation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://reference.data.gov.au/def/ont/iso19160-1-address#AddressSpecification> <http://reference.data.gov.au/def/ont/iso19160-1-address> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/identifier> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://purl.org/dc/terms/description> "Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible."@en <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A bibliographic reference for the resource."@en <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliographic Citation"@en <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://purl.org/dc/terms/issued> "2003-02-15"^^<http://www.w3.org/2001/XMLSchema#date> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dc/terms/BibliographicResource> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#bibliographicCitation-002> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://reference.data.gov.au/def/ont/dataset> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#label> "Bibliographic Citation"@en <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "A bibliographic reference for the resource."@en <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/elements/1.1/identifier> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://purl.org/dc/terms/description> "Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible."@en <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://purl.org/dc/terms/hasVersion> <http://dublincore.org/usage/terms/history/#bibliographicCitation-002> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://purl.org/dc/terms/modified> "2008-01-14"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/dc/terms/BibliographicResource> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://purl.org/dc/terms/identifier> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://purl.org/SemSur/> .
+<http://purl.org/dc/terms/bibliographicCitation> <http://purl.org/dc/terms/issued> "2003-02-15"^^<http://www.w3.org/2001/XMLSchema#date> <http://purl.org/SemSur/> .
+<https://w3id.org/GDPRtEXT#hasCitation> <http://www.w3.org/2000/01/rdf-schema#label> "has Citation" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#hasCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#hasCitation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://data.europa.eu/eli/ontology#LegalResourceSubdivision> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#hasCitation> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/GDPRtEXT#Citation> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#hasCitation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://data.europa.eu/eli/ontology#has_part> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#hasCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates that the legal resource has the referenced citation" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Citation" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#Citation> <http://www.w3.org/2004/02/skos/core#example> "gdpr:citation1 a eli:LegalResourceSubdivision,\n        GDPRtEXT:Citation ;\n    eli:description \"OJ C 229, 31.7.2012, p. 90.\"^^xsd:string ;\n    eli:is_part_of gdpr:GDPR ;\n    eli:number \"1\"^^xsd:string ." <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "Citation in GDPR text" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#Citation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://eur_lex.europa.eu/legal_content/EN/ALL/?uri=CELEX:32016R0679> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://data.europa.eu/eli/ontology#LegalResourceSubdivision> <https://w3id.org/GDPRtEXT> .
+<http://id.loc.gov/ontologies/bibframe/preferredCitation> <http://purl.org/dc/terms/modified> "2016-04-21 (New)" <http://id.loc.gov/ontologies/bibframe/> .
+<http://id.loc.gov/ontologies/bibframe/preferredCitation> <http://www.w3.org/2000/01/rdf-schema#comment> "Used with Work or Instance" <http://id.loc.gov/ontologies/bibframe/> .
+<http://id.loc.gov/ontologies/bibframe/preferredCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> <http://id.loc.gov/ontologies/bibframe/> .
+<http://id.loc.gov/ontologies/bibframe/preferredCitation> <http://www.w3.org/2000/01/rdf-schema#label> "Preferred citation" <http://id.loc.gov/ontologies/bibframe/> .
+<http://id.loc.gov/ontologies/bibframe/preferredCitation> <http://www.w3.org/2004/02/skos/core#definition> "Citation to the resource preferred by its custodian of the resource." <http://id.loc.gov/ontologies/bibframe/> .
+<http://id.loc.gov/ontologies/bibframe/preferredCitation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> <http://id.loc.gov/ontologies/bibframe/> .
+<http://schema.org/citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> <http://schema.org/> .
+<http://schema.org/citation> <http://www.w3.org/2000/01/rdf-schema#comment> "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc." <http://schema.org/> .
+<http://schema.org/citation> <http://schema.org/rangeIncludes> <http://schema.org/Text> <http://schema.org/> .
+<http://schema.org/citation> <http://schema.org/domainIncludes> <http://schema.org/CreativeWork> <http://schema.org/> .
+<http://schema.org/citation> <http://schema.org/rangeIncludes> <http://schema.org/CreativeWork> <http://schema.org/> .
+<http://schema.org/citation> <http://www.w3.org/2000/01/rdf-schema#label> "citation" <http://schema.org/> .
+<http://qudt.org/schema/qudt/Citation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/2.1/schema/qudt> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/Citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/Citation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/Citation> <http://www.w3.org/2000/01/rdf-schema#comment> "Provides a simple way of making citations."^^<http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:B5df44b1e43b0736d0bb3c995adf506dd <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/Citation> <http://www.w3.org/2000/01/rdf-schema#label> "Citation" <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:Bbc22b26b69d25dd1308632455a2a9071 <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/Citation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://qudt.org/schema/qudt/Concept> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/citation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/schema/qudt> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/citation> <http://qudt.org/schema/qudt/plainTextDescription> "Used to provide an annotation for an informative reference." <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/citation> <http://www.w3.org/2000/01/rdf-schema#label> "citation" <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/citation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/citation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> <http://qudt.org/schema/qudt> .
+<http://qudt.org/schema/qudt/citation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://qudt.org/2.1/schema/qudt> <http://qudt.org/schema/qudt> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/citof> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.essepuntato.it/2013/03/cito-functions> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/citof> <http://purl.org/dc/terms/modified> "2017-01-02"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/citof> <http://purl.org/dc/terms/issued> "2014-06-09"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/citof> <http://purl.org/dc/terms/title> "Functions of Citations"@en <https://lov.linkeddata.es/dataset/lov> .
+<https://lov.linkeddata.es/dataset/lov/vocabs/citof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/dcat#CatalogRecord> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://purl.org/dc/terms/language> <http://id.loc.gov/vocabulary/iso639-2/eng> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://purl.org/dc/terms/creator> <http://data.semanticweb.org/person/angelo-di-iorio> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://purl.org/stuff/rev#hasReview> _:Bca0990e1a5c8672a5fbc488a86ec135d <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://www.w3.org/ns/dcat#keyword> "SPAR" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://purl.org/vocab/vann/preferredNamespacePrefix> "citof" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://purl.org/vocab/vann/preferredNamespaceUri> "http://www.essepuntato.it/2013/03/cito-functions/" <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://purl.org/dc/terms/issued> "2013-05-06"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://purl.org/stuff/rev#hasReview> _:Bcc1b2308bd1f58e34870fc4e30120981 <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://purl.org/stuff/rev#hasReview> _:B1e8292dfad9cab7bc83fd92915cae8ea <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://purl.org/dc/terms/modified> "2013-05-20"^^<http://www.w3.org/2001/XMLSchema#date> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/citof/versions/2013-05-20.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://www.w3.org/ns/dcat#distribution> <https://lov.linkeddata.es/dataset/lov/vocabs/citof/versions/2013-05-07.n3> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://purl.org/dc/terms/description> "CiTOFunctions is an ontology that provides a classification for citations. In particular, it classifies CiTO properties (each defining a particular citational act)"@en <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://purl.org/dc/terms/creator> <https://plus.google.com/106628269166481436037> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://purl.org/dc/terms/creator> <http://stlab.istc.cnr.it/stlab/staff/andrea-nuzzolese> <https://lov.linkeddata.es/dataset/lov> .
+<http://www.essepuntato.it/2013/03/cito-functions> <http://purl.org/dc/terms/title> "Functions of Citations"@en <https://lov.linkeddata.es/dataset/lov> .

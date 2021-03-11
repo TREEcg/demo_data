@@ -1,0 +1,90 @@
+<https://w3id.org/GConsent#isConsentForDataSubject> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/GConsent#Consent> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#isConsentForDataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "is consent for data subject"@en <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#isConsentForDataSubject> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/GConsent#DataSubject> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#isConsentForDataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a consent instance with the data subject it is associated with."@en <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#isConsentForDataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#isConsentForDataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#MinorDataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "A Minor is a Data Subject who cannot provide their own consent (that is legally valid). Therefore, their consent must be obtained via a Guardian or Legal Representative or Parent. Minor is a subclass of Data Subject.\n\nConsent given in lieu of a Minor (by their Representative) is associated with the `ConsentInstance` class/instance using the `wasGivenBy` property.\n\nThe ontology currently does not capture this relationship between the Minor and their Representative. This is due to required clarifications regarding how this role should be represented. For example, the `DataSubject` cannot be subclassed to create a `Representative` class, as this would make the `DataSubject` a permanent representative for the Minor. Instead, the role of 'acting as representative' is only for the instance of the given consent. Therefore, this could be represented with a `ConsentRepresentativeRole` class that links to the `MinorDataSubject` with `roleHadDataSubject` property, and the `DataSubject` that gave the consent via the `roleHadRepresentative` property. The relationship or reason or situation of this given consent can be captured by further annotating the `ConsentRepresentativeRole` instance. This approach can also be extended to other similar situations where one `DataSubject` gives consent in lieu of another.\n\nNote: A Minor can provide their own consent in certain cases, or conversely, a minor's consent may need to be provided by a 'parental' representative in some cases."@en <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#MinorDataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRov#DataSubject> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#MinorDataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GConsent#DataSubject> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#MinorDataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Minor Data Subject"@en <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#MinorDataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#DataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#DataSubject> <http://www.w3.org/2002/07/owl#equivalentClass> <https://w3id.org/GDPRov#DataSubject> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#DataSubject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT#DataSubject> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#DataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Data Subject is defined as an identified or identifiable natural person (‘data subject’); an identifiable natural person is one who can be identified, directly or indirectly, in particular by reference to an identifier such as a name, an identification number, location data, an online identifier or to one or more factors specific to the physical, physiological, genetic, mental, economic, cultural or social identity of that natural person; - according to Article 4(1) of the GDPR pertaining to the definition of Personal Data.\n\nIn the case of this ontology, a Data Subject refers to the person(s) as per the definition of the GDPR. Since a Data Subject is a Person, it is defined as a subclass of foaf:Person.\n\nThe Data Subject is linked to the Consent instance via the isConsentForDataSubject and hasConsent properties."@en <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#DataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Person> <https://w3id.org/GConsent> .
+<https://w3id.org/GConsent#DataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Data Subject"@en <https://w3id.org/GConsent> .
+<https://w3id.org/GDPRtEXT#ContractWithDataSubject> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#DataSubject> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#ContractWithDataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Contract with Data Subject" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#ContractWithDataSubject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#recital44> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#ContractWithDataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "The lawful basis for processing personal data is provided through a contract with the data subject."@en <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#ContractWithDataSubject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#article6-1-b> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#ContractWithDataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRtEXT#LawfulBasisForProcessing> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#ContractWithDataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#IdentificationOfDataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#IdentificationOfDataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Activity where the data subject is explicitly identified through direct or indirect means." <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#IdentificationOfDataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRtEXT#Activity> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#IdentificationOfDataSubject> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#DataSubject> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#IdentificationOfDataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Identification of Data Subject" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#ObtainingConsent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#recital32> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#ObtainingConsent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRtEXT#ConsentActivity> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#ObtainingConsent> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#DataSubject> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#ObtainingConsent> <http://www.w3.org/2000/01/rdf-schema#label> "Obtaining Consent from Data Subject" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#ObtainingConsent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#ObtainingConsent> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#GivenConsent> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#ObtainingConsent> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of getting a data subject's consent."@en <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#RecordCategoriesOfDataSubjectsAndPersonalData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#RecordCategoriesOfDataSubjectsAndPersonalData> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRtEXT#MaintainRecordsOfProcessingActivities> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#RecordCategoriesOfDataSubjectsAndPersonalData> <http://www.w3.org/2000/01/rdf-schema#label> "Categories of data subjects and personal data" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#RecordCategoriesOfDataSubjectsAndPersonalData> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#PersonalData> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#RecordCategoriesOfDataSubjectsAndPersonalData> <http://www.w3.org/2000/01/rdf-schema#comment> "This obligation requires Controllers to record the categories of data subjects and the personal data involved in processing/activities."@en <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#RecordCategoriesOfDataSubjectsAndPersonalData> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#DataSubject> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRtEXT#ReportDataBreach> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach> <http://www.w3.org/2000/01/rdf-schema#comment> "Affected data subjects must be notified of the data breach and its effects."@en <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#recital88> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#DataSubject> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#article34> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#recital87> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#recital86> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach> <http://www.w3.org/2000/01/rdf-schema#label> "Notify Data Subject of Breach" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#recital73> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#DataBreach> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#Rights> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#Rights> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#article12-2> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#Rights> <http://www.w3.org/2000/01/rdf-schema#comment> "The GDPR provides several rights to the data subjects which may be exercised at any time by the data subject and which are mandatory for the organisation to provide, comply with, and inform the data subject about."@en <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#Rights> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT/gdpr#recital59> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#Rights> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#Rights> <http://www.w3.org/2000/01/rdf-schema#label> "Data Subject's Rights" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#EvaluationOfDataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Evaluation of data subjects" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#EvaluationOfDataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#EvaluationOfDataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Whether the proposed activity involves the evaluation of the data subject."@en <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#EvaluationOfDataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRtEXT#FactorsForImpactAssessment> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#EvaluationOfDataSubject> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#DataSubject> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#PossibleConsequenceForDataSubject> <https://w3id.org/GDPRtEXT#involves> <https://w3id.org/GDPRtEXT#DataSubject> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#PossibleConsequenceForDataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#PossibleConsequenceForDataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Consequences for data subjects" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#PossibleConsequenceForDataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "The possible consequences of the change in processing for the data subject"@en <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#PossibleConsequenceForDataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRtEXT#PurposeOfNewProcessing> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#DataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRtEXT#Entity> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#DataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#DataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual or entity to whom their personal data relates."@en <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRtEXT#DataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Data Subject" <https://w3id.org/GDPRtEXT> .
+<https://w3id.org/GDPRov#DataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#DataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "An individual or entity" <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#DataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/prov#Agent> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#DataSubject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT#DataSubject> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#DataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Data Subject" <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#NotifyDataSubject> <http://www.w3.org/2000/01/rdf-schema#comment> "Step that notifies the data subject of data breach." <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#NotifyDataSubject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRov#DataBreachStep> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#NotifyDataSubject> <http://www.w3.org/2000/01/rdf-schema#label> "Notify Data Subject" <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#NotifyDataSubject> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/GDPRov#NotifyDataSubjectActivity> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#NotifyDataSubject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#NotifyDataSubject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#NotifyDataSubjectActivity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/GDPRov#DataBreachActivity> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#NotifyDataSubjectActivity> <http://www.w3.org/2000/01/rdf-schema#label> "Notify Data Subject Activity" <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#NotifyDataSubjectActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#NotifyDataSubjectActivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/GDPRtEXT#NotifyDataSubjectOfBreach> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#NotifyDataSubjectActivity> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://w3id.org/GDPRov#NotifyDataSubject> <https://w3id.org/GDPRov> .
+<https://w3id.org/GDPRov#NotifyDataSubjectActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Is an activity that notifies data subjects about data breach" <https://w3id.org/GDPRov> .
