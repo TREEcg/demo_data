@@ -68,11 +68,6 @@
 <https://data.delijn.be/stops/302425> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "50.7394" .
 <https://data.delijn.be/stops/302425> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "4.88051" .
 <https://data.delijn.be/stops/302425> <http://vocab.gtfs.org/terms#code> "302425" .
-<https://data.delijn.be/stops/302426> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.gtfs.org/terms#Stop> .
-<https://data.delijn.be/stops/302426> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "50.7434" .
-<https://data.delijn.be/stops/302426> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "4.87925" .
-<https://data.delijn.be/stops/302426> <http://schema.org/name> "Sint-Jans-Geest Rte Saint-Remy-Geest" .
-<https://data.delijn.be/stops/302426> <http://vocab.gtfs.org/terms#code> "302426" .
 <https://data.delijn.be/stops/302427> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.gtfs.org/terms#Stop> .
 <https://data.delijn.be/stops/302427> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "50.744" .
 <https://data.delijn.be/stops/302427> <http://schema.org/name> "Sint-Jans-Geest Rte Saint-Remy-Geest" .
@@ -253,19 +248,14 @@
 _:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
 _:BpropertyX5Fnode <https://www.w3.org/ns/shacl#path> <http://schema.org/name> .
 _:BpropertyX5Fnode <https://www.w3.org/ns/shacl#minCount> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
-<https://treecg.github.io/demo_data/stops/jan+sint.nt> <https://w3id.org/tree#relation> _:BjanbX2Bsint .
-_:BjanbX2Bsint <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
-_:BjanbX2Bsint <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/stops/janb+sint.nt> .
-_:BjanbX2Bsint <https://w3id.org/tree#value> "janb" .
-_:BjanbX2Bsint <https://w3id.org/tree#value> "sint" .
-_:BjanbX2Bsint <https://w3id.org/tree#path> <http://schema.org/name> .
-_:BjanbX2Bsint <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/jan+sint.nt> <https://w3id.org/tree#relation> _:BjansX2Bsint .
 _:BjansX2Bsint <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
 _:BjansX2Bsint <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/stops/jans+sint.nt> .
 _:BjansX2Bsint <https://w3id.org/tree#value> "jans" .
 _:BjansX2Bsint <https://w3id.org/tree#value> "sint" .
 _:BjansX2Bsint <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BjansX2Bsint <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BjansX2Bsint <https://www.w3.org/ns/shacl#flags> "i" .
 _:BjansX2Bsint <https://w3id.org/tree#remainingItems> "36"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/jan+sint.nt> <https://w3id.org/tree#relation> _:BbX2BjanX2Bsint .
 _:BbX2BjanX2Bsint <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -274,7 +264,9 @@ _:BbX2BjanX2Bsint <https://w3id.org/tree#value> "b" .
 _:BbX2BjanX2Bsint <https://w3id.org/tree#value> "jan" .
 _:BbX2BjanX2Bsint <https://w3id.org/tree#value> "sint" .
 _:BbX2BjanX2Bsint <https://w3id.org/tree#path> <http://schema.org/name> .
-_:BbX2BjanX2Bsint <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:BbX2BjanX2Bsint <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BbX2BjanX2Bsint <https://www.w3.org/ns/shacl#flags> "i" .
+_:BbX2BjanX2Bsint <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/jan+sint.nt> <https://w3id.org/tree#relation> _:BdX2BjanX2Bsint .
 _:BdX2BjanX2Bsint <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
 _:BdX2BjanX2Bsint <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/stops/d+jan+sint.nt> .
@@ -282,6 +274,8 @@ _:BdX2BjanX2Bsint <https://w3id.org/tree#value> "d" .
 _:BdX2BjanX2Bsint <https://w3id.org/tree#value> "jan" .
 _:BdX2BjanX2Bsint <https://w3id.org/tree#value> "sint" .
 _:BdX2BjanX2Bsint <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BdX2BjanX2Bsint <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BdX2BjanX2Bsint <https://www.w3.org/ns/shacl#flags> "i" .
 _:BdX2BjanX2Bsint <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/jan+sint.nt> <https://w3id.org/tree#relation> _:BiX2BjanX2Bsint .
 _:BiX2BjanX2Bsint <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -290,6 +284,8 @@ _:BiX2BjanX2Bsint <https://w3id.org/tree#value> "i" .
 _:BiX2BjanX2Bsint <https://w3id.org/tree#value> "jan" .
 _:BiX2BjanX2Bsint <https://w3id.org/tree#value> "sint" .
 _:BiX2BjanX2Bsint <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BiX2BjanX2Bsint <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BiX2BjanX2Bsint <https://www.w3.org/ns/shacl#flags> "i" .
 _:BiX2BjanX2Bsint <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/jan+sint.nt> <https://w3id.org/tree#relation> _:BjanX2BnX2Bsint .
 _:BjanX2BnX2Bsint <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -298,6 +294,8 @@ _:BjanX2BnX2Bsint <https://w3id.org/tree#value> "jan" .
 _:BjanX2BnX2Bsint <https://w3id.org/tree#value> "n" .
 _:BjanX2BnX2Bsint <https://w3id.org/tree#value> "sint" .
 _:BjanX2BnX2Bsint <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BjanX2BnX2Bsint <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BjanX2BnX2Bsint <https://www.w3.org/ns/shacl#flags> "i" .
 _:BjanX2BnX2Bsint <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/jan+sint.nt> <https://w3id.org/tree#relation> _:BjanX2BoX2Bsint .
 _:BjanX2BoX2Bsint <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -306,6 +304,8 @@ _:BjanX2BoX2Bsint <https://w3id.org/tree#value> "jan" .
 _:BjanX2BoX2Bsint <https://w3id.org/tree#value> "o" .
 _:BjanX2BoX2Bsint <https://w3id.org/tree#value> "sint" .
 _:BjanX2BoX2Bsint <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BjanX2BoX2Bsint <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BjanX2BoX2Bsint <https://www.w3.org/ns/shacl#flags> "i" .
 _:BjanX2BoX2Bsint <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/jan+sint.nt> <https://w3id.org/tree#relation> _:BjanX2BsintX2Bw .
 _:BjanX2BsintX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -314,4 +314,6 @@ _:BjanX2BsintX2Bw <https://w3id.org/tree#value> "jan" .
 _:BjanX2BsintX2Bw <https://w3id.org/tree#value> "sint" .
 _:BjanX2BsintX2Bw <https://w3id.org/tree#value> "w" .
 _:BjanX2BsintX2Bw <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BjanX2BsintX2Bw <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BjanX2BsintX2Bw <https://www.w3.org/ns/shacl#flags> "i" .
 _:BjanX2BsintX2Bw <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .

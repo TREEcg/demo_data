@@ -1,3 +1,8 @@
+<https://data.delijn.be/stops/407598> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.gtfs.org/terms#Stop> .
+<https://data.delijn.be/stops/407598> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "5.51017" .
+<https://data.delijn.be/stops/407598> <http://schema.org/name> "Grote-Brogel Dorpsstraat" .
+<https://data.delijn.be/stops/407598> <http://vocab.gtfs.org/terms#code> "407598" .
+<https://data.delijn.be/stops/407598> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "51.1475" .
 <https://data.delijn.be/stops/409232> <http://schema.org/name> "Hamont Grote Haart" .
 <https://data.delijn.be/stops/409232> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.gtfs.org/terms#Stop> .
 <https://data.delijn.be/stops/409232> <http://vocab.gtfs.org/terms#code> "409232" .
@@ -238,11 +243,6 @@
 <https://data.delijn.be/stops/400755> <http://vocab.gtfs.org/terms#code> "400755" .
 <https://data.delijn.be/stops/400755> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.gtfs.org/terms#Stop> .
 <https://data.delijn.be/stops/400755> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "5.56259" .
-<https://data.delijn.be/stops/403958> <http://www.w3.org/2003/01/geo/wgs84_pos#lat> "50.9491" .
-<https://data.delijn.be/stops/403958> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://vocab.gtfs.org/terms#Stop> .
-<https://data.delijn.be/stops/403958> <http://schema.org/name> "Schulen Grotestraat" .
-<https://data.delijn.be/stops/403958> <http://www.w3.org/2003/01/geo/wgs84_pos#long> "5.19742" .
-<https://data.delijn.be/stops/403958> <http://vocab.gtfs.org/terms#code> "403958" .
 <https://treecg.github.io/demo_data/stops/> <http://rdfs.org/ns/void#subset> <https://treecg.github.io/demo_data/stops/grote.nt> .
 <https://treecg.github.io/demo_data/stops/> <https://w3id.org/tree#shape> _:BshapeX5Fnode .
 _:BshapeX5Fnode <https://www.w3.org/ns/shacl#alternativePath> _:BpropertyX5Fnode .
@@ -253,19 +253,25 @@ _:Bgroten <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tr
 _:Bgroten <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/stops/groten.nt> .
 _:Bgroten <https://w3id.org/tree#value> "groten" .
 _:Bgroten <https://w3id.org/tree#path> <http://schema.org/name> .
+_:Bgroten <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:Bgroten <https://www.w3.org/ns/shacl#flags> "i" .
 _:Bgroten <https://w3id.org/tree#remainingItems> "15"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/grote.nt> <https://w3id.org/tree#relation> _:Bgrotes .
 _:Bgrotes <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
 _:Bgrotes <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/stops/grotes.nt> .
 _:Bgrotes <https://w3id.org/tree#value> "grotes" .
 _:Bgrotes <https://w3id.org/tree#path> <http://schema.org/name> .
-_:Bgrotes <https://w3id.org/tree#remainingItems> "6"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:Bgrotes <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:Bgrotes <https://www.w3.org/ns/shacl#flags> "i" .
+_:Bgrotes <https://w3id.org/tree#remainingItems> "7"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/grote.nt> <https://w3id.org/tree#relation> _:BaX2Bgrote .
 _:BaX2Bgrote <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
 _:BaX2Bgrote <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/stops/a+grote.nt> .
 _:BaX2Bgrote <https://w3id.org/tree#value> "a" .
 _:BaX2Bgrote <https://w3id.org/tree#value> "grote" .
 _:BaX2Bgrote <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BaX2Bgrote <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BaX2Bgrote <https://www.w3.org/ns/shacl#flags> "i" .
 _:BaX2Bgrote <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/grote.nt> <https://w3id.org/tree#relation> _:BbX2Bgrote .
 _:BbX2Bgrote <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -273,13 +279,17 @@ _:BbX2Bgrote <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/st
 _:BbX2Bgrote <https://w3id.org/tree#value> "b" .
 _:BbX2Bgrote <https://w3id.org/tree#value> "grote" .
 _:BbX2Bgrote <https://w3id.org/tree#path> <http://schema.org/name> .
-_:BbX2Bgrote <https://w3id.org/tree#remainingItems> "19"^^<http://www.w3.org/2001/XMLSchema#int> .
+_:BbX2Bgrote <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BbX2Bgrote <https://www.w3.org/ns/shacl#flags> "i" .
+_:BbX2Bgrote <https://w3id.org/tree#remainingItems> "21"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/grote.nt> <https://w3id.org/tree#relation> _:BdX2Bgrote .
 _:BdX2Bgrote <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
 _:BdX2Bgrote <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/stops/d+grote.nt> .
 _:BdX2Bgrote <https://w3id.org/tree#value> "d" .
 _:BdX2Bgrote <https://w3id.org/tree#value> "grote" .
 _:BdX2Bgrote <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BdX2Bgrote <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BdX2Bgrote <https://www.w3.org/ns/shacl#flags> "i" .
 _:BdX2Bgrote <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/grote.nt> <https://w3id.org/tree#relation> _:BfX2Bgrote .
 _:BfX2Bgrote <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -287,6 +297,8 @@ _:BfX2Bgrote <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/st
 _:BfX2Bgrote <https://w3id.org/tree#value> "f" .
 _:BfX2Bgrote <https://w3id.org/tree#value> "grote" .
 _:BfX2Bgrote <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BfX2Bgrote <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BfX2Bgrote <https://www.w3.org/ns/shacl#flags> "i" .
 _:BfX2Bgrote <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/grote.nt> <https://w3id.org/tree#relation> _:BgroteX2Bh .
 _:BgroteX2Bh <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -294,6 +306,8 @@ _:BgroteX2Bh <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/st
 _:BgroteX2Bh <https://w3id.org/tree#value> "grote" .
 _:BgroteX2Bh <https://w3id.org/tree#value> "h" .
 _:BgroteX2Bh <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BgroteX2Bh <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BgroteX2Bh <https://www.w3.org/ns/shacl#flags> "i" .
 _:BgroteX2Bh <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/grote.nt> <https://w3id.org/tree#relation> _:BgroteX2Bk .
 _:BgroteX2Bk <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -301,6 +315,8 @@ _:BgroteX2Bk <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/st
 _:BgroteX2Bk <https://w3id.org/tree#value> "grote" .
 _:BgroteX2Bk <https://w3id.org/tree#value> "k" .
 _:BgroteX2Bk <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BgroteX2Bk <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BgroteX2Bk <https://www.w3.org/ns/shacl#flags> "i" .
 _:BgroteX2Bk <https://w3id.org/tree#remainingItems> "4"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/grote.nt> <https://w3id.org/tree#relation> _:BgroteX2Bl .
 _:BgroteX2Bl <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -308,6 +324,8 @@ _:BgroteX2Bl <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/st
 _:BgroteX2Bl <https://w3id.org/tree#value> "grote" .
 _:BgroteX2Bl <https://w3id.org/tree#value> "l" .
 _:BgroteX2Bl <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BgroteX2Bl <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BgroteX2Bl <https://www.w3.org/ns/shacl#flags> "i" .
 _:BgroteX2Bl <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/grote.nt> <https://w3id.org/tree#relation> _:BgroteX2Bm .
 _:BgroteX2Bm <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -315,6 +333,8 @@ _:BgroteX2Bm <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/st
 _:BgroteX2Bm <https://w3id.org/tree#value> "grote" .
 _:BgroteX2Bm <https://w3id.org/tree#value> "m" .
 _:BgroteX2Bm <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BgroteX2Bm <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BgroteX2Bm <https://www.w3.org/ns/shacl#flags> "i" .
 _:BgroteX2Bm <https://w3id.org/tree#remainingItems> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/grote.nt> <https://w3id.org/tree#relation> _:BgroteX2Bo .
 _:BgroteX2Bo <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -322,6 +342,8 @@ _:BgroteX2Bo <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/st
 _:BgroteX2Bo <https://w3id.org/tree#value> "grote" .
 _:BgroteX2Bo <https://w3id.org/tree#value> "o" .
 _:BgroteX2Bo <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BgroteX2Bo <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BgroteX2Bo <https://www.w3.org/ns/shacl#flags> "i" .
 _:BgroteX2Bo <https://w3id.org/tree#remainingItems> "1"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/grote.nt> <https://w3id.org/tree#relation> _:BgroteX2Br .
 _:BgroteX2Br <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -329,6 +351,8 @@ _:BgroteX2Br <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/st
 _:BgroteX2Br <https://w3id.org/tree#value> "grote" .
 _:BgroteX2Br <https://w3id.org/tree#value> "r" .
 _:BgroteX2Br <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BgroteX2Br <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BgroteX2Br <https://www.w3.org/ns/shacl#flags> "i" .
 _:BgroteX2Br <https://w3id.org/tree#remainingItems> "2"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/grote.nt> <https://w3id.org/tree#relation> _:BgroteX2Bs .
 _:BgroteX2Bs <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -336,6 +360,8 @@ _:BgroteX2Bs <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/st
 _:BgroteX2Bs <https://w3id.org/tree#value> "grote" .
 _:BgroteX2Bs <https://w3id.org/tree#value> "s" .
 _:BgroteX2Bs <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BgroteX2Bs <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BgroteX2Bs <https://www.w3.org/ns/shacl#flags> "i" .
 _:BgroteX2Bs <https://w3id.org/tree#remainingItems> "11"^^<http://www.w3.org/2001/XMLSchema#int> .
 <https://treecg.github.io/demo_data/stops/grote.nt> <https://w3id.org/tree#relation> _:BgroteX2Bw .
 _:BgroteX2Bw <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/tree#SubstringRelation> .
@@ -343,4 +369,6 @@ _:BgroteX2Bw <https://w3id.org/tree#node> <https://treecg.github.io/demo_data/st
 _:BgroteX2Bw <https://w3id.org/tree#value> "grote" .
 _:BgroteX2Bw <https://w3id.org/tree#value> "w" .
 _:BgroteX2Bw <https://w3id.org/tree#path> <http://schema.org/name> .
+_:BgroteX2Bw <https://www.w3.org/ns/shacl#pattern> "[\\p{L}\\p{N}]+" .
+_:BgroteX2Bw <https://www.w3.org/ns/shacl#flags> "i" .
 _:BgroteX2Bw <https://w3id.org/tree#remainingItems> "3"^^<http://www.w3.org/2001/XMLSchema#int> .
